@@ -1,0 +1,64 @@
+{
+    "InternalPDFViewer": {
+        "Embedded": true,
+        "File": "thesis.pdf"
+    },
+    "Session": {
+        "Bookmarks": [
+        ],
+        "CurrentFile": "thesis.bbl",
+        "FileVersion": 1,
+        "Files": [
+            {
+                "Col": 14,
+                "EditorGroup": 0,
+                "FileName": "References/references.bib",
+                "FirstLine": 189,
+                "FoldedLines": "",
+                "Line": 221
+            },
+            {
+                "Col": 22,
+                "EditorGroup": 0,
+                "FileName": "Chapter2/chapter2.tex",
+                "FirstLine": 386,
+                "FoldedLines": "",
+                "Line": 371
+            },
+            {
+                "Col": 78,
+                "EditorGroup": 0,
+                "FileName": "Chapter3/chapter3.tex",
+                "FirstLine": 970,
+                "FoldedLines": "",
+                "Line": 970
+            },
+            {
+                "Col": 19,
+                "EditorGroup": 0,
+                "FileName": "Chapter4/chapter4.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 15
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "Chapter1/chapter1.tex",
+                "FirstLine": 34,
+                "FoldedLines": "",
+                "Line": 31
+            },
+            {
+                "Col": 66,
+                "EditorGroup": 0,
+                "FileName": "thesis.bbl",
+                "FirstLine": 68,
+                "FoldedLines": "",
+                "Line": 101
+            }
+        ],
+        "MasterFile": "",
+        "VerticalSplit": true
+    }
+}

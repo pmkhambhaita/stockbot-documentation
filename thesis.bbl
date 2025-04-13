@@ -1,0 +1,131 @@
+\begin{thebibliography}{10}
+
+\bibitem{point_data}
+T.~Point, ``Data structure - breadth first traversal - tutorialspoint.''
+  \url{https://www.tutorialspoint.com/data_structures_algorithms/breadth_first_traversal.htm}.
+
+\bibitem{geeksforgeeks_2019_depth}
+GeeksforGeeks, ``Depth first search - geeksforgeeks.''
+  \url{https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/},
+  02 2019.
+
+\bibitem{patel_2019_introduction}
+A.~Patel, ``Introduction to a*.''
+  \url{http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html},
+  2019.
+
+\bibitem{s_2021_a}
+R.~A. S, ``A* search algorithm explained: Applications \& uses.''
+  \url{https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/a-star-algorithm#algorithm},
+  07 2021.
+
+\bibitem{geeksforgeeks_2017_genetic}
+GeeksforGeeks, ``Genetic algorithms.''
+  \url{https://www.geeksforgeeks.org/genetic-algorithms/}, 06 2017.
+
+\bibitem{geeksforgeeks_2024_introduction}
+GeeksforGeeks, ``Introduction to optimization with genetic algorithm.''
+  \url{https://www.geeksforgeeks.org/introduction-to-optimization-with-genetic-algorithm/},
+  09 2024.
+
+\bibitem{warehouse}
+``Warehouse worker.''
+  \url{https://www.ioscm.com/blog/warehousing-strategies-for-building-a-productive-work-environment/}.
+
+\bibitem{warehouseauto}
+``Warehouse productivity.''
+  \url{https://us.blog.kardex-remstar.com/hs-fs/hubfs/Imported%20sitepage%20images/Infographic_Blog_Update_Productivity.jpeg?width=800&height=444&name=Infographic_Blog_Update_Productivity.jpeg}.
+
+\bibitem{amazonrobotics_2024_closeup}
+A.~Robotics, ``Close-up of kiva robots.''
+  \url{https://blog.scallog.com/en/amazon-robotics-robots-logistiques-supply-chain},
+  02 2024.
+
+\bibitem{a2024_joseph}
+``Joseph engelberger and unimate: Pioneering the robotics revolution.''
+  \url{https://www.automate.org/robotics/engelberger/joseph-engelberger-unimate},
+  2024.
+
+\bibitem{edwards_2020_amazon}
+D.~Edwards, ``Amazon now has 200,000 robots working in its warehouses.''
+  \url{https://roboticsandautomationnews.com/2020/01/21/amazon-now-has-200000-robots-working-in-its-warehouses/28840/},
+  01 2020.
+
+\bibitem{clifford_2025_amazon}
+C.~Clifford, ``Amazon robots in warehouse.''
+  \url{https://www.ft.com/content/31ec6a78-97cf-47a2-b229-d63c44b81073}, 03
+  2025.
+
+\bibitem{scallog_2024_amazon}
+Scallog, ``Amazon robotics and logistics robots in the supply chain.''
+  \url{https://blog.scallog.com/en/amazon-robotics-robots-logistiques-supply-chain},
+  02 2024.
+
+\bibitem{group_2024_the}
+O.~Group, ``The ocado smart platform (osp) | ocado group.''
+  \url{https://www.ocadogroup.com/solutions/online-grocery}, 2024.
+
+\bibitem{group_2023_the}
+O.~Group, ``The ocado smart platform: Automating online grocery.''
+  \url{https://www.youtube.com/watch?v=Eu3jgy2-tL8}, 06 2023.
+
+\bibitem{group_2020_explained}
+O.~Group, ``Explained: The tech powering the ocado smart platform.''
+  \url{https://www.youtube.com/watch?v=g2uMfpAHdGY}, 09 2020.
+
+\bibitem{speed_2023_ocado}
+M.~Speed, ``Ocado and autostore settle three-year row over ecommerce tech.''
+  \url{https://www.ft.com/content/7038e2f4-0201-4632-a79e-8613890e8c99}, 07
+  2023.
+
+\bibitem{autostore_2023_autostore}
+AutoStore, ``Autostore | the facts behind the stacked design.''
+  \url{https://www.youtube.com/watch?v=9UDgSofF_AY}, 03 2023.
+
+\bibitem{solutions_2025_autostore}
+B.~Solutions, ``Autostore system | goods to person automated storage \&
+  retrieval | bastian solutions.''
+  \url{https://www.bastiansolutions.com/solutions/technology/goods-to-person/autostore/?srsltid=AfmBOop3Qs8YAH6JU69_gX8hp7hUlfPbCx6afmk7b3cxcemB0Ox5VlOW},
+  2025.
+
+\bibitem{systems_2018_autostore}
+A.~Systems, ``Autostore | introduction: Stop airhousing, start warehousing.''
+  \url{https://www.youtube.com/watch?v=iHC9ec591lI}, 03 2018.
+
+\bibitem{systems_autostore}
+A.~Systems, ``Autostore robotic warehouse storage and inventory retrieval
+  system.'' \url{https://www.autostoresystem.com/}.
+
+\bibitem{badrelkari_2024_exploring}
+B.~Elkari, L.~OURABAH, H.~SEKKAT, A.~HSAINE, C.~ESSAIOUAD, Y.~BOUARGANE, and
+  K.~E. Moutaouakil, ``Exploring maze navigation: A comparative study of dfs,
+  bfs, and a* search algorithms.,'' {\em Statistics Optimization \& Information
+  Computing}, vol.~12, pp.~761--781, 02 2024.
+
+\bibitem{bfs_time}
+S.~Overflow, ``Time complexity analysis of bfs.''
+  \url{https://stackoverflow.com/questions/26549140/breadth-first-search-time-complexity-analysis},
+  11 2014.
+
+\bibitem{sqlite_locking_v3}
+{SQLite}, ``File locking and concurrency in sqlite version 3.''
+  \url{https://www.sqlite.org/lockingv3.html}.
+
+\bibitem{ajitsaria_python_gil}
+A.~Ajitsaria, ``What is the python global interpreter lock (gil)? – real
+  python.'' \url{https://realpython.com/python-gil/}.
+
+\bibitem{dev_python_strings}
+G.~Dev, ``Python strings | python education.''
+  \url{https://developers.google.com/edu/python/strings}.
+
+\bibitem{python_tkinter}
+P.~S. Foundation, ``tkinter — python interface to tcl/tk — python 3.7.2
+  documentation.'' \url{https://docs.python.org/3/library/tkinter.html}, 2019.
+
+\bibitem{bfsimg}
+V.~Joshi, ``Breaking down breadth-first search by vaidehi joshi - basecs -
+  medium.''
+  \url{https://miro.medium.com/v2/resize:fit:1400/1*VM84VPcCQe0gSy44l9S5yA.jpeg}.
+
+\end{thebibliography}

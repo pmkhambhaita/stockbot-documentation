@@ -1,0 +1,556 @@
+%!TEX root = ../thesis.tex
+% ******************************* Thesis Appendix A ****************************
+\chapter{Complete pseudocode in OCR ERL}
+
+This is a basic approach to my solution using the OCR Exam Reference Language. This does not incorporate all features that may be present in the final solution, but rather served as a starting point for me to build my solution. I used snippets and/or versions of this pseudocode within my documentation, to illustrate certain subprograms \& how they might run.
+
+\subsection{BFS}
+
+\subsubsection{Approach reasoning}
+
+Below is a rudimentary implementation of BFS in pseudocode. I have centralised all methods under the \verb|BFS| class. By using an object-oriented approach, some benefits include:
+
+\begin{itemize}
+
+    \item \textbf{Encapsulation} -  Encapsulation is bundling data and methods that operate on the data within a single unit (class) and restricting direct access to some components. The \verb|graph|, \verb|visited|, and \verb|queue| are private fields within the \verb|BFS| class, meaning that only the class’s methods can access and modify them directly. This ensures that the internal state of these objects is protected from exploits by individuals with malicious intent.
+
+    \item \textbf{Abstraction} - Abstraction hides implementation details and exposes only essential functionality. Users of the \verb|BFS| class don’t need to understand the internal mechanics of how the queue is managed or how the path is found and reconstructed. This simplification makes the code easier to use and understand, as the complexity is hidden behind a simple interface.
+    
+    \item \textbf{Future Scalability} - OOP systems can be extended with minimal modification to existing code. If new features need to be added in the future, such as handling weighted edges or implementing different search strategies, the current structure allows for extending the \verb|BFS| class by adding new methods or modifying existing ones.
+    
+\end{itemize}
+
+\newpage
+\subsubsection{Pseudocode}
+
+\begin{verbatim}
+CLASS BFSPath
+    PRIVATE graph
+    PRIVATE visited
+    PRIVATE queue
+    PRIVATE database
+    PRIVATE start = 1
+    PRIVATE end
+    PRIVATE width
+    PRIVATE length
+
+    CONSTRUCTOR BFSPath(graph, database, warehouseWidth, warehouseLength)
+        THIS.graph = graph
+        THIS.visited = EMPTY SET
+        THIS.queue = NEW Queue()
+        THIS.database = database
+        THIS.width = warehouseWidth
+        THIS.length = warehouseLength
+        THIS.end = warehouseWidth * warehouseLength
+    END CONSTRUCTOR
+
+
+    FUNCTION FindPathWithWaypoints(waypoints)
+        validWaypoints = EMPTY LIST
+        FOR point IN waypoints
+            IF point = start OR point = end THEN
+                CONTINUE
+            END IF
+            IF database.HasStock(point) AND IsValidWaypoint(point) THEN
+                validWaypoints.APPEND(point)
+            END IF
+        END FOR
+        # Always start from start and end at end
+        finalPath = EMPTY LIST
+        currentPoint = start
+        validWaypoints.INSERT(0, start)
+        validWaypoints.APPEND(end)
+        FOR i = 0 TO LENGTH(validWaypoints) - 1
+            nextPoint = validWaypoints[i + 1]
+            subPath = FindPath(currentPoint, nextPoint)
+            IF subPath IS EMPTY THEN
+                CONTINUE
+            END IF
+            IF LENGTH(finalPath) > 0 AND LENGTH(subPath) > 0 THEN
+                subPath.RemoveFirst()
+            END IF
+            finalPath.EXTEND(subPath)
+            currentPoint = nextPoint
+        END FOR
+        RETURN finalPath
+    END FUNCTION
+
+    FUNCTION FindPath(startVertex, endVertex)
+        parentMap = EMPTY DICTIONARY
+        THIS.visited = EMPTY SET
+        THIS.queue = NEW Queue()
+        THIS.queue.Enqueue(startVertex)
+        ADD startVertex TO THIS.visited
+        parentMap[startVertex] = ""
+        WHILE NOT THIS.queue.IsEmpty()
+            currentVertex = THIS.queue.Dequeue()
+            IF currentVertex = endVertex THEN
+                RETURN ReconstructPath(parentMap, startVertex, endVertex)
+            END IF
+            FOR EACH neighbor IN THIS.graph[currentVertex]
+                IF neighbor NOT IN THIS.visited THEN
+                    THIS.queue.Enqueue(neighbor)
+                    ADD neighbor TO THIS.visited
+                    parentMap[neighbor] = currentVertex
+                END IF
+            END FOR
+        END WHILE
+        RETURN EMPTY LIST
+    END FUNCTION
+
+    FUNCTION ReconstructPath(parentMap, startVertex, endVertex)
+        path = EMPTY LIST
+        currentVertex = endVertex
+        # Work backwards from end to start
+        WHILE currentVertex != startVertex
+            INSERT currentVertex AT START OF path
+            currentVertex = parentMap[currentVertex]
+            # Safety check in case of disconnected path
+            IF currentVertex IS NULL THEN
+                RETURN EMPTY LIST
+            END IF
+        END WHILE
+        # Add the start vertex
+        INSERT startVertex AT START OF path
+        RETURN path
+    END FUNCTION
+
+    FUNCTION IsValidWaypoint(position) RETURNS BOOLEAN
+        RETURN position > start AND 
+               position < end AND 
+               position <= (width * length)
+    END FUNCTION
+END CLASS
+\end{verbatim}
+
+\newpage
+
+\subsubsection{Analysis}
+
+\begin{itemize}
+    \item \textbf{Purpose and Functionality} \newline
+    The \verb|BFSPath| component is responsible for computing the shortest path from the start position to the end position in the warehouse, incorporating user-defined waypoints if they are valid.
+
+    \item \textbf{Class Attributes}
+    \begin{itemize}
+        \item {\verb|graph|:} Represents the warehouse layout as a graph where each position is a vertex, and edges represent valid paths between positions. This abstraction allows for flexible changes in warehouse structure.
+        \item {\verb|visited|:} Keeps track of visited vertices during the BFS traversal, preventing redundant computations and infinite loops.
+        \item {\verb|queue|:} Implements the BFS algorithm by maintaining vertices to be explored in a FIFO (First-In-First-Out) manner.
+        \item {\verb|database|:} Provides access to the warehouse inventory for waypoint validation, ensuring the pathfinding logic dynamically incorporates inventory constraints.
+        \item {\verb|start| and \verb|end|:} Represent fixed entry and exit points for the warehouse. These points act as anchors for the pathfinding process.
+        \item {\verb|width| and \verb|length|:} Define the dimensions of the warehouse grid, enabling validation of waypoint positions against physical constraints.
+    \end{itemize}
+
+    \item \textbf{Key Functions:}
+    \begin{enumerate}
+        \item \textbf{Constructor:} Initializes the class with the warehouse \verb|graph|, inventory \verb|database|, and grid dimensions. Ensures consistent access to these components for other methods and establishes the fixed start and end positions.
+        \item {\verb|FindPathWithWaypoints|:} Computes the shortest path through user-defined waypoints. Key steps include:
+        \begin{itemize}
+            \item Filtering waypoints to ensure validity (within bounds, not fixed positions, and in stock).
+            \item Including the start and end positions in the waypoint list to guarantee connectivity.
+            \item Using the BFS algorithm to compute sub-paths between consecutive waypoints. This modular approach simplifies debugging and ensures each sub-path is independently optimal.
+            \item Combining sub-paths into a single final path by removing redundant positions at the boundaries of sub-paths.
+        \end{itemize}
+        \item {\verb|FindPath|:} Implements BFS to compute the shortest path between two vertices. Maintains a parent map to reconstruct the path once the end vertex is reached. If no path is found, it returns an empty list to signify failure.
+        \item {\verb|IsValidWaypoint|:} Validates a waypoint by ensuring it lies within the grid dimensions, is not a fixed position, and satisfies logical constraints for pathfinding.
+    \end{enumerate}
+\newpage
+    \item \textbf{Design Decisions:}
+    \begin{itemize}
+        \item \textbf{Private Attributes:} Ensure encapsulation and prevent unauthorized access to internal data structures like the \verb|queue| or \verb|visited| set. This promotes modularity and prevents unintended side effects. See Approach reasoning for the benefits of OOP.
+        \item \textbf{Dynamic Validation:} The \verb|database| integration ensures waypoints are checked for stock dynamically, reflecting real-time inventory. This is critical in a warehouse setting where stock levels frequently change.
+        \item \textbf{Reconstruction of Path:} BFS guarantees shortest path computation between 2 points, hence the parent map is required to simplify the reconstruction process as more than 2 points will be entered. This is done by tracing each sub-path back from the end vertex, forming a single path with a sufficient solution.
+    \end{itemize}
+    \item \textbf{Justifications:}
+    \begin{itemize}
+        \item \textbf{Use of BFS:} BFS is optimal for unweighted graphs like the warehouse grid, ensuring the shortest path is found efficiently.
+        \item \textbf{Waypoint Validation:} Prevents unnecessary computation for invalid or unreachable points, improving performance and accuracy.
+        \item \textbf{Integration with Database:} Enhances functionality by dynamically considering stock availability during pathfinding, ensuring practical relevance and application.
+    \end{itemize}
+    
+\end{itemize}
+
+\newpage
+
+\subsection{Database operations}
+
+\subsubsection{Approach reasoning}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Minimal Data Structure}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Only position and quantity stored
+  \item
+    Simplifies database operations
+  \item
+    Reduces potential for errors
+  \item
+    Perfect for basic inventory tracking
+  \end{itemize}
+\item
+  \textbf{Error Handling}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    TRY/CATCH blocks throughout
+  \item
+    Clear error messages
+  \item
+    Prevents database corruption
+  \item
+    Helps with debugging
+  \end{itemize}
+\item
+  \textbf{Validation}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Position validation before all operations
+  \item
+    Database constraints as secondary validation
+  \item
+    Prevents invalid data entry
+  \end{itemize}
+\item
+  \textbf{Encapsulation}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Private attributes
+  \item
+    Public methods for controlled access
+  \item
+    Maintains data integrity
+  \end{itemize}
+\item
+  \textbf{Flexibility}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Adaptable to different warehouse sizes
+  \item
+    Easy to extend with additional features
+  \item
+    Clear interface for integration with routing system
+  \end{itemize}
+\end{enumerate}
+
+\newpage
+
+\begin{verbatim}
+CLASS WarehouseDatabase
+    PRIVATE dbConnection
+    PRIVATE width
+    PRIVATE length
+    PRIVATE start = 1
+    PRIVATE end
+
+    CONSTRUCTOR WarehouseDatabase(warehouseWidth, warehouseLength)
+        width = warehouseWidth
+        length = warehouseLength
+        end = width * length
+        InitializeDatabase()
+    END CONSTRUCTOR
+    
+    PROCEDURE InitializeDatabase()
+        TRY
+            dbConnection = NEW SQLiteConnection("warehouse.db")
+            ExecuteSQL("
+                CREATE TABLE IF NOT EXISTS inventory (
+                    position INTEGER PRIMARY KEY,
+                    quantity INTEGER,
+                    item_name TEXT,
+                    last_updated TIMESTAMP,
+                    CONSTRAINT valid_position CHECK (
+                        position >= 1 AND position <= ? * ?
+                    )
+                )
+            ", [width, length])
+            
+            # Initialize start and end positions if not exists
+            InitializeFixedPositions()
+        CATCH error
+            OUTPUT "Failed to initialize database: " + error.message
+            RAISE error
+        END TRY
+    END PROCEDURE
+
+\end{verbatim}
+\newpage
+\begin{verbatim}
+    
+    
+    PROCEDURE InitializeFixedPositions()
+        # Start position always has stock
+        ExecuteSQL("
+            INSERT OR IGNORE INTO inventory (position, quantity, item_name)
+            VALUES (?, 1, 'Start Position')
+        ", [start])
+        
+        # End position always has stock
+        ExecuteSQL("
+            INSERT OR IGNORE INTO inventory (position, quantity, item_name)
+            VALUES (?, 1, 'End Position')
+        ", [end])
+    END PROCEDURE
+    
+    FUNCTION HasStock(position) RETURNS BOOLEAN
+        TRY
+            # Start and end positions always considered to have stock
+            IF position = start OR position = end THEN
+                RETURN TRUE
+            END IF
+            
+            result = dbConnection.Query("
+                SELECT quantity 
+                FROM inventory 
+                WHERE position = ? AND quantity > 0
+            ", [position])
+            RETURN LENGTH(result) > 0
+        CATCH error
+            OUTPUT "Failed to check stock: " + error.message
+            RETURN FALSE
+        END TRY
+    END FUNCTION
+\end{verbatim}
+\newpage
+\begin{verbatim}
+    PROCEDURE AddItem(position, quantity, itemName)
+        IF position = start OR position = end THEN
+            OUTPUT "Cannot modify fixed positions"
+            RETURN
+        END IF
+        IF NOT IsValidPosition(position) THEN
+            OUTPUT "Invalid position"
+            RETURN
+        END IF
+        TRY
+            ExecuteSQL("
+                INSERT OR REPLACE INTO inventory
+                (position, quantity, item_name, last_updated)
+                VALUES (?, ?, ?, CURRENT_TIMESTAMP)
+            ", [position, quantity, itemName])
+            OUTPUT "Item added successfully at position " + ToString(position)
+        CATCH error
+            OUTPUT "Failed to add item: " + error.message
+        END TRY
+    END PROCEDURE
+    
+    FUNCTION IsValidPosition(position) RETURNS BOOLEAN
+        RETURN position >= 1 AND position <= (width * length)
+    END FUNCTION
+END CLASS
+\end{verbatim}
+
+\subsubsection{Analysis}
+
+\begin{itemize}
+\item \textbf{Purpose and Functionality:}\newline
+The \verb|WarehouseDatabase| component manages inventory data, ensuring accurate stock tracking and supporting operations like waypoint validation for pathfinding. This component abstracts inventory management into a dedicated class, simplifying the overall system architecture.
+
+\item \textbf{Class Attributes:}
+\begin{itemize}
+    \item {\verb|dbConnection|:} Handles the connection to the SQLite database. This attribute centralizes database operations and ensures consistent access throughout the class.
+    \item {\verb|width| and \verb|length|:} Define the dimensions of the warehouse grid for position validation. These attributes are used to enforce logical constraints on inventory positions.
+    \item {\verb|start| and \verb|end|:} Represent fixed entry and exit points. These positions are immutable to ensure consistency across different components of the system.\newline
+    
+\end{itemize}
+
+\item \textbf{Key Procedures:}
+\begin{enumerate}
+    \item {\verb|InitializeDatabase|:} Sets up the SQLite database, creating an inventory table with constraints on valid positions. This procedure ensures the database schema aligns with the warehouse's logical structure.
+    \item {\verb|InitializeFixedPositions|:} Ensures the start and end positions are pre-defined with default stock. These positions are critical for pathfinding and must always exist.
+    \item {\verb|HasStock|:} Checks if a given position has stock by querying the database. This function considers fixed positions as always in stock, simplifying edge-case handling.
+    \item {\verb|AddItem|:} Adds or updates an item at a specified position in the inventory, provided it is a valid position. This procedure includes safeguards against modifying fixed positions, preserving system integrity.
+    \item {\verb|IsValidPosition|:} Validates that a position is within the warehouse bounds. This function ensures that all inventory operations respect physical constraints.
+\end{enumerate}
+
+\item \textbf{Design Decisions:}
+\begin{itemize}
+    \item \textbf{Use of SQLite:} Chosen for its lightweight nature, SQLite is sufficient for the scale of the warehouse inventory. It offers robust data handling without the overhead of a full-fledged database management system.
+    \item \textbf{Fixed Positions:} The start and end positions are immutable to maintain consistency across components. This design choice simplifies logic in the pathfinding and GUI components.
+    \item \textbf{Position Validation:} Constraints ensure data integrity, preventing invalid entries and reducing potential errors in downstream operations.
+\end{itemize}
+
+\item \textbf{Justifications:}
+\begin{itemize}
+    \item \textbf{Encapsulation:} Keeps inventory management logic within the \verb|WarehouseDatabase| class, simplifying integration with other components.
+    \item \textbf{Real-Time Stock Validation:} Enhances the pathfinding component by ensuring only valid positions are considered, reflecting real-world scenarios accurately.
+    \item \textbf{Error Handling:} Provides feedback on invalid operations, improving robustness and user experience.
+\end{itemize}
+\end{itemize}
+
+\newpage
+
+\subsection{Rudimentary GUI}
+
+\subsubsection{Approach reasoning}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Visual Representation}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Grid-based visualization of warehouse
+  \item
+    Color-coded positions for clarity
+  \item
+    Intuitive user interface elements
+  \item
+    Simplifies warehouse management
+  \end{itemize}
+\item
+  \textbf{User Interaction}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Button-based command interface
+  \item
+    Input validation for waypoints
+  \item
+    Clear feedback messages
+  \item
+    Prevents user errors
+  \end{itemize}
+\item
+  \textbf{Integration with Database}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Seamless connection to inventory data
+  \item
+    Real-time updates of warehouse state
+  \item
+    Consistent representation of data
+  \end{itemize}
+\item
+  \textbf{Waypoint Management}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Simple waypoint addition
+  \item
+    Position validation
+  \item
+    Visual feedback through highlighting
+  \item
+    Supports pathfinding operations
+  \end{itemize}
+\item
+  \textbf{Flexibility}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Adaptable to different warehouse dimensions
+  \item
+    Easy to extend with additional features
+  \item
+    Clear separation of GUI and logic
+  \end{itemize}
+\end{enumerate}
+
+\newpage
+
+\begin{verbatim}
+CLASS WarehouseGUI
+    PRIVATE width
+    PRIVATE length
+    PRIVATE canvas
+    PRIVATE waypointsList
+    PRIVATE start = 1
+    PRIVATE end
+    CONSTRUCTOR WarehouseGUI(warehouseWidth, warehouseLength)
+        width = warehouseWidth
+        length = warehouseLength
+        end = width * length
+        waypointsList = EMPTY LIST
+        InitializeGUI()
+    END CONSTRUCTOR
+    PROCEDURE InitializeGUI()
+        canvas = CREATE Canvas(width * 50, length * 50)
+        DrawGrid()
+        CREATE Button("Add Waypoint", AddWaypoint)
+        CREATE Button("Find Path", FindPath)
+        CREATE Button("Update Stock", UpdateStock)
+        CREATE Button("View Inventory", ViewInventory)
+        # Highlight fixed positions
+        HighlightCell(start, "green")
+        HighlightCell(end, "red")
+    END PROCEDURE
+    PROCEDURE AddWaypoint()
+        position = INPUT "Enter position for waypoint: "
+        IF position = start OR position = end THEN
+            OUTPUT "Cannot add start or end positions as waypoints"
+            RETURN
+        END IF
+        IF IsValidWaypoint(position) THEN
+            waypointsList.APPEND(position)
+            HighlightCell(position, "blue")
+        ELSE
+            OUTPUT "Invalid waypoint position"
+        END IF
+    END PROCEDURE
+    FUNCTION IsValidWaypoint(position) RETURNS BOOLEAN
+        RETURN position > start AND position < end AND position <= (width * length)
+    END FUNCTION
+END CLASS
+\end{verbatim}
+\newpage
+
+\subsubsection{Analysis}
+
+\begin{itemize}
+\item \textbf{Purpose and Functionality:}\newline
+The \verb|WarehouseGUI| component provides a visual interface for the warehouse management system, allowing users to interact with the warehouse grid, add waypoints, find paths, and manage inventory. This component bridges the gap between the user and the underlying database and pathfinding algorithms.
+
+\item \textbf{Class Attributes:}
+\begin{itemize}
+    \item {\verb|width| and \verb|length|:} Define the dimensions of the warehouse grid for visualization. These attributes ensure the GUI accurately represents the physical warehouse layout.
+    \item {\verb|canvas|:} Manages the graphical representation of the warehouse grid. This attribute centralizes all drawing operations for consistency.
+    \item {\verb|waypointsList|:} Stores the user-defined waypoints for pathfinding. This list maintains the sequence of positions for the robot to visit.
+    \item {\verb|start| and \verb|end|:} Represent fixed entry and exit points. These positions are immutable to ensure consistency across different components of the system.
+\end{itemize}
+
+\item \textbf{Key Procedures:}
+\begin{enumerate}
+    \item {\verb|InitializeGUI|:} Sets up the visual components of the interface, including the canvas and control buttons. This procedure establishes the foundation for user interaction with the system.
+    \item {\verb|DrawGrid|:} Creates the visual grid representation of the warehouse. This function translates the logical warehouse structure into a visual format that users can easily understand.
+    \item {\verb|AddWaypoint|:} Allows users to add waypoints for pathfinding, with validation to ensure they are within valid bounds. This procedure includes safeguards against selecting fixed positions as waypoints.
+    \item {\verb|IsValidWaypoint|:} Validates that a position can be used as a waypoint by checking it against logical constraints. This function ensures that all waypoint operations respect system integrity.
+    \item {\verb|HighlightCell|:} Provides visual feedback by highlighting specific cells on the grid. This function enhances user experience by clearly indicating selected positions and statuses.
+\end{enumerate}
+\newpage
+
+\item \textbf{Design Decisions:}
+\begin{itemize}
+    \item \textbf{Canvas Sizing:} The canvas size is proportional to the warehouse dimensions, ensuring a consistent visual representation regardless of warehouse size.
+    \item \textbf{Color Coding:} Different colors are used to distinguish between start positions, end positions, and waypoints, improving visual clarity.
+    \item \textbf{Button-Based Interface:} A simple button-based interface was chosen for its familiarity and ease of use, reducing the learning curve for users.
+    \item \textbf{Waypoint Validation:} Constraints ensure that only valid positions can be added as waypoints, preventing invalid path calculations.
+\end{itemize}
+
+\item \textbf{Justifications:}
+\begin{itemize}
+    \item \textbf{Encapsulation:} Keeps GUI-related logic within the \verb|WarehouseGUI| class, simplifying integration with other components.
+    \item \textbf{Real-Time Feedback:} Provides immediate visual feedback on user actions, enhancing the user experience and reducing errors.
+    \item \textbf{Error Handling:} Clear error messages guide users when invalid operations are attempted, improving system usability.
+
+\end{itemize}
+\end{itemize}
+

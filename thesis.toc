@@ -1,0 +1,194 @@
+\thispagestyle {empty}
+\contentsline {chapter}{\numberline {1}Analysing the problem}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Defining the problem itself}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Current systems model}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Computational methods}{4}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Thinking Abstractly}{4}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Thinking Ahead}{4}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Thinking Procedurally}{5}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Thinking Logically}{5}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}Thinking Concurrently}{5}{subsection.1.3.5}%
+\contentsline {section}{\numberline {1.4}Stakeholders in a solution}{6}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Stakeholder definition}{6}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Stakeholder use of solution}{6}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Investigation}{6}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Primary Stakeholder Data}{6}{subsection.1.5.1}%
+\contentsline {subsubsection}{Data collection}{7}{subsection.1.5.1}%
+\contentsline {subsubsection}{Gathered data}{7}{Item.3}%
+\contentsline {subsection}{\numberline {1.5.2}Secondary Stakeholder Questionnaire \& Responses}{12}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Conclusion}{15}{subsection.1.5.3}%
+\contentsline {subsubsection}{Primary Features}{15}{subsection.1.5.3}%
+\contentsline {subsubsection}{Secondary Features}{16}{Item.31}%
+\contentsline {subsubsection}{Desirable/Optional Features}{16}{Item.34}%
+\contentsline {chapter}{\numberline {2}Exploring the solution}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Research on current implementations}{17}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}History of warehouse robots}{17}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Amazon Robotics (formerly Kiva Systems)}{18}{subsection.2.1.2}%
+\contentsline {subsubsection}{Centralised Control with Distributed Execution}{18}{subsection.2.1.2}%
+\contentsline {subsubsection}{Reservation-Based Traffic Management}{18}{subsection.2.1.2}%
+\contentsline {subsubsection}{Dynamic Re-slotting and Inventory Positioning}{18}{subsection.2.1.2}%
+\contentsline {subsubsection}{Multi-Objective Path Optimisation}{18}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Ocado Smart Platform: The Grid-Based Approach}{19}{subsection.2.1.3}%
+\contentsline {subsubsection}{The Hive Mind Architecture}{19}{subsection.2.1.3}%
+\contentsline {subsubsection}{4D Path Planning}{19}{subsection.2.1.3}%
+\contentsline {subsubsection}{Swarm Behaviour Implementation}{19}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}AutoStore: Cube Storage}{20}{subsection.2.1.4}%
+\contentsline {subsubsection}{Cube Storage Efficiency}{20}{subsection.2.1.4}%
+\contentsline {subsubsection}{Grid-Based Robot Movement}{20}{subsection.2.1.4}%
+\contentsline {subsubsection}{Bin Retrieval Algorithms}{20}{subsection.2.1.4}%
+\contentsline {subsubsection}{Decentralised Control with Hierarchical Oversight}{20}{Item.41}%
+\contentsline {section}{\numberline {2.2}Research on pathfinding algorithms}{21}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Breadth-First Search (BFS) \cite {point_data}}{21}{subsection.2.2.1}%
+\contentsline {subsubsection}{Properties}{21}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Depth-First Search (DFS) \cite {geeksforgeeks_2019_depth}}{21}{subsection.2.2.2}%
+\contentsline {subsubsection}{Properties}{21}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}A* Search \cite {patel_2019_introduction}, \cite {s_2021_a}}{22}{subsection.2.2.3}%
+\contentsline {subsubsection}{Properties}{22}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Genetic Algorithms \cite {geeksforgeeks_2017_genetic}, \cite {geeksforgeeks_2024_introduction}}{22}{subsection.2.2.4}%
+\contentsline {subsubsection}{Core Concepts}{23}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Ratings}{23}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}Proposed features for my solution}{24}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Stock checker}{24}{subsection.2.3.1}%
+\contentsline {subsubsection}{Purpose and Functionality}{24}{subsection.2.3.1}%
+\contentsline {subsubsection}{Implementation Details}{24}{subsection.2.3.1}%
+\contentsline {subsubsection}{Benefits}{24}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Shortest path algorithm}{24}{subsection.2.3.2}%
+\contentsline {subsubsection}{Purpose and Functionality}{24}{subsection.2.3.2}%
+\contentsline {subsubsection}{Implementation Details}{24}{subsection.2.3.2}%
+\contentsline {subsubsection}{Benefits}{25}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Obstacle Placement}{25}{subsection.2.3.3}%
+\contentsline {subsubsection}{Purpose and Functionality}{25}{subsection.2.3.3}%
+\contentsline {subsubsection}{Implementation Details}{25}{subsection.2.3.3}%
+\contentsline {subsubsection}{Benefits}{25}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Direct Feedback}{25}{subsection.2.3.4}%
+\contentsline {subsubsection}{Purpose and Functionality}{25}{subsection.2.3.4}%
+\contentsline {subsubsection}{Implementation Details}{25}{subsection.2.3.4}%
+\contentsline {subsubsection}{Benefits}{26}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Environment persistence}{26}{subsection.2.3.5}%
+\contentsline {subsubsection}{Purpose and functionality}{26}{subsection.2.3.5}%
+\contentsline {subsubsection}{Implementation Details}{26}{subsection.2.3.5}%
+\contentsline {subsubsection}{Benefits}{26}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.4}Limitations of the solution}{26}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Limitations from code}{26}{subsection.2.4.1}%
+\contentsline {subsubsection}{Pathfinding Algorithm Constraints}{26}{subsection.2.4.1}%
+\contentsline {subsubsection}{Stock Checking Performance}{27}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Limitations from software \& library choice}{27}{subsection.2.4.2}%
+\contentsline {subsubsection}{SQLite Constraints}{27}{subsection.2.4.2}%
+\contentsline {subsubsection}{Performance Bottlenecks}{27}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Limitations from time \& software choice}{27}{subsection.2.4.3}%
+\contentsline {subsubsection}{Algorithm optimisation}{27}{subsection.2.4.3}%
+\contentsline {subsubsection}{Performance}{27}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Software specifications}{28}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Requirements}{28}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Hardware}{28}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Software}{28}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Success criteria}{29}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Methodology}{31}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Outline}{31}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}A breakdown of each stage}{32}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Key considerations:}{32}{subsection.2.8.3}%
+\contentsline {chapter}{\numberline {3}Designing the solution}{33}{chapter.3}%
+\contentsline {section}{\numberline {3.1}An initial breakdown of my solution}{34}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Features}{34}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Initialisation and Startup}{38}{subsection.3.1.2}%
+\contentsline {subsubsection}{Setup of environment}{38}{subsection.3.1.2}%
+\contentsline {subsubsection}{Graphical User Interface}{38}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Main Libraries}{39}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Abstraction}{39}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Summary/Justifications}{39}{subsection.3.1.5}%
+\contentsline {section}{\numberline {3.2}Algorithm prototyping}{42}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Creating the shortest path algorithm - BFS}{42}{subsection.3.2.1}%
+\contentsline {subsubsection}{BFS Flowchart}{43}{figure.caption.25}%
+\contentsline {subsubsection}{Example pseudocode of functions}{47}{figure.caption.26}%
+\contentsline {subsubsection}{Class Structure}{51}{figure.caption.26}%
+\contentsline {subsubsection}{Grid Class}{51}{Item.54}%
+\contentsline {subsubsection}{Pathfinder Class}{51}{Item.54}%
+\contentsline {subsubsection}{BFS Implementation Details}{52}{Item.54}%
+\contentsline {subsubsection}{Validation Strategy}{52}{Item.57}%
+\contentsline {subsection}{\numberline {3.2.2}Creating the shortest path algorithm - A*}{53}{subsection.3.2.2}%
+\contentsline {subsubsection}{Example pseudocode for A*}{57}{figure.caption.27}%
+\contentsline {subsection}{\numberline {3.2.3}GUI Logic}{61}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Database operations}{62}{subsection.3.2.4}%
+\contentsline {subsubsection}{Database validation}{63}{figure.caption.29}%
+\contentsline {subsubsection}{Database query}{64}{figure.caption.30}%
+\contentsline {subsubsection}{Database update}{65}{figure.caption.31}%
+\contentsline {subsection}{\numberline {3.2.5}Configuration}{66}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}JSON import/export}{67}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}A* refinements if possible}{68}{subsection.3.2.7}%
+\contentsline {section}{\numberline {3.3}Usability}{69}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Guidelines}{69}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Configuration Screen Analysis}{70}{subsection.3.3.2}%
+\contentsline {subsubsection}{Guideline alignment:}{71}{figure.caption.36}%
+\contentsline {subsubsection}{Usability Analysis:}{71}{figure.caption.36}%
+\contentsline {subsection}{\numberline {3.3.3}Main Screen Analysis}{72}{subsection.3.3.3}%
+\contentsline {subsubsection}{Guideline alignment:}{73}{figure.caption.37}%
+\contentsline {subsubsection}{Usability Analysis}{73}{figure.caption.37}%
+\contentsline {subsection}{\numberline {3.3.4}Grid Visualisation}{74}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Unifying the algorithms}{75}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Key modules breakdown}{75}{subsection.3.4.1}%
+\contentsline {subsubsection}{GUI}{75}{subsection.3.4.1}%
+\contentsline {subsubsection}{SPA}{76}{subsection.3.4.1}%
+\contentsline {subsubsection}{Database}{76}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}A unified implementation}{77}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Test data}{78}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}During development}{78}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Post-development}{78}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Further data}{86}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Developing the solution}{87}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Sprint Ada}{87}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Tasks}{87}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Purpose}{87}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Sprint Planning Details}{88}{subsection.4.1.3}%
+\contentsline {subsubsection}{Technical Approach}{88}{subsection.4.1.3}%
+\contentsline {subsubsection}{Architecture \& Structural Considerations}{88}{Item.72}%
+\contentsline {subsubsection}{Dependencies}{89}{Item.72}%
+\contentsline {subsection}{\numberline {4.1.4}Development Summary}{89}{subsection.4.1.4}%
+\contentsline {subsubsection}{Iteration 1 - Hours: 3}{89}{subsection.4.1.4}%
+\contentsline {subsubsection}{Iteration 2 - Hours: 1.5}{89}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Sprint Ada Implementation}{90}{subsection.4.1.5}%
+\contentsline {subsubsection}{Iteration 1: The BFS algorithm}{90}{subsection.4.1.5}%
+\contentsline {subsubsection}{Code Implementation:}{91}{subsection.4.1.5}%
+\contentsline {subsubsection}{Prototype Version:}{93}{figure.caption.41}%
+\contentsline {subsubsection}{Testing:}{93}{figure.caption.42}%
+\contentsline {subsubsection}{Screenshots of tests/program}{94}{table.caption.43}%
+\contentsline {subsubsection}{Validation:}{95}{figure.caption.47}%
+\contentsline {subsubsection}{Qodana Analysis}{95}{figure.caption.47}%
+\contentsline {subsubsection}{Review:}{95}{figure.caption.48}%
+\contentsline {subsubsection}{Iteration 2: Multi-point BFS and Visualisation}{96}{figure.caption.48}%
+\contentsline {subsubsection}{Code Implementation:}{97}{figure.caption.48}%
+\contentsline {subsubsection}{Prototype Version:}{99}{figure.caption.49}%
+\contentsline {subsubsection}{Testing:}{99}{figure.caption.50}%
+\contentsline {subsubsection}{Screenshots of tests/program}{100}{table.caption.51}%
+\contentsline {subsubsection}{Validation:}{101}{figure.caption.55}%
+\contentsline {subsubsection}{Qodana Analysis}{101}{figure.caption.55}%
+\contentsline {subsubsection}{Review:}{101}{figure.caption.56}%
+\contentsline {subsection}{\numberline {4.1.6}Sprint Review and Retrospective}{102}{subsection.4.1.6}%
+\contentsline {subsubsection}{Accomplishments}{102}{subsection.4.1.6}%
+\contentsline {subsubsection}{Testing Summary}{102}{subsection.4.1.6}%
+\contentsline {subsubsection}{Code Quality Metrics}{102}{table.caption.57}%
+\contentsline {subsubsection}{Sprint Review Outcomes}{102}{table.caption.57}%
+\contentsline {subsubsection}{Retrospective}{102}{table.caption.57}%
+\contentsline {subsection}{\numberline {4.1.7}Mark Scheme Alignment Evidence}{103}{subsection.4.1.7}%
+\contentsline {subsubsection}{Iterative Development (15 marks potential)}{103}{subsection.4.1.7}%
+\contentsline {subsubsection}{Testing to Inform Development (10 marks potential)}{103}{table.caption.58}%
+\contentsline {section}{\numberline {4.2}Sprint Number: 2}{103}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Final Solution Review}{103}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Solution Overview}{103}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Code Structure and Modularity}{103}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Key Implementation Features}{103}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Comprehensive Validation Strategy}{103}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Maintenance Considerations}{104}{subsection.4.3.5}%
+\contentsline {chapter}{\numberline {5}Evaluation}{105}{chapter.5}%
+\contentsline {chapter}{References}{106}{chapter*.60}%
+\contentsline {chapter}{Appendix \numberline {A}Complete pseudocode in OCR ERL}{108}{appendix.1.A}%
+\contentsline {subsection}{\numberline {A.0.1}BFS}{108}{subsection.1.A.0.1}%
+\contentsline {subsubsection}{Approach reasoning}{108}{subsection.1.A.0.1}%
+\contentsline {subsubsection}{Pseudocode}{109}{subsection.1.A.0.1}%
+\contentsline {subsubsection}{Analysis}{112}{subsection.1.A.0.1}%
+\contentsline {subsection}{\numberline {A.0.2}Database operations}{114}{subsection.1.A.0.2}%
+\contentsline {subsubsection}{Approach reasoning}{114}{subsection.1.A.0.2}%
+\contentsline {subsubsection}{Analysis}{117}{Item.81}%
+\contentsline {subsection}{\numberline {A.0.3}Rudimentary GUI}{119}{subsection.1.A.0.3}%
+\contentsline {subsubsection}{Approach reasoning}{119}{subsection.1.A.0.3}%
+\contentsline {subsubsection}{Analysis}{121}{Item.91}%
+\contentsline {chapter}{Appendix \numberline {B}Complete final code in Python}{123}{appendix.1.B}%
