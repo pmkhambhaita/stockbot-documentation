@@ -11,6 +11,20 @@
 \usepackage{markdownsyntax}
 \usepackage{longtable}
 \usepackage{svg}
+\usepackage{inconsolata} % Optional: Better monospace font
+
+\lstdefinestyle{custompython}{
+	language=Python,
+	basicstyle=\ttfamily\footnotesize, % \small or \scriptsize if too wide
+	keywordstyle=\color{blue}\bfseries,
+	stringstyle=\color{orange},
+	commentstyle=\color{gray},
+	showstringspaces=false,
+	breaklines=true,
+	frame=single,
+	tabsize=4,
+	columns=fullflexible
+}
 
 
 

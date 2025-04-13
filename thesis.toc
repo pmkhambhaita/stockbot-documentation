@@ -148,47 +148,38 @@
 \contentsline {subsection}{\numberline {4.1.5}Sprint Ada Implementation}{91}{subsection.4.1.5}%
 \contentsline {subsubsection}{Iteration 1: The BFS algorithm}{91}{subsection.4.1.5}%
 \contentsline {subsubsection}{Code Implementation:}{92}{subsection.4.1.5}%
-\contentsline {subsubsection}{Prototype Version:}{94}{figure.caption.41}%
-\contentsline {subsubsection}{Testing:}{94}{figure.caption.42}%
-\contentsline {subsubsection}{Screenshots of tests/program}{95}{table.caption.43}%
-\contentsline {subsubsection}{Validation:}{96}{figure.caption.47}%
-\contentsline {subsubsection}{Qodana Analysis}{96}{figure.caption.47}%
-\contentsline {subsubsection}{Review:}{96}{figure.caption.48}%
-\contentsline {subsubsection}{Iteration 2: Multi-point BFS and Visualisation}{97}{figure.caption.48}%
-\contentsline {subsubsection}{Code Implementation:}{98}{figure.caption.48}%
-\contentsline {subsubsection}{Prototype Version:}{100}{figure.caption.49}%
-\contentsline {subsubsection}{Testing:}{100}{figure.caption.50}%
-\contentsline {subsubsection}{Screenshots of tests/program}{101}{table.caption.51}%
-\contentsline {subsubsection}{Validation:}{102}{figure.caption.55}%
-\contentsline {subsubsection}{Qodana Analysis}{102}{figure.caption.55}%
-\contentsline {subsubsection}{Review:}{102}{figure.caption.56}%
-\contentsline {subsection}{\numberline {4.1.6}Sprint Review and Retrospective}{103}{subsection.4.1.6}%
-\contentsline {subsubsection}{Accomplishments}{103}{subsection.4.1.6}%
-\contentsline {subsubsection}{Testing Summary}{103}{subsection.4.1.6}%
-\contentsline {subsubsection}{Code Quality Metrics}{103}{table.caption.57}%
-\contentsline {subsubsection}{Sprint Review Outcomes}{103}{table.caption.57}%
-\contentsline {subsubsection}{Retrospective}{103}{table.caption.57}%
-\contentsline {subsection}{\numberline {4.1.7}Mark Scheme Alignment Evidence}{104}{subsection.4.1.7}%
-\contentsline {subsubsection}{Iterative Development (15 marks potential)}{104}{subsection.4.1.7}%
-\contentsline {subsubsection}{Testing to Inform Development (10 marks potential)}{104}{table.caption.58}%
-\contentsline {section}{\numberline {4.2}Sprint Number: 2}{104}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Final Solution Review}{104}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Solution Overview}{104}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Code Structure and Modularity}{104}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Key Implementation Features}{104}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Comprehensive Validation Strategy}{104}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Maintenance Considerations}{105}{subsection.4.3.5}%
-\contentsline {chapter}{\numberline {5}Evaluation}{106}{chapter.5}%
-\contentsline {chapter}{References}{107}{chapter*.60}%
-\contentsline {chapter}{Appendix \numberline {A}Complete pseudocode in OCR ERL}{109}{appendix.1.A}%
-\contentsline {subsection}{\numberline {A.0.1}BFS}{109}{subsection.1.A.0.1}%
-\contentsline {subsubsection}{Approach reasoning}{109}{subsection.1.A.0.1}%
-\contentsline {subsubsection}{Pseudocode}{110}{subsection.1.A.0.1}%
-\contentsline {subsubsection}{Analysis}{113}{subsection.1.A.0.1}%
-\contentsline {subsection}{\numberline {A.0.2}Database operations}{115}{subsection.1.A.0.2}%
-\contentsline {subsubsection}{Approach reasoning}{115}{subsection.1.A.0.2}%
-\contentsline {subsubsection}{Analysis}{118}{Item.81}%
-\contentsline {subsection}{\numberline {A.0.3}Rudimentary GUI}{120}{subsection.1.A.0.3}%
-\contentsline {subsubsection}{Approach reasoning}{120}{subsection.1.A.0.3}%
-\contentsline {subsubsection}{Analysis}{122}{Item.91}%
-\contentsline {chapter}{Appendix \numberline {B}Complete final code in Python}{124}{appendix.1.B}%
+\contentsline {subsubsection}{Dry Run}{93}{subsection.4.1.5}%
+\contentsline {subsubsection}{Prototype details:}{96}{figure.caption.41}%
+\contentsline {subsubsection}{Testing:}{96}{figure.caption.42}%
+\contentsline {subsubsection}{Tests justification}{96}{table.caption.43}%
+\contentsline {subsubsection}{Fixes}{96}{table.caption.43}%
+\contentsline {subsubsection}{Screenshots of tests/program}{97}{table.caption.43}%
+\contentsline {subsubsection}{Validation:}{98}{figure.caption.47}%
+\contentsline {subsubsection}{Qodana Analysis}{98}{figure.caption.47}%
+\contentsline {subsubsection}{Review:}{98}{figure.caption.48}%
+\contentsline {subsubsection}{Iteration 2: Multi-point BFS and Visualisation}{99}{figure.caption.48}%
+\contentsline {subsubsection}{Code Implementation:}{100}{figure.caption.48}%
+\contentsline {subsubsection}{Prototype details:}{106}{figure.caption.49}%
+\contentsline {subsubsection}{Testing:}{107}{figure.caption.50}%
+\contentsline {subsubsection}{Tests justification}{107}{table.caption.51}%
+\contentsline {subsubsection}{Fixes}{107}{table.caption.51}%
+\contentsline {subsubsection}{Screenshots of tests/program}{108}{table.caption.51}%
+\contentsline {subsubsection}{Validation:}{111}{figure.caption.55}%
+\contentsline {subsubsection}{Qodana Analysis}{111}{figure.caption.55}%
+\contentsline {subsubsection}{Review:}{111}{figure.caption.56}%
+\contentsline {subsection}{\numberline {4.1.6}Sprint Review and Retrospective}{112}{subsection.4.1.6}%
+\contentsline {subsubsection}{Accomplishments}{112}{subsection.4.1.6}%
+\contentsline {subsubsection}{Final testing}{112}{subsection.4.1.6}%
+\contentsline {subsubsection}{Testing Summary}{112}{table.caption.57}%
+\contentsline {subsubsection}{Code Quality Metrics}{113}{table.caption.58}%
+\contentsline {subsubsection}{Sprint Review Outcomes}{113}{table.caption.58}%
+\contentsline {section}{\numberline {4.2}Final Solution Review}{114}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Solution Overview}{114}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Code Structure and Modularity}{114}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Key Implementation Features}{114}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Comprehensive Validation Strategy}{114}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Maintenance Considerations}{114}{subsection.4.2.5}%
+\contentsline {chapter}{\numberline {5}Evaluation}{115}{chapter.5}%
+\contentsline {chapter}{References}{116}{chapter*.59}%
+\contentsline {chapter}{Appendix \numberline {A}Flowcharts in Mermaid}{118}{appendix.1.A}%
+\contentsline {chapter}{Appendix \numberline {B}Complete final code in Python}{119}{appendix.1.B}%
