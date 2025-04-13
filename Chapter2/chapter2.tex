@@ -81,8 +81,8 @@ Unlike Amazon's more centralised control, AutoStore employs a more distributed a
 
 \section{Research on pathfinding algorithms}
 
-\subsection{Breadth-First Search (BFS) \cite{point_data}}
-Breadth-First Search is an uninformed algorithm which begins at a specified start node and systematically explores all neighbouring nodes at the present depth level before moving to nodes at the next depth level. The boundary of this level is often referred to as the frontier. BFS maintains a queue of nodes to visit, implementing a first-in-first-out (FIFO) system that ensures all nodes at a given depth are processed before any nodes at a greater depth. This guarantees that when a goal node is discovered, the path to it will have traversed the minimum number of edges possible.
+\subsection{Breadth-First Search (BFS)}
+Breadth-First Search $^{\cite{point_data}}$ is an uninformed algorithm which begins at a specified start node and systematically explores all neighbouring nodes at the present depth level before moving to nodes at the next depth level. The boundary of this level is often referred to as the frontier. BFS maintains a queue of nodes to visit, implementing a first-in-first-out (FIFO) system that ensures all nodes at a given depth are processed before any nodes at a greater depth. This guarantees that when a goal node is discovered, the path to it will have traversed the minimum number of edges possible.
 \subsubsection{Properties}
 \begin{itemize}
     \item \textbf{Time Complexity:} The time complexity of BFS is $O(b^d)$, where $b$ represents the branching factor (the average number of successors per node) and $d$ represents the depth of the shallowest solution. In the worst case, BFS must explore all nodes up to the depth of the solution.
@@ -92,8 +92,8 @@ Breadth-First Search is an uninformed algorithm which begins at a specified star
 
 A queue manages the frontier of nodes to be explored, while a set or hash table tracks visited nodes to prevent cycles and redundant exploration. For each node dequeued, all unvisited neighbours are enqueued and marked as visited. This process continues until either the goal node is found or the queue becomes empty, indicating that no path exists. The best scenarios for BFS are unweighted graphs or where the shortest path is defined by the number of edges traversed. For these scenarios, BFS always finds the most optimal solution, but in other cases it is sub-optimal.
 
-\subsection{Depth-First Search (DFS) \cite{geeksforgeeks_2019_depth}}
-Depth-First Search, another uninformed algorithm, prioritises depth over breadth in its traversal pattern, a different approach to BFS. This algorithm begins at a designated start node and recursively explores along each branch to its fullest extent before returning to explore alternatives.
+\subsection{Depth-First Search (DFS)}
+Depth-First Search $^{\cite{geeksforgeeks_2019_depth}}$, another uninformed algorithm, prioritises depth over breadth in its traversal pattern, a different approach to BFS. This algorithm begins at a designated start node and recursively explores along each branch to its fullest extent before returning to explore alternatives.
 
 \subsubsection{Properties}
 \begin{itemize}
@@ -105,8 +105,8 @@ Depth-First Search, another uninformed algorithm, prioritises depth over breadth
 
 This algorithm is typically implemented using a stack data structure, as it is a LIFO structure. When a branch reaches a dead end or a previously visited node, the algorithm backtracks to the most recent node with unexplored neighbours and continues the exploration process. DFS is excellent at finding all possible paths, but not necessarily the shortest one.
 
-\subsection{A* Search \cite{patel_2019_introduction}, \cite{s_2021_a}}
-A*, an \textbf{informed} algorithm, evaluates nodes based on a composite function $ f(n) = g(n) + h(n) $, where $ g(n) $ represents the cost of the path from the start node to node $ n $, and $ h(n) $ is a heuristic function that estimates the cost from node $ n $ to the goal. The algorithm maintains a priority queue of nodes ordered by their $ f $-values, always expanding the node with the lowest $ f $-value.
+\subsection{A* Search}
+A*, an \textbf{informed} algorithm $^{\cite{patel_2019_introduction}, \cite{s_2021_a}}$, evaluates nodes based on a composite function $ f(n) = g(n) + h(n) $, where $ g(n) $ represents the cost of the path from the start node to node $ n $, and $ h(n) $ is a heuristic function that estimates the cost from node $ n $ to the goal. The algorithm maintains a priority queue of nodes ordered by their $ f $-values, always expanding the node with the lowest $ f $-value.
 
 \subsubsection{Properties}
 \begin{itemize}    
@@ -117,8 +117,8 @@ A*, an \textbf{informed} algorithm, evaluates nodes based on a composite functio
 
 The choice of heuristic significantly impacts the algorithm's performance. Common heuristics for A* include the Manhattan distance for grid-based problems, the Euclidean distance for geometric problems, and the straight-line distance for geographic pathfinding.
 
-\subsection{Genetic Algorithms \cite{geeksforgeeks_2017_genetic}, \cite{geeksforgeeks_2024_introduction}}
-Genetic Algorithms (GAs) are radically different compared to traditional algorithms like Dijkstra. Based on the principles of natural selection and genetic evolution, these algorithms tackle pathfinding as an optimisation problem, evolving solutions over multiple generations rather than systematically exploring the search space. They mimic biological evolution — selection, crossover, mutation — to gradually improve solutions.
+\subsection{Genetic Algorithms}
+Genetic Algorithms (GAs)$^{\cite{geeksforgeeks_2017_genetic}, \cite{geeksforgeeks_2024_introduction}}$ are radically different compared to traditional algorithms like Dijkstra. Based on the principles of natural selection and genetic evolution, these algorithms tackle pathfinding as an optimisation problem, evolving solutions over multiple generations rather than systematically exploring the search space. They mimic biological evolution — selection, crossover, mutation — to gradually improve solutions.
 
 \newpage
 

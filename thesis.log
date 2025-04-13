@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.6)  13 APR 2025 10:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2025.4.8)  13 APR 2025 10:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -14,9 +14,13 @@ LaTeX Warning: You have requested document class `Classes/PhDThesisPSnPDF',
 Document Class: PhDThesisPSnPDF 2016/04/23 A PhD thesis class file by Krishna K
 umar (v2.3.1)
 https://github.com/kks32/phd-thesis-template/
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/base/book.cls
 Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/base\bk12.clo
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/base/bk12.clo
 File: bk12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count196
@@ -32,28 +36,34 @@ File: bk12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 )))
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count271
 \calc@Bcount=\count272
@@ -66,77 +76,97 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count273
 \calc@Cskip=\skip53
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/tocbibind\tocbibind.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/tocbibind/tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
 
+
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
-) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
+)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@pps=\count274
 \c@@ppsavesec=\count275
 \c@@ppsaveapp=\count276
-) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/color.sty
 Package: color 2024/06/23 v1.3e Standard LaTeX Color (DPC)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.def
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
-)
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf.s
-ty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/mathcolor.ltx))
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/epstopdf-pkg/epstopdf.sty
 Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
-ty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/grfext/grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
-keys.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ))
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
-.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -145,45 +175,55 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 )))
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen144
 \Gin@req@width=\dimen145
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/datetime\datetime.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/etoolbox/etoolbox.sty
 Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count277
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fmtcount.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/fmtcount/fmtcount.sty
 Package: fmtcount 2025/02/09 v3.10 Displaying the values of LaTeX counters (NT,
 VB,NE)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/xkeyval/xkeyval.tex
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/xkeyval/xkvutils.tex
 \XKV@toks=\toks18
 \XKV@tempa@toks=\toks19
 )
 \XKV@depth=\count278
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fcprefix.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/fmtcount/fcprefix.sty
 Package: fcprefix 2012/09/28
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fcnumparser.st
-y
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/fmtcount/fcnumparser.sty
 Package: fcnumparser 2017/06/15
 \fc@digit@counter=\count279
-)) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+))
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
 \ex@=\dimen146
@@ -198,8 +238,8 @@ File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@DT@loopN=\count287
 \@DT@X=\count288
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/datetime\datetime-defau
-lts.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
 \@day=\count289
@@ -226,17 +266,18 @@ LaTeX Info: Redefining \today on input line 736.
 \PHD@hour=\count304
 \PHD@minute=\count305
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip54
 \bibsep=\skip55
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count306
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
-)
-PhDThesisPSnPDF: No font is set
+) PhDThesisPSnPDF: No font is set
 
 Class PhDThesisPSnPDF Warning: Using default font Latin Modern. If you would li
 ke to use other pre-defined fonts use `times' (The Cambridge University PhD the
@@ -244,7 +285,9 @@ sis guidelines recommend using Times font) or `fourier' or load a custom font i
 n the preamble.tex file by specifying `customfont' in the class options on inpu
 t line 548.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/lm/lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -279,20 +322,24 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks23
 \inpenc@posthook=\toks24
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
 6.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/microtype/microtype.sty
 Package: microtype 2025/02/11 v3.2a Micro-typographical refinements (RS)
 \MT@toks=\toks25
 \MT@tempbox=\box52
@@ -307,8 +354,8 @@ LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 \MT@listname@count=\count308
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
-tex.def
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2025/02/11 v3.2a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 944.
@@ -317,14 +364,16 @@ LaTeX Info: Redefining \lslig on input line 944.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/microtype/microtype.cfg
 File: microtype.cfg 2025/02/11 v3.2a microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pdftex\glyphtounicode
-.tex)
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pdftex/glyphtounicode.tex)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -332,19 +381,24 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/amsmath/amsmath.sty
 Package: amsmath 2024/11/05 v2.17t AMS math features
 \@mathmargin=\skip57
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen148
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count309
@@ -395,46 +449,59 @@ LaTeX Info: Redefining \Relbar on input line 970.
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
-ty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/hyperref/nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
-lestring.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count321
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
-ty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \@linkdim=\dimen156
 \Hy@linkcounter=\count322
 \Hy@pagecounter=\count323
- (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count324
- (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -449,18 +516,20 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
 \c@Hy@tempcnt=\count325
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen157
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
-.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -475,7 +544,8 @@ Package hyperref Info: Link coloring OFF on input line 6062.
 Package hyperref Info: Link coloring with OCG OFF on input line 6067.
 Package hyperref Info: PDF/A mode OFF on input line 6072.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -484,10 +554,13 @@ package with kernel methods
 \c@Hfootnote=\count329
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/hyperref/hpdftex.def
 File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
@@ -495,12 +568,12 @@ with kernel methods
 \Fld@listcount=\count330
 \c@bookmark@seq@number=\count331
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
-echeck.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
-ounter.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -522,7 +595,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 652.
 PhDThesisPSnPDF: The University identity guidelines recommend using left aligne
 d text. Please use `flushleft' in the documentclass option, if you wish to left
  align your text
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
 \f@nch@headwidth=\skip61
@@ -541,27 +615,30 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthR=\skip74
 \@temptokenb=\toks31
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/nomencl\nomencl.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/nomencl/nomencl.sty
 Package: nomencl 2021/11/10 v5.6 Nomenclature package
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.st
-y
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/koma-script/tocbasic.sty
 Package: tocbasic 2024/10/24 v3.43 KOMA-Script package (handling toc-files)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/koma-script/scrbase.sty
 Package: scrbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
-y
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/koma-script/scrlfile.sty
 Package: scrlfile 2024/10/24 v3.43 KOMA-Script package (file load hooks)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
-ok.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/koma-script/scrlfile-hook.sty
 Package: scrlfile-hook 2024/10/24 v3.43 KOMA-Script package (using LaTeX hooks)
 
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/koma-script/scrlogo.sty
 Package: scrlogo 2024/10/24 v3.43 KOMA-Script package (logo)
 )))
 Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
@@ -583,7 +660,9 @@ Package tocbasic Info: omitting babel extension for `nls'
 \openout3 = `thesis.nlo'.
 
 Package nomencl Info: Writing nomenclature file thesis.nlo on input line 1017.
- (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/base/makeidx.sty
 Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
 )
 \@indexfile=\write4
@@ -591,20 +670,26 @@ Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
 
 
 Writing index file thesis.idx
-) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.sty
+)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/minted/minted.sty
 Package: minted 2025/03/06 v3.6.0 Yet another Pygments shim for LaTeX
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.s
-ty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/catchfile/catchfile.sty
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextra.sty
+))
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/fvextra/fvextra.sty
 Package: fvextra 2025/03/04 v1.12.0 fvextra - extensions and patches for fancyv
 rb
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 \FV@CodeLineNo=\count332
 \FV@InFile=\read2
@@ -613,11 +698,13 @@ Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 \FV@StepNumber=\count334
 \FV@OutFile=\write5
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/lineno/lineno.sty
 Package: lineno 2025/01/29 line numbers on paragraphs v5.4
 \linenopenalty=\count335
 \output=\toks32
@@ -663,32 +750,35 @@ LaTeX Info: Redefining \\ on input line 3187.
 \c@FV@BreakBufferDepth=\count356
 \FV@LineWidth=\dimen172
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/latex2pydata\latex2pyda
-ta.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/latex2pydata/latex2pydata.sty
 Package: latex2pydata 2025/03/26 v0.6.0 latex2pydata - write data to file in Py
 thon literal format
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
-ty
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
-.code.tex
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/pgf/utilities/pgfkeys.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks33
 \pgfkeys@temptoks=\toks34
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
-libraryfiltered.code.tex
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pgf/utilities/pgfkeyslibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks35
 )))
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/pgfopts\pgfopts.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 \pgfopts@list@add@a@toks=\toks36
 \pgfopts@list@add@b@toks=\toks37
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count357
 \float@exts=\toks38
@@ -700,15 +790,19 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks40
 \c@listing=\count359
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 LaTeX Info: Redefining \color on input line 762.
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -718,7 +812,9 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/listings/listings.sty
 \lst@mode=\count360
 \lst@gtempboxa=\box65
 \lst@token=\toks41
@@ -731,21 +827,26 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 \lst@newlines=\count364
 \lst@lineno=\count365
 \lst@maxwidth=\dimen176
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/listings/lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 \c@lstnumber=\count366
 \lst@skipnumbers=\count367
 \lst@framebox=\box66
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/listings/listings.cfg
 File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
-(markdownsyntax.sty)
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+ (markdownsyntax.sty)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/tools/longtable.sty
 Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
 \LTleft=\skip78
 \LTright=\skip79
@@ -764,50 +865,53 @@ Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
 \c@LT@chunks=\count372
 \LT@p@ftn=\toks42
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/svg\svg.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/svg/svg.sty
 Package: svg 2020/11/26 v2.02k (include SVG pictures)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.s
-ty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 \c@svg@param@lastpage=\count373
 \svg@box=\box72
 \c@svg@param@currpage=\count374
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent
-.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/transparent/transparent.sty
 Package: transparent 2022-10-27 v1.5 Transparency with color stacks
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent
--nometadata.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/transparent/transparent-nometadata.sty
 Package: transparent-nometadata 2022-10-27 v1.5 Transparency via pdfTeX's color
  stack (HO)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )))
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
-sty
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
-y
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
--common.tex
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/pgf/systemlayer/pgfsys.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/pgf/utilities/pgfrcs.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks43
 \pgfutil@tempdima=\dimen178
 \pgfutil@tempdimb=\dimen179
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
--latex.def
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box73
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
-code.tex
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pgf/utilities/pgfrcs.code.tex
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s.code.tex
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \pgf@x=\dimen180
 \pgf@y=\dimen181
@@ -830,45 +934,46 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \t@pgf@tokc=\toks46
 \pgf@sys@id@count=\count379
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
-fg
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s-pdftex.def
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pgf/systemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s-common-pdf.def
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 )))
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-ssoftpath.code.tex
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfsyssoftpath@smallbuffer@items=\count380
 \pgfsyssoftpath@bigbuffer@items=\count381
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-sprotocol.code.tex
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (Preamble/preamble.tex
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/tabularray\tabularray.s
-ty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/tabularray/tabularray.sty
 Package: tabularray 2025-03-11 v2025A Typeset tabulars and arrays with LaTeX3
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/ninecolors\ninecolors.s
-ty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/ninecolors/ninecolors.sty
 Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
-e.sty
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/l3packages/xparse/xparse.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/l3kernel/expl3.sty
 Package: expl3 2025-01-18 L3 programming layer (loader) 
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count382
 \l__pdf_internal_box=\box74
@@ -996,10 +1101,12 @@ Package: xparse 2024-08-16 L3 Experimental document command parser
 \l__tblr_last_vline_wd_dim=\dimen299
 \l__tblr_tikz_node_box=\box102
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/tools/array.sty
 Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \col@sep=\dimen300
 \ar@mcellbox=\box103
@@ -1017,7 +1124,8 @@ Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \TX@cols=\count421
 \TX@ftn=\toks48
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box105
 \beforetitleunit=\skip84
@@ -1029,13 +1137,16 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidthlast=\dimen310
 \titlewidthfirst=\dimen311
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/xurl\xurl.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/xurl/xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count422
@@ -1051,7 +1162,8 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen319
 \Gm@dimlist=\toks50
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/geometry/geometry.cfg))
 
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less.
@@ -1064,10 +1176,13 @@ less.
 (fancyhdr)                Please consider using the `twoside' option on input l
 ine 16.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen320
 \captionmargin=\dimen321
@@ -1086,16 +1201,20 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
-)) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.s
-ty
+))
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count427
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count428
-) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen328
 \lightrulewidth=\dimen329
@@ -1114,13 +1233,17 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count431
 \@lastruleclass=\count432
 \@thisrulewidth=\dimen340
-) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip86
 \multirow@cntb=\count433
 \multirow@dima=\skip87
 \bigstrutjot=\dimen341
-) (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+)
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/siunitx/siunitx.sty
 Package: siunitx 2025-03-26 v3.4.8 A comprehensive (SI) units package
 \l__siunitx_number_uncert_offset_int=\count434
 \l__siunitx_number_exponent_fixed_int=\count435
@@ -1137,8 +1260,8 @@ Package: siunitx 2025-03-26 v3.4.8 A comprehensive (SI) units package
 \l__siunitx_angle_unit_box=\box107
 \l__siunitx_compound_count_int=\count444
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
-ns.sty
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/translations/translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
  (CN)
 )
@@ -1158,9 +1281,10 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
 )) (thesis-info.tex)
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 124.
- (thesis.aux (Declaration/declaration.aux)
-(Acknowledgement/acknowledgement.aux) (Chapter1/chapter1.aux)
-(Chapter2/chapter2.aux) (Chapter3/chapter3.aux) (Chapter4/chapter4.aux
+ (thesis.aux
+(Declaration/declaration.aux) (Acknowledgement/acknowledgement.aux)
+(Chapter1/chapter1.aux) (Chapter2/chapter2.aux) (Chapter3/chapter3.aux)
+(Chapter4/chapter4.aux
 
 LaTeX Warning: Label `fig:enter-label' multiply defined.
 
@@ -1204,8 +1328,8 @@ LaTeX Font Info:    ... okay on input line 124.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 124.
 LaTeX Font Info:    ... okay on input line 124.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/cont
+ext/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count448
 \scratchdimen=\dimen347
@@ -1219,7 +1343,8 @@ ii
 \makeMPintoPDFobject=\count453
 \everyMPtoPDFconversion=\toks52
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fc-english.def
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
 )
 LaTeX Info: Redefining \microtypecontext on input line 124.
@@ -1239,12 +1364,14 @@ LaTeX Info: Redefining \showhyphens on input line 124.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
- (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
 Package hyperref Info: Link coloring ON on input line 124.
-(thesis.out) (thesis.out)
+ (thesis.out) (thesis.out)
 \@outlinefile=\write7
 \openout7 = `thesis.out'.
 
@@ -1289,8 +1416,8 @@ Package tocbasic Info: omitting babel extension for `lol'
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
-slations-basic-dictionary-english.trsl
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/translations/dicts/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
@@ -1300,25 +1427,29 @@ or `english'. on input line 124.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
 27.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
 27.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
 127.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
 127.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1330,19 +1461,23 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    Trying to load font information for U+msa on input line 127
 .
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 127
 .
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 \PHD@crest=\box116
@@ -1364,9 +1499,8 @@ Package pdftex.def Info: logoSchool.jpg  used on input line 127.
 [1
 
 
-{C:/Users/pmkha/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/pmkh
-a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./logoSchool.jpg
->]
+{/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/data/fonts/map/p
+dftex/pdftex.map} <./logoSchool.jpg>]
 \openout2 = `Declaration/declaration.aux'.
 
  (Declaration/declaration.tex
@@ -1418,7 +1552,7 @@ Package pdftex.def Info: IMG_20241213_124653362~2.jpg  used on input line 25.
 
  (Chapter1/chapter1.tex
 Section 1.
-<Images/warehouse.jpg, id=545, 289.08pt x 151.0443pt>
+<Images/warehouse.jpg, id=533, 289.08pt x 151.0443pt>
 File: Images/warehouse.jpg Graphic file (type jpg)
 <use Images/warehouse.jpg>
 Package pdftex.def Info: Images/warehouse.jpg  used on input line 23.
@@ -1430,7 +1564,7 @@ Package pdftex.def Info: Images/warehouse.jpg  used on input line 23.
 
 
  <./Images/warehouse.jpg>]
-<automation+.png, id=555, 803.0pt x 444.66125pt>
+<automation+.png, id=543, 803.0pt x 444.66125pt>
 File: automation+.png Graphic file (type png)
 <use automation+.png>
 Package pdftex.def Info: automation+.png  used on input line 35.
@@ -1453,7 +1587,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--38
 
 
 [2 <./automation+.png>]
-<CurrentSysModel.png, id=564, 310.15875pt x 674.52pt>
+<CurrentSysModel.png, id=552, 310.15875pt x 674.52pt>
 File: CurrentSysModel.png Graphic file (type png)
 <use CurrentSysModel.png>
 Package pdftex.def Info: CurrentSysModel.png  used on input line 46.
@@ -1464,17 +1598,37 @@ Package pdftex.def Info: CurrentSysModel.png  used on input line 46.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
 0.
 
-(C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+[]|\T1/lmr/m/n/12 (+20) High-level programming
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+[]|\T1/lmr/m/n/12 (+20) Versatile, easy-to-understand
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 80--80
 []|\T1/lmr/m/n/12 (+20) Object-Oriented
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
+[]|\T1/lmr/m/n/12 (+20) Programming paradigm
+ []
 
-[4{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 
+Underfull \hbox (badness 5359) in paragraph at lines 84--85
+[]|\T1/lmr/m/n/12 (+20) Creates a user-friendly, easy
+ []
+
+
+
+[4]
 
 [5]
 Underfull \hbox (badness 10000) in paragraph at lines 114--120
@@ -1553,7 +1707,7 @@ Package pdftex.def Info: IMG_20241213_124653362~2.jpg  used on input line 461.
 
  (Chapter2/chapter2.tex
 Section 2.
-<Images/kiva.png, id=670, 843.15pt x 526.96875pt>
+<Images/kiva.png, id=658, 843.15pt x 526.96875pt>
 File: Images/kiva.png Graphic file (type png)
 <use Images/kiva.png>
 Package pdftex.def Info: Images/kiva.png  used on input line 14.
@@ -1583,222 +1737,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--55
 
 [20]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 84.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 84.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 84.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 84.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 84.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 84.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 84.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 84.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 95.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 95.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 95.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 95.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 95.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 95.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 95.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 95.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 95.
-
-
-
-[21{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.e
-nc}{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 108.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 120.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 120.
-
-
+[21]
 
 [22]
 
@@ -1813,21 +1752,76 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [27]
 
 [28]
+Underfull \hbox (badness 7099) in paragraph at lines 348--348
+\T1/lmr/m/n/12 (+20) buffer for restocking before complete
+ []
 
-[29]
-Underfull \hbox (badness 2269) in paragraph at lines 379--379
-[]|\T1/lmr/m/n/12 (+20) Measures the core func-tion-al-ity of au-
+
+Underfull \hbox (badness 2088) in paragraph at lines 348--348
+[]|\T1/lmr/m/n/12 (+20) This balances speed requirements with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--348
+\T1/lmr/m/n/12 (+20) collection is inefficient compared to
+ []
+
+
+Underfull \hbox (badness 4608) in paragraph at lines 348--348
+[]|\T1/lmr/m/n/12 (+20) This demonstrates system stability &
+ []
+
+
+Underfull \hbox (badness 3930) in paragraph at lines 348--348
+\T1/lmr/m/n/12 (+20) reliability, which are required in any
+ []
+
+
+Underfull \hbox (badness 1043) in paragraph at lines 348--348
+[]|\T1/lmr/m/n/12 (+20) Essential for warehouse management to
  []
 
 
 
-[30{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.e
-nc}]
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
+[]|\T1/lmr/m/n/12 (+20) Measures the core functionality of
+ []
+
+
+Underfull \hbox (badness 4765) in paragraph at lines 379--379
+\T1/lmr/m/n/12 (+20) autonomous performance of warehouse
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 379--379
+\T1/lmr/m/n/12 (+20) tasks, supporting the goal of reducing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
+[]|\T1/lmr/m/n/12 (+20) The system will provide collection
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 379--379
+\T1/lmr/m/n/12 (+20) every run with 100% accuracy for all
+ []
+
+
+Overfull \hbox (6.59308pt too wide) in paragraph at lines 382--385
+\T1/lmr/m/n/12 (-20) justifications. The criteria specifications are based on m
+y previous research of current implementations
+ []
+
+
+
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
 
-<Methodology diagram (1).png, id=788, 499.8675pt x 492.84125pt>
+<Methodology diagram (1).png, id=783, 499.8675pt x 492.84125pt>
 File: Methodology diagram (1).png Graphic file (type png)
 <use Methodology diagram (1).png>
 Package pdftex.def Info: Methodology diagram (1).png  used on input line 396.
@@ -1841,7 +1835,7 @@ Package pdftex.def Info: Methodology diagram (1).png  used on input line 396.
 
  (Chapter3/chapter3.tex
 Section 3.
-<Images/breakdown1.png, id=800, 359.84438pt x 690.32906pt>
+<Images/breakdown1.png, id=795, 359.84438pt x 690.32906pt>
 File: Images/breakdown1.png Graphic file (type png)
 <use Images/breakdown1.png>
 Package pdftex.def Info: Images/breakdown1.png  used on input line 10.
@@ -1856,12 +1850,12 @@ Package pdftex.def Info: Images/breakdown1.png  used on input line 10.
  <./Images/breakdown1.png>]
 
 [34]
-<Images/pfoutline.png, id=815, 254.45062pt x 654.19406pt>
+<Images/pfoutline.png, id=810, 254.45062pt x 654.19406pt>
 File: Images/pfoutline.png Graphic file (type png)
 <use Images/pfoutline.png>
 Package pdftex.def Info: Images/pfoutline.png  used on input line 43.
 (pdftex.def)             Requested size: 248.96162pt x 640.10759pt.
-<Images/scoutline.png, id=816, 423.08063pt x 743.02594pt>
+<Images/scoutline.png, id=811, 423.08063pt x 743.02594pt>
 File: Images/scoutline.png Graphic file (type png)
 <use Images/scoutline.png>
 Package pdftex.def Info: Images/scoutline.png  used on input line 49.
@@ -1870,7 +1864,7 @@ Package pdftex.def Info: Images/scoutline.png  used on input line 49.
 
 LaTeX Warning: Float too large for page by 80.30101pt on input line 51.
 
-<Images/guioutline.png, id=817, 584.93532pt x 736.25063pt>
+<Images/guioutline.png, id=812, 584.93532pt x 736.25063pt>
 File: Images/guioutline.png Graphic file (type png)
 <use Images/guioutline.png>
 Package pdftex.def Info: Images/guioutline.png  used on input line 55.
@@ -1886,7 +1880,7 @@ Package pdftex.def Info: Images/guioutline.png  used on input line 55.
 [38]
 
 [39]
-<Images/classdiag1.png, id=845, 1066.98625pt x 1447.4075pt>
+<Images/classdiag1.png, id=840, 1066.98625pt x 1447.4075pt>
 File: Images/classdiag1.png Graphic file (type png)
 <use Images/classdiag1.png>
 Package pdftex.def Info: Images/classdiag1.png  used on input line 122.
@@ -1894,7 +1888,7 @@ Package pdftex.def Info: Images/classdiag1.png  used on input line 122.
 
 
 [40 <./Images/classdiag1.png>]
-<Images/top-down-diagram.png, id=852, 319.94531pt x 1433.355pt>
+<Images/top-down-diagram.png, id=847, 319.94531pt x 1433.355pt>
 File: Images/top-down-diagram.png Graphic file (type png)
 <use Images/top-down-diagram.png>
 Package pdftex.def Info: Images/top-down-diagram.png  used on input line 130.
@@ -1902,7 +1896,7 @@ Package pdftex.def Info: Images/top-down-diagram.png  used on input line 130.
 
 
 [41 <./Images/top-down-diagram.png>]
-<Images/bfsvdfs.png, id=859, 241.90375pt x 308.15125pt>
+<Images/bfsvdfs.png, id=854, 241.90375pt x 308.15125pt>
 File: Images/bfsvdfs.png Graphic file (type png)
 <use Images/bfsvdfs.png>
 Package pdftex.def Info: Images/bfsvdfs.png  used on input line 161.
@@ -1910,7 +1904,7 @@ Package pdftex.def Info: Images/bfsvdfs.png  used on input line 161.
 
 
 [42 <./Images/bfsvdfs.png>]
-<Flowcharts/BFS2.png, id=876, 391.4625pt x 937.5025pt>
+<Flowcharts/BFS2.png, id=871, 391.4625pt x 937.5025pt>
 File: Flowcharts/BFS2.png Graphic file (type png)
 <use Flowcharts/BFS2.png>
 Package pdftex.def Info: Flowcharts/BFS2.png  used on input line 171.
@@ -1920,11 +1914,19 @@ Package pdftex.def Info: Flowcharts/BFS2.png  used on input line 171.
 [43 <./Flowcharts/BFS2.png>]
 
 [44]
+Overfull \hbox (2.88779pt too wide) in paragraph at lines 224--225
+\T1/lmr/m/n/12 (-20) essential for path reconstruction. This method standardise
+s the node structure throughout
+ []
+
+
 
 [45]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
 79.
- (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1940,7 +1942,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 [48]
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
 446.
- (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
+
+(/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1965,7 +1969,7 @@ tNode.x, currentNode.y)[]
 [51]
 
 [52]
-<Flowcharts/basicastar.png, id=928, 316.18124pt x 744.53156pt>
+<Flowcharts/basicastar.png, id=923, 316.18124pt x 744.53156pt>
 File: Flowcharts/basicastar.png Graphic file (type png)
 <use Flowcharts/basicastar.png>
 Package pdftex.def Info: Flowcharts/basicastar.png  used on input line 529.
@@ -2017,7 +2021,7 @@ isObstacle(endX, endY):[]
 
 
 [60]
-<Flowcharts/guiflowchart.png, id=964, 518.6878pt x 470.50781pt>
+<Flowcharts/guiflowchart.png, id=959, 518.6878pt x 470.50781pt>
 File: Flowcharts/guiflowchart.png Graphic file (type png)
 <use Flowcharts/guiflowchart.png>
 Package pdftex.def Info: Flowcharts/guiflowchart.png  used on input line 731.
@@ -2025,7 +2029,7 @@ Package pdftex.def Info: Flowcharts/guiflowchart.png  used on input line 731.
 
 
 [61 <./Flowcharts/guiflowchart.png>]
-<Flowcharts/dbops1.png, id=972, 820.06375pt x 1026.83624pt>
+<Flowcharts/dbops1.png, id=967, 820.06375pt x 1026.83624pt>
 File: Flowcharts/dbops1.png Graphic file (type png)
 <use Flowcharts/dbops1.png>
 Package pdftex.def Info: Flowcharts/dbops1.png  used on input line 741.
@@ -2033,7 +2037,7 @@ Package pdftex.def Info: Flowcharts/dbops1.png  used on input line 741.
 
 
 [62 <./Flowcharts/dbops1.png>]
-<Flowcharts/dbinit.png, id=979, 2551.5325pt x 2083.785pt>
+<Flowcharts/dbinit.png, id=974, 2551.5325pt x 2083.785pt>
 File: Flowcharts/dbinit.png Graphic file (type png)
 <use Flowcharts/dbinit.png>
 Package pdftex.def Info: Flowcharts/dbinit.png  used on input line 751.
@@ -2041,7 +2045,7 @@ Package pdftex.def Info: Flowcharts/dbinit.png  used on input line 751.
 
 
 [63 <./Flowcharts/dbinit.png>]
-<Flowcharts/dbquery.png, id=985, 588.1975pt x 1678.27pt>
+<Flowcharts/dbquery.png, id=980, 588.1975pt x 1678.27pt>
 File: Flowcharts/dbquery.png Graphic file (type png)
 <use Flowcharts/dbquery.png>
 Package pdftex.def Info: Flowcharts/dbquery.png  used on input line 760.
@@ -2049,7 +2053,7 @@ Package pdftex.def Info: Flowcharts/dbquery.png  used on input line 760.
 
 
 [64 <./Flowcharts/dbquery.png>]
-<Flowcharts/dbwrite.png, id=992, 1588.93625pt x 1995.455pt>
+<Flowcharts/dbwrite.png, id=987, 1588.93625pt x 1995.455pt>
 File: Flowcharts/dbwrite.png Graphic file (type png)
 <use Flowcharts/dbwrite.png>
 Package pdftex.def Info: Flowcharts/dbwrite.png  used on input line 769.
@@ -2057,7 +2061,7 @@ Package pdftex.def Info: Flowcharts/dbwrite.png  used on input line 769.
 
 
 [65 <./Flowcharts/dbwrite.png>]
-<Flowcharts/config1.png, id=999, 369.38pt x 1026.83624pt>
+<Flowcharts/config1.png, id=994, 369.38pt x 1026.83624pt>
 File: Flowcharts/config1.png Graphic file (type png)
 <use Flowcharts/config1.png>
 Package pdftex.def Info: Flowcharts/config1.png  used on input line 778.
@@ -2065,7 +2069,7 @@ Package pdftex.def Info: Flowcharts/config1.png  used on input line 778.
 
 
 [66 <./Flowcharts/config1.png>]
-<Flowcharts/json.png, id=1006, 815.045pt x 1029.8475pt>
+<Flowcharts/json.png, id=1001, 815.045pt x 1029.8475pt>
 File: Flowcharts/json.png Graphic file (type png)
 <use Flowcharts/json.png>
 Package pdftex.def Info: Flowcharts/json.png  used on input line 788.
@@ -2073,7 +2077,7 @@ Package pdftex.def Info: Flowcharts/json.png  used on input line 788.
 
 
 [67 <./Flowcharts/json.png>]
-<Flowcharts/optimisedastar.png, id=1014, 1678.27pt x 5096.03876pt>
+<Flowcharts/optimisedastar.png, id=1009, 1678.27pt x 5096.03876pt>
 File: Flowcharts/optimisedastar.png Graphic file (type png)
 <use Flowcharts/optimisedastar.png>
 Package pdftex.def Info: Flowcharts/optimisedastar.png  used on input line 798.
@@ -2082,9 +2086,15 @@ Package pdftex.def Info: Flowcharts/optimisedastar.png  used on input line 798.
 
 
 [68 <./Flowcharts/optimisedastar.png>]
+Overfull \hbox (0.2119pt too wide) in paragraph at lines 815--816
+[]\T1/lmr/bx/n/12 (-20) Aesthetic and minimalist design: \T1/lmr/m/n/12 (-20) K
+eep clutter to a minimum. All unnecessary information
+ []
+
+
 
 [69]
-<Images/InitGUI.jpg, id=1025, 2828.5675pt x 2288.55pt>
+<Images/InitGUI.jpg, id=1020, 2828.5675pt x 2288.55pt>
 File: Images/InitGUI.jpg Graphic file (type jpg)
 <use Images/InitGUI.jpg>
 Package pdftex.def Info: Images/InitGUI.jpg  used on input line 824.
@@ -2092,7 +2102,7 @@ Package pdftex.def Info: Images/InitGUI.jpg  used on input line 824.
 
 
 [70 <./Images/InitGUI.jpg>]
-<Images/GUI.jpg, id=1031, 2509.375pt x 3063.445pt>
+<Images/GUI.jpg, id=1026, 2509.375pt x 3063.445pt>
 File: Images/GUI.jpg Graphic file (type jpg)
 <use Images/GUI.jpg>
 Package pdftex.def Info: Images/GUI.jpg  used on input line 896.
@@ -2104,7 +2114,7 @@ Package pdftex.def Info: Images/GUI.jpg  used on input line 896.
 [72 <./Images/GUI.jpg>]
 
 [73]
-<gridvisual.jpg, id=1046, 2988.16376pt x 2970.09625pt>
+<gridvisual.jpg, id=1041, 2988.16376pt x 2970.09625pt>
 File: gridvisual.jpg Graphic file (type jpg)
 <use gridvisual.jpg>
 Package pdftex.def Info: gridvisual.jpg  used on input line 959.
@@ -2116,7 +2126,7 @@ Package pdftex.def Info: gridvisual.jpg  used on input line 959.
 [75]
 
 [76]
-<Flowcharts/Unified.png, id=1060, 2099.845pt x 3849.38126pt>
+<Flowcharts/Unified.png, id=1055, 2099.845pt x 3849.38126pt>
 File: Flowcharts/Unified.png Graphic file (type png)
 <use Flowcharts/Unified.png>
 Package pdftex.def Info: Flowcharts/Unified.png  used on input line 1030.
@@ -2130,12 +2140,17 @@ Overfull \hbox (15.17245pt too wide) in alignment at lines 1040--1044
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1046--1046
-[]|\T1/lmr/m/n/12 (+20) Direct path be-tween
+[]|\T1/lmr/m/n/12 (+20) Direct path between
  []
 
 
 Underfull \hbox (badness 3612) in paragraph at lines 1046--1046
-[]|\T1/lmr/m/n/12 (+20) Direct path be-tween
+[]|\T1/lmr/m/n/12 (+20) Direct path between
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1048--1048
+[]|\T1/lmr/m/n/12 (+20) Direct path between
  []
 
 
@@ -2154,34 +2169,88 @@ Overfull \hbox (12.61217pt too wide) in alignment at lines 1059--1063
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1065
+[]|\T1/lmr/m/n/12 (+20) Tests error handling
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1065
+\T1/lmr/m/n/12 (+20) for out-of-bounds
+ []
+
+
+Underfull \hbox (badness 6842) in paragraph at lines 1065--1065
+\T1/lmr/m/n/12 (+20) items to ensure the
+ []
+
+
 Underfull \hbox (badness 5878) in paragraph at lines 1067--1067
 []|\T1/lmr/m/n/12 (+20) Validates non-numeric
  []
 
 
-Underfull \hbox (badness 4699) in paragraph at lines 1069--1069
-[]|\T1/lmr/m/n/12 (+20) Configure a 0\TS1/lmr/m/n/12 (+20) Ö\T1/lmr/m/n/12 (+20
-) 5
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1067
+\T1/lmr/m/n/12 (+20) input handling to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1069
+[]|\T1/lmr/m/n/12 (+20) Configure a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1069
+\T1/lmr/m/n/12 (+20) 0\TS1/lmr/m/n/12 (+20) Ö\T1/lmr/m/n/12 (+20) 5 grid using
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1069
+\T1/lmr/m/n/12 (+20) configuration
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1069
+[]|\T1/lmr/m/n/12 (+20) Tests boundary
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1069
+\T1/lmr/m/n/12 (+20) grid size to ensure
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1071
+[]|\T1/lmr/m/n/12 (+20) Configure a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1071
+\T1/lmr/m/n/12 (+20) 101\TS1/lmr/m/n/12 (+20) Ö\T1/lmr/m/n/12 (+20) 50 grid
  []
 
 
 Underfull \hbox (badness 1533) in paragraph at lines 1071--1071
-[]|\T1/lmr/m/n/12 (+20) Tests up-per bound-ary
+[]|\T1/lmr/m/n/12 (+20) Tests upper boundary
  []
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 1071--1071
-\T1/lmr/m/n/12 (+20) lim-its for grid con-fig-
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1071
+\T1/lmr/m/n/12 (+20) limits for grid
  []
 
 
-Underfull \hbox (badness 1067) in paragraph at lines 1071--1071
-\T1/lmr/m/n/12 (+20) u-ra-tion to en-sure sys-
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1071
+\T1/lmr/m/n/12 (+20) configuration to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1071
+\T1/lmr/m/n/12 (+20) excessive resource
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
-[]|\T1/lmr/m/n/12 (+20) Set quan-tity of
+[]|\T1/lmr/m/n/12 (+20) Set quantity of
  []
 
 
@@ -2191,37 +2260,77 @@ Underfull \hbox (badness 3780) in paragraph at lines 1073--1073
 
 
 Underfull \hbox (badness 6608) in paragraph at lines 1073--1073
-\T1/lmr/m/n/12 (+20) then at-tempt to
+\T1/lmr/m/n/12 (+20) then attempt to
+ []
+
+
+Underfull \hbox (badness 6825) in paragraph at lines 1073--1073
+[]|\T1/lmr/m/n/12 (+20) Error message: "Cannot
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
+[]|\T1/lmr/m/n/12 (+20) Tests zero-stock
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
+\T1/lmr/m/n/12 (+20) validation to ensure
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
+\T1/lmr/m/n/12 (+20) the system prevents
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
+\T1/lmr/m/n/12 (+20) journeys to zero-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
-[]|\T1/lmr/m/n/12 (+20) Set quan-tity of
+[]|\T1/lmr/m/n/12 (+20) Set quantity of
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
-[]|\T1/lmr/m/n/12 (+20) Tests neg-a-tive value
+\T1/lmr/m/n/12 (+20) ItemID 25 to
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
-\T1/lmr/m/n/12 (+20) val-i-da-tion to en-sure
+\T1/lmr/m/n/12 (+20) -5 using update
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
+[]|\T1/lmr/m/n/12 (+20) Error message: "Invalid
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
+[]|\T1/lmr/m/n/12 (+20) Tests negative value
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
+\T1/lmr/m/n/12 (+20) validation to ensure
  []
 
 
 Underfull \hbox (badness 3058) in paragraph at lines 1075--1075
-\T1/lmr/m/n/12 (+20) database in-tegrity for
+\T1/lmr/m/n/12 (+20) database integrity for
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
-[]|\T1/lmr/m/n/12 (+20) Set ob-sta-cles to
+[]|\T1/lmr/m/n/12 (+20) Set obstacles to
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
-\T1/lmr/m/n/12 (+20) com-pletely block
+\T1/lmr/m/n/12 (+20) completely block
  []
 
 
@@ -2236,37 +2345,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
-\T1/lmr/m/n/12 (+20) then at-tempt
+\T1/lmr/m/n/12 (+20) then attempt
  []
 
 
 Underfull \hbox (badness 1527) in paragraph at lines 1077--1077
-[]|\T1/lmr/m/n/12 (+20) Error mes-sage: "No path
+[]|\T1/lmr/m/n/12 (+20) Error message: "No path
  []
 
 
 Underfull \hbox (badness 5077) in paragraph at lines 1077--1077
-\T1/lmr/m/n/12 (+20) found be-tween the given
+\T1/lmr/m/n/12 (+20) found between the given
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
-\T1/lmr/m/n/12 (+20) iden-ti-fies im-pos-si-ble
+\T1/lmr/m/n/12 (+20) identifies impossible
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
-\T1/lmr/m/n/12 (+20) path sce-nar-ios and
+\T1/lmr/m/n/12 (+20) path scenarios and
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
-\T1/lmr/m/n/12 (+20) pro-vides ap-pro-pri-ate
+\T1/lmr/m/n/12 (+20) provides appropriate
  []
 
 
 Underfull \hbox (badness 4505) in paragraph at lines 1079--1079
-[]|\T1/lmr/m/n/12 (+20) Tests val-i-da-tion logic
+[]|\T1/lmr/m/n/12 (+20) Tests validation logic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1079--1079
+\T1/lmr/m/n/12 (+20) for preventing the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1079--1079
+\T1/lmr/m/n/12 (+20) selection of reserved
  []
 
 
@@ -2276,7 +2395,17 @@ Underfull \hbox (badness 8151) in paragraph at lines 1081--1081
 
 
 Underfull \hbox (badness 4505) in paragraph at lines 1081--1081
-[]|\T1/lmr/m/n/12 (+20) Tests val-i-da-tion logic
+[]|\T1/lmr/m/n/12 (+20) Tests validation logic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1081
+\T1/lmr/m/n/12 (+20) for preventing the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1081
+\T1/lmr/m/n/12 (+20) selection of reserved
  []
 
 
@@ -2296,7 +2425,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1083--1083
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1083--1083
-\T1/lmr/m/n/12 (+20) with trail-ing
+\T1/lmr/m/n/12 (+20) with trailing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1083--1083
+\T1/lmr/m/n/12 (+20) for malformed input
+ []
+
+
+Underfull \hbox (badness 2134) in paragraph at lines 1083--1083
+\T1/lmr/m/n/12 (+20) to ensure the system
  []
 
 
@@ -2315,8 +2454,23 @@ Underfull \hbox (badness 3199) in paragraph at lines 1085--1085
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 1085--1085
-[]|\T1/lmr/m/n/12 (+20) System cal-cu-lates and dis-
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1085
+[]|\T1/lmr/m/n/12 (+20) System calculates and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1085
+\T1/lmr/m/n/12 (+20) displays optimal path
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1085
+\T1/lmr/m/n/12 (+20) functionality under
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1085
+\T1/lmr/m/n/12 (+20) normal operating
  []
 
 
@@ -2326,7 +2480,7 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1087--1087
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
-[]|\T1/lmr/m/n/12 (+20) Update quan-tity
+[]|\T1/lmr/m/n/12 (+20) Update quantity
  []
 
 
@@ -2341,7 +2495,22 @@ Underfull \hbox (badness 2057) in paragraph at lines 1087--1087
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
-[]|\T1/lmr/m/n/12 (+20) Error mes-sage: "Er-ror:
+[]|\T1/lmr/m/n/12 (+20) Error message: "Error:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
+[]|\T1/lmr/m/n/12 (+20) Tests boundary
+ []
+
+
+Underfull \hbox (badness 3668) in paragraph at lines 1087--1087
+\T1/lmr/m/n/12 (+20) operations to prevent
+ []
+
+
+Underfull \hbox (badness 7326) in paragraph at lines 1087--1087
+\T1/lmr/m/n/12 (+20) manipulation of non-
  []
 
 
@@ -2351,7 +2520,12 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1089--1089
 
 
 Underfull \hbox (badness 1688) in paragraph at lines 1089--1089
-[]|\T1/lmr/m/n/12 (+20) Error mes-sage: "No item
+[]|\T1/lmr/m/n/12 (+20) Error message: "No item
+ []
+
+
+Underfull \hbox (badness 3417) in paragraph at lines 1089--1089
+[]|\T1/lmr/m/n/12 (+20) Tests lower boundary
  []
 
 
@@ -2366,8 +2540,33 @@ Underfull \hbox (badness 5637) in paragraph at lines 1091--1091
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1091
+\T1/lmr/m/n/12 (+20) grid (minimum
+ []
+
+
 Underfull \hbox (badness 1342) in paragraph at lines 1091--1091
-[]|\T1/lmr/m/n/12 (+20) System should cre-ate grid
+[]|\T1/lmr/m/n/12 (+20) System should create grid
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1091
+[]|\T1/lmr/m/n/12 (+20) Tests minimum
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1091
+\T1/lmr/m/n/12 (+20) boundary case for
+ []
+
+
+Underfull \hbox (badness 7832) in paragraph at lines 1091--1091
+\T1/lmr/m/n/12 (+20) grid configuration to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1091
+\T1/lmr/m/n/12 (+20) ensure the system
  []
 
 
@@ -2387,12 +2586,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
 
 
 Underfull \hbox (badness 1342) in paragraph at lines 1093--1093
-[]|\T1/lmr/m/n/12 (+20) System should cre-ate grid
+[]|\T1/lmr/m/n/12 (+20) System should create grid
  []
 
 
 Underfull \hbox (badness 3439) in paragraph at lines 1093--1093
-\T1/lmr/m/n/12 (+20) with 10,000 cells with-out
+\T1/lmr/m/n/12 (+20) with 10,000 cells without
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
+[]|\T1/lmr/m/n/12 (+20) Tests maximum
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
+\T1/lmr/m/n/12 (+20) boundary case for
+ []
+
+
+Underfull \hbox (badness 7832) in paragraph at lines 1093--1093
+\T1/lmr/m/n/12 (+20) grid configuration to
  []
 
 
@@ -2406,13 +2620,18 @@ Underfull \hbox (badness 1939) in paragraph at lines 1095--1095
  []
 
 
-Underfull \hbox (badness 6927) in paragraph at lines 1095--1095
-\T1/lmr/m/n/12 (+20) i-da-tion when all re-
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1095
+[]|\T1/lmr/m/n/12 (+20) Tests comprehensive
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 1095--1095
-\T1/lmr/m/n/12 (+20) quested points are in-
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1095
+\T1/lmr/m/n/12 (+20) validation when all
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1095
+\T1/lmr/m/n/12 (+20) requested points are
  []
 
 
@@ -2422,12 +2641,22 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1097--1097
 
 
 Underfull \hbox (badness 2617) in paragraph at lines 1097--1097
-\T1/lmr/m/n/12 (+20) vis-ited, then run
+\T1/lmr/m/n/12 (+20) visited, then run
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1097--1097
+[]|\T1/lmr/m/n/12 (+20) Second run should find
+ []
+
+
+Underfull \hbox (badness 2894) in paragraph at lines 1097--1097
+\T1/lmr/m/n/12 (+20) alternative path excluding
  []
 
 
 Underfull \hbox (badness 2326) in paragraph at lines 1097--1097
-\T1/lmr/m/n/12 (+20) to chang-ing in-ven-tory
+\T1/lmr/m/n/12 (+20) to changing inventory
  []
 
 
@@ -2436,13 +2665,28 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1099--1099
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 1099--1099
-[]|\T1/lmr/m/n/12 (+20) System should re-store ex-
+Underfull \hbox (badness 1888) in paragraph at lines 1099--1099
+\T1/lmr/m/n/12 (+20) grid dimensions, obstacles,
+ []
+
+
+Underfull \hbox (badness 4156) in paragraph at lines 1099--1099
+\T1/lmr/m/n/12 (+20) and item quantities with
  []
 
 
 Underfull \hbox (badness 1281) in paragraph at lines 1099--1099
-[]|\T1/lmr/m/n/12 (+20) Tests data per-sis-tence
+[]|\T1/lmr/m/n/12 (+20) Tests data persistence
+ []
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 1099--1099
+\T1/lmr/m/n/12 (+20) configurations can be
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1099--1099
+\T1/lmr/m/n/12 (+20) reliably saved and
  []
 
 
@@ -2452,7 +2696,32 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1101--1101
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1101--1101
-\T1/lmr/m/n/12 (+20) cor-rupted JSON
+\T1/lmr/m/n/12 (+20) corrupted JSON
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1101
+[]|\T1/lmr/m/n/12 (+20) Error message indicating
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1101
+\T1/lmr/m/n/12 (+20) invalid configuration file,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1101
+\T1/lmr/m/n/12 (+20) system should maintain
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1101
+[]|\T1/lmr/m/n/12 (+20) Tests error handling
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1101
+\T1/lmr/m/n/12 (+20) to prevent system
  []
 
 
@@ -2461,8 +2730,33 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1103--1103
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 1103--1103
-[]|\T1/lmr/m/n/12 (+20) Rapidly click the
+Underfull \hbox (badness 10000) in paragraph at lines 1103--1103
+[]|\T1/lmr/m/n/12 (+20) Rapidly click
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1103--1103
+\T1/lmr/m/n/12 (+20) the "Find Path"
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1103--1103
+\T1/lmr/m/n/12 (+20) clicks while processing,
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 1103--1103
+\T1/lmr/m/n/12 (+20) rapid user interaction
+ []
+
+
+Underfull \hbox (badness 2134) in paragraph at lines 1103--1103
+\T1/lmr/m/n/12 (+20) to ensure the system
+ []
+
+
+Underfull \hbox (badness 1371) in paragraph at lines 1103--1103
+\T1/lmr/m/n/12 (+20) handles potential race
  []
 
 
@@ -2472,12 +2766,22 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1105--1105
 
 
 Underfull \hbox (badness 2538) in paragraph at lines 1105--1105
-\T1/lmr/m/n/12 (+20) pat-tern forc-ing a
+\T1/lmr/m/n/12 (+20) pattern forcing a
  []
 
 
-Underfull \hbox (badness 3471) in paragraph at lines 1105--1105
-\T1/lmr/m/n/12 (+20) rithm per-for-mance in
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1105
+[]|\T1/lmr/m/n/12 (+20) System should calculate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1105
+[]|\T1/lmr/m/n/12 (+20) Tests pathfinding
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 1105--1105
+\T1/lmr/m/n/12 (+20) algorithm performance
  []
 
 
@@ -2491,8 +2795,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
  []
 
 
-Underfull \hbox (badness 2970) in paragraph at lines 1107--1107
-\T1/lmr/m/n/12 (+20) through 20 in-ter-
+Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
+\T1/lmr/m/n/12 (+20) through 20
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
+\T1/lmr/m/n/12 (+20) intermediate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
+[]|\T1/lmr/m/n/12 (+20) System should calculate
+ []
+
+
+Underfull \hbox (badness 5756) in paragraph at lines 1107--1107
+\T1/lmr/m/n/12 (+20) optimal path visiting all
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
+[]|\T1/lmr/m/n/12 (+20) Tests algorithm
  []
 
 
@@ -2502,12 +2826,27 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1109--1109
 
 
 Underfull \hbox (badness 1365) in paragraph at lines 1109--1109
-\T1/lmr/m/n/12 (+20) mixed spac-ing "5,
+\T1/lmr/m/n/12 (+20) mixed spacing "5,
  []
 
 
 Underfull \hbox (badness 4205) in paragraph at lines 1109--1109
-\T1/lmr/m/n/12 (+20) in-put and cal-cu-late path
+\T1/lmr/m/n/12 (+20) input and calculate path
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1109
+[]|\T1/lmr/m/n/12 (+20) Tests input parsing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1109
+\T1/lmr/m/n/12 (+20) flexibility to handle
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1109
+\T1/lmr/m/n/12 (+20) various user input
  []
 
 
@@ -2516,8 +2855,8 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1111--1111
  []
 
 
-Underfull \hbox (badness 2229) in paragraph at lines 1111--1111
-\T1/lmr/m/n/12 (+20) to cre-ate a com-
+Underfull \hbox (badness 10000) in paragraph at lines 1111--1111
+\T1/lmr/m/n/12 (+20) valid orthogonal
  []
 
 
@@ -2526,8 +2865,13 @@ Underfull \hbox (badness 4595) in paragraph at lines 1111--1111
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 1111--1111
-[]|\T1/lmr/m/n/12 (+20) Tests path find-ing in
+Underfull \hbox (badness 10000) in paragraph at lines 1111--1111
+[]|\T1/lmr/m/n/12 (+20) Tests path finding
+ []
+
+
+Underfull \hbox (badness 4940) in paragraph at lines 1111--1111
+\T1/lmr/m/n/12 (+20) in highly constrained
  []
 
 
@@ -2536,8 +2880,43 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1113--1113
  []
 
 
+Underfull \hbox (badness 5175) in paragraph at lines 1113--1113
+[]|\T1/lmr/m/n/12 (+20) Click on a grid
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 1113--1113
+\T1/lmr/m/n/12 (+20) verify information
+ []
+
+
 Overfull \hbox (1.5544pt too wide) in paragraph at lines 1115--1115
 []|\T1/lmr/m/n/12 (-20) 26| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1115--1115
+\T1/lmr/m/n/12 (+20) quantity 0 and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1115--1115
+\T1/lmr/m/n/12 (+20) verify its visual
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1115--1115
+\T1/lmr/m/n/12 (+20) representation in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1115--1115
+[]|\T1/lmr/m/n/12 (+20) Tests correct visual
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1115--1115
+\T1/lmr/m/n/12 (+20) indication of out-of-
  []
 
 
@@ -2547,7 +2926,7 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1117--1117
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1117--1117
-[]|\T1/lmr/m/n/12 (+20) Update quan-tity
+[]|\T1/lmr/m/n/12 (+20) Update quantity
  []
 
 
@@ -2556,13 +2935,34 @@ Underfull \hbox (badness 1648) in paragraph at lines 1117--1117
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1117
+[]|\T1/lmr/m/n/12 (+20) Item should be flagged
+ []
+
+
+Underfull \hbox (badness 7869) in paragraph at lines 1117--1117
+\T1/lmr/m/n/12 (+20) as below threshold ($\OML/lmm/m/it/12 <$\T1/lmr/m/n/12 (+2
+0) 2)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1117
+\T1/lmr/m/n/12 (+20) flagging and visual
+ []
+
+
 Overfull \hbox (1.5544pt too wide) in paragraph at lines 1119--1119
 []|\T1/lmr/m/n/12 (-20) 28| 
  []
 
 
-Underfull \hbox (badness 2050) in paragraph at lines 1119--1119
-[]|\T1/lmr/m/n/12 (+20) Tests database con-sis-
+Underfull \hbox (badness 10000) in paragraph at lines 1119--1119
+[]|\T1/lmr/m/n/12 (+20) Query an item
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1119--1119
+[]|\T1/lmr/m/n/12 (+20) Tests database
  []
 
 
@@ -2572,22 +2972,22 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1121--1121
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1121--1121
-[]|\T1/lmr/m/n/12 (+20) Set quan-tity of
- []
-
-
-Underfull \hbox (badness 1226) in paragraph at lines 1121--1121
-\T1/lmr/m/n/12 (+20) an item to max-i-
+\T1/lmr/m/n/12 (+20) integer value
  []
 
 
 Underfull \hbox (badness 1163) in paragraph at lines 1121--1121
-[]|\T1/lmr/m/n/12 (+20) System should ac-cept and
+[]|\T1/lmr/m/n/12 (+20) System should accept and
  []
 
 
-Underfull \hbox (badness 2418) in paragraph at lines 1121--1121
-[]|\T1/lmr/m/n/12 (+20) Tests han-dling of ex-
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1121
+[]|\T1/lmr/m/n/12 (+20) Tests handling of
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 1121--1121
+\T1/lmr/m/n/12 (+20) extreme values within
  []
 
 
@@ -2608,12 +3008,17 @@ Underfull \hbox (badness 5726) in paragraph at lines 1123--1123
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1123--1123
-\T1/lmr/m/n/12 (+20) ob-sta-cles placed
+\T1/lmr/m/n/12 (+20) obstacles placed
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1123--1123
 []|\T1/lmr/m/n/12 (+20) System should find the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1123--1123
+[]|\T1/lmr/m/n/12 (+20) Tests optimal path
  []
 
 
@@ -2623,7 +3028,7 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1125--1125
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1125--1125
-[]|\T1/lmr/m/n/12 (+20) Run pathfind-ing
+[]|\T1/lmr/m/n/12 (+20) Run pathfinding
  []
 
 
@@ -2632,23 +3037,23 @@ Underfull \hbox (badness 2772) in paragraph at lines 1125--1125
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 1125--1125
-\T1/lmr/m/n/12 (+20) "5,10,15" then im-
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1125
+\T1/lmr/m/n/12 (+20) "5,10,15" then
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1125--1125
-\T1/lmr/m/n/12 (+20) me-di-ately change
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1125--1125
-[]|\T1/lmr/m/n/12 (+20) Either cur-rent op-er-a-tion
+[]|\T1/lmr/m/n/12 (+20) Either current operation
  []
 
 
 Underfull \hbox (badness 2538) in paragraph at lines 1125--1125
-[]|\T1/lmr/m/n/12 (+20) Tests sys-tem sta-bil-ity
+[]|\T1/lmr/m/n/12 (+20) Tests system stability
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1125
+\T1/lmr/m/n/12 (+20) during concurrent
  []
 
 
@@ -2657,8 +3062,33 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1127--1127
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 1127--1127
-[]|\T1/lmr/m/n/12 (+20) Export grid vi-su-
+Underfull \hbox (badness 10000) in paragraph at lines 1127--1127
+[]|\T1/lmr/m/n/12 (+20) Export grid
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1127--1127
+\T1/lmr/m/n/12 (+20) visualization to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1127--1127
+\T1/lmr/m/n/12 (+20) image file after
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1127--1127
+[]|\T1/lmr/m/n/12 (+20) Exported image should
+ []
+
+
+Underfull \hbox (badness 5563) in paragraph at lines 1127--1127
+\T1/lmr/m/n/12 (+20) point highlights matching
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1127--1127
+\T1/lmr/m/n/12 (+20) consistency between
  []
 
 
@@ -2667,13 +3097,38 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1129--1129
  []
 
 
-Underfull \hbox (badness 2837) in paragraph at lines 1129--1129
-\T1/lmr/m/n/12 (+20) ob-sta-cles in po-si-
+Underfull \hbox (badness 10000) in paragraph at lines 1129--1129
+[]|\T1/lmr/m/n/12 (+20) Create a grid
  []
 
 
-Underfull \hbox (badness 4036) in paragraph at lines 1129--1129
-\T1/lmr/m/n/12 (+20) tions that would
+Underfull \hbox (badness 10000) in paragraph at lines 1129--1129
+\T1/lmr/m/n/12 (+20) with obstacles
+ []
+
+
+Underfull \hbox (badness 4279) in paragraph at lines 1129--1129
+\T1/lmr/m/n/12 (+20) in positions that
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 1129--1129
+\T1/lmr/m/n/12 (+20) would make start
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1129--1129
+\T1/lmr/m/n/12 (+20) or end points
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1129--1129
+[]|\T1/lmr/m/n/12 (+20) Tests validation
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1129--1129
+\T1/lmr/m/n/12 (+20) for critical point
  []
 
 
@@ -2688,22 +3143,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 1131--1131
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1131--1131
-\T1/lmr/m/n/12 (+20) with al-ter-nat-ing
+\T1/lmr/m/n/12 (+20) with alternating
  []
 
 
 Underfull \hbox (badness 4518) in paragraph at lines 1131--1131
-\T1/lmr/m/n/12 (+20) ob-sta-cles cre-at-ing
+\T1/lmr/m/n/12 (+20) obstacles creating
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1131--1131
-\T1/lmr/m/n/12 (+20) a "checker-board"
+\T1/lmr/m/n/12 (+20) a "checkerboard"
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1131--1131
-[]|\T1/lmr/m/n/12 (+20) Tests pathfind-ing in
+[]|\T1/lmr/m/n/12 (+20) System should correctly
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1131
+\T1/lmr/m/n/12 (+20) calculate path navigating
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 1131--1131
+\T1/lmr/m/n/12 (+20) through the pattern using
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1131
+[]|\T1/lmr/m/n/12 (+20) Tests pathfinding in
  []
 
 
@@ -2712,8 +3182,23 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1133--1133
  []
 
 
+Underfull \hbox (badness 3428) in paragraph at lines 1133--1133
+\T1/lmr/m/n/12 (+20) all cells in path, second
+ []
+
+
+Underfull \hbox (badness 5119) in paragraph at lines 1133--1133
+[]|\T1/lmr/m/n/12 (+20) Tests stock depletion
+ []
+
+
 Overfull \hbox (1.5544pt too wide) in paragraph at lines 1135--1135
 []|\T1/lmr/m/n/12 (-20) 36| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1135--1135
+[]|\T1/lmr/m/n/12 (+20) System should calculate
  []
 
 
@@ -2723,12 +3208,37 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1137--1137
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1137--1137
-\T1/lmr/m/n/12 (+20) win-dow, close
+\T1/lmr/m/n/12 (+20) window, close
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1137--1137
-\T1/lmr/m/n/12 (+20) it, then re-quest
+\T1/lmr/m/n/12 (+20) it, then request
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1137
+[]|\T1/lmr/m/n/12 (+20) System should reopen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1137
+\T1/lmr/m/n/12 (+20) visualization window and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1137
+\T1/lmr/m/n/12 (+20) display calculated path
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1137
+[]|\T1/lmr/m/n/12 (+20) Tests window
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1137
+\T1/lmr/m/n/12 (+20) management and
  []
 
 
@@ -2748,8 +3258,28 @@ Underfull \hbox (badness 2469) in paragraph at lines 1139--1139
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1139--1139
+[]|\T1/lmr/m/n/12 (+20) System should correctly
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1139--1139
+\T1/lmr/m/n/12 (+20) render both grid sizes
+ []
+
+
+Underfull \hbox (badness 2707) in paragraph at lines 1139--1139
+[]|\T1/lmr/m/n/12 (+20) Tests UI scaling and
+ []
+
+
 Overfull \hbox (1.5544pt too wide) in paragraph at lines 1141--1141
 []|\T1/lmr/m/n/12 (-20) 39| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1141--1141
+[]|\T1/lmr/m/n/12 (+20) Tests handling of
  []
 
 
@@ -2758,8 +3288,38 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1143--1143
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1143--1143
+\T1/lmr/m/n/12 (+20) for start point
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1143--1143
+[]|\T1/lmr/m/n/12 (+20) Start point should be
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1143--1143
+[]|\T1/lmr/m/n/12 (+20) Tests correct visual
+ []
+
+
 Overfull \hbox (1.5544pt too wide) in paragraph at lines 1145--1145
 []|\T1/lmr/m/n/12 (-20) 41| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1145
+\T1/lmr/m/n/12 (+20) for end point
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1145
+[]|\T1/lmr/m/n/12 (+20) End point should be
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1145
+[]|\T1/lmr/m/n/12 (+20) Tests correct visual
  []
 
 
@@ -2773,13 +3333,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 1147--1147
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1147
+[]|\T1/lmr/m/n/12 (+20) User points should be
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1147
+[]|\T1/lmr/m/n/12 (+20) Tests correct visual
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1147
+\T1/lmr/m/n/12 (+20) indication of user-
+ []
+
+
 Overfull \hbox (1.5544pt too wide) in paragraph at lines 1149--1149
 []|\T1/lmr/m/n/12 (-20) 43| 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1149
+[]|\T1/lmr/m/n/12 (+20) Path cells should be
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1149
+[]|\T1/lmr/m/n/12 (+20) Tests correct visual
+ []
+
+
 Overfull \hbox (1.5544pt too wide) in paragraph at lines 1151--1151
 []|\T1/lmr/m/n/12 (-20) 44| 
+ []
+
+
+Underfull \hbox (badness 6725) in paragraph at lines 1151--1151
+[]|\T1/lmr/m/n/12 (+20) Obstacle cells should be
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1151
+[]|\T1/lmr/m/n/12 (+20) Tests correct visual
  []
 
 
@@ -2799,7 +3394,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1153--1153
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1153--1153
-\T1/lmr/m/n/12 (+20) or-thog-o-nal move-ments
+\T1/lmr/m/n/12 (+20) orthogonal movements
  []
 
 
@@ -2808,8 +3403,8 @@ Underfull \hbox (badness 1484) in paragraph at lines 1153--1153
  []
 
 
-Underfull \hbox (badness 7099) in paragraph at lines 1153--1153
-[]|\T1/lmr/m/n/12 (+20) Tests move-ment con-
+Underfull \hbox (badness 10000) in paragraph at lines 1153--1153
+[]|\T1/lmr/m/n/12 (+20) Tests movement
  []
 
 
@@ -2823,18 +3418,38 @@ Underfull \hbox (badness 5147) in paragraph at lines 1155--1155
  []
 
 
+Underfull \hbox (badness 6608) in paragraph at lines 1155--1155
+\T1/lmr/m/n/12 (+20) then attempt to
+ []
+
+
 Overfull \hbox (1.5544pt too wide) in paragraph at lines 1157--1157
 []|\T1/lmr/m/n/12 (-20) 47| 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1157--1157
+[]|\T1/lmr/m/n/12 (+20) Set multiple
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1157--1157
+\T1/lmr/m/n/12 (+20) consecutive
+ []
+
+
 Underfull \hbox (badness 7256) in paragraph at lines 1157--1157
-\T1/lmr/m/n/12 (+20) avail-able or-thog-o-nal path
+\T1/lmr/m/n/12 (+20) available orthogonal path
  []
 
 
 Overfull \hbox (1.5544pt too wide) in paragraph at lines 1159--1159
 []|\T1/lmr/m/n/12 (-20) 48| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1159--1159
+[]|\T1/lmr/m/n/12 (+20) Set every other
  []
 
 
@@ -2844,12 +3459,12 @@ Underfull \hbox (badness 5217) in paragraph at lines 1159--1159
 
 
 Underfull \hbox (badness 7379) in paragraph at lines 1159--1159
-\T1/lmr/m/n/12 (+20) avoid-ing all zero-quantity
+\T1/lmr/m/n/12 (+20) avoiding all zero-quantity
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1159--1159
-[]|\T1/lmr/m/n/12 (+20) Tests com-pre-hen-sive
+[]|\T1/lmr/m/n/12 (+20) Tests comprehensive
  []
 
 
@@ -2858,13 +3473,23 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1161--1161
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 1161--1161
-\T1/lmr/m/n/12 (+20) sta-cle Mode" but-
+Underfull \hbox (badness 10000) in paragraph at lines 1161--1161
+[]|\T1/lmr/m/n/12 (+20) Click "Toggle
  []
 
 
-Underfull \hbox (badness 2080) in paragraph at lines 1161--1161
-[]|\T1/lmr/m/n/12 (+20) Button should change ap-
+Underfull \hbox (badness 10000) in paragraph at lines 1161--1161
+\T1/lmr/m/n/12 (+20) Obstacle Mode"
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1161--1161
+[]|\T1/lmr/m/n/12 (+20) Button should change
+ []
+
+
+Underfull \hbox (badness 5147) in paragraph at lines 1161--1161
+\T1/lmr/m/n/12 (+20) appearance (sunken, gray
  []
 
 
@@ -2873,13 +3498,64 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1163--1163
  []
 
 
+Underfull \hbox (badness 1735) in paragraph at lines 1163--1163
+[]|\T1/lmr/m/n/12 (+20) In a 10\TS1/lmr/m/n/12 (+20) Ö\T1/lmr/m/n/12 (+20) 10 g
+rid,
+ []
+
+
+Underfull \hbox (badness 7851) in paragraph at lines 1163--1163
+\T1/lmr/m/n/12 (+20) forming a spiral
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1163--1163
+[]|\T1/lmr/m/n/12 (+20) System should calculate
+ []
+
+
+Underfull \hbox (badness 5756) in paragraph at lines 1163--1163
+\T1/lmr/m/n/12 (+20) optimal path visiting all
+ []
+
+
+Underfull \hbox (badness 1342) in paragraph at lines 1163--1163
+\T1/lmr/m/n/12 (+20) points in correct sequence
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1163--1163
+\T1/lmr/m/n/12 (+20) using only orthogonal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1163--1163
+[]|\T1/lmr/m/n/12 (+20) Tests complex path
+ []
+
+
 Overfull \hbox (1.5544pt too wide) in paragraph at lines 1165--1165
 []|\T1/lmr/m/n/12 (-20) 51| 
  []
 
 
-Underfull \hbox (badness 1968) in paragraph at lines 1165--1165
-\T1/lmr/m/n/12 (+20) start/end, yel-low for user
+Underfull \hbox (badness 10000) in paragraph at lines 1165--1165
+[]|\T1/lmr/m/n/12 (+20) Verify legend
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1165--1165
+\T1/lmr/m/n/12 (+20) in visualization
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1165--1165
+[]|\T1/lmr/m/n/12 (+20) Legend should display
+ []
+
+
+Underfull \hbox (badness 3838) in paragraph at lines 1165--1165
+[]|\T1/lmr/m/n/12 (+20) Tests visual guidance
  []
 
 
@@ -2888,13 +3564,28 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1167--1167
  []
 
 
-Underfull \hbox (badness 2744) in paragraph at lines 1167--1167
-[]|\T1/lmr/m/n/12 (+20) After path cal-cu-
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1167
+[]|\T1/lmr/m/n/12 (+20) After path
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 1167--1167
+\T1/lmr/m/n/12 (+20) calculation, verify
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 1167--1167
+\T1/lmr/m/n/12 (+20) path output text
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 1167--1167
+[]|\T1/lmr/m/n/12 (+20) Text area should display
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1167--1167
-[]|\T1/lmr/m/n/12 (+20) Tests path re-port-ing
+[]|\T1/lmr/m/n/12 (+20) Tests path reporting
  []
 
 
@@ -2903,8 +3594,23 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1169--1169
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1169
+[]|\T1/lmr/m/n/12 (+20) Verify path
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1169
+\T1/lmr/m/n/12 (+20) distance label
+ []
+
+
 Underfull \hbox (badness 2310) in paragraph at lines 1169--1169
-[]|\T1/lmr/m/n/12 (+20) Label should show "To-tal
+[]|\T1/lmr/m/n/12 (+20) Label should show "Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1169
+[]|\T1/lmr/m/n/12 (+20) Tests path metrics
  []
 
 
@@ -2919,8 +3625,18 @@ rid
  []
 
 
-Underfull \hbox (badness 2932) in paragraph at lines 1171--1171
-\T1/lmr/m/n/12 (+20) where ItemID 13
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1171
+\T1/lmr/m/n/12 (+20) where ItemID
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1171
+\T1/lmr/m/n/12 (+20) 13 has quantity
+ []
+
+
+Underfull \hbox (badness 6542) in paragraph at lines 1171--1171
+\T1/lmr/m/n/12 (+20) 1, perform path
  []
 
 
@@ -2930,7 +3646,7 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1173--1173
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1173--1173
-[]|\T1/lmr/m/n/12 (+20) Enter mul-ti-ple
+[]|\T1/lmr/m/n/12 (+20) Enter multiple
  []
 
 
@@ -2940,12 +3656,32 @@ Underfull \hbox (badness 4940) in paragraph at lines 1173--1173
 
 
 Underfull \hbox (badness 1616) in paragraph at lines 1173--1173
-[]|\T1/lmr/m/n/12 (+20) System should dedu-pli-cate
+[]|\T1/lmr/m/n/12 (+20) System should deduplicate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1173--1173
+[]|\T1/lmr/m/n/12 (+20) Tests handling of
  []
 
 
 Overfull \hbox (1.5544pt too wide) in paragraph at lines 1175--1175
 []|\T1/lmr/m/n/12 (-20) 56| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1175
+\T1/lmr/m/n/12 (+20) and verify help
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1175
+\T1/lmr/m/n/12 (+20) comprehensive application
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1175
+[]|\T1/lmr/m/n/12 (+20) Tests documentation
  []
 
 
@@ -2955,17 +3691,17 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1177--1177
 
 
 Underfull \hbox (badness 6396) in paragraph at lines 1177--1177
-[]|\T1/lmr/m/n/12 (+20) Enter a mix-ture
+[]|\T1/lmr/m/n/12 (+20) Enter a mixture
  []
 
 
-Underfull \hbox (badness 5147) in paragraph at lines 1177--1177
-\T1/lmr/m/n/12 (+20) of valid and in-
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1177
+\T1/lmr/m/n/12 (+20) of valid and
  []
 
 
-Underfull \hbox (badness 2035) in paragraph at lines 1177--1177
-\T1/lmr/m/n/12 (+20) valid points, e.g.,
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1177
+[]|\T1/lmr/m/n/12 (+20) Tests granular error
  []
 
 
@@ -2974,13 +3710,38 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1179--1179
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1179--1179
+[]|\T1/lmr/m/n/12 (+20) Verify grid
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1179--1179
+\T1/lmr/m/n/12 (+20) numbering in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1179--1179
+\T1/lmr/m/n/12 (+20) visualization for
+ []
+
+
+Underfull \hbox (badness 4518) in paragraph at lines 1179--1179
+[]|\T1/lmr/m/n/12 (+20) Tests grid coordinate
+ []
+
+
 Overfull \hbox (1.5544pt too wide) in paragraph at lines 1181--1181
 []|\T1/lmr/m/n/12 (-20) 59| 
  []
 
 
-Underfull \hbox (badness 2261) in paragraph at lines 1181--1181
-\T1/lmr/m/n/12 (+20) dates based on stock
+Underfull \hbox (badness 7308) in paragraph at lines 1181--1181
+[]|\T1/lmr/m/n/12 (+20) Set an item to
+ []
+
+
+Underfull \hbox (badness 5475) in paragraph at lines 1181--1181
+[]|\T1/lmr/m/n/12 (+20) Tests dynamic visual
  []
 
 
@@ -2994,8 +3755,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1183--1183
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 1183--1183
-[]|\T1/lmr/m/n/12 (+20) Dialog should dis-play cor-
+Underfull \hbox (badness 3460) in paragraph at lines 1183--1183
+\T1/lmr/m/n/12 (+20) row, column and current
  []
 
 
@@ -3010,12 +3771,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
-\T1/lmr/m/n/12 (+20) ing con-fig-u-ra-tion
+\T1/lmr/m/n/12 (+20) update after
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+\T1/lmr/m/n/12 (+20) loading
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+\T1/lmr/m/n/12 (+20) configuration
  []
 
 
 Underfull \hbox (badness 6125) in paragraph at lines 1185--1185
-\T1/lmr/m/n/12 (+20) file with spe-cific
+\T1/lmr/m/n/12 (+20) file with specific
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+[]|\T1/lmr/m/n/12 (+20) Tests data integrity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+\T1/lmr/m/n/12 (+20) during configuration
  []
 
 
@@ -3024,8 +3805,18 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1187--1187
  []
 
 
-Underfull \hbox (badness 1242) in paragraph at lines 1187--1187
-[]|\T1/lmr/m/n/12 (+20) Tests UI scal-ing al-go-
+Underfull \hbox (badness 3189) in paragraph at lines 1187--1187
+\T1/lmr/m/n/12 (+20) scaled to fit visualization
+ []
+
+
+Underfull \hbox (badness 3471) in paragraph at lines 1187--1187
+\T1/lmr/m/n/12 (+20) window while maintaining
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1187--1187
+[]|\T1/lmr/m/n/12 (+20) Tests UI scaling
  []
 
 
@@ -3046,7 +3837,27 @@ Underfull \hbox (badness 1430) in paragraph at lines 1189--1189
 
 
 Underfull \hbox (badness 2326) in paragraph at lines 1189--1189
-\T1/lmr/m/n/12 (+20) to cal-cu-late path
+\T1/lmr/m/n/12 (+20) to calculate path
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1189--1189
+\T1/lmr/m/n/12 (+20) 5 seconds for all three
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1189--1189
+\T1/lmr/m/n/12 (+20) scenarios, with time
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1189--1189
+\T1/lmr/m/n/12 (+20) increasing proportionally
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1189--1189
+[]|\T1/lmr/m/n/12 (+20) Tests performance
  []
 
 
@@ -3055,18 +3866,43 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1191--1191
  []
 
 
-Underfull \hbox (badness 2951) in paragraph at lines 1191--1191
-\T1/lmr/m/n/12 (+20) ory us-age dur-ing
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1191
+[]|\T1/lmr/m/n/12 (+20) Test system
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1191--1191
-\T1/lmr/m/n/12 (+20) con-tin-u-ous op-er-a-
+\T1/lmr/m/n/12 (+20) memory usage
  []
 
 
-Underfull \hbox (badness 3713) in paragraph at lines 1191--1191
-[]|\T1/lmr/m/n/12 (+20) Memory us-age should re-
+Underfull \hbox (badness 2460) in paragraph at lines 1191--1191
+\T1/lmr/m/n/12 (+20) during continuous
+ []
+
+
+Underfull \hbox (badness 6995) in paragraph at lines 1191--1191
+\T1/lmr/m/n/12 (+20) operation for 10
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1191
+\T1/lmr/m/n/12 (+20) minutes with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1191
+\T1/lmr/m/n/12 (+20) repeated path
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1191
+\T1/lmr/m/n/12 (+20) stable without significant
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1191
+[]|\T1/lmr/m/n/12 (+20) Tests resource
  []
 
 
@@ -3076,7 +3912,7 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1193--1193
 
 
 Underfull \hbox (badness 4096) in paragraph at lines 1193--1193
-\T1/lmr/m/n/12 (+20) for dif-fer-ent grid
+\T1/lmr/m/n/12 (+20) for different grid
  []
 
 
@@ -3091,7 +3927,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1195--1195
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1195--1195
-\T1/lmr/m/n/12 (+20) pat-tern, ver-ify
+\T1/lmr/m/n/12 (+20) pattern, verify
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1195--1195
+[]|\T1/lmr/m/n/12 (+20) Tests optimization
  []
 
 
@@ -3100,13 +3941,28 @@ Overfull \hbox (1.5544pt too wide) in paragraph at lines 1197--1197
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 1197--1197
-\T1/lmr/m/n/12 (+20) ment, at-tempt to
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1197
+[]|\T1/lmr/m/n/12 (+20) After obstacle
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 1197--1197
-[]|\T1/lmr/m/n/12 (+20) Tests data rep-re-sen-ta-
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1197
+\T1/lmr/m/n/12 (+20) to query item
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1197
+\T1/lmr/m/n/12 (+20) information for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1197
+[]|\T1/lmr/m/n/12 (+20) Tests data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1197
+\T1/lmr/m/n/12 (+20) representation
  []
 
 
@@ -3120,8 +3976,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 1199--1199
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1199
+\T1/lmr/m/n/12 (+20) as invalid and display
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1199
+[]|\T1/lmr/m/n/12 (+20) Tests numeric input
+ []
+
+
 Overfull \hbox (1.5544pt too wide) in paragraph at lines 1201--1201
 []|\T1/lmr/m/n/12 (-20) 69| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1201--1201
+[]|\T1/lmr/m/n/12 (+20) Enter negative
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1201--1201
+\T1/lmr/m/n/12 (+20) as invalid and display
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1201--1201
+[]|\T1/lmr/m/n/12 (+20) Tests numeric input
  []
 
 
@@ -3136,17 +4017,17 @@ Underfull \hbox (badness 3849) in paragraph at lines 1203--1203
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1203--1203
-\T1/lmr/m/n/12 (+20) quan-tity 1, ex-e-
+\T1/lmr/m/n/12 (+20) path through
  []
 
 
 Underfull \hbox (badness 7832) in paragraph at lines 1203--1203
-\T1/lmr/m/n/12 (+20) all items, ver-ify
+\T1/lmr/m/n/12 (+20) all items, verify
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1203--1203
-[]|\T1/lmr/m/n/12 (+20) Tests com-pre-hen-sive
+[]|\T1/lmr/m/n/12 (+20) Tests comprehensive
  []
 
 
@@ -3154,29 +4035,31 @@ Overfull \hbox (12.61217pt too wide) in alignment at lines 1063--1205
  [] [] [] [] [] 
  []
 
-[78] [79] [80] [81] [82] [83] [84] [85])
+[78] [79] [80] [81] [82] [83] [84] [85]
 
-[86]
+[86])
+
+[87]
 \openout2 = `Chapter4/chapter4.aux'.
 
  (Chapter4/chapter4.tex
 Section 4.
 
 
-[87
-
-
-
-
-]
-
 [88
 
+
+
+
 ]
 
-[89]
+[89
 
-[90
+]
+
+[90]
+
+[91
 
 ]
 Overfull \hbox (8.427pt too wide) in paragraph at lines 177--177
@@ -3186,8 +4069,8 @@ Overfull \hbox (8.427pt too wide) in paragraph at lines 177--177
 
 
 
-[91]
-<Images/Source Code Image (2).png, id=1144, 1706.375pt x 1690.315pt>
+[92]
+<Images/Source Code Image (2).png, id=1143, 1706.375pt x 1690.315pt>
 File: Images/Source Code Image (2).png Graphic file (type png)
 <use Images/Source Code Image (2).png>
 Package pdftex.def Info: Images/Source Code Image (2).png  used on input line 1
@@ -3200,8 +4083,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
 
 
-[92 <./Images/Source Code Image (2).png>]
-<Images/Screenshot 2025-03-30 at 11.18.52.png, id=1151, 828.09375pt x 98.3675pt
+[93 <./Images/Source Code Image (2).png>]
+<Images/Screenshot 2025-03-30 at 11.18.52.png, id=1150, 828.09375pt x 98.3675pt
 >
 File: Images/Screenshot 2025-03-30 at 11.18.52.png Graphic file (type png)
 <use Images/Screenshot 2025-03-30 at 11.18.52.png>
@@ -3210,43 +4093,48 @@ input line 193.
 (pdftex.def)             Requested size: 398.3401pt x 47.31941pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 213--213
-[]|\T1/lmr/m/n/12 (+20) Direct path be-
+[]|\T1/lmr/m/n/12 (+20) Direct path
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 213--213
-[]|\T1/lmr/m/n/12 (+20) Direct path be-
+\T1/lmr/m/n/12 (+20) between both
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 213--213
-[]|\T1/lmr/m/n/12 (+20) Direct path be-
+[]|\T1/lmr/m/n/12 (+20) Direct path
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 213--213
-\T1/lmr/m/n/12 (+20) tween de-fined
+[]|\T1/lmr/m/n/12 (+20) Direct path
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 213--213
-[]|\T1/lmr/m/n/12 (+20) Direct path be-
+\T1/lmr/m/n/12 (+20) between defined
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--213
+[]|\T1/lmr/m/n/12 (+20) Direct path
  []
 
 
 
-[93 <./Images/Screenshot 2025-03-30 at 11.18.52.png>]
-<Images/t1.1.png, id=1159, 1196.47pt x 91.34125pt>
+[94 <./Images/Screenshot 2025-03-30 at 11.18.52.png>]
+<Images/t1.1.png, id=1158, 1196.47pt x 91.34125pt>
 File: Images/t1.1.png Graphic file (type png)
 <use Images/t1.1.png>
 Package pdftex.def Info: Images/t1.1.png  used on input line 225.
 (pdftex.def)             Requested size: 497.92325pt x 38.01321pt.
-<Images/t1.2.png, id=1160, 634.37pt x 91.34125pt>
+<Images/t1.2.png, id=1159, 634.37pt x 91.34125pt>
 File: Images/t1.2.png Graphic file (type png)
 <use Images/t1.2.png>
 Package pdftex.def Info: Images/t1.2.png  used on input line 232.
 (pdftex.def)             Requested size: 497.92325pt x 71.69606pt.
-<Images/t1.3,1.4.png, id=1161, 634.37pt x 91.34125pt>
+<Images/t1.3,1.4.png, id=1160, 634.37pt x 91.34125pt>
 File: Images/t1.3,1.4.png Graphic file (type png)
 <use Images/t1.3,1.4.png>
 Package pdftex.def Info: Images/t1.3,1.4.png  used on input line 239.
@@ -3257,17 +4145,17 @@ Package pdftex.def Info: Images/t1.3,1.4.png  used on input line 246.
 (pdftex.def)             Requested size: 497.92325pt x 71.69606pt.
 
 
-[94 <./Images/t1.1.png> <./Images/t1.2.png> <./Images/t1.3,1.4.png>]
-<Images/qodana-sai1.png, id=1173, 2885.78125pt x 1631.09375pt>
+[95 <./Images/t1.1.png> <./Images/t1.2.png> <./Images/t1.3,1.4.png>]
+<Images/qodana-sai1.png, id=1172, 2885.78125pt x 1631.09375pt>
 File: Images/qodana-sai1.png Graphic file (type png)
 <use Images/qodana-sai1.png>
 Package pdftex.def Info: Images/qodana-sai1.png  used on input line 267.
 (pdftex.def)             Requested size: 497.92325pt x 281.41376pt.
 
 
-[95 <./Images/qodana-sai1.png>]
+[96 <./Images/qodana-sai1.png>]
 
-[96]
+[97]
 Overfull \hbox (8.427pt too wide) in paragraph at lines 338--338
 []                        \T1/lmtt/m/n/12 new_path = list(path) + [(nx, ny)]  #
  Add new node to path[] 
@@ -3275,7 +4163,7 @@ Overfull \hbox (8.427pt too wide) in paragraph at lines 338--338
 
 
 
-[97]
+[98]
 File: Images/Source Code Image (2).png Graphic file (type png)
 <use Images/Source Code Image (2).png>
 Package pdftex.def Info: Images/Source Code Image (2).png  used on input line 3
@@ -3288,7 +4176,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 347--348
 
 
 
-[98]
+[99]
 File: Images/Screenshot 2025-03-30 at 11.18.52.png Graphic file (type png)
 <use Images/Screenshot 2025-03-30 at 11.18.52.png>
 Package pdftex.def Info: Images/Screenshot 2025-03-30 at 11.18.52.png  used on 
@@ -3296,32 +4184,37 @@ input line 354.
 (pdftex.def)             Requested size: 398.3401pt x 47.31941pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 374--374
-[]|\T1/lmr/m/n/12 (+20) Direct path be-
+[]|\T1/lmr/m/n/12 (+20) Direct path
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 374--374
-[]|\T1/lmr/m/n/12 (+20) Direct path be-
+\T1/lmr/m/n/12 (+20) between both
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 374--374
-[]|\T1/lmr/m/n/12 (+20) Direct path be-
+[]|\T1/lmr/m/n/12 (+20) Direct path
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 374--374
-\T1/lmr/m/n/12 (+20) tween de-fined
+[]|\T1/lmr/m/n/12 (+20) Direct path
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 374--374
-[]|\T1/lmr/m/n/12 (+20) Direct path be-
+\T1/lmr/m/n/12 (+20) between defined
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+[]|\T1/lmr/m/n/12 (+20) Direct path
  []
 
 
 
-[99]
+[100]
 File: Images/t1.1.png Graphic file (type png)
 <use Images/t1.1.png>
 Package pdftex.def Info: Images/t1.1.png  used on input line 386.
@@ -3340,45 +4233,45 @@ Package pdftex.def Info: Images/t1.3,1.4.png  used on input line 407.
 (pdftex.def)             Requested size: 497.92325pt x 71.69606pt.
 
 
-[100]
+[101]
 File: Images/qodana-sai1.png Graphic file (type png)
 <use Images/qodana-sai1.png>
 Package pdftex.def Info: Images/qodana-sai1.png  used on input line 428.
 (pdftex.def)             Requested size: 497.92325pt x 281.41376pt.
 
 
-[101]
-
-[102
-
-])
+[102]
 
 [103
 
+])
+
+[104
+
 ]
 
-[104]
+[105]
 \openout2 = `Chapter5/chapter5.aux'.
 
  (Chapter5/chapter5.tex
 Section 5.
 )
 
-[105
+[106
 
 
 
 
 ] (thesis.bbl
 
-[106
+[107
 
 
 
 
 ])
 
-[107]
+[108]
 \openout2 = `Appendix1/appendix1.aux'.
 
  (Appendix1/appendix1.tex
@@ -3388,19 +4281,29 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 7.
 
 
+Overfull \hbox (8.53207pt too wide) in paragraph at lines 17--18
+[]\T1/lmr/bx/n/12 (-20) Abstraction \T1/lmr/m/n/12 (-20) - Abstraction hides im
+plementation details and exposes only essential functionality.
+ []
 
-[108
+
+
+[109
 
 
 ]
-
-[109]
 
 [110]
 
 [111]
 
 [112]
+Overfull \hbox (4.466pt too wide) in paragraph at lines 154--155
+[][]\T1/lmtt/m/n/12 FindPath\T1/lmr/m/n/12 (-20) : Implements BFS to compute th
+e shortest path between two vertices. Maintains
+ []
+
+
 
 [113]
 
@@ -3409,17 +4312,25 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 [115]
 
 [116]
+
+[117]
+Overfull \hbox (3.01987pt too wide) in paragraph at lines 362--363
+[][]\T1/lmtt/m/n/12 dbConnection\T1/lmr/m/n/12 (-20) : Handles the connection t
+o the SQLite database. This attribute centralizes
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
 
 
-[117]
-
 [118]
 
 [119]
+
+[120]
 Overfull \hbox (14.602pt too wide) in paragraph at lines 513--513
 []        \T1/lmtt/m/n/12 RETURN position > start AND position < end AND positi
 on <= (width * length)[] 
@@ -3427,25 +4338,25 @@ on <= (width * length)[]
 
 
 
-[120]
+[121]
 
-[121])
+[122])
 
-[122]
+[123]
 \openout2 = `Appendix2/appendix2.aux'.
 
  (Appendix2/appendix2.tex
 Appendix B.
 )
 
-[123
+[124
 
 
 
 
 ]
 No file thesis.ind.
-runsystem(latexminted cleantemp  --timestamp 20250413101643 2EF71E68B4AD97F6304
+runsystem(latexminted cleantemp  --timestamp 20250413103456 2EF71E68B4AD97F6304
 80BCEBC1842FB)...disabled (restricted).
 
 (thesis.aux (Declaration/declaration.aux) (Acknowledgement/acknowledgement.aux)
@@ -3461,29 +4372,40 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: F9B6FF56C724428E51FEE95D8C0D1394;20006.
+(rerunfilecheck)             Checksum: B15E6C9D714C9853E0349D48192F55E0;19393.
  ) 
 Here is how much of TeX's memory you used:
- 33355 strings out of 473522
- 695855 string characters out of 5714610
- 1396465 words of memory out of 5000000
- 55368 multiletter control sequences out of 15000+600000
- 627018 words of font info for 187 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 125i,11n,121p,1625b,1422s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
-b><C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
-b><C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pf
-b><C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb
-><C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb>
-<C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><
-C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C
-:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C
-:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
-:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis.pdf (129 pages, 8190222 bytes).
+ 33345 strings out of 475466
+ 706721 string characters out of 2763827
+ 1381983 words of memory out of 3000000
+ 55118 multiletter control sequences out of 15000+600000
+ 626811 words of font info for 185 fonts, out of 8000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 125i,11n,121p,1625b,1418s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/fonts/
+enc/dvips/lm/lm-ts1.enc}{/Users/pmkhambhaita/Library/Application Support/MiKTeX
+/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc}{/Users/pmkhambhaita/Library/Appli
+cation Support/MiKTeX/texmfs/install/fonts/enc/dvips/lm/lm-mathsy.enc}{/Users/p
+mkhambhaita/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/l
+m/lm-mathit.enc}{/Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/
+install/fonts/enc/dvips/lm/lm-rm.enc}</Users/pmkhambhaita/Library/Application S
+upport/MiKTeX/texmfs/install/fonts/type1/public/lm/lmbx10.pfb></Users/pmkhambha
+ita/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/lm/lmb
+x12.pfb></Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/
+fonts/type1/public/lm/lmmi12.pfb></Users/pmkhambhaita/Library/Application Suppo
+rt/MiKTeX/texmfs/install/fonts/type1/public/lm/lmmi8.pfb></Users/pmkhambhaita/L
+ibrary/Application Support/MiKTeX/texmfs/install/fonts/type1/public/lm/lmr10.pf
+b></Users/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/fonts/
+type1/public/lm/lmr12.pfb></Users/pmkhambhaita/Library/Application Support/MiKT
+eX/texmfs/install/fonts/type1/public/lm/lmr17.pfb></Users/pmkhambhaita/Library/
+Application Support/MiKTeX/texmfs/install/fonts/type1/public/lm/lmr8.pfb></User
+s/pmkhambhaita/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/pu
+blic/lm/lmri12.pfb></Users/pmkhambhaita/Library/Application Support/MiKTeX/texm
+fs/install/fonts/type1/public/lm/lmsy10.pfb></Users/pmkhambhaita/Library/Applic
+ation Support/MiKTeX/texmfs/install/fonts/type1/public/lm/lmtt12.pfb>
+Output written on thesis.pdf (130 pages, 8209951 bytes).
 PDF statistics:
- 1531 PDF objects out of 1728 (max. 8388607)
- 413 named destinations out of 1000 (max. 500000)
+ 1534 PDF objects out of 1728 (max. 8388607)
+ 414 named destinations out of 1000 (max. 500000)
  36812 words of extra memory for PDF output out of 42996 (max. 10000000)
 
