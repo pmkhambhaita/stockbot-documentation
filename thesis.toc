@@ -106,34 +106,34 @@
 \contentsline {subsubsection}{BFS Implementation Details}{52}{Item.54}%
 \contentsline {subsubsection}{Validation Strategy}{52}{Item.57}%
 \contentsline {subsection}{\numberline {3.2.2}Creating the shortest path algorithm - A*}{53}{subsection.3.2.2}%
-\contentsline {subsubsection}{Example pseudocode for A*}{57}{figure.caption.27}%
-\contentsline {subsection}{\numberline {3.2.3}GUI Logic}{61}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Database operations}{62}{subsection.3.2.4}%
-\contentsline {subsubsection}{Database validation}{63}{figure.caption.29}%
-\contentsline {subsubsection}{Database query}{64}{figure.caption.30}%
-\contentsline {subsubsection}{Database update}{65}{figure.caption.31}%
-\contentsline {subsection}{\numberline {3.2.5}Configuration}{66}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}JSON import/export}{67}{subsection.3.2.6}%
-\contentsline {subsection}{\numberline {3.2.7}A* refinements if possible}{68}{subsection.3.2.7}%
-\contentsline {section}{\numberline {3.3}Usability}{69}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Guidelines}{69}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Configuration Screen Analysis}{70}{subsection.3.3.2}%
-\contentsline {subsubsection}{Guideline alignment:}{71}{figure.caption.36}%
-\contentsline {subsubsection}{Usability Analysis:}{71}{figure.caption.36}%
-\contentsline {subsection}{\numberline {3.3.3}Main Screen Analysis}{72}{subsection.3.3.3}%
-\contentsline {subsubsection}{Guideline alignment:}{73}{figure.caption.37}%
-\contentsline {subsubsection}{Usability Analysis}{73}{figure.caption.37}%
-\contentsline {subsection}{\numberline {3.3.4}Grid Visualisation}{74}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Unifying the algorithms}{75}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Key modules breakdown}{75}{subsection.3.4.1}%
-\contentsline {subsubsection}{GUI}{75}{subsection.3.4.1}%
-\contentsline {subsubsection}{SPA}{76}{subsection.3.4.1}%
-\contentsline {subsubsection}{Database}{76}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}A unified implementation}{77}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Test data}{78}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}During development}{78}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Post-development}{78}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3.6}Further data}{86}{section.3.6}%
+\contentsline {subsubsection}{Example pseudocode for A*}{56}{figure.caption.27}%
+\contentsline {subsection}{\numberline {3.2.3}GUI Logic}{60}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Database operations}{61}{subsection.3.2.4}%
+\contentsline {subsubsection}{Database validation}{62}{figure.caption.29}%
+\contentsline {subsubsection}{Database query}{63}{figure.caption.30}%
+\contentsline {subsubsection}{Database update}{64}{figure.caption.31}%
+\contentsline {subsection}{\numberline {3.2.5}Configuration}{65}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}JSON import/export}{66}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}A* refinements if possible}{67}{subsection.3.2.7}%
+\contentsline {section}{\numberline {3.3}Usability}{68}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Guidelines}{68}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Configuration Screen Analysis}{69}{subsection.3.3.2}%
+\contentsline {subsubsection}{Guideline alignment:}{70}{figure.caption.36}%
+\contentsline {subsubsection}{Usability Analysis:}{70}{figure.caption.36}%
+\contentsline {subsection}{\numberline {3.3.3}Main Screen Analysis}{70}{subsection.3.3.3}%
+\contentsline {subsubsection}{Guideline alignment:}{72}{figure.caption.37}%
+\contentsline {subsubsection}{Usability Analysis}{72}{figure.caption.37}%
+\contentsline {subsection}{\numberline {3.3.4}Grid Visualisation}{73}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Unifying the algorithms}{74}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Key modules breakdown}{74}{subsection.3.4.1}%
+\contentsline {subsubsection}{GUI}{74}{subsection.3.4.1}%
+\contentsline {subsubsection}{SPA}{75}{subsection.3.4.1}%
+\contentsline {subsubsection}{Database}{75}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}A unified implementation}{76}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Test data}{77}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Standard data}{77}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}During development}{77}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Post-development}{78}{subsection.3.5.3}%
 \contentsline {chapter}{\numberline {4}Developing the solution}{87}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Sprint Ada}{87}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Tasks}{87}{subsection.4.1.1}%
@@ -149,30 +149,30 @@
 \contentsline {subsubsection}{Iteration 1: The BFS algorithm}{90}{subsection.4.1.5}%
 \contentsline {subsubsection}{Code Implementation:}{91}{subsection.4.1.5}%
 \contentsline {subsubsection}{Dry Run}{92}{subsection.4.1.5}%
-\contentsline {subsubsection}{Prototype details:}{95}{figure.caption.41}%
-\contentsline {subsubsection}{Testing:}{95}{figure.caption.42}%
-\contentsline {subsubsection}{Tests justification}{95}{table.caption.43}%
-\contentsline {subsubsection}{Fixes}{95}{table.caption.43}%
-\contentsline {subsubsection}{Screenshots of tests/program}{96}{table.caption.43}%
-\contentsline {subsubsection}{Validation:}{97}{figure.caption.47}%
-\contentsline {subsubsection}{Qodana Analysis}{97}{figure.caption.47}%
-\contentsline {subsubsection}{Review:}{97}{figure.caption.48}%
-\contentsline {subsubsection}{Iteration 2: Multi-point BFS and Visualisation}{98}{figure.caption.48}%
-\contentsline {subsubsection}{Code Implementation:}{99}{figure.caption.48}%
-\contentsline {subsubsection}{Prototype details:}{105}{figure.caption.49}%
-\contentsline {subsubsection}{Testing:}{106}{figure.caption.50}%
-\contentsline {subsubsection}{Tests justification}{106}{table.caption.51}%
-\contentsline {subsubsection}{Fixes}{106}{table.caption.51}%
-\contentsline {subsubsection}{Screenshots of tests/program}{107}{table.caption.51}%
-\contentsline {subsubsection}{Validation:}{110}{figure.caption.55}%
-\contentsline {subsubsection}{Qodana Analysis}{110}{figure.caption.55}%
-\contentsline {subsubsection}{Review:}{110}{figure.caption.56}%
+\contentsline {subsubsection}{Prototype details:}{95}{figure.caption.43}%
+\contentsline {subsubsection}{Testing:}{95}{figure.caption.44}%
+\contentsline {subsubsection}{Tests justification}{95}{table.caption.45}%
+\contentsline {subsubsection}{Fixes}{95}{table.caption.45}%
+\contentsline {subsubsection}{Screenshots of tests/program}{96}{table.caption.45}%
+\contentsline {subsubsection}{Validation:}{97}{figure.caption.49}%
+\contentsline {subsubsection}{Qodana Analysis}{97}{figure.caption.49}%
+\contentsline {subsubsection}{Review:}{97}{figure.caption.50}%
+\contentsline {subsubsection}{Iteration 2: Multi-point BFS and Visualisation}{98}{figure.caption.50}%
+\contentsline {subsubsection}{Code Implementation:}{99}{figure.caption.50}%
+\contentsline {subsubsection}{Prototype details:}{105}{figure.caption.51}%
+\contentsline {subsubsection}{Testing:}{106}{figure.caption.52}%
+\contentsline {subsubsection}{Tests justification}{106}{table.caption.53}%
+\contentsline {subsubsection}{Fixes}{106}{table.caption.53}%
+\contentsline {subsubsection}{Screenshots of tests/program}{107}{table.caption.53}%
+\contentsline {subsubsection}{Validation:}{110}{figure.caption.57}%
+\contentsline {subsubsection}{Qodana Analysis}{110}{figure.caption.57}%
+\contentsline {subsubsection}{Review:}{110}{figure.caption.58}%
 \contentsline {subsection}{\numberline {4.1.6}Sprint Review and Retrospective}{111}{subsection.4.1.6}%
 \contentsline {subsubsection}{Accomplishments}{111}{subsection.4.1.6}%
 \contentsline {subsubsection}{Final testing}{111}{subsection.4.1.6}%
-\contentsline {subsubsection}{Testing Summary}{111}{table.caption.57}%
-\contentsline {subsubsection}{Code Quality Metrics}{112}{table.caption.58}%
-\contentsline {subsubsection}{Sprint Review Outcomes}{112}{table.caption.58}%
+\contentsline {subsubsection}{Testing Summary}{111}{table.caption.59}%
+\contentsline {subsubsection}{Code Quality Metrics}{112}{table.caption.60}%
+\contentsline {subsubsection}{Sprint Review Outcomes}{112}{table.caption.60}%
 \contentsline {section}{\numberline {4.2}Final Solution Review}{113}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Solution Overview}{113}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Code Structure and Modularity}{113}{subsection.4.2.2}%
@@ -180,6 +180,6 @@
 \contentsline {subsection}{\numberline {4.2.4}Comprehensive Validation Strategy}{113}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}Maintenance Considerations}{113}{subsection.4.2.5}%
 \contentsline {chapter}{\numberline {5}Evaluation}{114}{chapter.5}%
-\contentsline {chapter}{References}{115}{chapter*.59}%
+\contentsline {chapter}{References}{115}{chapter*.61}%
 \contentsline {chapter}{Appendix \numberline {A}Flowcharts in Mermaid}{117}{appendix.1.A}%
 \contentsline {chapter}{Appendix \numberline {B}Complete final code in Python}{118}{appendix.1.B}%

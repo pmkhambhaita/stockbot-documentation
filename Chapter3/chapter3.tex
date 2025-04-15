@@ -526,7 +526,7 @@ The methods in this class are mostly self-explanatory. The \verb|findPath()| met
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.62\linewidth]{Flowcharts/basicastar.png}
+	\includegraphics[width=0.55\linewidth]{Flowcharts/basicastar.png}
 \end{figure}
 
 \newpage
@@ -801,7 +801,8 @@ class AStarPathfinder:
 \newpage
 \section{Usability}
 
-On the subject of GUIs, what rules should a GUI actually follow to be optimal for the end user? The guidelines below are a subset of the ones that form the guides of the Google design team, and hence appropriate due to Google's success and accessibility.
+On the subject of GUIs, what rules should a GUI actually follow to be optimal for the end user? The guidelines below are a subset of the ones that form the guides of both the Google and the Adobe design team, and hence appropriate due to both their success and accessibility. \textsuperscript{\cite{design1, design2}}
+
 \subsection{Guidelines}
 \begin{itemize}
 \item \textbf{Visibility of system status:} Users should always be informed of system operations with easy to understand and highly visible status displayed on the screen within a reasonable amount of time.
@@ -810,7 +811,7 @@ On the subject of GUIs, what rules should a GUI actually follow to be optimal fo
 
 \item \textbf{Error prevention:} Whenever possible, design systems so that potential errors are kept to a minimum. Users do not like being called upon to detect and remedy problems, which may on occasion be beyond their level of expertise. Eliminating or flagging actions that may result in errors are two possible means of achieving error prevention.
 
-\item \textbf{Recognition rather than recall:} Minimize cognitive load by maintaining task-relevant information within the display while users explore the interface. Human attention is limited and we are only capable of maintaining around five items in our short-term memory at one time. Due to the limitations of short-term memory, designers should ensure users can simply employ recognition instead of recalling information across parts of the dialogue. Recognizing something is always easier than recall because recognition involves perceiving cues that help us reach into our vast memory and allowing relevant information to surface. For example, we often find the format of multiple choice questions easier than short answer questions on a test because it only requires us to recognize the answer rather than recall it from our memory.
+\item \textbf{Recognition rather than recall:} Minimise cognitive load by maintaining task-relevant information within the display while users explore the interface. Human attention is limited and we are only capable of maintaining around five items in our short-term memory at one time. Due to the limitations of short-term memory, designers should ensure users can simply employ recognition instead of recalling information across parts of the dialogue. Recognising something is always easier than recall because recognition involves perceiving cues that help us reach into our vast memory and allowing relevant information to surface. For example, we often find the format of multiple choice questions easier than short answer questions on a test because it only requires us to recognise the answer rather than recall it from our memory.
 
 \item \textbf{Aesthetic and minimalist design:} Keep clutter to a minimum. All unnecessary information competes for the user's limited attentional resources, which could inhibit user's memory retrieval of relevant information. Therefore, the display must be reduced to only the necessary components for the current tasks, whilst providing clearly visible and unambiguous means of navigating to other content.
 
@@ -855,9 +856,9 @@ On the subject of GUIs, what rules should a GUI actually follow to be optimal fo
         \item Recognition vs Recall
     
         \begin{itemize}
-            \item Labeled "Rows" and "Columns" fields
+            \item Labelled "Rows" and "Columns" fields
             \item Simple numeric input reduces cognitive load
-            \item Clear action button labeled "Continue"
+            \item Clear action button labelled "Continue"
         \end{itemize}
     \end{itemize}
     
@@ -887,7 +888,7 @@ On the subject of GUIs, what rules should a GUI actually follow to be optimal fo
 
 \subsubsection{Usability Analysis:}
 
-The numeric input fields with increment/decrement controls represent an optimal solution for grid dimension entry, as there are many variants of warehouse that can be constructed via row and column definition - this allows for faster input of the desired warehouse dimensions. \newline The interface's spatial organization leverages natural reading patterns and mental models by arranging elements in a logical left-to-right, top-to-bottom flow that correlates with the final grid structure. This spatial relationship subconsciously enhances user understanding of the configuration process, as this format has been typical of most cultures across the world for millenia. \newline The centrally positioned continue button serves as a clear visual endpoint, while the minimalist two-field design effectively mitigates a cluttered and hard-to-navigate interface that would otherwise arise if this and the main program was incorporated as one window.
+The numeric input fields with increment/decrement controls are an optimal solution for grid dimension entry, as there are many variants of warehouse that can be constructed via row and column definition - this allows for faster input of the desired warehouse dimensions. \newline The interface's spatial organisation leverages natural reading patterns and mental models by arranging elements in a logical left-to-right, top-to-bottom flow that correlates with the final grid structure. \newline The centrally positioned continue button serves as a clear visual endpoint, while the minimalist two-field design effectively mitigates a cluttered and hard-to-navigate interface that would otherwise arise if this and the main program was incorporated as one window.
 
 \subsection{Main Screen Analysis}
 
@@ -918,7 +919,7 @@ The numeric input fields with increment/decrement controls represent an optimal 
         \item Error Prevention
         \begin{itemize}
             \item Explicit format guidance ("comma-separated")
-            \item Legend prevents color interpretation errors
+            \item Legend prevents colour interpretation errors
             \item Clear button labels prevent navigation mistakes
         \end{itemize}
     \end{itemize}
@@ -927,7 +928,7 @@ The numeric input fields with increment/decrement controls represent an optimal 
         \item Recognition vs Recall
     
         \begin{itemize}
-            \item Complete legend eliminates color code memorization
+            \item Complete legend eliminates colour code memorisation
             \item Input format shown directly above field
             \item Descriptive button labels
         \end{itemize}
@@ -939,7 +940,7 @@ The numeric input fields with increment/decrement controls represent an optimal 
     
         \begin{itemize}
             \item Logical grouping of controls
-            \item Clean separation of input/visualization areas
+            \item Clean separation of input/visualisation areas
             \item Essential information only
         \end{itemize}
 \end{itemize}
@@ -947,7 +948,7 @@ The numeric input fields with increment/decrement controls represent an optimal 
 This interface is consistent for the same reasons as the configuration screen.
 
 \subsubsection{Usability Analysis}
-The implementation of a text entry field for input is superior as it offers flexibility and choice to the user, while remaining as simple as possible. While I did consider multiple drop-down menus, one for the number of points and the others for items, I dismissed the idea on the fact that a large warehouse would lead to a very cluttered UI. This design choice also allows for easier parsing, as the entire entry can be taken at once rather than extraction from each drop-down menu. \newline The interface architecture establishes clear visual hierarchies that guide users through complex tasks while maintaining accessibility to all functions. The prominent placement of primary operations (point entry and grid visualization) balanced against the discrete positioning of secondary functions (querying, updating) creates an intuitive interaction flow. \newline
+The implementation of a text entry field for input is superior as it offers flexibility and choice to the user, while remaining as simple as possible. While I did consider multiple drop-down menus, one for the number of points and the others for items, I dismissed the idea on the fact that a large warehouse would lead to a very cluttered UI. This design choice also allows for easier parsing, as the entire entry can be taken at once rather than extraction from each drop-down menu. \newline The interface architecture establishes clear visual hierarchies that guide users through complex tasks while maintaining accessibility to all functions. The prominent placement of primary operations (point entry and grid visualisation) balanced against the discrete positioning of secondary functions (querying, updating) creates an intuitive interaction flow. \newline
 While I initially did not want to include a legend, adding one would benefit the user; it eliminates cognitive overhead associated with colour mapping recall.
 
 \newpage
@@ -970,14 +971,14 @@ While the algorithms are complete, the solution has not yet been unified into a 
 
 \subsubsection{GUI}
     
-This serves as the main entry point for the program. It will manage user input, visualization, and overall coordination of the application. When necessary, the program will call methods or functions from the SPA and Database modules for computation and data management respectively.
+This serves as the main entry point for the program. It will manage user input, visualisation, and overall coordination of the application. When necessary, the program will call methods or functions from the SPA and Database modules for computation and data management respectively.
 
 \begin{itemize}
     \item Primary Role: Acts as the main control system and interface between the user and the computational/backend modules.
     \item Key Functions:
         \begin{itemize}
             \item Input Collection: Accepts user inputs like setting obstacles, defining waypoints, and initiating pathfinding.
-            \item Visualization: Displays the grid and highlights paths, obstacles, and waypoints for the user.
+            \item Visualisation: Displays the grid and highlights paths, obstacles, and waypoints for the user.
             \item Interaction with SPA: Passes grid configurations and waypoints to the SPA module to compute the shortest path.
             \item Interaction with Database: Calls Database to save or load grid states, configurations, or paths.
         \end{itemize}
@@ -996,7 +997,7 @@ This contains the core algorithms for computing the shortest path. It contains l
         \begin{itemize}
             \item Algorithm Logic: Encapsulates shortest path algorithms.
             \item Data Handling: Accepts grid configuration and waypoints from GUI and processes them to compute the desired path.
-            \item Result Output: Returns the computed path to the GUI for visualization.
+            \item Result Output: Returns the computed path to the GUI for visualisation.
         \end{itemize}
     \item Effect of unification: \newline
         SPA is isolated from the GUI and database logic, focusing purely on computation. It accepts data from GUI and processes it using the appropriate algorithm. By keeping the logic separate, the module remains reusable and scalable, allowing future algorithms to be added without modifying the GUI or database.
@@ -1035,23 +1036,66 @@ These are just the key features that are integral to my solution. I have also in
 
 \section{Test data}
 
+\subsection{Standard data}
+
+I will be using the following data as a boilerplate environment for post-development in addition to the test data below. These are the parameters I will set for generic testing for the stakeholders. They will test it as they see fit and report back with any final feedback. I will not be providing them with exact data as I wish to simulate a real environment and hence test this software in a less controlled manner; this is why this data is more ambiguous.
+
+\begin{itemize}
+	\item Grid layout: 15 x 15 default, user discretion to change
+	\item Random database generation
+	\item Point selection varying between 2 and 224, using a random number generator
+	\item Number of points varying between 1 and 25, using a random number generator
+\end{itemize}
+
 \subsection{During development}
 
-\begin{longtable}{|p{0.05\textwidth}|p{0.3\textwidth}|p{0.25\textwidth}|p{0.24\textwidth}|c|}
-	\hline
-	\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
-	\hline
-	\endhead
-	
-	T1.1 & Input 0,0 and 9,9 & Direct path between both points & Direct path between points & X \\
-	\hline
-	T1.2 & Input 1,2 and 5,7 & Direct path between defined points only & Direct path between 1,2 and 5,7 & X \\
-	\hline
-	T1.3 & Input -1,-1 and 4,8 & Returns error & Error and break & \~{} \\
-	\hline
-	T1.4 & Input 0,1 and 10,10 & Return error & Error and break & \~{} \\
-	\hline
-\end{longtable}
+These tests will be performed during development. The test IDs are in the format TA.B.C where A is the sprint number, B is the iteration number and C is the test number. T.x.F tests are the pre-determined tests that will be performed by stakeholders, while T.x.x tests will be used to test each iteration.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabularx}{\textwidth}{|l|X|}
+		\hline
+		\textbf{ID} & \textbf{Description} \\
+		\hline
+		T1.F.1 & Path found using input points \\
+		\hline
+		T1.F.2 & Input invalid points (letters, numbers and symbols) \\
+		\hline
+		T1.F.3 & Input no points \\
+		\hline
+	\end{tabularx}
+	\caption{Pre-determined tests}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabularx}{\textwidth}{|l|X|}
+		\hline
+		\textbf{ID} & \textbf{Description} \\
+		\hline
+		T1.1.1 & Input 0,0 and 9,9 \\
+		\hline
+		T1.1.2 & Input 1,2 and 5,7 \\
+		\hline
+		T1.1.3 & Input -1,-1 and 4,8 \\
+		\hline
+		T1.1.4 & Input 0,1 and 10,10 \\
+		\hline
+		T1.2.1 & No intermediate points selected \\
+		\hline
+		T1.2.2 & Input 3,4 and 5,8 \\
+		\hline
+		T1.2.3 & Input -1,-1 \\
+		\hline
+		T1.2.4 & Input one valid and one non-valid point \\
+		\hline
+		T1.2.5 & Input 5 invalid points \\
+		\hline
+		T1.2.6 & Input valid points and verify it is the shortest path \\
+		\hline
+	\end{tabularx}
+	\caption{Iteration tests}
+\end{table}
 
 
 \subsection{Post-development}
@@ -1203,14 +1247,3 @@ These are just the key features that are integral to my solution. I have also in
 70 & Set all items to quantity 1, execute path through all items, verify database update & All visited items should be updated to quantity 0 and marked as out of stock (red) & Tests comprehensive stock update & Functional \\
 \hline
 \end{longtable}
-
-\section{Further data}
-
-I will be using the following data for post-development in addition to the test data above. These are the parameters I will set for generic testing for the stakeholders. They will test it as they see fit and report back with any final feedback. I will not be providing them with exact data as I wish to simulate a real environment and hence test this software in a less controlled manner; this is why this data is more ambiguous.
-
-\begin{itemize}
-    \item Grid layout: 15 x 15 default, user discretion to change
-    \item Random database generation
-    \item Point selection varying between 2 and 224, using a random number generator
-    \item Number of points varying between 1 and 25, using a random number generator
-\end{itemize}

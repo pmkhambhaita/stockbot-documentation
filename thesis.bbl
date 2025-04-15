@@ -1,33 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{point_data}
-T.~Point, ``Data structure - breadth first traversal - tutorialspoint.''
-  \url{https://www.tutorialspoint.com/data_structures_algorithms/breadth_first_traversal.htm}.
-
-\bibitem{geeksforgeeks_2019_depth}
-GeeksforGeeks, ``Depth first search - geeksforgeeks.''
-  \url{https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/},
-  02 2019.
-
-\bibitem{patel_2019_introduction}
-A.~Patel, ``Introduction to a*.''
-  \url{http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html},
-  2019.
-
-\bibitem{s_2021_a}
-R.~A. S, ``A* search algorithm explained: Applications \& uses.''
-  \url{https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/a-star-algorithm#algorithm},
-  07 2021.
-
-\bibitem{geeksforgeeks_2017_genetic}
-GeeksforGeeks, ``Genetic algorithms.''
-  \url{https://www.geeksforgeeks.org/genetic-algorithms/}, 06 2017.
-
-\bibitem{geeksforgeeks_2024_introduction}
-GeeksforGeeks, ``Introduction to optimization with genetic algorithm.''
-  \url{https://www.geeksforgeeks.org/introduction-to-optimization-with-genetic-algorithm/},
-  09 2024.
-
 \bibitem{warehouse}
 ``Warehouse worker.''
   \url{https://www.ioscm.com/blog/warehousing-strategies-for-building-a-productive-work-environment/}.
@@ -96,6 +68,34 @@ A.~Systems, ``Autostore | introduction: Stop airhousing, start warehousing.''
 A.~Systems, ``Autostore robotic warehouse storage and inventory retrieval
   system.'' \url{https://www.autostoresystem.com/}.
 
+\bibitem{point_data}
+T.~Point, ``Data structure - breadth first traversal - tutorialspoint.''
+  \url{https://www.tutorialspoint.com/data_structures_algorithms/breadth_first_traversal.htm}.
+
+\bibitem{geeksforgeeks_2019_depth}
+GeeksforGeeks, ``Depth first search - geeksforgeeks.''
+  \url{https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/},
+  02 2019.
+
+\bibitem{patel_2019_introduction}
+A.~Patel, ``Introduction to a*.''
+  \url{http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html},
+  2019.
+
+\bibitem{s_2021_a}
+R.~A. S, ``A* search algorithm explained: Applications \& uses.''
+  \url{https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/a-star-algorithm#algorithm},
+  07 2021.
+
+\bibitem{geeksforgeeks_2017_genetic}
+GeeksforGeeks, ``Genetic algorithms.''
+  \url{https://www.geeksforgeeks.org/genetic-algorithms/}, 06 2017.
+
+\bibitem{geeksforgeeks_2024_introduction}
+GeeksforGeeks, ``Introduction to optimization with genetic algorithm.''
+  \url{https://www.geeksforgeeks.org/introduction-to-optimization-with-genetic-algorithm/},
+  09 2024.
+
 \bibitem{badrelkari_2024_exploring}
 B.~Elkari, L.~OURABAH, H.~SEKKAT, A.~HSAINE, C.~ESSAIOUAD, Y.~BOUARGANE, and
   K.~E. Moutaouakil, ``Exploring maze navigation: A comparative study of dfs,
@@ -127,5 +127,13 @@ P.~S. Foundation, ``tkinter — python interface to tcl/tk — python 3.7.2
 V.~Joshi, ``Breaking down breadth-first search by vaidehi joshi - basecs -
   medium.''
   \url{https://miro.medium.com/v2/resize:fit:1400/1*VM84VPcCQe0gSy44l9S5yA.jpeg}.
+
+\bibitem{design1}
+U.~Anjani, ``Optimizing user experience: Google chrome and top 7 laws of ux.''
+  \url{https://umeshabalasooriya.medium.com/optimizing-user-experience-google-chrome-and-top-7-laws-of-ux-7b6ec41e3116}.
+
+\bibitem{design2}
+I.~D. Foundation, ``User interface design guidelines: 10 rules of thumb.''
+  \url{https://www.interaction-design.org/literature/article/user-interface-design-guidelines-10-rules-of-thumb}.
 
 \end{thebibliography}
