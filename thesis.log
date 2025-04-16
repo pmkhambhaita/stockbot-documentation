@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.6)  15 APR 2025 11:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.6)  15 APR 2025 18:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1352,7 +1352,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 \PHD@crest=\box116
-<logoSchool.jpg, id=378, 963.6pt x 963.6pt>
+<logoSchool.jpg, id=410, 963.6pt x 963.6pt>
 File: logoSchool.jpg Graphic file (type jpg)
 <use logoSchool.jpg>
 Package pdftex.def Info: logoSchool.jpg  used on input line 141.
@@ -1376,12 +1376,12 @@ a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./logoSchool.jpg
 \openout2 = `Declaration/declaration.aux'.
 
  (Declaration/declaration.tex
-<IMG_20241213_124653362.jpg, id=388, 1683.28876pt x 1046.91125pt>
+<IMG_20241213_124653362.jpg, id=420, 1683.28876pt x 1046.91125pt>
 File: IMG_20241213_124653362.jpg Graphic file (type jpg)
 <use IMG_20241213_124653362.jpg>
 Package pdftex.def Info: IMG_20241213_124653362.jpg  used on input line 19.
 (pdftex.def)             Requested size: 248.96162pt x 154.82542pt.
-<IMG_20241213_124653362~2.jpg, id=389, 1242.6425pt x 572.1375pt>
+<IMG_20241213_124653362~2.jpg, id=421, 1242.6425pt x 572.1375pt>
 File: IMG_20241213_124653362~2.jpg Graphic file (type jpg)
 <use IMG_20241213_124653362~2.jpg>
 Package pdftex.def Info: IMG_20241213_124653362~2.jpg  used on input line 25.
@@ -1424,7 +1424,7 @@ Package pdftex.def Info: IMG_20241213_124653362~2.jpg  used on input line 25.
 
  (Chapter1/chapter1.tex
 Section 1.
-<Images/warehouse.jpg, id=508, 289.08pt x 151.0443pt>
+<Images/warehouse.jpg, id=548, 289.08pt x 151.0443pt>
 File: Images/warehouse.jpg Graphic file (type jpg)
 <use Images/warehouse.jpg>
 Package pdftex.def Info: Images/warehouse.jpg  used on input line 23.
@@ -1436,7 +1436,7 @@ Package pdftex.def Info: Images/warehouse.jpg  used on input line 23.
 
 
  <./Images/warehouse.jpg>]
-<automation+.png, id=518, 803.0pt x 444.66125pt>
+<automation+.png, id=558, 803.0pt x 444.66125pt>
 File: automation+.png Graphic file (type png)
 <use automation+.png>
 Package pdftex.def Info: automation+.png  used on input line 35.
@@ -1459,7 +1459,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--38
 
 
 [2 <./automation+.png>]
-<CurrentSysModel.png, id=527, 310.15875pt x 674.52pt>
+<CurrentSysModel.png, id=567, 310.15875pt x 674.52pt>
 File: CurrentSysModel.png Graphic file (type png)
 <use CurrentSysModel.png>
 Package pdftex.def Info: CurrentSysModel.png  used on input line 46.
@@ -1559,7 +1559,7 @@ Package pdftex.def Info: IMG_20241213_124653362~2.jpg  used on input line 461.
 
  (Chapter2/chapter2.tex
 Section 2.
-<Images/kiva.png, id=633, 843.15pt x 526.96875pt>
+<Images/kiva.png, id=673, 843.15pt x 526.96875pt>
 File: Images/kiva.png Graphic file (type png)
 <use Images/kiva.png>
 Package pdftex.def Info: Images/kiva.png  used on input line 14.
@@ -1620,7 +1620,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
 
-<Methodology diagram (1).png, id=758, 499.8675pt x 492.84125pt>
+<Methodology diagram (1).png, id=798, 499.8675pt x 492.84125pt>
 File: Methodology diagram (1).png Graphic file (type png)
 <use Methodology diagram (1).png>
 Package pdftex.def Info: Methodology diagram (1).png  used on input line 396.
@@ -1634,7 +1634,7 @@ Package pdftex.def Info: Methodology diagram (1).png  used on input line 396.
 
  (Chapter3/chapter3.tex
 Section 3.
-<Images/breakdown1.png, id=770, 359.84438pt x 690.32906pt>
+<Images/breakdown1.png, id=810, 359.84438pt x 690.32906pt>
 File: Images/breakdown1.png Graphic file (type png)
 <use Images/breakdown1.png>
 Package pdftex.def Info: Images/breakdown1.png  used on input line 10.
@@ -1649,12 +1649,12 @@ Package pdftex.def Info: Images/breakdown1.png  used on input line 10.
  <./Images/breakdown1.png>]
 
 [34]
-<Images/pfoutline.png, id=785, 254.45062pt x 654.19406pt>
+<Images/pfoutline.png, id=825, 254.45062pt x 654.19406pt>
 File: Images/pfoutline.png Graphic file (type png)
 <use Images/pfoutline.png>
 Package pdftex.def Info: Images/pfoutline.png  used on input line 43.
 (pdftex.def)             Requested size: 248.96162pt x 640.10759pt.
-<Images/scoutline.png, id=786, 423.08063pt x 743.02594pt>
+<Images/scoutline.png, id=826, 423.08063pt x 743.02594pt>
 File: Images/scoutline.png Graphic file (type png)
 <use Images/scoutline.png>
 Package pdftex.def Info: Images/scoutline.png  used on input line 49.
@@ -1663,7 +1663,7 @@ Package pdftex.def Info: Images/scoutline.png  used on input line 49.
 
 LaTeX Warning: Float too large for page by 80.30101pt on input line 51.
 
-<Images/guioutline.png, id=787, 584.93532pt x 736.25063pt>
+<Images/guioutline.png, id=827, 584.93532pt x 736.25063pt>
 File: Images/guioutline.png Graphic file (type png)
 <use Images/guioutline.png>
 Package pdftex.def Info: Images/guioutline.png  used on input line 55.
@@ -1679,7 +1679,7 @@ Package pdftex.def Info: Images/guioutline.png  used on input line 55.
 [38]
 
 [39]
-<Images/classdiag1.png, id=815, 1066.98625pt x 1447.4075pt>
+<Images/classdiag1.png, id=855, 1066.98625pt x 1447.4075pt>
 File: Images/classdiag1.png Graphic file (type png)
 <use Images/classdiag1.png>
 Package pdftex.def Info: Images/classdiag1.png  used on input line 122.
@@ -1687,7 +1687,7 @@ Package pdftex.def Info: Images/classdiag1.png  used on input line 122.
 
 
 [40 <./Images/classdiag1.png>]
-<Images/top-down-diagram.png, id=822, 319.94531pt x 1433.355pt>
+<Images/top-down-diagram.png, id=862, 319.94531pt x 1433.355pt>
 File: Images/top-down-diagram.png Graphic file (type png)
 <use Images/top-down-diagram.png>
 Package pdftex.def Info: Images/top-down-diagram.png  used on input line 130.
@@ -1695,7 +1695,7 @@ Package pdftex.def Info: Images/top-down-diagram.png  used on input line 130.
 
 
 [41 <./Images/top-down-diagram.png>]
-<Images/bfsvdfs.png, id=829, 241.90375pt x 308.15125pt>
+<Images/bfsvdfs.png, id=869, 241.90375pt x 308.15125pt>
 File: Images/bfsvdfs.png Graphic file (type png)
 <use Images/bfsvdfs.png>
 Package pdftex.def Info: Images/bfsvdfs.png  used on input line 161.
@@ -1703,7 +1703,7 @@ Package pdftex.def Info: Images/bfsvdfs.png  used on input line 161.
 
 
 [42 <./Images/bfsvdfs.png>]
-<Flowcharts/BFS2.png, id=846, 391.4625pt x 937.5025pt>
+<Flowcharts/BFS2.png, id=886, 391.4625pt x 937.5025pt>
 File: Flowcharts/BFS2.png Graphic file (type png)
 <use Flowcharts/BFS2.png>
 Package pdftex.def Info: Flowcharts/BFS2.png  used on input line 171.
@@ -1764,7 +1764,7 @@ LaTeX Info: Symbol \textasciigrave not provided by
 [51]
 
 [52]
-<Flowcharts/basicastar.png, id=898, 316.18124pt x 744.53156pt>
+<Flowcharts/basicastar.png, id=938, 316.18124pt x 744.53156pt>
 File: Flowcharts/basicastar.png Graphic file (type png)
 <use Flowcharts/basicastar.png>
 Package pdftex.def Info: Flowcharts/basicastar.png  used on input line 529.
@@ -1790,7 +1790,7 @@ is.grid.isObstacle(newX, newY):[]
 
 
 [59]
-<Flowcharts/guiflowchart.png, id=930, 518.6878pt x 470.50781pt>
+<Flowcharts/guiflowchart.png, id=970, 518.6878pt x 470.50781pt>
 File: Flowcharts/guiflowchart.png Graphic file (type png)
 <use Flowcharts/guiflowchart.png>
 Package pdftex.def Info: Flowcharts/guiflowchart.png  used on input line 731.
@@ -1798,7 +1798,7 @@ Package pdftex.def Info: Flowcharts/guiflowchart.png  used on input line 731.
 
 
 [60 <./Flowcharts/guiflowchart.png>]
-<Flowcharts/dbops1.png, id=937, 820.06375pt x 1026.83624pt>
+<Flowcharts/dbops1.png, id=977, 820.06375pt x 1026.83624pt>
 File: Flowcharts/dbops1.png Graphic file (type png)
 <use Flowcharts/dbops1.png>
 Package pdftex.def Info: Flowcharts/dbops1.png  used on input line 741.
@@ -1806,7 +1806,7 @@ Package pdftex.def Info: Flowcharts/dbops1.png  used on input line 741.
 
 
 [61 <./Flowcharts/dbops1.png>]
-<Flowcharts/dbinit.png, id=945, 2551.5325pt x 2083.785pt>
+<Flowcharts/dbinit.png, id=985, 2551.5325pt x 2083.785pt>
 File: Flowcharts/dbinit.png Graphic file (type png)
 <use Flowcharts/dbinit.png>
 Package pdftex.def Info: Flowcharts/dbinit.png  used on input line 751.
@@ -1814,7 +1814,7 @@ Package pdftex.def Info: Flowcharts/dbinit.png  used on input line 751.
 
 
 [62 <./Flowcharts/dbinit.png>]
-<Flowcharts/dbquery.png, id=951, 588.1975pt x 1678.27pt>
+<Flowcharts/dbquery.png, id=991, 588.1975pt x 1678.27pt>
 File: Flowcharts/dbquery.png Graphic file (type png)
 <use Flowcharts/dbquery.png>
 Package pdftex.def Info: Flowcharts/dbquery.png  used on input line 760.
@@ -1822,7 +1822,7 @@ Package pdftex.def Info: Flowcharts/dbquery.png  used on input line 760.
 
 
 [63 <./Flowcharts/dbquery.png>]
-<Flowcharts/dbwrite.png, id=958, 1588.93625pt x 1995.455pt>
+<Flowcharts/dbwrite.png, id=998, 1588.93625pt x 1995.455pt>
 File: Flowcharts/dbwrite.png Graphic file (type png)
 <use Flowcharts/dbwrite.png>
 Package pdftex.def Info: Flowcharts/dbwrite.png  used on input line 769.
@@ -1830,7 +1830,7 @@ Package pdftex.def Info: Flowcharts/dbwrite.png  used on input line 769.
 
 
 [64 <./Flowcharts/dbwrite.png>]
-<Flowcharts/config1.png, id=965, 369.38pt x 1026.83624pt>
+<Flowcharts/config1.png, id=1005, 369.38pt x 1026.83624pt>
 File: Flowcharts/config1.png Graphic file (type png)
 <use Flowcharts/config1.png>
 Package pdftex.def Info: Flowcharts/config1.png  used on input line 778.
@@ -1838,7 +1838,7 @@ Package pdftex.def Info: Flowcharts/config1.png  used on input line 778.
 
 
 [65 <./Flowcharts/config1.png>]
-<Flowcharts/json.png, id=972, 815.045pt x 1029.8475pt>
+<Flowcharts/json.png, id=1012, 815.045pt x 1029.8475pt>
 File: Flowcharts/json.png Graphic file (type png)
 <use Flowcharts/json.png>
 Package pdftex.def Info: Flowcharts/json.png  used on input line 788.
@@ -1846,7 +1846,7 @@ Package pdftex.def Info: Flowcharts/json.png  used on input line 788.
 
 
 [66 <./Flowcharts/json.png>]
-<Flowcharts/optimisedastar.png, id=979, 1678.27pt x 5096.03876pt>
+<Flowcharts/optimisedastar.png, id=1019, 1678.27pt x 5096.03876pt>
 File: Flowcharts/optimisedastar.png Graphic file (type png)
 <use Flowcharts/optimisedastar.png>
 Package pdftex.def Info: Flowcharts/optimisedastar.png  used on input line 798.
@@ -1857,7 +1857,7 @@ Package pdftex.def Info: Flowcharts/optimisedastar.png  used on input line 798.
 [67 <./Flowcharts/optimisedastar.png>]
 
 [68]
-<Images/InitGUI.jpg, id=996, 2828.5675pt x 2288.55pt>
+<Images/InitGUI.jpg, id=1036, 2828.5675pt x 2288.55pt>
 File: Images/InitGUI.jpg Graphic file (type jpg)
 <use Images/InitGUI.jpg>
 Package pdftex.def Info: Images/InitGUI.jpg  used on input line 825.
@@ -1865,7 +1865,7 @@ Package pdftex.def Info: Images/InitGUI.jpg  used on input line 825.
 
 
 [69 <./Images/InitGUI.jpg>]
-<Images/GUI.jpg, id=1002, 2509.375pt x 3063.445pt>
+<Images/GUI.jpg, id=1042, 2509.375pt x 3063.445pt>
 File: Images/GUI.jpg Graphic file (type jpg)
 <use Images/GUI.jpg>
 Package pdftex.def Info: Images/GUI.jpg  used on input line 897.
@@ -1877,7 +1877,7 @@ Package pdftex.def Info: Images/GUI.jpg  used on input line 897.
 [71 <./Images/GUI.jpg>]
 
 [72]
-<gridvisual.jpg, id=1016, 2988.16376pt x 2970.09625pt>
+<gridvisual.jpg, id=1056, 2988.16376pt x 2970.09625pt>
 File: gridvisual.jpg Graphic file (type jpg)
 <use gridvisual.jpg>
 Package pdftex.def Info: gridvisual.jpg  used on input line 960.
@@ -1889,7 +1889,7 @@ Package pdftex.def Info: gridvisual.jpg  used on input line 960.
 [74]
 
 [75]
-<Flowcharts/Unified.png, id=1031, 2099.845pt x 3849.38126pt>
+<Flowcharts/Unified.png, id=1071, 2099.845pt x 3849.38126pt>
 File: Flowcharts/Unified.png Graphic file (type png)
 <use Flowcharts/Unified.png>
 Package pdftex.def Info: Flowcharts/Unified.png  used on input line 1031.
@@ -2931,101 +2931,103 @@ Section 4.
 
 [89]
 
-[90
+[90]
+
+[91
 
 ]
-
-[91]
 
 [92]
 
 [93]
-<Images/Source Code Image (2).png, id=1133, 1706.375pt x 1690.315pt>
+<Images/Source Code Image (2).png, id=1167, 1706.375pt x 1690.315pt>
 File: Images/Source Code Image (2).png Graphic file (type png)
 <use Images/Source Code Image (2).png>
 Package pdftex.def Info: Images/Source Code Image (2).png  used on input line 2
-92.
+74.
 (pdftex.def)             Requested size: 497.92325pt x 493.22227pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
 
 
-[94 <./Images/Source Code Image (2).png>]
-<Images/Screenshot 2025-03-30 at 11.18.52.png, id=1140, 828.09375pt x 98.3675pt
+[94]
+
+[95 <./Images/Source Code Image (2).png>]
+<Images/Screenshot 2025-03-30 at 11.18.52.png, id=1178, 828.09375pt x 98.3675pt
 >
 File: Images/Screenshot 2025-03-30 at 11.18.52.png Graphic file (type png)
 <use Images/Screenshot 2025-03-30 at 11.18.52.png>
 Package pdftex.def Info: Images/Screenshot 2025-03-30 at 11.18.52.png  used on 
-input line 302.
+input line 284.
 (pdftex.def)             Requested size: 398.3401pt x 47.31941pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
+Underfull \hbox (badness 10000) in paragraph at lines 304--304
 []|\T1/lmr/m/n/12 (+20) Direct path be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
+Underfull \hbox (badness 10000) in paragraph at lines 304--304
 []|\T1/lmr/m/n/12 (+20) Direct path be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
+Underfull \hbox (badness 10000) in paragraph at lines 304--304
 []|\T1/lmr/m/n/12 (+20) Direct path be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
+Underfull \hbox (badness 10000) in paragraph at lines 304--304
 \T1/lmr/m/n/12 (+20) tween de-fined
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
+Underfull \hbox (badness 10000) in paragraph at lines 304--304
 []|\T1/lmr/m/n/12 (+20) Direct path be-
  []
 
 
 
-[95 <./Images/Screenshot 2025-03-30 at 11.18.52.png>]
-<Images/t1.1.png, id=1148, 1196.47pt x 91.34125pt>
+[96 <./Images/Screenshot 2025-03-30 at 11.18.52.png>]
+<Images/t1.1.png, id=1186, 1196.47pt x 91.34125pt>
 File: Images/t1.1.png Graphic file (type png)
 <use Images/t1.1.png>
-Package pdftex.def Info: Images/t1.1.png  used on input line 337.
+Package pdftex.def Info: Images/t1.1.png  used on input line 319.
 (pdftex.def)             Requested size: 497.92325pt x 38.01321pt.
-<Images/t1.2.png, id=1149, 634.37pt x 91.34125pt>
+<Images/t1.2.png, id=1187, 634.37pt x 91.34125pt>
 File: Images/t1.2.png Graphic file (type png)
 <use Images/t1.2.png>
-Package pdftex.def Info: Images/t1.2.png  used on input line 344.
+Package pdftex.def Info: Images/t1.2.png  used on input line 326.
 (pdftex.def)             Requested size: 497.92325pt x 71.69606pt.
-<Images/t1.3,1.4.png, id=1150, 634.37pt x 91.34125pt>
+<Images/t1.3,1.4.png, id=1188, 634.37pt x 91.34125pt>
 File: Images/t1.3,1.4.png Graphic file (type png)
 <use Images/t1.3,1.4.png>
-Package pdftex.def Info: Images/t1.3,1.4.png  used on input line 351.
+Package pdftex.def Info: Images/t1.3,1.4.png  used on input line 333.
 (pdftex.def)             Requested size: 497.92325pt x 71.69606pt.
 File: Images/t1.3,1.4.png Graphic file (type png)
 <use Images/t1.3,1.4.png>
-Package pdftex.def Info: Images/t1.3,1.4.png  used on input line 358.
+Package pdftex.def Info: Images/t1.3,1.4.png  used on input line 340.
 (pdftex.def)             Requested size: 497.92325pt x 71.69606pt.
 
 
-[96 <./Images/t1.1.png> <./Images/t1.2.png> <./Images/t1.3,1.4.png>]
-<Images/qodana-sai1.png, id=1162, 2885.78125pt x 1631.09375pt>
+[97 <./Images/t1.1.png> <./Images/t1.2.png> <./Images/t1.3,1.4.png>]
+<Images/qodana-sai1.png, id=1201, 2885.78125pt x 1631.09375pt>
 File: Images/qodana-sai1.png Graphic file (type png)
 <use Images/qodana-sai1.png>
-Package pdftex.def Info: Images/qodana-sai1.png  used on input line 379.
+Package pdftex.def Info: Images/qodana-sai1.png  used on input line 361.
 (pdftex.def)             Requested size: 497.92325pt x 281.41376pt.
 
 
-[97 <./Images/qodana-sai1.png>]
+[98 <./Images/qodana-sai1.png>]
 
-[98]
+[99]
 (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 415.
+(Font)              scaled to size 10.0pt on input line 395.
 
 (Code/sa2.py
 LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
@@ -3044,186 +3046,285 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[99{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4
--ts1.enc}]
-
-[100]
+[100{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i
+4-ts1.enc}]
 
 [101]
 
-[102])
-<Images/sa2.png, id=1391, 2336.73pt x 5241.5825pt>
+[102]
+
+[103])
+<Images/sa2.png, id=1430, 2336.73pt x 5241.5825pt>
 File: Images/sa2.png Graphic file (type png)
 <use Images/sa2.png>
-Package pdftex.def Info: Images/sa2.png  used on input line 420.
+Package pdftex.def Info: Images/sa2.png  used on input line 400.
 (pdftex.def)             Requested size: 303.73347pt x 681.2697pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--424
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 
  []
 
 
 
-[103]
+[104]
 
-[104 <./Images/sa2.png>]
-<Images/sa2test1.png, id=1417, 581.17125pt x 600.2425pt>
+[105 <./Images/sa2.png>]
+<Images/sa2test1.png, id=1455, 581.17125pt x 600.2425pt>
 File: Images/sa2test1.png Graphic file (type png)
 <use Images/sa2test1.png>
-Package pdftex.def Info: Images/sa2test1.png  used on input line 431.
+Package pdftex.def Info: Images/sa2test1.png  used on input line 411.
 (pdftex.def)             Requested size: 398.3401pt x 411.42007pt.
 
 
-[105 <./Images/sa2test1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 457--457
+[106 <./Images/sa2test1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
 []|\T1/lmr/m/n/12 (+20) Direct path be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 457--457
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
 []|\T1/lmr/m/n/12 (+20) Direct path be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 457--457
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
 []|\T1/lmr/m/n/12 (+20) Direct path be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 457--457
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
 []|\T1/lmr/m/n/12 (+20) Direct path be-
  []
 
 
-Underfull \hbox (badness 2799) in paragraph at lines 457--457
+Underfull \hbox (badness 2799) in paragraph at lines 437--437
 []|\T1/lmr/m/n/12 (+20) Returned grace-ful
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 457--457
+Underfull \hbox (badness 1024) in paragraph at lines 437--437
 \T1/lmr/m/n/12 (+20) er-ror and al-lowed
  []
 
 
-Underfull \hbox (badness 2799) in paragraph at lines 457--457
+Underfull \hbox (badness 2799) in paragraph at lines 437--437
 []|\T1/lmr/m/n/12 (+20) Returned grace-ful
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 457--457
+Underfull \hbox (badness 1024) in paragraph at lines 437--437
 \T1/lmr/m/n/12 (+20) er-ror and al-lowed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 457--457
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
 []|\T1/lmr/m/n/12 (+20) Prevent en-ter-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 457--457
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
 []|\T1/lmr/m/n/12 (+20) Shortest path
  []
 
 
 
-[106]
-<Images/t1.2.1.png, id=1429, 569.12625pt x 439.6425pt>
+[107]
+<Images/t1.2.1.png, id=1467, 569.12625pt x 439.6425pt>
 File: Images/t1.2.1.png Graphic file (type png)
 <use Images/t1.2.1.png>
-Package pdftex.def Info: Images/t1.2.1.png  used on input line 474.
+Package pdftex.def Info: Images/t1.2.1.png  used on input line 454.
 (pdftex.def)             Requested size: 497.92325pt x 384.6594pt.
-<Images/t1.2.2.png, id=1430, 569.12625pt x 604.2575pt>
+<Images/t1.2.2.png, id=1468, 569.12625pt x 604.2575pt>
 File: Images/t1.2.2.png Graphic file (type png)
 <use Images/t1.2.2.png>
-Package pdftex.def Info: Images/t1.2.2.png  used on input line 481.
+Package pdftex.def Info: Images/t1.2.2.png  used on input line 461.
 (pdftex.def)             Requested size: 497.92325pt x 528.68713pt.
-<Images/t1.2.x.png, id=1431, 683.55376pt x 315.1775pt>
+<Images/t1.2.x.png, id=1469, 683.55376pt x 315.1775pt>
 File: Images/t1.2.x.png Graphic file (type png)
 <use Images/t1.2.x.png>
-Package pdftex.def Info: Images/t1.2.x.png  used on input line 488.
+Package pdftex.def Info: Images/t1.2.x.png  used on input line 468.
 (pdftex.def)             Requested size: 497.92325pt x 229.59192pt.
 File: Images/t1.2.1.png Graphic file (type png)
 <use Images/t1.2.1.png>
-Package pdftex.def Info: Images/t1.2.1.png  used on input line 495.
+Package pdftex.def Info: Images/t1.2.1.png  used on input line 475.
 (pdftex.def)             Requested size: 497.92325pt x 384.6594pt.
 
 
-[107 <./Images/t1.2.1.png>]
+[108 <./Images/t1.2.1.png>]
 
-[108 <./Images/t1.2.2.png>]
+[109 <./Images/t1.2.2.png>]
 
-[109 <./Images/t1.2.x.png>]
-<Images/qodana-sa2.png, id=1452, 1432.35126pt x 835.12pt>
+[110 <./Images/t1.2.x.png>]
+<Images/qodana-sa2.png, id=1490, 1432.35126pt x 835.12pt>
 File: Images/qodana-sa2.png Graphic file (type png)
 <use Images/qodana-sa2.png>
-Package pdftex.def Info: Images/qodana-sa2.png  used on input line 517.
+Package pdftex.def Info: Images/qodana-sa2.png  used on input line 497.
 (pdftex.def)             Requested size: 423.2378pt x 246.75328pt.
 
 
-[110 <./Images/qodana-sa2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 555--555
+[111 <./Images/qodana-sa2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 535--535
 []|\T1/lmr/m/n/12 (+20) Direct path be-
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 555--555
+Underfull \hbox (badness 1708) in paragraph at lines 535--535
 \T1/lmr/m/n/12 (+20) stop-ping at (2,5),
  []
 
 
-Underfull \hbox (badness 6001) in paragraph at lines 555--555
+Underfull \hbox (badness 6001) in paragraph at lines 535--535
 []|\T1/lmr/m/n/12 (+20) Warns user that
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 555--555
+Underfull \hbox (badness 10000) in paragraph at lines 535--535
 []|\T1/lmr/m/n/12 (+20) Direct path be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 555--555
+Underfull \hbox (badness 10000) in paragraph at lines 535--535
 []|\T1/lmr/m/n/12 (+20) Direct path be-
  []
 
 
 
-[111
+[112
 
 ]
 
-[112])
+[113]
 
-[113
+LaTeX Warning: \verb may be unreliable inside tabularx on input line 618.
+
+
+Underfull \hbox (badness 2253) in paragraph at lines 618--618
+[]|\T1/lmr/m/n/12 (+20) Visualisation Out-put Redi-rec-tion: Cap-ture the stan-
+dard out-put of the
+ []
+
+
+
+[114
 
 ]
+Overfull \hbox (20.72688pt too wide) in paragraph at lines 635--636
+[]\T1/lmr/bx/n/12 (-20) Component Ini-tial-i-sa-tion: \T1/lmr/m/n/12 (-20) In-s
+tan-ti-ate nec-es-sary classes from [][]\T1/zi4/m/n/12 spa.py []\T1/lmr/m/n/12 
+(-20) within the [][]\T1/zi4/m/n/12 PathfinderGUI
+ []
+
+
+
+[115
+
+]
+
+[116]
+Overfull \hbox (11.22757pt too wide) in paragraph at lines 690--691
+[]\T1/lmr/m/n/12 (-20) OCSP-008 (Par-tial) / OCSP-010 (Par-tial): Mod-i-fied GU
+I meth-ods ([][]\T1/zi4/m/n/12 add_point[]\T1/lmr/m/n/12 (-20) , [][]\T1/zi4/m/
+n/12 find_path[]\T1/lmr/m/n/12 (-20) )
+ []
+
+
+
+[117]
+
+[118]
+Overfull \hbox (12.85016pt too wide) in paragraph at lines 730--731
+[]\T1/lmr/m/n/12 (-20) Button com-mands were linked to place-holder or ini-tial
+ im-ple-men-ta-tion meth-ods ([][]\T1/zi4/m/n/12 add_point[]\T1/lmr/m/n/12 (-20
+) ,
+ []
+
+
+Overfull \hbox (75.88452pt too wide) in paragraph at lines 731--732
+[]\T1/lmr/m/n/12 (-20) The [][]\T1/zi4/m/n/12 find_path []\T1/lmr/m/n/12 (-20) 
+method was im-ple-mented to call the back-end [][]\T1/zi4/m/n/12 path_finder.fi
+nd_path_through_points[]\T1/lmr/m/n/12 (-20) .
+ []
+
+
+
+[119
+
+]
+
+[120]
+
+[121]
+
+[122]
+Overfull \hbox (30.66084pt too wide) in paragraph at lines 787--788
+[]\T1/lmr/m/n/12 (-20) Logging was en-hanced in [][]\T1/zi4/m/n/12 spa.py []\T1
+/lmr/m/n/12 (-20) by adding a [][]\T1/zi4/m/n/12 FileHandler []\T1/lmr/m/n/12 (
+-20) to out-put logs to [][]\T1/zi4/m/n/12 stockbot_log.txt[]\T1/lmr/m/n/12 (-2
+0) ,
+ []
+
+
+
+[123]
+
+[124]
+
+[125]
+
+[126]
+LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
+(Font)              scaled to size 12.0pt on input line 843.
+
+
+[127]
+
+[128]
+
+[129]
+
+[130]
+
+[131
+
+]
+
+[132]
+
+[133]
+
+[134]
+
+[135])
+
+[136]
 \openout2 = `Chapter5/chapter5.aux'.
 
  (Chapter5/chapter5.tex
 Section 5.
 )
 
-[114
+[137
 
 
 
 
 ] (thesis.bbl
 
-[115
+[138
 
 
 
 
 ])
 
-[116]
+[139]
 \openout2 = `Appendix1/appendix1.aux'.
 
  (Appendix1/appendix1.tex
 Appendix A.
 )
 
-[117
+[140
 
 
 ]
@@ -3233,14 +3334,14 @@ Appendix A.
 Appendix B.
 )
 
-[118
+[141
 
 
 
 
 ]
 No file thesis.ind.
-runsystem(latexminted cleantemp  --timestamp 20250415112529 2EF71E68B4AD97F6304
+runsystem(latexminted cleantemp  --timestamp 20250415183130 2EF71E68B4AD97F6304
 80BCEBC1842FB)...disabled (restricted).
 
 (thesis.aux (Declaration/declaration.aux) (Acknowledgement/acknowledgement.aux)
@@ -3261,23 +3362,71 @@ Package rerunfilecheck Warning: File `thesis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 257883CABDAB9B54C8033B91D5FCE5AE;18432
-(rerunfilecheck)             After:  BD67DFC81A2F54B449C87D645D0C612B;18454.
+(rerunfilecheck)             Before: 568933C469C9131185BECCF351049BC6;19981
+(rerunfilecheck)             After:  BD797FEC36F8202F40C40C4CEB4904E8;19803.
  ) 
 Here is how much of TeX's memory you used:
- 34148 strings out of 473522
- 706620 string characters out of 5714610
- 1783325 words of memory out of 5000000
- 55955 multiletter control sequences out of 15000+600000
- 634160 words of font info for 193 fonts, out of 8000000 for 9000
+ 34229 strings out of 473522
+ 707601 string characters out of 5714610
+ 1783303 words of memory out of 5000000
+ 55964 multiletter control sequences out of 15000+600000
+ 635603 words of font info for 206 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,12n,121p,1625b,3019s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{chapter*.60} has been referenced but does not exist
+pdfTeX warning (dest): name{chapter.6} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.5.2.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.5.2.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.5.2.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.5.2.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.5.2.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.5.2} has been referenced but does not exist
 , replaced by a fixed one
 
 
-pdfTeX warning (dest): name{section.3.6} has been referenced but does not exist
+pdfTeX warning (dest): name{subsection.5.1.6} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.5.1.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.5.1.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.5.1.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.5.1.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.5.1.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.5.1} has been referenced but does not exist
 , replaced by a fixed one
 
  <C:\Users\pmkha\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt12
@@ -3294,9 +3443,9 @@ s/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/pmkha/AppData/Local/Programs
 MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/pmkha/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/pmkha/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on thesis.pdf (124 pages, 9946062 bytes).
+Output written on thesis.pdf (147 pages, 10000268 bytes).
 PDF statistics:
- 1753 PDF objects out of 2073 (max. 8388607)
- 600 named destinations out of 1000 (max. 500000)
- 42946 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 1916 PDF objects out of 2073 (max. 8388607)
+ 648 named destinations out of 1000 (max. 500000)
+ 43522 words of extra memory for PDF output out of 51595 (max. 10000000)
 
