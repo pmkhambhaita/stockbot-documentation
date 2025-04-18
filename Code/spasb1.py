@@ -196,6 +196,3 @@ def get_points(rows_in, cols_in):
     except KeyboardInterrupt:
         logger.warning("\nInput cancelled by user")
         return None
-
-# Remove everything from here onwards
-# (Remove the try-except block containing the main program execution)
