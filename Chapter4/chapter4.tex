@@ -1019,416 +1019,6 @@ This sprint successfully built upon the SPA developed in Sprint Ada by creating 
 
 \newpage
 
-
-\section{Sprint Cerf}
-
-This is Sprint Cerf, the third iteration of my program. Building on the GUI from Sprint Berners-Lee, my focus this sprint was to tackle several key areas: enhancing usability and flexibility by adding a startup configuration screen and abstracting the coordinate system; improving GUI responsiveness through threading; and laying the foundation for stock management by creating and populating an inventory database using \texttt{SQLite}.
-
-\subsection{Tasks}
-
-\begin{table}[htbp]
-\centering
-\begin{tabularx}{\textwidth}{|l|X|}
-	\hline
-	\textbf{Task ID} & \textbf{Task Description} \\
-	\hline
-	OCSP-011 & Coordinate System Abstraction: Implement a user-facing 1-N numbering system (\texttt{itemID}) for grid locations, abstracting the internal \texttt{(row, col)} system. Modify the GUI display and input to use this new system. *(Addresses Usability Requirement R3.4)* \\
-	\hline
-	OCSP-012 & GUI Visualisation Update: Modify the GUI path sequence display to use 1-N numbering. *(Partially addresses Usability Requirement R3.5)* \\
-	\hline
-	OCSP-013 & Configurable Grid Size: Implement a startup configuration screen (\texttt{config.py}, \texttt{ConfigWindow} class) using \texttt{Tkinter}'s \texttt{Toplevel} and \texttt{Spinbox} widgets allowing user definition of grid rows and columns at launch, with validation. *(Addresses Flexibility Requirement R5.1)* \\
-	\hline
-	OCSP-014 & Threading Implementation: Separate the main GUI execution from pathfinding using Python's \texttt{threading} module and \texttt{queue.Queue} to prevent the GUI freezing during calculations. *(Addresses Performance/Responsiveness Requirement R6.1)* \\
-	\hline
-	OCSP-015 & Database Module Creation: Create \texttt{database.py} encapsulating database logic using a class (\texttt{InventoryDB}). *(Addresses Maintainability Goal M1)* \\
-	\hline
-	OCSP-016 & Database Schema \& Setup: Define and create the SQLite (\texttt{inventory.db}) schema (\texttt{items} table: \texttt{ItemID}, \texttt{row}, \texttt{col}, \texttt{Quantity}) using \texttt{sqlite3}. Implement database initialisation. *(Core Database Requirement R2.1)* \\
-	\hline
-	OCSP-017 & Database Population: Implement \texttt{populate\_random\_data} in \texttt{database.py} to fill the database with random stock quantities (1-10) based on the configured grid size. *(Core Database Requirement R2.2)* \\
-	\hline
-	OCSP-018 & Stock Checking Logic (Implemented partially): Implement \texttt{get\_quantity} function in \texttt{database.py}. Add GUI button (\texttt{Query Stock}) to allow users to check stock for a given \texttt{itemID}. *(Partially addresses Core Stock Logic Requirement R2.3)* \\
-	\hline
-	OCSP-019 & GUI Update for Database (Implemented partially): Add \texttt{Query Stock} and \texttt{Update Stock} buttons and associated logic (including pop-up for update) to \texttt{gui.py}. Display stock level when adding points. *(Partially addresses Usability Requirement R3.6)* \\
-	\hline
-	OCSP-020 & Code Refinement: Add detailed comments and logging throughout new modules (\texttt{config.py}, \texttt{database.py}) and threading logic (\texttt{gui.py}) to improve readability and future maintenance. Unify validation logic further (\texttt{validate\_point} in \texttt{spa.py}). \\
-	\hline
-\end{tabularx}
-\caption{Tasks for Sprint Cerf}
-\end{table}
-
-\subsection{Purpose}
-
-This sprint's aim is to build another requested feature from the stakeholders: the stock checker. As it was deemed a key feature, I have dedicated this sprint to completing and polishing the feature. This is the final feature that my stakeholders asked for to meet their minimum requirements. Sprints following this will be for polishing and meeting usability requirements, and tailoring the interface and experience to the stakeholders.
-
-
-\clearpage
-\subsection{Sprint Planning Details}
-
-\subsubsection{Technical Approach}
-
-This database implementation uses SQLite, Python's built-in SQL database management system. This is justified by its inclusion as part of Python, as well as its simplicity. SQLite offers all the basic features I need to create my solution, and is versatile enough for the complexity of my program.
-
-\begin{enumerate}
-	\item \textbf{Coordinate Abstraction (Iteration 1):} Developed helper functions (in \texttt{spa.py}) for bidirectional conversion between \texttt{(row, col)} and 1-N \texttt{itemID}. Refactored \texttt{gui.py}'s \texttt{add\_point} method to accept \texttt{itemID}, validate range, convert internally. Updated GUI path display and \texttt{PathVisualiser} (in \texttt{spa.py}) to use \texttt{itemID}s. \textbf{Justification:} Simplifies user interface (Req R3.4).
-	\item \textbf{Configurable Grid Size (Iteration 1):} Implemented startup \texttt{tk.Toplevel} window in \texttt{config.py} using \texttt{ttk.Spinbox} for rows/columns input. Passed dimensions back to main app. \textbf{Justification:} Increases flexibility (Req R5.1).
-	\item \textbf{Threading (Iteration 1):} Re-architected \texttt{gui.py}'s \texttt{find\_path} method to use \texttt{threading.Thread} for backend calls, \texttt{queue.Queue} for results, and \texttt{root.after} for safe GUI updates. \textbf{Justification:} Prevents GUI freeze (Req R6.1).
-	\item \textbf{Database Module (Iteration 2):} Created \texttt{database.py} with \texttt{InventoryDB} class containing methods like \texttt{connect\_db}, \texttt{create\_table}, \texttt{populate\_stock}, \texttt{get\_stock\_quantity}. \textbf{Justification:} Encapsulates database logic (M1).
-	\item \textbf{Database Setup \& Population (Iteration 2):} Used \texttt{sqlite3}. Implemented \texttt{create\_table} with schema (\texttt{ItemID PK}, \texttt{row}, \texttt{col}, \texttt{Quantity}). Implemented \texttt{populate\_stock} with random quantities, mapping \texttt{itemID} to \texttt{(row, col)} based on grid size. \textbf{Justification:} Creates persistent storage (R2.1) with initial data (R2.2).
-	\item \textbf{Stock Checking \& GUI DB Integration (Iteration 3):} Implemented \texttt{get\_stock\_quantity(itemID)} in \texttt{database.py}. Added ''Query Stock'' and ''Update Stock'' buttons and corresponding methods (\texttt{query\_stock}, \texttt{update\_stock} using pop-up) to \texttt{gui.py}. Modified \texttt{add\_point} to display stock level. Linked database initialisation to grid config size. Added logging to \texttt{database.py}. \textbf{Justification:} Connects database to GUI, allowing manual stock interaction (Partial R2.3, R3.6). Logging aids debugging. *(Note: Automatic zero-stock prevention deferred)*.
-\end{enumerate}
-
-\subsubsection{Architecture \& Structural Considerations}
-
-The architecture now incorporates four key modules:
-\begin{itemize}
-	\item \texttt{config.py}: Handles startup configuration input.
-	\item \texttt{gui.py}: Manages \texttt{Tkinter} UI, event handling, threading and calls to other modules.
-	\item \texttt{spa.py}: Core pathfinding algorithms, coordinate conversions, point validation.
-	\item \texttt{database.py}: All \texttt{sqlite3} interactions for inventory management.
-\end{itemize}
-\textbf{Justification:} This structure maintains good separation of concerns (Config, UI, Pathfinding, Database), enhancing testing and maintainability. The threading model addresses some performance concerns as raised in the limitations section (see section x.x.x).
-
-
-\newpage
-
-\subsection{Development Summary}
-
-*(Based on commit log interpretation. User should adjust based on actuals.)*
-
-\subsubsection{Iteration 1: Preparation - Config Screen \& Threading (Est. 3-4 Hours)}
-\begin{itemize}
-	\item \textbf{Progress made:} Implemented the startup grid configuration window (\texttt{config.py}, commit \texttt{9f2047f}). Integrated threading into the \texttt{find\_path} process in \texttt{gui.py} using \texttt{threading} and \texttt{queue} (commit \texttt{aa510bec}). Added detailed comments (commit \texttt{3f8acc8}). *(Achieved OCSP-013, OCSP-014, part of OCSP-020)*
-	\item \textbf{Blockers identified:} Threading implementation adds complexity; needed careful testing. Ensuring backend components used the configured size required linking config to initialization.
-	\item \textbf{Plan for next iteration:} Implement the 1-N indexing system. Create database module and link its initialisation to the config size.
-\end{itemize}
-
-\subsubsection{Iteration 2: 1-N Indexing, DB Module Creation, Initial Population (Est. 2-3 Hours)}
-\begin{itemize}
-	\item \textbf{Progress made:} Implemented 1-N \texttt{itemID} system including conversion functions (\texttt{index\_to\_coordinates}, \texttt{coordinates\_to\_index}) in \texttt{spa.py} and updated \texttt{gui.py} input/output (commit \texttt{a4472fb}). Created \texttt{database.py} with \texttt{InventoryDB} class and initial methods (\texttt{\_\_init\_\_}, \texttt{\_init\_database}, \texttt{populate\_random\_data}, validation, getters/setters, \texttt{\_\_main\_\_} test block) (commits \texttt{022bcdfb}, \texttt{7586cb8}). Unified validation (commit \texttt{31cd2a2}). *(Achieved OCSP-011, part of OCSP-012, OCSP-015, OCSP-016, OCSP-017, part of OCSP-020)*
-	\item \textbf{Blockers identified:} Database wasn't yet linked to the configured grid size. GUI didn't interact with the database. Logging needed in \texttt{database.py}. Core stock checking on add was missing.
-	\item \textbf{Plan for next iteration:} Integrate config size into DB initialisation. Add DB logging. Add GUI elements for DB interaction (query/update).
-\end{itemize}
-
-\subsubsection{Iteration 3: Database Integration, Logging \& GUI Updates (Est. 2-3 Hours)}
-\begin{itemize}
-	\item \textbf{Progress made:} Modified \texttt{database.py} to use grid dimensions from \texttt{config.py} (commit \texttt{29f1ca1}). Added comprehensive logging to \texttt{database.py} (commit \texttt{4f965e2}). Added ''Query Stock'' / ''Update Stock'' buttons and methods to \texttt{gui.py} (commit \texttt{4f965e2}). Modified \texttt{add\_point} to display current stock. *(Achieved OCSP-009 applied to DB, OCSP-018 partially, OCSP-019 partially)*
-	\item \textbf{Blockers identified:} The core goal of preventing addition of zero-stock items in \texttt{add\_point} was not implemented per the commit log.
-	\item \textbf{Plan for next iteration:} Implement the zero-stock check in \texttt{add\_point}. Refine \texttt{update\_stock} pop-up.
-\end{itemize}
-
-\clearpage
-\subsection{Sprint Berners-Lee Implementation}
-
-\subsubsection{Iteration 1: Getting GUI Working}
-
-\textbf{Code Changes:}
-\begin{itemize}
-	\item \textbf{GitHub Commits:} \verb|dc29116|, \verb|51caad0|, \verb|2cc86ce|, \verb|93cddaa|, \verb|256e1a2| (partially - validation function creation), \verb|be7179a| (partially - removing terminal execution)
-	\item \textbf{Explanation:}
-	\begin{itemize}
-		\item Project structure was refactored by creating \verb|gui.py| for Tkinter code and renaming \verb|app.py| to \verb|spa.py| to hold the backend logic. This separation improves organisation.
-		\item The basic \verb|PathfinderGUI| class was created using Tkinter. The window layout was defined using the \verb|grid| manager for better control over widget placement compared to \verb|pack|. Key widgets (Entry for points, Text for output, Buttons for Add/Find/Clear) were added and placed.
-		\item Backend components (\verb|Grid|, \verb|PathFinder|, \verb|PathVisualiser| from \verb|spa.py|) were instantiated within the GUI \verb|__init__| method.
-		\item Button commands were linked to placeholder or initial implementation methods (\verb|add_point|, \verb|find_path|, \verb|clear_all|).
-		\item The standard output of the \verb|path_visualiser.visualise_path| method was captured using \verb|io.StringIO| via the redirection of \verb|sys.stdout|, allowing the text-based grid visualisation to be displayed within the GUI's text widget (\verb|self.output_text|).
-		\item The terminal execution block in \verb|spa.py| was removed to prevent the command-line interface from running simultaneously with the GUI.
-	\end{itemize}
-\end{itemize}
-
-\textbf{Code Quality:}
-\begin{itemize}
-	\item \textbf{Annotations added:} Basic comments added outlining the purpose of GUI elements and methods. Need to ensure comments aid future maintenance as per previous feedback.
-	\item \textbf{Variable/Structure naming:} Followed conventions (e.g., \verb|point_entry|, \verb|output_text|, \verb|path_finder|). Names clearly indicate the purpose of GUI elements and backend component instances.
-	\item \textbf{Modular approach:} Significant improvement through separation of GUI (\verb|gui.py|) and backend (\verb|spa.py|) logic. The \verb|PathfinderGUI| class encapsulates all GUI-related state and behaviour.
-\end{itemize}
-
-\newpage % Placeholder Start: Iteration 1 Code Snippets
-
-\subsubsection*{Prototype: Iteration}
-\subsubsection{gui.py}
-\lstinputlisting[style=custompython]{Code/guisb1.py}
-
-\subsubsection{spa.py}
-\lstinputlisting[style=custompython]{Code/spasb1.py}
-
-\newpage % Placeholder End: Iteration 1 Code Snippets
-
-\subsubsection{Prototype details:}
-At the end of this iteration, a basic GUI window appears with input fields and buttons. Users can add points (with basic boundary checks), trigger pathfinding, and see the grid visualisation printed to the output text area. Clearing points and output is functional. However, validation is incomplete (allows start/end points), and error messages are primarily logged rather than shown in the GUI. This will be fixed in future iterations dedicated to patching error handling and other small issues.
-
-\subsubsection{Testing:}
-
-\begin{table}[htbp]
-	\centering
-	\begin{tabularx}{\textwidth}{|l|X|p{4.5cm}|p{2.8cm}|c|}
-		\hline
-		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
-		\hline
-		T2.1.1 & Run script & Only GUI appears & Only GUI appears (terminal block removed) & X \\
-		\hline
-		T2.1.2 & Launch GUI & Window appears with input field, text area, Add/Find/Clear buttons & Met & X \\
-		\hline
-		T2.1.3 & Add valid point (e.g., 3,4) & Point added, confirmation in output text & Met & X \\
-		\hline
-		T2.1.4 & Add multiple valid points & Points added sequentially & Met & X \\
-		\hline
-		T2.1.5 & Click \verb|Find Path| with points & Grid visualisation appears in output text & Met & X \\
-		\hline
-		T2.1.6 & Click \verb|Clear| & Points list cleared, output area cleared & Met & X \\
-		\hline
-		T2.1.7 & Add start point (0,0) & Should be disallowed eventually, but currently adds point & Point added & * \\
-		\hline
-		T2.1.8 & Add out-of-bounds point (-1,5) & Point rejected, error ideally in GUI & Point rejected, logged to console &\~{} \\
-		\hline
-	\end{tabularx}
-	\caption{Testing results for iteration 2}
-\end{table}
-
-
-\subsubsection{Fixes}
-No specific fixes applied in this iteration, but issues requiring fixes were identified: preventing start/end point addition, displaying errors in the GUI, and removing the remaining redundant terminal execution functions.
-
-\newpage % Placeholder Start: Iteration 1 Screenshots
-
-\subsubsection*{Iteration 1 Screenshots}
-
-\begin{figure}[htbp!]
-	\centering
-	\includegraphics[width=1\linewidth]{Images/sprintbtest1.png}
-	\caption{T2.1.1-T2.1.4, T2.1.8 Output}
-\end{figure}
-
-\begin{figure}[htbp!]
-	\centering
-	\includegraphics[width=1\linewidth]{Images/sprintbtest2.png}
-	\caption{T2.1.5/2.1.7 Output}
-\end{figure}
-
-\begin{figure}[htbp!]
-	\centering
-	\includegraphics[width=1\linewidth]{Images/sprintbtest3.png}
-	\caption{T2.1.6 Output}
-\end{figure}
-
-\newpage % Placeholder End: Iteration 1 Screenshots
-
-\subsubsection{Validation}
-
-Validation is still constant as of this iteration, but in the coming iterations, it will be unified under a single function.
-
-\subsubsection{Qodana Analysis}
-While Qodana has flagged an issue, I have found it to be a mistake: it is required by the program as I have followed object-oriented principles.
-
-\begin{figure}[htbp!]
-	\centering
-	\includegraphics[width=0.85\linewidth]{Images/qodana-sb1.png}
-	\caption{1 problem was identified.}
-\end{figure}
-
-
-
-\newpage
-
-
-\subsubsection{Iteration 2: Refining Logic and Validation}
-
-\textbf{Code Changes:}
-\begin{itemize}
-	\item \textbf{GitHub Commits:} \verb|256e1a2| (most), \verb|be7179a| (most), \verb|babafb7|, \verb|9c248be| (partially - initial error integration)
-	\item \textbf{Explanation:}
-	\begin{itemize}
-		\item Centralised validation logic by creating the \verb|validate_point| function in \verb|spa.py|. This function checks both grid boundaries and ensures the point is not the fixed start (0,0) or end (grid max) node. This addressed the blocker identified in Iteration 1.
-		\item The \verb|add_point| method in \verb|gui.py| was refactored to call \verb|spa.validate_point|. Logic was added to display specific error messages within the GUI's \verb|output_text| widget if validation fails (e.g., "Cannot add point... Must not be start/end point...") or if the input format is incorrect.
-		\item The now-redundant terminal input functions (\verb|get_valid_coordinate|, \verb|get_points|) were removed from \verb|spa.py|.
-		\item Logging was enhanced in \verb|spa.py| by adding a \verb|FileHandler| to output logs to \verb|stockbot_log.txt|, providing a persistent record for debugging alongside the console output.
-		\item Error reporting for cases like "No points added" or "No valid path found" within the \verb|find_path| method was modified to output directly to the GUI text area.
-	\end{itemize}
-\end{itemize}
-
-\textbf{Code Quality:}
-\begin{itemize}
-	\item \textbf{Annotations added:} Docstring added for \verb|validate_point|. Comments explaining GUI error message integration.
-	\item \textbf{Modular approach:} Strengthened by centralising point validation in \verb|spa.py| and removing unused terminal functions. GUI handles user interaction and display, backend handles validation and pathfinding.
-	\item \textbf{Robustness:} Significantly improved by adding validation against start/end points and displaying user-facing error messages directly in the GUI for invalid input or missing points, addressing issues from Iteration 1. Added file logging for better diagnostics.
-\end{itemize}
-
-\newpage % Placeholder Start: Iteration 2 Code Snippets
-
-
-\subsubsection*{Prototype: Iteration 2}
-\subsubsection{gui.py}
-\lstinputlisting[style=custompython]{Code/guisb2.py}
-
-\newpage
-
-\subsubsection{spa.py}
-\lstinputlisting[style=custompython]{Code/spasb2.py}
-
-\newpage % Placeholder End: Iteration 2 Code Snippets
-
-\subsubsection{Prototype details:}
-The GUI now correctly prevents adding start/end points and points outside boundaries, providing error feedback within the application window. Errors for invalid format or attempting to find a path with no points are also shown in the GUI. Backend logging is now saved to \verb|stockbot_log.txt| - this is to aid debugging in the future now my program is growing in complexity.
-
-\subsubsection{Testing:}
-\begin{table}[htbp]
-	\centering
-	\begin{tabularx}{\textwidth}{|l|X|p{4.5cm}|p{1.5cm}|c|}
-		\hline
-		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
-		\hline
-		T2.2.1 & Add start point (0,0) & Rejected, error message in GUI & Met & X \\
-		\hline
-		T2.2.2 & Add end point (9,9) & Rejected, error message in GUI & Met & X \\
-		\hline
-		T2.2.3 & Add out-of-bounds point (-1,5) & Rejected, error message in GUI & Met & X \\
-		\hline
-		T2.2.4 & Enter invalid format ('abc') & Rejected, error message in GUI & Met & X \\
-		\hline
-		T2.2.5 & Click \verb|Find Path| with no points & Error message in GUI & Met & X \\
-		\hline
-		T2.2.6 & Perform valid path operation & Path visualisation in GUI, log entries in \verb|stockbot_log.txt| & Met & X \\
-		\hline
-	\end{tabularx}
-	\caption{Testing results for iteration 2.2}
-\end{table}
-
-\subsubsection{Fixes}
-Addressed issues from Iteration 1:
-\begin{itemize}
-	\item Prevented adding start/end points via \verb|validate_point| and GUI logic.
-	\item Integrated error messages directly into the GUI output area.
-	\item Removed conflicting terminal code from \verb|spa.py|.
-\end{itemize}
-
-\newpage % Placeholder Start: Iteration 2 Screenshots
-
-\subsubsection*{Placeholder: Iteration 2 Screenshots}
-\begin{figure}[htbp!]
-	\centering
-	\includegraphics[width=1\linewidth]{Images/t2.2.x.png}
-	\caption{T2.2.1-T2.2.4 Output}
-	\label{fig:enter-label}
-\end{figure}
-
-\begin{figure}[htbp!]
-	\centering
-	\includegraphics[width=1\linewidth]{Images/t2.2.x1.png}
-	\caption{T2.2.5 Output}
-	\label{fig:enter-label}
-\end{figure}
-
-\begin{figure}[htbp!]
-	\centering
-	\includegraphics[width=0.75\linewidth]{Images/t2.2.6.png}
-	\caption{T2.2.6 Output}
-	\label{fig:enter-label}
-\end{figure}
-
-\subsubsection{Validation}
-
-\begin{itemize}
-	\item Centralised Validation (\verb|validate_point|): Implemented checks for boundaries AND exclusion of start/end points (0,0 and 9,9) in \verb|spa.py|.
-	\item GUI Integration: \verb|add_point| now calls \verb|validate_point| and displays returned error messages in the GUI.
-	\item Input Existence Check: \verb|find_path| checks if \verb|self.points| list is empty before proceeding.
-	\item Format Validation (try-except): Remains from Iteration 1, now with GUI error display.
-\end{itemize}
-
-These validation methods build upon the first sprint, but now focussing more on input validation, as the input method has changed from a terminal-based environment to a GUI.
-
-\newpage % Placeholder End: Iteration 2 Screenshots
-
-\clearpage
-\subsection{Sprint Review and Retrospective}
-
-\subsubsection{Accomplishments}
-\begin{itemize}
-	\item Completed OCSP-004: Project restructured into \verb|spa.py| (backend) and \verb|gui.py| (frontend).
-	\item Completed OCSP-005: GUI with Tkinter widgets and \verb|grid| manager implemented.
-	\item Completed OCSP-006: GUI controls successfully linked to backend pathfinding logic.
-	\item Completed OCSP-007: Path visualisation output displayed correctly within the GUI text area.
-	\item Completed OCSP-008: Robust validation for point input (format, bounds, start/end exclusion) integrated into the GUI with error messages. Redundant terminal functions removed.
-	\item Completed OCSP-009: Logging to \verb|stockbot_log.txt| implemented for persistent diagnostics.
-	\item Completed OCSP-010: GUI error messages refined for clarity, path sequence output added.
-	\item Successfully transitioned the application from a terminal-based interface to a functional graphical user interface using Tkinter.
-\end{itemize}
-
-\subsubsection{Validation}
-
-Validation has stayed mostly the same, but I have restructured the validation methods and functions to not only be in a single function (\verb|validate_point|), but also be implemented correctly into the GUI using tkinter.
-
-\begin{itemize}
-	\item \textbf{GUI Input Format Validation:} Checks if coordinate input is in \verb|x,y| format using \verb|try-except ValueError|.
-	\item \textbf{GUI Input Boundary Validation:} Checks if parsed coordinates \verb|x| and \verb|y| are within the 0 to \verb|grid.rows-1| / \verb|grid.cols-1| range.
-	\item \textbf{Start/End Point Exclusion:} Explicitly checks if the entered point is (0,0) or (grid max) and prevents adding it.
-	\item \textbf{Intermediate Point Existence Check:} \verb|find_path| checks if \verb|self.points| list is empty before proceeding.
-	\item \textbf{Backend Validation} Centralised function in \verb|spa.py| checks bounds and start/end points, called by GUI.
-\end{itemize}
-
-\subsubsection{Robustness}
-\begin{itemize}
-	\item \textbf{Exception Handling:} \verb|try-except| blocks handle \verb|ValueError| during coordinate parsing in \verb|add_point|. Backend uses try-except in \verb|visualise_path|.
-	\item \textbf{User Feedback:} Clear error messages are now displayed *within the GUI* for invalid input, validation failures, or missing points, improving user experience.
-	\item \textbf{Logging Implementation:} Comprehensive file logging (\verb|stockbot_log.txt|) added for backend operations, aiding debugging.
-	\item \textbf{Input Clearing:} Input field is cleared upon successful point addition. \verb|Clear| button resets points list and output area.
-	\item \textbf{Redundancy Removal:} Old terminal input/execution code removed, preventing conflicts.
-\end{itemize}
-
-\subsubsection{Final testing}
-
-\begin{table}[!htbp]
-	\centering
-	\begin{tabularx}{\textwidth}{|l|X|p{3.5cm}|p{3.5cm}|c|}
-		\hline
-		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
-		\hline
-		T2.F.1 & Enter "2,3" and click Add Point & Point added, entry cleared, confirmation shown & Point (2,3) added and displayed & X \\
-		\hline
-		T2.F.2 & Enter "2,2" then "5,5", click Find Path & Grid shows path (0,0) → (2,2) → (5,5) → (9,9) with visualisation & Complete path shown with correct sequence & X \\
-		\hline
-		T2.F.3 & Enter "abc" and click Add Point & Error message about invalid format & Format error displayed & X \\
-		\hline
-		T2.F.4 & Enter "10,10" and click Add Point & Error message about out of bounds & Bounds error displayed & X \\
-		\hline
-		T2.F.5 & Enter "0,0" and click Add Point & Error about using start point & Start point error shown & X \\
-		\hline
-		T2.F.6 & Add "2,2" and "3,3", click Clear & All points cleared, confirmation message & Points cleared, message shown & X \\
-		\hline
-		T2.F.7 & Click Find Path with no points & Error about no points added & No points error shown & X \\
-		\hline
-		T2.F.8 & Enter "1,1", "8,1", "8,8", "1,8" sequence & Complete path visiting all points & Path shown & X \\
-		\hline
-	\end{tabularx}
-\end{table}
-
-My stakeholders wished to test the final prototype of this sprint in a more robust manner, hence I created more tests for different aspects of my solution: T2.F.1/2/8 cover main success paths and variations, T2.F.3/4/5 target key validation rules critical for usability and data integrity, T2.F.6 tests the interface and T2.F.7 covers edge case handling (boundary test).
-
-\newpage
-
-\subsubsection{Testing Summary}
-\begin{table}[htbp]
-	\centering
-	\begin{tabular}{|l|c|}
-		\hline
-		\textbf{Metric} & \textbf{Count} \\
-		\hline
-		Total tests conducted & 22 \\ % Update count
-		\hline
-		Tests passed & 20 \\ % Update count
-		\hline
-		Tests failed & 2 \\ % Update count
-		\hline
-		Fixed issues (from Sprint 1 / identified this sprint) & 3 \\ % e.g., Terminal execution, start/end validation, GUI errors
-		\hline
-	\end{tabular}
-	\caption{Sprint 2 testing summary}
-\end{table}
-
-
-\subsubsection{Link}
-This sprint successfully built upon the SPA developed in Sprint Ada by creating a user-friendly graphical interface (OCSP-005 to OCSP-010). The core pathfinding logic remains separate and stable (\verb|spa.py|), while the GUI (\verb|gui.py|) provides the necessary user interaction layer. The application is now significantly easier for stakeholders to use compared to the previous terminal-based version. The next sprint (Sprint Cerf) will focus on adding the database features for stock checking - I anticipate there will be more iterations necessary. A future sprint will focus on adding more usability features and adapting the interface to meet the stakeholders' expectations.
-
-\newpage
-
 \section{Sprint Cerf}
 
 This is Sprint Cerf, the third iteration of my program. Building on the GUI from Sprint Berners-Lee, my focus this sprint was multifaceted. I first tackled some usability and flexibility enhancements: adding a startup configuration screen and abstracting the coordinate system to a simpler 1-based index. Then, noticing potential sluggishness with larger grids, I implemented threading to keep the GUI responsive. With those preparations done, the main goal was integrating the inventory database using \verb|SQLite|. This involved creating the database structure, populating it, adding functions to query and update stock, and critically, implementing the stock-checking logic so the user cannot select an out-of-stock location, and automatically decrementing stock when a path is found.
@@ -1441,25 +1031,25 @@ This is Sprint Cerf, the third iteration of my program. Building on the GUI from
 		\hline
 		\textbf{Task ID} & \textbf{Task Description} \\
 		\hline
-		OCSP-011 & Coordinate System Abstraction: Implement a user-facing 1-N numbering system (\verb|itemID|) for grid locations, abstracting the internal \verb|(row, col)| system. Modify GUI display and input to use this new system. *(Addresses Usability Requirement R3.4)* \\
+		OCSP-011 & Coordinate System Abstraction: Implement a user-facing 1-N numbering system (\verb|itemID|) for grid locations, abstracting the internal \verb|(row, col)| system. Modify GUI display and input to use this new system. \\
 		\hline
-		OCSP-012 & GUI Visualisation Update: Modify the GUI path sequence display to use 1-N numbering. *(Partially addresses Usability Requirement R3.5 - Visualiser grid itself wasn't updated in commits)* \\
+		OCSP-012 & GUI Visualisation Update: Modify the GUI path sequence display to use 1-N numbering. \\
 		\hline
-		OCSP-013 & Configurable Grid Size: Implement a startup configuration screen (\verb|config.py|, \verb|ConfigWindow| class) using \verb|Tkinter|'s \verb|Toplevel| and \verb|Spinbox| widgets allowing user definition of grid rows and columns at launch, with validation. *(Addresses Flexibility Requirement R5.1)* \\
+		OCSP-013 & Configurable Grid Size: Implement a startup configuration screen (\verb|config.py|, \verb|ConfigWindow| class) using \verb|Tkinter|'s \verb|Toplevel| and \verb|Spinbox| widgets allowing user definition of grid rows and columns at launch, with validation. \\
 		\hline
-		OCSP-014 & Threading Implementation: Separate the main GUI execution from pathfinding using Python's \verb|threading| module and \verb|queue.Queue| to prevent the GUI freezing during calculations. *(Addresses Performance/Responsiveness Requirement R6.1)* \\
+		OCSP-014 & Threading Implementation: Separate the main GUI execution from pathfinding using Python's \verb|threading| module and \verb|queue.Queue| to prevent the GUI freezing during calculations. \\
 		\hline
-		OCSP-015 & Database Module Creation: Create \verb|database.py| encapsulating database logic using a class (\verb|InventoryDB|). *(Addresses Maintainability Goal M1)* \\
+		OCSP-015 & Database Module Creation: Create \verb|database.py| encapsulating database logic using a class (\verb|InventoryDB|). \\
 		\hline
-		OCSP-016 & Database Schema \& Setup: Define and create the SQLite (\verb|inventory.db|) schema (\verb|items| table: \verb|ItemID|, \verb|row|, \verb|col|, \verb|Quantity|) using \verb|sqlite3|. Implement database initialisation. *(Core Database Requirement R2.1)* \\
+		OCSP-016 & Database Schema \& Setup: Define and create the SQLite (\verb|inventory.db|) schema (\verb|items| table: \verb|ItemID|, \verb|row|, \verb|col|, \verb|Quantity|) using \verb|sqlite3|. Implement database initialisation. \\
 		\hline
-		OCSP-017 & Database Population: Implement \verb|populate_random_data| in \verb|database.py| to fill the database with random stock quantities (1-10) based on the configured grid size. *(Core Database Requirement R2.2)* \\
+		OCSP-017 & Database Population: Implement \verb|populate_random_data| in \verb|database.py| to fill the database with random stock quantities (1-10) based on the configured grid size. \\
 		\hline
-		OCSP-018 & Stock Checking Logic: Implement functionality to check stock (\verb|get_quantity|) and prevent adding a point if quantity is zero (\verb|gui.add_point| logic). Implement stock decrementing (\verb|decrement_quantity|) called after a successful path is found. *(Core Stock Logic Requirement R2.3)* \\
+		OCSP-018 & Stock Checking Logic: Implement functionality to check stock (\verb|get_quantity|) and prevent adding a point if quantity is zero (\verb|gui.add_point| logic). Implement stock decrementing (\verb|decrement_quantity|) called after a successful path is found. \\
 		\hline
-		OCSP-019 & GUI Update for Database: Add \verb|Query Stock| and \verb|Update Stock| buttons/logic to \verb|gui.py|. Display stock level messages during point addition (confirmation or out-of-stock warning). *(Addresses Usability Requirement R3.6)* \\
+		OCSP-019 & GUI Update for Database: Add \verb|Query Stock| and \verb|Update Stock| buttons/logic to \verb|gui.py|. Display stock level messages during point addition (confirmation or out-of-stock warning). \\
 		\hline
-		OCSP-020 & Code Refinement: Add detailed comments and logging throughout new/modified modules. Unify validation. *(Addresses Maintainability/Readability)* \\
+		OCSP-020 & Code Refinement: Add detailed comments and logging throughout new/modified modules. Unify validation. \\
 		\hline
 	\end{tabularx}
 	\caption{Tasks for Sprint Cerf}
@@ -1467,97 +1057,97 @@ This is Sprint Cerf, the third iteration of my program. Building on the GUI from
 
 \subsection{Purpose}
 
-The main purpose of this sprint was to introduce database functionality for managing stock levels associated with grid locations (Req R2.1, R2.2). This adds a layer of realism and complexity, simulating a real-world scenario where item availability affects picking routes. By preventing the selection of locations with zero stock (Req R2.3), the application becomes more practical for warehouse optimisation scenarios. Secondary goals included improving user experience through configurable grid sizes (Req R5.1) and a more abstract location numbering system (Req R3.4), and enhancing GUI responsiveness using threading (Req R6.1), making the tool more flexible and robust.
+The main purpose of this sprint was to introduce database functionality for managing stock levels associated with grid locations. This adds a layer of realism and complexity, simulating a real-world scenario where item availability affects picking routes. By preventing the selection of locations with zero stock, the application becomes more practical for warehouse optimisation scenarios. Secondary goals included improving user experience through configurable grid sizes and a more abstract location numbering system, and enhancing GUI responsiveness using threading, making the tool more flexible and robust overall.
 
 \clearpage
 \subsection{Sprint Planning Details}
 
 \subsubsection{Technical Approach}
 
-This sprint integrated database interaction and concurrency, requiring careful planning using standard Python libraries:
+This sprint involved integrating database interaction and concurrency, requiring careful planning using standard Python libraries. My approach was to break this down into logical stages:
 
 \begin{enumerate}
-	\item Group 1: Preparation for Database
+	\item \textbf{Group 1: Preparation for Database} (Getting the UI ready and responsive)
 	\begin{itemize}
-		\item Threading (Iteration 1A): Implement threading in \verb|gui.py| using \verb|threading.Thread| and \verb|queue.Queue| for the \verb|find_path| operation. Use \verb|root.after| for safe GUI updates. Justification: Essential for GUI responsiveness (R6.1). (OCSP-014)
-		\item Configuration Screen (Iteration 1B): Create \verb|config.py| with a modal \verb|tk.Toplevel| window (\verb|ConfigWindow|) using \verb|ttk.Spinbox| to get grid dimensions. Justification: Provides user flexibility (R5.1). (OCSP-013)
-		\item Numbering System (Iteration 1C): Implement 1-N \verb|itemID| system with conversion functions (\verb|index_to_coordinates|, \verb|coordinates_to_index|) in \verb|spa.py|. Update \verb|gui.py| input/output. Justification: Improves usability (R3.4). (OCSP-011, Partial OCSP-012)
+		\item \textbf{Threading (Iteration 1A):} First, I tackled the GUI responsiveness. I decided to implement threading in \verb|gui.py| using \verb|threading.Thread| and \verb|queue.Queue| for the \verb|find_path| operation. This way, the path calculation wouldn't freeze the interface. I used \verb|root.after| for safe GUI updates from the main thread, which is the standard practice in \verb|Tkinter|. This felt necessary before adding potentially slow database lookups. (OCSP-014)
+		\item \textbf{Configuration Screen (Iteration 1B):} Next, I added flexibility by creating \verb|config.py| with a modal \verb|tk.Toplevel| window (\verb|ConfigWindow|). This uses \verb|ttk.Spinbox| widgets to get the desired grid dimensions from the user at startup, rather than using a fixed size. I added validation to ensure sensible dimensions were entered. (OCSP-013)
+		\item \textbf{Numbering System (Iteration 1C):} To make the interface more user-friendly, I switched from the internal \verb|(row, col)| coordinates to a simple 1-N numbering system (\verb|itemID|). This involved creating helper functions (\verb|index_to_coordinates|, \verb|coordinates_to_index|) in \verb|spa.py| and updating the \verb|gui.py| input (\verb|add_point|), output (path sequence string), and relevant labels to use this new system. (OCSP-011, Partial OCSP-012)
 	\end{itemize}
-	\item Group 2: Database Implementation and Integration
+	\item \textbf{Group 2: Database Implementation and Integration} (Adding the stock logic)
 	\begin{itemize}
-		\item DB Module \& Schema (Iteration 2A): Create \verb|database.py| with \verb|InventoryDB| class. Implement \verb|_init_database| using \verb|sqlite3| to create the \verb|items| table. Justification: Establishes database structure (R2.1) in a dedicated module (M1). (OCSP-015, OCSP-016)
-		\item DB Population \& Validation (Iteration 2B): Implement \verb|InventoryDB| methods: \verb|populate_random_data|, \verb|validate_item_id|, \verb|get_quantity|, \verb|update_quantity|, \verb|get_position|. Added \verb|__main__| test block. Justification: Provides methods to populate (R2.2) and interact, including validation. (OCSP-017)
-		\item DB Logging \& Config Link (Iteration 2C): Add \verb|logging| to \verb|database.py|. Link DB initialisation size to \verb|config.py| output. Add manual Query/Update buttons and logic to \verb|gui.py|. Justification: Improves diagnostics, ensures size consistency, provides manual interaction (Partial R3.6). (OCSP-009 for DB, Partial OCSP-019)
-		\item Stock Check \& Decrement (Iteration 2D): Implement \verb|decrement_quantity| in \verb|database.py|. Modify \verb|gui.add_point| to check stock (\verb|db.get_quantity|) and prevent adding if zero. Modify \verb|gui._find_path_thread| to call \verb|db.decrement_quantity|. Justification: Implements core stock logic (R2.3). (OCSP-018)
+		\item \textbf{DB Module \& Schema (Iteration 2A):} I created \verb|database.py| and the \verb|InventoryDB| class to keep all database logic separate. Inside its \verb|_init_database| method, I used \verb|sqlite3| to create the \verb|inventory.db| file and the \verb|items| table (\verb|CREATE TABLE IF NOT EXISTS|) with the necessary columns (\verb|ItemID PK|, \verb|row|, \verb|col|, \verb|Quantity|, \verb|UNIQUE(row, col)|). (OCSP-015, OCSP-016)
+		\item \textbf{DB Population \& Validation (Iteration 2B):} I implemented the core methods within \verb|InventoryDB|: \verb|populate_random_data| to fill the table with random stock (using \verb|DELETE| then \verb|INSERT|), \verb|validate_item_id| to check item existence, \verb|get_quantity|, \verb|update_quantity| (with validation for non-negative integer), and \verb|get_position|. I added a \verb|__main__| block to \verb|database.py| so I could test these methods independently. (OCSP-017)
+		\item \textbf{DB Logging \& Config Link (Iteration 2C):} I added \verb|logging| throughout \verb|database.py| for better traceability. I then linked the database initialisation in \verb|gui.py| to use the grid dimensions obtained from \verb|config.py|. I also added the manual `Query Stock` and `Update Stock` buttons to the GUI, along with the methods (\verb|query_stock|, \verb|update_stock|) needed to call the database functions. (OCSP-009 for DB, Partial OCSP-019)
+		\item \textbf{Stock Check \& Decrement (Iteration 2D):} This was the final piece of core functionality. I implemented \verb|decrement_quantity| in \verb|database.py|, ensuring it wouldn't decrease stock below zero. Then, I modified \verb|gui.add_point| to call \verb|db.get_quantity| *before* adding a point, showing a warning and skipping the point if stock was $\le 0$. Finally, I modified the \verb|gui._find_path_thread| method to call \verb|db.decrement_quantity| for each intermediate point only *after* a valid path has been successfully found, simulating the items being picked. (OCSP-018)
 	\end{itemize}
-	\item Ongoing: Add comments and refine validation (OCSP-020).
+	\item \textbf{Ongoing:} Throughout the sprint, I added comments where necessary and refined validation logic (OCSP-020).
 \end{enumerate}
 
 \subsubsection{Architecture \& Structural Considerations}
 
-The architecture now incorporates four key modules:
+The project architecture evolved in this sprint to include four distinct Python modules, each with a clear responsibility:
 \begin{itemize}
-	\item \verb|config.py|: Handles startup configuration input via a modal window.
-	\item \verb|gui.py|: Manages the main \verb|Tkinter| interface (\verb|PathfinderGUI|), event handling, threading orchestration, calls to other modules (\verb|spa|, \verb|database|, \verb|config|), and database interaction logic (query/update buttons, stock check on add, stock decrement trigger).
-	\item \verb|spa.py|: Core pathfinding algorithms (\verb|PathFinder|, \verb|bfs|), grid representation (\verb|Grid|), visualisation logic (\verb|PathVisualiser|), coordinate conversions, and point validation logic (\verb|validate_point|).
-	\item \verb|database.py|: All \verb|sqlite3| interactions for inventory management (\verb|InventoryDB| class).
+	\item \verb|config.py|: Solely responsible for handling the startup configuration window and returning the selected grid dimensions.
+	\item \verb|gui.py|: Manages the main \verb|Tkinter| user interface (\verb|PathfinderGUI| class). It handles all user interactions, orchestrates the threading for pathfinding, calls functions from the other modules, and displays results and feedback.
+	\item \verb|spa.py|: Contains the core pathfinding logic (\verb|PathFinder| class with its \verb|bfs| method), the grid representation (\verb|Grid|), the text-based visualisation (\verb|PathVisualiser|), coordinate system conversion functions, and point validation logic (\verb|validate_point|). This remains largely independent of the UI and database.
+	\item \verb|database.py|: A new module encapsulating all database operations using \verb|sqlite3|. The \verb|InventoryDB| class handles connecting, setting up the schema, populating data, and providing methods for querying and updating stock levels.
 \end{itemize}
-Justification: This modular structure effectively separates concerns (Configuration, UI/Control, Pathfinding Logic, Data Persistence), enhancing testability and maintainability (M1). The threading model addresses performance concerns (R6.1).
+Justification: This separation makes the system much easier to manage as complexity grows. I can test the database logic independently using its \verb|__main__| block, test pathfinding without the database, and focus on the UI separately. This modularity significantly helps with debugging and future modifications.
 
 \subsubsection{Dependencies}
-Relies solely on standard Python libraries: \verb|Tkinter| (\verb|ttk|, \verb|messagebox|), \verb|sqlite3|, \verb|threading|, \verb|queue|, \verb|random|, \verb|io|, \verb|sys|, \verb|logging|. Justification: Ensures portability and avoids external installation requirements.
+I continued to rely only on Python's standard libraries: \verb|Tkinter| (including \verb|ttk| and \verb|messagebox|), \verb|sqlite3|, \verb|threading|, \verb|queue|, \verb|random|, \verb|io|, \verb|sys|, and \verb|logging|. Justification: This avoids any external installation requirements for users and simplifies setup.
 
 \newpage
 \subsection{Development Summary}
 
-*(Based on commit log interpretation. User should adjust based on actuals.)*
+*(Based on commit log interpretation. User should adjust hours based on actuals.)*
 
 \subsubsection{Iteration 1A: Threading Implementation (Est. 1 Hour)}
 \begin{itemize}
-	\item Progress made: Re-architected \verb|gui.py|'s \verb|find_path| method to use \verb|threading| and \verb|queue| for asynchronous pathfinding. Added logic for safe GUI updates via \verb|root.after|. Added detailed comments. *(Achieved OCSP-014, part of OCSP-020)*
-	\item Blockers identified: Concern about potential race conditions or complexity in managing thread communication.
-	\item Plan for next iteration: Implement the configuration screen.
+	\item Progress made: Got the threading working for the \verb|find_path| operation using \verb|threading| and \verb|queue|. Added comments to explain this part. *(Achieved OCSP-014, part of OCSP-020)*
+	\item Blockers identified: Making sure the GUI didn't try to update from the wrong thread was tricky; the \verb|root.after| mechanism seemed the right way to handle it. Needed to ensure buttons were disabled during processing.
+	\item Plan for next iteration: Add the configuration screen.
 \end{itemize}
 
 \subsubsection{Iteration 1B: Config Options (Est. 1 Hour)}
 \begin{itemize}
-	\item Progress made: Created \verb|config.py| with \verb|ConfigWindow| class (\verb|tk.Toplevel|) to get grid dimensions at startup using \verb|ttk.Spinbox| and validation. Integrated into main application flow. *(Achieved OCSP-013)*
-	\item Blockers identified: Ensuring dimensions were correctly passed to and used by main GUI and backend.
-	\item Plan for next iteration: Implement the 1-N numbering system abstraction.
+	\item Progress made: Created \verb|config.py| and the \verb|ConfigWindow| class. Got the \verb|Spinbox| inputs working with validation and linked it to the start of \verb|gui.py|. *(Achieved OCSP-013)*
+	\item Blockers identified: Passing the selected dimensions correctly back to the main GUI instance required careful handling of the application startup flow.
+	\item Plan for next iteration: Implement the 1-N numbering system.
 \end{itemize}
 
 \subsubsection{Iteration 1C: New Numbering System (Est. 1 Hour)}
 \begin{itemize}
-	\item Progress made: Added coordinate conversion functions (\verb|index_to_coordinates|, \verb|coordinates_to_index|) to \verb|spa.py|. Modified \verb|gui.py| input, output, and validation calls to use the 1-N \verb|itemID| system. *(Achieved OCSP-011, part of OCSP-012)*
-	\item Blockers identified: Potential for off-by-one errors in conversion. Ensuring consistency across the GUI.
-	\item Plan for next iteration: Create the database module and schema.
+	\item Progress made: Added coordinate conversion functions to \verb|spa.py|. Updated the GUI (\verb|add_point|, path sequence display, range label) to use the 1-N \verb|itemID| system. *(Achieved OCSP-011, part of OCSP-012)*
+	\item Blockers identified: Ensuring the 1-based \verb|itemID| used in the GUI mapped correctly to the 0-based \verb|(row, col)| used internally needed careful checking to avoid off-by-one errors.
+	\item Plan for next iteration: Start building the database module (\verb|database.py|).
 \end{itemize}
 
 \subsubsection{Iteration 2A: Created the database and host class (Est. 0.5 Hours)}
 \begin{itemize}
-	\item Progress made: Created \verb|database.py|. Defined \verb|InventoryDB| class. Implemented \verb|__init__| and \verb|_init_database| using \verb|sqlite3| to create the \verb|items| table (\verb|CREATE TABLE IF NOT EXISTS|). *(Achieved OCSP-015, OCSP-016)*
-	\item Blockers identified: None significant.
-	\item Plan for next iteration: Implement core database methods (population, query, update, validation).
+	\item Progress made: Created \verb|database.py|, defined the \verb|InventoryDB| class, and implemented the \verb|_init_database| method to create the \verb|items| table schema using \verb|sqlite3|. *(Achieved OCSP-015, OCSP-016)*
+	\item Blockers identified: None - straightforward schema definition.
+	\item Plan for next iteration: Implement methods for populating and validating data in the database class.
 \end{itemize}
 
 \subsubsection{Iteration 2B: Added validation methods (Est. 1 Hour)}
 \begin{itemize}
-	\item Progress made: Implemented essential methods in \verb|InventoryDB|: \verb|populate_random_data|, \verb|validate_item_id|, \verb|get_quantity|, \verb|update_quantity|, \verb|get_position|. Added \verb|__main__| test block. *(Achieved OCSP-017)*
-	\item Blockers identified: Ensuring random population covered grid correctly. Handling non-existent \verb|itemID|s in validation.
-	\item Plan for next iteration: Add logging to database methods. Link database initialisation size to config dimensions. Add GUI interaction buttons.
+	\item Progress made: Added core methods to \verb|InventoryDB|: \verb|populate_random_data|, \verb|validate_item_id|, \verb|get_quantity|, \verb|update_quantity|, \verb|get_position|. Added a \verb|__main__| block for testing \verb|database.py| independently. *(Achieved OCSP-017)*
+	\item Blockers identified: Refining the \verb|populate_random_data| logic to correctly cover all grid cells based on dimensions. Ensuring \verb|validate_item_id| handled non-existent IDs properly.
+	\item Plan for next iteration: Link the database initialisation to the configured grid size. Add logging. Add GUI buttons for manual DB interaction.
 \end{itemize}
 
 \subsubsection{Iteration 2C: Added logger \& DB-Config Link (Est. 1 Hour)}
 \begin{itemize}
-	\item Progress made: Integrated \verb|logging| throughout \verb|database.py|. Linked DB initialisation in \verb|gui.py| to use dimensions from \verb|config.py|. Added 'Query Stock'/\verb|Update Stock| buttons and methods to \verb|gui.py|. *(Achieved OCSP-009 for DB, Partial OCSP-019)*
-	\item Blockers identified: Ensuring logs were useful. Basic design for \verb|update_stock| pop-up.
-	\item Plan for next iteration: Implement the core stock check logic in \verb|add_point| and stock decrement after pathfinding.
+	\item Progress made: Added \verb|logging| throughout \verb|database.py|. Modified \verb|gui.py| startup to instantiate \verb|InventoryDB| with configured dimensions and call \verb|populate_random_data|. Added `Query Stock`/\verb|Update Stock| buttons and methods to the GUI. *(Achieved OCSP-009 for DB, Partial OCSP-019)*
+	\item Blockers identified: Designing the simple pop-up for the `Update Stock` feature required some thought on handling the input and confirmation.
+	\item Plan for next iteration: Implement the automatic stock check when adding points and the stock decrement after pathfinding.
 \end{itemize}
 
 \subsubsection{Iteration 2D: Added the stock decrementer (Est. 1 Hour)}
 \begin{itemize}
-	\item Progress made: Implemented \verb|decrement_quantity| in \verb|database.py|. Modified \verb|gui.py|'s \verb|add_point| to check if stock $> 0$ before adding point. Modified \verb|_find_path_thread| to call \verb|db.decrement_quantity| after successful pathfinding. *(Achieved OCSP-018)*
-	\item Blockers identified: Ensuring decrement logic targeted only intermediate points correctly.
+	\item Progress made: Implemented \verb|decrement_quantity| in \verb|database.py|. Modified \verb|gui.add_point| to check stock and prevent adding if zero. Modified \verb|_find_path_thread| to decrement stock for intermediate points upon success. *(Achieved OCSP-018)*
+	\item Blockers identified: Ensuring the decrement loop only targeted the user-selected intermediate points (\verb|self.points|) and not the start/end nodes included in the final path.
 	\item Plan for next iteration: Sprint complete. Review and final testing.
 \end{itemize}
 
@@ -1572,31 +1162,30 @@ Relies solely on standard Python libraries: \verb|Tkinter| (\verb|ttk|, \verb|me
 	\item \textbf{GitHub Commits:} \verb|aa510bec|, \verb|3f8acc8|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item Refactored \verb|gui.py|'s \verb|find_path| method to handle pathfinding asynchronously.
-		\item Introduced \verb|self.processing| flag to prevent concurrent pathfinding runs.
-		\item Moved core pathfinding logic to \verb|_find_path_thread| method.
-		\item \verb|find_path| now starts \verb|_find_path_thread| using \verb|threading.Thread|.
-		\item Used \verb|queue.Queue| (\verb|self.result_queue|) for thread-safe result passing.
-		\item Implemented \verb|_check_path_results| method, scheduled via \verb|self.root.after|, to poll the queue and update the GUI (\verb|tk.Text| widget) without blocking.
-		\item Added detailed comments explaining the threading model.
+		\item My first step in this sprint was tackling the GUI responsiveness. I noticed that finding paths, especially if the grid gets larger or there are many points, might take a noticeable time and freeze the interface. To solve this, I refactored the \verb|find_path| method in \verb|gui.py|.
+		\item I used Python's \verb|threading| module to run the actual pathfinding work in a separate thread. I created a helper method \verb|_find_path_thread| to contain the call to \verb|self.path_finder.find_path_through_points| and the logic to capture the visualisation output.
+		\item To communicate the result back safely to the main \verb|Tkinter| thread, I used a \verb|queue.Queue| (\verb|self.result_queue|). The worker thread puts the result dictionary onto this queue.
+		\item In the main thread, I used \verb|self.root.after()| to schedule a function (\verb|_check_path_results|) that periodically checks the queue using \verb|get_nowait()|. If it finds a result, it updates the GUI; otherwise, it reschedules itself. This avoids blocking the main event loop.
+		\item I also added a flag (\verb|self.processing|) to prevent the user from starting a new pathfinding operation while one is already running.
+		\item I added comments (commit \verb|3f8acc8|) to explain this threading setup, as it's more complex than the previous synchronous code.
 	\end{itemize}
-	\item \textbf{Justification:} Addresses responsiveness requirement (R6.1) by preventing GUI freeze during calculation. Uses standard \verb|Tkinter| threading practices with a queue for safety.
+	\item \textbf{Justification:} This was essential for improving the user experience, especially looking ahead to potentially larger grids or more complex calculations. A non-responsive UI is frustrating, so addressing this early seemed important (addresses R6.1). The queue/`after` pattern is a standard and safe way to handle threads in \verb|Tkinter|.
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
-	\item Annotations added: Crucial comments explain the threading logic (\verb|self.processing| flag, \verb|queue.Queue|, \verb|root.after|) for future maintenance.
-	\item Modular approach: Pathfinding logic separated into \verb|_find_path_thread|.
-	\item Robustness: \verb|self.processing| flag prevents overlapping requests. Exception handling in thread passes errors via queue.
+	\item Annotations added: Comments now explain the purpose of the \verb|self.processing| flag, the queue mechanism, and the use of \verb|root.after|, which is vital for anyone (including my future self!) trying to understand or debug this later.
+	\item Modular approach: The core pathfinding still happens within the \verb|PathFinder| class, but the execution is now orchestrated via dedicated threading methods in the GUI class.
+	\item Robustness: Added the \verb|self.processing| flag check. The thread also catches general exceptions and puts them on the queue, allowing errors during pathfinding to be reported in the GUI.
 \end{itemize}
 
 \newpage
 \subsubsection*{Placeholder: Iteration 1A Code Implementation Snippets}
-*(User: Please insert relevant code snippets for Iteration 1A here using \LaTeX\ code listing environments.)*
+*(User: Please insert relevant code snippets for Iteration 1A here using \LaTeX\ code listing environments, like the modified \verb|__init__|, \verb|find_path|, and the new \verb|_find_path_thread|, \verb|_check_path_results| methods in \verb|gui.py|.)*
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 4A: Pathfinding runs in background thread. GUI remains responsive. Still uses \verb|(row, col)| coordinates.
+Prototype Version 4A: The pathfinding operation now runs in a background thread. I observed that the GUI remains interactive even if the path calculation takes a moment. Still using the old \verb|(row, col)| coordinates at this stage.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1605,42 +1194,42 @@ Prototype Version 4A: Pathfinding runs in background thread. GUI remains respons
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.1A.1 & Find path with several points & GUI remains responsive, "Processing..." message shown, path eventually appears & *(User: Fill)* & ? \\
+		T3.1A.1 & Find path with several points (potentially slow) & GUI remains responsive (can move window, etc.), "Processing..." message shown, path appears correctly after delay. & *(User: Fill)* & ? \\
 		\hline
-		T3.1A.2 & Click \verb|Find Path| twice quickly & Second click shows "Already processing..." or is ignored; only one result appears & *(User: Fill)* & ? \\
+		T3.1A.2 & Click \verb|Find Path| twice quickly & Second click shows "Already processing..." message or is ignored. Only one path result appears in output area. & *(User: Fill)* & ? \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 1A (Cerf)}
 \end{table}
-\textbf{Tests justification:} Validates the threading implementation ensures GUI responsiveness (T3.1A.1) and handles concurrent requests safely (T3.1A.2), meeting R6.1.
+\textbf{Tests justification:} These tests focused specifically on the responsiveness improvement (T3.1A.1) and ensuring the locking mechanism prevented issues with concurrent requests (T3.1A.2). This validated requirement R6.1.
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item *(User: Describe fixes, e.g., "Ensured GUI widgets were appropriately disabled/enabled before/after thread execution via \verb|_check_path_results|.")*
+	\item *(User: Describe fixes, e.g., "Needed to ensure the input buttons were properly disabled in \verb|find_path| and re-enabled in \verb|_check_path_results| to prevent inconsistent state.")*
 \end{itemize}
 
 \subsubsection{Validation}
 \begin{itemize}
-	\item No new user input validation added.
+	\item No changes to user input validation in this iteration.
 \end{itemize}
 
 \subsubsection{Qodana Analysis}
 \begin{itemize}
 	\item \textbf{Commit:} \verb|aa510bec|
-	\item Issues identified: *(User: Describe issues)*
-	\item Resolved issues: *(User: Describe fixes)*
+	\item Issues identified: *(User: Describe issues, e.g., "Qodana might flag the complexity of the thread management methods.")*
+	\item Resolved issues: *(User: Describe fixes or justification for not fixing, e.g., "Complexity is inherent in threading; comments added for clarity.")*
 \end{itemize}
 
 --- % Placeholder for Qodana Screenshot
 \subsubsection*{Placeholder: Qodana Screenshot Iteration 1A (Cerf)}
-*(User: Please insert Qodana screenshot here.)*
+*(User: Please insert Qodana screenshot here using \LaTeX\ figure environment.)*
 ---
 
 \subsubsection{Review:}
 \begin{itemize}
-	\item Threading successfully implemented, improving user experience significantly.
-	\item The chosen method (queue and \verb|root.after|) is appropriate for \verb|Tkinter|.
-	\item Code complexity increased, highlighting the importance of the added comments.
+	\item Implementing threading was a success and definitely makes the application feel more professional and usable, especially if pathfinding were to take longer.
+	\item It did add noticeable complexity to the \verb|gui.py| code, making good comments essential.
+	\item With responsiveness addressed, I could now move onto the user-facing configuration and numbering changes.
 \end{itemize}
 
 \newpage
@@ -1653,29 +1242,31 @@ Prototype Version 4A: Pathfinding runs in background thread. GUI remains respons
 	\item \textbf{GitHub Commit:} \verb|9f2047f|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item Created \verb|config.py| containing the \verb|ConfigWindow| class (\verb|tk.Toplevel|).
-		\item Added \verb|ttk.Spinbox| widgets for row/column input (range 1-50, default 10).
-		\item Implemented \verb|validate_and_save| method with input parsing, range validation, and \verb|messagebox.showerror| feedback.
-		\item Used \verb|root.mainloop()| on the \verb|ConfigWindow| instance to make it modal.
-		\item Modified main startup in \verb|gui.py| to call \verb|config.get_grid_config()| and pass dimensions to \verb|PathfinderGUI|.
+		\item Created the new file \verb|config.py| to hold the logic for the configuration window.
+		\item Defined a class \verb|ConfigWindow| which creates a \verb|tk.Toplevel| window. This makes it a separate pop-up window.
+		\item Added \verb|ttk.Label| and \verb|ttk.Spinbox| widgets for entering rows and columns. I set a range of 1-50 for the spinboxes as a sensible limit and provided default values of 10.
+		\item Implemented a method \verb|validate_and_save| connected to a "Confirm" button. This tries to convert the spinbox inputs to integers, checks they are within the valid range (1-50), and uses \verb|messagebox.showerror| if there's an issue. If valid, it stores the values in instance variables (\verb|self.rows|, \verb|self.cols|) and destroys the config window.
+		\item Made the window modal by calling \verb|self.root.mainloop()| within the \verb|get_dimensions| method of the \verb|ConfigWindow|.
+		\item Created a helper function \verb|get_grid_config()| in \verb|config.py| to simplify launching the window and getting the result.
+		\item Updated the main startup logic in \verb|gui.py|: it now calls \verb|config.get_grid_config()| first, then passes the returned \verb|rows| and \verb|cols| when creating the main \verb|PathfinderGUI| instance.
 	\end{itemize}
-	\item \textbf{Justification:} Addresses flexibility requirement R5.1. Modal window ensures valid config before main app starts.
+	\item \textbf{Justification:} This provides important flexibility for the user (R5.1), allowing them to test different warehouse sizes. Keeping this logic in \verb|config.py| maintains modularity. The modal approach ensures the main application doesn't start until valid dimensions are confirmed.
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
-	\item Annotations added: Comments and docstrings in \verb|config.py| explain the modal window logic and validation.
-	\item Modular approach: Configuration UI encapsulated in \verb|config.py|.
-	\item Robustness: Input validation handles errors gracefully using message boxes.
+	\item Annotations added: Added comments and docstrings in \verb|config.py| explaining the purpose of the class, the validation steps, and how the modal window works.
+	\item Modular approach: Configuration UI logic is well encapsulated in \verb|config.py|.
+	\item Robustness: Input validation with \verb|try-except| and range checks, plus user feedback via \verb|messagebox|, makes the configuration process robust.
 \end{itemize}
 
 \newpage
 \subsubsection*{Placeholder: Iteration 1B Code Implementation Snippets}
-*(User: Insert code snippets for \verb|config.py| and startup changes in \verb|gui.py|'s \verb|main| function here.)*
+*(User: Insert code snippets for \verb|config.py| and the modified startup in \verb|gui.py| \verb|main| function here.)*
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 4B: Application presents a configuration window on startup for grid size. Main GUI initialises with chosen dimensions.
+Prototype Version 4B: When I run the application, it first shows the "Grid Configuration" pop-up. After confirming valid dimensions, the main GUI window opens, and internally the grid size reflects the chosen dimensions (verified by checking range label later).
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1684,25 +1275,25 @@ Prototype Version 4B: Application presents a configuration window on startup for
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.1B.1 & Launch, enter 15x10, click OK & Config closes, main GUI uses 15x10 size (check labels/range). & *(User: Fill)* & ? \\
+		T3.1B.1 & Launch, enter 15x10, click OK & Config closes, main GUI uses 15x10 size (check \verb|range_label| later). & *(User: Fill)* & ? \\
 		\hline
-		T3.1B.2 & Enter invalid config (0, text, >50) & Error messagebox shown, window remains. & *(User: Fill)* & ? \\
+		T3.1B.2 & Enter invalid config (0, text, >50) in Spinboxes, click OK & Error messagebox shown, config window stays open. & *(User: Fill)* & ? \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 1B (Cerf)}
 \end{table}
-\textbf{Tests justification:} Validates config screen functionality (T3.1B.1) and input validation (T3.1B.2), ensuring R5.1 is met.
+\textbf{Tests justification:} These tests confirmed the config window works as expected (T3.1B.1) and handles invalid user input correctly (T3.1B.2), ensuring R5.1 is properly implemented.
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item *(User: Describe fixes, e.g., "Improved centering of config window.")*
+	\item *(User: Describe fixes, e.g., "Initially forgot to destroy the config window on confirm, fixed in \verb|validate_and_save|.")*
 \end{itemize}
 
 \subsubsection{Validation}
 \begin{itemize}
-	\item \textbf{Grid Dimension Input:} Validation added in \verb|ConfigWindow.validate_and_save|.
+	\item \textbf{Grid Dimension Input:} Validated in \verb|ConfigWindow.validate_and_save| for positive integers using \verb|try-except ValueError| and range check (1-50).
 \end{itemize}
-\textbf{Justification:} Ensures valid grid dimensions are used.
+\textbf{Justification:} Ensures the application receives valid dimensions to operate correctly.
 
 \subsubsection{Qodana Analysis}
 \begin{itemize}
@@ -1718,9 +1309,9 @@ Prototype Version 4B: Application presents a configuration window on startup for
 
 \subsubsection{Review:}
 \begin{itemize}
-	\item Configuration screen works as intended, providing user flexibility.
-	\item Code is well-organized in \verb|config.py|.
-	\item Ready for coordinate system abstraction.
+	\item The configuration screen works well and provides the needed flexibility. Separating it into \verb|config.py| keeps the main \verb|gui.py| cleaner.
+	\item Validation seems robust for this stage.
+	\item Now that the grid size is dynamic, I can implement the 1-N numbering system which depends on it.
 \end{itemize}
 
 \newpage
@@ -1733,29 +1324,29 @@ Prototype Version 4B: Application presents a configuration window on startup for
 	\item \textbf{GitHub Commit:} \verb|a4472fb|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item Added \verb|index_to_coordinates| and \verb|coordinates_to_index| helpers to \verb|spa.py|.
-		\item Modified \verb|gui.py|'s \verb|add_point|: Parses input as integer \verb|index|, validates range (1 to \verb|rows*cols|), converts valid \verb|index| to \verb|(x, y)| for internal use (\verb|spa.validate_point|). Updates confirmation message.
-		\item Modified \verb|gui.py|'s \verb|_check_path_results|: Converts result path \verb|(row, col)| tuples back to \verb|itemID|s for path sequence string display.
-		\item Added \verb|self.range_label| in \verb|gui.py|'s \verb|__init__| to show valid \verb|itemID| range.
-		\item Updated error messages in \verb|spa.validate_point| for clarity with indexing.
+		\item To make specifying locations easier than using `(row, col)`, I implemented a 1-N numbering scheme. I added two helper functions to \verb|spa.py|: \verb|index_to_coordinates(index, cols)| and \verb|coordinates_to_index(row, col, cols)|. These handle the math for converting between the 1-based \verb|itemID| (which I called `index` here) and the 0-based internal \verb|(row, col)| tuple.
+		\item In \verb|gui.py|, I changed the \verb|add_point| method significantly. It now expects a single integer input (`index`). It first validates this index is within the range 1 to `rows*cols`. If valid, it calls \verb|spa.index_to_coordinates| to get the internal `(x, y)` coordinates needed for the backend validation (\verb|spa.validate_point|) and for storing in the \verb|self.points| list. The success message now confirms "Added position X".
+		\item I also updated the \verb|_check_path_results| method in \verb|gui.py|. When a path is found (as a list of `(row, col)` tuples), it now iterates through this path and uses \verb|spa.coordinates_to_index` to convert each step back into an `itemID` before creating the path sequence string (e.g., "1 $ \rightarrow $ ... $ \rightarrow $ 100").
+		\item I added a \verb|ttk.Label| (\verb|self.range_label|) to the GUI, positioned below the entry field, which dynamically displays the valid input range (e.g., "Enter position (1-100)") based on the configured \verb|rows| and \verb|cols|.
+		\item Finally, I updated the error messages returned by \verb|spa.validate_point| to be slightly more generic ("Position out of bounds", "Cannot use start/end point") as the GUI handles displaying the specific `itemID` or `(row, col)` depending on context.
 	\end{itemize}
-	\item \textbf{Justification:} Improves usability (R3.4) via simpler 1-N system. Requires changes at input and output boundaries of the GUI.
+	\item \textbf{Justification:} This abstraction makes the application much more intuitive for the user, as they only need to think about simple position numbers instead of coordinate pairs (addresses R3.4). Implementing this required careful changes to input parsing, internal calls, and output formatting.
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
-	\item Annotations added: Docstrings for conversion functions; comments where conversions occur in \verb|gui.py|.
-	\item Modular approach: Conversion logic centralised in \verb|spa.py|.
-	\item Readability: Helper functions make conversion logic clear.
+	\item Annotations added: Added docstrings for the new conversion functions in \verb|spa.py|. Added comments in \verb|gui.py|'s \verb|add_point| and \verb|_check_path_results| explaining the conversion steps.
+	\item Modular approach: The conversion logic is neatly contained in helper functions within \verb|spa.py|. The GUI handles the user-facing presentation.
+	\item Readability: Code involving coordinates remains clear, with conversions happening explicitly at the boundaries where GUI interacts with internal logic or displays results.
 \end{itemize}
 
 \newpage
 \subsubsection*{Placeholder: Iteration 1C Code Implementation Snippets}
-*(User: Insert code snippets for conversion functions in \verb|spa.py| and GUI modifications here.)*
+*(User: Insert code snippets for conversion functions in \verb|spa.py| and GUI modifications in \verb|gui.py| (\verb|add_point|, \verb|_check_path_results|, \verb|__init__| for label) here.)*
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 4C: Application uses 1-N \verb|itemID| system for all user interaction (input, path display, range label). Internal logic still uses \verb|(row, col)|. Config and threading active.
+Prototype Version 4C (End of Group 1): The application now fully uses the 1-N `itemID` system for user interaction. It starts with the config screen, finds paths in a separate thread, and handles coordinate conversions internally.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1764,34 +1355,34 @@ Prototype Version 4C: Application uses 1-N \verb|itemID| system for all user int
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.1C.1 & Enter \verb|itemID| 15 (10x10), Add Point & "Added position 15" shown. & *(User: Fill)* & ? \\
+		T3.1C.1 & Enter \verb|itemID| 15 (10x10 grid), Add Point & "Added position 15" message shown in output. & *(User: Fill)* & ? \\
 		\hline
-		T3.1C.2 & Add \verb|itemID|s 15, 99. Find Path. & Path seq. "1 $ \rightarrow $ ... $ \rightarrow $ 15 $ \rightarrow $ ... $ \rightarrow $ 99 $ \rightarrow $ ... $ \rightarrow $ 100" & *(User: Fill)* & ? \\
+		T3.1C.2 & Add \verb|itemID|s 15, 99. Find Path. & Path sequence displayed as "1 $ \rightarrow $ ... $ \rightarrow $ 15 $ \rightarrow $ ... $ \rightarrow $ 99 $ \rightarrow $ ... $ \rightarrow $ 100". & *(User: Fill)* & ? \\
 		\hline
-		T3.1C.3 & Enter invalid \verb|itemID| (0 or 101 on 10x10) & GUI error "Position X out of range (1-100)" & *(User: Fill)* & ? \\
+		T3.1C.3 & Enter invalid \verb|itemID| (0 or 101 on 10x10 grid) & GUI shows error "Position X out of range (1-100)". & *(User: Fill)* & ? \\
 		\hline
-		T3.1C.4 & Check \verb|range_label| updates for 15x15 grid & Label shows "Enter position (1-225)" & *(User: Fill)* & ? \\
+		T3.1C.4 & Start with 15x15 config. Check range label. & Label shows "Enter position (1-225)". & *(User: Fill)* & ? \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 1C (Cerf)}
 \end{table}
-\textbf{Tests justification:} Verifies correct implementation of the 1-N system in input (T3.1C.1, T3.1C.3), output (T3.1C.2), and interaction with config (T3.1C.4), ensuring R3.4 is met.
+\textbf{Tests justification:} These tests verified that the 1-N numbering system was correctly implemented for input validation (T3.1C.1, T3.1C.3), output display (T3.1C.2), and correctly adapted to the configured grid size (T3.1C.4), ensuring the usability goal R3.4 was achieved.
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item *(User: Describe fixes, e.g., "Corrected calculation in \verb|index_to_coordinates|.")*
+	\item *(User: Describe fixes, e.g., "Corrected the formula in \verb|index_to_coordinates| to handle the 0-based vs 1-based conversion properly.")*
 \end{itemize}
 
 \subsubsection{Validation}
 \begin{itemize}
-	\item \textbf{ItemID Range Validation:} Check \verb|1 <= index <= self.grid.rows * self.grid.cols| added in \verb|gui.add_point|.
+	\item \textbf{ItemID Range Validation:} Check \verb|1 <= index <= self.grid.rows * self.grid.cols| implemented in \verb|gui.add_point|.
 \end{itemize}
-\textbf{Justification:} Ensures user \verb|itemID| input is valid.
+\textbf{Justification:} Confirms user input corresponds to a valid location number on the currently configured grid.
 
 \subsubsection{Qodana Analysis}
 \begin{itemize}
 	\item \textbf{Commit:} \verb|a4472fb|
-	\item Issues identified: *(User: Describe issues)*
+	\item Issues identified: *(User: Describe issues, e.g., "Possible minor inefficiency in coordinate conversion loops if used heavily" - though unlikely here)*
 	\item Resolved issues: *(User: Describe fixes)*
 \end{itemize}
 
@@ -1802,8 +1393,9 @@ Prototype Version 4C: Application uses 1-N \verb|itemID| system for all user int
 
 \subsubsection{Review:}
 \begin{itemize}
-	\item Coordinate abstraction successfully implemented, improving user experience.
-	\item Preparatory work complete. Ready to begin database implementation.
+	\item The switch to the 1-N numbering system makes the interface much cleaner and easier to use than dealing with coordinate pairs.
+	\item The helper functions work well to keep the conversion logic separate.
+	\item All the preparatory work is now done, setting a solid stage for implementing the database features next.
 \end{itemize}
 
 \newpage
@@ -1816,28 +1408,28 @@ Prototype Version 4C: Application uses 1-N \verb|itemID| system for all user int
 	\item \textbf{GitHub Commit:} \verb|022bcdfb|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item Created \verb|database.py|.
-		\item Defined \verb|InventoryDB| class.
-		\item Implemented \verb|__init__| method storing dimensions and DB path (\verb|"inventory.db"|).
-		\item Implemented \verb|_init_database| using \verb|sqlite3| to connect and execute \verb|CREATE TABLE IF NOT EXISTS items (...)| with correct schema (\verb|ItemID PK|, \verb|row|, \verb|col|, \verb|Quantity|, \verb|UNIQUE(row, col)|).
+		\item I created the new file \verb|database.py| to hold all the database logic.
+		\item Inside this, I defined the \verb|InventoryDB| class.
+		\item I wrote the \verb|__init__| method. For now, it just takes default rows/cols (10x10) and sets the database filename (\verb|self.db_path = "inventory.db"|). Crucially, it calls an internal method \verb|_init_database| to set up the database file and table.
+		\item The \verb|_init_database| method uses \verb|sqlite3.connect| to create or open the database file. It then executes the \verb|CREATE TABLE IF NOT EXISTS items| SQL command to ensure the table with the correct columns (\verb|ItemID|, \verb|row|, \verb|col|, \verb|Quantity|) and constraints (\verb|PRIMARY KEY|, \verb|NOT NULL|, \verb|UNIQUE|) exists.
 	\end{itemize}
-	\item \textbf{Justification:} Establishes database module (M1) and schema structure (R2.1). \verb|IF NOT EXISTS| ensures idempotency.
+	\item \textbf{Justification:} This sets up the dedicated module for database operations (M1) and ensures the required table structure is present (R2.1). Using \verb|IF NOT EXISTS| makes the setup safe to run multiple times.
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
-	\item Annotations added: Docstrings for class and methods.
-	\item Modular approach: Database logic contained in own class/file.
-	\item Robustness: \verb|CREATE TABLE IF NOT EXISTS| used.
+	\item Annotations added: Added basic docstrings for the class and methods explaining their initial purpose.
+	\item Modular approach: Database initialisation logic is now separate from the GUI and pathfinding code.
+	\item Robustness: Using \verb|CREATE TABLE IF NOT EXISTS| prevents errors if the database file already exists from a previous run.
 \end{itemize}
 
 \newpage
 \subsubsection*{Placeholder: Iteration 2A Code Implementation Snippets}
-*(User: Insert code snippet for the initial \verb|database.py| content here.)*
+*(User: Insert code snippet for the initial \verb|database.py| content showing \verb|__init__| and \verb|_init_database| here.)*
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 5A: No visible change, but \verb|inventory.db' file and 'items| table are created if \verb|InventoryDB| is instantiated.
+Prototype Version 5A: No change in application behaviour yet. However, running the code (or specifically, instantiating \verb|InventoryDB|) now creates the \verb|inventory.db| file with an empty \verb|items| table if it doesn't exist.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1846,30 +1438,30 @@ Prototype Version 5A: No visible change, but \verb|inventory.db' file and 'items
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.2A.1 & Run code that instantiates \verb|InventoryDB|. Delete \verb|inventory.db|. Run again. & \verb|inventory.db| created. No errors on second run. & *(User: Fill)* & ? \\
+		T3.2A.1 & Delete \verb|inventory.db|. Run code that instantiates \verb|InventoryDB|. Run again. & \verb|inventory.db| created. No errors on second run. & *(User: Fill)* & ? \\
 		\hline
-		T3.2A.2 & Inspect \verb|inventory.db| schema. & Correct \verb|items| table and columns exist. & *(User: Fill)* & ? \\
+		T3.2A.2 & Inspect \verb|inventory.db| schema using DB browser. & \verb|items| table exists with correct columns/types/constraints. & *(User: Fill)* & ? \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 2A (Cerf)}
 \end{table}
-\textbf{Tests justification:} Verifies database file/schema creation (R2.1).
+\textbf{Tests justification:} These tests verify that the database file and table schema are correctly created (T3.2A.1, T3.2A.2), meeting requirement R2.1.
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item *(User: Describe fixes, e.g., "Corrected typo in SQL column name.")*
+	\item *(User: Describe fixes, e.g., "Corrected SQL syntax for the UNIQUE constraint.")*
 \end{itemize}
 
 \subsubsection{Validation}
 \begin{itemize}
-	\item Schema constraints (\verb|PRIMARY KEY|, \verb|NOT NULL|, \verb|UNIQUE|) provide DB-level validation.
+	\item Relies on database schema constraints (\verb|PRIMARY KEY|, \verb|UNIQUE|, \verb|NOT NULL|) for initial data integrity.
 \end{itemize}
 
 \subsubsection{Qodana Analysis}
 \begin{itemize}
 	\item \textbf{Commit:} \verb|022bcdfb|
-	\item Issues identified: *(User: Describe issues)*
-	\item Resolved issues: *(User: Describe fixes)*
+	\item Issues identified: *(User: Likely clean for this basic structure)*
+	\item Resolved issues: *(User: Describe fixes or N/A)*
 \end{itemize}
 
 --- % Placeholder for Qodana Screenshot
@@ -1879,44 +1471,45 @@ Prototype Version 5A: No visible change, but \verb|inventory.db' file and 'items
 
 \subsubsection{Review:}
 \begin{itemize}
-	\item Database module structure and table schema successfully created.
-	\item Good separation of concerns. Ready to implement data handling methods.
+	\item The basic database structure is in place within its own module.
+	\item This separation felt like a good way to manage the upcoming database logic.
+	\item Next step is to add the methods to actually populate and interact with the data.
 \end{itemize}
 
 \newpage
 
 % --- Iteration 2B ---
-\subsubsection{Iteration 2B: Added validation methods}
+\subsubsection{Iteration 2B: Added validation methods and population}
 
 \textbf{Code Changes:}
 \begin{itemize}
-	\item \textbf{GitHub Commit:} \verb|7586cb8|, possibly \verb|31cd2a2|
+	\item \textbf{GitHub Commit:} \verb|7586cb8|, \verb|31cd2a2|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item Implemented \verb|populate_random_data| method in \verb|InventoryDB| using \verb|DELETE| then \verb|INSERT| loop with \verb|random.randint(1, 10)|.
-		\item Implemented \verb|validate_item_id| method checking range (1 to \verb|rows*cols|) and existence via \verb|SELECT|.
-		\item Implemented getters: \verb|get_quantity|, \verb|get_position|.
-		\item Implemented \verb|update_quantity| method with validation for non-negative integer input.
-		\item Added \verb|if __name__ == "__main__":| block for standalone testing.
-		\item *(Maybe)* Commit \verb|31cd2a2| unified validation in \verb|spa.py| (called from \verb|gui.py|).
+		\item Implemented the \verb|populate_random_data(self)| method in \verb|InventoryDB|. This clears any existing data first (\verb|DELETE FROM items|) then loops through all grid positions (1 to \verb|rows*cols|), converts the \verb|itemID| to \verb|(row, col)|, generates a random quantity (1-10 using \verb|random.randint|), and inserts the full record using a parameterised \verb|INSERT| query.
+		\item Added \verb|validate_item_id(self, item_id)| method to check if an \verb|itemID| is within the valid range and if it actually exists in the database (using \verb|SELECT 1 FROM items WHERE ItemID = ?|), raising a \verb|ValueError| if not.
+		\item Added getter methods \verb|get_quantity(self, item_id)| and \verb|get_position(self, item_id)| which query the database for the respective data after validating the \verb|itemID|.
+		\item Added \verb|update_quantity(self, item_id, new_quantity)| method, including checks to ensure the \verb|new_quantity| is a non-negative integer before executing the \verb|UPDATE| statement.
+		\item Added a \verb|if __name__ == "__main__":| block to \verb|database.py|. This allows running the file directly to test the database functionality. It initializes the DB, populates it, and then loops through all item IDs, printing their quantity and position to verify.
+		\item Commit \verb|31cd2a2| unified the validation logic in \verb|spa.py| by modifying \verb|validate_point| to return both a boolean and an error message string, and updated \verb|gui.add_point| to use this improved structure.
 	\end{itemize}
-	\item \textbf{Justification:} Implements DB population (R2.2) and interaction methods. Includes validation and independent test capability.
+	\item \textbf{Justification:} These methods provide the core functionality needed to manage the stock data (R2.2) and validate inputs specific to the database context. The \verb|__main__| block was very useful for testing the database logic in isolation before connecting it to the GUI. Unified validation makes error handling cleaner.
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
-	\item Annotations added: Docstrings for new methods. Comments explain logic.
-	\item Modular approach: Methods contained within \verb|InventoryDB| class.
-	\item Robustness: Includes validation for \verb|itemID| and update quantity. Uses parameterised queries. Independent testing capability.
+	\item Annotations added: Added docstrings for all the new public methods (\verb|populate_random_data|, \verb|validate_item_id|, \verb|get_quantity|, etc.) explaining what they do. Comments clarify the SQL and population logic.
+	\item Modular approach: All data manipulation and validation logic related to the database is kept within the \verb|InventoryDB| class.
+	\item Robustness: Added specific validation for \verb|itemID| existence and range, and for the data type and value of \verb|new_quantity|. Using parameterised queries protects against SQL injection. The `__main__` block improves testability.
 \end{itemize}
 
 \newpage
 \subsubsection*{Placeholder: Iteration 2B Code Implementation Snippets}
-*(User: Insert code snippets for new methods in \verb|database.py| and the \verb|__main__| block here.)*
+*(User: Insert code snippets for the new methods in \verb|database.py| (\verb|populate_random_data|, \verb|validate_item_id|, getters, \verb|update_quantity|) and the \verb|__main__| block here.)*
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 5B: Database file \verb|inventory.db| is now populated with random data via \verb|database.py|. Core interaction methods exist.
+Prototype Version 5B: Running \verb|database.py| directly now creates and populates \verb|inventory.db|. The methods for getting/setting quantities are functional but not yet used by the main GUI workflow.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1925,27 +1518,34 @@ Prototype Version 5B: Database file \verb|inventory.db| is now populated with ra
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.2B.1 & Run \verb|python database.py|. Inspect DB/output. & DB populated, quantities 1-10. Output correct. & *(User: Fill)* & ? \\
+		T3.2B.1 & Run \verb|python database.py|. Check console output and inspect DB. & Output shows correct quantities/positions for all items. DB contains expected data. & *(User: Fill)* & ? \\
 		\hline
-		T3.2B.2 & Test DB methods with valid/invalid inputs (via \verb|__main__|). & Correct data returned or appropriate errors raised. & *(User: Fill)* & ? \\
+		T3.2B.2 & Test \verb|validate_item_id| (e.g., via \verb|__main__|) with valid, invalid range, non-existent IDs. & Returns \verb|True| for valid ID, raises \verb|ValueError| for others. & *(User: Fill)* & ? \\
+		\hline
+		T3.2B.3 & Test \verb|update_quantity| with valid/invalid quantity values (e.g., -1, "abc"). & Updates correctly for valid int >= 0, raises \verb|ValueError|/\verb|TypeError| otherwise. & *(User: Fill)* & ? \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 2B (Cerf)}
 \end{table}
-\textbf{Tests justification:} Verifies database population (T3.2B.1 - R2.2) and individual method correctness/robustness (T3.2B.2).
+\textbf{Tests justification:} Verifies the database population logic (T3.2B.1 - R2.2) and ensures the core interaction and validation methods within \verb|InventoryDB| behave correctly and handle errors appropriately (T3.2B.2, T3.2B.3).
+
+\subsubsection{Fixes}
+\begin{itemize}
+	\item *(User: Describe fixes, e.g., "Modified \verb|validate_item_id| to handle the case where the SELECT query returns no rows more cleanly.")*
+\end{itemize}
 
 \subsubsection{Validation}
 \begin{itemize}
-	\item Added \verb|validate_item_id| method.
-	\item Added type/value checks in \verb|update_quantity|.
+	\item Implemented \verb|validate_item_id| method checking range and DB existence.
+	\item Added type/value checks in \verb|update_quantity| (non-negative integer).
 \end{itemize}
-\textbf{Justification:} Ensures DB operations use valid inputs.
+\textbf{Justification:} Ensures database operations use valid item IDs and data values.
 
 \subsubsection{Qodana Analysis}
 \begin{itemize}
 	\item \textbf{Commit:} \verb|7586cb8|
-	\item Issues identified: *(User: Describe issues)*
-	\item Resolved issues: *(User: Describe fixes)*
+	\item Issues identified: *(User: Describe issues, e.g., "Suggested using context managers (`with`) more consistently for DB connections" - already done, good.)*
+	\item Resolved issues: *(User: Describe fixes or N/A)*
 \end{itemize}
 
 --- % Placeholder for Qodana Screenshot
@@ -1955,9 +1555,9 @@ Prototype Version 5B: Database file \verb|inventory.db| is now populated with ra
 
 \subsubsection{Review:}
 \begin{itemize}
-	\item Database module now functional for population and CRUD-like operations.
-	\item Validation adds robustness. Standalone testing was effective.
-	\item Ready to link database size to config and integrate with GUI.
+	\item The \verb|InventoryDB| class now contains the essential methods for managing stock data.
+	\item The validation within the class seems appropriate.
+	\item Testing this module independently using the \verb|__main__| block was very helpful to confirm its core functionality before integrating it with the rest of the application. Now I need to make sure the database uses the grid size set by the user and add logging.
 \end{itemize}
 
 \newpage
@@ -1970,27 +1570,28 @@ Prototype Version 5B: Database file \verb|inventory.db| is now populated with ra
 	\item \textbf{GitHub Commits:} \verb|29f1ca1|, \verb|4f965e2|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item Added \verb|logging| to \verb|database.py| methods using \verb|logging.getLogger(__name__)|.
-		\item Modified \verb|gui.py| startup to instantiate \verb|InventoryDB| with dimensions from \verb|config.get_grid_config()| and call \verb|db.populate_random_data()|.
-		\item Added 'Query Stock'/\verb|Update Stock| buttons and methods (\verb|query_stock|, \verb|update_stock|) to \verb|gui.py|, calling respective \verb|InventoryDB| methods and handling basic errors. \verb|update_stock| uses a \verb|Toplevel| pop-up.
+		\item Added \verb|logging| to \verb|database.py|. Imported the \verb|logging| module and obtained the logger (\verb|logger = logging.getLogger(__name__)|). Added calls like \verb|logger.info|, \verb|logger.debug|, \verb|logger.error| within the \verb|InventoryDB| methods to record actions like initialisation, population, getting/updating quantities, and any exceptions caught.
+		\item Modified \verb|gui.py|'s main startup logic. After getting \verb|rows| and \verb|cols| from \verb|config.get_grid_config()|, it now instantiates the database using these dimensions: \verb|self.db = database.InventoryDB(rows, cols)| (within \verb|PathfinderGUI.__init__|), and then calls \verb|self.db.populate_random_data()|. (Note: \verb|database.py| \verb|__init__| was simplified again to accept dimensions as args).
+		\item Added two new buttons ('Query Stock', 'Update Stock') to the \verb|gui.py| layout, placed below the main control buttons.
+		\item Implemented the corresponding methods \verb|query_stock(self)| and \verb|update_stock(self)| in \verb|PathfinderGUI|. \verb|query_stock| gets the \verb|itemID| from the entry, calls \verb|self.db.get_quantity| and \verb|self.db.get_position|, and displays the result. \verb|update_stock| gets the \verb|itemID|, then creates a \verb|tk.Toplevel| pop-up asking for the new quantity. An inner function \verb|do_update| reads the pop-up entry, calls \verb|self.db.update_quantity|, shows feedback, and closes the pop-up. Basic error handling (\verb|try-except ValueError|) was added.
 	\end{itemize}
-	\item \textbf{Justification:} Improves diagnostics. Ensures DB size matches config (R5.1). Provides manual stock interaction (Partial R3.6).
+	\item \textbf{Justification:} Adding logging is crucial for monitoring and debugging database operations. Linking the database size to the user's configuration (R5.1) ensures consistency. The new GUI buttons provide a way for users (and myself during testing) to directly inspect and modify stock levels (Partial R3.6).
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
-	\item Annotations added: Logging statements throughout \verb|database.py|. Comments for new GUI methods.
-	\item Modular approach: GUI calls DB methods.
-	\item Robustness: Logging aids debugging. Basic error handling for GUI DB calls.
+	\item Annotations added: Logging provides runtime annotation. Added comments explaining the new GUI button logic and the update pop-up.
+	\item Modular approach: DB interaction logic remains in \verb|database.py|, GUI handles triggering and displaying results.
+	\item Robustness: Logging helps diagnostics. Basic error handling added for the new GUI interactions.
 \end{itemize}
 
 \newpage
 \subsubsection*{Placeholder: Iteration 2C Code Implementation Snippets}
-*(User: Insert code snippets for logging in \verb|database.py|, startup changes and new DB methods in \verb|gui.py|.)*
+*(User: Insert code snippets for logging in \verb|database.py|, the GUI startup modifications, and the \verb|query_stock|/ \verb|update_stock| methods in \verb|gui.py|.)*
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 5C: Database initialised based on config size. DB ops logged. GUI buttons allow manual stock query/update.
+Prototype Version 5C: The database is now correctly sized based on the user's startup configuration. Database actions are logged. Users can manually check the stock of any location using the 'Query Stock' button or change it using the 'Update Stock' button and pop-up.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1999,33 +1600,34 @@ Prototype Version 5C: Database initialised based on config size. DB ops logged. 
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.2C.1 & Query valid \verb|itemID|. & Correct stock/pos shown. Log entry created. & *(User: Fill)* & ? \\
+		T3.2C.1 & Enter valid \verb|itemID|, click Query Stock & Correct stock \& position shown. \verb|INFO|/`DEBUG` log in file. & *(User: Fill)* & ? \\
 		\hline
-		T3.2C.2 & Update valid \verb|itemID| to 50. Query again. & Update success msg. Log entry. Query shows 50. & *(User: Fill)* & ? \\
+		T3.2C.2 & Enter valid \verb|itemID|, click Update, enter 50, confirm. Query again. & Update success msg. \verb|INFO| log. Query shows 50. & *(User: Fill)* & ? \\
 		\hline
-		T3.2C.3 & Test Query/Update with invalid ID/qty. & GUI error shown. Error logged. & *(User: Fill)* & ? \\
+		T3.2C.3 & Enter invalid ID/qty for Query/Update. & GUI error shown. \verb|ERROR| log created. & *(User: Fill)* & ? \\
 		\hline
-		T3.2C.4 & Test Query/Update with 15x10 grid. & Works with range 1-150. & *(User: Fill)* & ? \\
+		T3.2C.4 & Config 15x10 grid. Query/Update \verb|itemID| 150. & Works correctly. & *(User: Fill)* & ? \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 2C (Cerf)}
 \end{table}
-\textbf{Tests justification:} Verifies GUI DB interaction features, error handling, config integration, and logging.
+\textbf{Tests justification:} Verified the new GUI features for database interaction work correctly (T3.2C.1, T3.2C.2), handle errors (T3.2C.3), respect the configured grid size (T3.2C.4), and that logging is functional (implicit in checking logs for T3.2C.1, T3.2C.3).
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item *(User: Describe fixes, e.g., "Ensured database connection closed after query.")*
+	\item *(User: Describe fixes, e.g., "Made sure the `InventoryDB` instance `self.db` was created *after* getting dimensions in `gui.py`.")*
 \end{itemize}
 
 \subsubsection{Validation}
 \begin{itemize}
-	\item Added basic \verb|try-except ValueError| for GUI inputs for Query/Update.
+	\item Added \verb|try-except ValueError| around \verb|int()| conversions for \verb|itemID| and quantity inputs in the new GUI methods (\verb|query_stock|, \verb|update_stock|).
 \end{itemize}
+\textbf{Justification:} Provides basic robustness against non-numeric input in the GUI elements used for DB interaction.
 
 \subsubsection{Qodana Analysis}
 \begin{itemize}
 	\item \textbf{Commit:} \verb|4f965e2|
-	\item Issues identified: *(User: Describe issues)*
+	\item Issues identified: *(User: Describe issues, e.g., "Complexity in \verb|update_stock| method due to nested function and pop-up logic.")*
 	\item Resolved issues: *(User: Describe fixes)*
 \end{itemize}
 
@@ -2036,9 +1638,9 @@ Prototype Version 5C: Database initialised based on config size. DB ops logged. 
 
 \subsubsection{Review:}
 \begin{itemize}
-	\item Database correctly linked to config size and instrumented with logging.
-	\item Manual GUI interactions provide necessary control for testing/management.
-	\item Ready for the final step: automatic stock checking and decrementing.
+	\item Successfully linked the database initialisation to the user's configuration and added useful logging.
+	\item The manual query/update features provide necessary control and visibility into the stock levels.
+	\item The groundwork is fully complete. The final step is to use the stock data to influence path planning by checking stock in \verb|add_point| and decrementing after finding a path.
 \end{itemize}
 
 \newpage
@@ -2051,27 +1653,27 @@ Prototype Version 5C: Database initialised based on config size. DB ops logged. 
 	\item \textbf{GitHub Commit:} \verb|d1b168e|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item Added \verb|decrement_quantity(self, item_id)| method to \verb|InventoryDB|. Includes check \verb|WHERE Quantity > 0| in SQL \verb|UPDATE|.
-		\item Modified \verb|gui.py|'s \verb|add_point|: Now calls \verb|self.db.get_quantity(index)|. If quantity $\le 0$, shows warning and returns early. Otherwise proceeds.
-		\item Modified \verb|gui.py|'s \verb|_find_path_thread|: After successful pathfinding ('if path:'), loops through \verb|self.points| (intermediate points), converts each \verb|(x, y)| to \verb|itemID|, and calls \verb|self.db.decrement_quantity(item_id)|.
+		\item Added the \verb|decrement_quantity(self, item_id)| method to the \verb|InventoryDB| class in \verb|database.py|. This method first validates the \verb|item_id|. It retrieves the current quantity and only proceeds if it's greater than 0. It then executes an \verb|UPDATE| statement that subtracts 1 from the quantity, crucially including \verb|AND Quantity > 0| in the \verb|WHERE| clause as an extra safeguard against race conditions (though less likely here) or going below zero. It logs the action.
+		\item Modified the \verb|add_point| method in \verb|gui.py|. Now, after validating the entered \verb|itemID|'s range, it calls \verb|self.db.get_quantity(index)|. If the returned quantity is not found (\verb|None|) or is $\le 0$, it displays a specific warning message in the \verb|self.output_text| area ("Warning: Skipping position X - Out of stock") and importantly, it uses \verb|return| to stop the method before the point is added to \verb|self.points|. If the stock is $>0$, it proceeds as before, also displaying the available stock in the confirmation message.
+		\item Modified the \verb|_find_path_thread| method in \verb|gui.py|. Within the block where a successful path is found (\verb|if path:|), I added a loop that iterates through the intermediate points stored in \verb|self.points|. For each \verb|(x, y)| tuple in \verb|self.points|, it converts it back to the corresponding \verb|itemID| using \verb|spa.coordinates_to_index| and then calls \verb|self.db.decrement_quantity(item_id)|. This happens *after* the path is found but *before* the results are put onto the queue.
 	\end{itemize}
-	\item \textbf{Justification:} Implements core stock checking (R2.3) by preventing adding zero-stock items and simulating item collection by decrementing stock post-pathfinding.
+	\item \textbf{Justification:} This implements the core stock checking requirement (R2.3). The check in \verb|add_point| prevents users from planning routes through unavailable locations. The decrement in \verb|_find_path_thread| simulates the act of "picking" the items once a route is confirmed, making the stock levels dynamic.
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
-	\item Annotations added: Docstring for \verb|decrement_quantity|. Comments explain stock check/decrement logic in \verb|gui.py|.
-	\item Modular approach: Decrement logic in \verb|database.py|, check/trigger logic in \verb|gui.py|.
-	\item Robustness: Stock check prevents planning with unavailable items. Decrement check prevents negative stock.
+	\item Annotations added: Added a docstring for \verb|decrement_quantity|. Added comments clarifying the stock check logic in \verb|add_point| and the purpose of the decrement loop in \verb|_find_path_thread|.
+	\item Modular approach: The database operation (\verb|decrement_quantity|) remains encapsulated in \verb|database.py|. The GUI orchestrates *when* to check stock (in \verb|add_point|) and *when* to decrement (in \verb|_find_path_thread|).
+	\item Robustness: Prevents selection of zero-stock items. Decrement logic includes checks to avoid negative quantities. The separation into check-before-add and decrement-after-path makes the simulation logic clearer.
 \end{itemize}
 
 \newpage
 \subsubsection*{Placeholder: Iteration 2D Code Implementation Snippets}
-*(User: Insert code snippets for \verb|decrement_quantity|, modified \verb|add_point| and \verb|_find_path_thread| here.)*
+*(User: Insert code snippets for \verb|decrement_quantity| in \verb|database.py|, the modified \verb|add_point| and \verb|_find_path_thread| in \verb|gui.py| here.)*
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 6: Application fully implements stock checking. Prevents adding zero-stock items. Decrements stock for intermediate points after path calculation.
+Prototype Version 6 (End of Sprint Cerf): The application now fully functional regarding stock checking. It prevents adding points with zero stock. When a path is found, the stock for the intermediate points on that path is reduced by one.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -2080,145 +1682,142 @@ Prototype Version 6: Application fully implements stock checking. Prevents addin
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.2D.1 & Find \verb|itemID| X with stock=1. Add X. Find Path. Query X. & Point added (Stock: 1). Path found. Query shows Stock=0. & *(User: Fill)* & ? \\
+		T3.2D.1 & Find \verb|itemID| X with stock=1. Add X. Find Path. Query X. & Point added ("Stock: 1"). Path found. Query shows Stock=0. & *(User: Fill)* & ? \\
 		\hline
-		T3.2D.2 & Try Add Point X again (stock=0). & Warning "Skipping...Out of stock" shown. Point not added. & *(User: Fill)* & ? \\
+		T3.2D.2 & Try Add Point X again (now stock=0). & Warning "Skipping...Out of stock" shown. Point not added to \verb|self.points|. & *(User: Fill)* & ? \\
 		\hline
-		T3.2D.3 & Add points Y, Z (stock>0). Find Path. Check stock Y, Z. & Path found. Stock Y--, Stock Z--. & *(User: Fill)* & ? \\
+		T3.2D.3 & Add points Y, Z (stock>0). Find Path. Check stock Y, Z via Query. & Path found. Query shows stock Y--, Z--. & *(User: Fill)* & ? \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 2D (Cerf)}
 \end{table}
-\textbf{Tests justification:} Verifies stock check prevents adding zero stock (T3.2D.2) and stock decrement works correctly after pathfinding (T3.2D.1, T3.2D.3), fulfilling R2.3.
+\textbf{Tests justification:} These tests directly verify the core stock checking requirement (R2.3): preventing adding zero-stock items (T3.2D.2) and ensuring stock is correctly decremented for items on a successful path (T3.2D.1, T3.2D.3).
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item *(User: Describe fixes, e.g., "Ensured decrement loop in \verb|_find_path_thread| only targets intermediate points.")*
+	\item *(User: Describe fixes, e.g., "Ensured the loop in \verb|_find_path_thread| iterated over \verb|self.points| not the full \verb|path| variable to avoid decrementing start/end nodes.")*
 \end{itemize}
 
 \subsubsection{Validation}
-	\begin{itemize}
-		\item \textbf{Stock Availability Check: Check 'quantity > 0' added to \verb|gui.add_point|.
-		\item \textbf{Decrement Safety: Check 'Quantity > 0' added to \verb|database.decrement_quantity|.
-	\end{itemize}
-	\textbf{Justification:} Implements crucial stock level validation (R2.3).
-	
-	\subsubsection{Qodana Analysis}
-	\begin{itemize}
-		\item \textbf{Commit:} \verb|d1b168e| (End of sprint)
-		\item Issues identified: *(User: Describe final issues)*
-		\item Resolved issues: *(User: Describe final fixes)*
-	\end{itemize}
-	
-	--- % Placeholder for Qodana Screenshot
-	\subsubsection*{Placeholder: Qodana Screenshot Iteration 2D (Cerf)}
-	*(User: Please insert Qodana screenshot here.)*
-	---
-	
-	\subsubsection{Review:}
-	\begin{itemize}
-		\item Stock checking and decrementing logic successfully implemented, completing the core goal (R2.3).
-		\item The application now simulates a more realistic warehouse scenario.
-		\item Sprint complete. All planned functionality (including the crucial stock check) is now present.
-	\end{itemize}
-	
-	\clearpage
+\begin{itemize}
+	\item Stock Availability Check: Check \verb|quantity > 0| implemented in \verb|gui.add_point|.
+	\item Decrement Safety: Check \verb|current_qty > 0| and SQL \verb|WHERE Quantity > 0| used in \verb|database.decrement_quantity|.
+\end{itemize}
+\textbf{Justification:} Implements the crucial requirement for stock level validation during planning and ensures stock doesn't go negative.
 
+\subsubsection{Qodana Analysis}
+\begin{itemize}
+	\item \textbf{Commit:} \verb|d1b168e| (End of sprint)
+	\item Issues identified: *(User: Describe final issues)*
+	\item Resolved issues: *(User: Describe final fixes)*
+\end{itemize}
+
+--- % Placeholder for Qodana Screenshot
+\subsubsection*{Placeholder: Qodana Screenshot Iteration 2D (Cerf)}
+*(User: Please insert Qodana screenshot here.)*
+---
+
+\subsubsection{Review:}
+\begin{itemize}
+	\item This final iteration successfully tied everything together by implementing the stock check in point addition and the automatic decrementing.
+	\item The logic placement seems correct - check before committing to add the point, decrement only after confirming a path exists.
+	\item The core goals for this sprint related to database integration and stock checking have now been met.
+\end{itemize}
+
+\clearpage
 \subsection{Sprint Review and Retrospective}
-	
-	\subsubsection{Accomplishments}
-	\begin{itemize}
-		\item Completed OCSP-011: Coordinate system abstracted to 1-N \verb|itemID|.
-		\item Completed OCSP-012: Path sequence display uses 1-N \verb|itemID|s.
-		\item Completed OCSP-013: Startup configuration screen for grid size implemented.
-		\item Completed OCSP-014: Threading added for responsive pathfinding.
-		\item Completed OCSP-015: Database module \verb|database.py| created.
-		\item Completed OCSP-016: SQLite database schema defined and created.
-		\item Completed OCSP-017: Database population with random stock implemented.
-		\item Completed OCSP-018: Stock checking prevents adding zero-stock points; stock decrementing implemented post-pathfinding.
-		\item Completed OCSP-019: GUI includes manual stock query/update and feedback on stock levels.
-		\item Completed OCSP-020: Added comments and logging; unified validation.
-	\end{itemize}
-	
-	\subsubsection{Challenges \& Learning}
-	\begin{itemize}
-		\item Threading Complexity: Implementing thread communication via \verb|queue| and safe GUI updates via \verb|root.after| was the most complex part, requiring careful debugging and testing to ensure responsiveness without race conditions.
-		\item Coordinate System Management: Ensuring the 1-N \verb|itemID| to \verb|(row, col)| conversion was correct and consistently applied across input, database storage, internal logic, and output display was prone to off-by-one errors if not handled carefully. Centralised helper functions were key.
-		\item Logic Placement: Deciding exactly where to implement the stock check (before adding the point) and the stock decrement (after finding the path) involved considering the desired workflow and simulation accuracy.
-	\end{itemize}
-	
-	\subsubsection{Final testing}
-	These final tests verify the integration of all features added in Sprint Cerf: config screen, threading, 1-N indexing, database population, manual query/update, and the automatic stock check/decrement logic. Test T3.F.3 specifically confirms the zero-stock prevention works as required.
-	*(User should perform and document final stakeholder testing)*
-	
-	\begin{table}[htbp] % Final Testing Table
-		\centering
-		\begin{tabularx}{\textwidth}{|l|X|p{3.5cm}|p{3.5cm}|c|}
-			\hline
-			\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
-			\hline
-			T3.F.1 & Config 15x15. Add valid, in-stock \verb|itemID| 113, add 200. Find path. & GUI responsive, path found/displayed using \verb|itemID|s 1 $ \rightarrow $ ... $ \rightarrow $ 113 $ \rightarrow $ ... $ \rightarrow $ 200 $ \rightarrow $ ... $ \rightarrow $ 225. Stock for 113, 200 decremented. & *(User: Fill)* & ? \\
-			\hline
-			T3.F.2 & Config 10x10. Query \verb|itemID| 1. Update stock to 0. Query again. & Query shows initial stock > 0. Update confirms. Second query shows 0. & *(User: Fill)* & ? \\
-			\hline
-			T3.F.3 & With stock=0 for \verb|itemID| 1, try Add Point \verb|itemID| 1. & Error "Skipping position 1 - Out of stock" shown. Point *not* added to path list. & *(User: Fill)* & ? \\
-			\hline
-			T3.F.4 & Test config screen validation (text, 0, >50). & Error messageboxes shown, prevents confirmation. & *(User: Fill)* & ? \\
-			\hline
-		\end{tabularx}
-		\caption{Final Testing results for Sprint Cerf}
-	\end{table}
-	
-	\newpage
-	
-	\subsubsection{Testing Summary}
-	*(User to update based on actual testing)*
-	\begin{table}[htbp]
-		\centering
-		\begin{tabular}{|l|c|}
-			\hline
-			\textbf{Metric} & \textbf{Count} \\
-			\hline
-			Total tests conducted & X \\ % Adjust based on actuals
-			\hline
-			Tests passed & Y \\
-			\hline
-			Tests failed/Partially Met & Z \\
-			\hline
-			Fixed issues (identified \& addressed this sprint) & *(User: List count)* \\
-			\hline
-		\end{tabular}
-		\caption{Sprint Cerf testing summary}
-	\end{table}
-	\textbf{Justification:} Testing was performed across all mini-iterations, verifying each new feature component (threading, config, indexing, DB setup, DB methods, stock check/decrement) and their integration. Tests confirmed key requirements (R2.3, R3.4, R5.1, R6.1) were met. The iterative approach allowed issues to be caught and fixed within the sprint.
-		
+
+\subsubsection{Accomplishments}
+\begin{itemize}
+	\item Completed OCSP-011 \& OCSP-012 (Partial): Coordinate system successfully abstracted to 1-N \verb|itemID| for user input and path sequence output.
+	\item Completed OCSP-013: Added startup configuration screen for grid size.
+	\item Completed OCSP-014: Implemented threading for responsive pathfinding.
+	\item Completed OCSP-015, OCSP-016, OCSP-017: Created \verb|database.py| module, set up \verb|SQLite| database schema, and implemented random data population.
+	\item Completed OCSP-018: Implemented stock checking logic to prevent adding zero-stock items and stock decrementing after successful pathfinding.
+	\item Completed OCSP-019: Added GUI features for manual stock query/update and stock level feedback.
+	\item Completed OCSP-020: Added comments and logging throughout; unified validation.
+\end{itemize}
+
+\subsubsection{Challenges \& Learning}
+\begin{itemize}
+	\item Implementing the threading correctly with \verb|queue| and \verb|root.after| was definitely the most technically challenging part, as getting inter-thread communication with a GUI right can be fiddly. Extensive logging helped debug this.
+	\item Managing the coordinate system conversion (1-N vs \verb|(row, col)|) required careful attention across multiple files (\verb|gui.py|, \verb|spa.py|, \verb|database.py|) to ensure consistency. Using helper functions was essential here.
+	\item Deciding on the exact workflow for stock checking (check on add, decrement after find) involved thinking through the simulation logic to make it realistic.
+\end{itemize}
+
+\subsubsection{Final testing}
+These final tests were designed to ensure all the new components (config, threading, indexing, database, stock logic) worked together correctly and met the sprint goals. T3.F.3 is particularly important as it verifies the core stock-checking requirement.
+*(User should perform and document final stakeholder testing)*
+
+\begin{table}[htbp] % Final Testing Table
+	\centering
+	\begin{tabularx}{\textwidth}{|l|X|p{3.5cm}|p{3.5cm}|c|}
+		\hline
+		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
+		\hline
+		T3.F.1 & Config 15x15. Add valid, in-stock \verb|itemID| 113, add 200. Find path. & GUI responsive, path found/displayed using \verb|itemID|s 1 $ \rightarrow $ ... $ \rightarrow $ 113 $ \rightarrow $ ... $ \rightarrow $ 200 $ \rightarrow $ ... $ \rightarrow $ 225. Stock for 113, 200 decremented by 1. & *(User: Fill)* & ? \\
+		\hline
+		T3.F.2 & Config 10x10. Query \verb|itemID| 1. Update stock to 0. Query again. & Query shows initial stock $>$ 0. Update confirms. Second query shows 0. & *(User: Fill)* & ? \\
+		\hline
+		T3.F.3 & With stock=0 for \verb|itemID| 1, try Add Point \verb|itemID| 1. & Error "Skipping position 1 - Out of stock" shown. Point *not* added to path list. & *(User: Fill)* & ? \\
+		\hline
+		T3.F.4 & Test config screen validation (text, 0, $>$50). & Error messageboxes shown, prevents confirmation. & *(User: Fill)* & ? \\
+		\hline
+	\end{tabularx}
+	\caption{Final Testing results for Sprint Cerf}
+\end{table}
+
+\newpage
+
+\subsubsection{Testing Summary}
+*(User to update based on actual testing)*
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|c|}
+		\hline
+		\textbf{Metric} & \textbf{Count} \\
+		\hline
+		Total tests conducted & X \\ % Adjust based on actuals
+		\hline
+		Tests passed & Y \\
+		\hline
+		Tests failed/Partially Met & Z \\
+		\hline
+		Fixed issues (identified \& addressed this sprint) & *(User: List count)* \\
+		\hline
+	\end{tabular}
+	\caption{Sprint Cerf testing summary}
+\end{table}
+\textbf{Justification:} Testing was performed across all mini-iterations, verifying each feature component and integration. Final testing confirmed that requirements relating to configuration, responsiveness, usability (numbering), and the core stock checking/decrementing logic were met, demonstrating that testing informed development throughout the sprint.
+
 \subsubsection{Validation}
-\begin{itemize}
-	\item \textbf{Stock Availability Check:} Check 'quantity > 0' implemented in \verb|gui.add_point|.
-	\item \textbf{ItemID Input:} Format (\verb|try-except|) and range (1 to \verb|rows*cols|) validated.
-	\item \textbf{Grid Dimension Input:} Validated for positive integers within range (1-50).
-	\item \textbf{Update Stock Input:} Validated for numeric, non-negative quantity.
-	\item \textbf{Database ItemID:} Internal DB validation (\verb|validate_item_id|) checks range/existence.
-	\item \textbf{Decrement Safety:} Check \verb|Quantity > 0| in \verb|database.decrement_quantity|.
-\end{itemize}
-\textbf{Conclusion:} Comprehensive validation now covers user inputs for configuration, item selection (\verb|itemID| format/range), manual stock updates, and automatically checks stock availability before planning, meeting all relevant validation criteria.
-
+	\begin{itemize}
+		\item \textbf{Stock Availability Check:} Implemented in \verb|gui.add_point| using \verb|db.get_quantity()|.
+		\item \textbf{ItemID Input:} Format (\verb|try-except|) and range (1 to \verb|rows*cols|) validated in \verb|gui.add_point|.
+		\item \textbf{Grid Dimension Input:} Validated for positive integers (1-50) in \verb|config.py|.
+		\item \textbf{Update Stock Input:} Validated for numeric, non-negative quantity in GUI pop-up and DB method.
+		\item \textbf{Database ItemID:} Internal \verb|InventoryDB| methods (\verb|validate_item_id|) check range/existence.
+		\item \textbf{Decrement Safety:} Checks implemented in \verb|db.decrement_quantity|.
+	\end{itemize}
+	\textbf{Conclusion:} Comprehensive validation now covers user inputs for configuration, item selection, manual stock updates, and automatically checks stock availability, meeting all validation criteria.
+	
 \subsubsection{Robustness}
-\begin{itemize}
-	\item \textbf{Concurrency:} Threading model improves GUI responsiveness. Widget disabling during processing prevents user errors. Queue ensures safe inter-thread data transfer.
-	\item \textbf{Database Interaction:} Encapsulated, uses \verb|sqlite3|, includes logging and error handling (\verb|try-except|). Parameterised queries used.
-	\item \textbf{User Feedback:} GUI provides specific feedback for out-of-stock items, invalid inputs, and database operation results.
-	\item \textbf{Configuration:} Adaptable grid size allows flexible use.
-	\item \textbf{Stock Logic:} Prevents planning paths through zero-stock locations and correctly simulates stock depletion.
-\end{itemize}
-\textbf{Conclusion:} Robustness significantly enhanced through threading, comprehensive validation including stock checks, clear user feedback, modular design with error handling, and improved diagnostics via logging.
-
+	\begin{itemize}
+		\item \textbf{Concurrency:} Threading model improves GUI responsiveness; state flag (\verb|self.processing|) prevents overlapping requests.
+		\item \textbf{Database Interaction:} Encapsulated in \verb|database.py|, uses \verb|sqlite3|, includes logging and \verb|try-except| handling. Parameterised queries prevent SQL injection.
+		\item \textbf{User Feedback:} GUI provides specific feedback for out-of-stock items, invalid inputs, and database operations.
+		\item \textbf{Configuration:} Adaptable grid size improves flexibility.
+		\item \textbf{Stock Logic:} Prevents planning with unavailable items and correctly simulates stock depletion.
+	\end{itemize}
+	\textbf{Conclusion:} Robustness is significantly enhanced through threading, comprehensive validation including stock checks, clear user feedback, modular design with error handling, and improved diagnostics via logging.
+		
 \subsubsection{Link}
-This sprint marks a major advancement by successfully integrating the core database functionality and stock management logic (OCSP-015 to OCSP-019), directly addressing stakeholder requirements R2.1-R2.3. The essential preparatory work (OCSP-011, OCSP-013, OCSP-014) also substantially improved usability, flexibility, and performance (Req R3.4, R5.1, R6.1). The application now models a warehouse scenario much more realistically and provides a solid foundation for further development.
+This sprint successfully integrated the core database functionality and stock management logic, directly addressing the need to simulate item availability. The preparatory work on coordinate abstraction, configuration, and threading also substantially improved the application's usability, flexibility, and performance. The application now models a warehouse scenario more realistically and provides a solid, well-structured foundation for future development.
 
-Future sprints could focus on adding obstacle handling (requiring modifications to \verb|spa.py|'s \verb|bfs| method) or allowing saving/loading of configurations and stock levels, further increasing practical utility.
+The next steps could involve adding obstacle handling (modifying \verb|spa.py|'s \verb|bfs| method) or allowing configurations/stock levels to be saved and loaded, further increasing the tool's practical utility.
 
-Future sprints could focus on adding obstacle handling (requiring modifications to \verb|spa.py|'s \verb|bfs| method) or allowing saving/loading of configurations and stock levels, further increasing practical utility.
+\newpage
+
 
 \section{Final Solution Review}
 
