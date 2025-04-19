@@ -217,16 +217,16 @@
 \contentsline {subsection}{\numberline {4.3.2}Purpose}{138}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Sprint Planning Details}{139}{subsection.4.3.3}%
 \contentsline {subsubsection}{Technical Approach}{139}{subsection.4.3.3}%
-\contentsline {subsubsection}{Architecture \& Structural Considerations}{139}{Item.82}%
+\contentsline {subsubsection}{Architecture \& Structural Considerations}{140}{Item.82}%
 \contentsline {subsubsection}{Dependencies}{140}{Item.82}%
 \contentsline {subsection}{\numberline {4.3.4}Development Summary}{141}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 1A: Threading Implementation (Est. 1 Hour)}{141}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 1B: Config Options (Est. 1 Hour)}{141}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 1C: New Numbering System (Est. 1 Hour)}{141}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 2A: Created the database and host class (Est. 0.5 Hours)}{141}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 2B: Added validation methods (Est. 1 Hour)}{141}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 2C: Added logger \& DB-Config Link (Est. 1 Hour)}{142}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 2D: Added the stock decrementer (Est. 1 Hour)}{142}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 1A: Threading Implementation}{141}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 1B: Config Options}{141}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 1C: New Numbering System}{141}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 2A: Created the database and host class}{141}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 2B: Added validation methods}{141}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 2C: Added logger \& DB-Config Link}{142}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 2D: Added the stock decrementer}{142}{subsection.4.3.4}%
 \contentsline {subsection}{\numberline {4.3.5}Sprint Cerf Implementation}{143}{subsection.4.3.5}%
 \contentsline {subsubsection}{Iteration 1A: Threading Implementation}{143}{subsection.4.3.5}%
 \contentsline {subsubsection}{Prototype details:}{145}{subsection.4.3.5}%
@@ -234,64 +234,118 @@
 \contentsline {subsubsection}{Fixes}{145}{table.caption.74}%
 \contentsline {subsubsection}{Validation}{145}{table.caption.74}%
 \contentsline {subsubsection}{Qodana Analysis}{145}{table.caption.74}%
-\contentsline {subsubsection}{Review:}{145}{table.caption.74}%
-\contentsline {subsubsection}{Iteration 1B: Config Options}{146}{table.caption.74}%
-\contentsline {subsubsection}{Prototype details:}{148}{table.caption.74}%
-\contentsline {subsubsection}{Testing:}{148}{table.caption.74}%
-\contentsline {subsubsection}{Fixes}{148}{table.caption.75}%
-\contentsline {subsubsection}{Validation}{148}{table.caption.75}%
-\contentsline {subsubsection}{Qodana Analysis}{148}{table.caption.75}%
-\contentsline {subsubsection}{Review:}{148}{table.caption.75}%
-\contentsline {subsubsection}{Iteration 1C: New Numbering System}{149}{table.caption.75}%
-\contentsline {subsubsection}{Prototype details:}{151}{table.caption.75}%
-\contentsline {subsubsection}{Testing:}{151}{table.caption.75}%
-\contentsline {subsubsection}{Fixes}{151}{table.caption.76}%
-\contentsline {subsubsection}{Validation}{151}{table.caption.76}%
-\contentsline {subsubsection}{Qodana Analysis}{151}{table.caption.76}%
-\contentsline {subsubsection}{Review:}{151}{table.caption.76}%
-\contentsline {subsubsection}{Iteration 2A: Created the database and host class}{152}{table.caption.76}%
-\contentsline {subsubsection}{Prototype details:}{154}{table.caption.76}%
-\contentsline {subsubsection}{Testing:}{154}{table.caption.76}%
-\contentsline {subsubsection}{Fixes}{154}{table.caption.77}%
-\contentsline {subsubsection}{Validation}{154}{table.caption.77}%
-\contentsline {subsubsection}{Qodana Analysis}{154}{table.caption.77}%
-\contentsline {subsubsection}{Review:}{154}{table.caption.77}%
-\contentsline {subsubsection}{Iteration 2B: Added validation methods and population}{155}{table.caption.77}%
-\contentsline {subsubsection}{Prototype details:}{157}{table.caption.77}%
-\contentsline {subsubsection}{Testing:}{157}{table.caption.77}%
-\contentsline {subsubsection}{Fixes}{157}{table.caption.78}%
-\contentsline {subsubsection}{Validation}{157}{table.caption.78}%
-\contentsline {subsubsection}{Qodana Analysis}{157}{table.caption.78}%
-\contentsline {subsubsection}{Review:}{157}{table.caption.78}%
-\contentsline {subsubsection}{Iteration 2C: Added logger \& DB-Config Link}{158}{table.caption.78}%
-\contentsline {subsubsection}{Prototype details:}{160}{table.caption.78}%
-\contentsline {subsubsection}{Testing:}{160}{table.caption.78}%
-\contentsline {subsubsection}{Fixes}{160}{table.caption.79}%
-\contentsline {subsubsection}{Validation}{160}{table.caption.79}%
-\contentsline {subsubsection}{Qodana Analysis}{160}{table.caption.79}%
-\contentsline {subsubsection}{Review:}{160}{table.caption.79}%
-\contentsline {subsubsection}{Iteration 2D: Stock Check \& Decrement Implementation}{161}{table.caption.79}%
-\contentsline {subsubsection}{Prototype details:}{163}{table.caption.79}%
-\contentsline {subsubsection}{Testing:}{163}{table.caption.79}%
-\contentsline {subsubsection}{Fixes}{163}{table.caption.80}%
-\contentsline {subsubsection}{Validation}{163}{table.caption.80}%
-\contentsline {subsubsection}{Qodana Analysis}{163}{table.caption.80}%
-\contentsline {subsubsection}{Review:}{163}{table.caption.80}%
-\contentsline {subsection}{\numberline {4.3.6}Sprint Review and Retrospective}{165}{subsection.4.3.6}%
-\contentsline {subsubsection}{Accomplishments}{165}{subsection.4.3.6}%
-\contentsline {subsubsection}{Challenges \& Learning}{165}{subsection.4.3.6}%
-\contentsline {subsubsection}{Final testing}{165}{subsection.4.3.6}%
-\contentsline {subsubsection}{Testing Summary}{166}{table.caption.81}%
-\contentsline {subsubsection}{Validation}{166}{table.caption.82}%
-\contentsline {subsubsection}{Robustness}{166}{table.caption.82}%
-\contentsline {subsubsection}{Link}{166}{table.caption.82}%
-\contentsline {section}{\numberline {4.4}Final Solution Review}{167}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Solution Overview}{167}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Code Structure and Modularity}{167}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Key Implementation Features}{167}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Comprehensive Validation Strategy}{167}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Maintenance Considerations}{167}{subsection.4.4.5}%
-\contentsline {chapter}{\numberline {5}Evaluation}{168}{chapter.5}%
-\contentsline {chapter}{References}{169}{chapter*.83}%
-\contentsline {chapter}{Appendix \numberline {A}Flowcharts in Mermaid}{171}{appendix.1.A}%
-\contentsline {chapter}{Appendix \numberline {B}Github Commit History}{172}{appendix.1.B}%
+\contentsline {subsubsection}{Review:}{146}{table.caption.74}%
+\contentsline {subsubsection}{Iteration 1B: Config Options}{147}{table.caption.74}%
+\contentsline {subsubsection}{Prototype details:}{149}{table.caption.74}%
+\contentsline {subsubsection}{Testing:}{149}{table.caption.74}%
+\contentsline {subsubsection}{Fixes}{149}{table.caption.75}%
+\contentsline {subsubsection}{Validation}{149}{table.caption.75}%
+\contentsline {subsubsection}{Qodana Analysis}{149}{table.caption.75}%
+\contentsline {subsubsection}{Review:}{149}{table.caption.75}%
+\contentsline {subsubsection}{Iteration 1C: New Numbering System}{150}{table.caption.75}%
+\contentsline {subsubsection}{Prototype details:}{152}{table.caption.75}%
+\contentsline {subsubsection}{Testing:}{152}{table.caption.75}%
+\contentsline {subsubsection}{Fixes}{152}{table.caption.76}%
+\contentsline {subsubsection}{Validation}{152}{table.caption.76}%
+\contentsline {subsubsection}{Qodana Analysis}{152}{table.caption.76}%
+\contentsline {subsubsection}{Review:}{152}{table.caption.76}%
+\contentsline {subsubsection}{Iteration 2A: Created the database and host class}{153}{table.caption.76}%
+\contentsline {subsubsection}{Prototype details:}{155}{table.caption.76}%
+\contentsline {subsubsection}{Testing:}{155}{table.caption.76}%
+\contentsline {subsubsection}{Fixes}{155}{table.caption.77}%
+\contentsline {subsubsection}{Validation}{155}{table.caption.77}%
+\contentsline {subsubsection}{Qodana Analysis}{155}{table.caption.77}%
+\contentsline {subsubsection}{Review:}{155}{table.caption.77}%
+\contentsline {subsubsection}{Iteration 2B: Added validation methods and population}{156}{table.caption.77}%
+\contentsline {subsubsection}{Prototype details:}{158}{table.caption.77}%
+\contentsline {subsubsection}{Testing:}{158}{table.caption.77}%
+\contentsline {subsubsection}{Fixes}{158}{table.caption.78}%
+\contentsline {subsubsection}{Validation}{158}{table.caption.78}%
+\contentsline {subsubsection}{Qodana Analysis}{158}{table.caption.78}%
+\contentsline {subsubsection}{Review:}{158}{table.caption.78}%
+\contentsline {subsubsection}{Iteration 2C: Added logger \& DB-Config Link}{159}{table.caption.78}%
+\contentsline {subsubsection}{Prototype details:}{161}{table.caption.78}%
+\contentsline {subsubsection}{Testing:}{161}{table.caption.78}%
+\contentsline {subsubsection}{Fixes}{161}{table.caption.79}%
+\contentsline {subsubsection}{Validation}{161}{table.caption.79}%
+\contentsline {subsubsection}{Qodana Analysis}{161}{table.caption.79}%
+\contentsline {subsubsection}{Review:}{161}{table.caption.79}%
+\contentsline {subsubsection}{Iteration 2D: Stock Check \& Decrement Implementation}{162}{table.caption.79}%
+\contentsline {subsubsection}{Prototype details:}{164}{table.caption.79}%
+\contentsline {subsubsection}{Testing:}{164}{table.caption.79}%
+\contentsline {subsubsection}{Fixes}{164}{table.caption.80}%
+\contentsline {subsubsection}{Validation}{164}{table.caption.80}%
+\contentsline {subsubsection}{Qodana Analysis}{164}{table.caption.80}%
+\contentsline {subsubsection}{Review:}{164}{table.caption.80}%
+\contentsline {subsection}{\numberline {4.3.6}Sprint Review and Retrospective}{166}{subsection.4.3.6}%
+\contentsline {subsubsection}{Accomplishments}{166}{subsection.4.3.6}%
+\contentsline {subsubsection}{Challenges \& Learning}{166}{subsection.4.3.6}%
+\contentsline {subsubsection}{Final testing}{166}{subsection.4.3.6}%
+\contentsline {subsubsection}{Testing Summary}{167}{table.caption.81}%
+\contentsline {subsubsection}{Validation}{167}{table.caption.82}%
+\contentsline {subsubsection}{Robustness}{167}{table.caption.82}%
+\contentsline {subsubsection}{Link}{167}{table.caption.82}%
+\contentsline {section}{\numberline {4.4}Sprint Dijkstra}{168}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Tasks}{168}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Explanation}{168}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Sprint Planning Details}{169}{subsection.4.4.3}%
+\contentsline {subsubsection}{Technical Approach}{169}{subsection.4.4.3}%
+\contentsline {subsubsection}{Architecture \& Structural Considerations}{169}{Item.86}%
+\contentsline {subsubsection}{Dependencies}{169}{Item.86}%
+\contentsline {subsection}{\numberline {4.4.4}Development Summary}{169}{subsection.4.4.4}%
+\contentsline {subsubsection}{Iteration 1: Diagnosing and Reverting Threading (Est. 1 Hour)}{169}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Sprint Dijkstra Implementation}{170}{subsection.4.4.5}%
+\contentsline {subsubsection}{Iteration 1: Stabilisation via Threading Revert}{170}{subsection.4.4.5}%
+\contentsline {subsubsection}{Prototype details:}{176}{lstnumber.-6.308}%
+\contentsline {subsubsection}{Testing:}{176}{lstnumber.-6.308}%
+\contentsline {subsubsection}{Review:}{176}{table.caption.84}%
+\contentsline {subsubsection}{Link}{176}{table.caption.84}%
+\contentsline {section}{\numberline {4.5}Sprint Engelbart}{177}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Tasks}{177}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Purpose}{177}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Sprint Planning Details}{178}{subsection.4.5.3}%
+\contentsline {subsubsection}{Technical Approach}{178}{subsection.4.5.3}%
+\contentsline {subsubsection}{Architecture \& Structural Considerations}{178}{Item.89}%
+\contentsline {subsubsection}{Dependencies}{178}{Item.89}%
+\contentsline {subsection}{\numberline {4.5.4}Development Summary}{179}{subsection.4.5.4}%
+\contentsline {subsubsection}{Iteration 1: Visualisation Foundation (Est. 1.5 Hours)}{179}{subsection.4.5.4}%
+\contentsline {subsubsection}{Iteration 2: Core Visualisation Implementation \& Refinement (Est. 2.5 Hours)}{179}{subsection.4.5.4}%
+\contentsline {subsubsection}{Iteration 3: Main GUI Simplification \& Interaction Polish (Est. 1.5 Hours)}{179}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Sprint Engelbart Implementation}{180}{subsection.4.5.5}%
+\contentsline {subsubsection}{Iteration 1: Visualisation Foundation}{180}{subsection.4.5.5}%
+\contentsline {subsubsection}{Prototype details:}{182}{subsection.4.5.5}%
+\contentsline {subsubsection}{Testing:}{182}{subsection.4.5.5}%
+\contentsline {subsubsection}{Fixes}{182}{table.caption.86}%
+\contentsline {subsubsection}{Validation}{182}{table.caption.86}%
+\contentsline {subsubsection}{Review:}{182}{table.caption.86}%
+\contentsline {subsubsection}{Iteration 2: Core Visualisation Implementation \& Refinement}{183}{table.caption.86}%
+\contentsline {subsubsection}{Prototype details:}{185}{table.caption.86}%
+\contentsline {subsubsection}{Testing:}{185}{table.caption.86}%
+\contentsline {subsubsection}{Fixes}{185}{table.caption.87}%
+\contentsline {subsubsection}{Validation}{185}{table.caption.87}%
+\contentsline {subsubsection}{Review:}{185}{table.caption.87}%
+\contentsline {subsubsection}{Iteration 3: Main GUI Simplification \& Interaction Polish}{186}{table.caption.87}%
+\contentsline {subsubsection}{Prototype details:}{188}{table.caption.87}%
+\contentsline {subsubsection}{Testing:}{188}{table.caption.87}%
+\contentsline {subsubsection}{Fixes}{188}{table.caption.88}%
+\contentsline {subsubsection}{Validation}{188}{table.caption.88}%
+\contentsline {subsubsection}{Review:}{188}{table.caption.88}%
+\contentsline {subsection}{\numberline {4.5.6}Sprint Review and Retrospective}{189}{subsection.4.5.6}%
+\contentsline {subsubsection}{Accomplishments}{189}{subsection.4.5.6}%
+\contentsline {subsubsection}{Challenges \& Learning}{189}{subsection.4.5.6}%
+\contentsline {subsubsection}{Final testing}{189}{subsection.4.5.6}%
+\contentsline {subsubsection}{Testing Summary}{190}{table.caption.89}%
+\contentsline {subsubsection}{Validation}{190}{table.caption.90}%
+\contentsline {subsubsection}{Robustness}{190}{table.caption.90}%
+\contentsline {subsubsection}{Qodana Analysis}{191}{table.caption.90}%
+\contentsline {subsubsection}{Link}{191}{table.caption.90}%
+\contentsline {section}{\numberline {4.6}Final Solution Review}{192}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Solution Overview}{192}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Code Structure and Modularity}{192}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Key Implementation Features}{192}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Comprehensive Validation Strategy}{192}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}Maintenance Considerations}{192}{subsection.4.6.5}%
+\contentsline {chapter}{\numberline {5}Evaluation}{193}{chapter.5}%
+\contentsline {chapter}{References}{194}{chapter*.91}%
+\contentsline {chapter}{Appendix \numberline {A}Flowcharts in Mermaid}{196}{appendix.1.A}%
+\contentsline {chapter}{Appendix \numberline {B}Annotated prototypes}{197}{appendix.1.B}%
