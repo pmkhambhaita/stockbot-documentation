@@ -339,12 +339,14 @@
 \contentsline {subsubsection}{Robustness}{190}{table.caption.90}%
 \contentsline {subsubsection}{Qodana Analysis}{191}{table.caption.90}%
 \contentsline {subsubsection}{Link}{191}{table.caption.90}%
-\contentsline {section}{\numberline {4.6}Final Solution Review}{192}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Solution Overview}{192}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Code Structure and Modularity}{192}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Key Implementation Features}{192}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Comprehensive Validation Strategy}{192}{subsection.4.6.4}%
-\contentsline {subsection}{\numberline {4.6.5}Maintenance Considerations}{192}{subsection.4.6.5}%
+\contentsline {section}{\numberline {4.6}Sprint Floyd}{192}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Sprint Gates}{192}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Final Solution Review}{192}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Solution Overview}{192}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Code Structure and Modularity}{192}{subsection.4.8.2}%
+\contentsline {subsection}{\numberline {4.8.3}Key Implementation Features}{192}{subsection.4.8.3}%
+\contentsline {subsection}{\numberline {4.8.4}Comprehensive Validation Strategy}{192}{subsection.4.8.4}%
+\contentsline {subsection}{\numberline {4.8.5}Maintenance Considerations}{192}{subsection.4.8.5}%
 \contentsline {chapter}{\numberline {5}Evaluation}{193}{chapter.5}%
 \contentsline {chapter}{References}{194}{chapter*.91}%
 \contentsline {chapter}{Appendix \numberline {A}Flowcharts in Mermaid}{196}{appendix.1.A}%

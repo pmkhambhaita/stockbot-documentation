@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.6)  19 APR 2025 20:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.6)  19 APR 2025 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3391,7 +3391,7 @@ Appendix B.
 
 ]
 No file thesis.ind.
-runsystem(latexminted cleantemp  --timestamp 20250419204145 2EF71E68B4AD97F6304
+runsystem(latexminted cleantemp  --timestamp 20250419210448 2EF71E68B4AD97F6304
 80BCEBC1842FB)...disabled (restricted).
 
 (thesis.aux (Declaration/declaration.aux) (Acknowledgement/acknowledgement.aux)
@@ -3406,36 +3406,62 @@ L3 programming layer <2025-01-18>
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 795B1176CFAD30E4AF365BFC801F30D6;23455.
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: 795B1176CFAD30E4AF365BFC801F30D6;23455
+(rerunfilecheck)             After:  5D821574CEA8A91726D70FA41034F448;23737.
  ) 
 Here is how much of TeX's memory you used:
- 35536 strings out of 473522
- 727644 string characters out of 5714610
+ 35543 strings out of 473522
+ 727746 string characters out of 5714610
  1908197 words of memory out of 5000000
  56192 multiletter control sequences out of 15000+600000
  644963 words of font info for 217 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,12n,121p,1625b,3019s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\pmkha\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt
-1000.pk><C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/type1/public/incons
-olata/Inconsolata-zi4b.pfb><C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/pmkha/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/pmkha/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/pmkha/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/pmkha/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/pmkha/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/pmkha/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/pmkha/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/pmkha/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/pmkha/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/pmkha/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/pmkha/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/pmkha/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on thesis.pdf (203 pages, 10625406 bytes).
+
+pdfTeX warning (dest): name{subsection.4.6.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.4.6.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.4.6.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.4.6.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.4.6.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+ <C:\Users\pmkha\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt10
+00.pk><C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsol
+ata/Inconsolata-zi4b.pfb><C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/pmkha/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/pmkha/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/pmkha/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/pmkha/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/pmkha/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/pmkha/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/pmkha/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/pmkha/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/pmkha/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/pmkha/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmri10.pfb><C:/Users/pmkha/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmri12.pfb><C:/Users/pmkha/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmsy10.pfb>
+Output written on thesis.pdf (203 pages, 10626280 bytes).
 PDF statistics:
- 3442 PDF objects out of 3580 (max. 8388607)
- 1691 named destinations out of 1728 (max. 500000)
+ 3451 PDF objects out of 3580 (max. 8388607)
+ 1698 named destinations out of 1728 (max. 500000)
  49341 words of extra memory for PDF output out of 51595 (max. 10000000)
 
