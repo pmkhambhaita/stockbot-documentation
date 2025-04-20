@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.6)  20 APR 2025 16:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.6)  20 APR 2025 16:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3726,14 +3726,13 @@ Underfull \hbox (badness 6284) in paragraph at lines 15--15
  []
 
 
-Underfull \hbox (badness 4144) in paragraph at lines 17--17
-[]|\T1/lmr/m/n/10 (+20) Configure a 101\TS1/lmr/m/n/10 (+20) Ö\T1/lmr/m/n/10 (+
-20) 50
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+\T1/lmr/m/n/10 (+20) us-ing con-fig-u-ra-tion
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 17--17
-\T1/lmr/m/n/10 (+20) grid us-ing con-fig-u-ra-
+Underfull \hbox (badness 1107) in paragraph at lines 19--19
+[]|\T1/lmr/m/n/10 (+20) Point 25 is omit-ted from
  []
 
 
@@ -3742,79 +3741,84 @@ Underfull \hbox (badness 3189) in paragraph at lines 23--23
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 27--27
-\T1/lmr/m/n/10 (+20) in points field for a
+Underfull \hbox (badness 5260) in paragraph at lines 25--25
+[]|\T1/lmr/m/n/10 (+20) Enter start or end
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
 []|\T1/lmr/m/n/10 (+20) Enter comma-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
 \T1/lmr/m/n/10 (+20) separated points
  []
 
 
-Underfull \hbox (badness 4429) in paragraph at lines 29--29
+Underfull \hbox (badness 4429) in paragraph at lines 27--27
 \T1/lmr/m/n/10 (+20) put: Please en-ter valid
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 31--31
+Underfull \hbox (badness 1990) in paragraph at lines 29--29
 \T1/lmr/m/n/10 (+20) 10\TS1/lmr/m/n/10 (+20) Ö\T1/lmr/m/n/10 (+20) 10 grid with
  all
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--33
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
 []|\T1/lmr/m/n/10 (+20) Error mes-sage: "Er-ror:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--37
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
 \T1/lmr/m/n/10 (+20) (min-i-mum pos-si-ble
  []
 
 
-Underfull \hbox (badness 3000) in paragraph at lines 37--37
+Underfull \hbox (badness 3000) in paragraph at lines 35--35
 []|\T1/lmr/m/n/10 (+20) Tests min-i-mum bound-ary
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--39
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
 \T1/lmr/m/n/10 (+20) (max-i-mum al-lowed
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 39--39
+Underfull \hbox (badness 1584) in paragraph at lines 37--37
 []|\T1/lmr/m/n/10 (+20) Tests max-i-mum bound-ary
  []
 
 
-Underfull \hbox (badness 4819) in paragraph at lines 41--41
+Underfull \hbox (badness 4819) in paragraph at lines 39--39
 []|\T1/lmr/m/n/10 (+20) Set all in-ter-me-di-ate
  []
 
 
-Underfull \hbox (badness 5548) in paragraph at lines 41--41
+Underfull \hbox (badness 5548) in paragraph at lines 39--39
 []|\T1/lmr/m/n/10 (+20) Tests com-pre-hen-sive val-i-
  []
 
 
-Underfull \hbox (badness 3780) in paragraph at lines 43--43
+Underfull \hbox (badness 3780) in paragraph at lines 41--41
 \T1/lmr/m/n/10 (+20) chang-ing in-ven-tory con-di-
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 45--45
+Underfull \hbox (badness 1264) in paragraph at lines 43--43
 []|\T1/lmr/m/n/10 (+20) System should re-store ex-
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 51--51
+Underfull \hbox (badness 1675) in paragraph at lines 49--49
 \T1/lmr/m/n/10 (+20) per-for-mance in worst-case
+ []
+
+
+Overfull \hbox (3.74487pt too wide) in paragraph at lines 49--49
+[]|\T1/lmr/m/n/10 (-20) Performance| 
  []
 
 
@@ -3823,254 +3827,249 @@ Overfull \hbox (3.74487pt too wide) in paragraph at lines 51--51
  []
 
 
-Overfull \hbox (3.74487pt too wide) in paragraph at lines 53--53
-[]|\T1/lmr/m/n/10 (-20) Performance| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
 []|\T1/lmr/m/n/10 (+20) Enter points with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
 \T1/lmr/m/n/10 (+20) mixed spac-ing "5,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
 []|\T1/lmr/m/n/10 (+20) System should cor-rectly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
 \T1/lmr/m/n/10 (+20) parse in-put and cal-cu-
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 55--55
+Underfull \hbox (badness 2818) in paragraph at lines 53--53
 \T1/lmr/m/n/10 (+20) late path through points
  []
 
 
-Underfull \hbox (badness 1102) in paragraph at lines 63--63
+Underfull \hbox (badness 1102) in paragraph at lines 61--61
 []|\T1/lmr/m/n/10 (+20) Tests low stock de-tec-tion,
  []
 
 
-Underfull \hbox (badness 1253) in paragraph at lines 65--65
+Underfull \hbox (badness 1253) in paragraph at lines 63--63
 []|\T1/lmr/m/n/10 (+20) Dialogue should show up-
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 65--65
+Underfull \hbox (badness 1052) in paragraph at lines 63--63
 \T1/lmr/m/n/10 (+20) dated quan-tity value, not
  []
 
 
-Underfull \hbox (badness 5490) in paragraph at lines 67--67
+Underfull \hbox (badness 5490) in paragraph at lines 65--65
 []|\T1/lmr/m/n/10 (+20) Set quan-tity of an
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
 \T1/lmr/m/n/10 (+20) item to max-i-mum
  []
 
 
-Underfull \hbox (badness 7064) in paragraph at lines 67--67
+Underfull \hbox (badness 7064) in paragraph at lines 65--65
 \T1/lmr/m/n/10 (+20) 32-bit in-te-ger value
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
 \T1/lmr/m/n/10 (+20) grid with ob-sta-cles
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
 []|\T1/lmr/m/n/10 (+20) System should find the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--71
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
 \T1/lmr/m/n/10 (+20) then im-me-di-ately
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--71
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
 []|\T1/lmr/m/n/10 (+20) Either cur-rent op-er-a-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
 []|\T1/lmr/m/n/10 (+20) System should cor-rectly
  []
 
 
-Underfull \hbox (badness 4479) in paragraph at lines 77--77
+Underfull \hbox (badness 4479) in paragraph at lines 75--75
 \T1/lmr/m/n/10 (+20) cal-cu-late path nav-i-gat-ing
  []
 
 
-Underfull \hbox (badness 1762) in paragraph at lines 79--79
+Underfull \hbox (badness 1762) in paragraph at lines 77--77
 \T1/lmr/m/n/10 (+20) points along a path
  []
 
 
-Underfull \hbox (badness 1661) in paragraph at lines 79--79
+Underfull \hbox (badness 1661) in paragraph at lines 77--77
 []|\T1/lmr/m/n/10 (+20) Tests stock de-ple-tion sce-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
 []|\T1/lmr/m/n/10 (+20) Load con-fig-u-ra-tion
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 85--85
+Underfull \hbox (badness 1221) in paragraph at lines 83--83
 \T1/lmr/m/n/10 (+20) switch to small grid
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 85--85
+Underfull \hbox (badness 1237) in paragraph at lines 83--83
 \T1/lmr/m/n/10 (+20) (5\TS1/lmr/m/n/10 (+20) Ö\T1/lmr/m/n/10 (+20) 5), then bac
 k to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
 []|\T1/lmr/m/n/10 (+20) Tests han-dling of min-i-
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 89--89
-\T1/lmr/m/n/10 (+20) grid vi-su-al-iza-tion for
+Underfull \hbox (badness 1354) in paragraph at lines 87--87
+\T1/lmr/m/n/10 (+20) grid vi-su-al-i-sa-tion for
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 91--91
-\T1/lmr/m/n/10 (+20) grid vi-su-al-iza-tion for
+Underfull \hbox (badness 1354) in paragraph at lines 89--89
+\T1/lmr/m/n/10 (+20) grid vi-su-al-i-sa-tion for
  []
 
 
-Underfull \hbox (badness 2564) in paragraph at lines 93--93
+Underfull \hbox (badness 2564) in paragraph at lines 91--91
 []|\T1/lmr/m/n/10 (+20) Verify colour cod-ing
  []
 
 
-Underfull \hbox (badness 3536) in paragraph at lines 93--93
-\T1/lmr/m/n/10 (+20) in grid vi-su-al-iza-tion
+Underfull \hbox (badness 4048) in paragraph at lines 91--91
+\T1/lmr/m/n/10 (+20) in grid vi-su-al-i-sa-tion
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 95--95
-\T1/lmr/m/n/10 (+20) grid vi-su-al-iza-tion for
+Underfull \hbox (badness 1354) in paragraph at lines 93--93
+\T1/lmr/m/n/10 (+20) grid vi-su-al-i-sa-tion for
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 97--97
-\T1/lmr/m/n/10 (+20) grid vi-su-al-iza-tion for
+Underfull \hbox (badness 1354) in paragraph at lines 95--95
+\T1/lmr/m/n/10 (+20) grid vi-su-al-i-sa-tion for
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 99--99
-\T1/lmr/m/n/10 (+20) grid vi-su-al-iza-tion for
+Underfull \hbox (badness 1354) in paragraph at lines 97--97
+\T1/lmr/m/n/10 (+20) grid vi-su-al-i-sa-tion for
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 102--102
+Underfull \hbox (badness 1097) in paragraph at lines 99--99
 []|\T1/lmr/m/n/10 (+20) Button should change ap-
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 106--106
+Underfull \hbox (badness 1057) in paragraph at lines 103--103
 \T1/lmr/m/n/10 (+20) start/end, yel-low for user
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 106--106
+Underfull \hbox (badness 1688) in paragraph at lines 103--103
 []|\T1/lmr/m/n/10 (+20) Tests vi-sual guid-ance el-e-
  []
 
 
-Underfull \hbox (badness 1215) in paragraph at lines 110--110
+Underfull \hbox (badness 1215) in paragraph at lines 107--107
 []|\T1/lmr/m/n/10 (+20) Label should show "To-tal
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 114--114
+Underfull \hbox (badness 1221) in paragraph at lines 111--111
 []|\T1/lmr/m/n/10 (+20) Enter mul-ti-ple items
  []
 
 
-Underfull \hbox (badness 3826) in paragraph at lines 116--116
+Underfull \hbox (badness 3826) in paragraph at lines 113--113
 []|\T1/lmr/m/n/10 (+20) Help win-dow should dis-
  []
 
 
-Underfull \hbox (badness 6725) in paragraph at lines 118--118
+Underfull \hbox (badness 6725) in paragraph at lines 115--115
 \T1/lmr/m/n/10 (+20) "5,999,15" in 10\TS1/lmr/m/n/10 (+20) Ö\T1/lmr/m/n/10 (+20
 ) 10
  []
 
 
-Overfull \hbox (3.74487pt too wide) in paragraph at lines 130--130
+Overfull \hbox (3.74487pt too wide) in paragraph at lines 127--127
 []|\T1/lmr/m/n/10 (-20) Performance| 
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 132--132
+Underfull \hbox (badness 1270) in paragraph at lines 129--129
 []|\T1/lmr/m/n/10 (+20) Test sys-tem mem-ory
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 132--132
+Underfull \hbox (badness 2181) in paragraph at lines 129--129
 []|\T1/lmr/m/n/10 (+20) Memory us-age should re-
  []
 
 
-Overfull \hbox (3.74487pt too wide) in paragraph at lines 132--132
+Overfull \hbox (3.74487pt too wide) in paragraph at lines 129--129
 []|\T1/lmr/m/n/10 (-20) Performance| 
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 134--134
-\T1/lmr/m/n/10 (+20) grid vi-su-al-iza-tion for
+Underfull \hbox (badness 1354) in paragraph at lines 131--131
+\T1/lmr/m/n/10 (+20) grid vi-su-al-i-sa-tion for
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 137--137
+Underfull \hbox (badness 2310) in paragraph at lines 133--133
 []|\T1/lmr/m/n/10 (+20) After ob-sta-cle place-
  []
 
 
-Underfull \hbox (badness 4205) in paragraph at lines 137--137
+Underfull \hbox (badness 4205) in paragraph at lines 133--133
 []|\T1/lmr/m/n/10 (+20) Tests data rep-re-sen-ta-tion
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 139--139
+Underfull \hbox (badness 4303) in paragraph at lines 135--135
 []|\T1/lmr/m/n/10 (+20) Enter float-ing point
  []
 
 
-Underfull \hbox (badness 2671) in paragraph at lines 141--141
+Underfull \hbox (badness 2671) in paragraph at lines 137--137
 []|\T1/lmr/m/n/10 (+20) Enter neg-a-tive num-
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 143--143
+Underfull \hbox (badness 1147) in paragraph at lines 139--139
 \T1/lmr/m/n/10 (+20) tity 1, ex-e-cute path
  []
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 143--143
+Underfull \hbox (badness 1048) in paragraph at lines 139--139
 []|\T1/lmr/m/n/10 (+20) Tests com-pre-hen-sive stock
  []
 
 
-Overfull \hbox (15.05156pt too wide) in alignment at lines 9--145
+Overfull \hbox (15.05156pt too wide) in alignment at lines 9--141
  [] [] [] [] [] [] 
  []
 
@@ -4114,7 +4113,7 @@ Appendix B.
 
 ]
 No file thesis.ind.
-runsystem(latexminted cleantemp  --timestamp 20250420162958 2EF71E68B4AD97F6304
+runsystem(latexminted cleantemp  --timestamp 20250420165731 2EF71E68B4AD97F6304
 80BCEBC1842FB)...disabled (restricted).
 
 (thesis.aux (Declaration/declaration.aux) (Acknowledgement/acknowledgement.aux)
@@ -4157,7 +4156,7 @@ KTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/pmkha/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/pmkha/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/pmkha/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/lm/lmsy7.pfb>
-Output written on thesis.pdf (206 pages, 9041785 bytes).
+Output written on thesis.pdf (206 pages, 9041625 bytes).
 PDF statistics:
  3485 PDF objects out of 3580 (max. 8388607)
  1691 named destinations out of 1728 (max. 500000)
