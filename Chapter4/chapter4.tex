@@ -1130,7 +1130,7 @@ Prototype Version 4A: The pathfinding operation now runs in a background thread.
 	\end{tabularx}
 	\caption{Testing results for Iteration 1A (Cerf)}
 \end{table}
-\textbf{Tests justification:} These tests focused specifically on the responsiveness improvement (T3.1A.1) and ensuring the locking mechanism prevented issues with concurrent requests (T3.1A.2). This was the reason I implemented threading, hence I needed to test whether the implementation was worth it.
+These tests focused specifically on the responsiveness improvement (T3.1A.1) and ensuring the locking mechanism prevented issues with concurrent requests (T3.1A.2). This was the reason I implemented threading, hence I needed to test whether the implementation was worth it.
 
 \subsubsection{Fixes}
 \begin{itemize}
@@ -1144,23 +1144,10 @@ Prototype Version 4A: The pathfinding operation now runs in a background thread.
 	\item No changes to user input validation in this iteration.
 \end{itemize}
 
-\subsubsection{Qodana Analysis}
-\begin{itemize}
-	\item \textbf{Commit:} \verb|aa510bec|
-	\item Issues identified: *(User: Describe issues, e.g., "Qodana might flag the complexity of the thread management methods.")*
-	\item Resolved issues: *(User: Describe fixes or justification for not fixing, e.g., "Complexity is inherent in threading; comments added for clarity.")*
-\end{itemize}
-
---- % Placeholder for Qodana Screenshot
-\subsubsection*{Placeholder: Qodana Screenshot Iteration 1A (Cerf)}
-*(User: Please insert Qodana screenshot here using \LaTeX\ figure environment.)*
----
-
 \subsubsection{Review:}
 \begin{itemize}
 	\item Implementing threading was a success and definitely makes the application feel more professional and usable, especially if pathfinding were to take longer.
-	\item It did add noticeable complexity to the \verb|gui.py| code, making good comments essential.
-	\item With responsiveness addressed, I could now move onto the user-facing configuration and numbering changes.
+	\item It did add noticeable complexity to the \verb|gui.py| code, and I did omit some comments, which I intend to change.
 \end{itemize}
 
 \newpage
@@ -1213,30 +1200,20 @@ Prototype Version 4B: When I run the application, it first shows the "Grid Confi
 	\end{tabularx}
 	\caption{Testing results for Iteration 1B (Cerf)}
 \end{table}
-\textbf{Tests justification:} These tests confirmed the config window works as expected (T3.1B.1) and handles invalid user input correctly (T3.1B.2), ensuring R5.1 is properly implemented.
+These tests confirmed the config window works as expected (T3.1B.1) and handles invalid user input correctly (T3.1B.2)
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item *(User: Describe fixes, e.g., "Initially forgot to destroy the config window on confirm, fixed in \verb|validate_and_save|.")*
+	\item I had implemented the Spinbox but forgot to import it from tkinter, this was easily remedied by adding the import statement to the top of the file.
+	\item I had an issue where the window did not render correctly as I was not destroying the config window but relying on the user to close it themselves. This was fixed by correctly destroying the config window after the parameters were inserted.
 \end{itemize}
 
 \subsubsection{Validation}
 \begin{itemize}
-	\item \textbf{Grid Dimension Input:} Validated in \verb|ConfigWindow.validate_and_save| for positive integers using \verb|try-except ValueError| and range check (1-50).
-\end{itemize}
-\textbf{Justification:} Ensures the application receives valid dimensions to operate correctly.
-
-\subsubsection{Qodana Analysis}
-\begin{itemize}
-	\item \textbf{Commit:} \verb|9f2047f|
-	\item Issues identified: *(User: Describe issues)*
-	\item Resolved issues: *(User: Describe fixes)*
+	\item \textbf{Grid Dimension Input:} Added a restriction for positive integers using \verb|try-except ValueError| and a range check (1-50). This is so the application receives valid dimensions to work properly.
 \end{itemize}
 
---- % Placeholder for Qodana Screenshot
-\subsubsection*{Placeholder: Qodana Screenshot Iteration 1B (Cerf)}
-*(User: Please insert Qodana screenshot here.)*
----
+
 
 \subsubsection{Review:}
 \begin{itemize}
@@ -1257,7 +1234,7 @@ Prototype Version 4B: When I run the application, it first shows the "Grid Confi
 	\begin{itemize}
 		\item To make specifying locations easier than using '(row, col)', I implemented a 1-N numbering scheme. I added two helper functions to \verb|spa.py|: \verb|index_to_coordinates(index, cols)| and \verb|coordinates_to_index(row, col, cols)|. These handle the math for converting between the 1-based \verb|itemID| (which I called 'index' here) and the 0-based internal \verb|(row, col)| tuple.
 		\item In \verb|gui.py|, I changed the \verb|add_point| method significantly. It now expects a single integer input ('index'). It first validates this index is within the range 1 to 'rows*cols'. If valid, it calls \verb|spa.index_to_coordinates| to get the internal '(x, y)' coordinates needed for the backend validation (\verb|spa.validate_point|) and for storing in the \verb|self.points| list. The success message now confirms "Added position X".
-		\item I also updated the \verb|_check_path_results| method in \verb|gui.py|. When a path is found (as a list of '(row, col)' tuples), it now iterates through this path and uses \verb|spa.coordinates_to_index' to convert each step back into an 'itemID' before creating the path sequence string (e.g., "1 $ \rightarrow $ ... $ \rightarrow $ 100").
+		\item I also updated the \verb|_check_path_results| method in \verb|gui.py|. When a path is found (as a list of '(row, col)' tuples), it now iterates through this path and uses \verb|spa.coordinates_to_index| to convert each step back into an 'itemID' before creating the path sequence string (e.g., "1 $ \rightarrow $ ... $ \rightarrow $ 100").
 		\item I added a \verb|ttk.Label| (\verb|self.range_label|) to the GUI, positioned below the entry field, which dynamically displays the valid input range (e.g., "Enter position (1-100)") based on the configured \verb|rows| and \verb|cols|.
 		\item Finally, I updated the error messages returned by \verb|spa.validate_point| to be slightly more generic ("Position out of bounds", "Cannot use start/end point") as the GUI handles displaying the specific 'itemID' or '(row, col)' depending on context.
 	\end{itemize}
@@ -1310,17 +1287,7 @@ Prototype Version 4C (End of Group 1): The application now fully uses the 1-N 'i
 \end{itemize}
 \textbf{Justification:} Confirms user input corresponds to a valid location number on the currently configured grid.
 
-\subsubsection{Qodana Analysis}
-\begin{itemize}
-	\item \textbf{Commit:} \verb|a4472fb|
-	\item Issues identified: *(User: Describe issues, e.g., "Possible minor inefficiency in coordinate conversion loops if used heavily" - though unlikely here)*
-	\item Resolved issues: *(User: Describe fixes)*
-\end{itemize}
 
---- % Placeholder for Qodana Screenshot
-\subsubsection*{Placeholder: Qodana Screenshot Iteration 1C (Cerf)}
-*(User: Please insert Qodana screenshot here.)*
----
 
 \subsubsection{Review:}
 \begin{itemize}
@@ -1387,18 +1354,6 @@ Prototype Version 5A: No change in application behaviour yet. However, running t
 \begin{itemize}
 	\item Relies on database schema constraints (\verb|PRIMARY KEY|, \verb|UNIQUE|, \verb|NOT NULL|) for initial data integrity.
 \end{itemize}
-
-\subsubsection{Qodana Analysis}
-\begin{itemize}
-	\item \textbf{Commit:} \verb|022bcdfb|
-	\item Issues identified: *(User: Likely clean for this basic structure)*
-	\item Resolved issues: *(User: Describe fixes or N/A)*
-\end{itemize}
-
---- % Placeholder for Qodana Screenshot
-\subsubsection*{Placeholder: Qodana Screenshot Iteration 2A (Cerf)}
-*(User: Please insert Qodana screenshot here.)*
----
 
 \subsubsection{Review:}
 \begin{itemize}
@@ -1472,18 +1427,6 @@ Prototype Version 5B: Running \verb|database.py| directly now creates and popula
 \end{itemize}
 \textbf{Justification:} Ensures database operations use valid item IDs and data values.
 
-\subsubsection{Qodana Analysis}
-\begin{itemize}
-	\item \textbf{Commit:} \verb|7586cb8|
-	\item Issues identified: *(User: Describe issues, e.g., "Suggested using context managers ('with') more consistently for DB connections" - already done, good.)*
-	\item Resolved issues: *(User: Describe fixes or N/A)*
-\end{itemize}
-
---- % Placeholder for Qodana Screenshot
-\subsubsection*{Placeholder: Qodana Screenshot Iteration 2B (Cerf)}
-*(User: Please insert Qodana screenshot here.)*
----
-
 \subsubsection{Review:}
 \begin{itemize}
 	\item The \verb|InventoryDB| class now contains the essential methods for managing stock data.
@@ -1555,18 +1498,6 @@ Prototype Version 5C: The database is now correctly sized based on the user's st
 \end{itemize}
 \textbf{Justification:} Provides basic robustness against non-numeric input in the GUI elements used for DB interaction.
 
-\subsubsection{Qodana Analysis}
-\begin{itemize}
-	\item \textbf{Commit:} \verb|4f965e2|
-	\item Issues identified: *(User: Describe issues, e.g., "Complexity in \verb|update_stock| method due to nested function and pop-up logic.")*
-	\item Resolved issues: *(User: Describe fixes)*
-\end{itemize}
-
---- % Placeholder for Qodana Screenshot
-\subsubsection*{Placeholder: Qodana Screenshot Iteration 2C (Cerf)}
-*(User: Please insert Qodana screenshot here.)*
----
-
 \subsubsection{Review:}
 \begin{itemize}
 	\item Successfully linked the database initialisation to the user's configuration and added useful logging.
@@ -1636,17 +1567,6 @@ Prototype Version 6 (End of Sprint Cerf): The application now fully functional r
 \end{itemize}
 \textbf{Justification:} Implements the crucial requirement for stock level validation during planning and ensures stock doesn't go negative.
 
-\subsubsection{Qodana Analysis}
-\begin{itemize}
-	\item \textbf{Commit:} \verb|d1b168e| (End of sprint)
-	\item Issues identified: *(User: Describe final issues)*
-	\item Resolved issues: *(User: Describe final fixes)*
-\end{itemize}
-
---- % Placeholder for Qodana Screenshot
-\subsubsection*{Placeholder: Qodana Screenshot Iteration 2D (Cerf)}
-*(User: Please insert Qodana screenshot here.)*
----
 
 \subsubsection{Review:}
 \begin{itemize}
@@ -1701,8 +1621,8 @@ These final tests were designed to ensure all the new components (config, thread
 \newpage
 
 \subsubsection{Testing Summary}
-*(User to update based on actual testing)*
-\begin{table}[htbp]
+
+\begin{table}[!htbp]
 	\centering
 	\begin{tabular}{|l|c|}
 		\hline
@@ -1792,7 +1712,7 @@ Imports for \verb|threading| and \verb|queue| were removed from \verb|gui.py|. N
 
 \subsection{Development Summary}
 
-\subsubsection{Iteration 1: Diagnosing and Reverting Threading (Est. 1 Hour)}
+\subsubsection{Iteration 1: Diagnosing and Reverting Threading}
 \begin{itemize}
 	\item Progress made: Identified threading as the source of instability. Successfully reverted commit \verb|aa510bec| using \verb|git revert dd54ffd --no-edit| (commit \verb|688582d...|). Confirmed removal of related code and restoration of synchronous \verb|find_path| execution. (Achieved OCSP-021)
 	\item Blockers identified: The initial time spent trying (and failing) to debug the threading issues before deciding to revert.
@@ -1866,7 +1786,7 @@ With the application now stable enough to carry on, the next sprint will pick up
 
 \section{Sprint Engelbart}
 
-Following Sprint Dijkstra, where I addressed the critical stability issues by reverting the threading implementation, this sprint, Sprint Engelbart, was entirely focused on improving the user interface. The application was stable, but the path visualisation was still just text output in the main window, and the overall layout felt basic. My goal here was to create a much more professional and user-friendly experience, primarily by implementing a dedicated graphical visualisation window and streamlining the main GUI's controls and workflows based on evaluation and stakeholder expectations.
+Following Sprint Dijkstra, where I addressed the critical stability issues by reverting the threading implementation, this sprint was entirely focused on improving the user interface. The application was stable, but the path visualisation was still just text output in the main window, and the overall layout felt basic. My goal here was to create a much more professional and user-friendly experience, primarily by implementing a dedicated visualisation window and simplifying the main GUI to resemble something more that the stakeholder was expecting.
 
 \subsection{Tasks}
 
@@ -2008,7 +1928,7 @@ Prototype Version 8A: A separate window opens via "Show Grid", displaying a canv
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T5.1.1 & Click "Show Grid" & Separate window opens with canvas & grid/numbers. & *(User: Fill)* & ? \\
+		T5.1.1 & Click "Show Grid" & Separate window opens with canvas \& grid/numbers. & *(User: Fill)* & ? \\
 		\hline
 		T5.1.2 & Find Path & Visualisation window updates (basic drawing). & *(User: Fill)* & ? \\
 		\hline
@@ -2974,26 +2894,7 @@ Final tests confirmed that users can add valid obstacles, which are then correct
 ---
 
 \subsubsection{Link}
-Sprint Gates successfully implemented the final planned feature: obstacle avoidance (OCSP-032 to OCSP-036). By allowing users to define non-traversable locations and modifying the pathfinding algorithms (BFS and A*) to respect them, the application now simulates warehouse environments more realistically. The visualisation was also updated to clearly show these obstacles. Although the implementation is basic due to time constraints (e.g. no clickable items), it fulfills the core requirement.
+Sprint Gates successfully implemented obstacle avoidance (OCSP-032 to OCSP-036). By allowing users to define non-traversable locations and modifying the pathfinding algorithms (BFS and A*) to respect them, the application now simulates warehouse environments more realistically. The visualisation was also updated to clearly show these obstacles. Although the implementation is basic due to time constraints (e.g. no clickable items), it fulfills the core requirement.
 
-This sprint marks the end of the planned development phase for the StockBot application within the scope of my A-Level project. The application now includes configurable grid sizes, multiple pathfinding algorithms (BFS, A*), database integration for stock checking and decrementing, a graphical visualisation window with stock level indicators, and basic obstacle handling. The next stage is the final evaluation and testing of the completed solution.
-
-\newpage
-
-\section{Final Solution Review}
-
-\subsection{Solution Overview}
-Describe the complete solution with reference to requirements from analysis.
-
-\subsection{Code Structure and Modularity}
-Explain the final structure with diagrams if helpful.
-
-\subsection{Key Implementation Features}
-Highlight innovative or complex aspects of the solution.
-
-\subsection{Comprehensive Validation Strategy}
-Summarize the validation approach across the entire project.
-
-\subsection{Maintenance Considerations}
-Explain how the code is designed for future maintenance.
+This sprint marks the end of the development phase for my solution. The application now includes configurable grid sizes, multiple pathfinding algorithms (BFS, A*), database integration for stock checking and decrementing, a graphical visualisation window with stock level indicators, and basic obstacle handling.
 
