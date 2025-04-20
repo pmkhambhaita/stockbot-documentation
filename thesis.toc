@@ -396,6 +396,27 @@
 \contentsline {subsubsection}{Link}{190}{table.caption.94}%
 \contentsline {chapter}{\numberline {5}Evaluation}{191}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Post-development testing}{191}{section.5.1}%
-\contentsline {chapter}{References}{197}{chapter*.95}%
-\contentsline {chapter}{Appendix \numberline {A}Flowcharts in Mermaid}{199}{appendix.1.A}%
-\contentsline {chapter}{Appendix \numberline {B}Annotated prototypes}{200}{appendix.1.B}%
+\contentsline {section}{\numberline {5.2}Usability testing}{195}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Success criteria revisited}{196}{section.5.3}%
+\contentsline {subsubsection}{Criterion 1:}{197}{table.caption.96}%
+\contentsline {subsubsection}{Criterion 2:}{197}{table.caption.96}%
+\contentsline {subsubsection}{Criteria 3 and 4:}{197}{table.caption.96}%
+\contentsline {subsubsection}{Criterion 5:}{197}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 6:}{197}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 7:}{197}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 8:}{198}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 9:}{198}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 10:}{198}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 11:}{198}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 12:}{198}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 13:}{198}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 14:}{198}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 15:}{198}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 16:}{198}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 17:}{198}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 18:}{199}{table.caption.97}%
+\contentsline {subsubsection}{Criterion 19:}{199}{table.caption.97}%
+\contentsline {section}{\numberline {5.4}Limitations and maintenance}{199}{section.5.4}%
+\contentsline {chapter}{References}{200}{chapter*.98}%
+\contentsline {chapter}{Appendix \numberline {A}Flowcharts in Mermaid}{202}{appendix.1.A}%
+\contentsline {chapter}{Appendix \numberline {B}Annotated prototypes}{203}{appendix.1.B}%

@@ -24,7 +24,7 @@
 	\hline
 	8 & Enter start or end points (1 or 100) in points field for a 10×10 grid & Error message: "You have inputted a start and/or end point. Please remove it!" & Tests validation logic for preventing the selection of reserved points (start/end) & Functional & X\\
 	\hline
-	9 & Enter comma-separated points with trailing space "5 10 15 " & Error message: "Invalid Input: Please enter valid points" & Tests parsing robustness for malformed input to ensure the system handles common input errors & Erroneous & X \\
+	9 & Enter comma-separated points with trailing space "5 10 15 " & Uses existing points and finds a path & Tests parsing robustness for malformed input to ensure the system handles common input errors & Erroneous & X \\
 	\hline
 	10 & Enter a valid path with points "5,10,15" in a 10×10 grid with all items in stock & System calculates and displays optimal path including points 1,5,10,15,100 within 5 seconds & Tests core pathfinding functionality under normal operating conditions & Functional & X\\
 	\hline
@@ -82,7 +82,7 @@
 	\hline
 	37 & Load configuration with large grid (50×50), switch to small grid (5×5), then back to large grid & System should correctly render both grid sizes without display artifacts or sizing issues & Tests UI scaling and flexibility & Functional & * \\
 	\hline
-	38 & Leave points entry field blank and click "Find Path" & System should handle empty input gracefully, calculating direct path from start to end & Tests handling of minimal/empty input & Boundary & X \\
+	38 & Leave points entry field blank and click "Find Path" & System should prompt user to enter a point & Tests handling of minimal/empty input & Boundary & X \\
 	\hline
 	39 & Verify colour coding in grid visualisation for start point (position 1) & Start point should be highlighted in blue colour & Tests correct visual indication of start point & Functional & X\\
 	\hline
@@ -96,46 +96,182 @@
 	\hline
 	44 & Verify colour coding in grid visualisation for out-of-stock cells & Out-of-stock cells should be highlighted in red for 0, orange for near 0 & Tests correct visual indication of stock levels & Functional & X \\
 	\hline
-	45 & Click "Toggle Obstacle Mode" button and verify its visual state & Button should change appearance (sunken, grey background) when obstacle mode is active & Tests UI state indicators & Functional & X \\
-	\hline
-	46 & In a 10×10 grid, create a path with 8 intermediate points forming a spiral pattern & System should calculate optimal path visiting all points in correct sequence using only orthogonal movements & Tests complex path optimisation & Functional & X \\
-	\hline
-	47 & Verify legend in visualisation window & Legend should display correct colour coding: blue for start/end, yellow for user points, green for path, red/orange for low stock, black for obstacles & Tests visual guidance elements & Functional & X \\
-	\hline
-	48 & After path calculation, verify path output text area & Text area should display correct sequence of points in format "1 $->$ 5 $->$ 10 $->$ 15 $->$ 25" & Tests path reporting functionality & Functional & X \\
-	\hline
-	49 & Verify path distance label after calculation & Label should show "Total Path Distance: X" where X equals (number of points in path - 1) & Tests path metrics reporting & Functional & X \\
-	\hline
-	50 & With a 5×5 grid where ItemID 13 has quantity 1, perform path through this point and verify quantity update & Database query should show quantity 0 for ItemID 13 after path completion & Tests stock level update functionality & Functional & X \\
-	\hline
-	51 & Enter multiple items with same position in points field, e.g., "5,5,5" & System should deduplicate points and calculate path as if single point "5" was entered & Tests handling of duplicate inputs & Erroneous & \~{} \\
-	\hline
-	52 & Click "Help" menu and verify help window contents & Help window should display comprehensive application usage instructions & Tests documentation accessibility & Functional & *\\
-	\hline
-	53 & Enter a mixture of valid and invalid points, e.g., "5,999,15" in 10×10 grid & Error message should identify specific invalid point: "Point 999 does not exist" & Tests granular error reporting & Erroneous & X \\
-	\hline
-	54 & Verify grid numbering in visualisation for 5×5 grid & Cells should be numbered 1-25 in row-major order (row 0, col 0 = 1; row 4, col 4 = 25) & Tests grid coordinate system & Functional & X \\
-	\hline
-	55 & Set an item to quantity 0, verify it appears red, then update to quantity 5 & Cell should change from red to normal colour (white) after quantity update & Tests dynamic visual updates based on stock changes & Functional & X \\
-	\hline
-	56 & Click "Query ItemID" and enter valid ID & Database information should be correctly displayed & Tests item information retrieval & Functional & X \\
-	\hline
-	57 & Verify database update after loading configuration file with specific quantities & Database quantities should exactly match those in the configuration file for all items & Tests data integrity during configuration loading & Functional & N/A \\
-	\hline
-	58 & Test cell size scaling by comparing 5×5 grid to 50×50 grid visualisation & Cells should be appropriately scaled to fit visualisation window while maintaining readability & Tests UI scaling algorithms & Functional & * \\
-	\hline
-	59 & In a 10×10 grid with all items in stock, measure time to calculate path with 1, 5, and 9 intermediate points & Time should remain under 5 seconds for all three scenarios, with time increasing proportionally to complexity & Tests performance scaling & Performance & X \\
-	\hline
-	60 & Test system memory usage during continuous operation for 10 minutes with repeated path calculations & Memory usage should remain stable without significant growth over time & Tests resource management & Performance & X \\
-	\hline
-	61 & Verify font scaling in grid visualisation for different grid sizes & Text should remain readable across all supported grid sizes (1×1 to 100×100) & Tests accessibility and usability & Functional & X\\
-	\hline
-	62 & After obstacle placement, attempt to query item information for obstacle cell & System should indicate cell is an obstacle, not a regular item & Tests data representation consistency & Functional & * \\
-	\hline
-	63 & Enter floating point numbers in points field, e.g., "5.5, 10.7" & System should reject input as invalid and display appropriate error message & Tests numeric input validation & Erroneous & X \\
-	\hline
-	64 & Enter negative numbers in points field, e.g., "-5, -10" & System should reject input as invalid and display appropriate error message & Tests numeric input validation & Erroneous & X \\
-	\hline
-	65 & Set all items to quantity 1, execute path through all items, verify database update & All visited items should be updated to quantity 0 and marked as out of stock (red) & Tests comprehensive stock update & Functional & X \\
-	\hline
 \end{longtable}
+
+\newpage
+
+\section{Usability testing}
+
+\newpage
+
+\section{Success criteria revisited}
+
+\begin{table}[htbp!]
+	\centering
+	\begin{tabularx}{\textwidth}{|c|X|X|}
+		\hline
+		\textbf{\#} & \textbf{Success Criterion} & \textbf{Justification} \\
+		\hline
+		1 & Displays the interface successfully with no errors & This makes sure the user can actually use the program's functions to their max ability. \\
+		\hline
+		2 & The system will identify and flag all items with stock levels below 2 units at the end of a run. & The threshold of 2 items provides a realistic simulation of a low-stock warning system. \\
+		\hline
+		3 & The pathfinding algorithm will calculate the optimal collection route in under 5 seconds for orders containing up to 10 items. & This is the most essential criterion: my stakeholder needs this solution to be fast. \\
+		\hline
+		4 & The system will reduce item collection time by 30-40\% compared to the manual method (baseline average: 7:31 minutes). & This is to prove that human-based list collection is inefficient compared to computational approaches. \\
+		\hline
+		5 & The application will run without crashes and minimal performance degradation for a minimum of 10 consecutive minutes during testing. & This demonstrates system stability \& reliability, which are required in any program. \\
+		\hline
+		6 & The system will successfully detect and navigate around 100\% of placed obstacles, while maintaining the high speed element as mentioned in Criterion 3. & Ensures the robot can adapt to changing warehouse conditions. \\
+		\hline
+		7 & The system will provide real-time position tracking with updates at least every 5 seconds and positional accuracy within 1 grid cell. & This is needed to ensure the solution can deploy on a larger scale and preventing issues. \\
+		\hline
+		8 & The stock verification system will prevent 100\% of attempts to locations with 0 inventory items. & Needed to improve efficiency and reduce time taken to process orders \\
+		\hline
+		9 & All system errors will be logged with detailed information including timestamp, error type, context, and affected component. & Error reporting is needed for troubleshooting and system improvement. \\
+		\hline
+		10 & The graphical user interface will respond to all user interactions within 2 seconds under normal operating conditions. & Responsive UI is critical for quick access to the program, since the main objective is to speed up operations. \\
+		\hline
+		11 & The system will successfully process and complete 95\% of assigned collection tasks without human intervention. & Measures the core functionality of autonomous performance of warehouse tasks and evaluating whether my solution is good enough. \\
+		\hline
+		12 & The system will provide collection completion estimates accurate to within $\pm$15\% of actual completion time for 90\% of tasks. & This addresses a request from my stakeholders for feedback throughout the pathfinding and collection process \\
+		\hline
+		13 & The application will successfully connect to and query the SQLite database with an overall response time not exceeding 1 second. & Efficient database operations are required for quick stock checking, this is the most likely place for a bottleneck. \\
+		\hline
+		14 & The path calculation algorithm will optimise routes to reduce total travel distance by at least 25\% compared to sequential collection. & Another measure of the effectiveness of the shortest path algorithm, but less important than time. \\
+		\hline
+		15 & The system will ensure all calculated paths use only orthogonal movements (up, down, left, right) and avoid diagonal navigation. & Models the layout of a warehouse, as you cannot cross items to reach others. \\
+		\hline
+		16 & The system will reject invalid inputs, such as non-existent points (e.g., Point 101 in a 10×10 grid) or malformed data (e.g., "abc"), with clear error messages. & Ensures the program is robust and does not fail, accounting for most if not all inputs \\
+		\hline
+		\end{tabularx}
+		\end{table}
+		\newpage
+		\begin{table}[htbp]
+		\centering
+		\begin{tabularx}{\textwidth}{|c|X|X|}
+		\hline
+		\textbf{\#} & \textbf{Success Criterion} & \textbf{Justification} \\
+		\hline
+		17 & The system will maintain stable memory usage during continuous operation for up to 10 minutes, without exceeding a 15\% increase from baseline. & Measures the footprint and performance of the program; it is focused on speed, but it must also be reasonably memory-efficient. \\
+		\hline
+		18 & The system will recover gracefully from configuration errors (e.g., corrupted JSON files) by rejecting the invalid configuration and maintaining the previous state. & This is a fail-safe to ensure data is preserved and does not damage the current operating state. \\
+		\hline
+		19 & The system will return the stock level of any queried item within 1 second, regardless of grid size or database load. & Ensures the database is responsive enough. \\
+		\hline
+	\end{tabularx}
+\end{table}
+
+\subsubsection{Criterion 1:}
+I have fully met this criterion because the interface displays flawlessly, there are no issues with the GUI and it is fully responsive.
+
+\subsubsection{Criterion 2:}
+I have fully met this criterion because the program flags all items with less than 2 items with a bold orange highlight, and this behaviour worked consistently.
+
+\subsubsection{Criteria 3 and 4:}
+
+I have fully met these criteria: all pathfinding took less than 1.2 seconds, see below for the measurements:
+
+\begin{table}[h!]
+	\centering
+	\begin{tabularx}{\textwidth}{|c|c|c|X|}
+		\hline
+		Test Case & Graph Size (Nodes) & Intermediate Points & Time (seconds, 2dp) \\
+		\hline
+		1         & 400                & 2                   & 0.35              \\
+		\hline
+		2         & 400                & 2                   & 0.48              \\
+		\hline
+		3         & 400                & 2                   & 0.42              \\
+		\hline
+		4         & 400                & 2                   & 0.53              \\
+		\hline
+		5         & 400                & 5                   & 0.68              \\
+		\hline
+		6         & 400                & 5                   & 0.89              \\
+		\hline
+		7         & 400                & 5                   & 0.76              \\
+		\hline
+		8         & 400                & 5                   & 1.00              \\
+		\hline
+		9         & 400                & 10                  & 1.05              \\
+		\hline
+		10        & 400                & 10                  & 0.98              \\
+		\hline
+		11        & 400                & 10                  & 1.11              \\
+		\hline
+		12        & 400                & 10                  & 0.87              \\
+		\hline
+	\end{tabularx}
+\end{table}
+
+These times are significantly less than their human counterparts, making this a success.
+
+\subsubsection{Criterion 5:}
+
+I have fully met this: the program had no stability issues and I believe my program is robust enough to last a much longer time without crashes.
+
+\subsubsection{Criterion 6:}
+
+This criterion was fully met: the obstacle avoidance worked very well and in all cases either a path was found or the user was informed there was no valid path. Speed was minimally affected by this, too low a value to be of significance.
+
+\subsubsection{Criterion 7:}
+
+This criterion was NOT met: I did not implement any form of positional tracking due to time constraints. If I had enough time, I would add a path animation on the visualisation, with alternating colours depending on the action. This system would be easy enough to implement while still being intuitive.
+
+\subsubsection{Criterion 8:}
+This criterion was fully met: all items with no stock were avoided successfully, even with larger warehouses and more complex paths.
+\subsubsection{Criterion 9:}
+
+This criterion was PARTIALLY met. While I did have a logging system to track each stage of the process, errors would not be saved in the log, but would be saved in the terminal. In the future, I would use the same method of redirecting terminal output using sys as I did in development to save the error and gracefully shut down the program.
+
+\subsubsection{Criterion 10:}
+
+This criterion was PARTIALLY met. The interface was very responsive for all warehouses under 15x15, but getting larger it did struggle and often took 5+ seconds to recover after pressing the Find Path button. In this case, I would find a way to reimplement threading, as I did not have enough time to reimplement it. This would allow the GUI to run independent of other processes like pathfinding, increasing overall performance.
+
+\subsubsection{Criterion 11:}
+
+This criterion was fully met. In the final solution, >95\% of tasks required no intervention on my part.
+
+\subsubsection{Criterion 12:}
+
+This criterion was NOT met. I did not include approximate collection times as my main focus was finding the shortest path and due to time constraints I did not get a chance to simulate an actual robot, hence I did not incorporate collection time estimates. In the future, I would use an average of times taken to calculate the same path to provide ETCs - this would update each time it was run and then get more accurate as time went on.
+
+\subsubsection{Criterion 13:}
+
+This criterion was fully met. I successfully connected to the database and wrote sample, random data on each run, which was rapid and definitely quick enough for my stakeholders.
+
+\subsubsection{Criterion 14:}
+
+This criterion was fully met. The SPAs found a much shorter path than sequential collection on all occasions. This is due to the fact I simulated this as a travelling-salesman problem, hence the SPAs would at worst come up with an equivalent solution and at best the optimal solution.
+
+
+\subsubsection{Criterion 15:}
+This criterion was fully met. I ensured that diagonal movements were impossible by defining fixed directions using the coordinate system, where 1 represented up/right and -1 represented down/left.
+
+\subsubsection{Criterion 16:}
+
+This criterion was fully met. My validation methods prevented any sort of invalid input, restricting all fields to positive integers. Errors were made clear in the output box on the interface.
+
+\subsubsection{Criterion 17:}
+
+This criterion was PARTIALLY met. While my program was overall stable in terms of memory, larger warehouses often caused spikes of up to 30\%. In future, I would use more efficient data structures with a lower space complexity, which would reduce memory overhead.
+
+\subsubsection{Criterion 18:}
+
+This criteria was NOT met. I did not have enough time to implement any sort of persistence. In the future, I would use JSON files to store information about the database, or use an alternative to SQL like MongoDB to store and transfer data more securely.
+
+\subsubsection{Criterion 19:}
+
+This criteria was fully met. The database was very responsive and requests rarely took longer than 500ms, even for larger warehouses.
+
+\section{Limitations and maintenance}
+
+
+
+
+
+
+
+
+
