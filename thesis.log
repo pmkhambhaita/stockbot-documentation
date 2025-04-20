@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.6)  19 APR 2025 21:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.6)  20 APR 2025 14:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1366,7 +1366,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 \PHD@crest=\box116
-<logoSchool.jpg, id=486, 963.6pt x 963.6pt>
+<logoSchool.jpg, id=542, 963.6pt x 963.6pt>
 File: logoSchool.jpg Graphic file (type jpg)
 <use logoSchool.jpg>
 Package pdftex.def Info: logoSchool.jpg  used on input line 141.
@@ -1390,27 +1390,32 @@ a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./logoSchool.jpg
 \openout2 = `Declaration/declaration.aux'.
 
  (Declaration/declaration.tex
-<IMG_20241213_124653362.jpg, id=495, 1683.28876pt x 1046.91125pt>
+<Images/sigdad.png, id=551, 200.75pt x 105.89563pt>
+File: Images/sigdad.png Graphic file (type png)
+<use Images/sigdad.png>
+Package pdftex.def Info: Images/sigdad.png  used on input line 18.
+(pdftex.def)             Requested size: 149.37848pt x 78.80264pt.
+<IMG_20241213_124653362.jpg, id=553, 1683.28876pt x 1046.91125pt>
 File: IMG_20241213_124653362.jpg Graphic file (type jpg)
 <use IMG_20241213_124653362.jpg>
-Package pdftex.def Info: IMG_20241213_124653362.jpg  used on input line 19.
-(pdftex.def)             Requested size: 248.96162pt x 154.82542pt.
-<IMG_20241213_124653362~2.jpg, id=496, 1242.6425pt x 572.1375pt>
+Package pdftex.def Info: IMG_20241213_124653362.jpg  used on input line 25.
+(pdftex.def)             Requested size: 149.37848pt x 92.89206pt.
+<IMG_20241213_124653362~2.jpg, id=554, 1242.6425pt x 572.1375pt>
 File: IMG_20241213_124653362~2.jpg Graphic file (type jpg)
 <use IMG_20241213_124653362~2.jpg>
-Package pdftex.def Info: IMG_20241213_124653362~2.jpg  used on input line 25.
-(pdftex.def)             Requested size: 248.96162pt x 114.62625pt.
+Package pdftex.def Info: IMG_20241213_124653362~2.jpg  used on input line 31.
+(pdftex.def)             Requested size: 149.37848pt x 68.77576pt.
 )
 
 [2
 
 
 
- <./IMG_20241213_124653362.jpg> <./IMG_20241213_124653362~2.jpg>]
+ <./Images/sigdad.png> <./IMG_20241213_124653362.jpg> <./IMG_20241213_124653362
+~2.jpg>]
 \openout2 = `Acknowledgement/acknowledgement.aux'.
 
-
-(Acknowledgement/acknowledgement.tex)
+ (Acknowledgement/acknowledgement.tex)
 
 [3
 
@@ -1438,7 +1443,7 @@ Package pdftex.def Info: IMG_20241213_124653362~2.jpg  used on input line 25.
 
  (Chapter1/chapter1.tex
 Section 1.
-<Images/warehouse.jpg, id=644, 289.08pt x 151.0443pt>
+<Images/warehouse.jpg, id=718, 289.08pt x 151.0443pt>
 File: Images/warehouse.jpg Graphic file (type jpg)
 <use Images/warehouse.jpg>
 Package pdftex.def Info: Images/warehouse.jpg  used on input line 23.
@@ -1450,7 +1455,7 @@ Package pdftex.def Info: Images/warehouse.jpg  used on input line 23.
 
 
  <./Images/warehouse.jpg>]
-<automation+.png, id=654, 803.0pt x 444.66125pt>
+<automation+.png, id=728, 803.0pt x 444.66125pt>
 File: automation+.png Graphic file (type png)
 <use automation+.png>
 Package pdftex.def Info: automation+.png  used on input line 35.
@@ -1473,7 +1478,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--38
 
 
 [2 <./automation+.png>]
-<CurrentSysModel.png, id=663, 310.15875pt x 674.52pt>
+<CurrentSysModel.png, id=737, 310.15875pt x 674.52pt>
 File: CurrentSysModel.png Graphic file (type png)
 <use CurrentSysModel.png>
 Package pdftex.def Info: CurrentSysModel.png  used on input line 46.
@@ -1482,12 +1487,12 @@ Package pdftex.def Info: CurrentSysModel.png  used on input line 46.
 
 [3 <./CurrentSysModel.png>]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
-0.
+1.
 
 (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
 []|\T1/lmr/m/n/10 (+20) Object-Oriented
  []
 
@@ -1495,38 +1500,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--80
 
 [4{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 114--120
+Underfull \hbox (badness 10000) in paragraph at lines 112--118
 
  []
 
+
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 159.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 159.
 
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
-
- []
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 161.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 161.
-
 
 [7]
 
 [8]
-
-[9]
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
+
+ []
+
+
+
+[9]
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 440--443
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
 
  []
 
@@ -1534,64 +1549,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
 [11]
 
-[12]
+[12])
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 446--449
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
-
- []
-
-File: IMG_20241213_124653362.jpg Graphic file (type jpg)
-<use IMG_20241213_124653362.jpg>
-Package pdftex.def Info: IMG_20241213_124653362.jpg  used on input line 454.
-(pdftex.def)             Requested size: 99.58313pt x 61.93336pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 457--458
-
- []
-
-File: IMG_20241213_124653362~2.jpg Graphic file (type jpg)
-<use IMG_20241213_124653362~2.jpg>
-Package pdftex.def Info: IMG_20241213_124653362~2.jpg  used on input line 461.
-(pdftex.def)             Requested size: 99.58313pt x 45.84177pt.
-
-
-[14]
-
-[15])
-
-[16]
 \openout2 = `Chapter2/chapter2.aux'.
 
  (Chapter2/chapter2.tex
 Section 2.
-<Images/kiva.png, id=769, 843.15pt x 526.96875pt>
+<Images/kiva.png, id=828, 843.15pt x 526.96875pt>
 File: Images/kiva.png Graphic file (type png)
 <use Images/kiva.png>
 Package pdftex.def Info: Images/kiva.png  used on input line 14.
 (pdftex.def)             Requested size: 398.3401pt x 248.96188pt.
 
 
-[17
+[14
 
 
 
 
  <./Images/kiva.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 37--40
+Underfull \hbox (badness 10000) in paragraph at lines 39--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--55
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 54--57
 
  []
 
+
+
+[16]
+
+[17{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{
+C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
 
 
 [18]
@@ -1600,67 +1594,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--55
 
 [20]
 
-[21{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{
-C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
-
+[21]
 
 [22]
 
-[23]
+[23{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.e
+nc}]
 
 [24]
-
-[25]
-
-[26]
-
-[27]
-
-[28]
-
-[29]
-
-[30{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.e
-nc}]
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
 
  []
 
-<Methodology diagram (1).png, id=894, 499.8675pt x 492.84125pt>
+<Methodology diagram (1).png, id=940, 499.8675pt x 492.84125pt>
 File: Methodology diagram (1).png Graphic file (type png)
 <use Methodology diagram (1).png>
-Package pdftex.def Info: Methodology diagram (1).png  used on input line 396.
+Package pdftex.def Info: Methodology diagram (1).png  used on input line 390.
 (pdftex.def)             Requested size: 497.92325pt x 490.94495pt.
 
 
-[31 <./Methodology diagram (1).png>])
+[25 <./Methodology diagram (1).png>])
 
-[32]
+[26]
 \openout2 = `Chapter3/chapter3.aux'.
 
  (Chapter3/chapter3.tex
 Section 3.
-<Images/breakdown1.png, id=906, 359.84438pt x 690.32906pt>
+<Images/breakdown1.png, id=952, 359.84438pt x 690.32906pt>
 File: Images/breakdown1.png Graphic file (type png)
 <use Images/breakdown1.png>
 Package pdftex.def Info: Images/breakdown1.png  used on input line 10.
 (pdftex.def)             Requested size: 248.96162pt x 477.6232pt.
 
 
-[33
+[27
 
 
 
 
  <./Images/breakdown1.png>]
 
-[34]
-<Images/pfoutline.png, id=921, 254.45062pt x 654.19406pt>
+[28]
+<Images/pfoutline.png, id=967, 254.45062pt x 654.19406pt>
 File: Images/pfoutline.png Graphic file (type png)
 <use Images/pfoutline.png>
 Package pdftex.def Info: Images/pfoutline.png  used on input line 43.
 (pdftex.def)             Requested size: 248.96162pt x 640.10759pt.
-<Images/scoutline.png, id=922, 423.08063pt x 743.02594pt>
+<Images/scoutline.png, id=968, 423.08063pt x 743.02594pt>
 File: Images/scoutline.png Graphic file (type png)
 <use Images/scoutline.png>
 Package pdftex.def Info: Images/scoutline.png  used on input line 49.
@@ -1669,58 +1649,58 @@ Package pdftex.def Info: Images/scoutline.png  used on input line 49.
 
 LaTeX Warning: Float too large for page by 77.80103pt on input line 51.
 
-<Images/guioutline.png, id=923, 584.93532pt x 736.25063pt>
+<Images/guioutline.png, id=969, 584.93532pt x 736.25063pt>
 File: Images/guioutline.png Graphic file (type png)
 <use Images/guioutline.png>
 Package pdftex.def Info: Images/guioutline.png  used on input line 55.
 (pdftex.def)             Requested size: 497.92325pt x 626.74843pt.
 
 
-[35 <./Images/pfoutline.png>]
+[29 <./Images/pfoutline.png>]
 
-[36 <./Images/scoutline.png>]
+[30 <./Images/scoutline.png>]
 
-[37 <./Images/guioutline.png>]
+[31 <./Images/guioutline.png>]
 
-[38]
+[32]
 
-[39]
-<Images/classdiag1.png, id=951, 1066.98625pt x 1447.4075pt>
+[33]
+<Images/classdiag1.png, id=997, 1066.98625pt x 1447.4075pt>
 File: Images/classdiag1.png Graphic file (type png)
 <use Images/classdiag1.png>
 Package pdftex.def Info: Images/classdiag1.png  used on input line 122.
 (pdftex.def)             Requested size: 497.92325pt x 675.44489pt.
 
 
-[40 <./Images/classdiag1.png>]
-<Images/top-down-diagram.png, id=958, 319.94531pt x 1433.355pt>
+[34 <./Images/classdiag1.png>]
+<Images/top-down-diagram.png, id=1004, 319.94531pt x 1433.355pt>
 File: Images/top-down-diagram.png Graphic file (type png)
 <use Images/top-down-diagram.png>
 Package pdftex.def Info: Images/top-down-diagram.png  used on input line 130.
 (pdftex.def)             Requested size: 149.37848pt x 669.21523pt.
 
 
-[41 <./Images/top-down-diagram.png>]
-<Images/bfsvdfs.png, id=965, 241.90375pt x 308.15125pt>
+[35 <./Images/top-down-diagram.png>]
+<Images/bfsvdfs.png, id=1011, 241.90375pt x 308.15125pt>
 File: Images/bfsvdfs.png Graphic file (type png)
 <use Images/bfsvdfs.png>
 Package pdftex.def Info: Images/bfsvdfs.png  used on input line 161.
 (pdftex.def)             Requested size: 174.27617pt x 222.01448pt.
 
 
-[42 <./Images/bfsvdfs.png>]
-<Flowcharts/BFS2.png, id=982, 391.4625pt x 937.5025pt>
+[36 <./Images/bfsvdfs.png>]
+<Flowcharts/BFS2.png, id=1028, 391.4625pt x 937.5025pt>
 File: Flowcharts/BFS2.png Graphic file (type png)
 <use Flowcharts/BFS2.png>
 Package pdftex.def Info: Flowcharts/BFS2.png  used on input line 171.
 (pdftex.def)             Requested size: 278.8358pt x 667.80582pt.
 
 
-[43 <./Flowcharts/BFS2.png>]
+[37 <./Flowcharts/BFS2.png>]
 
-[44]
+[38]
 
-[45]
+[39]
 LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 27
 9.
 
@@ -1735,10 +1715,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[46{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4
+[40{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4
 -t1-0.enc}]
 
-[47]
+[41]
 LaTeX Info: Symbol \textasciigrave not provided by
             font family zi4 in TS1 encoding.
             Default family used instead on input line 446.
@@ -1761,6 +1741,24 @@ LaTeX Info: Symbol \textasciigrave not provided by
             Default family used instead on input line 446.
 
 
+[42]
+
+[43]
+
+[44]
+
+[45]
+<Flowcharts/basicastar.png, id=1077, 316.18124pt x 744.53156pt>
+File: Flowcharts/basicastar.png Graphic file (type png)
+<use Flowcharts/basicastar.png>
+Package pdftex.def Info: Flowcharts/basicastar.png  used on input line 533.
+(pdftex.def)             Requested size: 273.8593pt x 644.9198pt.
+
+
+[46 <./Flowcharts/basicastar.png>]
+
+[47]
+
 [48]
 
 [49]
@@ -1768,83 +1766,63 @@ LaTeX Info: Symbol \textasciigrave not provided by
 [50]
 
 [51]
-<Flowcharts/basicastar.png, id=1031, 316.18124pt x 744.53156pt>
-File: Flowcharts/basicastar.png Graphic file (type png)
-<use Flowcharts/basicastar.png>
-Package pdftex.def Info: Flowcharts/basicastar.png  used on input line 529.
-(pdftex.def)             Requested size: 273.8593pt x 644.9198pt.
-
-
-[52 <./Flowcharts/basicastar.png>]
-
-[53]
-
-[54]
-
-[55]
-
-[56]
-
-[57]
-
-[58]
-<Flowcharts/guiflowchart.png, id=1063, 518.6878pt x 470.50781pt>
+<Flowcharts/guiflowchart.png, id=1105, 518.6878pt x 470.50781pt>
 File: Flowcharts/guiflowchart.png Graphic file (type png)
 <use Flowcharts/guiflowchart.png>
 Package pdftex.def Info: Flowcharts/guiflowchart.png  used on input line 731.
 (pdftex.def)             Requested size: 497.92325pt x 451.69672pt.
 
 
-[59 <./Flowcharts/guiflowchart.png>]
-<Flowcharts/dbops1.png, id=1070, 820.06375pt x 1026.83624pt>
+[52 <./Flowcharts/guiflowchart.png>]
+<Flowcharts/dbops1.png, id=1112, 820.06375pt x 1026.83624pt>
 File: Flowcharts/dbops1.png Graphic file (type png)
 <use Flowcharts/dbops1.png>
 Package pdftex.def Info: Flowcharts/dbops1.png  used on input line 741.
 (pdftex.def)             Requested size: 453.11197pt x 567.37828pt.
 
 
-[60 <./Flowcharts/dbops1.png>]
-<Flowcharts/dbinit.png, id=1077, 2551.5325pt x 2083.785pt>
+[53 <./Flowcharts/dbops1.png>]
+<Flowcharts/dbinit.png, id=1119, 2551.5325pt x 2083.785pt>
 File: Flowcharts/dbinit.png Graphic file (type png)
 <use Flowcharts/dbinit.png>
 Package pdftex.def Info: Flowcharts/dbinit.png  used on input line 751.
 (pdftex.def)             Requested size: 497.92325pt x 406.6385pt.
 
 
-[61 <./Flowcharts/dbinit.png>]
-<Flowcharts/dbquery.png, id=1084, 588.1975pt x 1678.27pt>
+[54 <./Flowcharts/dbinit.png>]
+<Flowcharts/dbquery.png, id=1125, 588.1975pt x 1678.27pt>
 File: Flowcharts/dbquery.png Graphic file (type png)
 <use Flowcharts/dbquery.png>
 Package pdftex.def Info: Flowcharts/dbquery.png  used on input line 760.
 (pdftex.def)             Requested size: 199.16626pt x 568.2739pt.
 
 
-[62 <./Flowcharts/dbquery.png>]
-<Flowcharts/dbwrite.png, id=1091, 1588.93625pt x 1995.455pt>
+[55 <./Flowcharts/dbquery.png>]
+<Flowcharts/dbwrite.png, id=1133, 1588.93625pt x 1995.455pt>
 File: Flowcharts/dbwrite.png Graphic file (type png)
 <use Flowcharts/dbwrite.png>
 Package pdftex.def Info: Flowcharts/dbwrite.png  used on input line 769.
 (pdftex.def)             Requested size: 448.12788pt x 562.77321pt.
 
 
-[63 <./Flowcharts/dbwrite.png>]
-<Flowcharts/config1.png, id=1098, 369.38pt x 1026.83624pt>
+[56 <./Flowcharts/dbwrite.png>]
+<Flowcharts/config1.png, id=1140, 369.38pt x 1026.83624pt>
 File: Flowcharts/config1.png Graphic file (type png)
 <use Flowcharts/config1.png>
 Package pdftex.def Info: Flowcharts/config1.png  used on input line 778.
 (pdftex.def)             Requested size: 199.16626pt x 553.65291pt.
 
 
-[64 <./Flowcharts/config1.png>]
-<Flowcharts/json.png, id=1105, 815.045pt x 1029.8475pt>
+[57 <./Flowcharts/config1.png>]
+<Flowcharts/json.png, id=1147, 815.045pt x 1029.8475pt>
 File: Flowcharts/json.png Graphic file (type png)
 <use Flowcharts/json.png>
 Package pdftex.def Info: Flowcharts/json.png  used on input line 788.
 (pdftex.def)             Requested size: 398.3401pt x 503.32542pt.
 
 
-[65 <./Flowcharts/json.png>]
-<Flowcharts/optimisedastar.png, id=1112, 1678.27pt x 5096.03876pt>
+[58 <./Flowcharts/json.png>]
+<Flowcharts/optimisedastar.png, id=1154, 1678.27pt x 5096.03876pt>
 File: Flowcharts/optimisedastar.png Graphic file (type png)
 <use Flowcharts/optimisedastar.png>
 Package pdftex.def Info: Flowcharts/optimisedastar.png  used on input line 798.
@@ -1852,446 +1830,422 @@ Package pdftex.def Info: Flowcharts/optimisedastar.png  used on input line 798.
 (pdftex.def)             Requested size: 199.16626pt x 604.73323pt.
 
 
-[66 <./Flowcharts/optimisedastar.png>]
+[59 <./Flowcharts/optimisedastar.png>]
 
-[67]
-<Images/InitGUI.jpg, id=1129, 2828.5675pt x 2288.55pt>
+[60]
+<Images/InitGUI.jpg, id=1170, 2828.5675pt x 2288.55pt>
 File: Images/InitGUI.jpg Graphic file (type jpg)
 <use Images/InitGUI.jpg>
 Package pdftex.def Info: Images/InitGUI.jpg  used on input line 825.
 (pdftex.def)             Requested size: 497.92325pt x 402.84192pt.
 
 
-[68 <./Images/InitGUI.jpg>]
-<Images/GUI.jpg, id=1135, 2509.375pt x 3063.445pt>
+[61 <./Images/InitGUI.jpg>]
+
+[62]
+<Images/GUI.jpg, id=1181, 2509.375pt x 3063.445pt>
 File: Images/GUI.jpg Graphic file (type jpg)
 <use Images/GUI.jpg>
-Package pdftex.def Info: Images/GUI.jpg  used on input line 897.
+Package pdftex.def Info: Images/GUI.jpg  used on input line 899.
 (pdftex.def)             Requested size: 497.92325pt x 607.8635pt.
 
 
-[69]
+[63 <./Images/GUI.jpg>]
 
-[70 <./Images/GUI.jpg>]
-
-[71]
-<gridvisual.jpg, id=1149, 2988.16376pt x 2970.09625pt>
+[64]
+<gridvisual.jpg, id=1191, 2988.16376pt x 2970.09625pt>
 File: gridvisual.jpg Graphic file (type jpg)
 <use gridvisual.jpg>
-Package pdftex.def Info: gridvisual.jpg  used on input line 960.
+Package pdftex.def Info: gridvisual.jpg  used on input line 962.
 (pdftex.def)             Requested size: 497.92325pt x 494.89398pt.
 
 
-[72 <./gridvisual.jpg>]
+[65 <./gridvisual.jpg>]
 
-[73]
+[66]
 
-[74]
-<Flowcharts/Unified.png, id=1164, 2099.845pt x 3849.38126pt>
+[67]
+<Flowcharts/Unified.png, id=1206, 2099.845pt x 3849.38126pt>
 File: Flowcharts/Unified.png Graphic file (type png)
 <use Flowcharts/Unified.png>
-Package pdftex.def Info: Flowcharts/Unified.png  used on input line 1031.
+Package pdftex.def Info: Flowcharts/Unified.png  used on input line 1032.
 (pdftex.def)             Requested size: 348.54475pt x 638.9384pt.
 
 
-[75 <./Flowcharts/Unified.png>]
-Overfull \hbox (12.61217pt too wide) in alignment at lines 1103--1107
+[68 <./Flowcharts/Unified.png>]
+Overfull \hbox (12.61217pt too wide) in alignment at lines 1104--1108
  [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 5533) in paragraph at lines 1111--1111
+Underfull \hbox (badness 5533) in paragraph at lines 1112--1112
 []|\T1/lmr/m/n/10 (+20) Input "abc" in the
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 1111--1111
+Underfull \hbox (badness 1221) in paragraph at lines 1112--1112
 []|\T1/lmr/m/n/10 (+20) Error mes-sage: "In-valid In-put:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1113--1113
+Underfull \hbox (badness 10000) in paragraph at lines 1114--1114
 \T1/lmr/m/n/10 (+20) us-ing con-fig-u-ra-tion
  []
 
 
-Underfull \hbox (badness 4144) in paragraph at lines 1115--1115
+Underfull \hbox (badness 4144) in paragraph at lines 1116--1116
 []|\T1/lmr/m/n/10 (+20) Configure a 101\TS1/lmr/m/n/10 (+20) Ö\T1/lmr/m/n/10 (+
 20) 50
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 1115--1115
+Underfull \hbox (badness 2293) in paragraph at lines 1116--1116
 \T1/lmr/m/n/10 (+20) grid us-ing con-fig-u-ra-
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 1125--1125
+Underfull \hbox (badness 1024) in paragraph at lines 1126--1126
 \T1/lmr/m/n/10 (+20) in points field for a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1127--1127
+Underfull \hbox (badness 10000) in paragraph at lines 1128--1128
 []|\T1/lmr/m/n/10 (+20) Enter comma-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1127--1127
+Underfull \hbox (badness 10000) in paragraph at lines 1128--1128
 \T1/lmr/m/n/10 (+20) separated points
  []
 
 
-Underfull \hbox (badness 2221) in paragraph at lines 1127--1127
+Underfull \hbox (badness 2221) in paragraph at lines 1128--1128
 \T1/lmr/m/n/10 (+20) with trail-ing comma
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 1127--1127
+Underfull \hbox (badness 1221) in paragraph at lines 1128--1128
 []|\T1/lmr/m/n/10 (+20) Error mes-sage: "In-valid In-put:
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 1129--1129
+Underfull \hbox (badness 1990) in paragraph at lines 1130--1130
 \T1/lmr/m/n/10 (+20) 10\TS1/lmr/m/n/10 (+20) Ö\T1/lmr/m/n/10 (+20) 10 grid with
  all
  []
 
 
-Underfull \hbox (badness 1558) in paragraph at lines 1129--1129
+Underfull \hbox (badness 1558) in paragraph at lines 1130--1130
 []|\T1/lmr/m/n/10 (+20) System cal-cu-lates and dis-plays
  []
 
 
-Underfull \hbox (badness 3872) in paragraph at lines 1129--1129
+Underfull \hbox (badness 3872) in paragraph at lines 1130--1130
 \T1/lmr/m/n/10 (+20) op-ti-mal path in-clud-ing points
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1135--1135
+Underfull \hbox (badness 10000) in paragraph at lines 1136--1136
 \T1/lmr/m/n/10 (+20) (min-i-mum pos-si-ble
  []
 
 
-Underfull \hbox (badness 3000) in paragraph at lines 1135--1135
+Underfull \hbox (badness 3000) in paragraph at lines 1136--1136
 []|\T1/lmr/m/n/10 (+20) Tests min-i-mum bound-ary
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 1137--1137
+Underfull \hbox (badness 1584) in paragraph at lines 1138--1138
 []|\T1/lmr/m/n/10 (+20) Tests max-i-mum bound-ary
  []
 
 
-Underfull \hbox (badness 4819) in paragraph at lines 1139--1139
+Underfull \hbox (badness 4819) in paragraph at lines 1140--1140
 []|\T1/lmr/m/n/10 (+20) Set all in-ter-me-di-ate
  []
 
 
-Underfull \hbox (badness 5548) in paragraph at lines 1139--1139
+Underfull \hbox (badness 5548) in paragraph at lines 1140--1140
 []|\T1/lmr/m/n/10 (+20) Tests com-pre-hen-sive val-i-
  []
 
 
-Underfull \hbox (badness 3780) in paragraph at lines 1141--1141
+Underfull \hbox (badness 3780) in paragraph at lines 1142--1142
 \T1/lmr/m/n/10 (+20) chang-ing in-ven-tory con-di-
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 1149--1149
+Underfull \hbox (badness 1675) in paragraph at lines 1150--1150
 \T1/lmr/m/n/10 (+20) per-for-mance in worst-case
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1153--1153
+Underfull \hbox (badness 10000) in paragraph at lines 1154--1154
 []|\T1/lmr/m/n/10 (+20) Enter points with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1153--1153
+Underfull \hbox (badness 10000) in paragraph at lines 1154--1154
 \T1/lmr/m/n/10 (+20) mixed spac-ing "5,
  []
 
 
-Underfull \hbox (badness 1102) in paragraph at lines 1161--1161
+Underfull \hbox (badness 1102) in paragraph at lines 1162--1162
 []|\T1/lmr/m/n/10 (+20) Tests low stock de-tec-tion,
  []
 
 
-Underfull \hbox (badness 2302) in paragraph at lines 1165--1165
+Underfull \hbox (badness 2302) in paragraph at lines 1166--1166
 \T1/lmr/m/n/10 (+20) to max-i-mum in-te-ger
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1167--1167
+Underfull \hbox (badness 10000) in paragraph at lines 1168--1168
 \T1/lmr/m/n/10 (+20) grid with ob-sta-cles
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1169--1169
+Underfull \hbox (badness 10000) in paragraph at lines 1170--1170
 \T1/lmr/m/n/10 (+20) then im-me-di-ately
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 1171--1171
+Underfull \hbox (badness 3601) in paragraph at lines 1172--1172
 \T1/lmr/m/n/10 (+20) ob-sta-cles and point high-lights
  []
 
 
-Underfull \hbox (badness 1762) in paragraph at lines 1177--1177
+Underfull \hbox (badness 1762) in paragraph at lines 1178--1178
 \T1/lmr/m/n/10 (+20) points along a path
  []
 
 
-Underfull \hbox (badness 1661) in paragraph at lines 1177--1177
+Underfull \hbox (badness 1661) in paragraph at lines 1178--1178
 []|\T1/lmr/m/n/10 (+20) Tests stock de-ple-tion sce-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1183--1183
+Underfull \hbox (badness 10000) in paragraph at lines 1184--1184
 []|\T1/lmr/m/n/10 (+20) Load con-fig-u-ra-tion
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 1183--1183
+Underfull \hbox (badness 1221) in paragraph at lines 1184--1184
 \T1/lmr/m/n/10 (+20) switch to small grid
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 1183--1183
+Underfull \hbox (badness 1237) in paragraph at lines 1184--1184
 \T1/lmr/m/n/10 (+20) (5\TS1/lmr/m/n/10 (+20) Ö\T1/lmr/m/n/10 (+20) 5), then bac
 k to
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 1183--1183
+Underfull \hbox (badness 1147) in paragraph at lines 1184--1184
 []|\T1/lmr/m/n/10 (+20) System should cor-rectly ren-der
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1186--1186
 []|\T1/lmr/m/n/10 (+20) Tests han-dling of min-i-
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 1187--1187
+Underfull \hbox (badness 1107) in paragraph at lines 1188--1188
 \T1/lmr/m/n/10 (+20) grid vi-su-al-iza-tion for
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 1189--1189
+Underfull \hbox (badness 1107) in paragraph at lines 1190--1190
 \T1/lmr/m/n/10 (+20) grid vi-su-al-iza-tion for
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 1191--1191
+Underfull \hbox (badness 1107) in paragraph at lines 1192--1192
 \T1/lmr/m/n/10 (+20) grid vi-su-al-iza-tion for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1191--1191
+Underfull \hbox (badness 10000) in paragraph at lines 1192--1192
 \T1/lmr/m/n/10 (+20) user-specified points
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 1193--1193
+Underfull \hbox (badness 1107) in paragraph at lines 1194--1194
 \T1/lmr/m/n/10 (+20) grid vi-su-al-iza-tion for
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 1195--1195
+Underfull \hbox (badness 1107) in paragraph at lines 1196--1196
 \T1/lmr/m/n/10 (+20) grid vi-su-al-iza-tion for
  []
 
 
-Underfull \hbox (badness 2050) in paragraph at lines 1195--1195
+Underfull \hbox (badness 2050) in paragraph at lines 1196--1196
 []|\T1/lmr/m/n/10 (+20) Obstacle cells should be high-
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 1209--1209
+Underfull \hbox (badness 1688) in paragraph at lines 1210--1210
 []|\T1/lmr/m/n/10 (+20) Tests vi-sual guid-ance el-e-
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 1217--1217
+Underfull \hbox (badness 1221) in paragraph at lines 1218--1218
 []|\T1/lmr/m/n/10 (+20) Enter mul-ti-ple items
  []
 
 
-Underfull \hbox (badness 6725) in paragraph at lines 1221--1221
+Underfull \hbox (badness 6725) in paragraph at lines 1222--1222
 \T1/lmr/m/n/10 (+20) "5,999,15" in 10\TS1/lmr/m/n/10 (+20) Ö\T1/lmr/m/n/10 (+20
 ) 10
  []
 
 
-Underfull \hbox (badness 5374) in paragraph at lines 1231--1231
+Underfull \hbox (badness 5374) in paragraph at lines 1232--1232
 []|\T1/lmr/m/n/10 (+20) Cells should be ap-pro-pri-ately
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 1235--1235
+Underfull \hbox (badness 1270) in paragraph at lines 1236--1236
 []|\T1/lmr/m/n/10 (+20) Test sys-tem mem-ory
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 1237--1237
+Underfull \hbox (badness 1107) in paragraph at lines 1238--1238
 \T1/lmr/m/n/10 (+20) grid vi-su-al-iza-tion for
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 1239--1239
+Underfull \hbox (badness 1331) in paragraph at lines 1240--1240
 \T1/lmr/m/n/10 (+20) points that cre-ate a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1239--1239
+Underfull \hbox (badness 10000) in paragraph at lines 1240--1240
 \T1/lmr/m/n/10 (+20) rect-an-gu-lar pat-tern,
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 1241--1241
+Underfull \hbox (badness 2310) in paragraph at lines 1242--1242
 []|\T1/lmr/m/n/10 (+20) After ob-sta-cle place-
  []
 
 
-Underfull \hbox (badness 4205) in paragraph at lines 1241--1241
+Underfull \hbox (badness 4205) in paragraph at lines 1242--1242
 []|\T1/lmr/m/n/10 (+20) Tests data rep-re-sen-ta-tion
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 1243--1243
+Underfull \hbox (badness 4303) in paragraph at lines 1244--1244
 []|\T1/lmr/m/n/10 (+20) Enter float-ing point
  []
 
 
-Underfull \hbox (badness 2671) in paragraph at lines 1245--1245
+Underfull \hbox (badness 2671) in paragraph at lines 1246--1246
 []|\T1/lmr/m/n/10 (+20) Enter neg-a-tive num-
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 1247--1247
+Underfull \hbox (badness 1147) in paragraph at lines 1248--1248
 \T1/lmr/m/n/10 (+20) tity 1, ex-e-cute path
  []
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 1247--1247
+Underfull \hbox (badness 1048) in paragraph at lines 1248--1248
 []|\T1/lmr/m/n/10 (+20) Tests com-pre-hen-sive stock
  []
 
 
-Overfull \hbox (12.61217pt too wide) in alignment at lines 1107--1249
+Overfull \hbox (12.61217pt too wide) in alignment at lines 1108--1250
  [] [] [] [] [] 
  []
 
-[76] [77] [78] [79] [80] [81])
+[69] [70] [71] [72] [73] [74])
 
-[82]
+[75]
 \openout2 = `Chapter4/chapter4.aux'.
 
  (Chapter4/chapter4.tex
 Section 4.
 
 
-[83
+[76
 
 
 
 
 ]
 
-[84
+[77
 
 ]
 
-[85]
+[78]
 
-[86]
+[79]
 
-[87
+[80
 
 ]
 
-[88]
-
-[89]
-<Images/Source Code Image (2).png, id=1247, 1706.375pt x 1690.315pt>
-File: Images/Source Code Image (2).png Graphic file (type png)
-<use Images/Source Code Image (2).png>
-Package pdftex.def Info: Images/Source Code Image (2).png  used on input line 2
-74.
-(pdftex.def)             Requested size: 497.92325pt x 493.22227pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
-
- []
-
-
-
-[90]
-
-[91 <./Images/Source Code Image (2).png>]
-<Images/Screenshot 2025-03-30 at 11.18.52.png, id=1259, 828.09375pt x 98.3675pt
+[81]
+<Images/Screenshot 2025-03-30 at 11.18.52.png, id=1285, 828.09375pt x 98.3675pt
 >
 File: Images/Screenshot 2025-03-30 at 11.18.52.png Graphic file (type png)
 <use Images/Screenshot 2025-03-30 at 11.18.52.png>
 Package pdftex.def Info: Images/Screenshot 2025-03-30 at 11.18.52.png  used on 
-input line 284.
+input line 251.
 (pdftex.def)             Requested size: 398.3401pt x 47.31941pt.
 
-Underfull \hbox (badness 1881) in paragraph at lines 304--304
+
+[82]
+Underfull \hbox (badness 1881) in paragraph at lines 271--271
 []|\T1/lmr/m/n/10 (+20) Direct path be-tween
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 304--304
+Underfull \hbox (badness 1881) in paragraph at lines 271--271
 []|\T1/lmr/m/n/10 (+20) Direct path be-tween
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 304--304
+Underfull \hbox (badness 1881) in paragraph at lines 271--271
 []|\T1/lmr/m/n/10 (+20) Direct path be-tween
  []
 
 
 
-[92 <./Images/Screenshot 2025-03-30 at 11.18.52.png>]
-<Images/t1.1.png, id=1267, 1196.47pt x 91.34125pt>
+[83 <./Images/Screenshot 2025-03-30 at 11.18.52.png>]
+<Images/t1.1.png, id=1297, 1196.47pt x 91.34125pt>
 File: Images/t1.1.png Graphic file (type png)
 <use Images/t1.1.png>
-Package pdftex.def Info: Images/t1.1.png  used on input line 319.
+Package pdftex.def Info: Images/t1.1.png  used on input line 299.
 (pdftex.def)             Requested size: 497.92325pt x 38.01321pt.
-<Images/t1.2.png, id=1268, 634.37pt x 91.34125pt>
+<Images/t1.2.png, id=1298, 634.37pt x 91.34125pt>
 File: Images/t1.2.png Graphic file (type png)
 <use Images/t1.2.png>
-Package pdftex.def Info: Images/t1.2.png  used on input line 326.
+Package pdftex.def Info: Images/t1.2.png  used on input line 306.
 (pdftex.def)             Requested size: 497.92325pt x 71.69606pt.
-<Images/t1.3,1.4.png, id=1269, 634.37pt x 91.34125pt>
+<Images/t1.3,1.4.png, id=1299, 634.37pt x 91.34125pt>
 File: Images/t1.3,1.4.png Graphic file (type png)
 <use Images/t1.3,1.4.png>
-Package pdftex.def Info: Images/t1.3,1.4.png  used on input line 333.
+Package pdftex.def Info: Images/t1.3,1.4.png  used on input line 313.
 (pdftex.def)             Requested size: 497.92325pt x 71.69606pt.
 File: Images/t1.3,1.4.png Graphic file (type png)
 <use Images/t1.3,1.4.png>
-Package pdftex.def Info: Images/t1.3,1.4.png  used on input line 340.
+Package pdftex.def Info: Images/t1.3,1.4.png  used on input line 320.
 (pdftex.def)             Requested size: 497.92325pt x 71.69606pt.
 
 
-[93 <./Images/t1.1.png> <./Images/t1.2.png> <./Images/t1.3,1.4.png>]
-<Images/qodana-sai1.png, id=1281, 2885.78125pt x 1631.09375pt>
-File: Images/qodana-sai1.png Graphic file (type png)
-<use Images/qodana-sai1.png>
-Package pdftex.def Info: Images/qodana-sai1.png  used on input line 361.
-(pdftex.def)             Requested size: 497.92325pt x 281.41376pt.
+[84 <./Images/t1.1.png> <./Images/t1.2.png> <./Images/t1.3,1.4.png>]
 
-
-[94 <./Images/qodana-sai1.png>]
-
-[95]
+[85]
 (C:\Users\pmkha\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.0pt on input line 395.
+(Font)              scaled to size 8.0pt on input line 348.
 
 (Code/sa2.py
 LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
@@ -2310,141 +2264,116 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[96{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4
+[86{C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4
 -ts1.enc}]
 
-[97]
+[87]
 
-[98])
-<Images/sa2.png, id=1498, 2336.73pt x 5241.5825pt>
-File: Images/sa2.png Graphic file (type png)
-<use Images/sa2.png>
-Package pdftex.def Info: Images/sa2.png  used on input line 400.
-(pdftex.def)             Requested size: 303.73347pt x 681.2697pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
-
- []
-
-
-
-[99]
-
-[100 <./Images/sa2.png>]
-<Images/sa2test1.png, id=1531, 581.17125pt x 600.2425pt>
+[88])
+<Images/sa2test1.png, id=1521, 581.17125pt x 600.2425pt>
 File: Images/sa2test1.png Graphic file (type png)
 <use Images/sa2test1.png>
-Package pdftex.def Info: Images/sa2test1.png  used on input line 411.
-(pdftex.def)             Requested size: 398.3401pt x 411.42007pt.
+Package pdftex.def Info: Images/sa2test1.png  used on input line 355.
+(pdftex.def)             Requested size: 298.75697pt x 308.56506pt.
 
 
-[101 <./Images/sa2test1.png>]
-Underfull \hbox (badness 1881) in paragraph at lines 437--437
+[89 <./Images/sa2test1.png>]
+Underfull \hbox (badness 1881) in paragraph at lines 381--381
 []|\T1/lmr/m/n/10 (+20) Direct path be-tween
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 437--437
+Underfull \hbox (badness 1881) in paragraph at lines 381--381
 []|\T1/lmr/m/n/10 (+20) Direct path be-tween
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 437--437
+Underfull \hbox (badness 1881) in paragraph at lines 381--381
 []|\T1/lmr/m/n/10 (+20) Direct path be-tween
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 437--437
+Underfull \hbox (badness 1881) in paragraph at lines 381--381
 []|\T1/lmr/m/n/10 (+20) Direct path be-tween
  []
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 437--437
+Underfull \hbox (badness 1924) in paragraph at lines 381--381
 []|\T1/lmr/m/n/10 (+20) Shortest path found,
  []
 
 
 
-[102]
-<Images/t1.2.1.png, id=1543, 569.12625pt x 439.6425pt>
+[90]
+<Images/t1.2.1.png, id=1555, 569.12625pt x 439.6425pt>
 File: Images/t1.2.1.png Graphic file (type png)
 <use Images/t1.2.1.png>
-Package pdftex.def Info: Images/t1.2.1.png  used on input line 454.
-(pdftex.def)             Requested size: 497.92325pt x 384.6594pt.
-<Images/t1.2.2.png, id=1544, 569.12625pt x 604.2575pt>
+Package pdftex.def Info: Images/t1.2.1.png  used on input line 398.
+(pdftex.def)             Requested size: 248.96162pt x 192.32298pt.
+<Images/t1.2.2.png, id=1556, 569.12625pt x 604.2575pt>
 File: Images/t1.2.2.png Graphic file (type png)
 <use Images/t1.2.2.png>
-Package pdftex.def Info: Images/t1.2.2.png  used on input line 461.
-(pdftex.def)             Requested size: 497.92325pt x 528.68713pt.
-<Images/t1.2.x.png, id=1545, 683.55376pt x 315.1775pt>
+Package pdftex.def Info: Images/t1.2.2.png  used on input line 405.
+(pdftex.def)             Requested size: 248.96162pt x 264.33435pt.
+<Images/t1.2.x.png, id=1557, 683.55376pt x 315.1775pt>
 File: Images/t1.2.x.png Graphic file (type png)
 <use Images/t1.2.x.png>
-Package pdftex.def Info: Images/t1.2.x.png  used on input line 468.
-(pdftex.def)             Requested size: 497.92325pt x 229.59192pt.
+Package pdftex.def Info: Images/t1.2.x.png  used on input line 412.
+(pdftex.def)             Requested size: 248.96162pt x 114.79115pt.
 File: Images/t1.2.1.png Graphic file (type png)
 <use Images/t1.2.1.png>
-Package pdftex.def Info: Images/t1.2.1.png  used on input line 475.
-(pdftex.def)             Requested size: 497.92325pt x 384.6594pt.
+Package pdftex.def Info: Images/t1.2.1.png  used on input line 419.
+(pdftex.def)             Requested size: 248.96162pt x 192.32298pt.
 
 
-[103 <./Images/t1.2.1.png>]
+[91 <./Images/t1.2.1.png> <./Images/t1.2.2.png> <./Images/t1.2.x.png>]
 
-[104 <./Images/t1.2.2.png>]
-
-[105 <./Images/t1.2.x.png>]
-<Images/qodana-sa2.png, id=1566, 1432.35126pt x 835.12pt>
-File: Images/qodana-sa2.png Graphic file (type png)
-<use Images/qodana-sa2.png>
-Package pdftex.def Info: Images/qodana-sa2.png  used on input line 497.
-(pdftex.def)             Requested size: 423.2378pt x 246.75328pt.
-
-
-[106 <./Images/qodana-sa2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 535--535
+[92]
+Underfull \hbox (badness 10000) in paragraph at lines 474--474
 []|\T1/lmr/m/n/10 (+20) Path be-tween start
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--535
+Underfull \hbox (badness 10000) in paragraph at lines 474--474
 \T1/lmr/m/n/10 (+20) and end in-clud-ing
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 535--535
+Underfull \hbox (badness 1881) in paragraph at lines 474--474
 []|\T1/lmr/m/n/10 (+20) Direct path be-tween
  []
 
 
-Underfull \hbox (badness 3118) in paragraph at lines 535--535
+Underfull \hbox (badness 3118) in paragraph at lines 474--474
 \T1/lmr/m/n/10 (+20) start and end stop-
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 535--535
+Underfull \hbox (badness 1881) in paragraph at lines 474--474
 []|\T1/lmr/m/n/10 (+20) Direct path be-tween
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 535--535
+Underfull \hbox (badness 1881) in paragraph at lines 474--474
 []|\T1/lmr/m/n/10 (+20) Direct path be-tween
  []
 
 
 
-[107
+[93
 
 ]
 
-[108]
+[94]
 
-LaTeX Warning: \verb may be unreliable inside tabularx on input line 618.
+LaTeX Warning: \verb may be unreliable inside tabularx on input line 558.
 
 
 
-[109
+[95
 
 ]
-Overfull \hbox (24.73474pt too wide) in paragraph at lines 640--641
+Overfull \hbox (24.73474pt too wide) in paragraph at lines 580--581
 []\T1/lmr/bx/n/10 (-20) Refinements: \T1/lmr/m/n/10 (-20) Im-prove er-ror mes-s
 age word-ing for clar-ity. Add tex-tual path se-quence out-put ([][]\T1/zi4/m/n
 /10 (0,0) -> (1,0) -> ...[]\T1/lmr/m/n/10 (-20) )
@@ -2452,12 +2381,10 @@ age word-ing for clar-ity. Add tex-tual path se-quence out-put ([][]\T1/zi4/m/n
 
 
 
-[110
+[96
 
 ]
-
-[111]
-Overfull \hbox (41.28223pt too wide) in paragraph at lines 705--706
+Overfull \hbox (41.28223pt too wide) in paragraph at lines 644--645
 []\T1/lmr/m/n/10 (-20) OCSP-010: Added func-tion-al-ity to dis-play the tex-tua
 l se-quence of the path co-or-di-nates (e.g., [][]\T1/zi4/m/n/10 (0,0) -> (1,0)
  -> ...[]\T1/lmr/m/n/10 (-20) )
@@ -2465,135 +2392,116 @@ l se-quence of the path co-or-di-nates (e.g., [][]\T1/zi4/m/n/10 (0,0) -> (1,0)
 
 
 
-[112
+[97]
 
-]
-
-[113
+[98
 
 ] (Code/guisb1.py
 
-[114]
+[99]
 
-[115]) (Code/spasb1.py
+[100]) (Code/spasb1.py
 
-[116]
+[101]
 
-[117]
+[102]
 
-[118])
-
-[119]
-Underfull \hbox (badness 1259) in paragraph at lines 773--773
-[]|\T1/lmr/m/n/10 (+20) Points list cleared, out-put
+[103])
+Underfull \hbox (badness 1845) in paragraph at lines 711--711
+[]|\T1/lmr/m/n/10 (+20) Points list cleared, out-put area
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 773--773
+Underfull \hbox (badness 10000) in paragraph at lines 711--711
 []|\T1/lmr/m/n/10 (+20) Point re-jected,
  []
 
 
 
-[120]
-<Images/sprintbtest1.png, id=1980, 409.53pt x 502.87875pt>
+[104]
+<Images/sprintbtest1.png, id=1963, 409.53pt x 502.87875pt>
 File: Images/sprintbtest1.png Graphic file (type png)
 <use Images/sprintbtest1.png>
-Package pdftex.def Info: Images/sprintbtest1.png  used on input line 787.
-(pdftex.def)             Requested size: 497.92325pt x 611.4624pt.
-<Images/sprintbtest2.png, id=1981, 409.53pt x 344.78813pt>
+Package pdftex.def Info: Images/sprintbtest1.png  used on input line 729.
+(pdftex.def)             Requested size: 174.27617pt x 214.00072pt.
+<Images/sprintbtest2.png, id=1964, 409.53pt x 344.78813pt>
 File: Images/sprintbtest2.png Graphic file (type png)
 <use Images/sprintbtest2.png>
-Package pdftex.def Info: Images/sprintbtest2.png  used on input line 793.
-(pdftex.def)             Requested size: 497.92325pt x 419.23619pt.
-<Images/sprintbtest3.png, id=1982, 410.2828pt x 344.03531pt>
+Package pdftex.def Info: Images/sprintbtest2.png  used on input line 735.
+(pdftex.def)             Requested size: 199.16626pt x 167.685pt.
+<Images/sprintbtest3.png, id=1965, 410.2828pt x 344.03531pt>
 File: Images/sprintbtest3.png Graphic file (type png)
 <use Images/sprintbtest3.png>
-Package pdftex.def Info: Images/sprintbtest3.png  used on input line 799.
-(pdftex.def)             Requested size: 497.92325pt x 417.5229pt.
+Package pdftex.def Info: Images/sprintbtest3.png  used on input line 741.
+(pdftex.def)             Requested size: 199.16626pt x 167.0039pt.
 
 
-[121 <./Images/sprintbtest1.png>]
+[105 <./Images/sprintbtest1.png> <./Images/sprintbtest2.png> <./Images/sprintbt
+est3.png>]
 
-[122 <./Images/sprintbtest2.png>]
+[106] (Code/guisb2.py
 
-[123 <./Images/sprintbtest3.png>]
-<Images/qodana-sb1.png, id=2002, 1230.84843pt x 484.05844pt>
-File: Images/qodana-sb1.png Graphic file (type png)
-<use Images/qodana-sb1.png>
-Package pdftex.def Info: Images/qodana-sb1.png  used on input line 814.
-(pdftex.def)             Requested size: 423.2378pt x 166.44638pt.
+[107])
 
+[108] (Code/spasb2.py
 
-[124 <./Images/qodana-sb1.png>]
+[109]
 
-[125] (Code/guisb2.py
+[110])
 
-[126]
+[111]
 
-[127])
-
-[128] (Code/spasb2.py
-
-[129]
-
-[130])
-
-[131]
-
-[132]
-<Images/t2.2.x.png, id=2341, 451.6875pt x 340.27126pt>
+[112]
+<Images/t2.2.x.png, id=2283, 451.6875pt x 340.27126pt>
 File: Images/t2.2.x.png Graphic file (type png)
 <use Images/t2.2.x.png>
-Package pdftex.def Info: Images/t2.2.x.png  used on input line 898.
-(pdftex.def)             Requested size: 497.92325pt x 375.12508pt.
-<Images/t2.2.x1.png, id=2342, 451.6875pt x 340.27126pt>
+Package pdftex.def Info: Images/t2.2.x.png  used on input line 834.
+(pdftex.def)             Requested size: 224.06393pt x 168.79564pt.
+<Images/t2.2.x1.png, id=2284, 451.6875pt x 340.27126pt>
 File: Images/t2.2.x1.png Graphic file (type png)
 <use Images/t2.2.x1.png>
-Package pdftex.def Info: Images/t2.2.x1.png  used on input line 905.
-(pdftex.def)             Requested size: 497.92325pt x 375.12508pt.
-<Images/t2.2.6.png, id=2343, 465.23813pt x 469.755pt>
+Package pdftex.def Info: Images/t2.2.x1.png  used on input line 841.
+(pdftex.def)             Requested size: 224.06393pt x 168.79564pt.
+<Images/t2.2.6.png, id=2285, 465.23813pt x 469.755pt>
 File: Images/t2.2.6.png Graphic file (type png)
 <use Images/t2.2.6.png>
-Package pdftex.def Info: Images/t2.2.6.png  used on input line 912.
-(pdftex.def)             Requested size: 373.44243pt x 377.0804pt.
+Package pdftex.def Info: Images/t2.2.6.png  used on input line 848.
+(pdftex.def)             Requested size: 224.06393pt x 226.23964pt.
 
 
-[133 <./Images/t2.2.x.png>]
+[113 <./Images/t2.2.x.png> <./Images/t2.2.x1.png> <./Images/t2.2.6.png>]
 
-[134 <./Images/t2.2.x1.png>]
+[114
 
-[135 <./Images/t2.2.6.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 990--990
+]
+Underfull \hbox (badness 10000) in paragraph at lines 917--917
 []|\T1/lmr/m/n/10 (+20) Point added, en-try
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 990--990
+Underfull \hbox (badness 2495) in paragraph at lines 917--917
 \T1/lmr/m/n/10 (+20) cleared, con-fir-ma-tion
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 990--990
+Underfull \hbox (badness 1168) in paragraph at lines 917--917
 []|\T1/lmr/m/n/10 (+20) Error mes-sage about
  []
 
 
 
-[136
+[115]
+
+[116]
+
+[117]
+
+[118
 
 ]
 
-[137]
-
-[138]
-
-[139
-
-]
-
-[140]
-Overfull \hbox (5.69514pt too wide) in paragraph at lines 1137--1138
+[119]
+Overfull \hbox (5.69514pt too wide) in paragraph at lines 1065--1066
 []\T1/lmr/m/n/10 (-20) Progress made: Added core meth-ods to [][]\T1/zi4/m/n/10
  InventoryDB[]\T1/lmr/m/n/10 (-20) : [][]\T1/zi4/m/n/10 populate_random_data[]\
 T1/lmr/m/n/10 (-20) , [][]\T1/zi4/m/n/10 validate_item_id[]\T1/lmr/m/n/10 (-20)
@@ -2601,9 +2509,7 @@ T1/lmr/m/n/10 (-20) , [][]\T1/zi4/m/n/10 validate_item_id[]\T1/lmr/m/n/10 (-20)
  []
 
 
-
-[141]
-Overfull \hbox (10.09856pt too wide) in paragraph at lines 1152--1153
+Overfull \hbox (10.09856pt too wide) in paragraph at lines 1080--1081
 []\T1/lmr/m/n/10 (-20) Blockers iden-ti-fied: En-sur-ing the decre-ment loop on
 ly tar-geted the user-selected in-ter-me-di-ate points ([][]\T1/zi4/m/n/10 self
 .points[]\T1/lmr/m/n/10 (-20) )
@@ -2611,8 +2517,8 @@ ly tar-geted the user-selected in-ter-me-di-ate points ([][]\T1/zi4/m/n/10 self
 
 
 
-[142]
-Overfull \hbox (16.03766pt too wide) in paragraph at lines 1168--1169
+[120]
+Overfull \hbox (16.03766pt too wide) in paragraph at lines 1096--1097
 []\T1/lmr/m/n/10 (-20) To com-mu-ni-cate the re-sult back safely to the main []
 []\T1/zi4/m/n/10 Tkinter []\T1/lmr/m/n/10 (-20) thread, I used a [][]\T1/zi4/m/
 n/10 queue.Queue []\T1/lmr/m/n/10 (-20) ([][]\T1/zi4/m/n/10 self.result_queue[]
@@ -2621,67 +2527,67 @@ n/10 queue.Queue []\T1/lmr/m/n/10 (-20) ([][]\T1/zi4/m/n/10 self.result_queue[]
 
 
 
-[143
+[121
 
 ]
 
-[144]
-Underfull \hbox (badness 10000) in paragraph at lines 1202--1202
+[122]
+Underfull \hbox (badness 10000) in paragraph at lines 1130--1130
 []|\T1/lmr/m/n/10 (+20) Met -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1202--1202
+Underfull \hbox (badness 10000) in paragraph at lines 1130--1130
 \T1/lmr/m/n/10 (+20) pretty
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1202--1202
+Underfull \hbox (badness 10000) in paragraph at lines 1130--1130
 \T1/lmr/m/n/10 (+20) much
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1202--1202
+Underfull \hbox (badness 10000) in paragraph at lines 1130--1130
 \T1/lmr/m/n/10 (+20) non-
  []
 
 
 
-[145]
+[123]
 
-[146]
+[124]
 
-[147]
+[125]
 
-[148]
-Underfull \hbox (badness 4886) in paragraph at lines 1285--1285
+[126]
+Underfull \hbox (badness 4886) in paragraph at lines 1213--1213
 []|\T1/lmr/m/n/10 (+20) Config closes, main GUI
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1285--1285
+Underfull \hbox (badness 10000) in paragraph at lines 1213--1213
 \T1/lmr/m/n/10 (+20) uses 15x10 size (check
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1285--1285
+Underfull \hbox (badness 10000) in paragraph at lines 1213--1213
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1285--1285
+Underfull \hbox (badness 10000) in paragraph at lines 1213--1213
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Overfull \hbox (13.79301pt too wide) in paragraph at lines 1292--1293
+Overfull \hbox (13.79301pt too wide) in paragraph at lines 1220--1221
 []\T1/lmr/m/n/10 (-20) *(User: De-scribe fixes, e.g., "Ini-tially for-got to de
 -stroy the con-fig win-dow on con-firm, fixed in [][]\T1/zi4/m/n/10 validate_an
 d_save[]\T1/lmr/m/n/10 (-20) .")* 
  []
 
 
-Overfull \hbox (59.34189pt too wide) in paragraph at lines 1297--1298
+Overfull \hbox (59.34189pt too wide) in paragraph at lines 1225--1226
 []\T1/lmr/bx/n/10 (-20) Grid Di-men-sion In-put: \T1/lmr/m/n/10 (-20) Val-i-dat
 ed in [][]\T1/zi4/m/n/10 ConfigWindow.validate_and_save []\T1/lmr/m/n/10 (-20) 
 for pos-i-tive in-te-gers us-ing [][]\T1/zi4/m/n/10 try-except ValueError
@@ -2689,23 +2595,16 @@ for pos-i-tive in-te-gers us-ing [][]\T1/zi4/m/n/10 try-except ValueError
 
 
 
-[149]
-Overfull \hbox (44.94682pt too wide) in paragraph at lines 1330--1331
+[127]
+Overfull \hbox (44.94682pt too wide) in paragraph at lines 1258--1259
 \T1/lmr/m/n/10 (-20) two helper func-tions to [][]\T1/zi4/m/n/10 spa.py[]\T1/lm
 r/m/n/10 (-20) : [][]\T1/zi4/m/n/10 index_to_coordinates(index, cols) []\T1/lmr
 /m/n/10 (-20) and [][]\T1/zi4/m/n/10 coordinates_to_index(row, col, cols)[]\T1/
 lmr/m/n/10 (-20) .
  []
 
-LaTeX Info: Symbol \textasciigrave not provided by
-            font family zi4 in TS1 encoding.
-            Default family used instead on input line 1332.
-LaTeX Info: Symbol \textasciigrave not provided by
-            font family zi4 in TS1 encoding.
-            Default family used instead on input line 1332.
-LaTeX Info: Symbol \textasciigrave not provided by
-            font family zi4 in TS1 encoding.
-            Default family used instead on input line 1332.
+LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 1260.
 
 ! LaTeX Error: \verb ended by end of line.
 
@@ -2713,77 +2612,77 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1332 ...\rightarrow $ ... $ \rightarrow $ 100").
+l.1260 ...\rightarrow $ ... $ \rightarrow $ 100").
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (526.52364pt too wide) in paragraph at lines 1332--1333
+Overfull \hbox (525.77748pt too wide) in paragraph at lines 1260--1261
 \T1/lmr/m/n/10 (-20) tu-ples), it now it-er-ates through this path and uses [][
-]\T1/zi4/m/n/10 spa.coordinates_to_index\TS1/cmtt/m/n/10 ` \T1/zi4/m/n/10 to co
-nvert each step back into an \TS1/cmtt/m/n/10 `\T1/zi4/m/n/10 itemID\TS1/cmtt/m
-/n/10 ` \T1/zi4/m/n/10 before creating the path sequence string (e.g., "1 $ \ri
-ghtarrow $ ... $ \rightarrow $ 100"). 
+]\T1/zi4/m/n/10 spa.coordinates_to_index\TS1/zi4/m/n/10 ' \T1/zi4/m/n/10 to con
+vert each step back into an \TS1/zi4/m/n/10 '\T1/zi4/m/n/10 itemID\TS1/zi4/m/n/
+10 ' \T1/zi4/m/n/10 before creating the path sequence string (e.g., "1 $ \right
+arrow $ ... $ \rightarrow $ 100"). 
  []
 
 
 
-[150]
+[128]
 
-[151]
-Underfull \hbox (badness 10000) in paragraph at lines 1369--1369
+[129]
+Underfull \hbox (badness 10000) in paragraph at lines 1297--1297
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1369--1369
+Underfull \hbox (badness 10000) in paragraph at lines 1297--1297
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1369--1369
+Underfull \hbox (badness 10000) in paragraph at lines 1297--1297
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1369--1369
+Underfull \hbox (badness 10000) in paragraph at lines 1297--1297
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
-[152]
+[130]
 
-[153]
+[131]
 
-[154]
-Underfull \hbox (badness 10000) in paragraph at lines 1448--1448
+[132]
+Underfull \hbox (badness 10000) in paragraph at lines 1376--1376
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 5802) in paragraph at lines 1448--1448
+Underfull \hbox (badness 5802) in paragraph at lines 1376--1376
 []|\T1/lmr/m/n/10 (+20) Inspect []\T1/zi4/m/n/10 inventory.db \T1/lmr/m/n/10 (+
 20) schema us-ing DB
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1448--1448
+Underfull \hbox (badness 10000) in paragraph at lines 1376--1376
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
-[155]
-Overfull \hbox (21.80933pt too wide) in paragraph at lines 1495--1496
+[133]
+Overfull \hbox (21.80933pt too wide) in paragraph at lines 1423--1424
 []\T1/lmr/m/n/10 (-20) Added [][]\T1/zi4/m/n/10 update_quantity(self, item_id, 
 new_quantity) []\T1/lmr/m/n/10 (-20) method, in-clud-ing checks to en-sure the 
 [][]\T1/zi4/m/n/10 new_quantity
  []
 
 
-Overfull \hbox (7.95053pt too wide) in paragraph at lines 1504--1505
+Overfull \hbox (7.95053pt too wide) in paragraph at lines 1432--1433
 []\T1/lmr/m/n/10 (-20) Annotations added: Added doc-strings for all the new pub
 -lic meth-ods ([][]\T1/zi4/m/n/10 populate_random_data[]\T1/lmr/m/n/10 (-20) , 
 [][]\T1/zi4/m/n/10 validate_item_id[]\T1/lmr/m/n/10 (-20) ,
@@ -2791,37 +2690,37 @@ Overfull \hbox (7.95053pt too wide) in paragraph at lines 1504--1505
 
 
 
-[156]
+[134]
 
-[157]
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1530
+[135]
+Underfull \hbox (badness 10000) in paragraph at lines 1458--1458
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1530
+Underfull \hbox (badness 10000) in paragraph at lines 1458--1458
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1530
+Underfull \hbox (badness 10000) in paragraph at lines 1458--1458
 []|\T1/lmr/m/n/10 (+20) Updates cor-rectly for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1530
+Underfull \hbox (badness 10000) in paragraph at lines 1458--1458
 \T1/lmr/m/n/10 (+20) valid int >= 0, raises
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1530
+Underfull \hbox (badness 10000) in paragraph at lines 1458--1458
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
-[158]
-Overfull \hbox (103.21123pt too wide) in paragraph at lines 1576--1577
+[136]
+Overfull \hbox (103.21123pt too wide) in paragraph at lines 1504--1505
 []\T1/lmr/m/n/10 (-20) Added [][]\T1/zi4/m/n/10 logging []\T1/lmr/m/n/10 (-20) 
 to [][]\T1/zi4/m/n/10 database.py[]\T1/lmr/m/n/10 (-20) . Im-ported the [][]\T1
 /zi4/m/n/10 logging []\T1/lmr/m/n/10 (-20) mod-ule and ob-tained the log-ger ([
@@ -2830,7 +2729,7 @@ to [][]\T1/zi4/m/n/10 database.py[]\T1/lmr/m/n/10 (-20) . Im-ported the [][]\T1
  []
 
 
-Overfull \hbox (2.60214pt too wide) in paragraph at lines 1577--1578
+Overfull \hbox (2.60214pt too wide) in paragraph at lines 1505--1506
 []\T1/lmr/m/n/10 (-20) (within [][]\T1/zi4/m/n/10 PathfinderGUI.__init__[]\T1/l
 mr/m/n/10 (-20) ), and then calls [][]\T1/zi4/m/n/10 self.db.populate_random_da
 ta()[]\T1/lmr/m/n/10 (-20) . (Note: [][]\T1/zi4/m/n/10 database.py
@@ -2838,37 +2737,37 @@ ta()[]\T1/lmr/m/n/10 (-20) . (Note: [][]\T1/zi4/m/n/10 database.py
 
 
 
-[159]
+[137]
 
-[160]
-Underfull \hbox (badness 4765) in paragraph at lines 1614--1614
+[138]
+Underfull \hbox (badness 4765) in paragraph at lines 1542--1542
 []|\T1/lmr/m/n/10 (+20) Correct stock & po-si-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1614--1614
+Underfull \hbox (badness 10000) in paragraph at lines 1542--1542
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1614--1614
+Underfull \hbox (badness 10000) in paragraph at lines 1542--1542
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1614--1614
+Underfull \hbox (badness 10000) in paragraph at lines 1542--1542
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1614--1614
+Underfull \hbox (badness 10000) in paragraph at lines 1542--1542
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
-[161]
-Overfull \hbox (15.71237pt too wide) in paragraph at lines 1661--1662
+[139]
+Overfull \hbox (15.71237pt too wide) in paragraph at lines 1589--1590
 [][]\T1/zi4/m/n/10 (x, y) []\T1/lmr/m/n/10 (-20) tu-ple in [][]\T1/zi4/m/n/10 s
 elf.points[]\T1/lmr/m/n/10 (-20) , it con-verts it back to the cor-re-spond-ing
  [][]\T1/zi4/m/n/10 itemID []\T1/lmr/m/n/10 (-20) us-ing [][]\T1/zi4/m/n/10 spa
@@ -2877,8 +2776,8 @@ elf.points[]\T1/lmr/m/n/10 (-20) , it con-verts it back to the cor-re-spond-ing
 
 
 
-[162]
-Overfull \hbox (3.1703pt too wide) in paragraph at lines 1675--1676
+[140]
+Overfull \hbox (3.1703pt too wide) in paragraph at lines 1603--1604
 \T1/lmr/m/n/10 (-20) *(User: In-sert code snip-pets for [][]\T1/zi4/m/n/10 decr
 ement_quantity []\T1/lmr/m/n/10 (-20) in [][]\T1/zi4/m/n/10 database.py[]\T1/lm
 r/m/n/10 (-20) , the mod-i-fied [][]\T1/zi4/m/n/10 add_point []\T1/lmr/m/n/10 (
@@ -2887,33 +2786,33 @@ r/m/n/10 (-20) , the mod-i-fied [][]\T1/zi4/m/n/10 add_point []\T1/lmr/m/n/10 (
 
 
 
-[163]
-Underfull \hbox (badness 1742) in paragraph at lines 1694--1694
+[141]
+Underfull \hbox (badness 1742) in paragraph at lines 1622--1622
 []|\T1/lmr/m/n/10 (+20) Point added ("Stock: 1").
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1694
+Underfull \hbox (badness 10000) in paragraph at lines 1622--1622
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 1668) in paragraph at lines 1694--1694
+Underfull \hbox (badness 1668) in paragraph at lines 1622--1622
 \T1/lmr/m/n/10 (+20) stock" shown. Point not
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1694
+Underfull \hbox (badness 10000) in paragraph at lines 1622--1622
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1694
+Underfull \hbox (badness 10000) in paragraph at lines 1622--1622
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Overfull \hbox (4.57271pt too wide) in paragraph at lines 1707--1708
+Overfull \hbox (4.57271pt too wide) in paragraph at lines 1635--1636
 []\T1/lmr/m/n/10 (-20) Decrement Safety: Check [][]\T1/zi4/m/n/10 current_qty >
  0 []\T1/lmr/m/n/10 (-20) and SQL [][]\T1/zi4/m/n/10 WHERE Quantity > 0 []\T1/l
 mr/m/n/10 (-20) used in [][]\T1/zi4/m/n/10 database.decrement_quantity[]\T1/lmr
@@ -2922,28 +2821,28 @@ mr/m/n/10 (-20) used in [][]\T1/zi4/m/n/10 database.decrement_quantity[]\T1/lmr
 
 
 
-[164]
+[142]
 
-[165]
-Underfull \hbox (badness 6542) in paragraph at lines 1769--1769
+[143]
+Underfull \hbox (badness 6542) in paragraph at lines 1697--1697
 []|\T1/lmr/m/n/10 (+20) Query shows ini-tial
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1769--1769
+Underfull \hbox (badness 10000) in paragraph at lines 1697--1697
 []|\T1/lmr/m/n/10 (+20) Error mes-sage-boxes
  []
 
 
 
-[166
+[144
 
 ]
 
-[167]
+[145]
 
-[168]
-Overfull \hbox (52.75464pt too wide) in paragraph at lines 1853--1854
+[146]
+Overfull \hbox (52.75464pt too wide) in paragraph at lines 1781--1782
 []\T1/lmr/bx/n/10 (-20) Reversion: \T1/lmr/m/n/10 (-20) Use ver-sion con-trol (
 [][]\T1/zi4/m/n/10 git[]\T1/lmr/m/n/10 (-20) ) to undo the prob-lem-atic com-mi
 t. Specif-i-cally, ex-e-cute [][]\T1/zi4/m/n/10 git revert dd54ffd --no-edit
@@ -2951,10 +2850,10 @@ t. Specif-i-cally, ex-e-cute [][]\T1/zi4/m/n/10 git revert dd54ffd --no-edit
 
 
 
-[169
+[147
 
 ]
-Overfull \hbox (39.8778pt too wide) in paragraph at lines 1888--1889
+Overfull \hbox (39.8778pt too wide) in paragraph at lines 1816--1817
 []\T1/lmr/m/n/10 (-20) It deleted the [][]\T1/zi4/m/n/10 self.processing []\T1/
 lmr/m/n/10 (-20) flag and [][]\T1/zi4/m/n/10 self.result_queue []\T1/lmr/m/n/10
  (-20) at-tribute ini-tial-i-sa-tions from [][]\T1/zi4/m/n/10 PathfinderGUI.__i
@@ -2962,7 +2861,7 @@ nit__[]\T1/lmr/m/n/10 (-20) .
  []
 
 
-Overfull \hbox (18.70769pt too wide) in paragraph at lines 1891--1892
+Overfull \hbox (18.70769pt too wide) in paragraph at lines 1819--1820
 []\T1/lmr/m/n/10 (-20) Crucially, it re-stored the di-rect syn-chronous call: [
 ][]\T1/zi4/m/n/10 path = self.path_finder.find_path_through_points(...)[]\T1/lm
 r/m/n/10 (-20) .
@@ -2970,45 +2869,45 @@ r/m/n/10 (-20) .
 
 
 
-[170
+[148
 
 ] (Code/guisd.py
 
-[171]
+[149]
 
-[172]
+[150]
 
-[173]
+[151]
 
-[174])
+[152])
 
-[175]
-Underfull \hbox (badness 1281) in paragraph at lines 1920--1920
+[153]
+Underfull \hbox (badness 1281) in paragraph at lines 1848--1848
 []|\T1/lmr/m/n/10 (+20) Path found cor-rectly
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 1920--1920
+Underfull \hbox (badness 2368) in paragraph at lines 1848--1848
 \T1/lmr/m/n/10 (+20) ily, path found cor-
  []
 
 
-Underfull \hbox (badness 1077) in paragraph at lines 1920--1920
+Underfull \hbox (badness 1077) in paragraph at lines 1848--1848
 []|\T1/lmr/m/n/10 (+20) Path found cor-rectly.
  []
 
 
 
-[176]
+[154]
 
-[177]
+[155]
 
-[178
+[156
 
 ]
 
-[179]
-Overfull \hbox (17.95386pt too wide) in paragraph at lines 2055--2056
+[157]
+Overfull \hbox (17.95386pt too wide) in paragraph at lines 1983--1984
 []\T1/lmr/m/n/10 (-20) I then linked this to the main [][]\T1/zi4/m/n/10 Pathfi
 nderGUI[]\T1/lmr/m/n/10 (-20) . I added a "Show Grid" but-ton that calls [][]\T
 1/zi4/m/n/10 self.viz_window.show()
@@ -3016,13 +2915,13 @@ nderGUI[]\T1/lmr/m/n/10 (-20) . I added a "Show Grid" but-ton that calls [][]\T
 
 
 
-[180
+[158
 
 ]
 ! Missing } inserted.
 <inserted text> 
                 }
-l.2069 ... Snippets (Commit \verb|3b87545| state)}
+l.1997 ... Snippets (Commit \verb|3b87545| state)}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3033,7 +2932,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \verb@egroup ...erb@balance@group \@empty \egroup 
                                                   
-l.2069 ... Snippets (Commit \verb|3b87545| state)}
+l.1997 ... Snippets (Commit \verb|3b87545| state)}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3048,13 +2947,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2069 ... Snippets (Commit \verb|3b87545| state)}
+l.1997 ... Snippets (Commit \verb|3b87545| state)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (22.88304pt too wide) in paragraph at lines 2070--2071
+Overfull \hbox (22.88304pt too wide) in paragraph at lines 1998--1999
 \T1/lmr/m/n/10 (-20) *(User: In-sert snip-pets for the ba-sic [][]\T1/zi4/m/n/1
 0 GridVisualizer []\T1/lmr/m/n/10 (-20) class, link-ing calls in [][]\T1/zi4/m/
 n/10 PathfinderGUI[]\T1/lmr/m/n/10 (-20) , and ini-tial [][]\T1/zi4/m/n/10 draw
@@ -3063,11 +2962,11 @@ _grid[]\T1/lmr/m/n/10 (-20) /[][]\T1/zi4/m/n/10 draw_cell
 
 
 
-[181]
+[159]
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.2089 	\end{tabularx}
+l.2017 	\end{tabularx}
                       
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -3076,392 +2975,25 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.2089 	\end{tabularx}
+l.2017 	\end{tabularx}
                       
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
 
-Overfull \hbox (18.12923pt too wide) in paragraph at lines 2089--2089
+Overfull \hbox (18.12923pt too wide) in paragraph at lines 2017--2017
 []|\T1/lmr/m/n/10 (-20) grid/numbers.| 
  []
 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.2089 	\end{tabularx}
+l.2017 	\end{tabularx}
                       
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2089--2089
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2089--2089
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-
-[182]
-Overfull \hbox (54.4362pt too wide) in paragraph at lines 2123--2124
-[][]\T1/zi4/m/n/10 self.db []\T1/lmr/m/n/10 (-20) in-stance to the vi-su-aliser
-. Up-dated [][]\T1/zi4/m/n/10 visualize_path []\T1/lmr/m/n/10 (-20) and [][]\T1
-/zi4/m/n/10 draw_cell []\T1/lmr/m/n/10 (-20) to query [][]\T1/zi4/m/n/10 self.d
-b.get_quantity(pos_num)
- []
-
-
-
-[183]
-! Missing } inserted.
-<inserted text> 
-                }
-l.2136 ... Snippets (Commit \verb|9cd9b34| state)}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten \endgroup.
-\verb@egroup ...erb@balance@group \@empty \egroup 
-                                                  
-l.2136 ... Snippets (Commit \verb|9cd9b34| state)}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-! LaTeX Error: \verb illegal in argument.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2136 ... Snippets (Commit \verb|9cd9b34| state)}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-
-[184]
-Underfull \hbox (badness 10000) in paragraph at lines 2160--2160
-[]|\T1/lmr/m/n/10 (+20) Viz opens; Path/-points
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2160--2160
-\T1/lmr/m/n/10 (+20) coloured; Clears to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2160--2160
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2160--2160
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 1990) in paragraph at lines 2160--2160
-[]|\T1/lmr/m/n/10 (+20) Scrollbars ap-pear & work.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2160--2160
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2160--2160
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2160--2160
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-
-[185]
-Overfull \hbox (102.14966pt too wide) in paragraph at lines 2194--2195
-\T1/lmr/m/n/10 (-20) empty af-ter pars-ing user in-put. If empty, it now calls 
-[][]\T1/zi4/m/n/10 self.path_finder.find_path_through_points(start_node, [], en
-d_node)
- []
-
-
-
-[186]
-! Missing } inserted.
-<inserted text> 
-                }
-l.2212 ...ation Snippets (Commit \verb|6990578a|)}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten \endgroup.
-\verb@egroup ...erb@balance@group \@empty \egroup 
-                                                  
-l.2212 ...ation Snippets (Commit \verb|6990578a|)}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-! LaTeX Error: \verb illegal in argument.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2212 ...ation Snippets (Commit \verb|6990578a|)}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-
-[187]
-Underfull \hbox (badness 2591) in paragraph at lines 2238--2238
-[]|\T1/lmr/m/n/10 (+20) Simplified lay-out, 600x500
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2238--2238
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2238--2238
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2238--2238
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2238--2238
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2238--2238
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2238--2238
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-
-[188]
-Underfull \hbox (badness 10000) in paragraph at lines 2303--2303
-\T1/lmr/m/n/10 (+20) shows path, stock
- []
-
-
-Underfull \hbox (badness 1253) in paragraph at lines 2303--2303
-[]|\T1/lmr/m/n/10 (+20) Update works. Viz
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2303--2303
-\T1/lmr/m/n/10 (+20) Path avoid-s/warns
- []
-
-
-
-[189
-
-]
-
-[190]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.2352 ...Visualizer drawing methods and the find_
-                                                  path input processing loop...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-! LaTeX Error: Command \end{itemize} invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2353 \end{itemize}
-                    
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.2353 \end{itemize}
-                    
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (152.5365pt too wide) in paragraph at lines 2352--2353
-\T1/lmr/m/n/10 (-20) on the com-plex-ity within the Grid-Vi-su-al-izer draw-ing
- meth-ods and the find$[]\OML/lmm/m/it/10 athinputprocessingloop:Stylesuggestio
-nswereminorandaddressed:\OT1/lmr/m/n/10 (-20) ")\OMS/lmsy/m/n/10 ^^C
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2352--2353
-
- []
-
-
-
-[191])
-
-[192]
-\openout2 = `Chapter5/chapter5.aux'.
-
- (Chapter5/chapter5.tex
-Section 5.
-)
-
-[193
-
-
-
-
-] (thesis.bbl
-
-[194
-
-
-
-
-])
-
-[195]
-\openout2 = `Appendix1/appendix1.aux'.
-
- (Appendix1/appendix1.tex
-Appendix A.
-)
-
-[196
-
-
-]
-\openout2 = `Appendix2/appendix2.aux'.
-
- (Appendix2/appendix2.tex
-Appendix B.
-)
-
-[197
-
-
-
-
-]
-No file thesis.ind.
-runsystem(latexminted cleantemp  --timestamp 20250419210448 2EF71E68B4AD97F6304
-80BCEBC1842FB)...disabled (restricted).
-
-(thesis.aux (Declaration/declaration.aux) (Acknowledgement/acknowledgement.aux)
-(Chapter1/chapter1.aux) (Chapter2/chapter2.aux) (Chapter3/chapter3.aux)
-(Chapter4/chapter4.aux) (Chapter5/chapter5.aux) (Appendix1/appendix1.aux)
-(Appendix2/appendix2.aux))
- ***********
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
- ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 795B1176CFAD30E4AF365BFC801F30D6;23455
-(rerunfilecheck)             After:  5D821574CEA8A91726D70FA41034F448;23737.
- ) 
-Here is how much of TeX's memory you used:
- 35543 strings out of 473522
- 727746 string characters out of 5714610
- 1908197 words of memory out of 5000000
- 56192 multiletter control sequences out of 15000+600000
- 644963 words of font info for 217 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 125i,12n,121p,1625b,3019s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{subsection.4.6.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.6.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.6.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.6.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.6.1} has been referenced but does not 
-exist, replaced by a fixed one
-
- <C:\Users\pmkha\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt10
-00.pk><C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsol
-ata/Inconsolata-zi4b.pfb><C:/Users/pmkha/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/pmkha/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/pmkha/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/pmkha/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/pmkha/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/pmkha/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/pmkha/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/pmkha/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/pmkha/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/pmkha/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/pmkha/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmri10.pfb><C:/Users/pmkha/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmri12.pfb><C:/Users/pmkha/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on thesis.pdf (203 pages, 10626280 bytes).
-PDF statistics:
- 3451 PDF objects out of 3580 (max. 8388607)
- 1698 named destinations out of 1728 (max. 500000)
- 49341 words of extra memory for PDF output out of 51595 (max. 10000000)
-
+Underf

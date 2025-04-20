@@ -20,6 +20,8 @@ Companies like Amazon and Ocado have been at the forefront of technological adva
 
 The history of warehouse robotics is relatively recent. General Motors pioneered the field in 1961 by installing the first robotic arm, known as Unimate \cite{a2024_joseph}, to automate tasks in manufacturing. For several decades, warehouse robots weren't sophisticated enough to go beyond pre-programmed tasks. Around the 21st century, advances in computing power and sensors enabled robots to perform tasks with greater autonomy and independence. The development of real-time image recognition software and improvements in robotic movement eventually led to the creation of robots capable of navigating warehouse environments.
 
+\newpage
+
 \subsection{Amazon Robotics (formerly Kiva Systems)}
 
 Amazon's robotics infrastructure is perhaps the most well-known large-scale implementation of automated warehouse management. Following Amazon's acquisition of Kiva Systems in 2012, the technology has been deployed across hundreds of fulfilment centres globally, with over 200,000 robots in operation as of 2020 \cite{edwards_2020_amazon}, with an average of 15,000 added each year to warehouses around the world. This figure will no doubt increase as investments in robotics and AI are part of the e-commerce giant’s \$100bn planned capital expenditure this year. \cite{clifford_2025_amazon}
@@ -53,8 +55,6 @@ While the system uses a central system for control, it also implements swarm pri
 \textbf{ }
 \newline While some of these implementations by Ocado are impressive, I do not believe I will be able to implement anything similar from this, other than the model of robots moving in a 2D space despite a 3D warehouse. Since Ocado store the same item vertically, I could apply the same principle to StockBot, reducing the need for 3D considerations, which would make my project much more complex and beyond the scope of my aim. \newline References: \cite{a2024_joseph}, \cite{group_2024_the}, \cite{group_2023_the}, \cite{group_2020_explained}
 
-\newpage
-
 \subsection{AutoStore: Cube Storage}
 
 AutoStore's approach to automated storage and retrieval is similar to Ocado, using a three-dimensional storage cube accessed by robots operating on the top surface. Ironically, they were in a 3-year legal battle with Ocado over the patents surrounding these robots, before settling to share the patent in a mutually beneficial agreement \cite{speed_2023_ocado}
@@ -75,7 +75,7 @@ The system employs sophisticated algorithms to determine which bins to retrieve 
 \end{enumerate}
 
 \subsubsection{Decentralised Control with Hierarchical Oversight}
-Unlike Amazon's more centralised control, AutoStore employs a more distributed approach where individual robots have substantial influence in path selection. A central system provides high-level task allocation, but robots resolve movement conflicts directly with neighbouring units. This architecture provides fall-backs against central system failures. \newline References: \cite{autostore_2023_autostore}, \cite{solutions_2025_autostore}, \cite{systems_2018_autostore}, \cite{systems_autostore}
+Unlike Amazon's more centralised control, AutoStore employs a more distributed approach where individual robots have substantial influence in path selection. A central system provides high-level task allocation, but robots resolve movement conflicts directly with neighbouring units. References: \cite{autostore_2023_autostore}, \cite{solutions_2025_autostore}, \cite{systems_2018_autostore}, \cite{systems_autostore}
 
 \newpage
 
@@ -119,8 +119,6 @@ The choice of heuristic significantly impacts the algorithm's performance. Commo
 
 \subsection{Genetic Algorithms}
 Genetic Algorithms (GAs)$^{\cite{geeksforgeeks_2017_genetic}, \cite{geeksforgeeks_2024_introduction}}$ are radically different compared to traditional algorithms like Dijkstra. Based on the principles of natural selection and genetic evolution, these algorithms tackle pathfinding as an optimisation problem, evolving solutions over multiple generations rather than systematically exploring the search space. They mimic biological evolution — selection, crossover, mutation — to gradually improve solutions.
-
-\newpage
 
 \subsubsection{Core Concepts}
 \begin{itemize}
@@ -281,13 +279,11 @@ Below are the tools and software I plan to use to develop my solution.
 
 \begin{itemize}
     \item IDE: IntelliJ IDEA
-    \item Libraries: tkinter, threading, heapq, logging, sys (see Section 3.1.3 for the reasoning)
+    \item Libraries: tkinter, threading, heapq, logging, sys (see Section x.x.x for the reasoning)
     \item Methodology: Custom - see section 2.7
     \item Version Control: GitHub
-    \item Code Analysis: Qodana
     \item Task tracking for iterative development: Linear
     \item Development OS: Fedora 40
-    \item Testing environment: Windows via Parallels (ARM), macOS (Apple Silicon), Fedora (x64)
 
 \end{itemize}
 
@@ -309,13 +305,11 @@ OS         & Windows, macOS, Linux            & Windows, macOS, Linux           
 \end{tblr}
 \end{table}
 
-I have based these requirements on the recommended Python specifications, accounting for the fact I may use a complex AI algorithm (the shortest path algorithm, see Section 2.1.5).
-
-These requirements are by no means restricted. These only apply to the deployment of the software. Hardware requirements may vary.
+I have based these requirements on the recommended Python specifications, accounting for the fact I may use a complex AI algorithm (see Section x.x.x). These requirements are by no means restricted. These only apply to the deployment of the software.
 
 \subsection{Software}
 
-In terms of software, the user will only require a valid Python install on their computer; I plan to write a script that automatically installs all required/recommended libraries on the device, using the requirements.txt and Python package manager (pip).
+In terms of software, the user will only require a valid Python install on their computer; all libraries are included with major Python versions.
 
 \newpage
 \section{Success criteria}
@@ -345,15 +339,6 @@ In terms of software, the user will only require a valid Python install on their
 \hline
 10 & The graphical user interface will respond to all user interactions within 2 seconds under normal operating conditions. & Responsive UI is critical for quick access and runtime for the program, since the main objective is to speed up operations. \\
 \hline
-\end{tabularx}
-\end{table}
-\newpage
-\begin{table}[htbp]
-\centering
-\begin{tabularx}{\textwidth}{|c|X|X|}
-\hline
-\textbf{\#} & \textbf{Success Criterion} & \textbf{Justification} \\
-\hline
 11 & The system will successfully process and complete 95\% of assigned collection tasks without human intervention. & Measures the core functionality of autonomous performance of warehouse tasks, supporting the goal of reducing human operations. \\
 \hline
 12 & The robot will correctly identify and report discrepancies between database stock levels and actual inventory with 98\% accuracy. & Essential for maintaining accurate inventory records through automated notification of stock discrepancies. \\
@@ -363,6 +348,15 @@ In terms of software, the user will only require a valid Python install on their
 14 & The application will successfully connect to and query the SQLite database with an average response time under 500ms. & Efficient database operations are essential for the inventory management and stock verification features. \\
 \hline
 15 & The path calculation algorithm will optimise routes to reduce total travel distance by at least 25\% compared to sequential collection. & Measures the effectiveness of the shortest path algorithm, a key differentiator from manual collection methods. \\
+\hline
+\end{tabularx}
+\end{table}
+\newpage
+\begin{table}[htbp]
+\centering
+\begin{tabularx}{\textwidth}{|c|X|X|}
+\hline
+\textbf{\#} & \textbf{Success Criterion} & \textbf{Justification} \\
 \hline
 16 & The system will ensure all calculated paths use only orthogonal movements (up, down, left, right) and avoid diagonal navigation. & Models the layout of a warehouse, as you cannot cross items to reach others \\
 \hline
@@ -396,6 +390,8 @@ As a single developer, I have decided to adopt my own version of the Scrum metho
 	\includegraphics[width=1\textwidth]{Methodology diagram (1).png}
 	\caption{- The stages of my methodology}
 \end{figure}
+
+\newpage
 
 \subsection{A breakdown of each stage}
 

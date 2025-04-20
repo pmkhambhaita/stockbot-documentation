@@ -1,5 +1,4 @@
 import logging
-
 # Configure logging with timestamp and level
 # Important for debugging and tracking program flow
 logging.basicConfig(
@@ -45,18 +44,15 @@ class PathFinder:
         if not (0 <= end[0] < self.grid.rows and 0 <= end[1] < self.grid.cols):
             logger.error(f"End position {end} is out of bounds")
             return None
-
         queue = [[start]]
         visited = set()
         
         while queue:
             path = queue.pop(0)
             x, y = path[-1]
-
             if (x, y) == end:
                 logger.info(f"Path found with length {len(path) - 1}")
                 return path
-
             if (x, y) not in visited:
                 visited.add((x, y))
                 # Check all four directions
@@ -80,7 +76,6 @@ class PathFinder:
         if not points:
             logger.warning("No intermediate points provided")
             return self.bfs(start, end)
-
         full_path = []
         current_start = start
 
@@ -95,7 +90,6 @@ class PathFinder:
             else:
                 logger.error(f"Failed to find path segment to point {point}")
                 return None
-
         # Connect final point to end position
         final_segment = self.bfs(current_start, end)
         if final_segment:
@@ -122,25 +116,21 @@ class PathVisualiser:
         if not path:
             logger.error("Cannot visualise: path is empty or None")
             return
-
         logger.info("Starting path visualisation")
         try:
             visual_grid = [['[ ]' for _ in range(self.grid.cols)] for _ in range(self.grid.rows)]
 
             for (x, y) in path:
                 visual_grid[x][y] = '[=]'
-
             sx, sy = start
             ex, ey = end
             visual_grid[sx][sy] = '[*]'
             visual_grid[ex][ey] = '[*]'
-            
             for x, y in points:
                 if 0 <= x < self.grid.rows and 0 <= y < self.grid.cols:
                     visual_grid[x][y] = '[*]'
                 else:
                     logger.warning(f"Point ({x}, {y}) is out of bounds and will be skipped")
-
             for row in visual_grid:
                 print(' '.join(row))
             

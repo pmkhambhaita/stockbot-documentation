@@ -125,17 +125,14 @@ class PathVisualiser:
         try:
             # Create empty visual grid
             visual_grid = [['[ ]' for _ in range(self.grid.cols)] for _ in range(self.grid.rows)]
-
             # Mark path segments
             for (x, y) in path:
                 visual_grid[x][y] = '[=]'
-
             # Mark start and end points
             sx, sy = start
             ex, ey = end
             visual_grid[sx][sy] = '[*]'
             visual_grid[ex][ey] = '[*]'
-            
             # Mark intermediate points
             for x, y in points:
                 valid, _ = validate_point(x, y, self.grid.rows, self.grid.cols, True)
@@ -143,7 +140,6 @@ class PathVisualiser:
                     visual_grid[x][y] = '[*]'
                 else:
                     logger.warning(f"Point ({x}, {y}) is out of bounds and will be skipped")
-
             # Display the grid
             for row in visual_grid:
                 print(' '.join(row))

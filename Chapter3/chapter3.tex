@@ -445,6 +445,8 @@ class Pathfinder {
 }
 \end{verbatim}
 
+\newpage
+
 \subsubsection{Class Structure}
 The implementation consists of two classes:
 \begin{enumerate}
@@ -489,6 +491,8 @@ The \verb|isWithinBounds()| and \verb|isObstacle()| methods are used to validate
 \end{itemize}
 
 The methods in this class are mostly self-explanatory. The \verb|findPath()| method is used to find a path between 2 points. The \verb|validatePoints()| method ensures the points are valid, using the \verb|grid| methods. The \verb|createNode()| and \verb|buildPath()| methods are used to backtrack and construct the actual path.
+
+\newpage
 
 \subsubsection{BFS Implementation Details}
 \begin{enumerate}
@@ -539,8 +543,6 @@ The A* algorithm is a refinement in my program, a step above BFS in terms of per
 
 \item \textbf{calculateHeuristic}: Estimates the distance from a node to the goal. \begin{itemize} \item \textit{Justification}: Provides the crucial admissible heuristic function that gives A* its efficiency advantage over algorithms like Dijkstra's. For orthogonal movement, the Manhattan distance perfectly estimates the minimum possible cost to reach the goal without overestimation, guiding exploration towards the target. \item \textit{Variables}: x: integer, y: integer, endX: integer, endY: integer \item \textit{Type Justification}: Integer coordinates allow for precise Manhattan distance calculation, which is the sum of horizontal and vertical distances, matching exactly the movement constraints of our orthogonal-only system. \end{itemize}
 
-\newpage
-
 \item \textbf{getBestNode}: Finds the node with the lowest f-cost in the open list. \begin{itemize} \item \textit{Justification}: This method implements the greedy selection aspect of A* by ensuring that the most promising nodes are explored first. This prioritisation is fundamental to the algorithm's efficiency and optimality guarantees. \item \textit{Variables}: openList: array, bestNode: object \item \textit{Type Justification}: The array structure allows for iteration through all candidate nodes, whilst the node object provides access to the cost values needed for comparison. The tie-breaking mechanism using h-cost biases exploration toward the goal when f-costs are equal. \end{itemize}
 
 \item \textbf{getOrthogonalNeighbours}: Returns valid adjacent nodes in the four cardinal directions. \begin{itemize} \item \textit{Justification}: Implements the graph connectivity model for a grid with orthogonal-only movement. By limiting movement to the four cardinal directions, this method enforces the movement constraints of our simplified pathfinding system. \item \textit{Variables}: x: integer, y: integer, directions: array, neighbours: array \item \textit{Type Justification}: Integer coordinates enable precise adjacency calculations. The array of direction vectors provides a clean way to represent and iterate through the four cardinal directions, whilst the resulting neighbours array offers a standard format for the main algorithm to process. \end{itemize}
@@ -550,8 +552,6 @@ The A* algorithm is a refinement in my program, a step above BFS in terms of per
 \subsubsection*{Validation Functions}
 
 These are identical to BFS validation.
-
-\newpage
 
 \subsubsection{Example pseudocode for A*}
 
@@ -791,7 +791,7 @@ class AStarPathfinder:
 
 \newpage
 
-\subsection{A* refinements if possible}
+\subsection{Possible refinements}
 
 \begin{figure}[!htbp]
 	\centering
@@ -890,6 +890,8 @@ On the subject of GUIs, what rules should a GUI actually follow to be optimal fo
 
 The numeric input fields with increment/decrement controls are an optimal solution for grid dimension entry, as there are many variants of warehouse that can be constructed via row and column definition - this allows for faster input of the desired warehouse dimensions. \newline The interface's spatial organisation leverages natural reading patterns and mental models by arranging elements in a logical left-to-right, top-to-bottom flow that correlates with the final grid structure. \newline The centrally positioned continue button serves as a clear visual endpoint, while the minimalist two-field design effectively mitigates a cluttered and hard-to-navigate interface that would otherwise arise if this and the main program was incorporated as one window.
 
+\newpage
+
 \subsection{Main Screen Analysis}
 
 \begin{figure}[!htbp]
@@ -986,7 +988,6 @@ This serves as the main entry point for the program. It will manage user input, 
     The GUI acts as a bridge between the user and the underlying logic. It passes the data it collects (like grid configurations or waypoints) to SPA for computations and calls Database for storage tasks. All modules are coordinated through the GUI, making it the central orchestrator.
 \end{itemize}
 
-\newpage
 
 \subsubsection{SPA}
 This contains the core algorithms for computing the shortest path. It contains logic for handling grid data, waypoints and pathfinding. In the program, it will act as a processing unit, receiving data from the GUI, performing computations, and returning results.

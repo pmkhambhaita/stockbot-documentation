@@ -20,35 +20,27 @@ class PathfinderGUI:
         input_frame = ttk.Frame(root)
         input_frame.grid(row=0, column=0, pady=10, padx=10, sticky='ew')
         input_frame.grid_columnconfigure(0, weight=1)  # Allow input field to expand
-        
         # Create text entry field for coordinates
         self.point_entry = ttk.Entry(input_frame)
         self.point_entry.grid(row=0, column=0, padx=(0, 10), sticky='ew')
-        
         # Create button to add points to the path
         add_button = ttk.Button(input_frame, text="Add Point", command=self.add_point)
         add_button.grid(row=0, column=1)
-        
         # Create main output area for displaying the path and messages
         self.output_text = tk.Text(root, height=15, width=50)
         self.output_text.grid(row=1, column=0, pady=10, padx=10, sticky='nsew')
-        
         # Create bottom frame for control buttons
         button_frame = ttk.Frame(root)
         button_frame.grid(row=2, column=0, pady=5)
-        
         # Add buttons for path finding and clearing
         start_button = ttk.Button(button_frame, text="Find Path", command=self.find_path)
         start_button.grid(row=0, column=0, padx=5)
-        
         clear_button = ttk.Button(button_frame, text="Clear", command=self.clear_all)
         clear_button.grid(row=0, column=1, padx=5)
-        
         # Initialise the pathfinding components with a 10x10 grid
         self.grid = spa.Grid(10, 10)
         self.path_finder = spa.PathFinder(self.grid)
         self.path_visualiser = spa.PathVisualiser(self.grid)
-        
         # Initialise empty list to store intermediate points
         self.points = []
 
@@ -58,13 +50,11 @@ class PathfinderGUI:
         try:
             # Convert input string to x,y coordinates
             x, y = map(int, point_str.strip('()').replace(' ', '').split(','))
-            
             # Validate the point using centralised validation function
             valid, error = spa.validate_point(x, y, self.grid.rows, self.grid.cols)
             if not valid:
                 self.output_text.insert(tk.END, f"Error: {error}\n")
                 return
-            
             # Add valid point to the list and clear input field
             self.points.append((x, y))
             self.point_entry.delete(0, tk.END)
@@ -83,10 +73,8 @@ class PathfinderGUI:
         # Define start and end points of the grid
         start_node = (0, 0)
         end_node = (self.grid.rows - 1, self.grid.cols - 1)
-        
         # Clear previous output
         self.output_text.delete(1.0, tk.END)
-        
         # Find path through all points
         path = self.path_finder.find_path_through_points(start_node, self.points, end_node)
         
@@ -95,24 +83,19 @@ class PathfinderGUI:
             old_stdout = sys.stdout
             result = io.StringIO()
             sys.stdout = result
-            
             # Generate the path visualisation
             self.path_visualiser.visualise_path(path, start_node, end_node, self.points)
-            
             # Restore stdout and get the visualisation
             sys.stdout = old_stdout
             visualization = result.getvalue()
-            
             # Display the results in the output area
             self.output_text.insert(tk.END, visualization)
             self.output_text.insert(tk.END, f"\nTotal path length: {len(path) - 1} steps\n")
-            
             # Add detailed path sequence
             path_str = " -> ".join([f"({x},{y})" for x, y in path])
             self.output_text.insert(tk.END, f"Path sequence: {path_str}\n")
         else:
             self.output_text.insert(tk.END, "Error: No valid path found through all points\n")
-
     def clear_all(self):
         # Reset all components to initial state
         self.points = []
