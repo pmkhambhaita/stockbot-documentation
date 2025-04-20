@@ -265,13 +265,28 @@ This criteria was NOT met. I did not have enough time to implement any sort of p
 
 This criteria was fully met. The database was very responsive and requests rarely took longer than 500ms, even for larger warehouses.
 
-\section{Limitations and maintenance}
+\section{Limitations}
 
+My main limitation when developing my solution was time. I missed out on creating some quality-of-life features that would have made the solution even better. I mainly focused on getting core functionality working to a good-enough standard, and in the end my stakeholder was happy with the final result.
 
+Below are the features I would have implemented given the time and how I would approach them in the future:
 
+\subsubsection{Direct feedback}
 
+For this, I would have developed a function that would trace out the path as the 'robot' traversed it, with colours meaning different statuses. This would be an intuitive and easy way to check the status of the order, while not cluttering the UI with constant updates that would have come with a text-based approach. 
 
+\subsubsection{Environment persistence}
 
+For this feature, I would have used Python's JSON library to save all the database data to a universal format, and import that data in the same manner. I would have saved critical aspects first, like the warehouse configuration, before saving the database contents in a similar form to a SQL database, or would have saved the raw data and made a helper function to decode and reconstruct it.
 
+\subsubsection{Path export}
 
+This was not on the original plan for features, but I felt I should include it as a fallback. In the case where this software is used not autonomously but manually, it might be useful to export the visualisation of the path as an image, as it could show an employee where and how to walk to achieve the quickest route. To make this, I would use the pillow library from the Python package repository, and capture the window as a screenshot. I would then add a file dialog to allow the user to save the image to a location of their choice.
 
+\section{Maintenance}
+
+Maintenance features are mainly benefits of making my project with OOP principles. However, I did include some more maintenance features like detailed comments, clear naming and separation of concerns (splitting my code into respective files). This allowed me during development to build a good foundation, especially when I migrated from a CLI to a GUI. 
+
+In terms of future maintenance, I could add a feature into the top menus that fetches the latest version from GitHub, keeping the version up to date as the software progresses. This would be accompanied by an installer function which would check and install any dependencies required by the new version. This would probably be done through PIP: the python package manager: it allows dependencies to be listed in a file and automatically installed in one command.
+
+I would also set up a feedback system on a task-tracking software like Linear, which allows future testers to flag features, bugs and other issues they may encounter. This could be directly built into the software - a bug tracker that could automatically send a bug report to me through APIs.
