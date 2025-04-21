@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.6)  21 APR 2025 07:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.6)  21 APR 2025 22:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2509,121 +2509,116 @@ n/10 queue.Queue []\T1/lmr/m/n/10 (-20) ([][]\T1/zi4/m/n/10 self.result_queue[]
 
 [119
 
-]
+] (Code/cerf/gui1a.py
 
 [120]
-Underfull \hbox (badness 10000) in paragraph at lines 1130--1130
+
+[121])
+
+[122]
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1131
 []|\T1/lmr/m/n/10 (+20) Met -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1130--1130
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1131
 \T1/lmr/m/n/10 (+20) pretty
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1130--1130
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1131
 \T1/lmr/m/n/10 (+20) much
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1130--1130
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1131
 \T1/lmr/m/n/10 (+20) non-
  []
 
 
 
-[121]
-
-[122]
-
 [123]
-Underfull \hbox (badness 4886) in paragraph at lines 1200--1200
+
+[124] (Code/cerf/config1b.py
+
+[125])
+
+[126]
+Underfull \hbox (badness 4886) in paragraph at lines 1203--1203
 []|\T1/lmr/m/n/10 (+20) Config closes, main GUI
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
+Underfull \hbox (badness 10000) in paragraph at lines 1203--1203
 \T1/lmr/m/n/10 (+20) uses 15x10 size (check
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1200--1200
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-
-[124]
-Overfull \hbox (44.94682pt too wide) in paragraph at lines 1235--1236
-\T1/lmr/m/n/10 (-20) two helper func-tions to [][]\T1/zi4/m/n/10 spa.py[]\T1/lm
-r/m/n/10 (-20) : [][]\T1/zi4/m/n/10 index_to_coordinates(index, cols) []\T1/lmr
-/m/n/10 (-20) and [][]\T1/zi4/m/n/10 coordinates_to_index(row, col, cols)[]\T1/
-lmr/m/n/10 (-20) .
- []
-
-
-
-[125]
-
-[126]
-Underfull \hbox (badness 10000) in paragraph at lines 1274--1274
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1274--1274
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1274--1274
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1274--1274
-[]|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
 [127]
+Overfull \hbox (46.40129pt too wide) in paragraph at lines 1238--1239
+\T1/lmr/m/n/10 (-20) im-ple-mented a 1-N num-ber-ing scheme. I added two helper
+ func-tions to [][]\T1/zi4/m/n/10 spa.py[]\T1/lmr/m/n/10 (-20) : [][]\T1/zi4/m/
+n/10 index_to_coordinates(index, cols)
+ []
+
+
 
 [128]
 
 [129]
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1343
+Underfull \hbox (badness 10000) in paragraph at lines 1277--1277
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 5802) in paragraph at lines 1343--1343
-[]|\T1/lmr/m/n/10 (+20) Inspect []\T1/zi4/m/n/10 inventory.db \T1/lmr/m/n/10 (+
-20) schema us-ing DB
+Underfull \hbox (badness 10000) in paragraph at lines 1277--1277
+[]|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1343
+Underfull \hbox (badness 10000) in paragraph at lines 1277--1277
+[]|\T1/lmr/m/n/10 (+20) *(User:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1277--1277
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
 [130]
-Overfull \hbox (21.80933pt too wide) in paragraph at lines 1378--1379
+
+[131]
+
+[132]
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1346
+[]|\T1/lmr/m/n/10 (+20) *(User:
+ []
+
+
+Underfull \hbox (badness 5802) in paragraph at lines 1346--1346
+[]|\T1/lmr/m/n/10 (+20) Inspect []\T1/zi4/m/n/10 inventory.db \T1/lmr/m/n/10 (+
+20) schema us-ing DB
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1346
+[]|\T1/lmr/m/n/10 (+20) *(User:
+ []
+
+
+
+[133]
+Overfull \hbox (21.80933pt too wide) in paragraph at lines 1381--1382
 []\T1/lmr/m/n/10 (-20) Added [][]\T1/zi4/m/n/10 update_quantity(self, item_id, 
 new_quantity) []\T1/lmr/m/n/10 (-20) method, in-clud-ing checks to en-sure the 
 [][]\T1/zi4/m/n/10 new_quantity
  []
 
 
-Overfull \hbox (7.95053pt too wide) in paragraph at lines 1387--1388
+Overfull \hbox (7.95053pt too wide) in paragraph at lines 1390--1391
 []\T1/lmr/m/n/10 (-20) Annotations added: Added doc-strings for all the new pub
 -lic meth-ods ([][]\T1/zi4/m/n/10 populate_random_data[]\T1/lmr/m/n/10 (-20) , 
 [][]\T1/zi4/m/n/10 validate_item_id[]\T1/lmr/m/n/10 (-20) ,
@@ -2631,37 +2626,37 @@ Overfull \hbox (7.95053pt too wide) in paragraph at lines 1387--1388
 
 
 
-[131]
+[134]
 
-[132]
-Underfull \hbox (badness 10000) in paragraph at lines 1413--1413
+[135]
+Underfull \hbox (badness 10000) in paragraph at lines 1416--1416
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1413--1413
+Underfull \hbox (badness 10000) in paragraph at lines 1416--1416
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1413--1413
+Underfull \hbox (badness 10000) in paragraph at lines 1416--1416
 []|\T1/lmr/m/n/10 (+20) Updates cor-rectly for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1413--1413
+Underfull \hbox (badness 10000) in paragraph at lines 1416--1416
 \T1/lmr/m/n/10 (+20) valid int >= 0, raises
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1413--1413
+Underfull \hbox (badness 10000) in paragraph at lines 1416--1416
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
-[133]
-Overfull \hbox (103.21123pt too wide) in paragraph at lines 1447--1448
+[136]
+Overfull \hbox (103.21123pt too wide) in paragraph at lines 1450--1451
 []\T1/lmr/m/n/10 (-20) Added [][]\T1/zi4/m/n/10 logging []\T1/lmr/m/n/10 (-20) 
 to [][]\T1/zi4/m/n/10 database.py[]\T1/lmr/m/n/10 (-20) . Im-ported the [][]\T1
 /zi4/m/n/10 logging []\T1/lmr/m/n/10 (-20) mod-ule and ob-tained the log-ger ([
@@ -2670,7 +2665,7 @@ to [][]\T1/zi4/m/n/10 database.py[]\T1/lmr/m/n/10 (-20) . Im-ported the [][]\T1
  []
 
 
-Overfull \hbox (2.60214pt too wide) in paragraph at lines 1448--1449
+Overfull \hbox (2.60214pt too wide) in paragraph at lines 1451--1452
 []\T1/lmr/m/n/10 (-20) (within [][]\T1/zi4/m/n/10 PathfinderGUI.__init__[]\T1/l
 mr/m/n/10 (-20) ), and then calls [][]\T1/zi4/m/n/10 self.db.populate_random_da
 ta()[]\T1/lmr/m/n/10 (-20) . (Note: [][]\T1/zi4/m/n/10 database.py
@@ -2678,37 +2673,37 @@ ta()[]\T1/lmr/m/n/10 (-20) . (Note: [][]\T1/zi4/m/n/10 database.py
 
 
 
-[134]
+[137]
 
-[135]
-Underfull \hbox (badness 4765) in paragraph at lines 1485--1485
+[138]
+Underfull \hbox (badness 4765) in paragraph at lines 1488--1488
 []|\T1/lmr/m/n/10 (+20) Correct stock & po-si-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1485--1485
+Underfull \hbox (badness 10000) in paragraph at lines 1488--1488
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1485--1485
+Underfull \hbox (badness 10000) in paragraph at lines 1488--1488
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1485--1485
+Underfull \hbox (badness 10000) in paragraph at lines 1488--1488
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1485--1485
+Underfull \hbox (badness 10000) in paragraph at lines 1488--1488
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
-[136]
-Overfull \hbox (15.71237pt too wide) in paragraph at lines 1520--1521
+[139]
+Overfull \hbox (15.71237pt too wide) in paragraph at lines 1523--1524
 [][]\T1/zi4/m/n/10 (x, y) []\T1/lmr/m/n/10 (-20) tu-ple in [][]\T1/zi4/m/n/10 s
 elf.points[]\T1/lmr/m/n/10 (-20) , it con-verts it back to the cor-re-spond-ing
  [][]\T1/zi4/m/n/10 itemID []\T1/lmr/m/n/10 (-20) us-ing [][]\T1/zi4/m/n/10 spa
@@ -2717,8 +2712,8 @@ elf.points[]\T1/lmr/m/n/10 (-20) , it con-verts it back to the cor-re-spond-ing
 
 
 
-[137]
-Overfull \hbox (3.1703pt too wide) in paragraph at lines 1534--1535
+[140]
+Overfull \hbox (3.1703pt too wide) in paragraph at lines 1537--1538
 \T1/lmr/m/n/10 (-20) *(User: In-sert code snip-pets for [][]\T1/zi4/m/n/10 decr
 ement_quantity []\T1/lmr/m/n/10 (-20) in [][]\T1/zi4/m/n/10 database.py[]\T1/lm
 r/m/n/10 (-20) , the mod-i-fied [][]\T1/zi4/m/n/10 add_point []\T1/lmr/m/n/10 (
@@ -2727,33 +2722,33 @@ r/m/n/10 (-20) , the mod-i-fied [][]\T1/zi4/m/n/10 add_point []\T1/lmr/m/n/10 (
 
 
 
-[138]
-Underfull \hbox (badness 1742) in paragraph at lines 1553--1553
+[141]
+Underfull \hbox (badness 1742) in paragraph at lines 1556--1556
 []|\T1/lmr/m/n/10 (+20) Point added ("Stock: 1").
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1553--1553
+Underfull \hbox (badness 10000) in paragraph at lines 1556--1556
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 1668) in paragraph at lines 1553--1553
+Underfull \hbox (badness 1668) in paragraph at lines 1556--1556
 \T1/lmr/m/n/10 (+20) stock" shown. Point not
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1553--1553
+Underfull \hbox (badness 10000) in paragraph at lines 1556--1556
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1553--1553
+Underfull \hbox (badness 10000) in paragraph at lines 1556--1556
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Overfull \hbox (4.57271pt too wide) in paragraph at lines 1566--1567
+Overfull \hbox (4.57271pt too wide) in paragraph at lines 1569--1570
 []\T1/lmr/m/n/10 (-20) Decrement Safety: Check [][]\T1/zi4/m/n/10 current_qty >
  0 []\T1/lmr/m/n/10 (-20) and SQL [][]\T1/zi4/m/n/10 WHERE Quantity > 0 []\T1/l
 mr/m/n/10 (-20) used in [][]\T1/zi4/m/n/10 database.decrement_quantity[]\T1/lmr
@@ -2762,29 +2757,14 @@ mr/m/n/10 (-20) used in [][]\T1/zi4/m/n/10 database.decrement_quantity[]\T1/lmr
 
 
 
-[139]
-Underfull \hbox (badness 6542) in paragraph at lines 1617--1617
+[142]
+Underfull \hbox (badness 6542) in paragraph at lines 1620--1620
 []|\T1/lmr/m/n/10 (+20) Query shows ini-tial
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1617--1617
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1620
 []|\T1/lmr/m/n/10 (+20) Error mes-sage-boxes
- []
-
-
-
-[140
-
-]
-
-[141]
-
-[142]
-Overfull \hbox (52.75464pt too wide) in paragraph at lines 1701--1702
-[]\T1/lmr/bx/n/10 (-20) Reversion: \T1/lmr/m/n/10 (-20) Use ver-sion con-trol (
-[][]\T1/zi4/m/n/10 git[]\T1/lmr/m/n/10 (-20) ) to undo the prob-lem-atic com-mi
-t. Specif-i-cally, ex-e-cute [][]\T1/zi4/m/n/10 git revert dd54ffd --no-edit
  []
 
 
@@ -2792,7 +2772,22 @@ t. Specif-i-cally, ex-e-cute [][]\T1/zi4/m/n/10 git revert dd54ffd --no-edit
 [143
 
 ]
-Overfull \hbox (39.8778pt too wide) in paragraph at lines 1736--1737
+
+[144]
+
+[145]
+Overfull \hbox (52.75464pt too wide) in paragraph at lines 1704--1705
+[]\T1/lmr/bx/n/10 (-20) Reversion: \T1/lmr/m/n/10 (-20) Use ver-sion con-trol (
+[][]\T1/zi4/m/n/10 git[]\T1/lmr/m/n/10 (-20) ) to undo the prob-lem-atic com-mi
+t. Specif-i-cally, ex-e-cute [][]\T1/zi4/m/n/10 git revert dd54ffd --no-edit
+ []
+
+
+
+[146
+
+]
+Overfull \hbox (39.8778pt too wide) in paragraph at lines 1739--1740
 []\T1/lmr/m/n/10 (-20) It deleted the [][]\T1/zi4/m/n/10 self.processing []\T1/
 lmr/m/n/10 (-20) flag and [][]\T1/zi4/m/n/10 self.result_queue []\T1/lmr/m/n/10
  (-20) at-tribute ini-tial-i-sa-tions from [][]\T1/zi4/m/n/10 PathfinderGUI.__i
@@ -2800,7 +2795,7 @@ nit__[]\T1/lmr/m/n/10 (-20) .
  []
 
 
-Overfull \hbox (18.70769pt too wide) in paragraph at lines 1739--1740
+Overfull \hbox (18.70769pt too wide) in paragraph at lines 1742--1743
 []\T1/lmr/m/n/10 (-20) Crucially, it re-stored the di-rect syn-chronous call: [
 ][]\T1/zi4/m/n/10 path = self.path_finder.find_path_through_points(...)[]\T1/lm
 r/m/n/10 (-20) .
@@ -2808,45 +2803,45 @@ r/m/n/10 (-20) .
 
 
 
-[144
+[147
 
 ] (Code/guisd.py
 
-[145]
-
-[146]
-
-[147]
-
-[148])
+[148]
 
 [149]
-Underfull \hbox (badness 1281) in paragraph at lines 1768--1768
+
+[150]
+
+[151])
+
+[152]
+Underfull \hbox (badness 1281) in paragraph at lines 1771--1771
 []|\T1/lmr/m/n/10 (+20) Path found cor-rectly
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 1768--1768
+Underfull \hbox (badness 2368) in paragraph at lines 1771--1771
 \T1/lmr/m/n/10 (+20) ily, path found cor-
  []
 
 
-Underfull \hbox (badness 1077) in paragraph at lines 1768--1768
+Underfull \hbox (badness 1077) in paragraph at lines 1771--1771
 []|\T1/lmr/m/n/10 (+20) Path found cor-rectly.
  []
 
 
 
-[150]
+[153]
 
-[151]
+[154]
 
-[152
+[155
 
 ]
 
-[153]
-Overfull \hbox (17.95386pt too wide) in paragraph at lines 1903--1904
+[156]
+Overfull \hbox (17.95386pt too wide) in paragraph at lines 1906--1907
 []\T1/lmr/m/n/10 (-20) I then linked this to the main [][]\T1/zi4/m/n/10 Pathfi
 nderGUI[]\T1/lmr/m/n/10 (-20) . I added a "Show Grid" but-ton that calls [][]\T
 1/zi4/m/n/10 self.viz_window.show()
@@ -2854,13 +2849,13 @@ nderGUI[]\T1/lmr/m/n/10 (-20) . I added a "Show Grid" but-ton that calls [][]\T
 
 
 
-[154
+[157
 
 ]
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1917 ... Snippets (Commit \verb|3b87545| state)}
+l.1920 ... Snippets (Commit \verb|3b87545| state)}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2871,7 +2866,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \verb@egroup ...erb@balance@group \@empty \egroup 
                                                   
-l.1917 ... Snippets (Commit \verb|3b87545| state)}
+l.1920 ... Snippets (Commit \verb|3b87545| state)}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2886,13 +2881,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1917 ... Snippets (Commit \verb|3b87545| state)}
+l.1920 ... Snippets (Commit \verb|3b87545| state)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (22.88304pt too wide) in paragraph at lines 1918--1919
+Overfull \hbox (22.88304pt too wide) in paragraph at lines 1921--1922
 \T1/lmr/m/n/10 (-20) *(User: In-sert snip-pets for the ba-sic [][]\T1/zi4/m/n/1
 0 GridVisualizer []\T1/lmr/m/n/10 (-20) class, link-ing calls in [][]\T1/zi4/m/
 n/10 PathfinderGUI[]\T1/lmr/m/n/10 (-20) , and ini-tial [][]\T1/zi4/m/n/10 draw
@@ -2901,25 +2896,25 @@ _grid[]\T1/lmr/m/n/10 (-20) /[][]\T1/zi4/m/n/10 draw_cell
 
 
 
-[155]
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+[158]
+Underfull \hbox (badness 10000) in paragraph at lines 1940--1940
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1940--1940
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1940--1940
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
-[156]
-Overfull \hbox (54.4362pt too wide) in paragraph at lines 1971--1972
+[159]
+Overfull \hbox (54.4362pt too wide) in paragraph at lines 1974--1975
 [][]\T1/zi4/m/n/10 self.db []\T1/lmr/m/n/10 (-20) in-stance to the vi-su-aliser
 . Up-dated [][]\T1/zi4/m/n/10 visualize_path []\T1/lmr/m/n/10 (-20) and [][]\T1
 /zi4/m/n/10 draw_cell []\T1/lmr/m/n/10 (-20) to query [][]\T1/zi4/m/n/10 self.d
@@ -2928,99 +2923,11 @@ b.get_quantity(pos_num)
 
 
 
-[157]
-! Missing } inserted.
-<inserted text> 
-                }
-l.1984 ... Snippets (Commit \verb|9cd9b34| state)}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten \endgroup.
-\verb@egroup ...erb@balance@group \@empty \egroup 
-                                                  
-l.1984 ... Snippets (Commit \verb|9cd9b34| state)}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-! LaTeX Error: \verb illegal in argument.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1984 ... Snippets (Commit \verb|9cd9b34| state)}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-
-[158]
-Underfull \hbox (badness 10000) in paragraph at lines 2008--2008
-[]|\T1/lmr/m/n/10 (+20) Viz opens; Path/-points
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2008--2008
-\T1/lmr/m/n/10 (+20) coloured; Clears to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2008--2008
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2008--2008
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 1990) in paragraph at lines 2008--2008
-[]|\T1/lmr/m/n/10 (+20) Scrollbars ap-pear & work.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2008--2008
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2008--2008
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2008--2008
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-
-[159]
-Overfull \hbox (102.14966pt too wide) in paragraph at lines 2042--2043
-\T1/lmr/m/n/10 (-20) empty af-ter pars-ing user in-put. If empty, it now calls 
-[][]\T1/zi4/m/n/10 self.path_finder.find_path_through_points(start_node, [], en
-d_node)
- []
-
-
-
 [160]
 ! Missing } inserted.
 <inserted text> 
                 }
-l.2060 ...ation Snippets (Commit \verb|6990578a|)}
+l.1987 ... Snippets (Commit \verb|9cd9b34| state)}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3031,7 +2938,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \verb@egroup ...erb@balance@group \@empty \egroup 
                                                   
-l.2060 ...ation Snippets (Commit \verb|6990578a|)}
+l.1987 ... Snippets (Commit \verb|9cd9b34| state)}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3046,7 +2953,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2060 ...ation Snippets (Commit \verb|6990578a|)}
+l.1987 ... Snippets (Commit \verb|9cd9b34| state)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3054,76 +2961,164 @@ If that doesn't work, type  X <return>  to quit.
 
 
 [161]
-Underfull \hbox (badness 2591) in paragraph at lines 2086--2086
-[]|\T1/lmr/m/n/10 (+20) Simplified lay-out, 600x500
+Underfull \hbox (badness 10000) in paragraph at lines 2011--2011
+[]|\T1/lmr/m/n/10 (+20) Viz opens; Path/-points
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2086--2086
+Underfull \hbox (badness 10000) in paragraph at lines 2011--2011
+\T1/lmr/m/n/10 (+20) coloured; Clears to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2011--2011
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2086--2086
+Underfull \hbox (badness 10000) in paragraph at lines 2011--2011
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2086--2086
+Underfull \hbox (badness 1990) in paragraph at lines 2011--2011
+[]|\T1/lmr/m/n/10 (+20) Scrollbars ap-pear & work.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2011--2011
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2086--2086
+Underfull \hbox (badness 10000) in paragraph at lines 2011--2011
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2086--2086
-[]|\T1/lmr/m/n/10 (+20) *(User:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2086--2086
+Underfull \hbox (badness 10000) in paragraph at lines 2011--2011
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
 [162]
-Underfull \hbox (badness 10000) in paragraph at lines 2151--2151
+Overfull \hbox (102.14966pt too wide) in paragraph at lines 2045--2046
+\T1/lmr/m/n/10 (-20) empty af-ter pars-ing user in-put. If empty, it now calls 
+[][]\T1/zi4/m/n/10 self.path_finder.find_path_through_points(start_node, [], en
+d_node)
+ []
+
+
+
+[163]
+! Missing } inserted.
+<inserted text> 
+                }
+l.2063 ...ation Snippets (Commit \verb|6990578a|)}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\verb@egroup ...erb@balance@group \@empty \egroup 
+                                                  
+l.2063 ...ation Snippets (Commit \verb|6990578a|)}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \verb illegal in argument.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2063 ...ation Snippets (Commit \verb|6990578a|)}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
+[164]
+Underfull \hbox (badness 2591) in paragraph at lines 2089--2089
+[]|\T1/lmr/m/n/10 (+20) Simplified lay-out, 600x500
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2089--2089
+[]|\T1/lmr/m/n/10 (+20) *(User:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2089--2089
+[]|\T1/lmr/m/n/10 (+20) *(User:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2089--2089
+[]|\T1/lmr/m/n/10 (+20) *(User:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2089--2089
+[]|\T1/lmr/m/n/10 (+20) *(User:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2089--2089
+[]|\T1/lmr/m/n/10 (+20) *(User:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2089--2089
+[]|\T1/lmr/m/n/10 (+20) *(User:
+ []
+
+
+
+[165]
+Underfull \hbox (badness 10000) in paragraph at lines 2154--2154
 \T1/lmr/m/n/10 (+20) shows path, stock
  []
 
 
-Underfull \hbox (badness 1253) in paragraph at lines 2151--2151
+Underfull \hbox (badness 1253) in paragraph at lines 2154--2154
 []|\T1/lmr/m/n/10 (+20) Update works. Viz
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2151--2151
+Underfull \hbox (badness 10000) in paragraph at lines 2154--2154
 \T1/lmr/m/n/10 (+20) Path avoid-s/warns
  []
 
 
 
-[163
+[166
 
 ]
 
-[164]
+[167]
 
-[165]
+[168]
 
-[166]
-Overfull \hbox (10.98796pt too wide) in paragraph at lines 2269--2270
+[169]
+Overfull \hbox (10.98796pt too wide) in paragraph at lines 2272--2273
 []\T1/lmr/m/n/10 (-20) Add [][]\T1/zi4/m/n/10 ttk.Radiobutton []\T1/lmr/m/n/10 
 (-20) wid-gets for 'BFS', 'A*', and 'Ge-netic Al-go-rithm', link-ing them to []
 []\T1/zi4/m/n/10 self.algorithm_var[]\T1/lmr/m/n/10 (-20) . 
  []
 
 
-Overfull \hbox (2.89198pt too wide) in paragraph at lines 2275--2276
+Overfull \hbox (2.89198pt too wide) in paragraph at lines 2278--2279
 [][]\T1/zi4/m/n/10 selection[]\T1/lmr/m/n/10 (-20) , [][]\T1/zi4/m/n/10 crossov
 er[]\T1/lmr/m/n/10 (-20) , [][]\T1/zi4/m/n/10 mutation[]\T1/lmr/m/n/10 (-20) ) 
 within [][]\T1/zi4/m/n/10 PathFinder []\T1/lmr/m/n/10 (-20) in [][]\T1/zi4/m/n/
@@ -3132,7 +3127,7 @@ lgorithm_path
  []
 
 
-Overfull \hbox (44.88225pt too wide) in paragraph at lines 2283--2284
+Overfull \hbox (44.88225pt too wide) in paragraph at lines 2286--2287
 [][][]\T1/zi4/m/n/10 spa.py[]\T1/lmr/m/n/10 (-20) : The [][]\T1/zi4/m/n/10 Path
 Finder []\T1/lmr/m/n/10 (-20) class now con-tains mul-ti-ple pathfind-ing meth-
 ods ([][]\T1/zi4/m/n/10 bfs[]\T1/lmr/m/n/10 (-20) , [][]\T1/zi4/m/n/10 a_star_s
@@ -3141,17 +3136,17 @@ earch[]\T1/lmr/m/n/10 (-20) , [][]\T1/zi4/m/n/10 genetic_algorithm_path
 
 
 
-[167
+[170
 
 ]
 
-[168]
+[171]
 
-[169]
+[172]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2333 ....get()|. Based on this value ('bfs', 'a_
+l.2336 ....get()|. Based on this value ('bfs', 'a_
                                                   star', 'ga'), it calls the...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3163,7 +3158,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2334 	\end{itemize}
+l.2337 	\end{itemize}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3171,13 +3166,13 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2334 	\end{itemize}
+l.2337 	\end{itemize}
                      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (290.47897pt too wide) in paragraph at lines 2333--2334
+Overfull \hbox (290.47897pt too wide) in paragraph at lines 2336--2337
 [][]\T1/zi4/m/n/10 self.algorithm_var.get()[]\T1/lmr/m/n/10 (-20) . Based on th
 is value ('bfs', 'a$[]\OML/lmm/m/it/10 tar[];[] ga[]\OT1/lmr/m/n/10 (-20) )\OML
 /lmm/m/it/10 ; itcallsthecorrespondingmethodon[]\OT1/lmr/m/n/10 (-20) ([]\OML/l
@@ -3185,19 +3180,19 @@ mm/m/it/10 ; []; or[]\OT1/lmr/m/n/10 (-20) )\OML/lmm/m/it/10 :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2333--2334
+Underfull \hbox (badness 10000) in paragraph at lines 2336--2337
 
  []
 
 
 
-[170
+[173
 
 ]
 ! Missing } inserted.
 <inserted text> 
                 }
-l.2346 ...on Snippets (Commit \verb|8174e75a...|)}
+l.2349 ...on Snippets (Commit \verb|8174e75a...|)}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3208,7 +3203,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \verb@egroup ...erb@balance@group \@empty \egroup 
                                                   
-l.2346 ...on Snippets (Commit \verb|8174e75a...|)}
+l.2349 ...on Snippets (Commit \verb|8174e75a...|)}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3223,75 +3218,75 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2346 ...on Snippets (Commit \verb|8174e75a...|)}
+l.2349 ...on Snippets (Commit \verb|8174e75a...|)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
 
-[171]
-Underfull \hbox (badness 10000) in paragraph at lines 2370--2370
+[174]
+Underfull \hbox (badness 10000) in paragraph at lines 2373--2373
 []|\T1/lmr/m/n/10 (+20) Path found us-ing BFS,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2370--2370
+Underfull \hbox (badness 10000) in paragraph at lines 2373--2373
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2370--2370
+Underfull \hbox (badness 10000) in paragraph at lines 2373--2373
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2370--2370
+Underfull \hbox (badness 10000) in paragraph at lines 2373--2373
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 2370--2370
+Underfull \hbox (badness 1953) in paragraph at lines 2373--2373
 []|\T1/lmr/m/n/10 (+20) Placeholder method called,
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 2370--2370
+Underfull \hbox (badness 2245) in paragraph at lines 2373--2373
 \T1/lmr/m/n/10 (+20) likely shows er-ror/mes-sage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2370--2370
+Underfull \hbox (badness 10000) in paragraph at lines 2373--2373
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2370--2370
+Underfull \hbox (badness 10000) in paragraph at lines 2373--2373
 []|\T1/lmr/m/n/10 (+20) Radio but-tons up-date
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2370--2370
+Underfull \hbox (badness 10000) in paragraph at lines 2373--2373
 []\T1/zi4/m/n/10 self.algorithm_var \T1/lmr/m/n/10 (+20) cor-
  []
 
 
-Underfull \hbox (badness 1490) in paragraph at lines 2370--2370
+Underfull \hbox (badness 1490) in paragraph at lines 2373--2373
 \T1/lmr/m/n/10 (+20) rectly. Cor-rect al-go-rithm
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2370--2370
+Underfull \hbox (badness 10000) in paragraph at lines 2373--2373
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
-[172]
+[175]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2405 ..., ny) not in came_from:|. (Note: 'allow_
+l.2408 ..., ny) not in came_from:|. (Note: 'allow_
                                                   start_end=True' might be n...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3303,7 +3298,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2406 		\item
+l.2409 		\item
                Comments: Added comments explaining the purpose of the GA pla...
 
 Try typing  <return>  to proceed.
@@ -3312,13 +3307,13 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2406 		\item C
+l.2409 		\item C
                 omments: Added comments explaining the purpose of the GA pla...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (341.65208pt too wide) in paragraph at lines 2405--2406
+Overfull \hbox (341.65208pt too wide) in paragraph at lines 2408--2409
 \T1/lmr/m/n/10 (-20) bounds [][]\T1/zi4/m/n/10 0 <= nx < self.grid.rows...[]\T1
 /lmr/m/n/10 (-20) , it now calls the uni-fied val-i-da-tion func-tion: [][]\T1/
 zi4/m/n/10 valid, _ = spa.validate_point(nx, ny, self.grid.rows, self.grid.cols
@@ -3327,11 +3322,11 @@ zi4/m/n/10 valid, _ = spa.validate_point(nx, ny, self.grid.rows, self.grid.cols
 
 
 
-[173]
+[176]
 ! Missing } inserted.
 <inserted text> 
                 }
-l.2419 ...on Snippets (Commit \verb|a8df4085...|)}
+l.2422 ...on Snippets (Commit \verb|a8df4085...|)}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3342,7 +3337,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \verb@egroup ...erb@balance@group \@empty \egroup 
                                                   
-l.2419 ...on Snippets (Commit \verb|a8df4085...|)}
+l.2422 ...on Snippets (Commit \verb|a8df4085...|)}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3357,54 +3352,54 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2419 ...on Snippets (Commit \verb|a8df4085...|)}
+l.2422 ...on Snippets (Commit \verb|a8df4085...|)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
 
-[174]
-Underfull \hbox (badness 1168) in paragraph at lines 2437--2437
+[177]
+Underfull \hbox (badness 1168) in paragraph at lines 2440--2440
 []|\T1/lmr/m/n/10 (+20) Path found cor-rectly, uses
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2437--2437
+Underfull \hbox (badness 10000) in paragraph at lines 2440--2440
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2437--2437
+Underfull \hbox (badness 10000) in paragraph at lines 2440--2440
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
-[175]
-Underfull \hbox (badness 1924) in paragraph at lines 2500--2500
+[178]
+Underfull \hbox (badness 1924) in paragraph at lines 2503--2503
 []|\T1/lmr/m/n/10 (+20) Shortest path found,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2500--2500
+Underfull \hbox (badness 10000) in paragraph at lines 2503--2503
 []|\T1/lmr/m/n/10 (+20) Placeholder mes-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2500--2500
+Underfull \hbox (badness 10000) in paragraph at lines 2503--2503
 \T1/lmr/m/n/10 (+20) sage/er-ror shown,
  []
 
 
 
-[176
+[179
 
 ]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2546 ...s, mainly complexity warnings for the a_
+l.2549 ...s, mainly complexity warnings for the a_
                                                   star_search method and ide...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3416,7 +3411,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2547 \end{itemize}
+l.2550 \end{itemize}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3424,33 +3419,33 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2547 \end{itemize}
+l.2550 \end{itemize}
                     
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (12.51419pt too wide) in paragraph at lines 2546--2547
+Overfull \hbox (12.51419pt too wide) in paragraph at lines 2549--2550
 \T1/lmr/m/n/10 (-20) the a$[]\OML/lmm/m/it/10 tar[]earchmethodandidentifyingunu
 sedplaceholderfunctionsfortheGA:Stylesuggestionswereminor:\OT1/lmr/m/n/10 (-20)
  ")\OMS/lmsy/m/n/10 ^^C
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2546--2547
+Underfull \hbox (badness 10000) in paragraph at lines 2549--2550
 
  []
 
 
 
-[177]
-Underfull \hbox (badness 10000) in paragraph at lines 2584--2584
+[180]
+Underfull \hbox (badness 10000) in paragraph at lines 2587--2587
 []|\T1/lmr/m/n/10 (+20) Modify Pathfind-ing Al-go-rithm for Ob-sta-cle Avoid-an
 ce: Up-date
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2584--2584
+Underfull \hbox (badness 10000) in paragraph at lines 2587--2587
 []\T1/zi4/m/n/10 PathFinder.bfs \T1/lmr/m/n/10 (+20) and []\T1/zi4/m/n/10 PathF
 inder.a_star_search \T1/lmr/m/n/10 (+20) meth-ods in []\T1/zi4/m/n/10 spa.py \T
 1/lmr/m/n/10 (+20) to check
@@ -3458,22 +3453,22 @@ inder.a_star_search \T1/lmr/m/n/10 (+20) meth-ods in []\T1/zi4/m/n/10 spa.py \T
 
 
 
-[178]
-Overfull \hbox (10.25159pt too wide) in paragraph at lines 2607--2608
+[181]
+Overfull \hbox (10.25159pt too wide) in paragraph at lines 2610--2611
 []\T1/lmr/m/n/10 (-20) Performs fur-ther val-i-da-tion: checks the lo-ca-tion i
 s not the start ([][]\T1/zi4/m/n/10 (0, 0)[]\T1/lmr/m/n/10 (-20) ) or end ([][]
 \T1/zi4/m/n/10 self.grid.rows-1, ...[]\T1/lmr/m/n/10 (-20) )
  []
 
 
-Overfull \hbox (1.26942pt too wide) in paragraph at lines 2608--2609
+Overfull \hbox (1.26942pt too wide) in paragraph at lines 2611--2612
 []\T1/lmr/m/n/10 (-20) If all val-i-da-tion passes, up-date the grid state di-r
 ectly: [][]\T1/zi4/m/n/10 self.grid.grid[x][y] = spa.OBSTACLE_MARKER[]\T1/lmr/m
 /n/10 (-20) . 
  []
 
 
-Overfull \hbox (152.67587pt too wide) in paragraph at lines 2617--2618
+Overfull \hbox (152.67587pt too wide) in paragraph at lines 2620--2621
 \T1/lmr/m/n/10 (-20) aliser, it needs to re-set the grid state, likely by re-in
 itialising the [][]\T1/zi4/m/n/10 self.grid []\T1/lmr/m/n/10 (-20) ob-ject: [][
 ]\T1/zi4/m/n/10 self.grid = spa.Grid(self.grid.rows, self.grid.cols)[]\T1/lmr/m
@@ -3482,10 +3477,10 @@ itialising the [][]\T1/zi4/m/n/10 self.grid []\T1/lmr/m/n/10 (-20) ob-ject: [][
 
 
 
-[179
+[182
 
 ]
-Overfull \hbox (94.30339pt too wide) in paragraph at lines 2647--2648
+Overfull \hbox (94.30339pt too wide) in paragraph at lines 2650--2651
 []\T1/lmr/m/n/10 (-20) Progress made: Mod-i-fied [][]\T1/zi4/m/n/10 bfs []\T1/l
 mr/m/n/10 (-20) and [][]\T1/zi4/m/n/10 a_star_search []\T1/lmr/m/n/10 (-20) in 
 [][]\T1/zi4/m/n/10 spa.py []\T1/lmr/m/n/10 (-20) to check for [][]\T1/zi4/m/n/1
@@ -3495,15 +3490,15 @@ lizer.visualize_path
 
 
 
-[180]
-Overfull \hbox (34.35405pt too wide) in paragraph at lines 2670--2671
+[183]
+Overfull \hbox (34.35405pt too wide) in paragraph at lines 2673--2674
 []\T1/lmr/m/n/10 (-20) Checks that the lo-ca-tion isn't the start point [][]\T1
 /zi4/m/n/10 (0, 0) []\T1/lmr/m/n/10 (-20) or the end point [][]\T1/zi4/m/n/10 (
 self.grid.rows-1, self.grid.cols-1)[]\T1/lmr/m/n/10 (-20) . 
  []
 
 
-Overfull \hbox (7.8306pt too wide) in paragraph at lines 2673--2674
+Overfull \hbox (7.8306pt too wide) in paragraph at lines 2676--2677
 []\T1/lmr/m/n/10 (-20) Provides feed-back (suc-cess or spe-cific er-ror mes-sag
 e) in [][]\T1/zi4/m/n/10 self.output_text[]\T1/lmr/m/n/10 (-20) . Uses [][]\T1/
 zi4/m/n/10 messagebox.showerror
@@ -3511,13 +3506,13 @@ zi4/m/n/10 messagebox.showerror
 
 
 
-[181
+[184
 
 ]
 ! Misplaced alignment tab character &.
 <argument> ...nippets (Commit \verb |c0ab70d...| &
                                                    \verb |a8b3b6d...| state)
-l.2688 ...|c0ab70d...| & \verb|a8b3b6d...| state)}
+l.2691 ...|c0ab70d...| & \verb|a8b3b6d...| state)}
                                                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -3529,7 +3524,7 @@ might try typing `S' now just to see what is salvageable.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.2688 ...|c0ab70d...| & \verb|a8b3b6d...| state)}
+l.2691 ...|c0ab70d...| & \verb|a8b3b6d...| state)}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3544,44 +3539,44 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2688 ...|c0ab70d...| & \verb|a8b3b6d...| state)}
+l.2691 ...|c0ab70d...| & \verb|a8b3b6d...| state)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
 
-[182]
-Underfull \hbox (badness 10000) in paragraph at lines 2710--2710
+[185]
+Underfull \hbox (badness 10000) in paragraph at lines 2713--2713
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2710--2710
+Underfull \hbox (badness 10000) in paragraph at lines 2713--2713
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2710--2710
+Underfull \hbox (badness 10000) in paragraph at lines 2713--2713
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2710--2710
+Underfull \hbox (badness 10000) in paragraph at lines 2713--2713
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
-[183]
-Overfull \hbox (97.86751pt too wide) in paragraph at lines 2744--2745
+[186]
+Overfull \hbox (97.86751pt too wide) in paragraph at lines 2747--2748
 \T1/lmr/m/n/10 (-20) side the loop where neigh-bours [][]\T1/zi4/m/n/10 (nx, ny
 ) []\T1/lmr/m/n/10 (-20) are con-sid-ered, I added the check [][]\T1/zi4/m/n/10
  if self.grid.grid[nx][ny] != spa.OBSTACLE_MARKER:
  []
 
 
-Overfull \hbox (19.58432pt too wide) in paragraph at lines 2746--2747
+Overfull \hbox (19.58432pt too wide) in paragraph at lines 2749--2750
 \T1/lmr/m/n/10 (-20) ple-mented was likely re-initialising the grid ob-ject: []
 []\T1/zi4/m/n/10 self.grid = spa.Grid(self.grid.rows, self.grid.cols)[]\T1/lmr/
 m/n/10 (-20) .
@@ -3589,11 +3584,11 @@ m/n/10 (-20) .
 
 
 
-[184]
+[187]
 ! Missing } inserted.
 <inserted text> 
                 }
-l.2760 ...ion Snippets (Commit \verb|9a4c06e...|)}
+l.2763 ...ion Snippets (Commit \verb|9a4c06e...|)}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3604,7 +3599,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \verb@egroup ...erb@balance@group \@empty \egroup 
                                                   
-l.2760 ...ion Snippets (Commit \verb|9a4c06e...|)}
+l.2763 ...ion Snippets (Commit \verb|9a4c06e...|)}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3619,7 +3614,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2760 ...ion Snippets (Commit \verb|9a4c06e...|)}
+l.2763 ...ion Snippets (Commit \verb|9a4c06e...|)}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3627,7 +3622,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2761 ...ert snippets for modified \verb|bfs|/'a_
+l.2764 ...ert snippets for modified \verb|bfs|/'a_
                                                   star_search', \verb|visual...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3635,47 +3630,47 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2762 \newpage
+l.2765 \newpage
                
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
 
-[185]
-Underfull \hbox (badness 10000) in paragraph at lines 2780--2780
+[188]
+Underfull \hbox (badness 10000) in paragraph at lines 2783--2783
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2780--2780
+Underfull \hbox (badness 10000) in paragraph at lines 2783--2783
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
-Underfull \hbox (badness 1442) in paragraph at lines 2780--2780
+Underfull \hbox (badness 1442) in paragraph at lines 2783--2783
 []|\T1/lmr/m/n/10 (+20) Obstacles cleared. Di-rect
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2780--2780
+Underfull \hbox (badness 10000) in paragraph at lines 2783--2783
 []|\T1/lmr/m/n/10 (+20) *(User:
  []
 
 
 
-[186]
-Underfull \hbox (badness 10000) in paragraph at lines 2842--2842
+[189]
+Underfull \hbox (badness 10000) in paragraph at lines 2845--2845
 []|\T1/lmr/m/n/10 (+20) Path suc-cess-fully
  []
 
 
 
-[187
+[190
 
 ])
 
-[188]
+[191]
 \openout2 = `Chapter5/chapter5.aux'.
 
  (Chapter5/chapter5.tex
@@ -3957,42 +3952,42 @@ Overfull \hbox (15.05156pt too wide) in alignment at lines 11--101
  [] [] [] [] [] [] 
  []
 
-[189
+[192
 
 
 
 
-] [190] [191]
-
-[192]
-
-[193]
-
-[194]
+] [193] [194]
 
 [195]
 
 [196]
 
-[197])
+[197]
 
-[198] (thesis.bbl
+[198]
 
-[199
+[199]
+
+[200])
+
+[201] (thesis.bbl
+
+[202
 
 
 
 
 ])
 
-[200]
+[203]
 \openout2 = `Appendix1/appendix1.aux'.
 
  (Appendix1/appendix1.tex
 Appendix A.
 )
 
-[201
+[204
 
 
 ]
@@ -4002,14 +3997,14 @@ Appendix A.
 Appendix B.
 )
 
-[202
+[205
 
 
 
 
 ]
 No file thesis.ind.
-runsystem(latexminted cleantemp  --timestamp 20250421074326 2EF71E68B4AD97F6304
+runsystem(latexminted cleantemp  --timestamp 20250421223622 2EF71E68B4AD97F6304
 80BCEBC1842FB)...disabled (restricted).
 
 (thesis.aux (Declaration/declaration.aux) (Acknowledgement/acknowledgement.aux)
@@ -4028,10 +4023,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 6106ECF8493097B0ED3BAA68C5C3374D;25969.
  ) 
 Here is how much of TeX's memory you used:
- 35539 strings out of 473522
- 727075 string characters out of 5714610
+ 35882 strings out of 473522
+ 732472 string characters out of 5714610
  1974211 words of memory out of 5000000
- 56181 multiletter control sequences out of 15000+600000
+ 56217 multiletter control sequences out of 15000+600000
  645086 words of font info for 218 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,12n,121p,1625b,3019s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -4052,9 +4047,9 @@ KTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/pmkha/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/pmkha/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/pmkha/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/lm/lmsy7.pfb>
-Output written on thesis.pdf (208 pages, 9047485 bytes).
+Output written on thesis.pdf (211 pages, 9099693 bytes).
 PDF statistics:
- 3534 PDF objects out of 3580 (max. 8388607)
- 1703 named destinations out of 1728 (max. 500000)
+ 3903 PDF objects out of 4296 (max. 8388607)
+ 2002 named destinations out of 2073 (max. 500000)
  49449 words of extra memory for PDF output out of 51595 (max. 10000000)
 

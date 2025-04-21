@@ -1027,7 +1027,7 @@ The project architecture evolved in this sprint to include four distinct Python 
 Justification: This separation makes the system much easier to manage as complexity grows. I can test the database logic independently using its \verb|__main__| block, test pathfinding without the database, and focus on the UI separately. This modularity significantly helps with debugging and future modifications.
 
 \subsubsection{Dependencies}
-I continued to rely only on Python's standard libraries: \verb|Tkinter| (including \verb|ttk| and \verb|messagebox|), \verb|sqlite3|, \verb|threading|, \verb|queue|, \verb|random|, \verb|io|, \verb|sys|, and \verb|logging|. Justification: This avoids any external installation requirements for users and simplifies setup.
+I continued to rely only on Python's standard libraries: \verb|Tkinter|, \verb|sqlite3|, \verb|threading|, \verb|queue|, \verb|random|, \verb|io|, \verb|sys|, and \verb|logging|. Justification: This avoids any external installation requirements for users and simplifies setup.
 
 \subsection{Development Summary}
 
@@ -1035,14 +1035,14 @@ I continued to rely only on Python's standard libraries: \verb|Tkinter| (includi
 \subsubsection{Iteration 1A: Threading Implementation}
 \begin{itemize}
 	\item Progress made: Got the threading working for the \verb|find_path| operation using \verb|threading| and \verb|queue|. Added comments to explain this part. *(Achieved OCSP-014, part of OCSP-020)*
-	\item Blockers identified: Making sure the GUI didn't try to update from the wrong thread was tricky; the \verb|root.after| mechanism seemed the right way to handle it. Needed to ensure buttons were disabled during processing.
+	\item Blockers identified: Making sure the GUI didn't try to update from the wrong thread was tricky; the \verb|root.after| mechanism was the best way to prevent constant requests and allow any other elements to catch up. Needed to ensure buttons were disabled during processing to prevent other overhead.
 	\item Plan for next iteration: Add the configuration screen.
 \end{itemize}
 
 \subsubsection{Iteration 1B: Config Options}
 \begin{itemize}
 	\item Progress made: Created \verb|config.py| and the \verb|ConfigWindow| class. Got the \verb|Spinbox| inputs working with validation and linked it to the start of \verb|gui.py|. *(Achieved OCSP-013)*
-	\item Blockers identified: Passing the selected dimensions correctly back to the main GUI instance required careful handling of the application startup flow.
+	\item Blockers identified: Passing the selected dimensions correctly back to the main GUI instance was difficult, I ended up using 
 	\item Plan for next iteration: Implement the 1-N numbering system.
 \end{itemize}
 
@@ -1088,33 +1088,34 @@ I continued to rely only on Python's standard libraries: \verb|Tkinter| (includi
 
 \textbf{Code Changes:}
 \begin{itemize}
-	\item \textbf{GitHub Commits:} \verb|aa510bec|, \verb|3f8acc8|
+	\item \textbf{GitHub Commits:} \verb|aa510bec|
 	\item \textbf{Explanation:}
 	\begin{itemize}
 		\item My first step in this sprint was tackling the GUI responsiveness. I noticed that finding paths, especially if the grid gets larger or there are many points, could take a noticeable time and may make the interface less responsive. To solve this, I refactored the \verb|find_path| method in \verb|gui.py|.
 		\item I used Python's \verb|threading| module to run the actual pathfinding work in a separate thread. I created a helper method \verb|_find_path_thread| to contain the call to \verb|self.path_finder.find_path_through_points| and the logic to capture the visualisation output.
-		\item To communicate the result back safely to the main \verb|Tkinter| thread, I used a \verb|queue.Queue| (\verb|self.result_queue|). The worker thread puts the result dictionary onto this queue.
-		\item In the main thread, I used \verb|self.root.after()| to schedule a function (\verb|_check_path_results|) that periodically checks the queue using \verb|get_nowait()|. If it finds a result, it updates the GUI; otherwise, it reschedules itself. This avoids blocking the main event loop.
+		\item To communicate the result back safely to the main \verb|Tkinter| thread, I used a \verb|queue.Queue| (\verb|self.result_queue|). The worker thread puts the results onto this queue for safe transfer across processes.
+		\item In the main thread, I used \verb|self.root.after()| to schedule a function (\verb|_check_path_results|) that periodically checks the queue using \verb|get_nowait()|. If it finds a result, it updates the GUI; otherwise, it reschedules itself. This avoids blocking the main event loop and causing more memory/CPU overhead.
 		\item I also added a flag (\verb|self.processing|) to prevent the user from starting a new pathfinding operation while one is already running.
-		\item I added comments (commit \verb|3f8acc8|) to explain this threading setup, as it's more complex than the previous synchronous code.
+
 	\end{itemize}
-	\item \textbf{Justification:} This was essential for improving the user experience, especially looking ahead to potentially larger grids or more complex calculations. A non-responsive UI is frustrating, so addressing this early seemed important (addresses R6.1). The queue/'after' pattern is a standard and safe way to handle threads in \verb|Tkinter|.
+	\item \textbf{Justification:} This was essential for improving the usability of my solution, especially if the end-user inputted larger, more complex warehouses. A non-responsive UI goes against my stakeholders' usability requirements, so addressing this early was important. Adding the threading was a preventative measure to ensure there isn't any performance degradation.
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
 	\item Annotations added: Comments now explain the purpose of the \verb|self.processing| flag, the queue mechanism, and the use of \verb|root.after|, which is vital for anyone (including my future self!) trying to understand or debug this later.
-	\item Modular approach: The core pathfinding still happens within the \verb|PathFinder| class, but the execution is now orchestrated via dedicated threading methods in the GUI class.
+	\item Modular approach: The core pathfinding still happens within the \verb|PathFinder| class, but it is now executed using threads in the \verb|GUI| class, as that is where it is interacting with the user.
 	\item Robustness: Added the \verb|self.processing| flag check. The thread also catches general exceptions and puts them on the queue, allowing errors during pathfinding to be reported in the GUI.
 \end{itemize}
 
 \newpage
-\subsubsection*{Placeholder: Iteration 1A Code Implementation Snippets}
-*(User: Please insert relevant code snippets for Iteration 1A here using \LaTeX\ code listing environments, like the modified \verb|__init__|, \verb|find_path|, and the new \verb|_find_path_thread|, \verb|_check_path_results| methods in \verb|gui.py|.)*
-\newpage
+\subsubsection*{Prototype: Iteration 1A}
+
+\lstinputlisting[style=custompython]{Code/cerf/gui1a.py}
+
 
 \subsubsection{Prototype details:}
-Prototype Version 4A: The pathfinding operation now runs in a background thread. I observed that the GUI remains interactive even if the path calculation takes a moment. Still using the old \verb|(row, col)| coordinates at this stage.
+The pathfinding operation now runs in a background thread. I observed that the GUI remains interactive even if the path calculation takes a moment. Still using the old \verb|(row, col)| coordinates at this stage, but this will change to a more intuitive system in future iterations.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1134,9 +1135,9 @@ These tests focused specifically on the responsiveness improvement (T3.1A.1) and
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item I had to ensure that the GUI interacted properly with the pathfinding methods after implementing threading. I often had a case where I was transferring data across threads, which is deemed unsafe in Tkinter. To remedy this, I made sure I used the queue to safely transfer data between the threads.
+	\item I had to ensure that the GUI interacted properly with the pathfinding methods after implementing threading. I often had a case where I was transferring data across threads, which is deemed unsafe in Tkinter. To remedy this, I made sure I used the queue to safely transfer data between the threads rather than just creating an array and passing it to another method.
 	
-	\item I had an error where I forgot to pass the rows and cols parameters to the new function, which resulted in the program crashing when I tried to click Find Path. This was easily remedied by adding the parameters in.
+	\item I had an error where I forgot to pass the rows and cols variables correctly - I forgot to include the class definition (\verb|self.grid.cols| rather than \verb|self.cols|), which resulted in the program crashing when I tried to click Find Path. This was easily remedied by adding the correct variable name in.
 \end{itemize}
 
 \subsubsection{Validation}
@@ -1168,23 +1169,25 @@ These tests focused specifically on the responsiveness improvement (T3.1A.1) and
 		\item Created a helper function \verb|get_grid_config()| in \verb|config.py| to simplify launching the window and getting the result.
 		\item Updated the main startup logic in \verb|gui.py|: it now calls \verb|config.get_grid_config()| first, then passes the returned \verb|rows| and \verb|cols| when creating the main \verb|PathfinderGUI| instance.
 	\end{itemize}
-	\item \textbf{Justification:} This provides important flexibility for the user (R5.1), allowing them to test different warehouse sizes. Keeping this logic in \verb|config.py| maintains modularity. The modal approach ensures the main application doesn't start until valid dimensions are confirmed.
+	\item \textbf{Justification:} This provides important functionality to the stakeholders; the ability to input different warehouse sizes. Keeping this logic in \verb|config.py| maintains modularity and makes debugging easier. The modal approach also ensures the main application doesn't start until valid dimensions are confirmed using validation methods.
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
 	\item Annotations added: Added comments and docstrings in \verb|config.py| explaining the purpose of the class, the validation steps, and how the modal window works.
 	\item Modular approach: Configuration UI logic is well encapsulated in \verb|config.py|.
-	\item Robustness: Input validation with \verb|try-except| and range checks, plus user feedback via \verb|messagebox|, makes the configuration process robust.
+	\item Robustness: Input validation with \verb|try-except| and range checks, plus user feedback via \verb|messagebox|, makes the configuration process robust and more usable (errors are visible and descriptive)
 \end{itemize}
 
 \newpage
-\subsubsection*{Placeholder: Iteration 1B Code Implementation Snippets}
-*(User: Insert code snippets for \verb|config.py| and the modified startup in \verb|gui.py| \verb|main| function here.)*
+\subsubsection*{Prototype: Iteration 1B}
+
+\lstinputlisting[style=custompython]{Code/cerf/config1b.py}
+
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 4B: When I run the application, it first shows the "Grid Configuration" pop-up. After confirming valid dimensions, the main GUI window opens, and internally the grid size reflects the chosen dimensions (verified by checking range label later).
+When I run the application, it first shows the "Grid Configuration" pop-up. After confirming valid dimensions, the main GUI window opens, and internally the grid size reflects the chosen dimensions, verified by inputting boundary points.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1193,9 +1196,9 @@ Prototype Version 4B: When I run the application, it first shows the "Grid Confi
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.1B.1 & Launch, enter 15x10, click OK & Config closes, main GUI uses 15x10 size (check \verb|range_label| later). & *(User: Fill)* & ? \\
+		T3.1B.1 & Launch, enter 15x10, click OK & Config closes, main GUI uses 15x10 size (check \verb|range_label| later). & Met & X \\
 		\hline
-		T3.1B.2 & Enter invalid config (0, text, >50) in Spinboxes, click OK & Error messagebox shown, config window stays open. & *(User: Fill)* & ? \\
+		T3.1B.2 & Enter invalid config (0, text, >50) in Spinboxes, click OK & Error messagebox shown, config window stays open. & Met & X \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 1B (Cerf)}
@@ -1205,7 +1208,7 @@ These tests confirmed the config window works as expected (T3.1B.1) and handles 
 \subsubsection{Fixes}
 \begin{itemize}
 	\item I had implemented the Spinbox but forgot to import it from tkinter, this was easily remedied by adding the import statement to the top of the file.
-	\item I had an issue where the window did not render correctly as I was not destroying the config window but relying on the user to close it themselves. This was fixed by correctly destroying the config window after the parameters were inserted.
+	\item I had an issue where the window did not render correctly as I was not destroying the config window but relying on the user to close it themselves. This was fixed by correctly destroying the config window after the parameters were inserted using \verb|self.rroot.destroy|
 \end{itemize}
 
 \subsubsection{Validation}
@@ -1219,7 +1222,7 @@ These tests confirmed the config window works as expected (T3.1B.1) and handles 
 \begin{itemize}
 	\item The configuration screen works well and provides the needed flexibility. Separating it into \verb|config.py| keeps the main \verb|gui.py| cleaner.
 	\item Validation seems robust for this stage.
-	\item Now that the grid size is dynamic, I can implement the 1-N numbering system which depends on it.
+	\item Now that the grid size is dynamic, I can implement the 1-N numbering system to make my solution more usable and easier to interpret.
 \end{itemize}
 
 \newpage
@@ -1232,7 +1235,7 @@ These tests confirmed the config window works as expected (T3.1B.1) and handles 
 	\item \textbf{GitHub Commit:} \verb|a4472fb|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item To make specifying locations easier than using '(row, col)', I implemented a 1-N numbering scheme. I added two helper functions to \verb|spa.py|: \verb|index_to_coordinates(index, cols)| and \verb|coordinates_to_index(row, col, cols)|. These handle the math for converting between the 1-based \verb|itemID| (which I called 'index' here) and the 0-based internal \verb|(row, col)| tuple.
+		\item To make specifying locations easier than using zero-indexed rows and columns, which can get confusing, I implemented a 1-N numbering scheme. I added two helper functions to \verb|spa.py|: \verb|index_to_coordinates(index, cols)| and \verb|coordinates_to_index(row, col, cols)|. These handle the maths for converting between the 1-based \verb|itemID| (which I called 'index' here) and the 0-based internal \verb|(row, col)| tuple.
 		\item In \verb|gui.py|, I changed the \verb|add_point| method significantly. It now expects a single integer input ('index'). It first validates this index is within the range 1 to 'rows*cols'. If valid, it calls \verb|spa.index_to_coordinates| to get the internal '(x, y)' coordinates needed for the backend validation (\verb|spa.validate_point|) and for storing in the \verb|self.points| list. The success message now confirms "Added position X".
 		\item I also updated the \verb|_check_path_results| method in \verb|gui.py|. When a path is found (as a list of '(row, col)' tuples), it now iterates through this path and uses \verb|spa.coordinates_to_index| to convert each step back into an 'itemID' before creating the path sequence string (e.g., "1 $ \rightarrow $ ... $ \rightarrow $ 100").
 		\item I added a \verb|ttk.Label| (\verb|self.range_label|) to the GUI, positioned below the entry field, which dynamically displays the valid input range (e.g., "Enter position (1-100)") based on the configured \verb|rows| and \verb|cols|.
