@@ -1050,7 +1050,7 @@ I will be using the following data as a boilerplate environment for post-develop
 
 \subsection{During development}
 
-These tests will be performed during development. The test IDs are in the format TA.B.C where A is the sprint number, B is the iteration number and C is the test number. T.x.F tests are the pre-determined tests that will be performed by stakeholders, while T.x.x tests will be used to test each iteration.
+These tests will be performed during development. The test IDs are in the format TA.B.C where A is the sprint number, B is the iteration number and C is the test number. T.x.F tests are the tests that will be performed under the guidance and view of the stakeholders, while T.x.x tests will be used to test each iteration.
 
 \begin{table}[htbp]
 	\centering
@@ -1064,8 +1064,24 @@ These tests will be performed during development. The test IDs are in the format
 		\hline
 		T1.F.3 & Input no points \\
 		\hline
+		T2.F.1 & Enter "2,3" and click Add Point \\
+		\hline
+		T2.F.2 & Enter "2,2" then "5,5", click Find Path \\
+		\hline
+		T2.F.3 & Enter "abc" and click Add Point \\
+		\hline
+		T2.F.4 & Enter "10,10" and click Add Point \\
+		\hline
+		T2.F.5 & Enter "0,0" and click Add Point \\
+		\hline
+		T2.F.6 & Add "2,2" and "3,3", click Clear \\
+		\hline
+		T2.F.7 & Click Find Path with no points \\
+		\hline
+		T2.F.8 & Enter "1,1", "8,1", "8,8", "1,8" sequence \\
+		\hline
 	\end{tabularx}
-	\caption{Pre-determined tests}
+	\caption{Sprint tests}
 \end{table}
 
 \begin{table}[htbp]
@@ -1101,150 +1117,98 @@ These tests will be performed during development. The test IDs are in the format
 
 \subsection{Post-development}
 
-\begin{longtable}{|p{0.02\textwidth}|p{0.2\textwidth}|p{0.3\textwidth}|p{0.25\textwidth}|p{0.13\textwidth}|}
-\hline
-\textbf{\#} & \textbf{Test} & \textbf{Expected Behaviour} & \textbf{Justification} & \textbf{Test Type} \\
-\hline
-\endhead
-
-1 & Input item 101 in a 10×10 grid via points entry field & Error message: "Point 101 does not exist in current grid configuration" & Tests error handling for out-of-bounds items to ensure the system validates input before attempting path calculation & Erroneous \\
-\hline
-2 & Input "abc" in the points entry field & Error message: "Invalid Input: Please enter valid points" & Validates non-numeric input handling to prevent type errors in the processing logic & Erroneous \\
-\hline
-3 & Configure a 0×5 grid using configuration screen & Error message: "Invalid grid dimensions, rows and columns must be at least 1" & Tests boundary validation for minimum grid size to ensure system prevents invalid configurations & Boundary \\
-\hline
-4 & Configure a 101×50 grid using configuration screen & Error message: "Invalid grid dimensions. Maximum rows allowed is 100" & Tests upper boundary limits for grid configuration to ensure system prevents excessive resource consumption & Boundary \\
-\hline
-5 & Set quantity of ItemID 25 to 0, then attempt to include it in path by entering points "20,25,30" & Error message: "Cannot calculate path: Points [25] are obstacles" & Tests zero-stock validation to ensure the system prevents journeys to zero-inventory locations & Functional \\
-\hline
-6 & Set quantity of ItemID 25 to -5 using update quantity function & Error message: "Invalid quantity. Value must be 0 or positive" & Tests negative value validation to ensure database integrity for stock quantities & Erroneous \\
-\hline
-7 & Set obstacles to completely block all paths between points 1 and 25 in a 5×5 grid, then attempt pathfinding & Error message: "No path found between the given points" within 5 seconds & Verifies system correctly identifies impossible path scenarios and provides appropriate feedback & Functional \\
-\hline
-8 & Enter start point (1) in points field for a 10×10 grid & Error message: "You have inputted a start and/or end point. Please remove it!" & Tests validation logic for preventing the selection of reserved points (start/end) & Functional \\
-\hline
-9 & Enter end point (100) in points field for a 10×10 grid & Error message: "You have inputted a start and/or end point. Please remove it!" & Tests validation logic for preventing the selection of reserved points (start/end) & Functional \\
-\hline
-10 & Enter comma-separated points with trailing comma "5,10,15," & Error message: "Invalid Input: Please enter valid points" & Tests parsing robustness for malformed input to ensure the system handles common input errors & Erroneous \\
-\hline
-11 & Enter a valid path with points "5,10,15" in a 10×10 grid with all items in stock & System calculates and displays optimal path including points 1,5,10,15,100 within 5 seconds & Tests core pathfinding functionality under normal operating conditions & Functional \\
-\hline
-12 & Update quantity of non-existent ItemID 101 in a 10×10 grid & Error message: "Error: ItemID 101 does not exist" & Tests boundary validation for database operations to prevent manipulation of non-existent records & Boundary \\
-\hline
-13 & Query information for ItemID 0 & Error message: "No item found" or "ItemID must be at least 1" & Tests lower boundary validation for item query functionality & Boundary \\
-\hline
-14 & Configure a 1×1 grid (minimum possible size) & System should create grid with single cell, start and end both at position 1 & Tests minimum boundary case for grid configuration to ensure the system handles edge cases & Boundary \\
-\hline
-15 & Configure a 100×100 grid (maximum allowed size) & System should create grid with 10,000 cells without freezing or crashing & Tests maximum boundary case for grid configuration to assess system stability under maximum load & Boundary \\
-\hline
-16 & Set all intermediate points to have 0 quantity in a 5×5 grid, then attempt pathfinding & Error message indicating all points are unavailable or out of stock & Tests comprehensive validation when all requested points are invalid & Functional \\
-\hline
-17 & Create a path where points 5,10,15 are visited, then run again after setting point 10 to quantity 0 & Second run should find alternative path excluding point 10 & Tests system adaptation to changing inventory conditions & Functional \\
-\hline
-18 & Save configuration with specific setup to JSON file, then load the same file & System should restore exact grid dimensions, obstacles, and item quantities with 100\% accuracy & Tests data persistence functionality to ensure configurations can be reliably saved and restored & Functional \\
-\hline
-19 & Load a deliberately corrupted JSON configuration file & Error message indicating invalid configuration file, system should maintain previous state & Tests error handling for data integrity issues to prevent system corruption & Erroneous \\
-\hline
-20 & Rapidly click the "Find Path" button 10 times in succession & System should either queue requests or ignore additional clicks while processing, without crashing & Tests UI stability under rapid user interaction to ensure the system handles potential race conditions & Stress \\
-\hline
-21 & Set obstacles in a pattern forcing a very long path ($>$50 steps) in a 10×10 grid & System should calculate correct path navigating all obstacles within reasonable time ($<$10 seconds) & Tests pathfinding algorithm performance in worst-case scenarios & Performance \\
-\hline
-22 & Request path through 20 intermediate points in a 20×20 grid & System should calculate optimal path visiting all points within 10 seconds & Tests algorithm scalability for complex routing scenarios & Performance \\
-\hline
-23 & Enter points with mixed spacing "5, 10,15, 20" & System should correctly parse input and calculate path through points 5,10,15,20 & Tests input parsing flexibility to handle various user input formats & Functional \\
-\hline
-24 & Use obstacle mode to create a complex maze with only one valid orthogonal path, then request pathfinding & System should find the only valid path through maze without attempting diagonal moves & Tests path finding in highly constrained environments & Functional \\
-\hline
-25 & Click on a grid cell with quantity 5, verify information displayed & Dialog should show correct ItemID, row, column, and quantity (5) & Tests item information display functionality & Functional \\
-\hline
-26 & Set ItemID 42 to quantity 0 and verify its visual representation in grid & Cell should be highlighted in red color in the visualization & Tests correct visual indication of out-of-stock items & Functional \\
-\hline
-27 & Update quantity of an item to 1, then traverse path through this item & Item should be flagged as below threshold ($<$2) after path completion, with quantity updated to 0 and color changed to red & Tests low stock detection, flagging and visual indication & Functional \\
-\hline
-28 & Query an item after updating its quantity & Dialog should show updated quantity value, not original value & Tests database consistency after update operations & Functional \\
-\hline
-29 & Set quantity of an item to maximum integer value (2,147,483,647) & System should accept and store this value without errors & Tests handling of extreme values within valid range & Boundary \\
-\hline
-30 & Find path in a 10×10 grid with obstacles placed to create exactly 2 possible orthogonal paths & System should find the shorter of the two possible paths & Tests optimal path selection when multiple valid paths exist & Functional \\
-\hline
-31 & Run pathfinding with valid points "5,10,15" then immediately change grid configuration & Either current operation should complete with original grid or error should indicate configuration changed during operation & Tests system stability during concurrent operations & Functional \\
-\hline
-32 & Export grid visualization to image file after calculating complex path & Exported image should accurately represent grid with all cells, paths, obstacles and point highlights matching on-screen display & Tests data visualization consistency between display and export & Functional \\
-\hline
-33 & Create a grid with obstacles in positions that would make start or end points inaccessible & System should detect that no path is possible and display appropriate error message & Tests validation for critical point accessibility & Functional \\
-\hline
-34 & Configure grid with alternating obstacles creating a "checkerboard" pattern & System should correctly calculate path navigating through the pattern using only orthogonal movements & Tests pathfinding in highly constrained but solvable scenarios & Functional \\
-\hline
-35 & Set item quantities for points along a path to exactly 1, then run path twice & First run should succeed with all cells in path, second run should omit previously visited points that now have 0 quantity & Tests stock depletion scenario handling & Functional \\
-\hline
-36 & Configure grid with obstacles along all edges except start and end points & System should calculate path navigating through the internal grid area using only orthogonal movements & Tests boundary obstacle handling & Functional \\
-\hline
-37 & Open visualization window, close it, then request pathfinding & System should reopen visualization window and display calculated path correctly & Tests window management and state recovery & Functional \\
-\hline
-38 & Load configuration with large grid (50×50), switch to small grid (5×5), then back to large grid & System should correctly render both grid sizes without display artifacts or sizing issues & Tests UI scaling and flexibility & Functional \\
-\hline
-39 & Leave points entry field blank and click "Find Path" & System should handle empty input gracefully, calculating direct path from start to end & Tests handling of minimal/empty input & Boundary \\
-\hline
-40 & Verify color coding in grid visualization for start point (position 1) & Start point should be highlighted in blue color & Tests correct visual indication of start point & Functional \\
-\hline
-41 & Verify color coding in grid visualization for end point (position 25 in 5×5 grid) & End point should be highlighted in blue color & Tests correct visual indication of end point & Functional \\
-\hline
-42 & Verify color coding in grid visualization for user-specified points (5,10,15) & User points should be highlighted in yellow color & Tests correct visual indication of user-specified points & Functional \\
-\hline
-43 & Verify color coding in grid visualization for calculated path & Path cells should be highlighted in green color & Tests correct visual indication of calculated path & Functional \\
-\hline
-44 & Verify color coding in grid visualization for obstacle cells & Obstacle cells should be highlighted in gray color & Tests correct visual indication of obstacles & Functional \\
-\hline
-45 & Attempt to move diagonally in path by editing database constraints & System should only use orthogonal movements (up, down, left, right) in calculated path & Tests movement constraints enforcement & Boundary \\
-\hline
-46 & Configure ItemID 50 as an obstacle, then attempt to include it in a path & System should exclude the obstacle from path calculation or return error if path is not possible & Tests obstacle avoidance in path calculation & Functional \\
-\hline
-47 & Set multiple consecutive obstacles to form a line, leaving exactly one path & System should find the only available orthogonal path around the obstacle line & Tests complex obstacle navigation & Functional \\
-\hline
-48 & Set every other item in alternating pattern to quantity 0, then request a path & System should find path avoiding all zero-quantity items, using only available items & Tests comprehensive avoidance of out-of-stock items & Functional \\
-\hline
-49 & Click "Toggle Obstacle Mode" button and verify its visual state & Button should change appearance (sunken, gray background) when obstacle mode is active & Tests UI state indicators & Functional \\
-\hline
-50 & In a 10×10 grid, create a path with 8 intermediate points forming a spiral pattern & System should calculate optimal path visiting all points in correct sequence using only orthogonal movements & Tests complex path optimization & Functional \\
-\hline
-51 & Verify legend in visualization window & Legend should display correct color coding: blue for start/end, yellow for user points, green for path, red for out of stock, gray for obstacles & Tests visual guidance elements & Functional \\
-\hline
-52 & After path calculation, verify path output text area & Text area should display correct sequence of points in format "1 $->$ 5 $->$ 10 $->$ 15 $->$ 25" & Tests path reporting functionality & Functional \\
-\hline
-53 & Verify path distance label after calculation & Label should show "Total Path Distance: X" where X equals (number of points in path - 1) & Tests path metrics reporting & Functional \\
-\hline
-54 & With a 5×5 grid where ItemID 13 has quantity 1, perform path through this point and verify quantity update & Database query should show quantity 0 for ItemID 13 after path completion & Tests stock level update functionality & Functional \\
-\hline
-55 & Enter multiple items with same position in points field, e.g., "5,5,5" & System should deduplicate points and calculate path as if single point "5" was entered & Tests handling of duplicate inputs & Erroneous \\
-\hline
-56 & Click "Help" menu and verify help window contents & Help window should display comprehensive application usage instructions & Tests documentation accessibility & Functional \\
-\hline
-57 & Enter a mixture of valid and invalid points, e.g., "5,999,15" in 10×10 grid & Error message should identify specific invalid point: "Point 999 does not exist" & Tests granular error reporting & Erroneous \\
-\hline
-58 & Verify grid numbering in visualization for 5×5 grid & Cells should be numbered 1-25 in row-major order (row 0, col 0 = 1; row 4, col 4 = 25) & Tests grid coordinate system & Functional \\
-\hline
-59 & Set an item to quantity 0, verify it appears red, then update to quantity 5 & Cell should change from red to normal color (white) after quantity update & Tests dynamic visual updates based on stock changes & Functional \\
-\hline
-60 & Click "Query ItemID" and enter valid ID, then verify dialog contents & Dialog should display correct row, column and current quantity information & Tests item information retrieval & Functional \\
-\hline
-61 & Verify database update after loading configuration file with specific quantities & Database quantities should exactly match those in the configuration file for all items & Tests data integrity during configuration loading & Functional \\
-\hline
-62 & Test cell size scaling by comparing 5×5 grid to 50×50 grid visualization & Cells should be appropriately scaled to fit visualization window while maintaining readability & Tests UI scaling algorithms & Functional \\
-\hline
-63 & In a 10×10 grid with all items in stock, measure time to calculate path with 1, 5, and 9 intermediate points & Time should remain under 5 seconds for all three scenarios, with time increasing proportionally to complexity & Tests performance scaling & Performance \\
-\hline
-64 & Test system memory usage during continuous operation for 10 minutes with repeated path calculations & Memory usage should remain stable without significant growth over time & Tests resource management & Performance \\
-\hline
-65 & Verify font scaling in grid visualization for different grid sizes & Text should remain readable across all supported grid sizes (1×1 to 100×100) & Tests accessibility and usability & Functional \\
-\hline
-66 & Calculate path through points that create a rectangular pattern, verify optimality & System should find shortest path to visit all points using only orthogonal movements & Tests optimization effectiveness & Functional \\
-\hline
-67 & After obstacle placement, attempt to query item information for obstacle cell & System should indicate cell is an obstacle, not a regular item & Tests data representation consistency & Functional \\
-\hline
-68 & Enter floating point numbers in points field, e.g., "5.5, 10.7" & System should reject input as invalid and display appropriate error message & Tests numeric input validation & Erroneous \\
-\hline
-69 & Enter negative numbers in points field, e.g., "-5, -10" & System should reject input as invalid and display appropriate error message & Tests numeric input validation & Erroneous \\
-\hline
-70 & Set all items to quantity 1, execute path through all items, verify database update & All visited items should be updated to quantity 0 and marked as out of stock (red) & Tests comprehensive stock update & Functional \\
-\hline
+\begin{longtable}{|p{0.02\textwidth}|p{0.2\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|p{0.1\textwidth}|}
+	\hline
+	\textbf{\#} & \textbf{Test} & \textbf{Expected Behaviour} & \textbf{Justification} & \textbf{Test Type} \\
+	\hline
+	\endhead
+	
+	1 & Input item 101 in a 10×10 grid via points entry field & Error message: "Point 101 does not exist in current grid configuration" & Tests error handling for out-of-bounds items to ensure the system validates input before attempting path calculation & Erroneous \\
+	\hline
+	2 & Input "abc" in the points entry field & Error message: "Invalid Input: Please enter valid points" & Validates non-numeric input handling to prevent type errors in the processing logic & Erroneous \\
+	\hline
+	3 & Configure a 0×5 grid using configuration screen & Error message: "Invalid grid dimensions, rows and columns must be at least 1" & Tests boundary validation for minimum grid size to ensure system prevents invalid configurations & Boundary \\
+	\hline
+	4 & Configure a 51×50 grid using configuration screen & Error message: "Invalid grid dimensions. Maximum rows allowed is 100" & Tests upper boundary limits for grid configuration to ensure system prevents excessive resource consumption & Boundary \\
+	\hline
+	5 & Set quantity of ItemID 25 to 0, then attempt to include it in path by entering points "20,25,30" & Point 25 is omitted from pathfinding and an error message is shown & Tests zero-stock validation to ensure the system prevents journeys to zero-inventory locations & Functional \\
+	\hline
+	6 & Set quantity of ItemID 25 to -5 using update quantity function & Error message: "Invalid quantity. Value must be 0 or positive" & Tests negative value validation to ensure database integrity for stock quantities & Erroneous \\
+	\hline
+	7 & Set obstacles to completely block all paths between points 1 and 25 in a 5×5 grid, then attempt pathfinding & Error message: "No path found between the given points" within 5 seconds & Verifies system correctly identifies impossible path scenarios and provides appropriate feedback & Functional \\
+	\hline
+	8 & Enter start or end points (1 or 100) in points field for a 10×10 grid & Error message: "You have inputted a start and/or end point. Please remove it!" & Tests validation logic for preventing the selection of reserved points (start/end) & Functional \\
+	\hline
+	9 & Enter comma-separated points with trailing space "5 10 15 " & Uses existing points and finds a path & Tests parsing robustness for malformed input to ensure the system handles common input errors & Erroneous \\
+	\hline
+	10 & Enter a valid path with points "5,10,15" in a 10×10 grid with all items in stock & System calculates and displays optimal path including points 1,5,10,15,100 within 5 seconds & Tests core pathfinding functionality under normal operating conditions & Functional \\
+	\hline
+	11 & Update quantity of non-existent ItemID 101 in a 10×10 grid & Error message: "Error: ItemID 101 does not exist" & Tests boundary validation for database operations to prevent manipulation of non-existent records & Boundary \\
+	\hline
+	12 & Query information for ItemID 0 & Error message: "No item found" or "ItemID must be at least 1" & Tests lower boundary validation for item query functionality & Boundary \\
+	\hline
+	13 & Configure a 1×1 grid (minimum possible size) & System should create grid with single cell, start and end both at position 1 & Tests minimum boundary case for grid configuration to ensure the system handles edge cases & Boundary \\
+	\hline
+	14 & Configure a 50×50 grid (maximum allowed size) & System should create grid with 2500 cells without freezing or crashing & Tests maximum boundary case for grid configuration to assess system stability under maximum load & Boundary \\
+	\hline
+	15 & Set all intermediate points to have 0 quantity in a 5×5 grid, then attempt pathfinding & Error message indicating all points are unavailable or out of stock & Tests comprehensive validation when all requested points are invalid & Functional \\
+	\hline
+	16 & Create a path where points 5,10,15 are visited, then run again after setting point 10 to quantity 0 & Second run should find alternative path excluding point 10 & Tests system adaptation to changing inventory conditions & Functional \\
+	\hline
+	17 & Save configuration with specific setup to JSON file, then load the same file & System should restore exact grid dimensions, obstacles, and item quantities with 100\% accuracy & Tests data persistence functionality to ensure configurations can be reliably saved and restored & Functional \\
+	\hline
+	18 & Load a deliberately corrupted JSON configuration file & Error message indicating invalid configuration file, system should maintain previous state & Tests error handling for data integrity issues to prevent system corruption & Erroneous \\
+	\hline
+	19 & Rapidly click the "Find Path" button 10 times in succession & System should ignore additional clicks while processing, without crashing & Tests UI stability under rapid user interaction to ensure the system handles potential race conditions & Stress \\
+	\hline
+	20 & Set obstacles in a pattern forcing a very long path ($>$50 steps) in a 10×10 grid & System should calculate correct path navigating all obstacles within reasonable time ($<$10 seconds) & Tests pathfinding algorithm performance in worst-case scenarios & Performance \\
+	\hline
+	21 & Request path through 20 intermediate points in a 20×20 grid & System should calculate optimal path visiting all points within 10 seconds & Tests algorithm scalability for complex routing scenarios & Performance \\
+	\hline
+	22 & Enter points with mixed spacing "5, 10,15, 20" & System should correctly parse input and calculate path through points 5,10,15,20 & Tests input parsing flexibility to handle various user input formats & Functional \\
+	\hline
+	23 & Use obstacle mode to create a complex maze with only one valid orthogonal path, then request pathfinding & System should find the only valid path through maze & Tests path finding in highly constrained environments & Functional \\
+	\hline
+	24 & Click on a grid cell with quantity 5, verify information displayed & Dialogue should show correct ItemID, row, column, and quantity (5) & Tests item information display functionality & Functional \\
+	\hline
+	25 & Set ItemID 42 to quantity 0 and verify its visual representation in grid & Cell should be highlighted in red colour in the visualisation & Tests correct visual indication of out-of-stock items & Functional \\
+	\hline
+	26 & Update quantity of an item to 1, then traverse path through this item & Item should be flagged as below threshold ($<$2) after path completion, with quantity updated to 0 and colour changed to red & Tests low stock detection, flagging and visual indication & Functional \\
+	\hline
+	27 & Query an item after updating its quantity & Dialogue should show updated quantity value, not original value & Tests database consistency after update operations & Functional \\
+	\hline
+	28 & Set quantity of an item to maximum 32-bit integer value (2,147,483,647) & System should accept and store this value without errors & Tests handling of extreme values within valid range & Boundary \\
+	\hline
+	29 & Find path in a 10×10 grid with obstacles placed to create exactly 2 possible orthogonal paths & System should find the shorter of the two possible paths & Tests optimal path selection when multiple valid paths exist & Functional \\
+	\hline
+	30 & Run pathfinding with valid points "5,10,15" then immediately change grid configuration & Either current operation should complete with original grid or error should indicate configuration changed during operation & Tests system stability during concurrent operations & Functional \\
+	\hline
+	31 & Export grid visualisation to image file after calculating complex path & Exported image should accurately represent grid with all cells, paths, obstacles and point highlights matching on-screen display & Tests data visualisation consistency between display and export & Functional \\
+	\hline
+	32 & Create a grid with obstacles in positions that would make start or end points inaccessible & System should detect that no path is possible and display appropriate error message & Tests validation for critical point accessibility & Functional \\
+	\hline
+	33 & Configure grid with alternating obstacles creating a "checkerboard" pattern & System should correctly calculate path navigating through the pattern using only orthogonal movements & Tests pathfinding in highly constrained but solvable scenarios & Functional \\
+	\hline
+	34 & Set item quantities for points along a path to exactly 1, then run path twice & First run should succeed with all cells in path, second run should omit previously visited points that now have 0 quantity & Tests stock depletion scenario handling & Functional \\
+	\hline
+	35 & Configure grid with obstacles along all edges except start and end points & System should calculate path navigating through the internal grid area using only orthogonal movements & Tests boundary obstacle handling & Functional \\
+	\hline
+	36 & Open visualisation window, close it, then request pathfinding & System should reopen visualisation window and display calculated path correctly & Tests window management and state recovery & Functional \\
+	\hline
+	37 & Load configuration with large grid (50×50), switch to small grid (5×5), then back to large grid & System should correctly render both grid sizes without display artifacts or sizing issues & Tests UI scaling and flexibility & Functional \\
+	\hline
+	38 & Leave points entry field blank and click "Find Path" & System should prompt user to enter a point & Tests handling of minimal/empty input & Boundary \\
+	\hline
+	39 & Verify colour coding in grid visualisation for start point (position 1) & Start point should be highlighted in blue colour & Tests correct visual indication of start point & Functional\\
+	\hline
+	40 & Verify colour coding in grid visualisation for end point (position 25 in 5×5 grid) & End point should be highlighted in blue colour & Tests correct visual indication of end point & Functional \\
+	\hline
+	41 & Verify colour coding in grid visualisation for user-specified points (5,10,15) & User points should be highlighted in yellow colour & Tests correct visual indication of user-specified points & Functional \\
+	\hline
+	42 & Verify colour coding in grid visualisation for calculated path & Path cells should be highlighted in green colour & Tests correct visual indication of calculated path & Functional \\
+	\hline
+	43 & Verify colour coding in grid visualisation for obstacle cells & Obstacle cells should be highlighted in black colour & Tests correct visual indication of obstacles & Functional \\
+	\hline
+	44 & Verify colour coding in grid visualisation for out-of-stock cells & Out-of-stock cells should be highlighted in red for 0, orange for near 0 & Tests correct visual indication of stock levels & Functional \\
+	\hline
 \end{longtable}

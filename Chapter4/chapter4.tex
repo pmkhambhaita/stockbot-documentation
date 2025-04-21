@@ -1606,13 +1606,13 @@ These final tests were designed to ensure all the new components (config, thread
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.F.1 & Config 15x15. Add valid, in-stock \verb|itemID| 113, add 200. Find path. & GUI responsive, path found/displayed using \verb|itemID|s 1 $ \rightarrow $ ... $ \rightarrow $ 113 $ \rightarrow $ ... $ \rightarrow $ 200 $ \rightarrow $ ... $ \rightarrow $ 225. Stock for 113, 200 decremented by 1. & *(User: Fill)* & ? \\
+		T3.F.1 & Config 15x15. Add valid, in-stock \verb|itemID| 113, add 200. Find path. & GUI responsive, path found/displayed using \verb|itemID|s 1 $ \rightarrow $ ... $ \rightarrow $ 113 $ \rightarrow $ ... $ \rightarrow $ 200 $ \rightarrow $ ... $ \rightarrow $ 225. Stock for 113, 200 decremented by 1. & Met & X \\
 		\hline
-		T3.F.2 & Config 10x10. Query \verb|itemID| 1. Update stock to 0. Query again. & Query shows initial stock $>$ 0. Update confirms. Second query shows 0. & *(User: Fill)* & ? \\
+		T3.F.2 & Config 10x10. Query \verb|itemID| 1. Update stock to 0. Query again. & Query shows initial stock $>$ 0. Update confirms. Second query shows 0. & Met & X \\
 		\hline
-		T3.F.3 & With stock=0 for \verb|itemID| 1, try Add Point \verb|itemID| 1. & Error "Skipping position 1 - Out of stock" shown. Point *not* added to path list. & *(User: Fill)* & ? \\
+		T3.F.3 & With stock=0 for \verb|itemID| 1, try Add Point \verb|itemID| 1. & Error "Skipping position 1 - Out of stock" shown. Point *not* added to path list. & Met & X \\
 		\hline
-		T3.F.4 & Test config screen validation (text, 0, $>$50). & Error messageboxes shown, prevents confirmation. & *(User: Fill)* & ? \\
+		T3.F.4 & Test config screen validation (text, 0, $>$50). & Error messageboxes shown, prevents confirmation. & Met & X \\
 		\hline
 	\end{tabularx}
 	\caption{Final Testing results for Sprint Cerf}
