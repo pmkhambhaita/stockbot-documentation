@@ -22,3 +22,19 @@
 2025-04-18 09:47:51,679 - INFO - Complete path found with length 18
 2025-04-18 09:47:51,679 - INFO - Starting path visualisation
 2025-04-18 09:47:51,679 - INFO - Path visualisation completed
+2025-04-22 17:24:43,727 - INFO - PathFinder initialised with grid size 10x10
+2025-04-22 17:24:43,727 - INFO - PathVisualiser initialised with grid size 10x10
+2025-04-22 17:25:01,653 - INFO - Finding path through 2 intermediate points
+2025-04-22 17:25:01,653 - INFO - Starting BFS search from (0, 0) to (1, 4)
+2025-04-22 17:25:01,653 - INFO - Path found with length 5
+2025-04-22 17:25:01,653 - INFO - Starting BFS search from (1, 4) to (9, 8)
+2025-04-22 17:25:01,653 - INFO - Path found with length 12
+2025-04-22 17:25:01,653 - INFO - Starting BFS search from (9, 8) to (9, 9)
+2025-04-22 17:25:01,653 - INFO - Path found with length 1
+2025-04-22 17:25:01,653 - INFO - Complete path found with length 18
+2025-04-22 17:25:01,655 - INFO - Starting path visualisation
+2025-04-22 17:25:01,655 - INFO - Path visualisation completed
+2025-04-22 17:25:37,646 - INFO - PathFinder initialised with grid size 15x15
+2025-04-22 17:25:37,646 - INFO - PathVisualiser initialised with grid size 15x15
+2025-04-22 17:26:48,900 - INFO - PathFinder initialised with grid size 15x10
+2025-04-22 17:26:48,901 - INFO - PathVisualiser initialised with grid size 15x10

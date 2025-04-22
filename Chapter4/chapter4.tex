@@ -483,9 +483,9 @@ T1.F.3 & Input no points &  Direct path between start and end & Direct path betw
 \hline
 Total tests conducted & 13 \\
 \hline
-Tests passed & 11 \\
+Tests passed & 10 \\
 \hline
-Tests failed & 2 \\
+Tests failed & 3 \\
 \hline
 Fixed issues & 3 \\
 \hline
@@ -673,7 +673,7 @@ The architecture now consists of two main Python files:
 
 \newpage % Placeholder Start: Iteration 1 Code Snippets
 
-\subsubsection*{Prototype: Iteration}
+\subsubsection*{Prototype: Iteration 1}
 \subsubsection{gui.py}
 \lstinputlisting[style=custompython]{Code/guisb1.py}
 
@@ -919,8 +919,6 @@ Validation has stayed mostly the same, but I have restructured the validation me
 
 My stakeholders wished to test the final prototype of this sprint in a more robust manner, hence I created more tests for different aspects of my solution: T2.F.1/2/8 cover main success paths and variations, T2.F.3/4/5 target key validation rules critical for usability and data integrity, T2.F.6 tests the interface and T2.F.7 covers edge case handling (boundary test).
 
-\newpage
-
 \subsubsection{Testing Summary}
 \begin{table}[htbp]
 	\centering
@@ -932,7 +930,7 @@ My stakeholders wished to test the final prototype of this sprint in a more robu
 		\hline
 		Tests passed & 20 \\ % Update count
 		\hline
-		Tests failed & 2 \\ % Update count
+ 		Tests failed & 2 \\ % Update count
 		\hline
 		Fixed issues (from Sprint 1 / identified this sprint) & 3 \\ % e.g., Terminal execution, start/end validation, GUI errors
 		\hline
@@ -942,7 +940,7 @@ My stakeholders wished to test the final prototype of this sprint in a more robu
 
 \subsubsection{Stakeholder Review}
 
-The development is getting closer to what we mentioned, but at the same time there isn' much usability at the moment, keep that in mind for the next sprints. (all)
+The development is getting closer to what we mentioned, but at the same time there isn't much usability at the moment, keep that in mind for the next sprints. (all s'holders)
 
 \subsubsection{Link}
 This sprint successfully built upon the SPA developed in Sprint Ada by creating a user-friendly graphical interface (OCSP-005 to OCSP-010). The core pathfinding logic remains separate and stable (\verb|spa.py|), while the GUI (\verb|gui.py|) provides the necessary user interaction layer. The application is now significantly easier for stakeholders to use compared to the previous terminal-based version. The next sprint (Sprint Cerf) will focus on adding the database features for stock checking - I anticipate there will be more iterations necessary. A future sprint will focus on adding more usability features and adapting the interface to meet the stakeholders' expectations.
@@ -1196,7 +1194,7 @@ When I run the application, it first shows the "Grid Configuration" pop-up. Afte
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.1B.1 & Launch, enter 15x10, click OK & Config closes, main GUI uses 15x10 size (check \verb|range_label| later). & Met & X \\
+		T3.1B.1 & Launch, enter 15x15, click OK & Config closes, main GUI uses 15x10 size. & Met & X \\
 		\hline
 		T3.1B.2 & Enter invalid config (0, text, >50) in Spinboxes, click OK & Error messagebox shown, config window stays open. & Met & X \\
 		\hline
@@ -1252,12 +1250,17 @@ These tests confirmed the config window works as expected (T3.1B.1) and handles 
 \end{itemize}
 
 \newpage
-\subsubsection*{Placeholder: Iteration 1C Code Implementation Snippets}
-*(User: Insert code snippets for conversion functions in \verb|spa.py| and GUI modifications in \verb|gui.py| (\verb|add_point|, \verb|_check_path_results|, \verb|__init__| for label) here.)*
+\subsubsection*{Prototype: Iteration 1C}
+\subsubsection{gui.py}
+\lstinputlisting[style=custompython]{Code/cerf/gui1c.py}
+\subsubsection{spa.py}
+\lstinputlisting[style=custompython]{Code/cerf/spa1c.py}
+
+
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 4C (End of Group 1): The application now fully uses the 1-N 'itemID' system for user interaction. It starts with the config screen, finds paths in a separate thread, and handles coordinate conversions internally.
+The application now fully uses the 1-N 'itemID' system for user interaction. It starts with the config screen, finds paths in a separate thread, and handles coordinate conversions internally via \verb*|spa.py|.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1281,7 +1284,7 @@ Prototype Version 4C (End of Group 1): The application now fully uses the 1-N 'i
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item *(User: Describe fixes, e.g., "Corrected the formula in \verb|index_to_coordinates| to handle the 0-based vs 1-based conversion properly.")*
+	\item I initially forgot to subract 1 from the index to convert back to zero-based coordinates. This was easily remedied by adding the line \verb|index -= 1| to the \verb*|index_to_coordinates| function. See the comments in the prototype for more details
 \end{itemize}
 
 \subsubsection{Validation}
