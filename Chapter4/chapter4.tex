@@ -39,7 +39,7 @@ As this is still a very basic program focused solely on establishing the core BF
 \begin{enumerate}
     \item Create a 10 $\times$ 10 2D array to represent the graph.
     \item Define the start and end nodes.
-    \item Initialize the queue with the start node.
+    \item Initialise the queue with the start node.
     \item Create an empty set for visited nodes.
     \item Define possible movement directions (up, down, left, right).
     \item While the queue is not empty:
@@ -190,7 +190,7 @@ This is a 'dry run' of the BFS algorithm I have made, to help visualise how the 
     \item Directions: Up $(-1,0)$, Down $(1,0)$, Left $(0,-1)$, Right $(0,1)$
 \end{itemize}
 
-\subsubsection{Step 1: Initialization}
+\subsubsection{Step 1: Initialisation}
 \begin{itemize}
     \item Queue: $[[(0,0)]]$
     \item Visited: $\{\}$
@@ -1203,7 +1203,6 @@ When I run the application, it first shows the "Grid Configuration" pop-up. Afte
 \end{table}
 These tests confirmed the config window works as expected (T3.1B.1) and handles invalid user input correctly (T3.1B.2)
 
-`
 \subsubsection{Fixes}
 \begin{itemize}
 	\item I had implemented the Spinbox but forgot to import it from tkinter, this was easily remedied by adding the import statement to the top of the file.
@@ -1328,9 +1327,10 @@ The application now fully uses the 1-N 'itemID' system for user interaction. It 
 	\item Robustness: Using \verb|CREATE TABLE IF NOT EXISTS| prevents errors if the database file already exists from a previous run.
 \end{itemize}
 
-\newpage
-\subsubsection*{Placeholder: Iteration 2A Code Implementation Snippets}
-*(User: Insert code snippet for the initial \verb|database.py| content showing \verb|__init__| and \verb|_init_database| here.)*
+\subsubsection{database.py}
+
+\lstinputlisting[style=custompython]{Code/cerf/database2a.py}
+
 \newpage
 
 \subsubsection{Prototype details:}
@@ -1343,19 +1343,17 @@ Prototype Version 5A: No change in application behaviour yet. However, running t
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.2A.1 & Delete \verb|inventory.db|. Run code that instantiates \verb|InventoryDB|. Run again. & \verb|inventory.db| created. No errors on second run. & *(User: Fill)* & ? \\
+		T3.2A.1 & Delete \verb|inventory.db|. Run code that instantiates \verb|InventoryDB|. Run again. & \verb|inventory.db| created. No errors on second run. & Met & X \\
 		\hline
-		T3.2A.2 & Inspect \verb|inventory.db| schema using DB browser. & \verb|items| table exists with correct columns/types/constraints. & *(User: Fill)* & ? \\
+		T3.2A.2 & Inspect \verb|inventory.db| schema using DB browser. & \verb|items| table exists with correct columns/types/constraints. & Met & X \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 2A (Cerf)}
 \end{table}
-\textbf{Tests justification:} These tests verify that the database file and table schema are correctly created (T3.2A.1, T3.2A.2), meeting requirement R2.1.
+\textbf{Tests justification:} These tests verify that the database file and table schema are correctly created (T3.2A.1, T3.2A.2), which sets me up to add more functionality without worrying about basic initialisation processes.
 
 \subsubsection{Fixes}
-\begin{itemize}
-	\item *(User: Describe fixes, e.g., "Corrected SQL syntax for the UNIQUE constraint.")*
-\end{itemize}
+No fixes were required as this was a very small but vital iteration.
 
 \subsubsection{Validation}
 \begin{itemize}
@@ -1365,7 +1363,7 @@ Prototype Version 5A: No change in application behaviour yet. However, running t
 \subsubsection{Review:}
 \begin{itemize}
 	\item The basic database structure is in place within its own module.
-	\item This separation felt like a good way to manage the upcoming database logic.
+	\item This separation felt like a good way to build database logic without cluttering my program.
 	\item Next step is to add the methods to actually populate and interact with the data.
 \end{itemize}
 
@@ -1376,14 +1374,14 @@ Prototype Version 5A: No change in application behaviour yet. However, running t
 
 \textbf{Code Changes:}
 \begin{itemize}
-	\item \textbf{GitHub Commit:} \verb|7586cb8|, \verb|31cd2a2|
+	\item \textbf{GitHub Commit:} \verb|7586cb8|
 	\item \textbf{Explanation:}
 	\begin{itemize}
 		\item Implemented the \verb|populate_random_data(self)| method in \verb|InventoryDB|. This clears any existing data first (\verb|DELETE FROM items|) then loops through all grid positions (1 to \verb|rows*cols|), converts the \verb|itemID| to \verb|(row, col)|, generates a random quantity (1-10 using \verb|random.randint|), and inserts the full record using a parameterised \verb|INSERT| query.
 		\item Added \verb|validate_item_id(self, item_id)| method to check if an \verb|itemID| is within the valid range and if it actually exists in the database (using \verb|SELECT 1 FROM items WHERE ItemID = ?|), raising a \verb|ValueError| if not.
 		\item Added getter methods \verb|get_quantity(self, item_id)| and \verb|get_position(self, item_id)| which query the database for the respective data after validating the \verb|itemID|.
 		\item Added \verb|update_quantity(self, item_id, new_quantity)| method, including checks to ensure the \verb|new_quantity| is a non-negative integer before executing the \verb|UPDATE| statement.
-		\item Added a \verb|if __name__ == "__main__":| block to \verb|database.py|. This allows running the file directly to test the database functionality. It initializes the DB, populates it, and then loops through all item IDs, printing their quantity and position to verify.
+		\item Added a \verb|if __name__ == "__main__":| block to \verb|database.py|. This allows running the file directly to test the database functionality. It initialises the DB, populates it, and then loops through all item IDs, printing their quantity and position to verify.
 		\item Commit \verb|31cd2a2| unified the validation logic in \verb|spa.py| by modifying \verb|validate_point| to return both a boolean and an error message string, and updated \verb|gui.add_point| to use this improved structure.
 	\end{itemize}
 	\item \textbf{Justification:} These methods provide the core functionality needed to manage the stock data (R2.2) and validate inputs specific to the database context. The \verb|__main__| block was very useful for testing the database logic in isolation before connecting it to the GUI. Unified validation makes error handling cleaner.
@@ -1398,11 +1396,11 @@ Prototype Version 5A: No change in application behaviour yet. However, running t
 
 \newpage
 \subsubsection*{Placeholder: Iteration 2B Code Implementation Snippets}
-*(User: Insert code snippets for the new methods in \verb|database.py| (\verb|populate_random_data|, \verb|validate_item_id|, getters, \verb|update_quantity|) and the \verb|__main__| block here.)*
+\lstinputlisting[style=custompython]{Code/cerf/database2b.py}
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 5B: Running \verb|database.py| directly now creates and populates \verb|inventory.db|. The methods for getting/setting quantities are functional but not yet used by the main GUI workflow.
+Running \verb|database.py| directly now creates and populates \verb|inventory.db|. The methods for getting/setting quantities are functional but haven't been implemented yet.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1413,18 +1411,24 @@ Prototype Version 5B: Running \verb|database.py| directly now creates and popula
 		\hline
 		T3.2B.1 & Run \verb|python database.py|. Check console output and inspect DB. & Output shows correct quantities/positions for all items. DB contains expected data. & *(User: Fill)* & ? \\
 		\hline
-		T3.2B.2 & Test \verb|validate_item_id| (e.g., via \verb|__main__|) with valid, invalid range, non-existent IDs. & Returns \verb|True| for valid ID, raises \verb|ValueError| for others. & *(User: Fill)* & ? \\
+		T3.2B.2 & Test \verb|validate_item_id| (e.g., via \verb|__main__|) with valid, invalid range, non-existent IDs. & Returns \verb|True| for valid ID, raises \verb|ValueError| for others. & Met & X \\
 		\hline
-		T3.2B.3 & Test \verb|update_quantity| with valid/invalid quantity values (e.g., -1, "abc"). & Updates correctly for valid int >= 0, raises \verb|ValueError|/\verb|TypeError| otherwise. & *(User: Fill)* & ? \\
+		T3.2B.3 & Test \verb|update_quantity| with valid/invalid quantity values (e.g., -1, "abc"). & Updates correctly for valid int >= 0, raises \verb|ValueError|/\verb|TypeError| otherwise. & Met & X \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 2B (Cerf)}
 \end{table}
-\textbf{Tests justification:} Verifies the database population logic (T3.2B.1 - R2.2) and ensures the core interaction and validation methods within \verb|InventoryDB| behave correctly and handle errors appropriately (T3.2B.2, T3.2B.3).
+
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{Images/cerf/3.2B.png}
+\end{figure}
+
+\textbf{Tests justification:} Verifies the database population logic (T3.2B.1) and ensures the core interaction and validation methods within \verb|InventoryDB| behave correctly and handle errors appropriately (T3.2B.2, T3.2B.3).
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item *(User: Describe fixes, e.g., "Modified \verb|validate_item_id| to handle the case where the SELECT query returns no rows more cleanly.")*
+	\item There was only one minor error, which was mistakenly setting \verb|row| as the primary key: this was easily fixed by moving \verb|ItemID| (the correct primary key) to the top and defining it as a primary key - \verb*|temID INTEGER PRIMARY KEY,|
 \end{itemize}
 
 \subsubsection{Validation}
@@ -1456,7 +1460,7 @@ Prototype Version 5B: Running \verb|database.py| directly now creates and popula
 		\item Added two new buttons ('Query Stock', 'Update Stock') to the \verb|gui.py| layout, placed below the main control buttons.
 		\item Implemented the corresponding methods \verb|query_stock(self)| and \verb|update_stock(self)| in \verb|PathfinderGUI|. \verb|query_stock| gets the \verb|itemID| from the entry, calls \verb|self.db.get_quantity| and \verb|self.db.get_position|, and displays the result. \verb|update_stock| gets the \verb|itemID|, then creates a \verb|tk.Toplevel| pop-up asking for the new quantity. An inner function \verb|do_update| reads the pop-up entry, calls \verb|self.db.update_quantity|, shows feedback, and closes the pop-up. Basic error handling (\verb|try-except ValueError|) was added.
 	\end{itemize}
-	\item \textbf{Justification:} Adding logging is crucial for monitoring and debugging database operations. Linking the database size to the user's configuration (R5.1) ensures consistency. The new GUI buttons provide a way for users (and myself during testing) to directly inspect and modify stock levels (Partial R3.6).
+	\item \textbf{Justification:} Adding logging is crucial for monitoring and debugging database operations. Linking the database size to the user's configuration ensures consistency. The new GUI buttons provide a way for users (and myself during testing) to directly inspect and modify stock levels.
 \end{itemize}
 
 \textbf{Code Quality:}
@@ -1467,9 +1471,10 @@ Prototype Version 5B: Running \verb|database.py| directly now creates and popula
 \end{itemize}
 
 \newpage
-\subsubsection*{Placeholder: Iteration 2C Code Implementation Snippets}
-*(User: Insert code snippets for logging in \verb|database.py|, the GUI startup modifications, and the \verb|query_stock|/ \verb|update_stock| methods in \verb|gui.py|.)*
-\newpage
+\subsubsection*{Prototype: Iteration 2C}
+
+\lstinputlisting[style=custompython]{Code/cerf/database2c.py}
+\lstinputlisting[style=custompython]{Code/cerf/gui2c.py}
 
 \subsubsection{Prototype details:}
 Prototype Version 5C: The database is now correctly sized based on the user's startup configuration. Database actions are logged. Users can manually check the stock of any location using the 'Query Stock' button or change it using the 'Update Stock' button and pop-up.
@@ -1481,13 +1486,13 @@ Prototype Version 5C: The database is now correctly sized based on the user's st
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.2C.1 & Enter valid \verb|itemID|, click Query Stock & Correct stock \& position shown. \verb|INFO|/'DEBUG' log in file. & *(User: Fill)* & ? \\
+		T3.2C.1 & Enter valid \verb|itemID|, click Query Stock & Correct stock \& position shown. \verb|INFO|/'DEBUG' log in file. & Met& X \\
 		\hline
-		T3.2C.2 & Enter valid \verb|itemID|, click Update, enter 50, confirm. Query again. & Update success msg. \verb|INFO| log. Query shows 50. & *(User: Fill)* & ? \\
+		T3.2C.2 & Enter valid \verb|itemID|, click Update, enter 50, confirm. Query again. & Update success msg. \verb|INFO| log. Query shows 50. & Met & X \\
 		\hline
-		T3.2C.3 & Enter invalid ID/qty for Query/Update. & GUI error shown. \verb|ERROR| log created. & *(User: Fill)* & ? \\
+		T3.2C.3 & Enter invalid ID/qty for Query/Update. & GUI error shown. \verb|ERROR| log created. & Met & X \\
 		\hline
-		T3.2C.4 & Config 15x10 grid. Query/Update \verb|itemID| 150. & Works correctly. & *(User: Fill)* & ? \\
+		T3.2C.4 & Config 15x10 grid. Query/Update \verb|itemID| 150. & Works correctly. & Invalid point & * \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 2C (Cerf)}
@@ -1496,7 +1501,7 @@ Prototype Version 5C: The database is now correctly sized based on the user's st
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item *(User: Describe fixes, e.g., "Made sure the 'InventoryDB' instance 'self.db' was created *after* getting dimensions in 'gui.py'.")*
+	\item T3.2C.4 was a problem, but it was easily fixed: I was fetching the grid configuration, then overwriting it with the test case (10x10) - I fixed this by removing the test case and updating \verb|__main__| for testing.
 \end{itemize}
 
 \subsubsection{Validation}
@@ -1526,7 +1531,7 @@ Prototype Version 5C: The database is now correctly sized based on the user's st
 		\item Modified the \verb|add_point| method in \verb|gui.py|. Now, after validating the entered \verb|itemID|'s range, it calls \verb|self.db.get_quantity(index)|. If the returned quantity is not found (\verb|None|) or is $\le 0$, it displays a specific warning message in the \verb|self.output_text| area ("Warning: Skipping position X - Out of stock") and importantly, it uses \verb|return| to stop the method before the point is added to \verb|self.points|. If the stock is $>0$, it proceeds as before, also displaying the available stock in the confirmation message.
 		\item Modified the \verb|_find_path_thread| method in \verb|gui.py|. Within the block where a successful path is found (\verb|if path:|), I added a loop that iterates through the intermediate points stored in \verb|self.points|. For each \verb|(x, y)| tuple in \verb|self.points|, it converts it back to the corresponding \verb|itemID| using \verb|spa.coordinates_to_index| and then calls \verb|self.db.decrement_quantity(item_id)|. This happens *after* the path is found but *before* the results are put onto the queue.
 	\end{itemize}
-	\item \textbf{Justification:} This implements the core stock checking requirement (R2.3). The check in \verb|add_point| prevents users from planning routes through unavailable locations. The decrement in \verb|_find_path_thread| simulates the act of "picking" the items once a route is confirmed, making the stock levels dynamic.
+	\item \textbf{Justification:} This implements the core stock checking requirement. The check in \verb|add_point| prevents users from planning routes through unavailable locations. The decrement in \verb|_find_path_thread| simulates the act of "picking" the items once a route is confirmed, making the stock levels dynamic.
 \end{itemize}
 
 \textbf{Code Quality:}
@@ -1538,11 +1543,48 @@ Prototype Version 5C: The database is now correctly sized based on the user's st
 
 \newpage
 \subsubsection*{Placeholder: Iteration 2D Code Implementation Snippets}
-*(User: Insert code snippets for \verb|decrement_quantity| in \verb|database.py|, the modified \verb|add_point| and \verb|_find_path_thread| in \verb|gui.py| here.)*
+
+\begin{verbatim}
+
+# - database.py - function added - #
+
+def decrement_quantity(self, item_id):
+        """Decrement quantity by 1 for a specific item"""
+        try:
+            self.validate_item_id(item_id)
+            current_qty = self.get_quantity(item_id)
+            if current_qty is None or current_qty <= 0:
+                logger.warning(f"Cannot decrement: ItemID {item_id} has no stock")
+                return False
+                
+            with sqlite3.connect(self.db_path) as conn:
+                cursor = conn.cursor()
+                cursor.execute('''
+                    UPDATE items 
+                    SET Quantity = Quantity - 1
+                    WHERE ItemID = ? AND Quantity > 0
+                ''', (item_id,))
+                conn.commit()
+                logger.info(f"Decremented quantity for ItemID {item_id}")
+                return cursor.rowcount > 0
+        except Exception as e:
+            logger.error(f"Error decrementing quantity for ItemID {item_id}: {str(e)}")
+            raise
+
+# - gui.py - updated - #
+
+            if path:
+                # Decrement stock for each intermediate point
+                for x, y in self.points:
+                    item_id = spa.coordinates_to_index(x, y, self.grid.cols)
+                    self.db.decrement_quantity(item_id)
+
+\end{verbatim}
+
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 6 (End of Sprint Cerf): The application now fully functional regarding stock checking. It prevents adding points with zero stock. When a path is found, the stock for the intermediate points on that path is reduced by one.
+The application is now fully functional regarding stock checking. It prevents adding points with zero stock. When a path is found, the stock for the intermediate points on that path is reduced by one.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1553,18 +1595,18 @@ Prototype Version 6 (End of Sprint Cerf): The application now fully functional r
 		\hline
 		T3.2D.1 & Find \verb|itemID| X with stock=1. Add X. Find Path. Query X. & Point added ("Stock: 1"). Path found. Query shows Stock=0. & *(User: Fill)* & ? \\
 		\hline
-		T3.2D.2 & Try Add Point X again (now stock=0). & Warning "Skipping...Out of stock" shown. Point not added to \verb|self.points|. & *(User: Fill)* & ? \\
+		T3.2D.2 & Try Add Point X again (now stock=0). & Warning "Skipping...Out of stock" shown. Point not added to \verb|self.points|. & Met & X \\
 		\hline
-		T3.2D.3 & Add points Y, Z (stock>0). Find Path. Check stock Y, Z via Query. & Path found. Query shows stock Y--, Z--. & *(User: Fill)* & ? \\
+		T3.2D.3 & Add points Y, Z (stock>0). Find Path. Check stock Y, Z via Query. & Path found. Query shows stock Y--, Z--. & Met & X \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 2D (Cerf)}
 \end{table}
-\textbf{Tests justification:} These tests directly verify the core stock checking requirement (R2.3): preventing adding zero-stock items (T3.2D.2) and ensuring stock is correctly decremented for items on a successful path (T3.2D.1, T3.2D.3).
+\textbf{Tests justification:} These tests directly verify the core stock checking requirement: preventing adding zero-stock items (T3.2D.2) and ensuring stock is correctly decremented for items on a successful path (T3.2D.1, T3.2D.3).
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item *(User: Describe fixes, e.g., "Ensured the loop in \verb|_find_path_thread| iterated over \verb|self.points| not the full \verb|path| variable to avoid decrementing start/end nodes.")*
+	\item An error I encountered was with the index numbering system: I forgot to parse the coordinates back into a single number (\verb|itemID|), this was fixed by adding the \verb*|coordinates_to_index| function to convert.
 \end{itemize}
 
 \subsubsection{Validation}
@@ -1572,7 +1614,7 @@ Prototype Version 6 (End of Sprint Cerf): The application now fully functional r
 	\item Stock Availability Check: Check \verb|quantity > 0| implemented in \verb|gui.add_point|.
 	\item Decrement Safety: Check \verb|current_qty > 0| and SQL \verb|WHERE Quantity > 0| used in \verb|database.decrement_quantity|.
 \end{itemize}
-\textbf{Justification:} Implements the crucial requirement for stock level validation during planning and ensures stock doesn't go negative.
+\textbf{Justification:} Implements stock level validation during planning and also ensures stock doesn't go negative.
 
 
 \subsubsection{Review:}
@@ -1609,7 +1651,7 @@ These final tests were designed to ensure all the new components (config, thread
 
 \begin{table}[htbp] % Final Testing Table
 	\centering
-	\begin{tabularx}{\textwidth}{|l|X|p{3.5cm}|p{3.5cm}|c|}
+	\begin{tabularx}{\textwidth}{|l|X|p{4.5cm}|p{1.5cm}|c|}
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
@@ -1719,7 +1761,7 @@ Imports for \verb|threading| and \verb|queue| were removed from \verb|gui.py|. N
 
 \subsection{Development Summary}
 
-\subsubsection{Iteration 1: Diagnosing and Reverting Threading}
+\subsubsection{Diagnosing and Reverting Threading}
 \begin{itemize}
 	\item Progress made: Identified threading as the source of instability. Successfully reverted commit \verb|aa510bec| using \verb|git revert dd54ffd --no-edit| (commit \verb|688582d...|). Confirmed removal of related code and restoration of synchronous \verb|find_path| execution. (Achieved OCSP-021)
 	\item Blockers identified: The initial time spent trying (and failing) to debug the threading issues before deciding to revert.
@@ -1728,9 +1770,6 @@ Imports for \verb|threading| and \verb|queue| were removed from \verb|gui.py|. N
 
 \clearpage
 \subsection{Sprint Dijkstra Implementation}
-
-% --- Iteration 1 ---
-\subsubsection{Iteration 1: Stabilisation via Threading Revert}
 
 	\textbf{Code Changes:}
 	\begin{itemize}

@@ -38,3 +38,7 @@
 2025-04-22 17:25:37,646 - INFO - PathVisualiser initialised with grid size 15x15
 2025-04-22 17:26:48,900 - INFO - PathFinder initialised with grid size 15x10
 2025-04-22 17:26:48,901 - INFO - PathVisualiser initialised with grid size 15x10
+2025-04-22 18:06:05,329 - INFO - PathFinder initialised with grid size 10x10
+2025-04-22 18:06:05,330 - INFO - PathVisualiser initialised with grid size 10x10
+2025-04-22 18:07:50,348 - INFO - PathFinder initialised with grid size 15x10
+2025-04-22 18:07:50,348 - INFO - PathVisualiser initialised with grid size 15x10
