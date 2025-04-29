@@ -313,71 +313,66 @@ In terms of software, the user will only require a valid Python install on their
 
 \newpage
 \section{Success criteria}
+
 \begin{table}[htbp!]
-\centering
-\begin{tabularx}{\textwidth}{|c|X|X|}
-\hline
-\textbf{\#} & \textbf{Success Criterion} & \textbf{Justification} \\
-\hline
-1 & Displays the interface successfully with no errors & This makes sure the user can actually use the program's functions to their max ability. \\
-\hline
-2 & The system will identify and flag all items with stock levels below 2 units at the end of a run. & The threshold of 2 items provides sufficient buffer for restocking before complete depletion. \\
-\hline
-3 & The pathfinding algorithm will calculate the optimal collection route in under 5 seconds for orders containing up to 10 items. & This balances speed requirements with allowing time for database operations, crucial for the efficiency and performance criterion. \\
-\hline
-4 & The system will reduce item collection time by 30-40\% compared to the manual method (baseline average: 7:31 minutes). & This is to prove that human-based list collection is inefficient compared to computational approaches. \\
-\hline
-5 & The application will run without crashes and minimal performance degradation for a minimum of 10 consecutive minutes during testing. & This demonstrates system stability \& reliability, which are required in any program. \\
-\hline
-6 & The system will successfully detect and navigate around 100\% of placed obstacles, while maintaining the high speed element as mentioned in Criterion 3. & Ensures the robot can adapt to changing warehouse conditions, a key capability for real-world implementation. \\
-\hline
-7 & The system will provide real-time position tracking of the robot with updates at least every 5 seconds and positional accuracy within 1 grid cell. & Essential for warehouse management to coordinate operations effectively through visual representation of robot position. \\
-\hline
-8 & The stock verification system will prevent 100\% of journey attempts to locations with zero inventory items. & Critical for preventing wasted journeys and improving operational efficiency. \\
-\hline
-9 & All system errors will be logged with detailed information including timestamp, error type, context, and affected component. & Comprehensive error reporting is essential for troubleshooting and system improvement. \\
-\hline
-10 & The graphical user interface will respond to all user interactions within 2 seconds under normal operating conditions. & Responsive UI is critical for quick access and runtime for the program, since the main objective is to speed up operations. \\
-\hline
-11 & The system will successfully process and complete 95\% of assigned collection tasks without human intervention. & Measures the core functionality of autonomous performance of warehouse tasks, supporting the goal of reducing human operations. \\
-\hline
-12 & The robot will correctly identify and report discrepancies between database stock levels and actual inventory with 98\% accuracy. & Essential for maintaining accurate inventory records through automated notification of stock discrepancies. \\
-\hline
-13 & The system will provide collection completion estimates accurate to within $\pm$15\% of actual completion time for 90\% of tasks. & Allows warehouse management to effectively coordinate operations based on realistic time estimates. \\
-\hline
-14 & The application will successfully connect to and query the SQLite database with an average response time under 500ms. & Efficient database operations are essential for the inventory management and stock verification features. \\
-\hline
-15 & The path calculation algorithm will optimise routes to reduce total travel distance by at least 25\% compared to sequential collection. & Measures the effectiveness of the shortest path algorithm, a key differentiator from manual collection methods. \\
-\hline
-\end{tabularx}
-\end{table}
-\newpage
-\begin{table}[htbp]
-\centering
-\begin{tabularx}{\textwidth}{|c|X|X|}
-\hline
-\textbf{\#} & \textbf{Success Criterion} & \textbf{Justification} \\
-\hline
-16 & The system will ensure all calculated paths use only orthogonal movements (up, down, left, right) and avoid diagonal navigation. & Models the layout of a warehouse, as you cannot cross items to reach others \\
-\hline
-17 & The system will reject invalid inputs, such as non-existent points (e.g., Point 101 in a 10×10 grid) or malformed data (e.g., "abc"), with clear error messages. & Ensures the program is robust and does not fail, accounting for most if not all inputs \\
-\hline
-18 & The system will maintain stable memory usage during continuous operation for up to 10 minutes, without exceeding a 15\% increase from baseline. & Measures the footprint and performance of the program; it is focused on speed, but it must also be reasonably memory-efficient. \\
-\hline
-19 & The system will recover gracefully from configuration errors (e.g., corrupted JSON files) by rejecting the invalid configuration and maintaining the previous state. & This is a fail-safe to ensure data is preserved and does not damage the current operating state. \\
-\hline
-20 & The system will return the stock level of any queried item within 1 second, regardless of grid size or database load. & Ensures the database is responsive enough. \\
-\hline
-21 & The database will update stock levels on every run with 100\% accuracy for all warehouse items. & Updating constantly is ineffective for a large program. The run-time interval prevents database overload from constant accessing. \\
-\hline
-\end{tabularx}
+	\centering
+	\begin{tabularx}{\textwidth}{|c|X|X|}
+		\hline
+		\textbf{\#} & \textbf{Success Criterion} & \textbf{Justification} \\
+		\hline
+		1 & Displays the interface successfully with no errors & This makes sure the user can actually use the program's functions to their max ability. \\
+		\hline
+		2 & The system will identify and flag all items with stock levels below 2 units at the end of a run. & The threshold of 2 items provides a realistic simulation of a low-stock warning system. \\
+		\hline
+		3 & The pathfinding algorithm will calculate the optimal collection route in under 5 seconds for orders containing up to 10 items. & This is the most essential criterion: my stakeholder needs this solution to be fast. \\
+		\hline
+		4 & The system will reduce item collection time by 30-40\% compared to the manual method (baseline average: 7:31 minutes). & This is to prove that human-based list collection is inefficient compared to computational approaches. \\
+		\hline
+		5 & The application will run without crashes and minimal performance degradation for a minimum of 10 consecutive minutes during testing. & This demonstrates system stability \& reliability, which are required in any program. \\
+		\hline
+		6 & The system will successfully detect and navigate around 100\% of placed obstacles, while maintaining the high speed element as mentioned in Criterion 3. & Ensures the robot can adapt to changing warehouse conditions. \\
+		\hline
+		7 & The system will provide real-time position tracking with updates at least every 5 seconds and positional accuracy within 1 grid cell. & This is needed to ensure the solution can deploy on a larger scale and preventing issues. \\
+		\hline
+		8 & The stock verification system will prevent 100\% of attempts to locations with 0 inventory items. & Needed to improve efficiency and reduce time taken to process orders \\
+		\hline
+		9 & All system errors will be logged with detailed information including timestamp, error type, context, and affected component. & Error reporting is needed for troubleshooting and system improvement. \\
+		\hline
+		10 & The graphical user interface will respond to all user interactions within 2 seconds under normal operating conditions. & Responsive UI is critical for quick access to the program, since the main objective is to speed up operations. \\
+		\hline
+		11 & The system will successfully process and complete 95\% of assigned collection tasks without human intervention. & Measures the core functionality of autonomous performance of warehouse tasks and evaluating whether my solution is good enough. \\
+		\hline
+		12 & The system will provide collection completion estimates accurate to within $\pm$15\% of actual completion time for 90\% of tasks. & This addresses a request from my stakeholders for feedback throughout the pathfinding and collection process \\
+		\hline
+		13 & The application will successfully connect to and query the SQLite database with an overall response time not exceeding 1 second. & Efficient database operations are required for quick stock checking, this is the most likely place for a bottleneck. \\
+		\hline
+		14 & The path calculation algorithm will optimise routes to reduce total travel distance by at least 25\% compared to sequential collection. & Another measure of the effectiveness of the shortest path algorithm, but less important than time. \\
+		\hline
+		15 & The system will ensure all calculated paths use only orthogonal movements (up, down, left, right) and avoid diagonal navigation. & Models the layout of a warehouse, as you cannot cross items to reach others. \\
+		\hline
+		16 & The system will reject invalid inputs, such as non-existent points (e.g., Point 101 in a 10×10 grid) or malformed data (e.g., "abc"), with clear error messages. & Ensures the program is robust and does not fail, accounting for most if not all inputs \\
+		\hline
+		\end{tabularx}
+		\end{table}
+		\newpage
+		\begin{table}[htbp]
+		\centering
+		\begin{tabularx}{\textwidth}{|c|X|X|}
+		\hline
+		\textbf{\#} & \textbf{Success Criterion} & \textbf{Justification} \\
+		\hline
+		17 & The system will maintain stable memory usage during continuous operation for up to 10 minutes, without exceeding a 15\% increase from baseline. & Measures the footprint and performance of the program; it is focused on speed, but it must also be reasonably memory-efficient. \\
+		\hline
+		18 & The system will recover gracefully from configuration errors (e.g., corrupted JSON files) by rejecting the invalid configuration and maintaining the previous state. & This is a fail-safe to ensure data is preserved and does not damage the current operating state. \\
+		\hline
+		19 & The system will return the stock level of any queried item within 1 second, regardless of grid size or database load. & Ensures the database is responsive enough. \\
+		\hline
+	\end{tabularx}
 \end{table}
 
 \textbf{}
 \newline
 This table provides 21 detailed success criteria with specific, measurable targets and comprehensive justifications. The criteria specifications are based on my previous research of current implementations \& stakeholder requirements. From the data I gathered, I established these success criteria so that each criterion is actionable and includes clear metrics for evaluation, making it easy to accurately measure whether my solution would be more efficient and meet client expectations.
-
-\newpage
 
 \section{Methodology}
 
@@ -387,7 +382,7 @@ As a single developer, I have decided to adopt my own version of the Scrum metho
 
 \begin{figure}[h!] 
 	\centering    
-	\includegraphics[width=1\textwidth]{Methodology diagram (1).png}
+	\includegraphics[width=0.6\textwidth]{Methodology diagram (1).png}
 	\caption{- The stages of my methodology}
 \end{figure}
 

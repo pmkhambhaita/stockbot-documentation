@@ -73,7 +73,6 @@ Below are the data structures I plan to use.
 
 There are no dependencies as such currently, I have opted to use Python's built-in functions (namely the list) for the queue rather than the external library \verb|queue| as mentioned above. This may change in future iterations if the code becomes too complex.
 
-\newpage
 
 \subsection{Development Summary}
 
@@ -122,7 +121,7 @@ There are no dependencies as such currently, I have opted to use Python's built-
     \item \textbf{GitHub Commits:} d2fe05e, ad6ff95, e2c67a46
     \item \textbf{Explanation:}
     \begin{itemize}
-        \item I enclosed the BFS algorithm in a function called \verb|bfs| with the parameters \verb|graph_in|, \verb|start| and \verb|end|. I originally intended to use consistent names, however Qodana flagged that this is not conventional. The naming scheme would have been in violation of PEP 3104, which addressed this issue. As such, I changed variable names like \verb|graph| to \verb|graph_in|, which is still an appropriate name (as it refers to the parameter being passed INto the function) but does not violate Python conventions.
+        \item I enclosed the BFS algorithm in a function called \verb|bfs| with the parameters \verb|graph_in|, \verb|start| and \verb|end|. I originally intended to use consistent names, however this is not conventional; the naming scheme would have been in violation of PEP 3104, which addressed this issue. As such, I changed variable names like \verb|graph| to \verb|graph_in|, which is still an appropriate name (as it refers to the parameter being passed INto the function) but does not violate Python conventions.
         \item I chose a basic function structure for now, as I have only made a small part and single feature of my solution. However, I did implement sub-programs to organise my code better and allow for better debugging.
 		\item As this was the first iteration, I annotated most lines of the code so I could easily pick up and trace the code. I made the comments relevant, descriptive but concise.
 		\item This is a mostly standard BFS algorithm, with the modification of the data structure: I used a 2D array as it is an abstraction of a normal warehouse, applying the concept as defined in the Thinking Abstractly section.
@@ -341,7 +340,7 @@ T1.1.1 and T1.1.2 were successful, meaning the core functionality of the program
     \item \textbf{Modular approach:} I have now implemented an object-oriented approach in my solution, splitting the grid and pathfinder logic into 2 separate classes, referenced by outer functions that process user input and output.
 \end{itemize}
 
-\newpage
+
 
 \subsubsection{Code Implementation:}
 
@@ -352,7 +351,7 @@ The BFS algorithm is now working flawlessly, and I added some more debugging fea
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\textwidth]{Images/sa2test1.png}
+    \includegraphics[width=0.5\textwidth]{Images/sa2test1.png}
     \caption{The output of my algorithm with points at (3,3) and end at (5,7)}
 \end{figure}
 
@@ -422,10 +421,6 @@ Almost all tests were successful, and all previous errors have been resolved. Ho
 \end{figure}
 
 \newpage
-
-\subsubsection{Fixes}
-
-The main issue I encountered was the path length being incorrect. After using my IDE's debugger and backtracking through my code, I found that the issue was the path-length counter; it was counting the nodes visited (the length of the path structure), not the path between them (nodes - 1). This was corrected by subtracting 1 from the length of the final path queue.
 
 \subsubsection{Validation:}
 \begin{itemize}
@@ -1239,7 +1234,7 @@ These tests confirmed the config window works as expected (T3.1B.1) and handles 
 		\item I added a \verb|ttk.Label| (\verb|self.range_label|) to the GUI, positioned below the entry field, which dynamically displays the valid input range (e.g., "Enter position (1-100)") based on the configured \verb|rows| and \verb|cols|.
 		\item Finally, I updated the error messages returned by \verb|spa.validate_point| to be slightly more generic ("Position out of bounds", "Cannot use start/end point") as the GUI handles displaying the specific 'itemID' or '(row, col)' depending on context.
 	\end{itemize}
-	\item \textbf{Justification:} This abstraction makes the application much more intuitive for the user, as they only need to think about simple position numbers instead of coordinate pairs (addresses R3.4). Implementing this required careful changes to input parsing, internal calls, and output formatting.
+	\item \textbf{Justification:} This abstraction makes the application much more intuitive for the user, as they only need to think about simple position numbers instead of coordinate pairs. Implementing this required careful changes to input parsing, internal calls, and output formatting.
 \end{itemize}
 
 \textbf{Code Quality:}
@@ -1280,7 +1275,7 @@ The application now fully uses the 1-N 'itemID' system for user interaction. It 
 	\end{tabularx}
 	\caption{Testing results for Iteration 1C (Cerf)}
 \end{table}
-\textbf{Tests justification:} These tests verified that the 1-N numbering system was correctly implemented for input validation (T3.1C.1, T3.1C.3), output display (T3.1C.2), and correctly adapted to the configured grid size (T3.1C.4), ensuring the usability goal R3.4 was achieved.
+\textbf{Tests justification:} These tests verified that the 1-N numbering system was correctly implemented for input validation (T3.1C.1, T3.1C.3), output display (T3.1C.2), and correctly adapted to the configured grid size (T3.1C.4).
 
 \subsubsection{Fixes}
 \begin{itemize}
@@ -1299,7 +1294,7 @@ The application now fully uses the 1-N 'itemID' system for user interaction. It 
 \begin{itemize}
 	\item The switch to the 1-N numbering system makes the interface much cleaner and easier to use than dealing with coordinate pairs.
 	\item The helper functions work well to keep the conversion logic separate.
-	\item All the preparatory work is now done, setting a solid stage for implementing the database features next.
+	\item All the preparatory work is now done, so I can move on to group 2: creating the database features.
 \end{itemize}
 
 \newpage
@@ -1317,7 +1312,7 @@ The application now fully uses the 1-N 'itemID' system for user interaction. It 
 		\item I wrote the \verb|__init__| method. For now, it just takes default rows/cols (10x10) and sets the database filename (\verb|self.db_path = "inventory.db"|). Crucially, it calls an internal method \verb|_init_database| to set up the database file and table.
 		\item The \verb|_init_database| method uses \verb|sqlite3.connect| to create or open the database file. It then executes the \verb|CREATE TABLE IF NOT EXISTS items| SQL command to ensure the table with the correct columns (\verb|ItemID|, \verb|row|, \verb|col|, \verb|Quantity|) and constraints (\verb|PRIMARY KEY|, \verb|NOT NULL|, \verb|UNIQUE|) exists.
 	\end{itemize}
-	\item \textbf{Justification:} This sets up the dedicated module for database operations (M1) and ensures the required table structure is present (R2.1). Using \verb|IF NOT EXISTS| makes the setup safe to run multiple times.
+	\item \textbf{Justification:} This sets up the dedicated module for database operations (M1) and ensures the required table structure is present. Using \verb|IF NOT EXISTS| makes the setup safe to run multiple times.
 \end{itemize}
 
 \textbf{Code Quality:}
@@ -1514,7 +1509,6 @@ Prototype Version 5C: The database is now correctly sized based on the user's st
 \begin{itemize}
 	\item Successfully linked the database initialisation to the user's configuration and added useful logging.
 	\item The manual query/update features provide necessary control and visibility into the stock levels.
-	\item The groundwork is fully complete. The final step is to use the stock data to influence path planning by checking stock in \verb|add_point| and decrementing after finding a path.
 \end{itemize}
 
 \newpage
@@ -1776,13 +1770,13 @@ Imports for \verb|threading| and \verb|queue| were removed from \verb|gui.py|. N
 		\item \textbf{GitHub Commit:} \verb|dd54ffd| (Per the revert command used, representing commit \verb|688582d...|)
 		\item \textbf{Explanation:}
 		\begin{itemize}
-			\item Faced with persistent crashes related to asynchronous operations, I determined that the threading code (\verb|aa510bec|) was the root cause and too complex to reliably fix within the project's scope.
+			\item Faced with persistent crashes related to asynchronous operations, I determined that the threading code (\verb|aa510bec|) was the root cause and too complex to reliably fix within my time constraints.
 			\item I executed \verb|git revert dd54ffd --no-edit| to automatically undo the changes introduced by that commit.
 			\item This action removed the \verb|import threading| and \verb|import queue| statements from \verb|gui.py|.
 			\item It deleted the \verb|self.processing| flag and \verb|self.result_queue| attribute initialisations from \verb|PathfinderGUI.__init__|.
 			\item It deleted the \verb|_find_path_thread| and \verb|_check_path_results| methods entirely.
 			\item Within the main \verb|find_path| method, it removed the check for \verb|self.processing|, the creation and starting of the \verb|threading.Thread|, and the scheduling of \verb|_check_path_results| using \verb|root.after|.
-			\item Crucially, it restored the direct synchronous call: \verb|path = self.path_finder.find_path_through_points(...)|. Result handling logic (displaying output, updating visualisation via its placeholder method) was moved back into the main \verb|find_path| method sequence, executing immediately after the pathfinding call returns.
+			\item It restored the direct synchronous call: \verb|path = self.path_finder.find_path_through_points(...)|. Result handling logic (displaying output, updating visualisation via its placeholder method) was moved back into the main \verb|find_path| method sequence, executing immediately after the pathfinding call returns.
 		\end{itemize}
 		\item \textbf{Justification:} This revert (OCSP-021) was a tactical decision to ensure my program was stable, which is a fundamental requirement, even at the cost of the increased responsiveness that threading provided. It allowed development to continue more reliably.
 	\end{itemize}
@@ -1818,9 +1812,9 @@ A now stable application with \textbf{synchronous} pathfinding. Functionally ide
 
 \subsubsection{Review:}
 \begin{itemize}
-	\item The decision to revert threading, while difficult, was necessary for the project's health. Application is now stable.
-	\item The loss of responsiveness is a known trade-off noted for potential future revisitation if time allows.
-	\item The sprint achieved its essential goal: providing a stable platform for the next phase of UI development.
+	\item The decision to revert threading, while difficult, was necessary for me to be able to continue. Application is now stable.
+	\item The loss of responsiveness is a known trade-off noted for potential future implementations.
+
 \end{itemize}
 
 \subsubsection{Link}
@@ -1965,7 +1959,7 @@ Standard Python libraries only.
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 8A: A separate window opens via "Show Grid", displaying a canvas with basic grid lines and cell numbers. Pathfinding updates this window (drawing may be basic). Clearing resets it.
+ A separate window opens via "Show Grid", displaying a canvas with basic grid lines and cell numbers. Pathfinding updates this window. Clearing resets it.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1974,11 +1968,11 @@ Prototype Version 8A: A separate window opens via "Show Grid", displaying a canv
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T5.1.1 & Click "Show Grid" & Separate window opens with canvas \& grid/numbers. & *(User: Fill)* & ? \\
+		T5.1.1 & Click "Show Grid" & Separate window opens with canvas \& grid/numbers. & Met* & X \\
 		\hline
-		T5.1.2 & Find Path & Visualisation window updates (basic drawing). & *(User: Fill)* & ? \\
+		T5.1.2 & Find Path & Visualisation window updates (basic drawing). & Met & X \\
 		\hline
-		T5.1.3 & Click Clear All & Visualisation canvas clears/resets. & *(User: Fill)* & ? \\
+		T5.1.3 & Click Clear All & Visualisation canvas clears/resets. & Met & X \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 1 (Engelbart)}
@@ -2032,7 +2026,7 @@ Prototype Version 8A: A separate window opens via "Show Grid", displaying a canv
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 8B: Visualisation window displays grid, path, points, and stock levels accurately with colours. Handles state changes (finding path, clearing) correctly and robustly.
+Visualisation window displays grid, path, points, and stock levels accurately with colours. Handles state changes (finding path, clearing) correctly and robustly.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -2108,7 +2102,7 @@ Prototype Version 8B: Visualisation window displays grid, path, points, and stoc
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 8 (End of Sprint Engelbart): Main GUI simplified. User enters space-separated \verb|itemID|s. Stock actions use pop-ups. Visualisation in separate window. Handles no valid points case.
+Main GUI simplified. User enters space-separated \verb|itemID|s. Stock actions use pop-ups. Visualisation in separate window. Handles no valid points case.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -2169,16 +2163,8 @@ This sprint focused entirely on the user interface and achieved significant impr
 \end{itemize}
 The application is now considerably more user-friendly, visually informative, and polished.
 
-\subsubsection{Challenges \& Learning}
-\begin{itemize}
-	\item Implementing the \verb|Tkinter Canvas| visualisation was the main challenge. It required learning specific canvas methods, handling coordinates carefully, managing drawing layers (e.g., ensuring numbers weren't obscured by colours), and debugging state persistence issues across updates and clears. This took more iterative refinement than initially anticipated.
-	\item Refactoring the point input logic into \verb|find_path| was complex but ultimately led to a better user workflow. It required careful handling of the input parsing, validation loop, and managing the point lists.
-	\item Deciding which elements to remove from the main GUI involved balancing information display with visual clarity.
-\end{itemize}
-
 \subsubsection{Final testing}
 Final tests confirmed the new visualisation window displayed all information correctly (including stock levels) and that the simplified main window controls and input methods worked reliably and intuitively.
-*(User should perform and document final stakeholder testing if applicable)*
 
 \begin{table}[htbp] % Final Testing Table
 	\centering
@@ -2239,18 +2225,6 @@ Final tests confirmed the new visualisation window displayed all information cor
 \end{itemize}
 \textbf{Conclusion:} The application is stable, and the user interface is significantly more robust and user-friendly due to the dedicated visualisation and refined interactions.
 
-\subsubsection{Qodana Analysis}
-*(User: Add overall summary based on final commit \verb|6990578a...|)*
-\begin{itemize}
-	\item \textbf{Commit:} \verb|6990578a...| (End of Sprint Engelbart)
-	\item Issues Summary: *(User: Summarise findings e.g., "Qodana reported a low number of issues, primarily focused on the complexity within the GridVisualizer drawing methods and the findpath input processing loop. Style suggestions were minor and addressed.")*
-\end{itemize}
-
---- % Placeholder for Final Qodana Screenshot
-\subsubsection*{Placeholder: Final Qodana Screenshot (Sprint Engelbart)}
-*(User: Please insert final Qodana screenshot for this sprint here.)*
----
-
 \subsubsection{Link}
 Sprint Engelbart successfully delivered the planned UI overhaul. The new \verb|GridVisualizer| provides excellent graphical feedback (OCSP-022 to 026), while the main window simplifications and workflow refinements (OCSP-027 to 031) enhance usability. This sprint directly addressed stakeholder expectations for a more modern and informative interface, building upon the stable foundation established in Sprint Dijkstra.
 
@@ -2295,7 +2269,7 @@ The main purpose of this sprint was to broaden the pathfinding capabilities beyo
 \subsection{Sprint Planning Details}
 
 \subsubsection{Technical Approach}
-My approach involved implementing A* first, integrating the choice into the GUI, and then setting up the GA framework:
+My approach involved implementing A* first, integrating it into the GUI, and then setting up the GA framework:
 
 \begin{enumerate}
 	\item \textbf{A* Implementation (Iteration 1):}
@@ -2337,14 +2311,14 @@ Still standard Python libraries. \verb|heapq| is used for the A* priority queue.
 \newpage
 \subsection{Development Summary}
 
-\subsubsection{Iteration 1: A* Implementation \& GUI Integration (Est. 2 Hours)}
+\subsubsection{Iteration 1: A* Implementation \& GUI Integration}
 \begin{itemize}
 	\item Progress made: Implemented the \verb|a_star_search| method in \verb|spa.py| using \verb|heapq| and Manhattan distance heuristic. Added radio buttons for algorithm selection (BFS, A*, GA) to \verb|gui.py|. Modified \verb|find_path| to call the selected algorithm. *(Achieved OCSP-032, OCSP-033, OCSP-034)*
 	\item Blockers identified: Correctly implementing the priority queue logic and path reconstruction for A*. Ensuring the GUI variable correctly passed the selected algorithm choice to the backend call.
 	\item Plan for next iteration: Add the framework for the Genetic Algorithm and refine the A* validation.
 \end{itemize}
 
-\subsubsection{Iteration 2: Genetic Algorithm Framework \& A* Fix (Est. 1 Hour)}
+\subsubsection{Iteration 2: Genetic Algorithm Framework \& A* Fix}
 \begin{itemize}
 	\item Progress made: Added placeholder functions for GA components (\verb|create_individual|, \verb|calculate_fitness|, etc.) and the main \verb|genetic_algorithm_path| structure in \verb|spa.py|. Modified the neighbour validation within \verb|a_star_search| to use the existing \verb|spa.validate_point| function for consistency. Added comments. *(Achieved OCSP-035, OCSP-036, OCSP-037)*
 	\item Blockers identified: Defining a suitable structure for the GA framework without full implementation. Ensuring the validation change in A* didn't introduce errors.
@@ -2448,7 +2422,7 @@ Prototype Version 9A: Application now includes an A* search algorithm alongside 
 	\item \textbf{Explanation:}
 	\begin{itemize}
 		\item Genetic Algorithm Framework: Added placeholder methods within \verb|spa.py|'s \verb|PathFinder| class for the main components of a GA: \verb|create_individual| (representing a potential path), \verb|calculate_fitness| (evaluating path quality, e.g., length), \verb|selection| (choosing parents), \verb|crossover| (combining paths), \verb|mutation| (introducing variation). Added the main \verb|genetic_algorithm_path(self, start, points, end)| method which would orchestrate these, but left the implementation largely as pass/placeholder logic.
-		\item A* Validation Fix: Modified the neighbour check inside \verb|a_star_search|. Instead of manually checking bounds \verb|0 <= nx < self.grid.rows...|, it now calls the unified validation function: \verb|valid, _ = spa.validate_point(nx, ny, self.grid.rows, self.grid.cols, allow_start_end=True)|. The condition became \verb|if valid and (nx, ny) not in came_from:|. (Note: 'allow_start_end=True' might be needed if path can revisit start/end).
+		\item A* Validation Fix: Modified the neighbour check inside \verb|a_star_search|. Instead of manually checking bounds \verb|0 <= nx < self.grid.rows...|, it now calls the unified validation function: \verb|valid, _ = spa.validate_point(nx, ny, self.grid.rows, self.grid.cols, allow_start_end=True)|. The condition became \verb|if valid and (nx, ny) not in came_from:|.
 		\item Comments: Added comments explaining the purpose of the GA placeholder functions.
 	\end{itemize}
 	\item \textbf{Justification:} Setting up the GA framework (OCSP-035) provides the structure for potential future implementation of this optimisation technique. Fixing the A* validation (OCSP-036) makes the code more consistent and easier to maintain by reusing the existing \verb|validate_point| function.
@@ -2585,17 +2559,6 @@ Final testing focused on comparing A* and BFS results (which should be identical
 \end{itemize}
 \textbf{Conclusion:} Added algorithmic flexibility. A* implementation appears robust. GA needs full implementation for functional robustness.
 
-\subsubsection{Qodana Analysis}
-*(User: Add overall summary based on final commit \verb|a8df4085...|)*
-\begin{itemize}
-	\item \textbf{Commit:} \verb|a8df4085...| (End of Sprint Floyd)
-	\item Issues Summary: *(User: Summarise findings e.g., "Qodana reported X issues, mainly complexity warnings for the a_star_search method and identifying unused placeholder functions for the GA. Style suggestions were minor.")*
-\end{itemize}
-
---- % Placeholder for Final Qodana Screenshot
-\subsubsection*{Placeholder: Final Qodana Screenshot (Sprint Floyd)}
-*(User: Please insert final Qodana screenshot for this sprint here.)*
----
 
 \subsubsection{Link}
 This sprint successfully expanded the core pathfinding engine by implementing the A* search algorithm (OCSP-032) and providing a user selection mechanism (OCSP-033, OCSP-034). It also laid the groundwork for potentially exploring Genetic Algorithms later (OCSP-035). This provides users with alternative strategies for path optimisation and makes the application more versatile. The refinement of A*'s validation (OCSP-036) also improves code quality.
@@ -2927,17 +2890,6 @@ Final tests confirmed that users can add valid obstacles, which are then correct
 \end{itemize}
 \textbf{Conclusion:} Adds a key layer of functional robustness by handling obstacles, making the pathfinding more realistic. The implementation, while basic due to time, is stable.
 
-\subsubsection{Qodana Analysis}
-*(User: Add overall summary based on final commit \verb|a8b3b6d...|)*
-\begin{itemize}
-	\item \textbf{Commit:} \verb|a8b3b6d...| (End of Sprint Gates / Project Development)
-	\item Issues Summary: *(User: Summarise findings e.g., "Final Qodana run showed X issues. Addressed critical ones, deferred minor style suggestions due to time constraints.")*
-\end{itemize}
-
---- % Placeholder for Final Qodana Screenshot
-\subsubsection*{Placeholder: Final Qodana Screenshot (Sprint Gates)}
-*(User: Please insert final Qodana screenshot for this sprint here.)*
----
 
 \subsubsection{Link}
 Sprint Gates successfully implemented obstacle avoidance (OCSP-032 to OCSP-036). By allowing users to define non-traversable locations and modifying the pathfinding algorithms (BFS and A*) to respect them, the application now simulates warehouse environments more realistically. The visualisation was also updated to clearly show these obstacles. Although the implementation is basic due to time constraints (e.g. no clickable items), it fulfills the core requirement.
