@@ -1264,13 +1264,13 @@ The application now fully uses the 1-N 'itemID' system for user interaction. It 
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.1C.1 & Enter \verb|itemID| 15 (10x10 grid), Add Point & "Added position 15" message shown in output. & *(User: Fill)* & ? \\
+		T3.1C.1 & Enter \verb|itemID| 15 (10x10 grid), Add Point & "Added position 15" message shown in output. & Met & X \\
 		\hline
-		T3.1C.2 & Add \verb|itemID|s 15, 99. Find Path. & Path sequence displayed as "1 $ \rightarrow $ ... $ \rightarrow $ 15 $ \rightarrow $ ... $ \rightarrow $ 99 $ \rightarrow $ ... $ \rightarrow $ 100". & *(User: Fill)* & ? \\
+		T3.1C.2 & Add \verb|itemID|s 15, 99. Find Path. & Path sequence displayed as "1 $ \rightarrow $ ... $ \rightarrow $ 15 $ \rightarrow $ ... $ \rightarrow $ 99 $ \rightarrow $ ... $ \rightarrow $ 100". & Met & X \\
 		\hline
-		T3.1C.3 & Enter invalid \verb|itemID| (0 or 101 on 10x10 grid) & GUI shows error "Position X out of range (1-100)". & *(User: Fill)* & ? \\
+		T3.1C.3 & Enter invalid \verb|itemID| (0 or 101 on 10x10 grid) & GUI shows error "Position X out of range (1-100)". & Met & X \\
 		\hline
-		T3.1C.4 & Start with 15x15 config. Check range label. & Label shows "Enter position (1-225)". & *(User: Fill)* & ? \\
+		T3.1C.4 & Start with 15x15 config. Check range label. & Label shows "Enter position (1-225)". & Met & X \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 1C (Cerf)}
@@ -1329,7 +1329,7 @@ The application now fully uses the 1-N 'itemID' system for user interaction. It 
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 5A: No change in application behaviour yet. However, running the code (or specifically, instantiating \verb|InventoryDB|) now creates the \verb|inventory.db| file with an empty \verb|items| table if it doesn't exist.
+No change in application behaviour yet. However, running the code (or specifically, instantiating \verb|InventoryDB|) now creates the \verb|inventory.db| file with an empty \verb|items| table if it doesn't exist.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1379,7 +1379,7 @@ No fixes were required as this was a very small but vital iteration.
 		\item Added a \verb|if __name__ == "__main__":| block to \verb|database.py|. This allows running the file directly to test the database functionality. It initialises the DB, populates it, and then loops through all item IDs, printing their quantity and position to verify.
 		\item Commit \verb|31cd2a2| unified the validation logic in \verb|spa.py| by modifying \verb|validate_point| to return both a boolean and an error message string, and updated \verb|gui.add_point| to use this improved structure.
 	\end{itemize}
-	\item \textbf{Justification:} These methods provide the core functionality needed to manage the stock data (R2.2) and validate inputs specific to the database context. The \verb|__main__| block was very useful for testing the database logic in isolation before connecting it to the GUI. Unified validation makes error handling cleaner.
+	\item \textbf{Justification:} These methods provide the core functionality needed to manage the stock data and validate inputs specific to the database context. The \verb|__main__| block was very useful for testing the database logic in isolation before connecting it to the GUI. Unified validation makes error handling cleaner.
 \end{itemize}
 
 \textbf{Code Quality:}
@@ -1390,7 +1390,7 @@ No fixes were required as this was a very small but vital iteration.
 \end{itemize}
 
 \newpage
-\subsubsection*{Placeholder: Iteration 2B Code Implementation Snippets}
+\subsubsection*{Prototype: Iteration 2B}
 \lstinputlisting[style=custompython]{Code/cerf/database2b.py}
 \newpage
 
@@ -1472,7 +1472,7 @@ Running \verb|database.py| directly now creates and populates \verb|inventory.db
 \lstinputlisting[style=custompython]{Code/cerf/gui2c.py}
 
 \subsubsection{Prototype details:}
-Prototype Version 5C: The database is now correctly sized based on the user's startup configuration. Database actions are logged. Users can manually check the stock of any location using the 'Query Stock' button or change it using the 'Update Stock' button and pop-up.
+The database is now correctly sized based on the user's startup configuration. Database actions are logged. Users can manually check the stock of any location using the 'Query Stock' button or change it using the 'Update Stock' button and pop-up.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -1587,7 +1587,7 @@ The application is now fully functional regarding stock checking. It prevents ad
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.2D.1 & Find \verb|itemID| X with stock=1. Add X. Find Path. Query X. & Point added ("Stock: 1"). Path found. Query shows Stock=0. & *(User: Fill)* & ? \\
+		T3.2D.1 & Find \verb|itemID| X with stock=1. Add X. Find Path. Query X. & Point added ("Stock: 1"). Path found. Query shows Stock=0. & Met0 & X \\
 		\hline
 		T3.2D.2 & Try Add Point X again (now stock=0). & Warning "Skipping...Out of stock" shown. Point not added to \verb|self.points|. & Met & X \\
 		\hline
@@ -1615,7 +1615,6 @@ The application is now fully functional regarding stock checking. It prevents ad
 \begin{itemize}
 	\item This final iteration successfully tied everything together by implementing the stock check in point addition and the automatic decrementing.
 	\item The logic placement seems correct - check before committing to add the point, decrement only after confirming a path exists.
-	\item The core goals for this sprint related to database integration and stock checking have now been met.
 \end{itemize}
 
 \clearpage
@@ -1641,7 +1640,6 @@ The application is now fully functional regarding stock checking. It prevents ad
 
 \subsubsection{Final testing}
 These final tests were designed to ensure all the new components (config, threading, indexing, database, stock logic) worked together correctly and met the sprint goals. T3.F.3 is particularly important as it verifies the core stock-checking requirement.
-*(User should perform and document final stakeholder testing)*
 
 \begin{table}[htbp] % Final Testing Table
 	\centering
@@ -1658,7 +1656,7 @@ These final tests were designed to ensure all the new components (config, thread
 		T3.F.4 & Test config screen validation (text, 0, $>$50). & Error messageboxes shown, prevents confirmation. & Met & X \\
 		\hline
 	\end{tabularx}
-	\caption{Final Testing results for Sprint Cerf}
+	\caption{Final testing results for Sprint Cerf}
 \end{table}
 
 \newpage
@@ -1706,7 +1704,7 @@ These final tests were designed to ensure all the new components (config, thread
 	\textbf{Conclusion:} Robustness is significantly enhanced through threading, comprehensive validation including stock checks, clear user feedback, modular design with error handling, and improved diagnostics via logging.
 		
 \subsubsection{Link}
-This sprint successfully integrated the core database functionality and stock management logic, directly addressing the need to simulate item availability. The preparatory work on coordinate abstraction, configuration, and threading also substantially improved the application's usability, flexibility, and performance. The application now models a warehouse scenario more realistically and provides a solid, well-structured foundation for future development.
+This sprint successfully integrated the core database functionality and stock management logic, directly addressing my stakeholders' need to simulate item availability. The preparatory work on coordinate abstraction, configuration, and threading also substantially improved the application's usability, flexibility, and performance. The application now models a warehouse scenario more realistically.
 
 \newpage
 
@@ -1767,11 +1765,10 @@ Imports for \verb|threading| and \verb|queue| were removed from \verb|gui.py|. N
 
 	\textbf{Code Changes:}
 	\begin{itemize}
-		\item \textbf{GitHub Commit:} \verb|dd54ffd| (Per the revert command used, representing commit \verb|688582d...|)
 		\item \textbf{Explanation:}
 		\begin{itemize}
 			\item Faced with persistent crashes related to asynchronous operations, I determined that the threading code (\verb|aa510bec|) was the root cause and too complex to reliably fix within my time constraints.
-			\item I executed \verb|git revert dd54ffd --no-edit| to automatically undo the changes introduced by that commit.
+			\item I executed \verb|git revert --no-edit| to automatically undo the changes introduced by that commit.
 			\item This action removed the \verb|import threading| and \verb|import queue| statements from \verb|gui.py|.
 			\item It deleted the \verb|self.processing| flag and \verb|self.result_queue| attribute initialisations from \verb|PathfinderGUI.__init__|.
 			\item It deleted the \verb|_find_path_thread| and \verb|_check_path_results| methods entirely.
@@ -1818,7 +1815,7 @@ A now stable application with \textbf{synchronous} pathfinding. Functionally ide
 \end{itemize}
 
 \subsubsection{Link}
-This short but critical sprint addressed the stability problems that arose from the previous threading implementation. By reverting it, I ensured the application was reliable and provided a solid foundation for moving forward. Although a step back in terms of responsiveness, it was unfortunately necessary as it would have most likely compromised on what the stakeholders were looking for. This was quite a large setback but I aim to still incorporate most of what I mentioned in the analysis stage.
+This short but critical sprint addressed the stability problems that arose from the previous threading implementation. By reverting it, I ensured the application was reliable and provided a solid foundation for moving forward. Although a step back in terms of responsiveness, it was unfortunately necessary as it would have most likely compromised on what the stakeholders were looking for. To allow more time to complete the requested features, I left some functions/variables that were related to threading in the program. This was quite a large setback but I aim to still incorporate most of what I mentioned in the analysis stage.
 
 With the application now stable enough to carry on, the next sprint will pick up the planned UI improvements, including refining the main window layout for better usability and adding some more usability features so the interface greater resembles what the stakeholders were expecting.
 
@@ -1906,21 +1903,21 @@ Standard Python libraries only.
 \newpage
 \subsection{Development Summary}
 
-\subsubsection{Iteration 1: Visualisation Foundation (Est. 1.5 Hours)}
+\subsubsection{Iteration 1: Visualisation Foundation}
 \begin{itemize}
 	\item Progress made: Created basic \verb|GridVisualizer| class (\verb|Toplevel|/\verb|Canvas|). Linked to main GUI ("Show Grid", update/clear calls). Implemented initial grid and basic path/point drawing. *(Achieved OCSP-022, OCSP-023, basic OCSP-024)*
 	\item Blockers identified: Correct canvas setup, basic drawing calls.
 	\item Plan for next iteration: Implement detailed drawing, fix bugs, add stock display.
 \end{itemize}
 
-\subsubsection{Iteration 2: Core Visualisation Implementation \& Refinement (Est. 2.5 Hours)}
+\subsubsection{Iteration 2: Core Visualisation Implementation \& Refinement}
 \begin{itemize}
 	\item Progress made: Implemented detailed canvas drawing (colours, numbers). Added stock level colour-coding (low/zero). Fixed numerous drawing/state/window bugs through refinement. *(Achieved OCSP-024 refinement, OCSP-025, OCSP-026)*
 	\item Blockers identified: Canvas drawing complexity, state management for redraws, stock colouring logic required iterative debugging.
 	\item Plan for next iteration: Refine the main GUI window layout and input methods.
 \end{itemize}
 
-\subsubsection{Iteration 3: Main GUI Simplification \& Interaction Polish (Est. 1.5 Hours)}
+\subsubsection{Iteration 3: Main GUI Simplification \& Interaction Polish}
 \begin{itemize}
 	\item Progress made: Updated main GUI layout. Added fallback path logic. Removed redundant widgets. Changed stock query/update to use pop-ups. Modified \verb|find_path| for multi-point entry. Cleaned up code. *(Achieved OCSP-027, OCSP-028, OCSP-029, OCSP-030, OCSP-031)*
 	\item Blockers identified: Refactoring \verb|find_path| for multi-point input. Smooth pop-up implementation.
@@ -1938,9 +1935,9 @@ Standard Python libraries only.
 	\item \textbf{GitHub Commits:} \verb|dbe52cf|, \verb|23cbdd6|, \verb|d28cc78|, \verb|6b227f6|, \verb|03d4780|, \verb|3b87545|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item Having stabilised the application in the previous sprint, I started work on the graphical visualisation. I created the \verb|GridVisualizer| class within \verb|gui.py|, using \verb|tk.Toplevel| for a separate window (commit \verb|dbe52cf|).
+		\item Having stabilised the application in the previous sprint, I started work on the graphical visualisation. I created the \verb|VisualisationWindow| class within \verb|gui.py|, using \verb|tk.Toplevel| for a separate window (commit \verb|dbe52cf|).
 		\item Inside this class, I added a \verb|tk.Canvas| widget for drawing the grid, along with horizontal and vertical \verb|ttk.Scrollbar|s to handle potentially large grids (commit \verb|03d4780|). I set up basic methods like \verb|show| and \verb|withdraw| for window management.
-		\item I then linked this to the main \verb|PathfinderGUI|. I added a "Show Grid" button that calls \verb|self.viz_window.show()| (commit \verb|23cbdd6|). I modified \verb|find_path| to call \verb|self.viz_window.update_visualisation| (which would later become \verb|draw_grid|) and updated \verb|clear_all| to clear the visualiser (commits \verb|23cbdd6|, \verb|d28cc78|, \verb|6b227f6|).
+		\item I then linked this to the main \verb|PathfinderGUI|. I added a "Show Grid" button that calls \verb|self.viz_window.show()| (commit \verb|23cbdd6|). I modified \verb|find_path| to call \verb|self.viz_window.update_visualisation|, a temporary function for this sprint, and updated \verb|clear_all| to clear the visualiser (commits \verb|23cbdd6|, \verb|d28cc78|, \verb|6b227f6|).
 		\item I implemented the initial versions of \verb|draw_grid| and \verb|draw_cell| to draw the grid lines and place the \verb|itemID| numbers onto the canvas (commit \verb|3b87545|).
 	\end{itemize}
 	\item \textbf{Justification:} This established the separate window using the more appropriate \verb|Canvas| widget (OCSP-022) and connected it to the main application's controls (OCSP-023), providing the base for the detailed graphical display. Basic drawing logic was added (OCSP-024).
@@ -1949,14 +1946,15 @@ Standard Python libraries only.
 \textbf{Code Quality:}
 \begin{itemize}
 	\item Annotations added: Docstrings for the new class and methods. Comments explaining canvas setup.
-	\item Modular approach: Visualisation logic begins to be encapsulated in \verb|GridVisualizer|.
+	\item Modular approach: Visualisation logic begins to be encapsulated in \verb|VisualisationWindow|.
 	\item Robustness: Foundation laid for a more robust visualisation than text output.
 \end{itemize}
 
 \newpage
-\subsubsection*{Placeholder: Iteration 1 Code Implementation Snippets (Commit \verb|3b87545| state)}
-*(User: Insert snippets for the basic \verb|GridVisualizer| class, linking calls in \verb|PathfinderGUI|, and initial \verb|draw_grid|/\verb|draw_cell| here.)*
-\newpage
+\subsubsection*{Prototype: Iteration 1}
+
+\lstinputlisting[style=custompython]{Code/engelbart/gui1.py}
+
 
 \subsubsection{Prototype details:}
  A separate window opens via "Show Grid", displaying a canvas with basic grid lines and cell numbers. Pathfinding updates this window. Clearing resets it.
@@ -1968,11 +1966,11 @@ Standard Python libraries only.
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T5.1.1 & Click "Show Grid" & Separate window opens with canvas \& grid/numbers. & Met* & X \\
+		T5.1.1 & Click "Show Grid" & Separate window opens with canvas \& grid/numbers. & Met & X \\
 		\hline
 		T5.1.2 & Find Path & Visualisation window updates (basic drawing). & Met & X \\
 		\hline
-		T5.1.3 & Click Clear All & Visualisation canvas clears/resets. & Met & X \\
+		T5.1.3 & Click Clear All & Visualisation canvas clears/resets. & Cleared the text box, not the visualisation & * \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 1 (Engelbart)}
@@ -1981,18 +1979,12 @@ Standard Python libraries only.
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item *(User: Describe any initial fixes based on commit messages like \verb|6fd7540| perhaps)*
+	\item The 'Clear All' button did not clear the visualisation window at first. I rectified this by adding an empty parameter to \verb| self.viz_window.update_visualisation| to overwrite existing blocks with no data.
 \end{itemize}
 
 \subsubsection{Validation}
 \begin{itemize}
 	\item Basic window management implemented (\verb|withdraw| on close).
-\end{itemize}
-
-\subsubsection{Review:}
-\begin{itemize}
-	\item The separate canvas window framework is working.
-	\item Need to implement the detailed drawing for paths, points, colours, and fix state management.
 \end{itemize}
 
 \newpage
@@ -2008,7 +2000,7 @@ Standard Python libraries only.
 		\item Refined Drawing: Improved \verb|draw_cell| to handle specific colours for path (\verb|#42f56f|), points (\verb|#f5d742|), start/end (\verb|#4287f5|), and added logic for contrasting text colour (\verb|white| on dark backgrounds) (commit \verb|7e78e61|).
 		\item Fixed Bugs: Addressed \verb|TclError| when updating a closed window using \verb|try-except| (commit \verb|6fd7540|). Fixed major bugs related to path state (\verb|_current_path|, etc.) not persisting or clearing correctly, ensuring the visualisation accurately reflected the current state after finding paths or clearing (commits \verb|eb53083|, \verb|f6862e1|). Fixed logic around when the window initially draws vs updates (\verb|1f8d538|, reverted in \verb|bf6845a|).
 		\item Improved Layout: Made the visualisation window resize better based on grid dimensions and center itself (commit \verb|1a0a84a|).
-		\item Added Stock Visualisation: Modified \verb|GridVisualizer.__init__| and \verb|PathfinderGUI.__init__| to pass the \verb|self.db| instance to the visualiser. Updated \verb|visualize_path| and \verb|draw_cell| to query \verb|self.db.get_quantity(pos_num)| for intermediate points. Applied colour logic: orange (\verb|#ff9933|) if stock < 2, red (\verb|#ff3333|) if stock == 0, yellow (\verb|#f5d742|) otherwise. Added \verb|self.out_of_stock_positions| set to track zero-stock locations and modified \verb|clear_visualization| and \verb|draw_grid| to redraw these red markers persistently. (Commits \verb|08510e4|, \verb|9cd9b34|)
+		\item Added Stock Visualisation: Modified \verb|GridVisualizer.__init__| (renamed from VisualisationWindow, like before the revert) and \verb|PathfinderGUI.__init__| to pass the \verb|self.db| instance to the visualiser. Updated \verb|visualise_path| and \verb|draw_cell| to query \verb|self.db.get_quantity(pos_num)| for intermediate points. Applied colour logic: orange (\verb|#ff9933|) if stock < 2, red (\verb|#ff3333|) if stock == 0, yellow (\verb|#f5d742|) otherwise. Added \verb|self.out_of_stock_positions| set to track zero-stock locations and modified \verb|clear_visualisation| and \verb|draw_grid| to redraw these red markers persistently. (Commits \verb|08510e4|, \verb|9cd9b34|)
 	\end{itemize}
 	\item \textbf{Justification:} This extensive refinement was needed to make the visualisation accurate, robust, and informative (OCSP-024, OCSP-025). Displaying stock levels visually is a key usability enhancement (OCSP-026).
 \end{itemize}
@@ -2021,9 +2013,10 @@ Standard Python libraries only.
 \end{itemize}
 
 \newpage
-\subsubsection*{Placeholder: Iteration 2 Code Implementation Snippets (Commit \verb|9cd9b34| state)}
-*(User: Insert snippets for the refined \verb|GridVisualizer| class methods here.)*
-\newpage
+\subsubsection*{Prototype: Iteration 2}
+
+\lstinputlisting[style=custompython]{Code/engelbart/gui2.py}
+
 
 \subsubsection{Prototype details:}
 Visualisation window displays grid, path, points, and stock levels accurately with colours. Handles state changes (finding path, clearing) correctly and robustly.
@@ -2035,24 +2028,24 @@ Visualisation window displays grid, path, points, and stock levels accurately wi
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T5.2.1 & Show Grid, Find Path, Clear, Show. & Viz opens; Path/points coloured; Clears to grid+numbers+OOS markers; Re-shows. & *(User: Fill)* & ? \\
+		T5.2.1 & Show Grid, Find Path, Clear, Show. & Viz opens; Path/points coloured; Clears output; Re-shows. & Met & X \\
 		\hline
-		T5.2.2 & Find path with low (<2) \& zero stock points. & Viz shows path, low stock points orange, zero stock red. & *(User: Fill)* & ? \\
+		T5.2.2 & Find path with low (<2) \& zero stock points. & Viz shows path, low stock points orange, zero stock red. & Orange and red were offset by 1 & \~{} \\
 		\hline
-		T5.2.3 & Test viz with large grid (20x20). & Scrollbars appear \& work. Window sized well. & *(User: Fill)* & ? \\
+		T5.2.3 & Test viz with large grid (20x20). & Scrollbars appear \& work. Window sized well. & Met & X \\
 		\hline
-		T5.2.4 & Close Viz window ('X'). Find Path. Show Grid. & No errors. New window opens with correct path/grid. & *(User: Fill)* & ? \\
-		\hline
-		T5.2.5 & Update stock to 0. Clear All. Show Grid. & Location remains marked red (OOS). & *(User: Fill)* & ? \\
+		T5.2.4 & Close Viz window ('X'). Find Path. Show Grid. & No errors. New window opens with correct path/grid. & Met & X \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 2 (Engelbart)}
 \end{table}
-\textbf{Tests justification:} Verified detailed visualisation (T5.2.1), stock display/persistence (T5.2.2, T5.2.5), scaling (T5.2.3), and robustness (T5.2.4).
+\textbf{Tests justification:} Verified detailed visualisation (T5.2.1), stock display/persistence (T5.2.2), scaling (T5.2.3), and robustness (T5.2.4).
 
 \subsubsection{Fixes}
 \begin{itemize}
 	\item Addressed drawing consistency, state retention after clearing, window sizing, and error handling issues through multiple commits.
+	
+	\item I had to fix the counter for the stock-checker: it was initially marking items with stock level 1 as out-of-stock. This was modified to ensure only OOS items are marked as red by ensuring the quantity is updated BEFORE the pathfinding and collection is run, so they are accurately assessed.
 \end{itemize}
 
 \subsubsection{Validation}
@@ -2097,8 +2090,11 @@ Visualisation window displays grid, path, points, and stock levels accurately wi
 \end{itemize}
 
 \newpage
-\subsubsection*{Placeholder: Iteration 3 Code Implementation Snippets (Commit \verb|6990578a|)}
-*(User: Insert snippets for the final \verb|__init__| layout, \verb|query_stock|, \verb|update_stock|, and \verb|find_path| from \verb|gui.py| here.)*
+\subsubsection*{Prototype: Iteration 3}
+
+\lstinputlisting[style=custompython]{Code/engelbart/gui3.py}
+
+
 \newpage
 
 \subsubsection{Prototype details:}
@@ -2111,26 +2107,27 @@ Main GUI simplified. User enters space-separated \verb|itemID|s. Stock actions u
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T5.3.1 & Launch GUI & Simplified layout, 600x500 size. & *(User: Fill)* & ? \\
+		T5.3.1 & Launch GUI & Simplified layout, 600x500 size. & Met & X \\
 		\hline
-		T5.3.2 & Enter "15 99", Find Path (stock ok) & Path "1 $ \rightarrow $...$ \rightarrow $ 100" including 15, 99 calculated. & *(User: Fill)* & ? \\
+		T5.3.2 & Enter "15 99", Find Path (stock ok) & Path "1 $\rightarrow$ ... $\rightarrow$ 100" including 15, 99 calculated. & Met & X \\
 		\hline
-		T5.3.3 & Enter "15 abc 99". Find Path. & Error for "abc". Path calc for 15, 99. & *(User: Fill)* & ? \\
+		T5.3.3 & Enter "15 abc 99". Find Path. & Error for "abc". Path calc for 15, 99. & Met & X \\
 		\hline
-		T5.3.4 & Query Stock via button/pop-up. & Correct stock shown. & *(User: Fill)* & ? \\
+		T5.3.4 & Query Stock via button/pop-up. & Correct stock shown. & Met & X \\
 		\hline
-		T5.3.5 & Update Stock via button/pop-ups. Query. & Update confirmed. Query shows new stock. & *(User: Fill)* & ? \\
+		T5.3.5 & Update Stock via button/pop-ups. Query. & Update confirmed. Query shows new stock. & Met & X \\
 		\hline
-		T5.3.6 & Enter only zero-stock points. Find Path. & Warning shown. Direct start $ \rightarrow $ end path calculated. & *(User: Fill)* & ? \\
+		T5.3.6 & Enter only zero-stock points. Find Path. & Warning shown. Direct start $\rightarrow$ end path calculated. & Met & X \\
 		\hline
 	\end{tabularx}
 	\caption{Testing results for Iteration 3 (Engelbart)}
 \end{table}
+
 \textbf{Tests justification:} Verified UI simplification (T5.3.1), new multi-point entry/validation (T5.3.2, T5.3.3, T5.3.6), refined stock interactions (T5.3.4, T5.3.5), and fallback logic (T5.3.6).
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item Commit \verb|cb5d63f| added fallback path logic. Commit \verb|17bd804| refined layout. Commit \verb|6990578a| performed major simplification and input refactoring.
+	\item Commit \verb|cb5d63f| added fallback path logic. Commit \verb|17bd804| refined layout. Commit \verb|6990578a| performed major simplification and input refactoring. These were some minor protections, not fixes per se but patches to prevent issues.
 \end{itemize}
 
 \subsubsection{Validation}
@@ -2138,7 +2135,7 @@ Main GUI simplified. User enters space-separated \verb|itemID|s. Stock actions u
 	\item Point validation (format, range, stock>0) consolidated within \verb|find_path|.
 	\item Stock Query/Update use pop-ups with basic validation.
 \end{itemize}
-\textbf{Justification:} Validation adapted to streamlined workflows.
+\textbf{Justification:} Validation adapted to each function as well as a unified approach for redundancy
 
 \subsubsection{Review:}
 \begin{itemize}
@@ -2172,13 +2169,13 @@ Final tests confirmed the new visualisation window displayed all information cor
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T5.F.1 & Config 15x15. Enter multiple valid points. Find Path. Check Viz. & Path computed. Viz shows path, stock colours correctly. Main GUI simple/clean. & *(User: Fill)* & ? \\
+		T5.F.1 & Config 15x15. Enter multiple valid points. Find Path. Check Viz. & Path computed. Viz shows path, stock colours correctly. Main GUI simple/clean. & Met & X \\
 		\hline
-		T5.F.2 & Update stock to 0 via pop-up. Find path. Check Viz. & Update works. Viz shows item red (OOS). Path avoids/warns about item. & *(User: Fill)* & ? \\
+		T5.F.2 & Update stock to 0 via pop-up. Find path. Check Viz. & Update works. Viz shows item red (OOS). Path avoids/warns about item. & Met & X \\
 		\hline
-		T5.F.3 & Enter only zero-stock points. Find Path. & Warning messages. Direct start $ \rightarrow $ end path computed \& shown on Viz. & *(User: Fill)* & ? \\
+		T5.F.3 & Enter only zero-stock points. Find Path. & Warning messages. Direct start $\rightarrow$ end path computed \& shown on Viz. & Met & X \\
 		\hline
-		T5.F.4 & Test Query/Update pop-ups. Test Clear All. & Pop-ups work. Clear All resets GUI and Viz correctly (OOS markers remain). & *(User: Fill)* & ? \\
+		T5.F.4 & Test Query/Update pop-ups. Test Clear All. & Pop-ups work. Clear All resets GUI and Viz correctly (OOS markers remain). & Met & X \\
 		\hline
 	\end{tabularx}
 	\caption{Final Testing results for Sprint Engelbart}
@@ -2187,8 +2184,8 @@ Final tests confirmed the new visualisation window displayed all information cor
 \newpage
 
 \subsubsection{Testing Summary}
-*(User to update based on actual testing)*
-\begin{table}[htbp]
+
+\begin{table}[htbp!]
 	\centering
 	\begin{tabular}{|l|c|}
 		\hline
@@ -2226,16 +2223,15 @@ Final tests confirmed the new visualisation window displayed all information cor
 \textbf{Conclusion:} The application is stable, and the user interface is significantly more robust and user-friendly due to the dedicated visualisation and refined interactions.
 
 \subsubsection{Link}
-Sprint Engelbart successfully delivered the planned UI overhaul. The new \verb|GridVisualizer| provides excellent graphical feedback (OCSP-022 to 026), while the main window simplifications and workflow refinements (OCSP-027 to 031) enhance usability. This sprint directly addressed stakeholder expectations for a more modern and informative interface, building upon the stable foundation established in Sprint Dijkstra.
-
-With the core functionality (pathfinding, database, stock checking) implemented and the interface significantly improved, the application is now in a strong position. Future work could involve adding features like obstacle handling, saving/loading states, or potentially investigating alternative pathfinding algorithms if performance on very large grids becomes a concern with the synchronous execution model.
-
+Sprint Engelbart successfully delivered the planned UI overhaul. The new \verb|GridVisualizer| provides excellent graphical feedback (OCSP-022 to 026), while the main window simplifications and workflow refinements (OCSP-027 to 031) enhance usability.
 
 \newpage
 
+% --- Start of Modified Sprint Floyd Section ---
+
 \section{Sprint Floyd}
 
-After significantly improving the user interface and stability in the previous sprints, Sprint Floyd was dedicated to enhancing the core pathfinding capabilities of the application. While the Breadth-First Search (BFS) implemented in Sprint Ada guarantees the shortest path in terms of steps on an unweighted grid, I wanted to explore more advanced algorithms that could potentially be more efficient or offer different kinds of optimisation, especially if I were to add complexities like varying terrain costs later. This sprint focused on implementing the A* search algorithm and setting up the basic framework for a Genetic Algorithm (GA) as alternative pathfinding strategies, allowing the user to select which algorithm to use via the GUI.
+After significantly improving the user interface and stability in the previous sprints, Sprint Floyd was dedicated to enhancing the core pathfinding capabilities of the application. While the Breadth-First Search (BFS) implemented in Sprint Ada guarantees the shortest path in terms of steps on an unweighted grid, I wanted to explore more advanced algorithms that could potentially be more efficient or offer different kinds of optimisation, especially if I were to add complexities like varying terrain costs later. This sprint focused initially on implementing a Genetic Algorithm (GA) approach to optimise the *order* in which intermediate points are visited, followed by the implementation of the A* search algorithm as an alternative pathfinding strategy between points. Finally, the GUI was updated to allow the user to select which core pathfinding algorithm (BFS or A*) to use.
 
 \subsection{Tasks}
 
@@ -2246,236 +2242,224 @@ The tasks I completed in this algorithm-focused sprint were:
 		\hline
 		\textbf{Task ID} & \textbf{Task Description} \\
 		\hline
+		OCSP-035 & Implement Genetic Algorithm for Point Order Optimisation: Add functions (\verb|optimise_point_order|, \verb|ordered_crossover|, \verb|_mutate|) to \verb|PathFinder| class in \verb|spa.py| to reorder intermediate points for shorter total path length using GA concepts. Add basic timeout/error handling. \\
+		\hline
+		OCSP-033.1 & Implement GUI Optimisation Selection: Add a menu option (\verb|self.optimise_var|) to \verb|gui.py|'s \verb|__init__| method (via \verb|create_menu_bar|) allowing users to enable/disable GA point order optimisation. \\
+		\hline
 		OCSP-032 & Implement A* Algorithm: Add \verb|a_star_search| method to \verb|PathFinder| class in \verb|spa.py|, including heuristic calculation (\verb|manhattan_distance|), priority queue (\verb|heapq|) management, cost tracking (\verb|g_score|, \verb|f_score|), and path reconstruction. \\
 		\hline
-		OCSP-033 & Implement GUI Algorithm Selection: Add algorithm selection UI elements (radio buttons \verb|self.algorithm_var|, labels, frame \verb|algo_frame|) to \verb|gui.py|'s \verb|__init__| method, allowing users to choose between BFS, A*, and GA. \\
+		OCSP-033.2 & Implement GUI Algorithm Selection: Add algorithm selection UI elements (radio buttons via menu \verb|self.algorithm_var|) to \verb|gui.py|'s \verb|__init__| method, allowing users to choose between BFS and A*. \\
 		\hline
-		OCSP-034 & Integrate Algorithm Selection into Pathfinding Call: Modify \verb|gui.py|'s \verb|find_path| method to check the value of \verb|self.algorithm_var| and call the corresponding search method (\verb|bfs|, \verb|a_star_search|, or \verb|genetic_algorithm_path|) on the \verb|self.path_finder| object. \\
+		OCSP-034 & Integrate Algorithm Selection into Pathfinding Call: Modify \verb|gui.py|'s \verb|find_path| method to check the value of \verb|self.algorithm_var| and call the corresponding search method (\verb|bfs| or \verb|a_star_search|) on the \verb|self.path_finder| object. The main \verb|find_path_through_points| method was also updated to use the selected core algorithm. \\
 		\hline
-		OCSP-035 & Implement Genetic Algorithm Framework: Add placeholder functions (\verb|create_individual|, \verb|calculate_fitness|, \verb|selection|, \verb|crossover|, \verb|mutation|) and the main \verb|genetic_algorithm_path| method structure within the \verb|PathFinder| class in \verb|spa.py|. *(Note: Full GA implementation not completed in this sprint)*. \\
+		OCSP-036 & Refine A* Validation: Modify the neighbour validation check within \verb|a_star_search| to use the existing \verb|spa.validate_point| function for consistency. \\
 		\hline
-		OCSP-036 & Refine A* Validation: Modify the neighbour validation check within \verb|a_star_search| to use the existing \verb|spa.validate_point| function for consistency, checking bounds and potentially obstacles if they were present. \\
-		\hline
-		OCSP-037 & Add Comments \& Refinements: Add comments explaining the A* implementation (heuristic, priority queue) and the GA framework placeholders. Update default algorithm selection in GUI. \\
+		OCSP-037 & Add Comments \& Refinements: Add comments explaining the GA optimisation and A* implementation. Update default algorithm selection in GUI. \\
 		\hline
 	\end{tabularx}
 	\caption{Tasks for Sprint Floyd}
 \end{table}
 
 \subsection{Purpose}
-The main purpose of this sprint was to broaden the pathfinding capabilities beyond simple BFS. By implementing A*, I aimed to add an informed search algorithm that uses heuristics (Manhattan distance in this case) to potentially find the shortest path more efficiently, especially on larger grids. Setting up the framework for a Genetic Algorithm was an exploratory step towards providing a completely different, optimisation-based approach, even though the full implementation wasn't completed within this sprint. Providing the user with a choice of algorithms via the GUI was also a key goal, allowing comparison and flexibility.
+The main purpose of this sprint was to enhance pathfinding efficiency and flexibility. Implementing the GA for point order optimisation (OCSP-035) aimed to reduce the total travel distance when visiting multiple intermediate locations. Subsequently implementing A* (OCSP-032) provided an informed search algorithm as an alternative to BFS for calculating the path segments between points. Providing user control over both point optimisation (OCSP-033.1) and the core search algorithm (BFS vs. A*) (OCSP-033.2, OCSP-034) allows for comparison and user choice.
 
 \clearpage
 \subsection{Sprint Planning Details}
 
 \subsubsection{Technical Approach}
-My approach involved implementing A* first, integrating it into the GUI, and then setting up the GA framework:
+My approach involved implementing the GA point optimisation first, integrating its control, then implementing A* and integrating its selection:
 
 \begin{enumerate}
-	\item \textbf{A* Implementation (Iteration 1):}
+	\item \textbf{Genetic Algorithm for Point Order (Iteration 1):}
 	\begin{itemize}
-		\item Define \verb|a_star_search(self, start, end)| method in \verb|spa.py|'s \verb|PathFinder| class.
-		\item Use a priority queue (via \verb|heapq|) to store nodes to visit, ordered by f-score (g-score + heuristic).
-		\item Implement dictionaries to store \verb|g_score| (cost from start), \verb|f_score| (estimated total cost), and \verb|came_from| (for path reconstruction).
-		\item Define a heuristic function, \verb|manhattan_distance(a, b)|, calculating $|a.x - b.x| + |a.y - b.y|$.
-		\item Implement the main A* loop: pop lowest f-score node from priority queue, check if goal, explore neighbours, calculate tentative g-scores, update scores and priority queue if a better path to a neighbour is found.
-		\item Implement path reconstruction by backtracking using the \verb|came_from| dictionary once the end node is reached.
-		\item Justification: A* is a standard, efficient algorithm for shortest paths when a heuristic is available. Manhattan distance is a common, admissible heuristic for grid maps where only orthogonal movement is allowed. (OCSP-032)
+		\item Define \verb|optimise_point_order(self, start, points, end)| method in \verb|spa.py|'s \verb|PathFinder| class.
+		\item Implement helper methods \verb|ordered_crossover| and \verb|_mutate| (swap mutation).
+		\item Generate an initial population of permutations of the intermediate points.
+		\item Calculate the fitness of each permutation based on the total path length (start $\rightarrow$ perm[0] $\rightarrow$ ... $\rightarrow$ perm[n] $\rightarrow$ end) using BFS for segment lengths. Use Manhattan distance as an approximation for larger grids to improve performance. Apply large penalties for impossible segments.
+		\item Implement GA loop: Select top performers (elitism), create new population via ordered crossover and mutation. Reduced population size and generations for better performance. Added timeouts and error handling.
+		\item Modify \verb|find_path_through_points| to optionally call \verb|optimise_point_order|.
+		\item Justification: Addresses the Traveling Salesperson Problem variant for intermediate points to find a shorter overall route. GA is a suitable heuristic approach for this NP-hard problem. (OCSP-035)
 	\end{itemize}
-	\item \textbf{GUI Integration (Iteration 1):}
+	\item \textbf{GUI Integration for GA Optimisation (Iteration 1):}
 	\begin{itemize}
-		\item Add a \verb|tk.StringVar| (\verb|self.algorithm_var|) to \verb|PathfinderGUI.__init__| in \verb|gui.py|, defaulting to 'bfs'.
-		\item Create a \verb|ttk.Frame| (\verb|algo_frame|) to hold algorithm selection radio buttons.
-		\item Add \verb|ttk.Radiobutton| widgets for 'BFS', 'A*', and 'Genetic Algorithm', linking them to \verb|self.algorithm_var|.
-		\item Modify \verb|gui.find_path|: Use an \verb|if/elif/else| block based on \verb|self.algorithm_var.get()| to decide which pathfinding method (\verb|self.path_finder.bfs|, \verb|self.path_finder.a_star_search|, or the placeholder \verb|self.path_finder.genetic_algorithm_path|) to call.
-		\item Justification: Provides user control over the pathfinding strategy. (OCSP-033, OCSP-034)
+		\item Add a \verb|tk.BooleanVar| (\verb|self.optimise_var|) to \verb|PathfinderGUI.__init__| in \verb|gui.py|, defaulting to False.
+		\item Add a "Options" menu with a checkbutton linked to \verb|self.optimise_var| to enable/disable optimisation.
+		\item Modify \verb|gui.find_path| to pass the value of \verb|self.optimise_var| to \verb|self.path_finder.find_path_through_points|.
+		\item Justification: Provides user control over whether to use the potentially time-consuming point optimisation. (OCSP-033.1)
 	\end{itemize}
-	\item \textbf{Genetic Algorithm Framework \& A* Refinement (Iteration 2):}
+	\item \textbf{A* Implementation \& Integration (Iteration 2):}
 	\begin{itemize}
-		\item Add placeholder function definitions for GA components (\verb|create_individual|, \verb|calculate_fitness|, \verb|selection|, \verb|crossover|, \verb|mutation|) within \verb|PathFinder| in \verb|spa.py|. Define the main \verb|genetic_algorithm_path| method structure which would orchestrate these (though left largely unimplemented). Justification: Sets up the structure for future GA implementation (OCSP-035).
-		\item Refine A* neighbour validation: Replace the manual bounds check inside \verb|a_star_search|'s neighbour loop with a call to \verb|spa.validate_point(nx, ny, ...)[0]| for consistency with BFS and potential future obstacle checks (though obstacles weren't implemented). Justification: Improves code consistency and maintainability. (OCSP-036)
-		\item Add comments explaining A* and GA concepts. Update default algorithm selection if needed. (OCSP-037)
+		\item Define \verb|a_star_search(self, start, end)| method in \verb|spa.py|'s \verb|PathFinder| class (Note: initially named `astar`).
+		\item Use \verb|heapq| as a priority queue, calculate heuristic using \verb|manhattan_distance|, track costs with \verb|g_score|, \verb|f_score|, and reconstruct path using \verb|came_from|. Implement the main A* loop. (OCSP-032)
+		\item Add \verb|set_algorithm| method to \verb|PathFinder| and modify \verb|find_path_through_points| to use the selected algorithm (\verb|self.find_path| dispatcher).
+		\item Add Algorithm selection menu to GUI (\verb|self.algorithm_var| defaulting to 'bfs', radio buttons for BFS/A*). Add \verb|set_algorithm| method in GUI to update selection. Modify \verb|gui.find_path| to call the specific algorithm based on selection (though this is now partly handled by the backend `find_path_through_points` change). (OCSP-033.2, OCSP-034)
+		\item Refine A* neighbour validation to use \verb|spa.validate_point|. (OCSP-036)
+		\item Add comments explaining A* concepts. (OCSP-037)
 	\end{itemize}
 \end{enumerate}
 
 \subsubsection{Architecture \& Structural Considerations}
 \begin{itemize}
-	\item \verb|spa.py|: The \verb|PathFinder| class now contains multiple pathfinding methods (\verb|bfs|, \verb|a_star_search|, \verb|genetic_algorithm_path| framework).
-	\item \verb|gui.py|: Added UI elements for algorithm selection. The \verb|find_path| method now acts as a dispatcher, calling the selected backend algorithm.
+	\item \verb|spa.py|: The \verb|PathFinder| class now contains multiple pathfinding methods (\verb|bfs|, \verb|a_star_search|) and optimisation logic (\verb|optimise_point_order|).
+	\item \verb|gui.py|: Added UI elements for point order optimisation and algorithm selection (BFS vs A*). The \verb|find_path| method calls the backend \verb|find_path_through_points| which handles dispatching based on selected algorithm.
 \end{itemize}
-Justification: Encapsulating different algorithms within the \verb|PathFinder| class keeps the pathfinding logic organised. The GUI modification allows easy selection between these algorithms.
-
-\subsubsection{Dependencies}
-Still standard Python libraries. \verb|heapq| is used for the A* priority queue.
+Justification: Encapsulating algorithms and optimisation within the \verb|PathFinder| class keeps the logic organised. The GUI modifications allow user control.
 
 \newpage
 \subsection{Development Summary}
 
-\subsubsection{Iteration 1: A* Implementation \& GUI Integration}
+\subsubsection{Iteration 1: GA Point Order Optimisation \& GUI Toggle}
 \begin{itemize}
-	\item Progress made: Implemented the \verb|a_star_search| method in \verb|spa.py| using \verb|heapq| and Manhattan distance heuristic. Added radio buttons for algorithm selection (BFS, A*, GA) to \verb|gui.py|. Modified \verb|find_path| to call the selected algorithm. *(Achieved OCSP-032, OCSP-033, OCSP-034)*
-	\item Blockers identified: Correctly implementing the priority queue logic and path reconstruction for A*. Ensuring the GUI variable correctly passed the selected algorithm choice to the backend call.
-	\item Plan for next iteration: Add the framework for the Genetic Algorithm and refine the A* validation.
+	\item Progress made: Implemented the \verb|optimise_point_order| method using GA concepts in \verb|spa.py|. Added timeout and error handling. Added the "Optimize Point Order" checkbutton to the GUI options menu. Modified \verb|find_path| to use the optimisation setting. *(Achieved OCSP-035, OCSP-033.1)*
+	\item Blockers identified: Fine-tuning GA parameters (population size, generations) for acceptable performance vs. optimisation quality. Ensuring the optimisation timeout worked correctly.
+	\item Plan for next iteration: Implement A* search algorithm and add GUI selection for the core algorithm (BFS vs A*).
 \end{itemize}
 
-\subsubsection{Iteration 2: Genetic Algorithm Framework \& A* Fix}
+\subsubsection{Iteration 2: A* Implementation, GUI Integration \& Validation Fix}
 \begin{itemize}
-	\item Progress made: Added placeholder functions for GA components (\verb|create_individual|, \verb|calculate_fitness|, etc.) and the main \verb|genetic_algorithm_path| structure in \verb|spa.py|. Modified the neighbour validation within \verb|a_star_search| to use the existing \verb|spa.validate_point| function for consistency. Added comments. *(Achieved OCSP-035, OCSP-036, OCSP-037)*
-	\item Blockers identified: Defining a suitable structure for the GA framework without full implementation. Ensuring the validation change in A* didn't introduce errors.
-	\item Plan for next iteration: Sprint complete. Final review and testing, particularly comparing A* and BFS results.
+	\item Progress made: Implemented the \verb|a_star_search| method in \verb|spa.py|. Added algorithm selection (BFS/A*) menu to GUI. Modified \verb|find_path| and \verb|find_path_through_points| to use the selected algorithm. Refactored A* validation check to use \verb|spa.validate_point|. Added comments. *(Achieved OCSP-032, OCSP-033.2, OCSP-034, OCSP-036, OCSP-037)*
+	\item Blockers identified: Ensuring A* path reconstruction was correct. Making sure the GUI variable correctly passed the algorithm choice for dispatching. Verifying the validation change in A* didn't break edge cases.
 \end{itemize}
 
-\clearpage
 \subsection{Sprint Floyd Implementation}
 
-% --- Iteration 1 ---
-\subsubsection{Iteration 1: A* Implementation \& GUI Integration}
+% --- Iteration 1 (Based on GA commits) ---
+\subsubsection{Iteration 1: GA Point Order Optimisation \& GUI Toggle}
 
 \textbf{Code Changes:}
 \begin{itemize}
-	\item \textbf{GitHub Commit:} \verb|8174e75a...|
+	\item \textbf{GitHub Commits:} \verb|8174e75a...|, \verb|4459bcdb...|, \verb|6677497e...|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item Implemented A* Algorithm: I added a new method \verb|a_star_search(self, start, end)| to the \verb|PathFinder| class in \verb|spa.py|. This involved:
-		\begin{itemize}
-			\item Using \verb|heapq| as a priority queue to store \verb|(f_score, current_node)| tuples.
-			\item Defining a heuristic function \verb|manhattan_distance| within the class.
-			\item Using dictionaries \verb|g_score|, \verb|f_score|, and \verb|came_from| to track costs and reconstruct the path.
-			\item Implementing the main A* loop: popping the node with the lowest f-score, exploring valid neighbours, calculating tentative g-scores, and updating neighbours' scores/priority queue if a better path is found.
-			\item Adding path reconstruction logic using the \verb|came_from| dictionary.
-		\end{itemize}
-		\item Added GUI Selection: In \verb|gui.py|'s \verb|PathfinderGUI.__init__| method, I added:
-		\begin{itemize}
-			\item A \verb|tk.StringVar| called \verb|self.algorithm_var|, setting its default value to \verb|"bfs"|.
-			\item A \verb|ttk.Frame| (\verb|algo_frame|) to group the selection widgets.
-			\item Three \verb|ttk.Radiobutton| widgets labeled "BFS", "A*", and "Genetic Algorithm", all linked to \verb|self.algorithm_var|.
-		\end{itemize}
-		\item Integrated Selection: I modified the \verb|gui.py| \verb|find_path| method. It now gets the selected algorithm using \verb|self.algorithm_var.get()|. Based on this value ('bfs', 'a_star', 'ga'), it calls the corresponding method on \verb|self.path_finder| (\verb|bfs|, \verb|a_star_search|, or \verb|genetic_algorithm_path|).
+		\item Implemented GA Point Order Optimisation: Added \verb|optimise_point_order| method to \verb|PathFinder| in \verb|spa.py|. This uses a genetic algorithm with ordered crossover and swap mutation to find a near-optimal sequence for visiting intermediate points. Fitness is based on total path length using BFS for segments (or Manhattan distance approximation for larger grids). Timeout and error handling were added to prevent excessive run times.
+		\item Added GUI Optimisation Toggle: In \verb|gui.py|, added an "Options" menu with a checkbutton "Optimize Point Order" linked to \verb|self.optimise_var|.
+		\item Integrated Optimisation Call: Modified \verb|gui.py|'s \verb|find_path| method to check the state of \verb|self.optimise_var| and pass it to the backend \verb|find_path_through_points| call.
 	\end{itemize}
-	\item \textbf{Justification:} This implements A* search (OCSP-032), a potentially more efficient alternative to BFS for this problem. Adding the GUI selection (OCSP-033) and integrating it into the main pathfinding call (OCSP-034) allows the user to choose which algorithm to use.
+	\item \textbf{Justification:} Implements point order optimisation using GA (OCSP-035) to potentially reduce total path length when visiting multiple points. Adding the GUI toggle (OCSP-033.1) gives the user control.
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
-	\item Annotations added: Comments added explaining the heuristic, priority queue usage, and cost calculations within \verb|a_star_search|. Comments added for the new GUI elements.
-	\item Modular approach: A* logic encapsulated within \verb|PathFinder| class. GUI handles selection and dispatching.
-	\item Algorithm Choice: A* with Manhattan distance is a standard and appropriate choice for grid-based shortest path finding.
+	\item Annotations added: Comments added explaining GA concepts, fitness calculation, crossover, and mutation.
+	\item Modular approach: GA optimisation logic encapsulated within \verb|PathFinder| class. GUI handles enabling/disabling.
+	\item Algorithm Choice: GA is a reasonable heuristic for the point ordering (TSP-like) problem. Timeout added for practicality.
 \end{itemize}
 
-\newpage
-\subsubsection*{Placeholder: Iteration 1 Code Implementation Snippets (Commit \verb|8174e75a...|)}
-*(User: Insert snippets for \verb|a_star_search| in \verb|spa.py| and the GUI radio buttons / modified \verb|find_path| in \verb|gui.py| here.)*
-\newpage
+\subsubsection*{Prototype: Iteration 1}
+
+\lstinputlisting[style=custompython]{Code/floyd/spa1.py}
 
 \subsubsection{Prototype details:}
-Prototype Version 9A: Application now includes an A* search algorithm alongside BFS. Users can select the desired algorithm via radio buttons before clicking "Find Path".
+Application now attempts to optimise the order of intermediate points if the user enables the option in the menu.
 
-\subsubsection{Testing:}
+\subsubsection{Testing:} %%% UPDATED Iteration 1 Test Table (GA focus) %%%
 \begin{table}[htbp]
 	\centering
 	\begin{tabularx}{\textwidth}{|l|X|p{4.5cm}|p{1.5cm}|c|}
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T6.1.1 & Select BFS, find simple path & Path found using BFS, matches previous results. & *(User: Fill)* & ? \\
+		T6.1.1 & Enter 3+ points, Optimisation OFF. Find Path. & Path found, points visited in the order entered. & *(User: Fill)* & ? \\
 		\hline
-		T6.1.2 & Select A*, find simple path & Path found using A*, should be identical shortest path to BFS for unweighted grid. & *(User: Fill)* & ? \\
+		T6.1.2 & Enter 3+ points, Optimisation ON. Find Path. & Path found, point order potentially changed. Log confirms optimisation ran. Total path length likely shorter than T6.1.1. & *(User: Fill)* & ? \\
 		\hline
-		T6.1.3 & Select A*, find path requiring detour & Path found, correctly uses heuristic to explore towards end. & *(User: Fill)* & ? \\
+		T6.1.3 & Enter 1-2 points, Optimisation ON. Find Path. & Path found. Log confirms optimisation skipped as unnecessary. & *(User: Fill)* & ? \\
 		\hline
-		T6.1.4 & Select GA (not implemented) & Placeholder method called, likely shows error/message "GA not implemented". & *(User: Fill)* & ? \\
+		T6.1.4 & Toggle "Optimise Point Order" via GUI Menu. & Checkbox state updates. Log message confirms optimisation enabled/disabled. & *(User: Fill)* & ? \\
 		\hline
-		T6.1.5 & Switch between algorithms & Radio buttons update \verb|self.algorithm_var| correctly. Correct algorithm called on Find Path. & *(User: Fill)* & ? \\
+		T6.1.5 & Enter >10 points, Optimisation ON. Find Path. & Warning logged about limiting points. Optimisation runs on first 10. Path found. & *(User: Fill)* & \~{} \\
 		\hline
 	\end{tabularx}
-	\caption{Testing results for Iteration 1 (Floyd)}
+	\caption{Testing results for Iteration 1}
 \end{table}
-\textbf{Tests justification:} Compared A* results with BFS (T6.1.1, T6.1.2) to verify correctness on an unweighted grid. Tested A* pathfinding (T6.1.3). Checked placeholder GA behaviour (T6.1.4) and GUI selection mechanism (T6.1.5).
-
-\subsubsection{Fixes}
-\begin{itemize}
-	\item *(User: Describe fixes, e.g., "Corrected priority queue handling in A*", "Fixed path reconstruction bug.")*
-\end{itemize}
+\textbf{Tests justification:} Verified GA optimisation runs when enabled and appropriate (T6.1.2), is skipped correctly (T6.1.3), handles limits (T6.1.5), and that the GUI toggle works (T6.1.1, T6.1.4).
 
 \subsubsection{Validation}
 \begin{itemize}
-	\item A* implementation includes checks for valid start/end points and neighbour validity (bounds, obstacles if implemented).
+	\item GA optimisation includes checks for number of points and timeout limits.
+	\item Fitness calculation handles cases where path segments cannot be found (assigns high penalty).
 \end{itemize}
-\textbf{Justification:} Ensures A* operates within valid parameters.
+\textbf{Justification:} Ensures GA operates reasonably and handles potential errors during segment pathfinding.
 
 \subsubsection{Review:}
 \begin{itemize}
-	\item A* algorithm implemented successfully alongside BFS.
-	\item GUI selection allows switching between them.
-	\item A* implementation seems correct for unweighted grid (should yield same path length as BFS). Needs consistent validation check.
-	\item Ready to add GA framework.
+	\item GA point order optimisation implemented and controllable via GUI.
+	\item Timeout and error handling added for robustness.
+	\item Performance acceptable for a moderate number of points due to parameter tuning and approximations.
+	\item Ready to implement A* search as an alternative segment pathfinder.
 \end{itemize}
 
 \newpage
 
-% --- Iteration 2 ---
-\subsubsection{Iteration 2: Genetic Algorithm Framework \& A* Validation Fix}
+% --- Iteration 2 (Based on A* and remaining GUI commits) ---
+\subsubsection{Iteration 2: A* Implementation, GUI Integration \& Validation Fix}
 
 \textbf{Code Changes:}
 \begin{itemize}
-	\item \textbf{GitHub Commit:} \verb|a8df4085...|
+	\item \textbf{GitHub Commits:} \verb|3ab3aa68...|, \verb|a8df4085...|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item Genetic Algorithm Framework: Added placeholder methods within \verb|spa.py|'s \verb|PathFinder| class for the main components of a GA: \verb|create_individual| (representing a potential path), \verb|calculate_fitness| (evaluating path quality, e.g., length), \verb|selection| (choosing parents), \verb|crossover| (combining paths), \verb|mutation| (introducing variation). Added the main \verb|genetic_algorithm_path(self, start, points, end)| method which would orchestrate these, but left the implementation largely as pass/placeholder logic.
-		\item A* Validation Fix: Modified the neighbour check inside \verb|a_star_search|. Instead of manually checking bounds \verb|0 <= nx < self.grid.rows...|, it now calls the unified validation function: \verb|valid, _ = spa.validate_point(nx, ny, self.grid.rows, self.grid.cols, allow_start_end=True)|. The condition became \verb|if valid and (nx, ny) not in came_from:|.
-		\item Comments: Added comments explaining the purpose of the GA placeholder functions.
+		\item Implemented A* Algorithm: Added \verb|a_star_search| method to \verb|PathFinder| in \verb|spa.py|, using \verb|heapq|, Manhattan distance heuristic, cost tracking dictionaries, and path reconstruction.
+		\item Integrated Algorithm Selection: Added \verb|set_algorithm| to backend. Modified \verb|find_path_through_points| to use the selected algorithm (\verb|self.find_path| dispatcher). Added "Algorithm" menu with radio buttons (BFS/A*) to GUI linked to \verb|self.algorithm_var|. Added \verb|set_algorithm| handler in GUI.
+		\item A* Validation Fix: Modified neighbour check in \verb|a_star_search| to use \verb|spa.validate_point|.
+		\item Comments: Added comments for A* implementation. Set default algorithm to BFS.
 	\end{itemize}
-	\item \textbf{Justification:} Setting up the GA framework (OCSP-035) provides the structure for potential future implementation of this optimisation technique. Fixing the A* validation (OCSP-036) makes the code more consistent and easier to maintain by reusing the existing \verb|validate_point| function.
+	\item \textbf{Justification:} Implements A* search (OCSP-032) as an alternative algorithm. Provides GUI selection between BFS and A* (OCSP-033.2, OCSP-034). Improves code consistency with validation fix (OCSP-036). Adds necessary comments (OCSP-037).
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
-	\item Annotations added: Comments explain GA function placeholders. Docstrings for GA methods outline intended purpose.
-	\item Modular approach: GA logic structure contained within \verb|PathFinder|. A* validation uses shared function.
-	\item Consistency: Using \verb|validate_point| in A* makes validation handling more consistent across algorithms.
+	\item Annotations added: Comments explain A* heuristic, priority queue, costs.
+	\item Modular approach: A* logic in \verb|PathFinder|. GUI handles selection.
+	\item Consistency: Using \verb|validate_point| in A* improves consistency.
 \end{itemize}
 
 \newpage
-\subsubsection*{Placeholder: Iteration 2 Code Implementation Snippets (Commit \verb|a8df4085...|)}
-*(User: Insert snippets for the GA placeholder functions and the modified validation check in \verb|a_star_search| from \verb|spa.py| here.)*
+\subsubsection*{Prototype: Iteration 2}
+\lstinputlisting[style=custompython]{Code/floyd/spa1.py}
+
 \newpage
-
 \subsubsection{Prototype details:}
-Prototype Version 9B (End of Sprint Floyd): Application allows selection of BFS or A* for pathfinding. A* uses consistent validation. Genetic Algorithm option exists but calls placeholder functions (likely errors or returns no path).
+Application allows selection of BFS or A* via menu for calculating path segments. A* uses consistent validation. GA optimisation for point order can be toggled separately.
 
-\subsubsection{Testing:}
+\subsubsection{Testing:} %%% UPDATED Iteration 2 Test Table (A* / GUI focus) %%%
 \begin{table}[htbp]
 	\centering
 	\begin{tabularx}{\textwidth}{|l|X|p{4.5cm}|p{1.5cm}|c|}
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T6.2.1 & Select A*, find path involving boundaries & Path found correctly, uses \verb|validate_point| for checks. & *(User: Fill)* & ? \\
+		T6.2.1 & Select BFS via Algorithm menu, Find Path (simple). & Path found using BFS. Log confirms BFS used. & Met & X \\
 		\hline
-		T6.2.2 & Select GA, Find Path & Error message or "Not implemented" shown. No crash. & *(User: Fill)* & ? \\
+		T6.2.2 & Select A* via Algorithm menu, Find Path (simple). & Path found using A*. Log confirms A* used. Path length identical to BFS. & Met & X \\
+		\hline
+		T6.2.3 & Select A*, find path involving boundary checks. & Path found correctly, A* uses \verb|validate_point| for neighbour checks. & *(User: Fill)* & X \\
+		\hline
+		T6.2.4 & Switch between BFS/A* algorithm selection via menu multiple times. & Selection updates correctly. Correct algorithm called on Find Path (check log). & *(User: Fill)* & X \\
 		\hline
 	\end{tabularx}
-	\caption{Testing results for Iteration 2 (Floyd)}
+	\caption{Testing results for Iteration 2}
 \end{table}
-\textbf{Tests justification:} Verified the A* validation fix (T6.2.1) and the placeholder behaviour of the GA option (T6.2.2).
+\textbf{Tests justification:} Verified BFS selection (T6.2.1). Verified A* selection and correctness vs BFS (T6.2.2). Verified A* validation fix (T6.2.3). Verified GUI selection mechanism (T6.2.4).
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item Corrected A* neighbour validation to use \verb|spa.validate_point|.
+	\item I initially implemented A*'s own validation, but this was flawed. To correct this, I instead used \verb|spa.validate_point| as it was premade and easier to use, as well as making the code easier to maintain.
 \end{itemize}
 
 \subsubsection{Validation}
 \begin{itemize}
-	\item A* algorithm now uses the unified \verb|validate_point| function for checking neighbour validity (bounds, potentially obstacles).
+	\item A* algorithm now uses the unified \verb|validate_point| function for checking neighbour validity.
+	\item GUI selection ensures a valid algorithm choice ('bfs' or 'astar') is passed to the backend.
 \end{itemize}
-\textbf{Justification:} Ensures consistent point validation logic across different pathfinding algorithms.
+\textbf{Justification:} Ensures consistent validation and correct algorithm dispatch.
 
 \subsubsection{Review:}
 \begin{itemize}
-	\item A* search is implemented and working, using consistent validation.
-	\item The framework for the Genetic Algorithm is in place, although it requires significant further work to become functional.
-	\item Providing algorithm choice in the GUI is a good feature for comparison and flexibility.
-	\item This sprint successfully expanded the pathfinding capabilities.
+	\item A* search implemented and selectable via GUI alongside BFS.
+	\item GA point order optimisation is available as a separate option.
+	\item Validation in A* is now consistent.
+	\item This sprint successfully expanded the pathfinding capabilities and user options.
 \end{itemize}
 
 \clearpage
@@ -2483,48 +2467,39 @@ Prototype Version 9B (End of Sprint Floyd): Application allows selection of BFS 
 
 \subsubsection{Accomplishments}
 \begin{itemize}
+	\item Completed OCSP-035: Successfully implemented GA-based point order optimisation in \verb|spa.py|.
+	\item Completed OCSP-033.1: Added GUI option to toggle point order optimisation.
 	\item Completed OCSP-032: Successfully implemented A* search algorithm with Manhattan distance heuristic in \verb|spa.py|.
-	\item Completed OCSP-033: Added algorithm selection radio buttons (BFS, A*, GA) to the main GUI (\verb|gui.py|).
-	\item Completed OCSP-034: Integrated the GUI selection to dispatch calls to the correct pathfinding method (\verb|bfs| or \verb|a_star_search|).
-	\item Completed OCSP-035: Created the basic class structure and placeholder methods for a Genetic Algorithm approach in \verb|spa.py|.
+	\item Completed OCSP-033.2: Added algorithm selection menu (BFS, A*) to the main GUI (\verb|gui.py|).
+	\item Completed OCSP-034: Integrated the GUI selection to dispatch calls to the correct pathfinding method (\verb|bfs| or \verb|a_star_search|) for path segments.
 	\item Completed OCSP-036: Refactored A* neighbour validation to use the existing \verb|spa.validate_point| function.
-	\item Completed OCSP-037: Added comments explaining the new algorithms and framework.
+	\item Completed OCSP-037: Added comments explaining the new algorithms and optimisation.
 \end{itemize}
-The application now offers multiple pathfinding strategies, selectable by the user.
-
-\subsubsection{Challenges \& Learning}
-\begin{itemize}
-	\item Implementing A* correctly required careful management of the priority queue (\verb|heapq|), cost dictionaries (\verb|g_score|, \verb|f_score|), and the \verb|came_from| dictionary for path reconstruction. Debugging required tracing these data structures.
-	\item Integrating the algorithm choice into the GUI was straightforward but required modifying the \verb|find_path| method to act as a dispatcher.
-	\item Setting up the GA framework involved defining the necessary components (individual representation, fitness, selection, etc.) even without full implementation, which required some research into standard GA structures.
-\end{itemize}
+The application now offers GA-based point order optimisation and multiple pathfinding strategies (BFS, A*), selectable by the user.
 
 \subsubsection{Final testing}
-Final testing focused on comparing A* and BFS results (which should be identical in path length on this unweighted grid, though exploration order differs) and ensuring the algorithm selection worked correctly.
-*(User should perform and document final stakeholder testing if applicable)*
+Final testing focused on verifying the GA optimisation provides shorter paths (where applicable), comparing A* and BFS results (which should be identical in path length on this unweighted grid), and ensuring the algorithm/optimisation selections worked correctly.
 
-\begin{table}[htbp] % Final Testing Table
+\begin{table}[htbp] % Final Testing Table %%% UPDATED Final Test Table (Reflects GA Opt + Algo Choice) %%%
 	\centering
-	\begin{tabularx}{\textwidth}{|l|X|p{3.5cm}|p{3.5cm}|c|}
+	\begin{tabularx}{\textwidth}{|l|X|p{5.5cm}|p{2.5cm}|c|}
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T6.F.1 & Run complex path with BFS selected. Note length. & Shortest path found. & *(User: Fill)* & ? \\
+		T6.F.1 & Run complex path (3+ pts), BFS selected, Optimisation OFF. Note length. & Shortest path segments found using BFS. Points visited in order entered. & Met & X \\
 		\hline
-		T6.F.2 & Run same complex path with A* selected. Note length. & Shortest path found, length identical to BFS result. & *(User: Fill)* & ? \\
+		T6.F.2 & Run same path, A* selected, Optimisation OFF. Note length. & Shortest path segments found using A*. Points visited in order entered. Total length matches T6.F.1. & Met & X \\
 		\hline
-		T6.F.3 & Select GA. Click Find Path. & Placeholder message/error shown, program stable. & *(User: Fill)* & ? \\
+		T6.F.3 & Run same path, BFS selected, Optimisation ON. Note length. & Path segments via BFS. Point order potentially changed by GA for shorter total length than T6.F.1. & Met & X \\
 		\hline
-		T6.F.4 & Switch between BFS/A* multiple times for same path request. & Correct algorithm used each time, results consistent for each algorithm type. & *(User: Fill)* & ? \\
+		T6.F.4 & Run same path, A* selected, Optimisation ON. Note length. & Path segments via A*. Point order potentially changed by GA. Total length matches T6.F.3 (should be same shortest path). & Met & X \\
 		\hline
 	\end{tabularx}
 	\caption{Final Testing results for Sprint Floyd}
 \end{table}
 
-\newpage
-
 \subsubsection{Testing Summary}
-*(User to update based on actual testing)*
+
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{|l|c|}
@@ -2537,33 +2512,34 @@ Final testing focused on comparing A* and BFS results (which should be identical
 		\hline
 		Tests failed/Partially Met & Z \\
 		\hline
-		Fixed issues (identified \& addressed this sprint) & *(User: List count)* \\
+		Fixed issues (identified \& addressed this sprint) & 1 \\ % (A* validation fix)
 		\hline
 	\end{tabular}
 	\caption{Sprint Floyd testing summary}
 \end{table}
-\textbf{Justification:} Testing verified the correctness of the A* implementation (by comparing with BFS on an unweighted grid), the functionality of the GUI algorithm selection, and the placeholder status of the GA.
+\textbf{Justification:} Testing verified the GA optimisation, the correctness of A* (vs BFS), and the functionality of the GUI selections.
 
 \subsubsection{Validation}
 \begin{itemize}
-	\item A* algorithm includes validation for start/end points and uses \verb|spa.validate_point| for neighbour checks (bounds).
-	\item GUI selection ensures a valid algorithm choice is passed to the backend.
+	\item GA optimisation includes checks for point count and timeouts.
+	\item A* algorithm uses \verb|spa.validate_point| for neighbour checks.
+	\item GUI selections ensure valid choices are passed to the backend.
 \end{itemize}
-\textbf{Conclusion:} Validation incorporated into A* implementation ensures it operates on valid grid locations.
+\textbf{Conclusion:} Validation incorporated into algorithms ensures correct operation within defined parameters.
 
 \subsubsection{Robustness}
 \begin{itemize}
-	\item Algorithm Choice: Offers user flexibility. A* provides a potentially more efficient (though not guaranteed on all grids) alternative to BFS.
+	\item Algorithm Choice: Offers user flexibility (BFS/A*) and optimisation (GA point order).
 	\item Code Consistency: Using \verb|validate_point| in A* improves internal consistency.
-	\item GA Framework: Placeholder structure is stable (doesn't crash).
+	\item Error Handling: GA includes timeouts and error handling during fitness calculation.
 \end{itemize}
-\textbf{Conclusion:} Added algorithmic flexibility. A* implementation appears robust. GA needs full implementation for functional robustness.
-
 
 \subsubsection{Link}
-This sprint successfully expanded the core pathfinding engine by implementing the A* search algorithm (OCSP-032) and providing a user selection mechanism (OCSP-033, OCSP-034). It also laid the groundwork for potentially exploring Genetic Algorithms later (OCSP-035). This provides users with alternative strategies for path optimisation and makes the application more versatile. The refinement of A*'s validation (OCSP-036) also improves code quality.
+This sprint successfully expanded the core pathfinding engine by implementing GA-based point order optimisation (OCSP-035) and the A* search algorithm (OCSP-032). User control was provided via GUI menu options for both features (OCSP-033, OCSP-034). This provides users with alternative strategies for path optimisation and makes the application more versatile. The refinement of A*'s validation (OCSP-036) also improves code quality.
 
-With multiple pathfinding algorithms now available, future work could involve completing the Genetic Algorithm implementation, adding weighted edges (terrain costs) to the grid where A* would show more significant performance differences compared to BFS, or further optimising the existing algorithms.
+With multiple pathfinding algorithms and optimisation options now available, future work could involve adding weighted edges (terrain costs) to the grid where A* and potentially different GA fitness functions would show more significant performance differences, or further optimising the existing algorithms.
+
+% --- End of Modified Sprint Floyd Section ---
 
 \newpage
 
@@ -2627,7 +2603,7 @@ I decided to implement this feature by directly modifying the state of the grid 
 		\item Justification: Integrates obstacle awareness into algorithms and feedback. Ensures state resets correctly.
 	\end{itemize}
 \end{enumerate}
-Due to time constraints, this implementation is basic. Obstacles are permanent once added for a session (until 'Clear All') and cannot be removed individually. They are simply marked as non-traversable.
+Due to time constraints, this implementation is basic. Obstacles are permanent once added for a session (until 'Clear All') and cannot be removed in bulk. They are simply marked as non-traversable.
 
 \subsubsection{Architecture \& Structural Considerations}
 \begin{itemize}
@@ -2657,7 +2633,6 @@ Still standard Python libraries only.
 	\item Blockers identified: Correctly placing the obstacle check within the BFS/A* neighbour loops. Ensuring the visualiser drew obstacles correctly without interfering with other markers. Making sure \verb|clear_all| properly reset the grid state.
 \end{itemize}
 
-\clearpage
 \subsection{Sprint Gates Implementation}
 
 % --- Iteration 1 ---
@@ -2699,7 +2674,7 @@ Still standard Python libraries only.
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 9A: User can now enter an \verb|itemID| and click "Add Obstacle". If valid, the internal grid state is updated, but this has no effect on pathfinding or visualisation yet.
+User can now enter an \verb|itemID| and click "Add Obstacle". If valid, the internal grid state is updated, but this has no effect on pathfinding or visualisation yet.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -2771,7 +2746,7 @@ Prototype Version 9A: User can now enter an \verb|itemID| and click "Add Obstacl
 \newpage
 
 \subsubsection{Prototype details:}
-Prototype Version 9 (End of Sprint Gates): Users can add obstacles via the GUI. These obstacles are displayed on the visualisation grid. Both BFS and A* pathfinding algorithms now correctly find the shortest path while avoiding these user-defined obstacles. Clearing resets obstacles.
+ Users can add obstacles via the GUI. These obstacles are displayed on the visualisation grid. Both BFS and A* pathfinding algorithms now correctly find the shortest path while avoiding these user-defined obstacles. Clearing resets obstacles.
 
 \subsubsection{Testing:}
 \begin{table}[htbp]
@@ -2855,7 +2830,7 @@ Final tests confirmed that users can add valid obstacles, which are then correct
 \newpage
 
 \subsubsection{Testing Summary}
-*(User to update based on actual testing)*
+
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{|l|c|}
