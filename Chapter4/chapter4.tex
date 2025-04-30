@@ -2543,9 +2543,11 @@ With multiple pathfinding algorithms and optimisation options now available, fut
 
 \newpage
 
+% --- Start of Sprint Gates Section ---
+
 \section{Sprint Gates}
 
-This sprint, Sprint Gates, represents the final phase of development for my A-Level project before evaluation and testing. Having implemented pathfinding algorithms (BFS, A*), database integration for stock control, and a refined graphical user interface with a dedicated visualisation window in previous sprints, the key remaining feature identified in my analysis was obstacle handling. Real-world environments are rarely clear grids, so adding the ability for the application to account for obstacles was crucial for increasing the simulation's realism and practical utility. Due to time constraints approaching the project deadline, the implementation focuses on allowing the user to define obstacle locations and ensuring the pathfinding algorithm correctly navigates around them; more advanced features like different obstacle types or costs were not feasible.
+This sprint, Sprint Gates, represents the final phase of development for my A-Level project before evaluation and testing. Having implemented pathfinding algorithms (BFS, A*), database integration for stock control, and a refined graphical user interface with a dedicated visualisation window in previous sprints, the key remaining feature identified in my analysis was obstacle handling. Real-world environments are rarely clear grids, so adding the ability for the application to account for obstacles was crucial for increasing the simulation's realism and practical utility. This sprint focused on implementing the underlying obstacle tracking, modifying the pathfinding algorithms to avoid them, adding GUI controls to manage obstacles, and updating the visualisation.
 
 \subsection{Tasks}
 
@@ -2556,232 +2558,220 @@ The tasks undertaken in this final sprint were:
 		\hline
 		\textbf{Task ID} & \textbf{Task Description} \\
 		\hline
-		OCSP-032 & Define Obstacle Representation \& Add GUI Input Elements: Define \verb|OBSTACLE_MARKER = 1| in \verb|spa.py|. Add \verb|obstacle_entry| (\verb|ttk.Entry|) and \verb|add_obstacle_button| (\verb|ttk.Button|) to main GUI (\verb|gui.py|). \\
+		OCSP-038 & Add Obstacle Tracking to Grid Class: Modify \verb|spa.Grid| to include an \verb|obstacles| set and methods (\verb|add_obstacle|, \verb|remove_obstacle|, \verb|is_obstacle|). (Was part of OCSP-032/033 in original plan) \\
 		\hline
-		OCSP-033 & Implement Obstacle Addition Logic \& Validation: Create \verb|add_obstacle| method in \verb|gui.py|. Implement logic to parse \verb|itemID|, validate (range, format, not start/end/point), convert to \verb|(row, col)|, and update \verb|self.grid.grid[x][y] = spa.OBSTACLE_MARKER|. Add user feedback. Include missing \verb|messagebox| import. \\
+		OCSP-039 & Update Validation to Check Obstacles: Modify \verb|spa.validate_point| to accept and check against the \verb|obstacles| set. (Was part of OCSP-036 in original plan) \\
 		\hline
-		OCSP-034 & Modify Pathfinding Algorithm for Obstacle Avoidance: Update \verb|PathFinder.bfs| and \verb|PathFinder.a_star_search| methods in \verb|spa.py| to check \verb|self.grid.grid[nx][ny] != spa.OBSTACLE_MARKER| before considering a neighbour node. \\
+		OCSP-034 & Modify Pathfinding Algorithm for Obstacle Avoidance: Update \verb|PathFinder.bfs| and \verb|PathFinder.a_star_search| methods in \verb|spa.py| to use \verb|self.grid.is_obstacle(nx, ny)| check before considering a neighbour node. \\
 		\hline
-		OCSP-035 & Update Visualisation to Display Obstacles: Modify \verb|GridVisualizer.visualize_path| (and potentially \verb|draw_cell|) in \verb|gui.py| to check the grid state and draw obstacles using a distinct marker (e.g., '[X]' or specific colour). \\
+		OCSP-032 & Add GUI Input Elements for Obstacles: Add \verb|obstacle_button| (\verb|ttk.Button|) to main GUI (\verb|gui.py|) triggering obstacle mode. \\
 		\hline
-		OCSP-036 & Ensure State Management (Clear All) \& Add Comments: Modify \verb|gui.py|'s \verb|clear_all| method to reset obstacle markers on the \verb|self.grid.grid|. Add comments explaining the obstacle implementation. \\
+		OCSP-033 & Implement Obstacle Toggling Logic \& Validation: Create \verb|toggle_obstacle_mode| method in \verb|gui.py|. Implement pop-up, input parsing, validation (range, format, not start/end), calling \verb|self.grid.add/remove_obstacle|. Add user feedback via \verb|messagebox| and \verb|output_text|. Update \verb|find_path| point validation to check obstacles. \\
+		\hline
+		OCSP-035 & Update Visualisation to Display Obstacles: Modify \verb|GridVisualizer| in \verb|gui.py| to store, draw (\verb|draw_cell|), clear, and update obstacles based on the \verb|self.grid.obstacles| set, using a distinct marker/colour. \\
+		\hline
+		OCSP-036 & Ensure State Management (Clear All) \& Add Comments: Modify \verb|gui.py|'s \verb|clear_all| method to reset obstacles (likely via grid re-initialisation). Ensure \verb|show_grid| updates visualiser obstacles. Add comments explaining the obstacle implementation. \\
 		\hline
 	\end{tabularx}
-	\caption{Tasks for Sprint Gates}
+	\caption{Tasks for Sprint Gates (Revised Order)}
 \end{table}
 
 \subsection{Purpose}
-The main purpose of this sprint was to add obstacle avoidance capabilities to the pathfinding system. This involved allowing users to specify locations that cannot be traversed, modifying the chosen pathfinding algorithm (BFS or A*) to respect these obstacles, and updating the visualisation to clearly show their locations. This feature adds a significant layer of realism required for practical warehouse path planning simulations.
+The main purpose of this sprint was to add obstacle avoidance capabilities to the pathfinding system. This involved adding obstacle tracking to the backend grid structure, modifying the pathfinding algorithms (BFS and A*) to respect these obstacles, allowing users to toggle obstacle status via the GUI, and updating the visualisation to clearly show their locations. This feature adds a significant layer of realism required for practical warehouse path planning simulations.
 
 \clearpage
 \subsection{Sprint Planning Details}
 
 \subsubsection{Technical Approach}
-I decided to implement this feature by directly modifying the state of the grid array used by the pathfinding algorithms.
+I implemented this feature by first adding obstacle tracking and avoidance to the backend (`spa.py`) and then integrating the user interaction and visualisation in the frontend (`gui.py`).
 
 \begin{enumerate}
-	\item \textbf{Obstacle Representation and GUI Input (Iteration 1):}
-	\begin{itemize}
-		\item Define a constant \verb|OBSTACLE_MARKER = 1| in \verb|spa.py|. Grid cells with value 0 are traversable, value 1 are obstacles.
-		\item Add a \verb|ttk.Entry| (\verb|self.obstacle_entry|) and \verb|ttk.Button| ("Add Obstacle") to the \verb|PathfinderGUI| layout in \verb|gui.py|. (OCSP-032)
-		\item Implement the \verb|add_obstacle(self)| method. This method:
-		\begin{itemize}
-			\item Reads the \verb|itemID| from \verb|self.obstacle_entry|.
-			\item Validates the input: checks it's an integer within the valid range (\verb|1| to \verb|rows*cols|).
-			\item Converts the \verb|itemID| to \verb|(row, col)| coordinates using \verb|spa.index_to_coordinates|.
-			\item Performs further validation: checks the location is not the start (\verb|(0, 0)|) or end (\verb|self.grid.rows-1, ...|) node, and also checks it's not currently in the user's intermediate points list (\verb|self.points|). Uses \verb|messagebox.showerror| for feedback (commit \verb|a8b3b6d...| added missing import).
-			\item If all validation passes, update the grid state directly: \verb|self.grid.grid[x][y] = spa.OBSTACLE_MARKER|.
-			\item Provide confirmation/error message in \verb|self.output_text|.
-		\end{itemize}
-		\item Justification: Marking the grid directly is simple. GUI elements provide necessary user interaction. Validation prevents nonsensical obstacle placements. (OCSP-033)
-	\end{itemize}
-	\item \textbf{Backend Integration (Pathfinding \& Visualisation) (Iteration 2):}
-	\begin{itemize}
-		\item Modify Pathfinding: Update both \verb|PathFinder.bfs| and \verb|PathFinder.a_star_search| in \verb|spa.py|. In the neighbour exploration loop, add the condition \verb|if self.grid.grid[nx][ny] != spa.OBSTACLE_MARKER:| before considering the neighbour \verb|(nx, ny)|. (OCSP-034)
-		\item Update Visualisation: Modify \verb|GridVisualizer.visualize_path| (or its helper \verb|draw_cell|) in \verb|gui.py|. Before drawing path/points, check \verb|self.grid.grid[row][col]|. If it equals \verb|spa.OBSTACLE_MARKER|, draw a distinct obstacle marker (e.g., '[X]' text or a black filled cell). Ensure obstacle drawing takes precedence over path markers but not necessarily start/end/point markers. (OCSP-035)
-		\item Update Clear Logic: Modify \verb|PathfinderGUI.clear_all|. In addition to clearing \verb|self.points| and the visualiser, it needs to reset the grid state, likely by re-initialising the \verb|self.grid| object: \verb|self.grid = spa.Grid(self.grid.rows, self.grid.cols)|. Add comments explaining the obstacle logic. (OCSP-036)
-		\item Justification: Integrates obstacle awareness into algorithms and feedback. Ensures state resets correctly.
-	\end{itemize}
+    \item \textbf{Backend Obstacle Handling (Iteration 1):}
+    \begin{itemize}
+        \item Grid Modification: Added an \verb|obstacles| set attribute to the \verb|spa.Grid| class. Implemented methods \verb|add_obstacle|, \verb|remove_obstacle|, and \verb|is_obstacle| to manage this set (Commit \verb|c0ab70d...|). (OCSP-038)
+        \item Validation Update: Modified the \verb|spa.validate_point| function to accept an optional \verb|obstacles| set parameter and return \verb|False| if the point \verb|(x, y)| is in the set (Commit \verb|018aaac...|). (OCSP-039)
+        \item Pathfinding Update: Modified \verb|PathFinder.bfs| and \verb|a_star_search| in \verb|spa.py|. Within the neighbour exploration loop, added a check using \verb|self.grid.is_obstacle(nx, ny)| to ensure obstacle cells are not considered valid neighbours for path extension (Commit \verb|d5a6179...|). (OCSP-034)
+        \item Justification: Establishes the core data structure and modifies the algorithms to recognize non-traversable cells before implementing user interaction.
+    \end{itemize}
+    \item \textbf{GUI Integration and Visualisation (Iteration 2):}
+    \begin{itemize}
+        \item GUI Button: Added an "Obstacle mode" button to \verb|PathfinderGUI.__init__| in \verb|gui.py| and linked its command to \verb|self.toggle_obstacle_mode| (Commit \verb|d34c9b4...|). (OCSP-032)
+        \item Obstacle Toggling Logic: Implemented the \verb|toggle_obstacle_mode(self)| method in \verb|PathfinderGUI|. This uses a pop-up window with an entry field for the \verb|itemID|. It validates the input (range, format, not start/end), converts to coordinates, and calls \verb|self.grid.add_obstacle| or \verb|self.grid.remove_obstacle|. It provides user feedback via \verb|messagebox| and the main \verb|output_text|. The \verb|find_path| method was also updated to check if an input point is an obstacle (Commits \verb|d34c9b4...|, \verb|78c5662...|, \verb|a8b3b6d...|). (OCSP-033)
+        \item Visualisation Update: Modified the \verb|GridVisualizer| class in \verb|gui.py|. Added an \verb|obstacles| attribute. Created an \verb|update_obstacles| method to receive the obstacle set from the main GUI and trigger a redraw. Updated \verb|draw_cell| to check for obstacles and draw them (e.g., black with white text). Updated \verb|visualize_path| and \verb|clear_visualization| to correctly handle drawing obstacles and their layering relative to other elements (Commit \verb|78c5662...|). (OCSP-035)
+        \item State Management & Comments: Ensured \verb|show_grid| calls \verb|update_obstacles| when showing the visualiser. Resetting obstacles in \verb|clear_all| was likely handled by grid re-initialisation (though not explicit in commits, assumed part of the logic). Added comments. (OCSP-036, OCSP-037)
+        \item Justification: Provides the user interface for managing obstacles, integrates this with the backend grid state, ensures the visualisation reflects obstacles, and handles state correctly.
+    \end{itemize}
 \end{enumerate}
-Due to time constraints, this implementation is basic. Obstacles are permanent once added for a session (until 'Clear All') and cannot be removed in bulk. They are simply marked as non-traversable.
 
 \subsubsection{Architecture \& Structural Considerations}
 \begin{itemize}
-	\item Obstacle state stored directly within the \verb|spa.Grid| object's \verb|grid| attribute.
-	\item \verb|gui.py| modifies this state via the \verb|add_obstacle| method.
-	\item \verb|spa.py| pathfinding methods read this state to determine traversability.
-	\item \verb|gui.py|'s \verb|GridVisualizer| reads this state for drawing.
+	\item Obstacle state stored within the \verb|spa.Grid| object's \verb|obstacles| set attribute.
+	\item \verb|gui.py| (\verb|toggle_obstacle_mode|) modifies this state via the grid object's methods.
+	\item \verb|spa.py| pathfinding methods and validation function read this state using \verb|is_obstacle| or by receiving the set.
+	\item \verb|gui.py|'s \verb|GridVisualizer| receives the obstacle set and uses it for drawing.
 \end{itemize}
-Justification: Directly modifying the grid state simplifies data passing for this basic implementation.
-
-\subsubsection{Dependencies}
-Still standard Python libraries only.
+Justification: Centralising obstacle state in the Grid object and providing methods to interact with it maintains encapsulation. GUI and Pathfinding components interact with the Grid object.
 
 \newpage
 \subsection{Development Summary}
 
-\subsubsection{Iteration 1: Obstacle Representation \& GUI Input}
+\subsubsection{Iteration 1: Backend Obstacle Handling}
 \begin{itemize}
-	\item Progress made: Defined \verb|OBSTACLE_MARKER| in \verb|spa.py|. Added obstacle entry field and button to \verb|gui.py|. Implemented \verb|add_obstacle| method including validation (range, format, not start/end/point) and updating \verb|self.grid.grid| state. Added missing \verb|messagebox| import. *(Achieved OCSP-032, OCSP-033 via commits \verb|c0ab70d...|, \verb|a8b3b6d...|)*
-	\item Blockers identified: Ensuring all validation cases (start/end, intermediate points) were correctly checked in \verb|add_obstacle|.
-	\item Plan for next iteration: Modify pathfinding algorithms and visualisation to use the obstacle data.
+	\item Progress made: Modified \verb|spa.Grid| to track obstacles. Updated \verb|spa.validate_point| to check obstacles. Modified \verb|bfs| and \verb|a_star_search| in \verb|spa.PathFinder| to avoid obstacle cells during neighbour exploration. *(Achieved OCSP-038, OCSP-039, OCSP-034 via commits \verb|c0ab70d...|, \verb|018aaac...|, \verb|d5a6179...|)*
+	\item Blockers identified: Ensuring the obstacle check was added correctly in both BFS and A* loops without impacting performance significantly. Making sure \verb|validate_point| handled the optional obstacle set correctly.
+	\item Plan for next iteration: Implement GUI elements and logic for user interaction with obstacles, update the visualisation.
 \end{itemize}
 
-\subsubsection{Iteration 2: Backend Integration (Pathfinding \& Visualisation)}
+\subsubsection{Iteration 2: GUI Integration \& Visualisation}
 \begin{itemize}
-	\item Progress made: Modified \verb|bfs| and \verb|a_star_search| in \verb|spa.py| to check for \verb|OBSTACLE_MARKER|. Updated \verb|GridVisualizer.visualize_path| to draw obstacles ('[X]'). Modified \verb|clear_all| to reset the grid/obstacles. Added comments. *(Achieved OCSP-034, OCSP-035, OCSP-036 via commit \verb|9a4c06e...|)*
-	\item Blockers identified: Correctly placing the obstacle check within the BFS/A* neighbour loops. Ensuring the visualiser drew obstacles correctly without interfering with other markers. Making sure \verb|clear_all| properly reset the grid state.
+	\item Progress made: Added "Obstacle mode" button and \verb|toggle_obstacle_mode| pop-up logic with validation in \verb|gui.py|. Updated \verb|GridVisualizer| to store, receive, and display obstacles distinctly. Ensured obstacles were considered during point validation in \verb|find_path|. Added missing import. *(Achieved OCSP-032, OCSP-033, OCSP-035, OCSP-036, OCSP-037 via commits \verb|d34c9b4...|, \verb|78c5662...|, \verb|a8b3b6d...|)*
+	\item Blockers identified: Correctly handling the pop-up logic and validation. Ensuring the visualiser updated correctly when obstacles were toggled and handled layering appropriately. Fixing missing import.
 \end{itemize}
 
 \subsection{Sprint Gates Implementation}
 
 % --- Iteration 1 ---
-\subsubsection{Iteration 1: Obstacle Representation \& GUI Input}
+\subsubsection{Iteration 1: Backend Obstacle Handling}
 
 \textbf{Code Changes:}
 \begin{itemize}
-	\item \textbf{GitHub Commits:} \verb|c0ab70d...|, \verb|a8b3b6d...|
+	\item \textbf{GitHub Commits:} \verb|c0ab70d...|, \verb|018aaac...|, \verb|d5a6179...|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item I started by defining how obstacles would be represented. I added a constant \verb|OBSTACLE_MARKER = 1| in \verb|spa.py|. My plan was to simply change the value in the \verb|self.grid.grid| list from 0 (traversable) to 1 (obstacle) for blocked cells.
-		\item In \verb|gui.py|, I added the necessary UI elements within \verb|PathfinderGUI.__init__|: a \verb|ttk.Entry| called \verb|self.obstacle_entry| and a \verb|ttk.Button| with the text "Add Obstacle".
-		\item I implemented the \verb|add_obstacle(self)| method, connected to the button. This method performs several steps:
-		\begin{enumerate}
-			\item Gets the text from \verb|self.obstacle_entry|.
-			\item Tries to convert it to an integer \verb|itemID|. Handles \verb|ValueError|.
-			\item Validates the \verb|itemID| is within the grid range (1 to \verb|rows*cols|).
-			\item Converts the valid \verb|itemID| to \verb|(row, col)| coordinates using \verb|spa.index_to_coordinates|.
-			\item Checks that the location isn't the start point \verb|(0, 0)| or the end point \verb|(self.grid.rows-1, self.grid.cols-1)|.
-			\item Checks that the location isn't already one of the user's selected intermediate points (by checking if \verb|(x, y)| is in \verb|self.points|).
-			\item If all checks pass, it modifies the grid state: \verb|self.grid.grid[x][y] = spa.OBSTACLE_MARKER|.
-			\item Provides feedback (success or specific error message) in \verb|self.output_text|. Uses \verb|messagebox.showerror| for certain errors (import added in \verb|a8b3b6d...|).
-			\item Clears the \verb|self.obstacle_entry|.
-		\end{enumerate}
+	    \item Grid Obstacle Tracking: Modified the \verb|spa.Grid| class by adding an \verb|obstacles| set attribute. Implemented methods \verb|add_obstacle(row, col)|, \verb|remove_obstacle(row, col)|, and \verb|is_obstacle(row, col)| to manage this set.
+	    \item Validation Update: Updated the \verb|spa.validate_point| function. It now accepts an optional \verb|obstacles| set. If provided, the function checks if the given \verb|(x, y)| coordinates are present in the set and returns \verb|False| if they are.
+		\item Pathfinding Algorithm Updates: Modified the neighbour exploration loop within both \verb|PathFinder.bfs| and \verb|PathFinder.a_star_search|. Before adding a neighbour \verb|(nx, ny)| to the queue/open set, an additional check \verb|not self.grid.is_obstacle(nx, ny)| was added.
 	\end{itemize}
-	\item \textbf{Justification:} Defines the obstacle representation (OCSP-032) and provides the necessary UI and validated logic for the user to place basic obstacles onto the grid (OCSP-033). Validation prevents placing obstacles in inaccessible locations like start/end points.
+	\item \textbf{Justification:} These changes establish the backend capability for representing obstacles (OCSP-038) and ensuring the core pathfinding algorithms (OCSP-034) and validation logic (OCSP-039) respect these non-traversable cells.
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
-	\item Annotations added: Added comments and a docstring for the \verb|add_obstacle| method explaining the validation steps.
-	\item Modular approach: Input handling and state modification logic encapsulated within \verb|add_obstacle|.
-	\item Robustness: Includes validation checks for format, range, start/end points, and intermediate points.
+	\item Annotations added: Docstrings added for new Grid methods. Comments added for obstacle checks in pathfinding loops.
+	\item Modular approach: Obstacle state encapsulated within the \verb|Grid| class. Pathfinding algorithms interact with the grid via the \verb|is_obstacle| method.
+	\item Consistency: Both BFS and A* were updated with the same obstacle check logic.
 \end{itemize}
 
-\newpage
-\subsubsection*{Placeholder: Iteration 1 Code Implementation Snippets (Commit \verb|c0ab70d...| & \verb|a8b3b6d...| state)}
-*(User: Insert snippets for the \verb|OBSTACLE_MARKER|, new GUI elements, and the \verb|add_obstacle| method here.)*
-\newpage
+\subsubsection*{Placeholder: Iteration 1 Code Implementation Snippets (Commit \verb|d5a6179...| state)}
+*(User: Insert snippets for the modified \verb|spa.Grid| class, the updated \verb|spa.validate_point|, and the modified neighbour checks in \verb|PathFinder.bfs| / \verb|a_star_search| here.)*
 
+\newpage
 \subsubsection{Prototype details:}
-User can now enter an \verb|itemID| and click "Add Obstacle". If valid, the internal grid state is updated, but this has no effect on pathfinding or visualisation yet.
+The backend grid representation now supports obstacles, and the pathfinding algorithms internally avoid them. There is no user interface yet to add or see obstacles.
 
-\subsubsection{Testing:}
+\subsubsection{Testing:} %%% Test Table for Iteration 1 (Backend focus) %%%
 \begin{table}[htbp]
 	\centering
 	\begin{tabularx}{\textwidth}{|l|X|p{4.5cm}|p{1.5cm}|c|}
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T7.1.1 & Enter valid \verb|itemID| (not start/end/point), click Add Obstacle & Confirmation message shown. Internal grid value updated (checked via debug/print). & *(User: Fill)* & ? \\
+		T7.1.1 & Manually set obstacle in grid state (debug). Run BFS/A*. & Path avoids the set obstacle cell. & *(User: Fill)* & ? \\
 		\hline
-		T7.1.2 & Enter invalid format ("abc"), click Add Obstacle & Error message shown in output/messagebox. & *(User: Fill)* & ? \\
+		T7.1.2 & Manually set obstacle completely blocking path. Run BFS/A*. & Algorithms return None (no path found). & *(User: Fill)* & ? \\
 		\hline
-		T7.1.3 & Enter start/end \verb|itemID|, click Add Obstacle & Error message shown (cannot add start/end). Grid not updated. & *(User: Fill)* & ? \\
+		T7.1.3 & Call \verb|validate_point| on an obstacle location. & Function returns False. & *(User: Fill)* & ? \\
 		\hline
-		T7.1.4 & Add intermediate point, enter same \verb|itemID| for obstacle. & Error message shown (cannot add on point). Grid not updated. & *(User: Fill)* & ? \\
+		T7.1.4 & Call \verb|validate_point| on a non-obstacle location. & Function returns True. & *(User: Fill)* & ? \\
 		\hline
 	\end{tabularx}
-	\caption{Testing results for Iteration 1 (Gates)}
+	\caption{Testing results for Iteration 1 (Gates - Backend)}
 \end{table}
-\textbf{Tests justification:} Verified the UI elements work and that the validation logic in \verb|add_obstacle| correctly handles valid and invalid inputs (T7.1.1-4), confirming OCSP-032 and OCSP-033.
+\textbf{Tests justification:} Verified that the pathfinding algorithms correctly avoid obstacles set in the grid state (T7.1.1, T7.1.2) and that the updated validation function works as expected (T7.1.3, T7.1.4), confirming OCSP-034, OCSP-038, OCSP-039.
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item Commit \verb|a8b3b6d...| added missing import for \verb|messagebox|.
-	\item *(User: Describe any other fixes made during this iteration)*
+	\item *(User: Describe any backend fixes made during this iteration, if any)*
 \end{itemize}
 
 \subsubsection{Validation}
 \begin{itemize}
-	\item \textbf{Obstacle Input Validation:} Implemented in \verb|gui.add_obstacle| (format, range, not start/end, not intermediate point).
+	\item Pathfinding algorithms incorporate \verb|is_obstacle| check.
+	\item \verb|validate_point| incorporates obstacle check.
 \end{itemize}
-\textbf{Justification:} Ensures only valid locations can be marked as obstacles.
+\textbf{Justification:} Ensures algorithms and validation respect the obstacle data structure.
 
 \subsubsection{Review:}
 \begin{itemize}
-	\item Successfully added the UI and logic for defining basic obstacles.
-	\item Validation prevents users from placing obstacles in problematic locations.
-	\item The next step is to make the pathfinding algorithms and the visualisation respect these obstacles.
+	\item Backend logic for handling obstacles is complete.
+	\item Pathfinding correctly avoids non-traversable cells.
+	\item Ready to implement the GUI interaction and visualisation for obstacles.
 \end{itemize}
 
 \newpage
 
 % --- Iteration 2 ---
-\subsubsection{Iteration 2: Backend Integration (Pathfinding \& Visualisation)}
+\subsubsection{Iteration 2: GUI Integration \& Visualisation}
 
 \textbf{Code Changes:}
 \begin{itemize}
-	\item \textbf{GitHub Commit:} \verb|9a4c06e...|
+	\item \textbf{GitHub Commits:} \verb|d34c9b4...|, \verb|78c5662...|, \verb|a8b3b6d...|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item Pathfinding Modification: Updated both \verb|PathFinder.bfs| and \verb|PathFinder.a_star_search| in \verb|spa.py|. Inside the loop where neighbours \verb|(nx, ny)| are considered, I added the check \verb|if self.grid.grid[nx][ny] != spa.OBSTACLE_MARKER:| before proceeding with other checks (like visited). This ensures the algorithms won't explore or add obstacle cells to the path.
-		\item Visualisation Update: Modified \verb|GridVisualizer.visualize_path| in \verb|gui.py|. When drawing the grid background or path, it now checks the grid state \verb|self.grid.grid[row][col]|. If the value equals \verb|spa.OBSTACLE_MARKER|, it draws a distinct indicator (e.g., '[X]' text or a black cell, depending on final implementation). This drawing takes precedence over empty cells or path markers.
-		\item State Management: Modified \verb|PathfinderGUI.clear_all| to reset the obstacle state. The simplest way implemented was likely re-initialising the grid object: \verb|self.grid = spa.Grid(self.grid.rows, self.grid.cols)|. This ensures obstacles are cleared along with points.
-		\item Comments: Added comments explaining the obstacle checks in pathfinding and visualisation logic.
+	    \item GUI Obstacle Button: Added an "Obstacle mode" button to the main GUI and connected it to a new method \verb|toggle_obstacle_mode|.
+		\item Obstacle Toggling Logic: Implemented \verb|toggle_obstacle_mode| which uses a Toplevel pop-up window asking the user for an \verb|itemID|. It validates this input (range, integer format, not start/end) and uses \verb|spa.index_to_coordinates| to find the grid cell. It then calls \verb|self.grid.add_obstacle| or \verb|self.grid.remove_obstacle| based on the current state. Feedback is given via \verb|messagebox| and the output text area. The main \verb|find_path| method was also updated to prevent adding an obstacle location as an intermediate point.
+		\item Visualisation Updates: Modified \verb|GridVisualizer| to handle obstacles. Added an \verb|obstacles| set attribute and an \verb|update_obstacles| method. The \verb|draw_cell| method was updated to check if a cell is an obstacle and draw it with a specific style (black fill, white text). \verb|visualize_path| and \verb|clear_visualization| were adjusted to correctly draw/redraw obstacles considering layering. The main GUI's \verb|show_grid| method now calls \verb|update_obstacles| on the visualiser.
+		\item State Management: Resetting obstacles on "Clear All" is implicitly handled by grid re-initialisation (assumed). The \verb|toggle_obstacle_mode| method updates the visualiser if it exists.
 	\end{itemize}
-	\item \textbf{Justification:} This integrates the obstacle data into the core backend systems. Pathfinding now correctly avoids obstacles (OCSP-034), and the visualisation clearly displays them (OCSP-035), providing essential feedback. Resetting the grid on clear ensures correct state management (OCSP-036).
+	\item \textbf{Justification:} Provides the user interface (OCSP-032) and logic (OCSP-033) for managing obstacles. Updates the visualisation to display obstacles (OCSP-035). Ensures state management and adds necessary comments (OCSP-036, OCSP-037).
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
-	\item Annotations added: Comments added explaining obstacle checks in BFS/A* and visualiser.
-	\item Modular approach: Pathfinding classes (\verb|PathFinder|) and Visualisation class (\verb|GridVisualizer|) now read obstacle state from the shared \verb|Grid| object.
-	\item Algorithm Correctness: BFS and A* correctly adapted to handle non-traversable cells.
+	\item Annotations added: Comments added explaining the obstacle toggling logic and visualisation updates.
+	\item Modular approach: GUI interaction handled in \verb|PathfinderGUI|, visualisation in \verb|GridVisualizer|. Both interact with the \verb|Grid| object state.
+	\item User Feedback: Uses pop-ups, message boxes, and the text area for clear feedback.
 \end{itemize}
 
 \newpage
-\subsubsection*{Placeholder: Iteration 2 Code Implementation Snippets (Commit \verb|9a4c06e...|)}
-*(User: Insert snippets for modified \verb|bfs|/'a_star_search', \verb|visualize_path|/\verb|draw_cell|, and \verb|clear_all| here.)*
+\subsubsection*{Placeholder: Iteration 2 Code Implementation Snippets (Commit \verb|78c5662...| state)}
+*(User: Insert snippets for the "Obstacle mode" button, \verb|toggle_obstacle_mode| method, and the modified \verb|GridVisualizer| methods (\verb|__init__|, \verb|draw_cell|, \verb|visualize_path|, \verb|clear_visualization|, \verb|update_obstacles|) here.)*
 \newpage
 
 \subsubsection{Prototype details:}
- Users can add obstacles via the GUI. These obstacles are displayed on the visualisation grid. Both BFS and A* pathfinding algorithms now correctly find the shortest path while avoiding these user-defined obstacles. Clearing resets obstacles.
+Users can now click "Obstacle mode", enter a position ID in the pop-up, and click "Toggle Obstacle" to add/remove an obstacle on the grid. Added obstacles are shown (e.g., as black squares) on the visualisation grid and are avoided by pathfinding algorithms.
 
-\subsubsection{Testing:}
+\subsubsection{Testing:} %%% UPDATED Iteration 2 Test Table (GUI/Viz focus) %%%
 \begin{table}[htbp]
 	\centering
 	\begin{tabularx}{\textwidth}{|l|X|p{4.5cm}|p{1.5cm}|c|}
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T7.2.1 & Add obstacle blocking direct path. Find Path (BFS/A*). Check Viz. & Path routes around obstacle. Viz shows path and obstacle marker '[X]'. & *(User: Fill)* & ? \\
+		T7.2.1 & Click Obstacle Mode, enter valid ID, click Toggle. Check Viz. & Obstacle appears on visualiser grid. Confirmation message shown. & *(User: Fill)* & ? \\
 		\hline
-		T7.2.2 & Add obstacles to block all possible paths. Find Path. & Error message "No valid path found..." displayed. & *(User: Fill)* & ? \\
+		T7.2.2 & Add obstacle blocking direct path. Find Path. Check Viz. & Path routes around obstacle. Viz shows obstacle correctly. & *(User: Fill)* & ? \\
 		\hline
-		T7.2.3 & Add obstacles. Clear All. Find Path. Check Viz. & Obstacles cleared. Direct path found. Viz shows no obstacles. & *(User: Fill)* & ? \\
+		T7.2.3 & Click Obstacle Mode, enter invalid ID (e.g., start/end, text). Click Toggle. & Error messagebox shown. No obstacle added. & *(User: Fill)* & ? \\
+		\hline
+		T7.2.4 & Add obstacle. Click Obstacle Mode, enter same ID, click Toggle. Check Viz. & Obstacle removed from visualiser grid. Confirmation message shown. & *(User: Fill)* & ? \\
+        \hline
+        T7.2.5 & Add obstacles. Click Clear All. Show Grid. & Visualiser grid shows no obstacles. & *(User: Fill)* & ? \\
 		\hline
 	\end{tabularx}
-	\caption{Testing results for Iteration 2 (Gates)}
+	\caption{Testing results for Iteration 2 (Gates - GUI \& Visualisation)}
 \end{table}
-\textbf{Tests justification:} Verified pathfinding correctly avoids obstacles (T7.2.1), handles blocked paths (T7.2.2), and that obstacles are displayed and cleared correctly (T7.2.1, T7.2.3), confirming OCSP-034, 035, 036.
+\textbf{Tests justification:} Verified GUI interaction for adding/removing obstacles (T7.2.1, T7.2.4), validation (T7.2.3), integration with pathfinding/visualisation (T7.2.2), and correct state reset (T7.2.5), confirming OCSP-032, 033, 035, 036.
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item *(User: Describe fixes, e.g., "Ensured obstacle marker '[X]' drawing priority was correct relative to path/point markers.")*
+    \item Commit \verb|a8b3b6d...| added missing import for \verb|messagebox|.
+	\item Commit \verb|78c5662...| fixed placement of \verb|toggle_obstacle_mode| definition.
+	\item *(User: Describe any other fixes related to GUI/Viz)*
 \end{itemize}
 
 \subsubsection{Validation}
 \begin{itemize}
-	\item Pathfinding neighbour checks now include obstacle check.
+	\item GUI obstacle input validated (range, format, not start/end).
+	\item Visualiser correctly displays obstacle state from the grid object.
 \end{itemize}
-\textbf{Justification:} Ensures algorithm respects non-traversable cells.
+\textbf{Justification:} Ensures user input is handled correctly and visual feedback matches the internal state.
 
 \subsubsection{Review:}
 \begin{itemize}
-	\item Obstacle avoidance is now functionally implemented in both pathfinding and visualisation.
+	\item Obstacle avoidance is now functionally implemented in both pathfinding and visualisation, controllable via the GUI.
 	\item Representing obstacles by modifying the grid state was simple and effective for this scope.
-	\item The feature is basic (no removing individual obstacles, only clear all) but meets the core requirement due to time constraints. This marks the end of planned feature development.
+	\item The feature is basic (no removing individual obstacles easily, only clear all) but meets the core requirement due to time constraints. This marks the end of planned feature development.
 \end{itemize}
 
 \clearpage
@@ -2790,9 +2780,11 @@ User can now enter an \verb|itemID| and click "Add Obstacle". If valid, the inte
 \subsubsection{Accomplishments}
 This final sprint successfully added the planned obstacle avoidance feature:
 \begin{itemize}
-	\item Completed OCSP-032: Defined obstacle representation and added GUI input elements.
-	\item Completed OCSP-033: Implemented obstacle addition logic with validation.
+    \item Completed OCSP-038: Added obstacle tracking structure to \verb|spa.Grid|.
+    \item Completed OCSP-039: Updated \verb|spa.validate_point| to check obstacles.
 	\item Completed OCSP-034: Modified both BFS and A* algorithms to avoid obstacles.
+	\item Completed OCSP-032: Added GUI input elements for obstacle management.
+	\item Completed OCSP-033: Implemented obstacle toggling logic with validation.
 	\item Completed OCSP-035: Updated the \verb|GridVisualizer| to display obstacles.
 	\item Completed OCSP-036: Ensured \verb|clear_all| resets obstacles and added comments.
 \end{itemize}
@@ -2802,7 +2794,7 @@ The application can now handle basic obstacles, making the simulation more reali
 \begin{itemize}
 	\item Integrating the obstacle check cleanly into both BFS and A* required careful modification of the neighbour exploration loops.
 	\item Ensuring the visualisation layer correctly displayed obstacles without interfering with other markers (path, points, stock colours) needed attention to drawing order/logic.
-	\item Deciding on the scope of the feature was important due to time constraints. I kept the implementation basic (adding obstacles, clearing all) rather than attempting more complex interactions like removing individual obstacles or different obstacle types.
+	\item Implementing the GUI interaction for toggling obstacles required using pop-up windows and careful validation logic.
 \end{itemize}
 
 \subsubsection{Final testing}
@@ -2817,11 +2809,11 @@ Final tests confirmed that users can add valid obstacles, which are then correct
 		\hline
 		T7.F.1 & Add obstacle (\verb|itemID| X). Try add point at X. & Cannot add point, error shown. & *(User: Fill)* & ? \\
 		\hline
-		T7.F.2 & Add obstacle (\verb|itemID| Y) blocking direct path. Find Path (BFS/A*). & Path successfully routes around Y. Viz shows Y as '[X]'. & *(User: Fill)* & ? \\
+		T7.F.2 & Add obstacle (\verb|itemID| Y) blocking direct path. Find Path (BFS/A*). & Path successfully routes around Y. Viz shows Y obstacle marker. & *(User: Fill)* & ? \\
 		\hline
 		T7.F.3 & Surround end point with obstacles. Find Path. & "No valid path found" error. & *(User: Fill)* & ? \\
 		\hline
-		T7.F.4 & Add obstacles. Clear All. Add same point. Find path. & Obstacles gone. Direct path found. & *(User: Fill)* & ? \\
+		T7.F.4 & Add obstacles. Clear All. Add obstacle at same previous location. Find path. & Obstacles cleared. Can add obstacle again. Path found (if possible). & *(User: Fill)* & ? \\
 		\hline
 	\end{tabularx}
 	\caption{Final Testing results for Sprint Gates}
@@ -2830,7 +2822,7 @@ Final tests confirmed that users can add valid obstacles, which are then correct
 \newpage
 
 \subsubsection{Testing Summary}
-
+*(User to update based on actual testing)*
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{|l|c|}
@@ -2843,7 +2835,7 @@ Final tests confirmed that users can add valid obstacles, which are then correct
 		\hline
 		Tests failed/Partially Met & Z \\
 		\hline
-		Fixed issues (identified \& addressed this sprint) & *(User: List count)* \\
+		Fixed issues (identified \& addressed this sprint) & 2 \\ % (Missing import, function placement)
 		\hline
 	\end{tabular}
 	\caption{Sprint Gates testing summary}
@@ -2853,7 +2845,7 @@ Final tests confirmed that users can add valid obstacles, which are then correct
 \subsubsection{Validation}
 \begin{itemize}
 	\item Obstacle Input Validation: Checks format, range, not start/end, not intermediate point.
-	\item Pathfinding Validation: Includes obstacle check (\verb|!= OBSTACLE_MARKER|) during neighbour exploration.
+	\item Pathfinding Validation: Includes obstacle check (\verb|is_obstacle|) during neighbour exploration.
 \end{itemize}
 \textbf{Conclusion:} Validation ensures obstacles are placed correctly and respected by the algorithms.
 
@@ -2867,7 +2859,9 @@ Final tests confirmed that users can add valid obstacles, which are then correct
 
 
 \subsubsection{Link}
-Sprint Gates successfully implemented obstacle avoidance (OCSP-032 to OCSP-036). By allowing users to define non-traversable locations and modifying the pathfinding algorithms (BFS and A*) to respect them, the application now simulates warehouse environments more realistically. The visualisation was also updated to clearly show these obstacles. Although the implementation is basic due to time constraints (e.g. no clickable items), it fulfills the core requirement.
+Sprint Gates successfully implemented obstacle avoidance (OCSP-032 to OCSP-036, OCSP-038, OCSP-039). By allowing users to define non-traversable locations and modifying the pathfinding algorithms (BFS and A*) to respect them, the application now simulates warehouse environments more realistically. The visualisation was also updated to clearly show these obstacles. Although the implementation is basic (e.g. no removing individual obstacles easily), it fulfills the core requirement.
 
 This sprint marks the end of the development phase for my solution. The application now includes configurable grid sizes, multiple pathfinding algorithms (BFS, A*), database integration for stock checking and decrementing, a graphical visualisation window with stock level indicators, and basic obstacle handling.
+
+% --- End of Sprint Gates Section ---
 
