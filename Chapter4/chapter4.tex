@@ -469,25 +469,6 @@ T1.F.3 & Input no points &  Direct path between start and end & Direct path betw
 \end{tabularx}
 \end{table}
 
-\subsubsection{Testing Summary}
-\begin{table}[htbp]
-\centering
-\begin{tabular}{|l|c|}
-\hline
-\textbf{Metric} & \textbf{Count} \\
-\hline
-Total tests conducted & 13 \\
-\hline
-Tests passed & 10 \\
-\hline
-Tests failed & 3 \\
-\hline
-Fixed issues & 3 \\
-\hline
-\end{tabular}
-\caption{Sprint 1 testing summary}
-\end{table}
-
 \subsubsection{Validation}
     \begin{itemize}
     \item \textbf{Grid Boundary Validation for Start/End Points} - Checks if coordinates are within grid dimensions
@@ -677,7 +658,7 @@ The architecture now consists of two main Python files:
 
 
 \subsubsection{Prototype details:}
-At the end of this iteration, a basic GUI window appears with input fields and buttons. Users can add points (with basic boundary checks), trigger pathfinding, and see the grid visualisation printed. Clearing points and output is functional. However, validation is incomplete (allows start/end points), and error messages are primarily logged rather than shown in the GUI. This will be fixed in future iterations dedicated to patching error handling and other small issues.
+At the end of this iteration, a basic GUI window appears with input fields and buttons. Users can add points (with basic boundary checks), trigger pathfinding, and see the grid visualisation printed. Clearing points and output is functional. However, validation is incomplete (allows start/end points), and error messages are in the CLI rather than the GUI. This will be fixed in future iterations dedicated to patching error handling and other small issues.
 
 \subsubsection{Testing:}
 
@@ -761,8 +742,6 @@ Validation is still constant as of this iteration, but in the coming iterations,
 	\item \textbf{Modular approach:} Strengthened by centralising point validation in \verb|spa.py| and removing unused terminal functions. GUI handles user interaction and display, backend handles validation and pathfinding.
 	\item \textbf{Robustness:} Significantly improved by adding validation against start/end points and displaying user-facing error messages directly in the GUI for invalid input or missing points, addressing issues from Iteration 1. Added file logging for better diagnostics.
 \end{itemize}
-
-\newpage % Placeholder Start: Iteration 2 Code Snippets
 
 
 \subsubsection*{Prototype: Iteration 2}
@@ -913,25 +892,6 @@ Validation has stayed mostly the same, but I have restructured the validation me
 \end{table}
 
 My stakeholders wished to test the final prototype of this sprint in a more robust manner, hence I created more tests for different aspects of my solution: T2.F.1/2/8 cover main success paths and variations, T2.F.3/4/5 target key validation rules critical for usability and data integrity, T2.F.6 tests the interface and T2.F.7 covers edge case handling (boundary test).
-
-\subsubsection{Testing Summary}
-\begin{table}[htbp]
-	\centering
-	\begin{tabular}{|l|c|}
-		\hline
-		\textbf{Metric} & \textbf{Count} \\
-		\hline
-		Total tests conducted & 22 \\ % Update count
-		\hline
-		Tests passed & 20 \\ % Update count
-		\hline
- 		Tests failed & 2 \\ % Update count
-		\hline
-		Fixed issues (from Sprint 1 / identified this sprint) & 3 \\ % e.g., Terminal execution, start/end validation, GUI errors
-		\hline
-	\end{tabular}
-	\caption{Sprint 2 testing summary}
-\end{table}
 
 \subsubsection{Stakeholder Review}
 
@@ -1172,7 +1132,6 @@ These tests focused specifically on the responsiveness improvement (T3.1A.1) and
 	\item Robustness: Input validation with \verb|try-except| and range checks, plus user feedback via \verb|messagebox|, makes the configuration process robust and more usable (errors are visible and descriptive)
 \end{itemize}
 
-\newpage
 \subsubsection*{Prototype: Iteration 1B}
 
 \lstinputlisting[style=custompython]{Code/cerf/config1b.py}
@@ -1404,7 +1363,7 @@ Running \verb|database.py| directly now creates and populates \verb|inventory.db
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T3.2B.1 & Run \verb|python database.py|. Check console output and inspect DB. & Output shows correct quantities/positions for all items. DB contains expected data. & *(User: Fill)* & ? \\
+		T3.2B.1 & Run \verb|python database.py|. Check console output and inspect DB. & Output shows correct quantities/positions for all items. DB contains expected data. & Met & X \\
 		\hline
 		T3.2B.2 & Test \verb|validate_item_id| (e.g., via \verb|__main__|) with valid, invalid range, non-existent IDs. & Returns \verb|True| for valid ID, raises \verb|ValueError| for others. & Met & X \\
 		\hline
@@ -1661,25 +1620,6 @@ These final tests were designed to ensure all the new components (config, thread
 
 \newpage
 
-\subsubsection{Testing Summary}
-
-\begin{table}[!htbp]
-	\centering
-	\begin{tabular}{|l|c|}
-		\hline
-		\textbf{Metric} & \textbf{Count} \\
-		\hline
-		Total tests conducted & X \\ % Adjust based on actuals
-		\hline
-		Tests passed & Y \\
-		\hline
-		Tests failed/Partially Met & Z \\
-		\hline
-		Fixed issues (identified \& addressed this sprint) & *(User: List count)* \\
-		\hline
-	\end{tabular}
-	\caption{Sprint Cerf testing summary}
-\end{table}
 \textbf{Justification:} Testing was performed across all mini-iterations, verifying each feature component and integration. Final testing confirmed that requirements relating to configuration, responsiveness, usability (numbering), and the core stock checking/decrementing logic were met, demonstrating that testing informed development throughout the sprint.
 
 \subsubsection{Validation}
@@ -1778,13 +1718,9 @@ Imports for \verb|threading| and \verb|queue| were removed from \verb|gui.py|. N
 		\item \textbf{Justification:} This revert (OCSP-021) was a tactical decision to ensure my program was stable, which is a fundamental requirement, even at the cost of the increased responsiveness that threading provided. It allowed development to continue more reliably.
 	\end{itemize}
 	
-
-\newpage
 \subsubsection*{Prototype: Removal of threading (GUI)}
 
 \lstinputlisting[style=custompython]{Code/guisd.py}
-
-\newpage
 
 \subsubsection{Prototype details:}
 A now stable application with \textbf{synchronous} pathfinding. Functionally identical to the end of Sprint Cerf, but without the threading/responsiveness feature. Ready for the UI improvements originally planned for this phase, which will now occur in Sprint Engelbart.
@@ -1834,15 +1770,15 @@ The tasks I completed in this UI-focused sprint were:
 		\hline
 		\textbf{Task ID} & \textbf{Task Description} \\
 		\hline
-		OCSP-022 & Create Visualisation Window Class: Implement the basic structure of \verb|GridVisualizer| class in \verb|gui.py| using \verb|tk.Toplevel|, adding a \verb|tk.Canvas|, scrollbars, and initial window management methods (\verb|__init__|, \verb|show|, \verb|withdraw|). \\
+		OCSP-022 & Create Visualisation Window Class: Implement the basic structure of \verb|GridVisualiser| class in \verb|gui.py| using \verb|tk.Toplevel|, adding a \verb|tk.Canvas|, scrollbars, and initial window management methods (\verb|__init__|, \verb|show|, \verb|withdraw|). \\
 		\hline
-		OCSP-023 & Link Visualisation Window: Instantiate \verb|GridVisualizer| in \verb|PathfinderGUI|. Add "Show Grid" button. Update \verb|find_path| to call the visualiser's update method. Update \verb|clear_all| to call the visualiser's clear method. \\
+		OCSP-023 & Link Visualisation Window: Instantiate \verb|GridVisualiser| in \verb|PathfinderGUI|. Add "Show Grid" button. Update \verb|find_path| to call the visualiser's update method. Update \verb|clear_all| to call the visualiser's clear method. \\
 		\hline
-		OCSP-024 & Implement Canvas Drawing: Add \verb|draw_grid| and \verb|draw_cell| methods to \verb|GridVisualizer|. Implement logic to draw grid lines, \verb|itemID| numbers, and apply basic colouring for path (\verb|#CCFFCC|), points (\verb|#FFFF00|), start/end (\verb|#99CCFF|). \\
+		OCSP-024 & Implement Canvas Drawing: Add \verb|draw_grid| and \verb|draw_cell| methods to \verb|GridVisualiser|. Implement logic to draw grid lines, \verb|itemID| numbers, and apply basic colouring for path (\verb|#CCFFCC|), points (\verb|#FFFF00|), start/end (\verb|#99CCFF|). \\
 		\hline
-		OCSP-025 & Refine Visualisation State \& Drawing: Improve \verb|GridVisualizer| state management (using internal \verb|_current_path|, \verb|_current_points|, etc.) for correct redraws/clearing. Fix drawing bugs (\verb|TclError| handling, colour persistence, window fitting/sizing). \\
+		OCSP-025 & Refine Visualisation State \& Drawing: Improve \verb|GridVisualiser| state management (using internal \verb|_current_path|, \verb|_current_points|, etc.) for correct redraws/clearing. Fix drawing bugs (\verb|TclError| handling, colour persistence, window fitting/sizing). \\
 		\hline
-		OCSP-026 & Enhance Stock Visualisation: Modify \verb|GridVisualizer| to accept \verb|db| reference. Update drawing logic to query stock (\verb|get_quantity|) and colour-code points based on quantity (Low Stock < 2: \verb|#ff9933|, Out of Stock = 0: \verb|#ff3333|). Implement persistent highlighting for zero-stock locations using \verb|self.out_of_stock_positions|. \\
+		OCSP-026 & Enhance Stock Visualisation: Modify \verb|GridVisualiser| to accept \verb|db| reference. Update drawing logic to query stock (\verb|get_quantity|) and colour-code points based on quantity (Low Stock < 2: \verb|#ff9933|, Out of Stock = 0: \verb|#ff3333|). Implement persistent highlighting for zero-stock locations using \verb|self.out_of_stock_positions|. \\
 		\hline
 		OCSP-027 & Refine Main Layout: Update main GUI layout in \verb|gui.py| (e.g., 2x2 button grid for DB/Viz controls) based on evaluation for better aesthetics. \\
 		\hline
@@ -1870,7 +1806,7 @@ I broke the UI work into three iterations: building the visualiser foundation, r
 \begin{enumerate}
 	\item \textbf{Visualisation Foundation (Iteration 1):}
 	\begin{itemize}
-		\item Create the \verb|GridVisualizer| class (\verb|tk.Toplevel|) in \verb|gui.py|. Add a \verb|tk.Canvas| and scrollbars. Implement basic \verb|__init__|, \verb|show|, \verb|withdraw|. (Commit \verb|dbe52cf|, \verb|03d4780|) (OCSP-022)
+		\item Create the \verb|GridVisualiser| class (\verb|tk.Toplevel|) in \verb|gui.py|. Add a \verb|tk.Canvas| and scrollbars. Implement basic \verb|__init__|, \verb|show|, \verb|withdraw|. (Commit \verb|dbe52cf|, \verb|03d4780|) (OCSP-022)
 		\item Link from \verb|PathfinderGUI|: Instantiate \verb|self.viz_window|, add "Show Grid" button, call visualiser methods from \verb|find_path| and \verb|clear_all|. (Commits \verb|23cbdd6|, \verb|d28cc78|, \verb|6b227f6|) (OCSP-023)
 		\item Implement initial \verb|draw_grid|/\verb|draw_cell| logic for lines, numbers, basic path/point colours. (Commit \verb|3b87545|) (OCSP-024)
 		\item Justification: Establish the separate window and basic drawing framework.
@@ -1892,7 +1828,7 @@ I broke the UI work into three iterations: building the visualiser foundation, r
 
 \subsubsection{Architecture \& Structural Considerations}
 \begin{itemize}
-	\item New \verb|GridVisualizer| class (within \verb|gui.py|) added to manage the visualisation window.
+	\item New \verb|GridVisualiser| class (within \verb|gui.py|) added to manage the visualisation window.
 	\item \verb|PathfinderGUI| layout simplified. Input logic changed.
 \end{itemize}
 Justification: Separating visualisation improves organisation. UI changes enhance clarity and workflow.
@@ -1905,7 +1841,7 @@ Standard Python libraries only.
 
 \subsubsection{Iteration 1: Visualisation Foundation}
 \begin{itemize}
-	\item Progress made: Created basic \verb|GridVisualizer| class (\verb|Toplevel|/\verb|Canvas|). Linked to main GUI ("Show Grid", update/clear calls). Implemented initial grid and basic path/point drawing. *(Achieved OCSP-022, OCSP-023, basic OCSP-024)*
+	\item Progress made: Created basic \verb|GridVisualiser| class (\verb|Toplevel|/\verb|Canvas|). Linked to main GUI ("Show Grid", update/clear calls). Implemented initial grid and basic path/point drawing. *(Achieved OCSP-022, OCSP-023, basic OCSP-024)*
 	\item Blockers identified: Correct canvas setup, basic drawing calls.
 	\item Plan for next iteration: Implement detailed drawing, fix bugs, add stock display.
 \end{itemize}
@@ -2000,7 +1936,7 @@ Standard Python libraries only.
 		\item Refined Drawing: Improved \verb|draw_cell| to handle specific colours for path (\verb|#42f56f|), points (\verb|#f5d742|), start/end (\verb|#4287f5|), and added logic for contrasting text colour (\verb|white| on dark backgrounds) (commit \verb|7e78e61|).
 		\item Fixed Bugs: Addressed \verb|TclError| when updating a closed window using \verb|try-except| (commit \verb|6fd7540|). Fixed major bugs related to path state (\verb|_current_path|, etc.) not persisting or clearing correctly, ensuring the visualisation accurately reflected the current state after finding paths or clearing (commits \verb|eb53083|, \verb|f6862e1|). Fixed logic around when the window initially draws vs updates (\verb|1f8d538|, reverted in \verb|bf6845a|).
 		\item Improved Layout: Made the visualisation window resize better based on grid dimensions and center itself (commit \verb|1a0a84a|).
-		\item Added Stock Visualisation: Modified \verb|GridVisualizer.__init__| (renamed from VisualisationWindow, like before the revert) and \verb|PathfinderGUI.__init__| to pass the \verb|self.db| instance to the visualiser. Updated \verb|visualise_path| and \verb|draw_cell| to query \verb|self.db.get_quantity(pos_num)| for intermediate points. Applied colour logic: orange (\verb|#ff9933|) if stock < 2, red (\verb|#ff3333|) if stock == 0, yellow (\verb|#f5d742|) otherwise. Added \verb|self.out_of_stock_positions| set to track zero-stock locations and modified \verb|clear_visualisation| and \verb|draw_grid| to redraw these red markers persistently. (Commits \verb|08510e4|, \verb|9cd9b34|)
+		\item Added Stock Visualisation: Modified \verb|GridVisualiser.__init__| (renamed from VisualisationWindow, like before the revert) and \verb|PathfinderGUI.__init__| to pass the \verb|self.db| instance to the visualiser. Updated \verb|visualise_path| and \verb|draw_cell| to query \verb|self.db.get_quantity(pos_num)| for intermediate points. Applied colour logic: orange (\verb|#ff9933|) if stock < 2, red (\verb|#ff3333|) if stock == 0, yellow (\verb|#f5d742|) otherwise. Added \verb|self.out_of_stock_positions| set to track zero-stock locations and modified \verb|clear_visualisation| and \verb|draw_grid| to redraw these red markers persistently. (Commits \verb|08510e4|, \verb|9cd9b34|)
 	\end{itemize}
 	\item \textbf{Justification:} This extensive refinement was needed to make the visualisation accurate, robust, and informative (OCSP-024, OCSP-025). Displaying stock levels visually is a key usability enhancement (OCSP-026).
 \end{itemize}
@@ -2008,7 +1944,7 @@ Standard Python libraries only.
 \textbf{Code Quality:}
 \begin{itemize}
 	\item Annotations added: Extensive comments added explaining drawing logic, state variables, bug fixes, and stock visualisation code.
-	\item Modular approach: \verb|GridVisualizer| now handles complex drawing and state internally.
+	\item Modular approach: \verb|GridVisualiser| now handles complex drawing and state internally.
 	\item Robustness: Error handling for closed window. State management more reliable. Visual stock levels improve clarity.
 \end{itemize}
 
@@ -2060,8 +1996,6 @@ Visualisation window displays grid, path, points, and stock levels accurately wi
 	\item The iterative bug fixing was necessary but effective.
 	\item Attention now turns to simplifying the main GUI window itself.
 \end{itemize}
-
-\newpage
 
 % --- Iteration 3 ---
 \subsubsection{Iteration 3: Main GUI Simplification \& Interaction Polish}
@@ -2150,7 +2084,7 @@ Main GUI simplified. User enters space-separated \verb|itemID|s. Stock actions u
 \subsubsection{Accomplishments}
 This sprint focused entirely on the user interface and achieved significant improvements:
 \begin{itemize}
-	\item Created a dedicated graphical visualisation window (\verb|GridVisualizer|) using \verb|Tkinter Canvas|, replacing the old text output (OCSP-022, OCSP-024).
+	\item Created a dedicated graphical visualisation window (\verb|GridVisualiser|) using \verb|Tkinter Canvas|, replacing the old text output (OCSP-022, OCSP-024).
 	\item Linked this window effectively to the main GUI controls (OCSP-023).
 	\item Refined the visualisation drawing logic through multiple iterations to ensure correctness and handle state changes reliably (OCSP-025).
 	\item Integrated stock level visualisation using colour-coding into the grid map (OCSP-026).
@@ -2181,28 +2115,9 @@ Final tests confirmed the new visualisation window displayed all information cor
 	\caption{Final Testing results for Sprint Engelbart}
 \end{table}
 
-\newpage
-
-\subsubsection{Testing Summary}
-
-\begin{table}[htbp!]
-	\centering
-	\begin{tabular}{|l|c|}
-		\hline
-		\textbf{Metric} & \textbf{Count} \\
-		\hline
-		Total tests conducted & X \\ % Adjust based on actuals
-		\hline
-		Tests passed & Y \\
-		\hline
-		Tests failed/Partially Met & Z \\
-		\hline
-		Fixed issues (identified \& addressed this sprint) & *(User: List count)* \\
-		\hline
-	\end{tabular}
-	\caption{Sprint Engelbart testing summary}
-\end{table}
 \textbf{Justification:} Testing was performed iteratively, especially for the complex visualisation window, ensuring drawing accuracy, state management, and stock display were correct. Final testing validated the simplified main UI workflows and the integration of all UI components.
+
+\newpage
 
 \subsubsection{Validation}
 \begin{itemize}
@@ -2223,7 +2138,7 @@ Final tests confirmed the new visualisation window displayed all information cor
 \textbf{Conclusion:} The application is stable, and the user interface is significantly more robust and user-friendly due to the dedicated visualisation and refined interactions.
 
 \subsubsection{Link}
-Sprint Engelbart successfully delivered the planned UI overhaul. The new \verb|GridVisualizer| provides excellent graphical feedback (OCSP-022 to 026), while the main window simplifications and workflow refinements (OCSP-027 to 031) enhance usability.
+Sprint Engelbart successfully delivered the planned UI overhaul. The new \verb|GridVisualiser| provides excellent graphical feedback (OCSP-022 to 026), while the main window simplifications and workflow refinements (OCSP-027 to 031) enhance usability.
 
 \newpage
 
@@ -2359,13 +2274,13 @@ Application now attempts to optimise the order of intermediate points if the use
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T6.1.1 & Enter 3+ points, Optimisation OFF. Find Path. & Path found, points visited in the order entered. & *(User: Fill)* & ? \\
+		T6.1.1 & Enter 3+ points, Optimisation OFF. Find Path. & Path found, points visited in the order entered. & Met & X \\
 		\hline
-		T6.1.2 & Enter 3+ points, Optimisation ON. Find Path. & Path found, point order potentially changed. Log confirms optimisation ran. Total path length likely shorter than T6.1.1. & *(User: Fill)* & ? \\
+		T6.1.2 & Enter 3+ points, Optimisation ON. Find Path. & Path found, point order potentially changed. Log confirms optimisation ran. Total path length likely shorter than T6.1.1. & Met & X \\
 		\hline
-		T6.1.3 & Enter 1-2 points, Optimisation ON. Find Path. & Path found. Log confirms optimisation skipped as unnecessary. & *(User: Fill)* & ? \\
+		T6.1.3 & Enter 1-2 points, Optimisation ON. Find Path. & Path found. Log confirms optimisation skipped as unnecessary. & Met & X \\
 		\hline
-		T6.1.4 & Toggle "Optimise Point Order" via GUI Menu. & Checkbox state updates. Log message confirms optimisation enabled/disabled. & *(User: Fill)* & ? \\
+		T6.1.4 & Toggle "Optimise Point Order" via GUI Menu. & Checkbox state updates. Log message confirms optimisation enabled/disabled. & Met & X \\
 		\hline
 		T6.1.5 & Enter >10 points, Optimisation ON. Find Path. & Warning logged about limiting points. Optimisation runs on first 10. Path found. & *(User: Fill)* & \~{} \\
 		\hline
@@ -2388,8 +2303,6 @@ Application now attempts to optimise the order of intermediate points if the use
 	\item Performance acceptable for a moderate number of points due to parameter tuning and approximations.
 	\item Ready to implement A* search as an alternative segment pathfinder.
 \end{itemize}
-
-\newpage
 
 % --- Iteration 2 (Based on A* and remaining GUI commits) ---
 \subsubsection{Iteration 2: A* Implementation, GUI Integration \& Validation Fix}
@@ -2414,11 +2327,9 @@ Application now attempts to optimise the order of intermediate points if the use
 	\item Consistency: Using \verb|validate_point| in A* improves consistency.
 \end{itemize}
 
-\newpage
 \subsubsection*{Prototype: Iteration 2}
 \lstinputlisting[style=custompython]{Code/floyd/spa1.py}
 
-\newpage
 \subsubsection{Prototype details:}
 Application allows selection of BFS or A* via menu for calculating path segments. A* uses consistent validation. GA optimisation for point order can be toggled separately.
 
@@ -2498,25 +2409,6 @@ Final testing focused on verifying the GA optimisation provides shorter paths (w
 	\caption{Final Testing results for Sprint Floyd}
 \end{table}
 
-\subsubsection{Testing Summary}
-
-\begin{table}[htbp]
-	\centering
-	\begin{tabular}{|l|c|}
-		\hline
-		\textbf{Metric} & \textbf{Count} \\
-		\hline
-		Total tests conducted & X \\ % Adjust based on actuals
-		\hline
-		Tests passed & Y \\
-		\hline
-		Tests failed/Partially Met & Z \\
-		\hline
-		Fixed issues (identified \& addressed this sprint) & 1 \\ % (A* validation fix)
-		\hline
-	\end{tabular}
-	\caption{Sprint Floyd testing summary}
-\end{table}
 \textbf{Justification:} Testing verified the GA optimisation, the correctness of A* (vs BFS), and the functionality of the GUI selections.
 
 \subsubsection{Validation}
@@ -2568,12 +2460,12 @@ The tasks undertaken in this final sprint were:
 		\hline
 		OCSP-033 & Implement Obstacle Toggling Logic \& Validation: Create \verb|toggle_obstacle_mode| method in \verb|gui.py|. Implement pop-up, input parsing, validation (range, format, not start/end), calling \verb|self.grid.add/remove_obstacle|. Add user feedback via \verb|messagebox| and \verb|output_text|. Update \verb|find_path| point validation to check obstacles. \\
 		\hline
-		OCSP-035 & Update Visualisation to Display Obstacles: Modify \verb|GridVisualizer| in \verb|gui.py| to store, draw (\verb|draw_cell|), clear, and update obstacles based on the \verb|self.grid.obstacles| set, using a distinct marker/colour. \\
+		OCSP-035 & Update Visualisation to Display Obstacles: Modify \verb|GridVisualiser| in \verb|gui.py| to store, draw (\verb|draw_cell|), clear, and update obstacles based on the \verb|self.grid.obstacles| set, using a distinct marker/colour. \\
 		\hline
 		OCSP-036 & Ensure State Management (Clear All) \& Add Comments: Modify \verb|gui.py|'s \verb|clear_all| method to reset obstacles (likely via grid re-initialisation). Ensure \verb|show_grid| updates visualiser obstacles. Add comments explaining the obstacle implementation. \\
 		\hline
 	\end{tabularx}
-	\caption{Tasks for Sprint Gates (Revised Order)}
+	\caption{Tasks for Sprint Gates}
 \end{table}
 
 \subsection{Purpose}
@@ -2597,7 +2489,7 @@ I implemented this feature by first adding obstacle tracking and avoidance to th
     \begin{itemize}
         \item GUI Button: Added an "Obstacle mode" button to \verb|PathfinderGUI.__init__| in \verb|gui.py| and linked its command to \verb|self.toggle_obstacle_mode| (Commit \verb|d34c9b4...|). (OCSP-032)
         \item Obstacle Toggling Logic: Implemented the \verb|toggle_obstacle_mode(self)| method in \verb|PathfinderGUI|. This uses a pop-up window with an entry field for the \verb|itemID|. It validates the input (range, format, not start/end), converts to coordinates, and calls \verb|self.grid.add_obstacle| or \verb|self.grid.remove_obstacle|. It provides user feedback via \verb|messagebox| and the main \verb|output_text|. The \verb|find_path| method was also updated to check if an input point is an obstacle (Commits \verb|d34c9b4...|, \verb|78c5662...|, \verb|a8b3b6d...|). (OCSP-033)
-        \item Visualisation Update: Modified the \verb|GridVisualizer| class in \verb|gui.py|. Added an \verb|obstacles| attribute. Created an \verb|update_obstacles| method to receive the obstacle set from the main GUI and trigger a redraw. Updated \verb|draw_cell| to check for obstacles and draw them (e.g., black with white text). Updated \verb|visualize_path| and \verb|clear_visualization| to correctly handle drawing obstacles and their layering relative to other elements (Commit \verb|78c5662...|). (OCSP-035)
+        \item Visualisation Update: Modified the \verb|GridVisualiser| class in \verb|gui.py|. Added an \verb|obstacles| attribute. Created an \verb|update_obstacles| method to receive the obstacle set from the main GUI and trigger a redraw. Updated \verb|draw_cell| to check for obstacles and draw them (e.g., black with white text). Updated \verb|visualise_path| and \verb|clear_visualisation| to correctly handle drawing obstacles and their layering relative to other elements (Commit \verb|78c5662...|). (OCSP-035)
         \item State Management & Comments: Ensured \verb|show_grid| calls \verb|update_obstacles| when showing the visualiser. Resetting obstacles in \verb|clear_all| was likely handled by grid re-initialisation (though not explicit in commits, assumed part of the logic). Added comments. (OCSP-036, OCSP-037)
         \item Justification: Provides the user interface for managing obstacles, integrates this with the backend grid state, ensures the visualisation reflects obstacles, and handles state correctly.
     \end{itemize}
@@ -2608,7 +2500,7 @@ I implemented this feature by first adding obstacle tracking and avoidance to th
 	\item Obstacle state stored within the \verb|spa.Grid| object's \verb|obstacles| set attribute.
 	\item \verb|gui.py| (\verb|toggle_obstacle_mode|) modifies this state via the grid object's methods.
 	\item \verb|spa.py| pathfinding methods and validation function read this state using \verb|is_obstacle| or by receiving the set.
-	\item \verb|gui.py|'s \verb|GridVisualizer| receives the obstacle set and uses it for drawing.
+	\item \verb|gui.py|'s \verb|GridVisualiser| receives the obstacle set and uses it for drawing.
 \end{itemize}
 Justification: Centralising obstacle state in the Grid object and providing methods to interact with it maintains encapsulation. GUI and Pathfinding components interact with the Grid object.
 
@@ -2624,7 +2516,7 @@ Justification: Centralising obstacle state in the Grid object and providing meth
 
 \subsubsection{Iteration 2: GUI Integration \& Visualisation}
 \begin{itemize}
-	\item Progress made: Added "Obstacle mode" button and \verb|toggle_obstacle_mode| pop-up logic with validation in \verb|gui.py|. Updated \verb|GridVisualizer| to store, receive, and display obstacles distinctly. Ensured obstacles were considered during point validation in \verb|find_path|. Added missing import. *(Achieved OCSP-032, OCSP-033, OCSP-035, OCSP-036, OCSP-037 via commits \verb|d34c9b4...|, \verb|78c5662...|, \verb|a8b3b6d...|)*
+	\item Progress made: Added "Obstacle mode" button and \verb|toggle_obstacle_mode| pop-up logic with validation in \verb|gui.py|. Updated \verb|GridVisualiser| to store, receive, and display obstacles distinctly. Ensured obstacles were considered during point validation in \verb|find_path|. Added missing import. *(Achieved OCSP-032, OCSP-033, OCSP-035, OCSP-036, OCSP-037 via commits \verb|d34c9b4...|, \verb|78c5662...|, \verb|a8b3b6d...|)*
 	\item Blockers identified: Correctly handling the pop-up logic and validation. Ensuring the visualiser updated correctly when obstacles were toggled and handled layering appropriately. Fixing missing import.
 \end{itemize}
 
@@ -2652,8 +2544,10 @@ Justification: Centralising obstacle state in the Grid object and providing meth
 	\item Consistency: Both BFS and A* were updated with the same obstacle check logic.
 \end{itemize}
 
-\subsubsection*{Placeholder: Iteration 1 Code Implementation Snippets (Commit \verb|d5a6179...| state)}
-*(User: Insert snippets for the modified \verb|spa.Grid| class, the updated \verb|spa.validate_point|, and the modified neighbour checks in \verb|PathFinder.bfs| / \verb|a_star_search| here.)*
+\subsubsection*{Prototype: Iteration 1}
+
+\lstinputlisting[style=custompython]{Code/gates/spa1.py}
+
 
 \newpage
 \subsubsection{Prototype details:}
@@ -2666,16 +2560,16 @@ The backend grid representation now supports obstacles, and the pathfinding algo
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T7.1.1 & Manually set obstacle in grid state (debug). Run BFS/A*. & Path avoids the set obstacle cell. & *(User: Fill)* & ? \\
+		T7.1.1 & Manually set obstacle in grid state (debug). Run BFS/A*. & Path avoids the set obstacle cell. & Met & X \\
 		\hline
-		T7.1.2 & Manually set obstacle completely blocking path. Run BFS/A*. & Algorithms return None (no path found). & *(User: Fill)* & ? \\
+		T7.1.2 & Manually set obstacle completely blocking path. Run BFS/A*. & Algorithms return None (no path found). & Met & X \\
 		\hline
-		T7.1.3 & Call \verb|validate_point| on an obstacle location. & Function returns False. & *(User: Fill)* & ? \\
+		T7.1.3 & Call \verb|validate_point| on an obstacle location. & Function returns False. & Met & X \\
 		\hline
-		T7.1.4 & Call \verb|validate_point| on a non-obstacle location. & Function returns True. & *(User: Fill)* & ? \\
+		T7.1.4 & Call \verb|validate_point| on a non-obstacle location. & Function returns True. & Met & X \\
 		\hline
 	\end{tabularx}
-	\caption{Testing results for Iteration 1 (Gates - Backend)}
+	\caption{Testing results for Iteration 1}
 \end{table}
 \textbf{Tests justification:} Verified that the pathfinding algorithms correctly avoid obstacles set in the grid state (T7.1.1, T7.1.2) and that the updated validation function works as expected (T7.1.3, T7.1.4), confirming OCSP-034, OCSP-038, OCSP-039.
 
@@ -2710,7 +2604,7 @@ The backend grid representation now supports obstacles, and the pathfinding algo
 	\begin{itemize}
 	    \item GUI Obstacle Button: Added an "Obstacle mode" button to the main GUI and connected it to a new method \verb|toggle_obstacle_mode|.
 		\item Obstacle Toggling Logic: Implemented \verb|toggle_obstacle_mode| which uses a Toplevel pop-up window asking the user for an \verb|itemID|. It validates this input (range, integer format, not start/end) and uses \verb|spa.index_to_coordinates| to find the grid cell. It then calls \verb|self.grid.add_obstacle| or \verb|self.grid.remove_obstacle| based on the current state. Feedback is given via \verb|messagebox| and the output text area. The main \verb|find_path| method was also updated to prevent adding an obstacle location as an intermediate point.
-		\item Visualisation Updates: Modified \verb|GridVisualizer| to handle obstacles. Added an \verb|obstacles| set attribute and an \verb|update_obstacles| method. The \verb|draw_cell| method was updated to check if a cell is an obstacle and draw it with a specific style (black fill, white text). \verb|visualize_path| and \verb|clear_visualization| were adjusted to correctly draw/redraw obstacles considering layering. The main GUI's \verb|show_grid| method now calls \verb|update_obstacles| on the visualiser.
+		\item Visualisation Updates: Modified \verb|GridVisualiser| to handle obstacles. Added an \verb|obstacles| set attribute and an \verb|update_obstacles| method. The \verb|draw_cell| method was updated to check if a cell is an obstacle and draw it with a specific style (black fill, white text). \verb|visualise_path| and \verb|clear_visualisation| were adjusted to correctly draw/redraw obstacles considering layering. The main GUI's \verb|show_grid| method now calls \verb|update_obstacles| on the visualiser.
 		\item State Management: Resetting obstacles on "Clear All" is implicitly handled by grid re-initialisation (assumed). The \verb|toggle_obstacle_mode| method updates the visualiser if it exists.
 	\end{itemize}
 	\item \textbf{Justification:} Provides the user interface (OCSP-032) and logic (OCSP-033) for managing obstacles. Updates the visualisation to display obstacles (OCSP-035). Ensures state management and adds necessary comments (OCSP-036, OCSP-037).
@@ -2719,14 +2613,14 @@ The backend grid representation now supports obstacles, and the pathfinding algo
 \textbf{Code Quality:}
 \begin{itemize}
 	\item Annotations added: Comments added explaining the obstacle toggling logic and visualisation updates.
-	\item Modular approach: GUI interaction handled in \verb|PathfinderGUI|, visualisation in \verb|GridVisualizer|. Both interact with the \verb|Grid| object state.
+	\item Modular approach: GUI interaction handled in \verb|PathfinderGUI|, visualisation in \verb|GridVisualiser|. Both interact with the \verb|Grid| object state.
 	\item User Feedback: Uses pop-ups, message boxes, and the text area for clear feedback.
 \end{itemize}
 
-\newpage
-\subsubsection*{Placeholder: Iteration 2 Code Implementation Snippets (Commit \verb|78c5662...| state)}
-*(User: Insert snippets for the "Obstacle mode" button, \verb|toggle_obstacle_mode| method, and the modified \verb|GridVisualizer| methods (\verb|__init__|, \verb|draw_cell|, \verb|visualize_path|, \verb|clear_visualization|, \verb|update_obstacles|) here.)*
-\newpage
+\subsubsection*{Prototype: Iteration 2}
+
+\lstinputlisting[style=custompython]{Code/gates/gui2.py}
+
 
 \subsubsection{Prototype details:}
 Users can now click "Obstacle mode", enter a position ID in the pop-up, and click "Toggle Obstacle" to add/remove an obstacle on the grid. Added obstacles are shown (e.g., as black squares) on the visualisation grid and are avoided by pathfinding algorithms.
@@ -2738,26 +2632,24 @@ Users can now click "Obstacle mode", enter a position ID in the pop-up, and clic
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T7.2.1 & Click Obstacle Mode, enter valid ID, click Toggle. Check Viz. & Obstacle appears on visualiser grid. Confirmation message shown. & *(User: Fill)* & ? \\
+		T7.2.1 & Click Obstacle Mode, enter valid ID, click Toggle. Check Viz. & Obstacle appears on visualiser grid. Confirmation message shown. & Met & X \\
 		\hline
-		T7.2.2 & Add obstacle blocking direct path. Find Path. Check Viz. & Path routes around obstacle. Viz shows obstacle correctly. & *(User: Fill)* & ? \\
+		T7.2.2 & Add obstacle blocking direct path. Find Path. Check Viz. & Path routes around obstacle. Viz shows obstacle correctly. & Met & X \\
 		\hline
-		T7.2.3 & Click Obstacle Mode, enter invalid ID (e.g., start/end, text). Click Toggle. & Error messagebox shown. No obstacle added. & *(User: Fill)* & ? \\
+		T7.2.3 & Click Obstacle Mode, enter invalid ID (e.g., start/end, text). Click Toggle. & Error messagebox shown. No obstacle added. & Met & X \\
 		\hline
-		T7.2.4 & Add obstacle. Click Obstacle Mode, enter same ID, click Toggle. Check Viz. & Obstacle removed from visualiser grid. Confirmation message shown. & *(User: Fill)* & ? \\
+		T7.2.4 & Add obstacle. Click Obstacle Mode, enter same ID, click Toggle. Check Viz. & Obstacle removed from visualiser grid. Confirmation message shown. & Met & X \\
         \hline
-        T7.2.5 & Add obstacles. Click Clear All. Show Grid. & Visualiser grid shows no obstacles. & *(User: Fill)* & ? \\
+        T7.2.5 & Add obstacles. Click Clear All. Show Grid. & Visualiser grid shows no obstacles. & Met & X \\
 		\hline
 	\end{tabularx}
-	\caption{Testing results for Iteration 2 (Gates - GUI \& Visualisation)}
+	\caption{Testing results for Iteration 2}
 \end{table}
 \textbf{Tests justification:} Verified GUI interaction for adding/removing obstacles (T7.2.1, T7.2.4), validation (T7.2.3), integration with pathfinding/visualisation (T7.2.2), and correct state reset (T7.2.5), confirming OCSP-032, 033, 035, 036.
 
 \subsubsection{Fixes}
 \begin{itemize}
-    \item Commit \verb|a8b3b6d...| added missing import for \verb|messagebox|.
-	\item Commit \verb|78c5662...| fixed placement of \verb|toggle_obstacle_mode| definition.
-	\item *(User: Describe any other fixes related to GUI/Viz)*
+	\item The obstacle mode would not toggle: this was fixed by changing the placement of \verb|toggle_obstacle_mode| definition to within the class.
 \end{itemize}
 
 \subsubsection{Validation}
@@ -2774,7 +2666,6 @@ Users can now click "Obstacle mode", enter a position ID in the pop-up, and clic
 	\item The feature is basic (no removing individual obstacles easily, only clear all) but meets the core requirement due to time constraints. This marks the end of planned feature development.
 \end{itemize}
 
-\clearpage
 \subsection{Sprint Review and Retrospective}
 
 \subsubsection{Accomplishments}
@@ -2785,17 +2676,10 @@ This final sprint successfully added the planned obstacle avoidance feature:
 	\item Completed OCSP-034: Modified both BFS and A* algorithms to avoid obstacles.
 	\item Completed OCSP-032: Added GUI input elements for obstacle management.
 	\item Completed OCSP-033: Implemented obstacle toggling logic with validation.
-	\item Completed OCSP-035: Updated the \verb|GridVisualizer| to display obstacles.
+	\item Completed OCSP-035: Updated the \verb|GridVisualiser| to display obstacles.
 	\item Completed OCSP-036: Ensured \verb|clear_all| resets obstacles and added comments.
 \end{itemize}
 The application can now handle basic obstacles, making the simulation more realistic.
-
-\subsubsection{Challenges \& Learning}
-\begin{itemize}
-	\item Integrating the obstacle check cleanly into both BFS and A* required careful modification of the neighbour exploration loops.
-	\item Ensuring the visualisation layer correctly displayed obstacles without interfering with other markers (path, points, stock colours) needed attention to drawing order/logic.
-	\item Implementing the GUI interaction for toggling obstacles required using pop-up windows and careful validation logic.
-\end{itemize}
 
 \subsubsection{Final testing}
 Final tests confirmed that users can add valid obstacles, which are then correctly displayed and avoided by both pathfinding algorithms.
@@ -2807,39 +2691,19 @@ Final tests confirmed that users can add valid obstacles, which are then correct
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
-		T7.F.1 & Add obstacle (\verb|itemID| X). Try add point at X. & Cannot add point, error shown. & *(User: Fill)* & ? \\
+		T7.F.1 & Add obstacle (\verb|itemID| X). Try add point at X. & Cannot add point, error shown. & Met & X \\
 		\hline
-		T7.F.2 & Add obstacle (\verb|itemID| Y) blocking direct path. Find Path (BFS/A*). & Path successfully routes around Y. Viz shows Y obstacle marker. & *(User: Fill)* & ? \\
+		T7.F.2 & Add obstacle (\verb|itemID| Y) blocking direct path. Find Path (BFS/A*). & Path successfully routes around Y. Viz shows Y obstacle marker. & Met & X \\
 		\hline
-		T7.F.3 & Surround end point with obstacles. Find Path. & "No valid path found" error. & *(User: Fill)* & ? \\
+		T7.F.3 & Surround end point with obstacles. Find Path. & "No valid path found" error. & Met & X \\
 		\hline
-		T7.F.4 & Add obstacles. Clear All. Add obstacle at same previous location. Find path. & Obstacles cleared. Can add obstacle again. Path found (if possible). & *(User: Fill)* & ? \\
+		T7.F.4 & Add obstacles. Clear All. Add obstacle at same previous location. Find path. & Obstacles cleared. Can add obstacle again. Path found (if possible). & Met & X \\
 		\hline
 	\end{tabularx}
 	\caption{Final Testing results for Sprint Gates}
 \end{table}
 
-\newpage
 
-\subsubsection{Testing Summary}
-*(User to update based on actual testing)*
-\begin{table}[htbp]
-	\centering
-	\begin{tabular}{|l|c|}
-		\hline
-		\textbf{Metric} & \textbf{Count} \\
-		\hline
-		Total tests conducted & X \\ % Adjust based on actuals
-		\hline
-		Tests passed & Y \\
-		\hline
-		Tests failed/Partially Met & Z \\
-		\hline
-		Fixed issues (identified \& addressed this sprint) & 2 \\ % (Missing import, function placement)
-		\hline
-	\end{tabular}
-	\caption{Sprint Gates testing summary}
-\end{table}
 \textbf{Justification:} Testing focused on validating the obstacle input, the pathfinding avoidance logic for both algorithms, the visualisation feedback, and the state management via 'clearall'.
 
 \subsubsection{Validation}
@@ -2847,7 +2711,7 @@ Final tests confirmed that users can add valid obstacles, which are then correct
 	\item Obstacle Input Validation: Checks format, range, not start/end, not intermediate point.
 	\item Pathfinding Validation: Includes obstacle check (\verb|is_obstacle|) during neighbour exploration.
 \end{itemize}
-\textbf{Conclusion:} Validation ensures obstacles are placed correctly and respected by the algorithms.
+\textbf{Justification:} Validation ensures obstacles are placed correctly and respected by the algorithms.
 
 \subsubsection{Robustness}
 \begin{itemize}
@@ -2862,6 +2726,10 @@ Final tests confirmed that users can add valid obstacles, which are then correct
 Sprint Gates successfully implemented obstacle avoidance (OCSP-032 to OCSP-036, OCSP-038, OCSP-039). By allowing users to define non-traversable locations and modifying the pathfinding algorithms (BFS and A*) to respect them, the application now simulates warehouse environments more realistically. The visualisation was also updated to clearly show these obstacles. Although the implementation is basic (e.g. no removing individual obstacles easily), it fulfills the core requirement.
 
 This sprint marks the end of the development phase for my solution. The application now includes configurable grid sizes, multiple pathfinding algorithms (BFS, A*), database integration for stock checking and decrementing, a graphical visualisation window with stock level indicators, and basic obstacle handling.
+
+\subsubsection{Stakeholder comments}
+
+
 
 % --- End of Sprint Gates Section ---
 

@@ -100,20 +100,33 @@
 	\hline
 \end{longtable}
 
-\subsection{Passed tests}
-% INSERT TESTS WITH ANNOTATIONS! %
+\subsection{Partially passed tests}
+
+Tests 5, 22 and 24 were marked as a partial pass.
+
+\begin{itemize}
+	\item \textbf{Test 5: } This was a partial pass as the point was omitted but it did not advise the user that it was out-of-stock beforehand.
+	\item \textbf{Test 22: } This was a partial pass as, instead of opting for a multi-parse approach, I simply did not allow the user to input points other than in the manner they should be (space delimiter, no other chars)
+	\item \textbf{Test 24: } This was a partial pass as the key information was shown, just in a different manner. I did not get a chance to implement the 'click-to-view' usability feature, hence I just placed it as a button to query due to time constraints.
+	
+\end{itemize}
+
 
 \subsection{Failed tests}
 
-Overall the solution was a success but I did have quite a few failed tests for a few reasons.
-The tests marked N/A are automatic fails as they did not apply to my solution. This is because, due to time, I chose to focus on perfecting the core functionality of the solution that my stakeholder defined.
+Tests 33 and 37 failed due to performance issues. Test 33 failed because I had set a timeout for the pathfinding and the time it took to navigate the grid was too long to be viable. To rectify this in the future, I would reimplement threading for better performance and faster results. Test 37 failed as the rendering struggled at such a large warehouse that it did not fit on most screens. I anticipated that it would fit and hence removed the scrollbars, but evidently this was a mistake. In future, I would add the scrollbars and add dynamic cell resizing based on the screen size in use.
+
+\subsection{Not applicable tests}
+
+The tests marked N/A are automatic fails as they did not apply to my solution. This is because, due to time, I chose to focus on perfecting the core functionality of the solution that my stakeholder defined. Tests 17 and 18 were analysing the JSON input, which I did not have time to implement because of the threading issues which took up significant time. Test 30 was for checking whether grid changes during pathfinding would cause issues, however my stakeholder instructed me that their warehouses rarely change, hence having a change function was pointless. Test 31 was for an export of the grid visualisation which would have provided direct feedback to the user on what path was/needed to be traced. I did not implement this, hence marked N/A.
 
 
 
 \newpage
 
+\includepdf[pages=-]{post-dev-testing/pdt.pdf}
 
-\includepdf[pages=-]{usability-testing.pdf}
+\includepdf[pages=-]{usability-testing-small.pdf}
 
 % INSERT ANNOTATED PICS OF INTERFACE %
 

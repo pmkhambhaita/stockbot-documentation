@@ -6,50 +6,43 @@ import queue           # For thread-safe data exchange
 import config
 import database
 
-class GridVisualizer(tk.Toplevel):
+class GridVisualiser(tk.Toplevel):
     def __init__(self, parent, grid_rows, grid_cols, path=None, start=None, end=None, points=None):
         super().__init__(parent)
-        self.title("Path Visualization")
+        self.title("Path visualisation")
         self.grid_rows = grid_rows
         self.grid_cols = grid_cols
-        
         # Calculate canvas size based on grid dimensions
         cell_size = 40
         canvas_width = grid_cols * cell_size + 1
         canvas_height = grid_rows * cell_size + 1
-        
         # Create canvas for grid drawing
         self.canvas = tk.Canvas(self, width=canvas_width, height=canvas_height, bg="white")
         self.canvas.pack(padx=10, pady=10)
-        
         # Draw the grid
         self.cell_size = cell_size
         self.draw_grid()
-        
         # Draw path and points if provided
         if path and start is not None and end is not None and points is not None:
-            self.visualize_path(path, start, end, points)
+            self.visualise_path(path, start, end, points)
     
     def draw_grid(self):
         # Draw horizontal lines
         for i in range(self.grid_rows + 1):
             y = i * self.cell_size
             self.canvas.create_line(0, y, self.grid_cols * self.cell_size, y, fill="black")
-        
         # Draw vertical lines
         for j in range(self.grid_cols + 1):
             x = j * self.cell_size
             self.canvas.create_line(x, 0, x, self.grid_rows * self.cell_size, fill="black")
     
-    def visualize_path(self, path, start, end, points):
+    def visualise_path(self, path, start, end, points):
         # Draw start and end points (light blue)
         self.draw_cell(start[0], start[1], "light blue")
         self.draw_cell(end[0], end[1], "light blue")
-        
         # Draw intermediate points (yellow)
         for point in points:
             self.draw_cell(point[0], point[1], "yellow")
-        
         # Draw path (green)
         for x, y in path:
             # Skip start, end, and intermediate points to avoid overwriting
@@ -69,63 +62,48 @@ class PathfinderGUI:
         self.root = root
         self.root.title("StockBot")
         self.root.geometry("600x400")
-        
-        # Initialize threading components
+        # Initialise threading components
         self.processing = False
         self.result_queue = queue.Queue()
-        
         # Configure grid weights to enable proper resizing
         self.root.grid_rowconfigure(1, weight=1)
         self.root.grid_columnconfigure(0, weight=1)
-        
         # Create and configure the top frame for input elements
         input_frame = ttk.Frame(root)
         input_frame.grid(row=0, column=0, pady=10, padx=10, sticky='ew')
         input_frame.grid_columnconfigure(0, weight=1)  # Allow input field to expand
-        
         # Create text entry field for coordinates
         self.point_entry = ttk.Entry(input_frame)
         self.point_entry.grid(row=0, column=0, padx=(0, 10), sticky='ew')
-        
         # Add range label after point entry
         self.range_label = ttk.Label(input_frame, text=f"Enter position (1-{rows*cols})")
         self.range_label.grid(row=1, column=0, columnspan=2, pady=(5,0))
-        
         # Create button to add points to the path
         add_button = ttk.Button(input_frame, text="Add Point", command=self.add_point)
         add_button.grid(row=0, column=1)
-        
         # Create main output area for displaying messages (smaller now)
         self.output_text = tk.Text(root, height=5, width=50)
         self.output_text.grid(row=1, column=0, pady=10, padx=10, sticky='nsew')
-        
         # Create bottom frame for control buttons
         button_frame = ttk.Frame(root)
         button_frame.grid(row=2, column=0, pady=5)
-        
         # Add buttons for path finding and clearing
         start_button = ttk.Button(button_frame, text="Find Path", command=self.find_path)
         start_button.grid(row=0, column=0, padx=5)
-        
         clear_button = ttk.Button(button_frame, text="Clear", command=self.clear_all)
         clear_button.grid(row=0, column=1, padx=5)
-        
         # Initialise the pathfinding components with configured grid size
         self.grid = spa.Grid(rows, cols)
         self.path_finder = spa.PathFinder(self.grid)
         self.path_visualiser = spa.PathVisualiser(self.grid)
-        
         # Initialise empty list to store intermediate points
         self.points = []
-
-        # Initialize database with the same dimensions as the grid
+        # Initialise database with the same dimensions as the grid
         self.db = database.InventoryDB(rows, cols)
-        self.db.populate_random_data()  # Initialize with random stock levels
-        
+        self.db.populate_random_data()  # Initialise with random stock levels
         # Create stock management frame
         stock_frame = ttk.Frame(root)
         stock_frame.grid(row=3, column=0, pady=5)
-        
         # Add stock management buttons
         query_button = ttk.Button(stock_frame, text="Query Stock", command=self.query_stock)
         query_button.grid(row=0, column=0, padx=5)
@@ -153,10 +131,8 @@ class PathfinderGUI:
             if quantity <= 0:
                 self.output_text.insert(tk.END, f"Warning: Skipping position {index} - Out of stock\n")
                 return
-            
             # Convert to coordinates (0-based)
             x, y = spa.index_to_coordinates(index, self.grid.cols)
-            
             # Validate the point
             valid, error = spa.validate_point(x, y, self.grid.rows, self.grid.cols)
             if not valid:
@@ -179,7 +155,6 @@ class PathfinderGUI:
         # Clear previous output
         self.output_text.delete(1.0, tk.END)
         self.output_text.insert(tk.END, "Processing path...\n")
-        
         try:
             # Define start and end points of the grid
             start_node = (0, 0)
@@ -206,12 +181,12 @@ class PathfinderGUI:
                 path_str = " -> ".join([str(idx) for idx in path_indices])
                 self.output_text.insert(tk.END, f"Path: {path_str}\n")
                 
-                # Close previous visualization window if it exists
+                # Close previous visualisation window if it exists
                 if hasattr(self, 'viz_window') and self.viz_window and self.viz_window.winfo_exists():
                     self.viz_window.destroy()
                 
-                # Create visualization window
-                self.viz_window = GridVisualizer(
+                # Create visualisation window
+                self.viz_window = GridVisualiser(
                     self.root, 
                     self.grid.rows, 
                     self.grid.cols, 
@@ -234,8 +209,7 @@ class PathfinderGUI:
         self.point_entry.delete(0, tk.END)
         self.output_text.delete(1.0, tk.END)
         self.output_text.insert(tk.END, "Cleared all points\n")
-        
-        # Close visualization window if it exists
+        # Close visualisation window if it exists
         if hasattr(self, 'viz_window') and self.viz_window and self.viz_window.winfo_exists():
             self.viz_window.destroy()
             self.viz_window = None
@@ -267,7 +241,6 @@ class PathfinderGUI:
                 return
                 
             index = int(point_str)
-            
             # Create popup for quantity input
             popup = tk.Toplevel(self.root)
             popup.title("Update Stock")
@@ -298,7 +271,6 @@ def main():
     rows, cols = config.get_grid_config()
     if rows is None or cols is None:
         return  # User closed the config window
-        
     # Create and start the main application window
     root = tk.Tk()
     app = PathfinderGUI(root, rows, cols)

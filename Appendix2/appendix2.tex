@@ -2,4 +2,83 @@
 % ******************************* Thesis Appendix B ********************************
 \chapter{GitHub Commit History}
 
-In this appendix are the prototypes made at each iteration and sprint, annotated by hand with justifications for decisions and code.
+\begin{itemize}
+	% Data extracted from the PDF, formatted as itemize list
+	\item \texttt{f6e7cff}: update help guide
+	\item \texttt{a8b3b6d}: added a missing import (messagebox) for warnings
+	\item \texttt{78c5662}: fixed minor error from function placement
+	\item \texttt{d34c9b4}: updated gui.py to implement new methods
+	\item \texttt{d5a6179}: update algorithms to avoid obstacles
+	\item \texttt{018aaac}: modified the validate\_point function to check for obstacles
+	\item \texttt{c0ab70d}: update the Grid class in spa.py to track obstacles
+	\item \texttt{a8df408}: added validation to $A^{*}$ using the validate\_point function rather than a separate function
+	\item \texttt{3ab3aa6}: added the $A^{*}$ algorithm implementation
+	\item \texttt{52b2b06}: cleaned up old class now that GUI is fully functional and implemented.
+	\item \texttt{4459bcd}: optimise point ordering with timeout and error handling
+	\item \texttt{f31c6e3}: added an emergency fallback in case optimisation takes an excessive amount of time, and added validation to make sure it is only used when there is more than one point and it is enabled
+	\item \texttt{6677497}: added a GUI entry to the app to enable the optimisation
+	\item \texttt{8174e75}: added the genetic optimisation function so points can now be ordered respective to their distances, resulting in a shorter path.
+	\item \texttt{6990578}: Simplified Ul by removing redundant elements and improving input handling
+	\item \texttt{9cd9b34}: added more accurate stock-tracking: it now shows true stock value in advance, warning the user if an items stock is zero AFTER path running at stock level 1.
+	\item \texttt{17bd804}: modified the interface to look more like what stakeholder is expecting.
+	\item \texttt{08510e4}: added markings for out-of-stock and <2 items - persistent markers help the user to identify items to be restocked.
+	\item \texttt{cb5d63f}: strengthened program by adding a fallback when no items are in stock
+	\item \texttt{1f65c46}: added multi-point entry in the entry field, and increased the visibility of the warehouse
+	\item \texttt{688582d}: removed threading due to async issues temporarily while I refine the visual interface.
+	\item \texttt{69eaa8a}: revert to previsualisation
+	\item \texttt{ed3884d}: Merge branch 'main' of \url{https://github.com/pmkhambhaita/stockbot-a-level}
+	\item \texttt{33835f7}: Revert "added colours to the visualisation as described in the design section"
+	\item \texttt{bf6845a}: Revert "added feature so that the grid visualisation appears whether findpath is pressed or not"
+	\item \texttt{d59907b}: Merge branch 'main' of \url{https://github.com/pmkhambhaita/stockbot-a-level}
+	\item \texttt{f0f21a0}: fixed error from using self.cols instead of self.grid.cols
+	\item \texttt{1a0a84a}: made the visualisation fit properly in the window with autoresizing and set minimum and maximum window sizes
+	\item \texttt{eb53083}: fixed an error where the path would not consistently display on the visualisation as the path was not maintained properly
+	\item \texttt{f6862e1}: fixed an error where the path would not consistently display on the visualisation as the path was not maintained properly
+	\item \texttt{1f8d538}: added feature so that the grid visualisation appears whether findpath is pressed or not
+	\item \texttt{6fd7540}: fixed a\_tkinter.TclError: invalid command name ".!toplevel.!canvas" caused by improper handling of the window
+	\item \texttt{7e78e61}: added colours to the visualisation as described in the design section
+	\item \texttt{3b87545}: added a function to draw out the grid
+	\item \texttt{03d4780}: modified visualisation window class to use canvas instead of text widget
+	\item \texttt{6b227f6}: clear button also clears visualisation
+	\item \texttt{d28cc78}: update methods to use the new visualisation window
+	\item \texttt{23cbdd6}: updated the current GUI to use the visualisation window instead of the current interface
+	\item \texttt{dbe52cf}: Created visualisation window class, ready to separate inputs and outputs
+	\item \texttt{2b4b1ac}: created the pages for the configuration - 3 in total, with a basic guide
+	\item \texttt{e8f1d8e}: added basic placeholders for config pages and added navigation systems
+	\item \texttt{9f29ad8}: set up structure for more complex config screen
+	\item \texttt{d1b168e}: added the decrement to stock-checking so it will inform user if point has no stock
+	\item \texttt{4f965e2}: added logging to track/debug
+	\item \texttt{29f1ca1}: added the configuration input so it automatically creates the database based on the input grid config.
+	\item \texttt{7586cb8}: added validation methods and main method to actually create the database
+	\item \texttt{022bcdf}: created the database and a new class to create relevant methods in the future
+	\item \texttt{a4472fb}: Switched to 1-based indexing for point input and display
+	\item \texttt{9f2047f}: added config.py, allowing for the user to change the grid size through spinboxes at the start of the program with validation for negative numbers, closing window etc.
+	\item \texttt{aa510be}: added multi-threading support for pathfinding operations
+	\item \texttt{3f8acc8}: added much more detailed comments
+	\item \texttt{31cd2a2}: unified validation under one function
+	\item \texttt{c1afde0}: added manual array trace of path
+	\item \texttt{9c248be}: made errors more intuitive and clearer
+	\item \texttt{babafb7}: integrated the errors/warnings into the GUI and added logging to a file for debugging.
+	\item \texttt{be7179a}: fixed small error where terminal interface would appear before GUI
+	\item \texttt{256e1a2}: Added a validation function in spa.py to handle point validation - Modified the GUI code to use the new validation function - Removed the terminal input functions from spa.py since they're no longer needed - Added validation for start/end points (0,0 and grid max)
+	\item \texttt{93cddaa}: got GUI elements working, overall good performance but terminal interface also appears. also, can add 0,0 as a point: need to prevent that
+	\item \texttt{2cc86ce}: added the GUI elements to the window: a text box for entering points, an output text box for the path and mulitple buttons
+	\item \texttt{51caad0}: modified tkinter manager to use 'grid' instead of 'pack'
+	\item \texttt{9b42548}: Merge branch 'main' of \url{https://github.com/pmkhambhaita/stockbot-a-level}
+	\item \texttt{dc29116}: Restructured project by moving GUI code to gui.py and consolidating pathfinding logic in spa.py
+	\item \texttt{c78f7fc}: refactor: rename parameters for clarity in Grid and PathFinder classes (Qodana suggestions
+	\item \texttt{1a7da80}: fix: correct path length calculation in PathFinder
+	\item \texttt{121c011}: fix: correct path length calculation in logger message
+	\item \texttt{8597a60}: -
+	\item \texttt{0499de6}: added inline comments to improve code readability
+	\item \texttt{8081015}: added user input capability and validation for input
+	\item \texttt{bc69274}: refactor: add logging and error handling to pathfinding logic
+	\item \texttt{94fef19}: added logging configuration to app.py
+	\item \texttt{c88ec49}: Fixed issue of failed marking of intermediate points in path visualisation
+	\item \texttt{9f2e44b}: Refactor pathfinding logic into Grid and PathFinder classes; add PathVisualiser for grid visualisation
+	\item \texttt{7f76931}: Fixed the symbols by adding the start and end point markings after the path markings, overwriting the symbols with the correct ones.
+	\item \texttt{c90ad6a}: Added a basic path visualisation using symbols for start, end and path.
+	\item \texttt{e2c67a4}: Fixed an issue flagged by Qodana: shadowing names from outer scope:
+	\item \texttt{ad6ff95}: finished the BFS algorithm and added a basic print(path) to check the algorithm.
+	\item \texttt{d2fe05e}: initialised the graph and got started with the BFS algorithm, creating the queue and visited nodes, as well as ensuring that the algorithm only considers orthogonal (UDLR) movements.
+\end{itemize}

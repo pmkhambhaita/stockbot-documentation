@@ -48,17 +48,14 @@ class PathFinder:
         # Initialise queue with starting point and visited set
         queue = [[start]]
         visited = set()
-        
         # Continue searching while there are paths to explore
         while queue:
             path = queue.pop(0)  # Get the next path to explore
             x, y = path[-1]      # Get the last point in the path
-
             # Check if we've reached the destination
             if (x, y) == end:
                 logger.info(f"Path found with length {len(path) - 1}")
                 return path
-
             # Explore unvisited neighbours
             if (x, y) not in visited:
                 visited.add((x, y))
@@ -69,14 +66,12 @@ class PathFinder:
                         if (nx, ny) not in visited:
                             new_path = list(path) + [(nx, ny)]
                             queue.append(new_path)
-
         logger.warning(f"No path found between {start} and {end}")
         return None
 
     def find_path_through_points(self, start, points, end, optimise_order=False):
         """
         Finds a path that visits all intermediate points
-        
         Parameters:
         - start: Starting position
         - points: List of intermediate points to visit
@@ -87,17 +82,14 @@ class PathFinder:
         
         if not points:
             logger.warning("No intermediate points provided")
-            return self.bfs(start, end)
-                
+            return self.bfs(start, end)    
         # If optimise_order is True, find the optimal order to visit points
         if optimise_order and len(points) > 1:
             points = self.optimise_point_order(start, points, end)
             logger.info(f"Optimised point order: {points}")
-
         # Initialise path construction
         full_path = []
         current_start = start
-
         # Find path segments between consecutive points
         for i, point in enumerate(points, 1):
             logger.debug(f"Finding path segment {i} to point {point}")
@@ -108,7 +100,6 @@ class PathFinder:
             else:
                 logger.error(f"Failed to find path segment to point {point}")
                 return None
-
         # Find final path segment to end point
         final_segment = self.bfs(current_start, end)
         if final_segment:
@@ -125,37 +116,29 @@ class PathFinder:
         using a genetic algorithm approach
         """
         logger.info("Optimising point order using genetic algorithm")
-        
         # If only one point, no optimisation needed
         if len(points) <= 1:
             return points
-            
         # Create initial population (different permutations of points)
         population_size = min(100, math.factorial(len(points)))
         population = []
-        
         # Add the original order
         population.append(list(points))
-        
         # Add random permutations
         while len(population) < population_size:
             perm = list(points)
             random.shuffle(perm)
             if perm not in population:
-                population.append(perm)
-                
+                population.append(perm)     
         # Number of generations
         generations = 20
-        
         # For each generation
         for gen in range(generations):
             # Calculate fitness for each permutation
-            fitness_scores = []
-            
+            fitness_scores = [] 
             for perm in population:
                 # Calculate total path length
-                total_length = 0
-                
+                total_length = 0     
                 # Start to first point
                 if self.grid.rows <= 10 and self.grid.cols <= 10:
                     # For small grids, we can use exact path length
