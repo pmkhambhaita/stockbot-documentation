@@ -1058,339 +1058,95 @@ These are just the key features that are integral to my solution. I have also in
 
 \section{Test data}
 
-\subsection{Standard data}
-
-I will be using the following data as a boilerplate environment for post-development in addition to the test data below. These are the parameters I will set for generic testing for the stakeholders. They will test it as they see fit and report back with any final feedback. I will not be providing them with exact data as I wish to simulate a real environment and hence test this software in a less controlled manner; this is why this data is more ambiguous.
-
-\begin{itemize}
-	\item Grid layout: 15 x 15 default, user discretion to change
-	\item Random database generation
-	\item Point selection varying between 2 and 224, using a random number generator
-	\item Number of points varying between 1 and 25, using a random number generator
-\end{itemize}
-
 \subsection{During development}
 
-These tests will be performed during development. The test IDs are in the format TA.B.C where A is the sprint number, B is the iteration number and C is the test number. T.x.F tests are the tests that will be performed under the guidance and view of the stakeholders, while T.x.x tests will be used to test each iteration.
-
-\begin{longtable}{|p{0.08\textwidth}|p{0.2\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|} % 4 columns with specified widths
-	\caption{Iterative Tests During Sprint Ada} \label{tab:sprint_ada_tests_lt_rev} \\
-	\hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\
-	\hline
-	\endfirsthead
-	
-	\multicolumn{4}{c}%
-	{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-	\hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\
-	\hline
-	\endhead
-	
-	\hline \multicolumn{4}{r}{{Continued on next page}} \\
-	\endfoot
-	
-	\hline
-	\endlastfoot
-	
-	% Sprint Tests (Stakeholder Focus - T1.F) - from Table 3.1
-	T1.F.1 & Path found using input points & The system should calculate and display a valid path connecting the start, intermediate (if any), and end points. & Verifies core pathfinding functionality with valid inputs, as recommended by stakeholders. \\
-	\hline
-	T1.F.2 & Input invalid points (letters, numbers and symbols) & The system should reject the input and display a clear error message indicating invalid format or characters. & Ensures robust input validation preventing errors from unexpected data types, as recommended by stakeholders. \\
-	\hline
-	T1.F.3 & Input no points & The system should calculate and display the direct path from the start point to the end point. & Tests handling of edge case where no intermediate stops are requested, as recommended by stakeholders. \\
-	\hline
-	% Iteration Tests (Developer Focus - T1.1, T1.2) - from Table 3.2 / Table 4.1, 4.2
-	T1.1.1 & Input 0,0 and 9,9 (Assuming 10x10 grid, terminal) & System should calculate and output the direct path between start (0,0) and end (9,9). & Verifies core BFS functionality between default start/end nodes, the heart of the program. \\
-	\hline
-	T1.1.2 & Input 1,2 and 5,7 (Terminal/Internal) & System calculates and outputs the shortest path between (1,2) and (5,7). & Tests BFS between arbitrary valid points, core program functionality. \\
-	\hline
-	T1.1.3 & Input -1,-1 and 4,8 (Terminal/Internal) & System should detect (-1,-1) is out of bounds and return an error or None. & Tests boundary validation for negative coordinates to ensure robustness. \\
-	\hline
-	T1.1.4 & Input 0,1 and 10,10 (Assuming 10x10 grid, terminal) & System should detect (10,10) is out of bounds and return an error or None. & Tests boundary validation for coordinates exceeding grid dimensions to ensure robustness. \\
-	\hline
-	T1.2.1 & No intermediate points selected (Terminal/Internal) & System should calculate the path directly from the pre-defined start to the pre-defined end node. & Checks validation measures for the SPA, specifically handling the base case (no intermediate points). \\
-	\hline
-	T1.2.2 & Input 3,4 and 5,8 (Terminal/Internal) & System calculates path from start to (3,4), then from (3,4) to (5,8), then from (5,8) to end. & Verifies the logic for connecting path segments between multiple intermediate points. \\
-	\hline
-	T1.2.3 & Input -1,-1 (Terminal/Internal) & System validation should reject this point as out of bounds. & Checks validation for negative inputs in multi-point context. \\
-	\hline
-	T1.2.4 & Input one valid and one non-valid point (Terminal/Internal) & System should reject the invalid point and either error out or calculate path using only the valid point. & Checks validation for partially invalid input lists. \\
-	\hline
-	T1.2.5 & Input 5 invalid points (Terminal/Internal) & System should reject all points and indicate no valid path can be formed or return an error. & Checks validation against multiple invalid inputs. \\
-	\hline
-	T1.2.6 & Input valid points and verify it is the shortest path (Terminal/Internal) & The output path length should match the expected shortest path length calculated manually or by known BFS properties. & Confirms the core algorithm (BFS) is correctly finding the optimal path (in terms of steps) and validates path length calculation. \\
-	\hline
-\end{longtable}
-
 \begin{longtable}{|p{0.08\textwidth}|p{0.2\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|}
-	\caption{Iterative Tests During Sprint Berners-Lee (GUI Introduction)} \label{tab:sprint_bernerslee_tests_lt_rev} \\
-	\hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\
-	\hline
-	\endfirsthead
-	\multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\ \hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\ \hline \endhead
-	\hline \multicolumn{4}{r}{{Continued on next page}} \\ \endfoot \hline \endlastfoot
-	
-	% Sprint Tests (Stakeholder Focus - T2.F) - from Table 3.1 / Final Testing Table p.102
-	T2.F.1 & Enter "2,3" and click Add Point & Point (2,3) or equivalent itemID added, entry cleared, confirmation shown. & Tests main success path for adding points via GUI, essential for stakeholder use. \\
-	\hline
-	T2.F.2 & Enter "2,2" then "5,5", click Find Path & Grid shows path (0,0) → (2,2) → (5,5) → (9,9) with visualisation. & Tests main success path for finding path with multiple points via GUI. \\
-	\hline
-	T2.F.3 & Enter "abc" and click Add Point & Error message about invalid format. & Targets key validation rule critical for usability and data integrity. \\
-	\hline
-	T2.F.4 & Enter "10,10" and click Add Point (Assuming 10x10 grid) & Error message about out of bounds. & Targets key validation rule critical for usability and data integrity. \\
-	\hline
-	T2.F.5 & Enter "0,0" and click Add Point (Assuming 10x10 grid) & Error about using start point. & Targets key validation rule critical for usability and data integrity. \\
-	\hline
-	T2.F.6 & Add "2,2" and "3,3", click Clear & All points cleared, confirmation message. & Tests the interface reset functionality. \\
-	\hline
-	T2.F.7 & Click Find Path with no points & Error about no points added. & Covers edge case handling (boundary test). \\
-	\hline
-	T2.F.8 & Enter "1,1", "8,1", "8,8", "1,8" sequence & Complete path visiting all points shown. & Covers main success path variations. \\
-	\hline
-	% Iteration Tests (Developer Focus - T2.1, T2.2) - Table 4.3 & 4.4
-	T2.1.1 & Run script (GUI Introduction) & Only GUI appears, no residual terminal interface. & Verifies correct startup sequence and removal of terminal execution. \\
-	\hline
-	T2.1.2 & Launch GUI & Window appears with input field, text area, Add/Find/Clear buttons. & Checks basic GUI layout and widget creation. \\
-	\hline
-	T2.1.3 & Add valid point (e.g., 3,4) & Point added, confirmation in output text. & Tests basic point addition functionality. \\
-	\hline
-	T2.1.4 & Add multiple valid points & Points added sequentially to internal list, confirmation shown. & Ensures multiple points can be added. \\
-	\hline
-	T2.1.5 & Click Find Path with points & Grid visualisation (text-based initially) appears in output text area. & Verifies integration with pathfinding and visualisation output redirection. \\
-	\hline
-	T2.1.6 & Click Clear & Points list cleared, output area cleared/reset message shown. & Tests GUI clear functionality. \\
-	\hline
-	T2.1.7 & Add start point (0,0) & Expected: Rejected. Actual (Iter 1): Added. & Tests validation (initially failing) for reserved start/end points. \\
-	\hline
-	T2.1.8 & Add out-of-bounds point (-1,5) & Expected: Rejected with error in GUI. Actual (Iter 1): Rejected, logged to console. & Tests boundary validation and error message display (initially only console). \\
-	\hline
-	T2.2.1 & Add start point (0,0) & Rejected, error message in GUI ("Cannot use start/end point"). & Verifies improved validation prevents adding start point via GUI. \\
-	\hline
-	T2.2.2 & Add end point (9,9) & Rejected, error message in GUI ("Cannot use start/end point"). & Verifies improved validation prevents adding end point via GUI. \\
-	\hline
-	T2.2.3 & Add out-of-bounds point (-1,5) & Rejected, error message in GUI ("Coordinates ... out of bounds"). & Verifies boundary validation with error message displayed in GUI. \\
-	\hline
-	T2.2.4 & Enter invalid format (’abc’) & Rejected, error message in GUI ("Invalid format..."). & Verifies input format validation with error message displayed in GUI. \\
-	\hline
-	T2.2.5 & Click Find Path with no points & Error message in GUI ("No intermediate points added..."). & Verifies handling of empty point list scenario in GUI. \\
-	\hline
-	T2.2.6 & Perform valid path operation & Path visualisation in GUI, log entries in stockbot\_log.txt. & Confirms successful pathfinding integrates with GUI display and file logging. \\
-	\hline
-\end{longtable}
+\caption{Iterative Tests During Development} \label{tab:sprints_final_tests_combined_renum} \\
+\hline
+\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\
+\hline
+\endfirsthead
 
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline
+\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\
+\hline
+\endhead
 
-\begin{longtable}{|p{0.08\textwidth}|p{0.2\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|}
-	\caption{Iterative Tests During Sprint Cerf} \label{tab:sprint_cerf_tests_lt_rev} \\
-	\hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\
-	\hline
-	\endfirsthead
-	\multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\ \hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\ \hline \endhead
-	\hline \multicolumn{4}{r}{{Continued on next page}} \\ \endfoot \hline \endlastfoot
-	
-	% Iteration Tests (Developer Focus - T3.1A to T3.2D) - Tables 4.6 to 4.12
-	T3.1A.1 & Find path with several points (potentially slow) & GUI remains responsive, "Processing..." message shown, path appears correctly after delay. & Tests responsiveness improvement from threading, verifying threading implementation worth. \\
-	\hline
-	T3.1A.2 & Click Find Path twice quickly & Second click shows "Already processing..." message or is ignored. Only one path result appears. & Ensures locking mechanism prevents issues with concurrent requests due to threading. \\
-	\hline
-	T3.1B.1 & Launch, enter 15x15, click OK & Config closes, main GUI uses 15x15 size. & Verifies config window works as expected and passes dimensions correctly. \\
-	\hline
-	T3.1B.2 & Enter invalid config (0, text, >50) in Spinboxes, click OK & Error messagebox shown, config window stays open. & Confirms config window handles invalid user input correctly. \\
-	\hline
-	T3.1C.1 & Enter itemID 15 (10x10 grid), Add Point & "Added position 15" message shown in output. & Tests adding points using the new 1-N itemID system. \\
-	\hline
-	T3.1C.2 & Add itemIDs 15, 99. Find Path. & Path sequence displayed as "1 → ... → 15 → ... → 99 → ... → 100". & Verifies path output uses the 1-N itemID system correctly. \\
-	\hline
-	T3.1C.3 & Enter invalid itemID (0 or 101 on 10x10 grid) & GUI shows error "Position X out of range (1-100)". & Tests range validation for the 1-N itemID input. \\
-	\hline
-	T3.1C.4 & Start with 15x15 config. Check range label. & Label shows "Enter position (1-225)". & Confirms the GUI range label updates based on configured grid size. \\
-	\hline
-	T3.2A.1 & Delete inventory.db. Run code that instantiates InventoryDB. Run again. & inventory.db created. No errors on second run. & Verifies database initialisation and `CREATE TABLE IF NOT EXISTS` logic. \\
-	\hline
-	T3.2A.2 & Inspect inventory.db schema using DB browser. & `items` table exists with correct columns/types/constraints. & Confirms correct database schema creation, setting up for data interaction. \\
-	\hline
-	T3.2B.1 & Run python database.py. Check console output and inspect DB. & Output shows correct quantities/positions for all items. DB contains expected data. & Verifies `populaterandomdata` and getter methods work correctly in isolation. \\
-	\hline
-	T3.2B.2 & Test validate\_item\_id (e.g., via \_\_main\_\_) with valid, invalid range, non-existent IDs. & Returns True for valid ID, raises ValueError for others. & Ensures core database validation methods handle errors appropriately. \\
-	\hline
-	T3.2B.3 & Test update\_quantity with valid/invalid quantity values (e.g., -1, "abc"). & Updates correctly for valid int >= 0, raises ValueError/TypeError otherwise. & Ensures core database validation methods handle errors appropriately. \\
-	\hline
-	T3.2C.1 & Enter valid itemID, click Query Stock & Correct stock \& position shown. INFO/DEBUG log in file. & Verifies new GUI feature for database interaction works correctly and integrates with logging. \\
-	\hline
-	T3.2C.2 & Enter valid itemID, click Update, enter 50, confirm. Query again. & Update success msg. INFO log. Query shows 50. & Verifies new GUI feature for database interaction works correctly and confirms DB update. \\
-	\hline
-	T3.2C.3 & Enter invalid ID/qty for Query/Update. & GUI error shown. ERROR log created. & Verifies new GUI features handle user input errors correctly. \\
-	\hline
-	T3.2C.4 & Config 15x10 grid. Query/Update itemID 150. & Works correctly. Invalid point handled gracefully. & Ensures database operations respect the configured grid size boundaries. \\
-	\hline
-	T3.2D.1 & Find itemID X with stock=1. Add X. Find Path. Query X. & Point added ("Stock: 1"). Path found. Query shows Stock=0. & Verifies core stock decrementing logic after successful path. \\
-	\hline
-	T3.2D.2 & Try Add Point X again (now stock=0). & Warning "Skipping...Out of stock" shown. Point not added to path list. & Verifies core stock checking requirement: preventing adding zero-stock items. \\
-	\hline
-	T3.2D.3 & Add points Y, Z (stock>0). Find Path. Check stock Y, Z via Query. & Path found. Query shows stock Y--, Z-- (decremented). & Confirms stock decrement applies correctly to multiple items on path. \\
-	\hline
-	% Sprint Tests (Final - T3.F) - Table 4.13
-	T3.F.1 & Config 15x15. Add valid, in-stock itemID 113, add 200. Find path. & GUI responsive, path found/displayed using itemIDs 1 → ... → 113 → ... → 200 → ... → 225. Stock for 113, 200 decremented by 1. & End-to-end test combining config, threading, indexing, pathfinding, and stock decrement. \\
-	\hline
-	T3.F.2 & Config 10x10. Query itemID 1. Update stock to 0. Query again. & Query shows initial stock > 0. Update confirms. Second query shows 0. & Verifies manual stock update and query functionality. \\
-	\hline
-	T3.F.3 & With stock=0 for itemID 1, try Add Point itemID 1. & Error "Skipping position 1 - Out of stock" shown. Point *not* added to path list. & Confirms core requirement: cannot add zero-stock items to path. \\
-	\hline
-	T3.F.4 & Test config screen validation (text, 0, >50). & Error messageboxes shown, prevents confirmation. & Final check on configuration input validation robustness. \\
-	\hline
-\end{longtable}
+\hline \multicolumn{4}{r}{{Continued on next page}} \\
+\endfoot
 
+\hline
+\endlastfoot
 
-\begin{longtable}{|p{0.08\textwidth}|p{0.2\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|}
-	\caption{Iterative Tests During Sprint Dijkstra} \label{tab:sprint_dijkstra_tests_lt_rev} \\
-	\hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\
-	\hline
-	\endfirsthead
-	\multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\ \hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\ \hline \endhead
-	\hline \multicolumn{4}{r}{{Continued on next page}} \\ \endfoot \hline \endlastfoot
-	
-	% Iteration Tests (Developer Focus - T4.1) - Table 4.15
-	T4.1.1 & Find simple path multiple times (post-revert) & Path found correctly each time. No crashes. & Verifies stability after removing threading, ensuring the revert was successful. \\
-	\hline
-	T4.1.2 & Find complex path (longer calculation) (post-revert) & GUI freezes temporarily, path found correctly. No crashes. & Confirms return to synchronous behaviour and basic stability under load. \\
-	\hline
-	T4.1.3 & Run other GUI actions (Query/Update Stock, Clear) after pathfinding (post-revert) & All actions work correctly without async errors. & Ensures other GUI functions remain stable and unaffected by the revert. \\
-	\hline
-\end{longtable}
+% Sprint Ada Tests (T1.F.X)
+T1.F.1 & Path found using input points & The system should calculate and display a valid path connecting the start, intermediate (if any), and end points. & Verifies core pathfinding functionality with valid inputs, as recommended by stakeholders. \\
+\hline
+T1.F.2 & Input invalid points (letters, numbers and symbols) & The system should reject the input and display a clear error message indicating invalid format or characters. & Ensures robust input validation preventing errors from unexpected data types, as recommended by stakeholders. \\
+\hline
+T1.F.3 & Input no points & The system should calculate and display the direct path from the start point to the end point. & Tests handling of edge case where no intermediate stops are requested, as recommended by stakeholders. \\
+\hline
 
-\begin{longtable}{|p{0.08\textwidth}|p{0.2\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|}
-	\caption{Iterative Tests During Sprint Engelbart} \label{tab:sprint_engelbart_tests_lt_rev} \\
-	\hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\
-	\hline
-	\endfirsthead
-	\multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\ \hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\ \hline \endhead
-	\hline \multicolumn{4}{r}{{Continued on next page}} \\ \endfoot \hline \endlastfoot
-	
-	% Iteration Tests (Developer Focus - T5.1 to T5.3) - Tables 4.17 to 4.19
-	T5.1.1 & Click "Show Grid" & Separate window opens with canvas \& grid/numbers. & Tests basic creation and display of the dedicated visualisation window. \\
-	\hline
-	T5.1.2 & Find Path & Visualisation window updates (basic drawing). & Verifies linking between pathfinding and the new visualiser update mechanism. \\
-	\hline
-	T5.1.3 & Click Clear All & Expected: Visualisation canvas clears/resets. Actual (Iter 1): Only text box cleared. & Tests integration of Clear All with visualiser (validating fix needed). \\
-	\hline
-	T5.2.1 & Show Grid, Find Path, Clear, Show. & Viz opens; Path/points coloured; Clears output; Re-shows. & Tests full cycle of visualiser state management (path display, clearing, redraw). \\
-	\hline
-	T5.2.2 & Find path with low (<2) \& zero stock points. & Viz shows path, low stock points orange, zero stock red. & Verifies correct stock level colour-coding in the graphical visualisation. \\
-	\hline
-	T5.2.3 & Test viz with large grid (20x20). & Scrollbars appear \& work. Window sized well. & Checks visualiser scaling for larger grids and scrollbar functionality. \\
-	\hline
-	T5.2.4 & Close Viz window (’X’). Find Path. Show Grid. & No errors. New window opens with correct path/grid. & Tests robustness against user closing/reopening the visualiser window. \\
-	\hline
-	T5.3.1 & Launch GUI & Simplified layout, 600x500 size. & Confirms UI simplification changes (removing elements) applied correctly. \\
-	\hline
-	T5.3.2 & Enter "15 99", Find Path (stock ok) & Path "1 → ... → 100" including 15, 99 calculated. & Tests new multi-point space-separated input method for pathfinding. \\
-	\hline
-	T5.3.3 & Enter "15 abc 99". Find Path. & Error for "abc". Path calc for 15, 99. & Tests validation handling (ignoring invalid parts) within multi-point input parsing. \\
-	\hline
-	T5.3.4 & Query Stock via button/pop-up. & Correct stock shown. & Verifies stock query using the new dedicated pop-up dialog workflow. \\
-	\hline
-	T5.3.5 & Update Stock via button/pop-ups. Query. & Update confirmed. Query shows new stock. & Verifies stock update using the new dedicated pop-up dialog workflow. \\
-	\hline
-	T5.3.6 & Enter only zero-stock points. Find Path. & Warning shown. Direct start → end path calculated. & Tests fallback logic when no valid intermediate points with stock are entered. \\
-	\hline
-	% Sprint Tests (Final - T5.F) - Table 4.20
-	T5.F.1 & Config 15x15. Enter multiple valid points. Find Path. Check Viz. & Path computed. Viz shows path, stock colours correctly. Main GUI simple/clean. & End-to-end validation of refined UI, multi-point input, and visualiser integration. \\
-	\hline
-	T5.F.2 & Update stock to 0 via pop-up. Find path. Check Viz. & Update works. Viz shows item red (OOS). Path avoids/warns about item. & Validates interaction between manual stock update, pathfinding (stock check), and visualisation. \\
-	\hline
-	T5.F.3 & Enter only zero-stock points. Find Path. & Warning messages. Direct start → end path computed \& shown on Viz. & Confirms fallback path behaviour and its correct visualisation. \\
-	\hline
-	T5.F.4 & Test Query/Update pop-ups. Test Clear All. & Pop-ups work. Clear All resets GUI and Viz correctly (OOS markers remain). & Final validation of stock pop-ups and Clear All state management (visualiser persistence). \\
-	\hline
-\end{longtable}
+% Sprint Berners-Lee Tests (T2.F.X)
+T2.F.1 & Enter "2,3" and click Add Point & Point (2,3) or equivalent itemID added, entry cleared, confirmation shown. & Tests main success path for adding points via GUI, essential for stakeholder use. \\
+\hline
+T2.F.2 & Enter "2,2" then "5,5", click Find Path & Grid shows path (0,0) → (2,2) → (5,5) → (9,9) with visualisation. & Tests main success path for finding path with multiple points via GUI. \\
+\hline
+T2.F.3 & Enter "abc" and click Add Point & Error message about invalid format. & Targets key validation rule critical for usability and data integrity. \\
+\hline
+T2.F.4 & Enter "10,10" and click Add Point & Error message about out of bounds. & Targets key validation rule critical for usability and data integrity. \\
+\hline
+T2.F.5 & Enter "0,0" and click Add Point & Error about using start point. & Targets key validation rule critical for usability and data integrity. \\
+\hline
+T2.F.6 & Add "2,2" and "3,3", click Clear & All points cleared, confirmation message. & Tests the interface reset functionality. \\
+\hline
+T2.F.7 & Click Find Path with no points & Error about no points added. & Covers edge case handling (boundary test). \\
+\hline
+T2.F.8 & Enter "1,1", "8,1", "8,8", "1,8" sequence & Complete path visiting all points shown. & Covers main success path variations. \\
+\hline
 
+% Sprint Cerf Tests (T3.F.X)
+T3.F.1 & Config 15x15. Add valid, in-stock itemID 113, add 200. Find path. & GUI responsive, path found/displayed using itemIDs 1 → ... → 113 → ... → 200 → ... → 225. Stock for 113, 200 decremented by 1. & End-to-end test combining config, threading, indexing, pathfinding, and stock decrement. \\
+\hline
+T3.F.2 & Config 10x10. Query itemID 1. Update stock to 0. Query again. & Query shows initial stock > 0. Update confirms. Second query shows 0. & Verifies manual stock update and query functionality. \\
+\hline
+T3.F.3 & With stock=0 for itemID 1, try Add Point itemID 1. & Error "Skipping position 1 - Out of stock" shown. Point *not* added to path list. & Confirms core requirement: cannot add zero-stock items to path. \\
+\hline
+T3.F.4 & Test config screen validation (text, 0, >50). & Error messageboxes shown, prevents confirmation. & Final check on configuration input validation robustness. \\
+\hline
 
-\begin{longtable}{|p{0.08\textwidth}|p{0.2\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|}
-	\caption{Iterative Tests During Sprint Floyd (Algorithms)} \label{tab:sprint_floyd_tests_lt_rev} \\
-	\hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\
-	\hline
-	\endfirsthead
-	\multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\ \hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\ \hline \endhead
-	\hline \multicolumn{4}{r}{{Continued on next page}} \\ \endfoot \hline \endlastfoot
-	
-	% Iteration Tests (Developer Focus - T6.1, T6.2) - Tables 4.22 & 4.23
-	T6.1.1 & Enter 3+ points, Optimisation OFF. Find Path. & Path found, points visited in the order entered. & Verifies pathfinding works correctly without GA point order optimisation. \\
-	\hline
-	T6.1.2 & Enter 3+ points, Optimisation ON. Find Path. & Path found, point order potentially changed. Log confirms optimisation ran. Total path length likely shorter. & Confirms GA optimisation runs and potentially improves path length. \\
-	\hline
-	T6.1.3 & Enter 1-2 points, Optimisation ON. Find Path. & Path found. Log confirms optimisation skipped as unnecessary. & Tests edge case handling for GA (not needed for <2 intermediate points). \\
-	\hline
-	T6.1.4 & Toggle "Optimize Point Order" via GUI Menu. & Checkbox state updates. Log message confirms optimisation enabled/disabled. & Verifies the GUI toggle for enabling/disabling GA optimisation works. \\
-	\hline
-	T6.1.5 & Enter >10 points, Optimisation ON. Find Path. & Warning logged about limiting points. Optimisation runs on first 10. Path found. & Checks handling of GA limits (necessary for performance). \\
-	\hline
-	T6.2.1 & Select BFS via Algorithm menu, Find Path (simple). & Path found using BFS. Log confirms BFS used. & Verifies BFS algorithm selection via GUI and correct execution. \\
-	\hline
-	T6.2.2 & Select A* via Algorithm menu, Find Path (simple). & Path found using A*. Log confirms A* used. Path length identical to BFS. & Verifies A* selection and correctness (should match BFS on unweighted grid). \\
-	\hline
-	T6.2.3 & Select A*, find path involving boundary checks. & Path found correctly, A* uses validate\_point for neighbour checks. & Confirms A* correctly uses the unified validation function after refactoring. \\
-	\hline
-	T6.2.4 & Switch between BFS/A* algorithm selection via menu multiple times. & Selection updates correctly. Correct algorithm called on Find Path (check log). & Tests the GUI mechanism for switching between pathfinding algorithms. \\
-	\hline
-	% Sprint Tests (Final - T6.F) - Table 4.24
-	T6.F.1 & Run complex path (3+ pts), BFS selected, Optimisation OFF. Note length. & Shortest path segments found using BFS. Points visited in order entered. & Baseline test: Verifies BFS path calculation without optimisation. \\
-	\hline
-	T6.F.2 & Run same path, A* selected, Optimisation OFF. Note length. & Shortest path segments found using A*. Points visited in order entered. Total length matches T6.F.1. & Verifies A* path calculation and compares length to BFS (should be equal). \\
-	\hline
-	T6.F.3 & Run same path, BFS selected, Optimisation ON. Note length. & Path segments via BFS. Point order potentially changed by GA for shorter total length than T6.F.1. & Tests the combined effect of GA optimisation with BFS path segments. \\
-	\hline
-	T6.F.4 & Run same path, A* selected, Optimisation ON. Note length. & Path segments via A*. Point order potentially changed by GA. Total length matches T6.F.3 (should be same shortest path). & Tests the combined effect of GA optimisation with A* path segments. \\
-	\hline
-\end{longtable}
+% Sprint Dijkstra Final Tests (T4.F.X) - None listed, skipped in renumbering
 
-\begin{longtable}{|p{0.08\textwidth}|p{0.2\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|}
-	\caption{Iterative Tests During Sprint Gates (Obstacles)} \label{tab:sprint_gates_tests_lt_rev} \\
-	\hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\
-	\hline
-	\endfirsthead
-	\multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\ \hline
-	\textbf{Test ID} & \textbf{Test Description} & \textbf{Expected Behaviour} & \textbf{Justification} \\ \hline \endhead
-	\hline \multicolumn{4}{r}{{Continued on next page}} \\ \endfoot \hline \endlastfoot
-	
-	% Iteration Tests (Developer Focus - T7.1, T7.2) - Tables 4.26 & 4.27
-	T7.1.1 & Manually set obstacle in grid state (debug). Run BFS/A*. & Path avoids the set obstacle cell. & Verifies backend algorithms respect obstacle data set internally. \\
-	\hline
-	T7.1.2 & Manually set obstacle completely blocking path. Run BFS/A*. & Algorithms return None (no path found). & Verifies algorithms correctly handle impossible paths due to obstacles. \\
-	\hline
-	T7.1.3 & Call validate\_point on an obstacle location. & Function returns False. & Confirms validation function correctly identifies obstacles added to grid state. \\
-	\hline
-	T7.1.4 & Call validate\_point on a non-obstacle location. & Function returns True. & Confirms validation function passes non-obstacle locations correctly. \\
-	\hline
-	T7.2.1 & Click Obstacle Mode, enter valid ID, click Toggle. Check Viz. & Obstacle appears on visualiser grid. Confirmation message shown. & Tests GUI interaction for adding an obstacle and verifies visual feedback. \\
-	\hline
-	T7.2.2 & Add obstacle blocking direct path. Find Path. Check Viz. & Path routes around obstacle. Viz shows obstacle correctly. & Tests integration: obstacle added via GUI is avoided by pathfinding and shown visually. \\
-	\hline
-	T7.2.3 & Click Obstacle Mode, enter invalid ID (e.g., start/end, text). Click Toggle. & Error messagebox shown. No obstacle added. & Tests validation for obstacle input via the GUI pop-up. \\
-	\hline
-	T7.2.4 & Add obstacle. Click Obstacle Mode, enter same ID, click Toggle. Check Viz. & Obstacle removed from visualiser grid. Confirmation message shown. & Tests GUI interaction for removing an obstacle and verifies visual feedback. \\
-	\hline
-	T7.2.5 & Add obstacles. Click Clear All. Show Grid. & Visualiser grid shows no obstacles. & Verifies Clear All correctly resets internal obstacle state and visualisation. \\
-	\hline
-	% Sprint Tests (Final - T7.F) - Table 4.28
-	T7.F.1 & Add obstacle (itemID X). Try add point at X. & Cannot add point, error shown. & Confirms point validation prevents adding locations marked as obstacles. \\
-	\hline
-	T7.F.2 & Add obstacle (itemID Y) blocking direct path. Find Path (BFS/A*). & Path successfully routes around Y. Viz shows Y obstacle marker. & End-to-end test of adding obstacle via GUI, path avoidance, and visualisation. \\
-	\hline
-	T7.F.3 & Surround end point with obstacles. Find Path. & "No valid path found" error. & Tests handling of impossible scenarios created by user-placed obstacles. \\
-	\hline
-	T7.F.4 & Add obstacles. Clear All. Add obstacle at same previous location. Find path. & Obstacles cleared. Can add obstacle again. Path found (if possible). & Verifies obstacle state reset via Clear All and re-addition functionality. \\
-	\hline
+% Sprint Engelbart Final Tests (Renumbered T4.F.X, originally T5.F.X)
+T4.F.1 & Config 15x15. Enter multiple valid points. Find Path. Check Viz. & Path computed. Viz shows path, stock colours correctly. Main GUI simple/clean. & End-to-end validation of refined UI, multi-point input, and visualiser integration. \\
+\hline
+T4.F.2 & Update stock to 0 via pop-up. Find path. Check Viz. & Update works. Viz shows item red (OOS). Path avoids/warns about item. & Validates interaction between manual stock update, pathfinding (stock check), and visualisation. \\
+\hline
+T4.F.3 & Enter only zero-stock points. Find Path. & Warning messages. Direct start → end path computed \& shown on Viz. & Confirms fallback path behaviour and its correct visualisation. \\
+\hline
+T4.F.4 & Test Query/Update pop-ups. Test Clear All. & Pop-ups work. Clear All resets GUI and Viz correctly (OOS markers remain). & Final validation of stock pop-ups and Clear All state management (visualiser persistence). \\
+\hline
+
+% Sprint Floyd Final Tests (Renumbered T5.F.X, originally T6.F.X)
+T5.F.1 & Run complex path (3+ pts), BFS selected, Optimisation OFF. Note length. & Shortest path segments found using BFS. Points visited in order entered. & Baseline test: Verifies BFS path calculation without optimisation. \\
+\hline
+T5.F.2 & Run same path, A* selected, Optimisation OFF. Note length. & Shortest path segments found using A*. Points visited in order entered. Total length matches T1.F.1 length. & Verifies A* path calculation and compares length to BFS (should be equal). \\ % Updated test ID ref
+\hline
+T5.F.3 & Run same path, BFS selected, Optimisation ON. Note length. & Path segments via BFS. Point order potentially changed by GA for shorter total length than T1.F.1 length. & Tests the combined effect of GA optimisation with BFS path segments. \\ % Updated test ID ref
+\hline
+T5.F.4 & Run same path, A* selected, Optimisation ON. Note length. & Path segments via A*. Point order potentially changed by GA. Total length matches T3.F.3 length (should be same shortest path). & Tests the combined effect of GA optimisation with A* path segments. \\ % Updated test ID ref
+\hline
+
+% Sprint Gates Final Tests (Renumbered T6.F.X, originally T7.F.X)
+T6.F.1 & Add obstacle (itemID X). Try add point at X. & Cannot add point, error shown. & Confirms point validation prevents adding locations marked as obstacles. \\
+\hline
+T6.F.2 & Add obstacle (itemID Y) blocking direct path. Find Path (BFS/A*). & Path successfully routes around Y. Viz shows Y obstacle marker. & End-to-end test of adding obstacle via GUI, path avoidance, and visualisation. \\
+\hline
+T6.F.3 & Surround end point with obstacles. Find Path. & "No valid path found" error. & Tests handling of impossible scenarios created by user-placed obstacles. \\
+\hline
+T6.F.4 & Add obstacles. Clear All. Add obstacle at same previous location. Find path. & Obstacles cleared. Can add obstacle again. Path found (if possible). & Verifies obstacle state reset via Clear All and re-addition functionality. \\
+\hline
 \end{longtable}
 
 \newpage
@@ -1492,3 +1248,7 @@ These tests will be performed during development. The test IDs are in the format
 	44 & Verify colour coding in grid visualisation for out-of-stock cells & Out-of-stock cells should be highlighted in red for 0, orange for near 0 & Tests correct visual indication of stock levels & Functional \\
 	\hline
 \end{longtable}
+
+\subsection{Standard data}
+
+I will be using the following data as a boilerplate environment for post-development in addition to the test data below. These are the parameters I will set for generic testing for the stakeholders for them to be able to comment on my program. Grid layout: 15 x 15 default, user discretion to change. Random database generation. Point selection varying between 2 and 224, using a random number generator
