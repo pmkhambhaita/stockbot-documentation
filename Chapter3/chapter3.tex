@@ -8,7 +8,7 @@
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.5\linewidth]{Images/breakdown1.png}
-	\caption{A further breakdown/structure of the pathfinding feature}
+	\caption{A layer breakdown of my solution}
 \end{figure}
 
 \section{An initial breakdown of my solution}
@@ -34,7 +34,12 @@ This layer outlines the central features that the system offers in order for my 
     \item Direct feedback to user - keep the user informed on what is happening, such as what path is being traced, what items are out of stock and so on.
 \end{itemize}
 
-See section x.x.x for a detailed explanation of these features, and see the next few pages for a basic outline of a further breakdown.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.38\linewidth]{Images/guioutline.png}
+	\caption{A further breakdown/structure of the GUI}
+\end{figure}
+
 
 \newpage
 
@@ -61,13 +66,6 @@ See section x.x.x for a detailed explanation of these features, and see the next
 	% \label{fig:combined_features}
 	
 \end{figure}
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=1\linewidth]{Images/guioutline.png}
-	\caption{A further breakdown/structure of the GUI}
-\end{figure}
-
 
 \newpage
 
@@ -102,16 +100,14 @@ Another objective is to create a functioning and responsive GUI with the followi
 
 \end{itemize}
 
-See sections x.x.x for a prospective GUI
-
 \newpage
 
 \subsection{Main Libraries}
 
 This layer lists the underlying software libraries or tools that are used to build the solution; these libraries provide the building blocks for each feature. Some examples of libraries include:
 \begin{itemize}
-    \item SQLite: This is a database management system that is used to store and manage data. In this case, I will be using it to store the warehouse layout, item IDs and quantities, as well as a boolean/binary property for whether a coordinate is an obstacle or not.
-    \item Tkinter: This is Python's de-facto standard GUI package. It is a thin object-oriented layer on top of Tcl/Tk. Tkinter will be used to construct the GUI due to its simplicity and compatibility with Python. I will specifically using the 'grid' display sub-manager to create each aspect of the interface - this is due to the greater control it offers over positioning.
+    \item SQLite: This is a database management system that is used to store and manage data. In this case, I will be using it to store the warehouse layout, item IDs and quantities.
+    \item Tkinter: This is Python's standard GUI package. Tkinter will be used to construct the GUI due to its simplicity and compatibility with Python. I will specifically using the 'grid' display sub-manager to create each aspect of the interface - this is due to the greater control it offers over positioning.
     \item Threading: This library is used to run multiple threads concurrently within a single process. Threads allow for parallel execution of tasks, enabling efficient utilization of system resources and the ability to perform multiple operations simultaneously. In my case, my algorithm is complex, requiring a large amount of processing power; threading allows the algorithm to run efficiently on the device by not restricting all processes like the GUI and database functions to run on a single thread - separating the algorithm will improve performance.
     \item Logging: This is fairly self-explanatory - the logging library is a built-in module used for generating and managing log messages. It provides a flexible framework for tracking events, debugging, and recording errors in a standardized and structured manner. I plan to use this to instrument my code - this will allow users to see exactly what is happening behind the GUI and allows me to target and debug any issues that may arise.
 
@@ -144,7 +140,7 @@ Using the computational methods/principles, I felt it was best to split my solut
 		\centering
 		% Adjusted width from 0.3\linewidth to \linewidth to fit minipage
 		\includegraphics[width=\linewidth]{Images/top-down-diagram.png}
-		\caption{A basic top-down system diagram}
+		\caption{A top-down system diagram of the structure of my solution}
 		\label{fig:topdown} % Optional label
 	\end{minipage}
 	
@@ -771,7 +767,7 @@ class AStarPathfinder:
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=1\linewidth]{Flowcharts/dbinit.png}
+    \includegraphics[width=0.52\linewidth]{Flowcharts/dbinit.png}
 \end{figure}
 
 \newpage
@@ -780,7 +776,7 @@ class AStarPathfinder:
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.4\linewidth]{Flowcharts/dbquery.png}
+    \includegraphics[width=0.3\linewidth]{Flowcharts/dbquery.png}
 \end{figure}
 
 \newpage
@@ -832,7 +828,7 @@ On the subject of GUIs, what rules should a GUI actually follow to be optimal fo
 
 \item \textbf{Consistency and standards:} Interface designers should ensure that both the graphic elements and terminology are maintained across similar platforms. For example, an icon that represents one category or concept should not represent a different concept when used on a different screen.
 
-\item \textbf{Error prevention:} Whenever possible, design systems so that potential errors are kept to a minimum. Users do not like being called upon to detect and remedy problems, which may on occasion be beyond their level of expertise. Eliminating or flagging actions that may result in errors are two possible means of achieving error prevention.
+\item \textbf{Error prevention:} Whenever possible, design systems so that potential errors are kept to a minimum. Users do not like being called upon to detect and remedy problems, which may on occasion be beyond their level of expertise. Eliminating or flagging actions that may result in errors are two possible means of achieving error recognition/prevention.
 
 \item \textbf{Recognition rather than recall:} Minimise cognitive load by maintaining task-relevant information within the display while users explore the interface. Human attention is limited and we are only capable of maintaining around five items in our short-term memory at one time. Due to the limitations of short-term memory, designers should ensure users can simply employ recognition instead of recalling information across parts of the dialogue. Recognising something is always easier than recall because recognition involves perceiving cues that help us reach into our vast memory and allowing relevant information to surface. For example, we often find the format of multiple choice questions easier than short answer questions on a test because it only requires us to recognise the answer rather than recall it from our memory.
 
@@ -990,6 +986,8 @@ While I initially did not want to include a legend, adding one would benefit the
 
 While the algorithms are complete, the solution has not yet been unified into a functional app; as I have used OOP principles in the code, it will be much easier to create a working prototype. See section x.x.x for the benefits OOP provides. The goal is to combine the shortest path algorithms (SPA), the graphical user interface (GUI), and the database management system into a cohesive application structured around these three core features. I have broken down the unification process into the module breakdown, the role of each module, the key functions and the interactions between modules.
 
+\newpage
+
 \subsection{Key modules breakdown}
 
 \subsubsection{GUI}
@@ -1006,7 +1004,7 @@ This serves as the main entry point for the program. It will manage user input, 
             \item Interaction with Database: Calls Database to save or load grid states, configurations, or paths.
         \end{itemize}
     \item Effect of unification: \newline
-    The GUI acts as a bridge between the user and the underlying logic. It passes the data it collects (like grid configurations or waypoints) to SPA for computations and calls Database for storage tasks. All modules are coordinated through the GUI, making it the central orchestrator.
+    The GUI acts as a bridge between the user and the underlying logic. It passes the data it collects (like grid configurations or waypoints) to SPA for computations and calls Database for storage tasks.
 \end{itemize}
 
 
@@ -1022,7 +1020,7 @@ This contains the core algorithms for computing the shortest path. It contains l
             \item Result Output: Returns the computed path to the GUI for visualisation.
         \end{itemize}
     \item Effect of unification: \newline
-        SPA is isolated from the GUI and database logic, focusing purely on computation. It accepts data from GUI and processes it using the appropriate algorithm. By keeping the logic separate, the module remains reusable and scalable, allowing future algorithms to be added without modifying the GUI or database.
+        SPA is isolated from the GUI and database logic, focusing purely on computation. It accepts data from GUI and processes it using the appropriate algorithm.
 \end{itemize}
 
 
@@ -1039,10 +1037,9 @@ This will provides data persistence by saving and loading grid configurations, w
             \item Stock verification: Verifies that stock exists and if not, to remove the item from queue.
         \end{itemize}
     \item Effect of unification: \newline
-        Database connects with GUI to store or retrieve data as requested by the user. This separation of concerns allows the GUI to focus on interaction and visualization, while the database handles storage operations independently.
+        Database connects with GUI to store or retrieve data as requested by the user.
 \end{itemize}
 
-These are just the key features that are integral to my solution. I have also included some quality-of-life features that I feel the stakeholders would benefit from, which I will include if time permits.
 
 \newpage
 

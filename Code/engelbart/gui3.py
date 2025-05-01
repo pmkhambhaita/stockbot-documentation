@@ -9,8 +9,6 @@ import queue            # For thread-safe data exchange
 import config
 import database
 
-# ... # GridVisualizer class definition is identical to gui2.py
-
 class PathfinderGUI:
     def __init__(self, root, rows=10, cols=10):
         # Store the root window and configure basic window properties
@@ -18,7 +16,7 @@ class PathfinderGUI:
         # ... # self.root.title("StockBot")
         self.root.geometry("600x500")  # Adjusted size for cleaner layout
 
-        # Initialize threading components
+        # Initialise threading components
         self.processing = False
         self.result_queue = queue.Queue()
 
@@ -76,7 +74,7 @@ class PathfinderGUI:
         update_button = ttk.Button(button_frame, text="Update Quantity", command=self.update_stock, width=20)
         update_button.grid(row=1, column=0, padx=10, pady=5, sticky='w')
 
-        grid_button = ttk.Button(button_frame, text="Open grid visualization", command=self.show_grid, width=20)
+        grid_button = ttk.Button(button_frame, text="Open grid visualisation", command=self.show_grid, width=20)
         grid_button.grid(row=1, column=1, padx=10, pady=5, sticky='e')
 
         # Add Find Path button separately
@@ -88,9 +86,9 @@ class PathfinderGUI:
         self.path_finder = spa.PathFinder(self.grid)
         self.path_visualiser = spa.PathVisualiser(self.grid)
 
-        # Initialize database with the same dimensions as the grid
+        # Initialise database with the same dimensions as the grid
         self.db = database.InventoryDB(rows, cols)
-        self.db.populate_random_data()  # Initialize with random stock levels
+        self.db.populate_random_data()  # Initialise with random stock levels
 
     def find_path(self):
         # Get and clean the input string from the entry field
@@ -164,10 +162,10 @@ class PathfinderGUI:
             for x, y, index, quantity in valid_input_points:
                 if quantity > 0:
                     valid_points.append((x, y))
-                    self.points.append((x, y))  # Add to class points list for visualization
+                    self.points.append((x, y))  # Add to class points list for visualisation
                 else:
                     skipped_points.append((x, y, index))
-                    # Add to out-of-stock tracking if visualization window exists
+                    # Add to out-of-stock tracking if visualisation window exists
                     if hasattr(self, 'viz_window') and self.viz_window and self.viz_window.winfo_exists():
                         # Only add to out-of-stock if it was already at 0 before this run
                         self.viz_window.out_of_stock_positions.add((x, y))
@@ -180,7 +178,7 @@ class PathfinderGUI:
             if not valid_points:
                 self.output_text.insert(tk.END, "No valid points with stock available. Finding direct path from start to end.\n")
                 path = self.path_finder.find_path_through_points(start_node, [], end_node)
-                valid_points = []  # Empty list for visualization
+                valid_points = []  # Empty list for visualisation
             else:
                 # Find path through all valid points
                 path = self.path_finder.find_path_through_points(start_node, valid_points, end_node)
@@ -204,9 +202,9 @@ class PathfinderGUI:
                 path_str = " -> ".join([str(idx) for idx in path_indices])
                 self.output_text.insert(tk.END, f"Path: {path_str}\n")
 
-                # If visualization window doesn't exist, create it
+                # If visualisation window doesn't exist, create it
                 if not hasattr(self, 'viz_window') or not self.viz_window or not self.viz_window.winfo_exists():
-                    self.viz_window = GridVisualizer(
+                    self.viz_window = GridVisualiser(
                         self.root,
                         self.grid.rows,
                         self.grid.cols,
@@ -218,13 +216,13 @@ class PathfinderGUI:
                     )
                 else:
                     # If window exists, clear it and update with new path
-                    self.viz_window.clear_visualization()
+                    self.viz_window.clear_visualisation()
                     self.viz_window.path = path
                     self.viz_window.start = start_node
                     self.viz_window.end = end_node
                     self.viz_window.points = valid_points
                     self.viz_window.db = self.db
-                    self.viz_window.visualize_path(path, start_node, end_node, valid_points)
+                    self.viz_window.visualise_path(path, start_node, end_node, valid_points)
 
                 # Clear points after finding path
                 self.points = []
@@ -245,9 +243,9 @@ class PathfinderGUI:
         # self.path_distance display removed
         self.output_text.insert(tk.END, "Cleared all points\n")
 
-        # Clear visualization but keep window open
+        # Clear visualisation but keep window open
         if hasattr(self, 'viz_window') and self.viz_window and self.viz_window.winfo_exists():
-            self.viz_window.clear_visualization()
+            self.viz_window.clear_visualisation()
 
     def query_stock(self):
         # Create popup for position input
@@ -307,7 +305,7 @@ class PathfinderGUI:
                         self.db.update_quantity(index, new_qty)
                         self.output_text.insert(tk.END, f"Updated stock for position {index} to {new_qty}\n")
 
-                        # Update visualization if window exists
+                        # Update visualisation if window exists
                         if hasattr(self, 'viz_window') and self.viz_window and self.viz_window.winfo_exists():
                             x, y = spa.index_to_coordinates(index, self.grid.cols)
 
@@ -316,17 +314,17 @@ class PathfinderGUI:
                             else:
                                 self.viz_window.out_of_stock_positions.discard((x, y))
 
-                            # Refresh visualization, potentially redrawing the path
+                            # Refresh visualisation, potentially redrawing the path
                             if self.viz_window.path:
-                                self.viz_window.clear_visualization()
-                                self.viz_window.visualize_path(
+                                self.viz_window.clear_visualisation()
+                                self.viz_window.visualise_path(
                                     self.viz_window.path,
                                     self.viz_window.start,
                                     self.viz_window.end,
                                     self.viz_window.points
                                 )
                             else:
-                                self.viz_window.clear_visualization()
+                                self.viz_window.clear_visualisation()
 
                         qty_popup.destroy()
                     except ValueError:
@@ -340,8 +338,3 @@ class PathfinderGUI:
                 pos_popup.destroy()
 
         ttk.Button(pos_popup, text="Next", command=get_quantity).pack(pady=5)
-
-    # ... # show_grid method is identical to gui2.py
-
-# ... # main function is identical to gui2.py
-# ... # if __name__ == "__main__": block is identical to gui2.py

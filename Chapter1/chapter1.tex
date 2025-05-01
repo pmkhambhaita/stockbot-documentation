@@ -52,7 +52,7 @@ As you can see in Figure 1.3, the current model of a warehouse worker seems less
 
 \section{Computational methods}
 
-This problem is well suited for a computer as there is a valid and usable solution using computational methods. StockBot can perform operations much more efficiently than a human, as these are menial tasks requiring minimal thinking power but rather a continual set of instructions to perform certain tasks \textbf{and those tasks only}, a framework which computers excel at. Below I have listed justifications of a computational approach to this problem.
+This problem is well suited for a computer as there is a valid and usable solution using computational methods. StockBot can perform operations much more efficiently than a human, as these are menial tasks requiring minimal thinking power. A computer is designed to execute a continual set of instructions to perform certain tasks \textbf{and those tasks only} Below I have listed justifications of a computational approach to this problem.
 
 \subsection{Thinking Abstractly}
 Since this is not an industrial project, I will need to decide what aspects of the solution I can remove to make my program more appropriate, keeping only the features that are necessary. Initially, these are the abstractions I proposed, which I will consider with my stakeholders:
@@ -62,7 +62,7 @@ Since this is not an industrial project, I will need to decide what aspects of t
 
     \item Grid layout only: most warehouses are grids for optimal storage capacity. I felt that the extremely small minority without such a layout would not benefit from the solution, hence a focus on rectangular formats only.
 
-    \item Simple visualisations: Too complex GUIs can lead to unnecessary complexity and cognitive overload, therefore I will be focussing on creating an interface with only the functions I implement (while still maintaining usability), with little else in terms of design.
+    \item Simple visualisations: Too complex GUIs can lead to unnecessary complexity, therefore I will be focussing on creating an interface with only the functions I implement (while still maintaining usability), with little else in terms of design.
 \end{itemize}
 
 \subsection{Thinking Ahead}
@@ -112,7 +112,7 @@ This will be useful for determining what operations or sub-programs should be ru
 My end user for such a product could hypothetically be any business, small or large, that uses warehouses or other organised storage systems. For example, an e-commerce business could benefit from a robotic worker to efficiently pack multiple orders.
 \textbf{\newline}
 \newline
-In my case, my father will be the primary stakeholder - he works for Currys, where I have seen first-hand the day-to-day warehouse operations as well as possible improvements that could be made to the current model. My secondary stakeholders are 2 teachers, Mr Ryan Slater and Mr Alex Johnson, both of whom have taken a vested interest in this project.
+In my case, my father will be the primary stakeholder - he works for Currys, where I have seen first-hand the day-to-day warehouse operations as well as possible improvements that could be made to the current model. My secondary stakeholders (less involved) are 2 teachers, Mr Ryan Slater and Mr Alex Johnson, both of whom have taken an interest in this project. They will serve as external opinions and reviewers.
 \newline
 To evaluate which features they would require, I will conduct some interviews and questionnaires to build the best possible product and implement the most relevant features.
 
@@ -302,14 +302,9 @@ This questionnaire is designed to gather detailed insights from my father. The g
         \item Not important
     \end{itemize}
 
-    \item \textbf{How important is it for the system to provide real-time updates on progress (e.g., which items have been collected, remaining items)?}
-    \begin{itemize}
-        \item Very important
-        \item \textbf{\underline{Moderately important}}
-        \item Not important
-    \end{itemize}
-
 \end{enumerate}
+
+\newpage
 
 \subsection*{Section 3: Usability}
 
@@ -351,7 +346,7 @@ I think the primary feature should be the path-finding algorithm. It's what will
 Employee @ Currys PLC
 
 \newpage
-\subsection{Secondary Stakeholder Questionnaire \& Responses}
+\subsection{Secondary Stakeholder Data}
 
 \subsection*{Purpose}
 This questionnaire is designed to gather feedback from my secondary stakeholders (teachers) on the features and usability of the proposed solution. The goal is to ensure the project aligns with client expectations as well as offer excellent usability. As such, this questionnaire focuses more on usability features as well as assessing whether possible features presented to them would be of use and as such incorporated into the solution.
@@ -440,11 +435,8 @@ This questionnaire is designed to gather feedback from my secondary stakeholders
 We agree that the shortest path algorithm is critical to the solution, without it the program is useless. It should aim to be efficient enough to be a good replacement for current operations. Integration with a database could be good, but it is not as essential. If it can be done, then excellent. Same with scalability, it is excellent to have but your program should aim to be usable first-and-foremost. Also, you might want to look at a way that people can input their own data quickly, as I guess manually filling out inventory levels is quite time-consuming
 \vspace{0.7cm}
 \newline
-
 \textbf{\underline{Mr Ryan Slater \& Mr Alex Johnson}} \newline
 
-
-\newpage
 
 \subsection{Conclusion}
 

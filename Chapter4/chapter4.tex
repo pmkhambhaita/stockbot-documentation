@@ -330,7 +330,7 @@ T1.1.1 and T1.1.2 were successful, meaning the core functionality of the program
 \begin{itemize}
     \item \textbf{GitHub Commits:} c90ad6a, 7f76931, 9f2e44b, c88ec49, 94fef19, bc69274, 8081015, 0499de6
     \item \textbf{Explanation:}
-    Reviewing Iteration 1 highlighted that managing the BFS logic, user input, potential future state (like obstacles), and visualisation within a single procedural script was becoming unwieldy. Specifically, integrating the multi-point logic (OCSP-003)  and the terminal visualisation (OCSP-002)  required passing numerous parameters between functions, increasing the risk of errors and making code harder to read and debug. Therefore, transitioning to an Object-Oriented approach in Iteration 2 was justified to encapsulate related data and behaviour (Grid state, Pathfinding logic, Visualisation) into distinct classes, improving modularity, testability, and preparing the structure for future feature additions like the GUI."
+    Reviewing Iteration 1 highlighted that managing the BFS logic, user input, potential future state (like obstacles), and visualisation within a single procedural script was becoming gradually more difficult to work with. Specifically, integrating the multi-point logic (OCSP-003) and the terminal visualisation (OCSP-002) required passing numerous parameters between functions, increasing the risk of errors and making code harder to read and debug. Therefore, I have transitioned to an object-oriented approach in Iteration 2.
 \end{itemize}
 
 \textbf{Code Quality:}
@@ -435,7 +435,6 @@ Almost all tests were successful, and all previous errors have been resolved. Ho
 \subsubsection{Review:}
  Overall this iteration was very successful. I have now completed what I set out to do in this sprint. There were some minor errors along the way, but they were fixed very quickly: they were mainly logic errors rather than syntax.
 
-\clearpage
 \subsection{Sprint Review and Retrospective}
 
 \subsubsection{Accomplishments}
@@ -446,7 +445,7 @@ Almost all tests were successful, and all previous errors have been resolved. Ho
 
 \subsubsection{Final testing}
 
-This testing was recommended by my stakeholders; they each came up with 1 test in a certain area they would like me to perform. This testing was conducted using the data provided in Section x.x.x. In this case, since this program has only implemented the SPA, they will only be using the respective criteria:
+This testing was recommended by my stakeholders; they each came up with 1 test in a certain area they would like me to perform. In this case, since this program has only implemented the SPA, they will only be using the respective criteria:
 
 \begin{itemize}
 \item Grid is 15 x 15
@@ -561,7 +560,7 @@ This GUI implementation uses Python's built-in Tkinter library. This choice was 
 The architecture now consists of two main Python files:
 \begin{itemize}
 	\item \verb|spa.py|: Contains the backend logic classes (\verb|Grid|, \verb|PathFinder|, \verb|PathVisualiser|) and helper functions (\verb|validate_point|). It also handles logging configuration. The classes remain largely unchanged from Sprint Ada, ensuring the core pathfinding algorithm is stable.
-	\item \verb|gui.py|: Introduces the \verb|PathfinderGUI| class, responsible for creating and managing all Tkinter widgets. It allows user interaction, calling methods from \verb|spa.py| for validation and pathfinding, and displaying results.
+	\item \verb|gui.py|: Contains the new \verb|PathfinderGUI| class, responsible for creating and managing all Tkinter widgets. It allows user interaction, calling methods from \verb|spa.py| for validation and pathfinding, and displaying results.
 \end{itemize}
 
 \newpage
@@ -1495,7 +1494,7 @@ The database is now correctly sized based on the user's startup configuration. D
 \end{itemize}
 
 \newpage
-\subsubsection*{Placeholder: Iteration 2D Code Implementation Snippets}
+\subsubsection*{Prototype: Iteration 2D}
 
 \begin{verbatim}
 
@@ -1590,13 +1589,6 @@ The application is now fully functional regarding stock checking. It prevents ad
 	\item Completed OCSP-020: Added comments and logging throughout; unified validation.
 \end{itemize}
 
-\subsubsection{Challenges \& Learning}
-\begin{itemize}
-	\item Implementing the threading correctly with \verb|queue| and \verb|root.after| was definitely the most technically challenging part, as getting inter-thread communication with a GUI right can be fiddly. Extensive logging helped debug this.
-	\item Managing the coordinate system conversion (1-N vs \verb|(row, col)|) required careful attention across multiple files (\verb|gui.py|, \verb|spa.py|, \verb|database.py|) to ensure consistency. Using helper functions was essential here.
-	\item Deciding on the exact workflow for stock checking (check on add, decrement after find) involved thinking through the simulation logic to make it realistic.
-\end{itemize}
-
 \subsubsection{Final testing}
 These final tests were designed to ensure all the new components (config, threading, indexing, database, stock logic) worked together correctly and met the sprint goals. T3.F.3 is particularly important as it verifies the core stock-checking requirement.
 
@@ -1617,8 +1609,6 @@ These final tests were designed to ensure all the new components (config, thread
 	\end{tabularx}
 	\caption{Final testing results for Sprint Cerf}
 \end{table}
-
-\newpage
 
 \textbf{Justification:} Testing was performed across all mini-iterations, verifying each feature component and integration. Final testing confirmed that requirements relating to configuration, responsiveness, usability (numbering), and the core stock checking/decrementing logic were met, demonstrating that testing informed development throughout the sprint.
 
@@ -1642,17 +1632,24 @@ These final tests were designed to ensure all the new components (config, thread
 		\item \textbf{Stock Logic:} Prevents planning with unavailable items and correctly simulates stock depletion.
 	\end{itemize}
 	\textbf{Conclusion:} Robustness is significantly enhanced through threading, comprehensive validation including stock checks, clear user feedback, modular design with error handling, and improved diagnostics via logging.
-		
+
+\subsubsection{Stakeholder Comments}
+
+This is coming along excellently. One thing to watch out for is the interface: Don't sacrifice usability for performance. It is good to see everything is being built up. (Minash Khambhaita)		
+
+
 \subsubsection{Link}
 This sprint successfully integrated the core database functionality and stock management logic, directly addressing my stakeholders' need to simulate item availability. The preparatory work on coordinate abstraction, configuration, and threading also substantially improved the application's usability, flexibility, and performance. The application now models a warehouse scenario more realistically.
-
-\newpage
 
 \section{Sprint Dijkstra}
 
 This sprint, Sprint Dijkstra, became entirely focused on addressing a critical stability issue that emerged from the previous sprint's work. While Sprint Cerf successfully introduced database functionality, the threading implementation (\verb|aa510bec|) added to improve GUI responsiveness began causing significant problems during a quick test during development at the start of this phase. I encountered intermittent crashes and asynchronous errors (specifically \verb|Tcl_AsyncDelete| errors, which indicated issues with threads modifying \verb|Tkinter| elements improperly).
 
 Debugging these issues was extremely difficult and time-consuming. Pinpointing the exact cause within the thread communication logic (\verb|queue| and \verb|root.after| interactions) was taking up too much time, hence I made the difficult but necessary decision to prioritise reliability over the responsiveness enhancement offered by threading. The sole focus of this sprint was to fix the issues caused by threading.
+
+\subsection{Explanation}
+
+The errors first began immediately after Sprint Cerf: I had mistakenly input 25 instead of 15 for the rows and columns. Upon running the pathfinder, it crashed immediately with an async error. I retraced the program and used my IDE's debugger, however I was unable to pinpoint the exact source from where this was coming from. After more research on the internet (I had found a StackOverflow answer which somewhat helped to explain but not solve the problem), I made the decision to remove threading from my program: it was evident it would continually cause problems on larger warehouses: I would put this down to Tkinter's relatively low safety protocols involving threading.
 
 \subsection{Tasks}
 
@@ -1669,11 +1666,7 @@ Based on this critical need for stability, the single task for this sprint was:
 	\caption{Tasks for Sprint Dijkstra}
 \end{table}
 
-\subsection{Explanation}
 
-The errors first began immediately after Sprint Cerf: I had mistakenly input 25 instead of 15 for the rows and columns. Upon running the pathfinder, it crashed immediately with an async error. I retraced the program and used my IDE's debugger, however I was unable to pinpoint the exact source from where this was coming from. After more research on the internet (I had found a StackOverflow answer which somewhat helped to explain but not solve the problem), I made the decision to remove threading from my program: it was evident it would continually cause problems on larger warehouses: I would put this down to Tkinter's relatively low safety protocols involving threading.
-
-\clearpage
 \subsection{Sprint Planning Details}
 
 \subsubsection{Technical Approach}
@@ -1697,7 +1690,6 @@ Imports for \verb|threading| and \verb|queue| were removed from \verb|gui.py|. N
 \begin{itemize}
 	\item Progress made: Identified threading as the source of instability. Successfully reverted commit \verb|aa510bec| using \verb|git revert dd54ffd --no-edit| (commit \verb|688582d...|). Confirmed removal of related code and restoration of synchronous \verb|find_path| execution. (Achieved OCSP-021)
 	\item Blockers identified: The initial time spent trying (and failing) to debug the threading issues before deciding to revert.
-	\item Plan for next iteration: Sprint complete. Proceed to next sprint with a stable application, focusing now on the UI improvements.
 \end{itemize}
 
 \clearpage
@@ -1857,10 +1849,9 @@ Standard Python libraries only.
 \begin{itemize}
 	\item Progress made: Updated main GUI layout. Added fallback path logic. Removed redundant widgets. Changed stock query/update to use pop-ups. Modified \verb|find_path| for multi-point entry. Cleaned up code. *(Achieved OCSP-027, OCSP-028, OCSP-029, OCSP-030, OCSP-031)*
 	\item Blockers identified: Refactoring \verb|find_path| for multi-point input. Smooth pop-up implementation.
-	\item Plan for next iteration: Sprint complete.
 \end{itemize}
 
-\clearpage
+
 \subsection{Sprint Engelbart Implementation}
 
 % --- Iteration 1 ---
@@ -1879,14 +1870,7 @@ Standard Python libraries only.
 	\item \textbf{Justification:} This established the separate window using the more appropriate \verb|Canvas| widget (OCSP-022) and connected it to the main application's controls (OCSP-023), providing the base for the detailed graphical display. Basic drawing logic was added (OCSP-024).
 \end{itemize}
 
-\textbf{Code Quality:}
-\begin{itemize}
-	\item Annotations added: Docstrings for the new class and methods. Comments explaining canvas setup.
-	\item Modular approach: Visualisation logic begins to be encapsulated in \verb|VisualisationWindow|.
-	\item Robustness: Foundation laid for a more robust visualisation than text output.
-\end{itemize}
 
-\newpage
 \subsubsection*{Prototype: Iteration 1}
 
 \lstinputlisting[style=custompython]{Code/engelbart/gui1.py}
@@ -1898,7 +1882,7 @@ Standard Python libraries only.
 \subsubsection{Testing:}
 \begin{table}[htbp]
 	\centering
-	\begin{tabularx}{\textwidth}{|l|X|p{4.5cm}|p{1.5cm}|c|}
+	\begin{tabularx}{\textwidth}{|l|X|p{4.5cm}|p{4cm}|c|}
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
@@ -1923,7 +1907,6 @@ Standard Python libraries only.
 	\item Basic window management implemented (\verb|withdraw| on close).
 \end{itemize}
 
-\newpage
 
 % --- Iteration 2 ---
 \subsubsection{Iteration 2: Core Visualisation Implementation \& Refinement}
@@ -2207,7 +2190,7 @@ My approach involved implementing the GA point optimisation first, integrating i
 		\item Define \verb|a_star_search(self, start, end)| method in \verb|spa.py|'s \verb|PathFinder| class (Note: initially named `astar`).
 		\item Use \verb|heapq| as a priority queue, calculate heuristic using \verb|manhattan_distance|, track costs with \verb|g_score|, \verb|f_score|, and reconstruct path using \verb|came_from|. Implement the main A* loop. (OCSP-032)
 		\item Add \verb|set_algorithm| method to \verb|PathFinder| and modify \verb|find_path_through_points| to use the selected algorithm (\verb|self.find_path| dispatcher).
-		\item Add Algorithm selection menu to GUI (\verb|self.algorithm_var| defaulting to 'bfs', radio buttons for BFS/A*). Add \verb|set_algorithm| method in GUI to update selection. Modify \verb|gui.find_path| to call the specific algorithm based on selection (though this is now partly handled by the backend `find_path_through_points` change). (OCSP-033.2, OCSP-034)
+		\item Add Algorithm selection menu to GUI (\verb|self.algorithm_var| defaulting to 'bfs', radio buttons for BFS/A*). Add \verb|set_algorithm| method in GUI to update selection. Modify \verb|gui.find_path| to call the specific algorithm based on selection (though this is now partly handled by the backend `findpaththroughpoints` change). (OCSP-033.2, OCSP-034)
 		\item Refine A* neighbour validation to use \verb|spa.validate_point|. (OCSP-036)
 		\item Add comments explaining A* concepts. (OCSP-037)
 	\end{itemize}
@@ -2355,7 +2338,7 @@ Application allows selection of BFS or A* via menu for calculating path segments
 
 \subsubsection{Fixes}
 \begin{itemize}
-	\item I initially implemented A*'s own validation, but this was flawed. To correct this, I instead used \verb|spa.validate_point| as it was premade and easier to use, as well as making the code easier to maintain.
+	\item I initially implemented A*'s own validation, but this was pointless; I had already made the validation function. I used \verb|spa.validate_point| as it was premade and easier to use, as well as making the code easier to maintain.
 \end{itemize}
 
 \subsubsection{Validation}
@@ -2490,7 +2473,7 @@ I implemented this feature by first adding obstacle tracking and avoidance to th
         \item GUI Button: Added an "Obstacle mode" button to \verb|PathfinderGUI.__init__| in \verb|gui.py| and linked its command to \verb|self.toggle_obstacle_mode| (Commit \verb|d34c9b4...|). (OCSP-032)
         \item Obstacle Toggling Logic: Implemented the \verb|toggle_obstacle_mode(self)| method in \verb|PathfinderGUI|. This uses a pop-up window with an entry field for the \verb|itemID|. It validates the input (range, format, not start/end), converts to coordinates, and calls \verb|self.grid.add_obstacle| or \verb|self.grid.remove_obstacle|. It provides user feedback via \verb|messagebox| and the main \verb|output_text|. The \verb|find_path| method was also updated to check if an input point is an obstacle (Commits \verb|d34c9b4...|, \verb|78c5662...|, \verb|a8b3b6d...|). (OCSP-033)
         \item Visualisation Update: Modified the \verb|GridVisualiser| class in \verb|gui.py|. Added an \verb|obstacles| attribute. Created an \verb|update_obstacles| method to receive the obstacle set from the main GUI and trigger a redraw. Updated \verb|draw_cell| to check for obstacles and draw them (e.g., black with white text). Updated \verb|visualise_path| and \verb|clear_visualisation| to correctly handle drawing obstacles and their layering relative to other elements (Commit \verb|78c5662...|). (OCSP-035)
-        \item State Management & Comments: Ensured \verb|show_grid| calls \verb|update_obstacles| when showing the visualiser. Resetting obstacles in \verb|clear_all| was likely handled by grid re-initialisation (though not explicit in commits, assumed part of the logic). Added comments. (OCSP-036, OCSP-037)
+        \item State Management \& Comments: Ensured \verb|show_grid| calls \verb|update_obstacles| when showing the visualiser. Resetting obstacles in \verb|clear_all| was likely handled by grid re-initialisation (though not explicit in commits, assumed part of the logic). Added comments. (OCSP-036, OCSP-037)
         \item Justification: Provides the user interface for managing obstacles, integrates this with the backend grid state, ensures the visualisation reflects obstacles, and handles state correctly.
     \end{itemize}
 \end{enumerate}

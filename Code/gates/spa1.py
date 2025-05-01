@@ -52,7 +52,6 @@ class PathFinder:
         self.grid = grid_in
         # Default algorithm
         self.algorithm = "bfs"  # Options: "bfs", "astar"
-    
         # Define possible movement directions (up, down, left, right)
         self.directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
         if grid_in:
@@ -77,7 +76,6 @@ class PathFinder:
         # Initialise queue with starting point and visited set
         queue = [[start]]
         visited = set([start])
-        
         # Continue searching while there are paths to explore
         while queue:
             path = queue.pop(0)  # Get the next path to explore
@@ -92,7 +90,6 @@ class PathFinder:
             for dx, dy in self.directions:
                 nx, ny = current[0] + dx, current[1] + dy
                 next_pos = (nx, ny)
-                
                 # Check if the new position is valid and not visited
                 if (0 <= nx < self.grid.rows and 0 <= ny < self.grid.cols and 
                     next_pos not in visited and not self.grid.is_obstacle(nx, ny)):
@@ -123,11 +120,9 @@ class PathFinder:
     def astar(self, start, end):
         """
         A* pathfinding algorithm implementation
-        
         Parameters:
         - start: Starting position (row, col)
         - end: End position (row, col)
-        
         Returns:
         - List of positions forming the path from start to end, or None if no path found
         """
@@ -149,14 +144,11 @@ class PathFinder:
         import heapq
         open_set = []
         heapq.heappush(open_set, (0, start))
-        
         # Dictionaries to store g_score and f_score
         g_score = {start: 0}  # Cost from start to current node
         f_score = {start: self.heuristic(start, end)}  # Estimated total cost
-        
         # Dictionary to reconstruct path
         came_from = {}
-        
         # Set of visited nodes
         closed_set = set()
         
@@ -172,7 +164,6 @@ class PathFinder:
                     path.append(current)
                 path.reverse()
                 return path
-                
             # Add current to closed set
             closed_set.add(current)
             

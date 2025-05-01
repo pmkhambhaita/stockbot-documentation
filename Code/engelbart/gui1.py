@@ -18,12 +18,10 @@ class VisualisationWindow:
         # Add close button
         close_button = ttk.Button(self.window, text="Close", command=self.window.withdraw)
         close_button.grid(row=2, column=0, pady=10)
-        
         # Store grid dimensions and cell size
         self.rows = 0
         self.cols = 0
         self.cell_size = 60  # Default cell size in pixels
-        
         # Initially hide the window
         self.window.withdraw()
     
@@ -47,7 +45,6 @@ class PathfinderGUI:
         self.root = root
         self.root.title("StockBot")
         self.root.geometry("600x400")
-
         # Create visualisation window
         self.viz_window = VisualisationWindow(root)
 # ...
@@ -55,14 +52,11 @@ class PathfinderGUI:
         # Store grid dimensions
         self.rows = rows
         self.cols = cols
-        
-        # Clear previous drawings
+        # Clear previou drawings
         self.canvas.delete("all")
-        
         # Calculate total grid size
         grid_width = self.cols * self.cell_size
         grid_height = self.rows * self.cell_size
-        
         # Configure canvas scrolling region
         self.canvas.configure(scrollregion=(0, 0, grid_width, grid_height))
         
@@ -80,10 +74,8 @@ class PathfinderGUI:
             for j in range(cols):
                 # Calculate position ID (1-based)
                 pos_id = (i * cols) + j + 1
-                
                 # Calculate cell center
                 x = j * self.cell_size + self.cell_size // 2
                 y = i * self.cell_size + self.cell_size // 2
-                
                 # Draw position ID
                 self.canvas.create_text(x, y, text=str(pos_id), font=("Arial", 10))

@@ -7,7 +7,7 @@
 
 \section{Research on current implementations}
 
-Companies like Amazon and Ocado have been at the forefront of technological advancement, deploying sophisticated robotic systems to improve efficiency, reduce costs, and enhance safety.
+Companies like Amazon and Ocado have been at the forefront of these automated systems, deploying sophisticated robotic systems to improve efficiency, reduce costs, and enhance safety.
 
 \begin{figure}[h!] 
 \centering    
@@ -18,7 +18,7 @@ Companies like Amazon and Ocado have been at the forefront of technological adva
 
 \subsection{History of warehouse robots}
 
-The history of warehouse robotics is relatively recent. General Motors pioneered the field in 1961 by installing the first robotic arm, known as Unimate \cite{a2024_joseph}, to automate tasks in manufacturing. For several decades, warehouse robots weren't sophisticated enough to go beyond pre-programmed tasks. Around the 21st century, advances in computing power and sensors enabled robots to perform tasks with greater autonomy and independence. The development of real-time image recognition software and improvements in robotic movement eventually led to the creation of robots capable of navigating warehouse environments.
+The history of warehouse robotics is relatively recent. General Motors pioneered the field in 1961 by installing the first robotic arm, known as Unimate \cite{a2024_joseph}, to automate tasks in manufacturing. For several decades, warehouse robots weren't sophisticated enough to go beyond pre-programmed tasks. Around the 21st century, advances in computing power and sensors enabled robots to perform tasks with greater autonomy and independence. The development of real-time image recognition software and improvements in robotic movement eventually led to the creation of robots behind services like Amazon delivery and online shopping.
 
 \newpage
 
@@ -53,14 +53,14 @@ Similar to Amazon but a more sophisticated, robots reserve both physical slots a
 \subsubsection{Swarm Behaviour Implementation}
 While the system uses a central system for control, it also implements swarm principles; robots communicate with neighbouring units to form general patterns of movement that distribute across the grid faster. This approach allows the warehouse to gracefully degrade performance when components fail, rather than experiencing catastrophic failures due to a single failure. \newline
 \textbf{ }
-\newline While some of these implementations by Ocado are impressive, I do not believe I will be able to implement anything similar from this, other than the model of robots moving in a 2D space despite a 3D warehouse. Since Ocado store the same item vertically, I could apply the same principle to StockBot, reducing the need for 3D considerations, which would make my project much more complex and beyond the scope of my aim. \newline References: \cite{a2024_joseph}, \cite{group_2024_the}, \cite{group_2023_the}, \cite{group_2020_explained}
+\newline While some of these implementations by Ocado are impressive, I do not believe I will be able to implement anything similar from this, other than the model of robots moving in a 2D space despite a 3D warehouse. Since Ocado store the same item vertically, I could apply the same principle to StockBot, reducing the need for 3D considerations, which would make my project much more complex and beyond the scope of this project. \newline References: \cite{a2024_joseph}, \cite{group_2024_the}, \cite{group_2023_the}, \cite{group_2020_explained}
 
 \subsection{AutoStore: Cube Storage}
 
 AutoStore's approach to automated storage and retrieval is similar to Ocado, using a three-dimensional storage cube accessed by robots operating on the top surface. Ironically, they were in a 3-year legal battle with Ocado over the patents surrounding these robots, before settling to share the patent in a mutually beneficial agreement \cite{speed_2023_ocado}
 
 \subsubsection{Cube Storage Efficiency}
-The AutoStore system achieves remarkable storage density by eliminating aisles entirely. Bins are stacked directly on top of each other in a dense grid, with robots traversing the top surface and retrieving bins through vertical shafts. This approach achieves significantly higher storage density than traditional automated systems and conventional shelf storage.
+The AutoStore system achieves better storage density by eliminating aisles entirely. Bins are stacked directly on top of each other in a dense grid, with robots traversing the top surface and retrieving bins through vertical shafts. This approach achieves significantly higher storage density than traditional automated systems and conventional shelf storage.
 
 \subsubsection{Grid-Based Robot Movement}
 The robots move on an aluminium grid structure along straight paths, but with a unique feature; when two robots need to traverse the same grid space, one robot can physically drive on top of another, then continue its journey when the bottom robot moves to its destination.
@@ -194,12 +194,14 @@ Instead of relying on a sequential list-based approach commonly used by human wo
 \end{itemize}
 
 \subsubsection{Benefits}
-This algorithmic approach provides a significant advantage over human collection methods, which typically follow a list-based sequence regardless of physical layout. By calculating optimal routes, the system can reduce travel time, particularly for orders containing multiple items from different warehouse sections.
+This algorithmic approach provides a significant advantage over human collection methods, which typically follow a list-based sequence regardless of physical layout. The SPA system can reduce travel time, particularly for orders containing multiple items from different warehouse sections.
+
+\newpage
 
 \subsection{Obstacle Placement}
 
 \subsubsection{Purpose and Functionality}
-To create a realistic simulation environment, I will implement an obstacle placement system that allows operators to block off specific items or areas in the warehouse, simulating real-world scenarios where certain parts of the warehouse may be temporarily inaccessible.
+To create a realistic simulation environment, I will implement an obstacle placement system that allows operators to block off specific items or areas in the warehouse.
 
 \subsubsection{Implementation Details}
 \begin{itemize}
@@ -210,7 +212,7 @@ To create a realistic simulation environment, I will implement an obstacle place
 \end{itemize}
 
 \subsubsection{Benefits}
-This feature will ensure the robot can operate effectively in a realistic warehouse environment where certain pathways may be blocked or items may be temporarily inaccessible. By allowing operators to place obstacles, the system can be tested under various scenarios, demonstrating how automated systems can adapt to changing warehouse conditions.
+This feature will ensure the robot can operate effectively in a realistic warehouse environment where certain pathways may be blocked or items may be temporarily inaccessible.
 
 \subsection{Direct Feedback}
 
@@ -226,7 +228,7 @@ I will implement a comprehensive feedback mechanism that provides real-time stat
 \end{itemize}
 
 \subsubsection{Benefits}
-This feature enables warehouse management to track the status of each order in real-time, facilitating better coordination between automated systems and human workers. The detailed feedback will also provide valuable data for system optimisation, allowing for continuous improvement of pathfinding algorithms and warehouse layout based on actual performance metrics.
+This feature enables warehouse management to track the status of each order in real-time, facilitating better coordination between automated systems and human workers. The detailed feedback coukd also provide valuable data for any future system optimisation.
 
 \subsection{Environment persistence}
 \subsubsection{Purpose and functionality}
@@ -253,7 +255,7 @@ The Breadth-First Search (BFS) algorithm, while comprehensive in finding the sho
 
 
 \subsubsection{Stock Checking Performance}
-Database queries for stock verification increase linearly with the number of items requested, creating significant performance overhead. Each stock check operation requires a separate database query, and without advanced optimisation techniques like batch processing or prepared statements, these queries introduce latency. As well as this, the integration of real-time inventory checks during pathfinding adds computational overhead that can increase path calculation time. This performance impact becomes more pronounced as the number of potential collection points increases.
+Database queries for stock verification increase linearly with the number of items requested, creating significant performance overhead. Each stock check operation requires a separate database query, and without advanced optimisation techniques like batch processing or prepared statements, these queries introduce latency. As well as this, the integration of inventory checks during pathfinding adds computational overhead that can increase path calculation time. This performance impact becomes more noticeable as the number of potential collection points increases.
 
 \subsection{Limitations from software \& library choice}
 
@@ -261,7 +263,7 @@ Database queries for stock verification increase linearly with the number of ite
 SQLite's file-based architecture imposes significant limitations on concurrent access patterns when multiple system instances attempt to read from or write to the database simultaneously. Unlike client-server database systems, SQLite uses file-level locking mechanisms \cite{sqlite_locking_v3} that restrict concurrent write operations, creating potential bottlenecks when a user enters a large number of items. These locks prevent other processes from modifying the database until the current transaction completes.
 
 \subsubsection{Performance Bottlenecks}
-Python's Global Interpreter Lock (GIL) \cite{ajitsaria_python_gil} restricts parallelism for CPU-bound operations like complex pathfinding calculations or heavy data processing, which are both aspects of my solution. Combined with GIL, string operations used extensively for database queries, logging, and data formatting create significant memory overhead as strings are immutable (unable to be changed)\cite{dev_python_strings}. This structure overall reduces the efficiency of my solution; the interpreted nature of Python fundamentally limits certain algorithmic optimisations that would be possible in compiled languages like C++ or Rust.
+Python's Global Interpreter Lock (GIL) \cite{ajitsaria_python_gil} restricts parallelism for CPU-bound operations like complex pathfinding calculations or heavy data processing, which are both aspects of my solution. Combined with GIL, string operations used extensively for database queries, logging, and data formatting create significant memory overhead as strings are immutable (unable to be changed)\cite{dev_python_strings}. This structure overall reduces the efficiency of my solution; as Python is interpreted, it fundamentally limits certain algorithmic optimisations that would be possible in compiled languages like C++ or Rust, where programs are tailored to certain architectures.
 
 \subsection{Limitations from time \& software choice}
 
@@ -279,9 +281,9 @@ Below are the tools and software I plan to use to develop my solution.
 
 \begin{itemize}
     \item IDE: IntelliJ IDEA
-    \item Libraries: tkinter, threading, heapq, logging, sys (see Section x.x.x for the reasoning)
-    \item Methodology: Custom - see section 2.7
-    \item Version Control: GitHub
+    \item Libraries: tkinter, threading, heapq, logging, sys
+    \item Methodology: Custom - see section 2.8
+    \item Version Control: GitHub (see Appendix B for commit history)
     \item Task tracking for iterative development: Linear
     \item Development OS: Fedora 40
 
@@ -303,7 +305,7 @@ RAM        & 2GB                              & 4GB                             
 Disk space & 10GB                             & 20GB                              &  \\
 OS         & Windows, macOS, Linux            & Windows, macOS, Linux             &  
 \end{tblr}
-\end{table} \newline I have based these requirements on the recommended Python specifications, accounting for the fact I may use a complex AI algorithm (see Section x.x.x). These requirements are by no means restricted. These only apply to the deployment of the software. \newline \textbf{Justification:} Most people have a similar or higher-performance computer at home, and these requirements mean my software can run easily alongside other apps, offering a better experience.
+\end{table} \newline I have based these requirements on the recommended Python specifications, accounting for the fact I may use a complex AI algorithm (see Section 3.2). These requirements are by no means restricted. These only apply to the deployment of the software. \newline \textbf{Justification:} Most people have a similar or higher-performance computer at home, and these requirements mean my software can run easily alongside other apps, offering a better experience.
 
 \subsection{Software}
 

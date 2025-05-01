@@ -15,405 +15,405 @@
 \contentsline {subsection}{\numberline {1.5.1}Primary Stakeholder Data}{6}{subsection.1.5.1}%
 \contentsline {subsubsection}{Data collection}{6}{subsection.1.5.1}%
 \contentsline {subsubsection}{Gathered data}{6}{Item.3}%
-\contentsline {subsection}{\numberline {1.5.2}Secondary Stakeholder Questionnaire \& Responses}{10}{subsection.1.5.2}%
-\contentsline {subsection}{\numberline {1.5.3}Conclusion}{12}{subsection.1.5.3}%
-\contentsline {subsubsection}{Primary Features}{12}{subsection.1.5.3}%
-\contentsline {subsubsection}{Secondary Features}{12}{Item.31}%
-\contentsline {subsubsection}{Desirable/Optional Features}{13}{Item.34}%
-\contentsline {chapter}{\numberline {2}Exploring the solution}{14}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Research on current implementations}{14}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}History of warehouse robots}{14}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Amazon Robotics (formerly Kiva Systems)}{15}{subsection.2.1.2}%
-\contentsline {subsubsection}{Centralised Control with Distributed Execution}{15}{subsection.2.1.2}%
-\contentsline {subsubsection}{Reservation-Based Traffic Management}{15}{subsection.2.1.2}%
-\contentsline {subsubsection}{Dynamic Re-slotting and Inventory Positioning}{15}{subsection.2.1.2}%
-\contentsline {subsubsection}{Multi-Objective Path Optimisation}{15}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Ocado Smart Platform: The Grid-Based Approach}{15}{subsection.2.1.3}%
-\contentsline {subsubsection}{The Hive Mind Architecture}{15}{subsection.2.1.3}%
-\contentsline {subsubsection}{4D Path Planning}{16}{subsection.2.1.3}%
-\contentsline {subsubsection}{Swarm Behaviour Implementation}{16}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}AutoStore: Cube Storage}{16}{subsection.2.1.4}%
-\contentsline {subsubsection}{Cube Storage Efficiency}{16}{subsection.2.1.4}%
-\contentsline {subsubsection}{Grid-Based Robot Movement}{16}{subsection.2.1.4}%
-\contentsline {subsubsection}{Bin Retrieval Algorithms}{16}{subsection.2.1.4}%
-\contentsline {subsubsection}{Decentralised Control with Hierarchical Oversight}{16}{Item.41}%
-\contentsline {section}{\numberline {2.2}Research on pathfinding algorithms}{17}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Breadth-First Search (BFS)}{17}{subsection.2.2.1}%
-\contentsline {subsubsection}{Properties}{17}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Depth-First Search (DFS)}{17}{subsection.2.2.2}%
-\contentsline {subsubsection}{Properties}{17}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}A* Search}{17}{subsection.2.2.3}%
-\contentsline {subsubsection}{Properties}{18}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Genetic Algorithms}{18}{subsection.2.2.4}%
-\contentsline {subsubsection}{Core Concepts}{18}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Ratings}{18}{subsection.2.2.5}%
-\contentsline {section}{\numberline {2.3}Proposed features for my solution}{19}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Stock checker}{19}{subsection.2.3.1}%
-\contentsline {subsubsection}{Purpose and Functionality}{19}{subsection.2.3.1}%
-\contentsline {subsubsection}{Implementation Details}{19}{subsection.2.3.1}%
-\contentsline {subsubsection}{Benefits}{19}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Shortest path algorithm}{19}{subsection.2.3.2}%
-\contentsline {subsubsection}{Purpose and Functionality}{19}{subsection.2.3.2}%
-\contentsline {subsubsection}{Implementation Details}{19}{subsection.2.3.2}%
-\contentsline {subsubsection}{Benefits}{19}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Obstacle Placement}{20}{subsection.2.3.3}%
-\contentsline {subsubsection}{Purpose and Functionality}{20}{subsection.2.3.3}%
-\contentsline {subsubsection}{Implementation Details}{20}{subsection.2.3.3}%
-\contentsline {subsubsection}{Benefits}{20}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Direct Feedback}{20}{subsection.2.3.4}%
-\contentsline {subsubsection}{Purpose and Functionality}{20}{subsection.2.3.4}%
-\contentsline {subsubsection}{Implementation Details}{20}{subsection.2.3.4}%
-\contentsline {subsubsection}{Benefits}{20}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Environment persistence}{20}{subsection.2.3.5}%
-\contentsline {subsubsection}{Purpose and functionality}{20}{subsection.2.3.5}%
-\contentsline {subsubsection}{Implementation Details}{20}{subsection.2.3.5}%
-\contentsline {subsubsection}{Benefits}{21}{subsection.2.3.5}%
-\contentsline {section}{\numberline {2.4}Limitations of the solution}{21}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Limitations from code}{21}{subsection.2.4.1}%
-\contentsline {subsubsection}{Pathfinding Algorithm Constraints}{21}{subsection.2.4.1}%
-\contentsline {subsubsection}{Stock Checking Performance}{21}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Limitations from software \& library choice}{21}{subsection.2.4.2}%
-\contentsline {subsubsection}{SQLite Constraints}{21}{subsection.2.4.2}%
-\contentsline {subsubsection}{Performance Bottlenecks}{21}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Limitations from time \& software choice}{22}{subsection.2.4.3}%
-\contentsline {subsubsection}{Algorithm optimisation}{22}{subsection.2.4.3}%
-\contentsline {subsubsection}{Performance}{22}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Software specifications}{22}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Requirements}{22}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Hardware}{22}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Software}{22}{subsection.2.6.2}%
-\contentsline {section}{\numberline {2.7}Success criteria}{23}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Methodology}{24}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Outline}{24}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}A breakdown of each stage}{25}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Key considerations:}{25}{subsection.2.8.3}%
-\contentsline {chapter}{\numberline {3}Designing the solution}{26}{chapter.3}%
-\contentsline {section}{\numberline {3.1}An initial breakdown of my solution}{27}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Features}{27}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Initialisation and Startup}{30}{subsection.3.1.2}%
-\contentsline {subsubsection}{Setup of environment}{30}{subsection.3.1.2}%
-\contentsline {subsubsection}{Graphical User Interface}{30}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Main Libraries}{31}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Abstraction}{31}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Summary/Justifications}{31}{subsection.3.1.5}%
-\contentsline {section}{\numberline {3.2}Algorithm prototyping}{33}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Creating the shortest path algorithm - BFS}{33}{subsection.3.2.1}%
-\contentsline {subsubsection}{BFS Flowchart}{34}{figure.caption.22}%
-\contentsline {subsubsection}{Example pseudocode of functions}{37}{figure.caption.23}%
-\contentsline {subsubsection}{Class Structure}{41}{figure.caption.23}%
-\contentsline {subsubsection}{Grid Class}{41}{Item.54}%
-\contentsline {subsubsection}{Pathfinder Class}{41}{Item.54}%
-\contentsline {subsubsection}{BFS Implementation Details}{42}{Item.54}%
-\contentsline {subsubsection}{Validation Strategy}{42}{Item.57}%
-\contentsline {subsection}{\numberline {3.2.2}Creating the shortest path algorithm - A*}{43}{subsection.3.2.2}%
-\contentsline {subsubsection}{Example pseudocode for A*}{45}{figure.caption.24}%
-\contentsline {subsection}{\numberline {3.2.3}GUI Logic}{49}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Database operations}{50}{subsection.3.2.4}%
-\contentsline {subsubsection}{Database validation}{51}{figure.caption.26}%
-\contentsline {subsubsection}{Database query}{52}{figure.caption.27}%
-\contentsline {subsubsection}{Database update}{53}{figure.caption.28}%
-\contentsline {subsection}{\numberline {3.2.5}Configuration}{54}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}JSON import/export}{55}{subsection.3.2.6}%
-\contentsline {subsection}{\numberline {3.2.7}Possible refinements}{56}{subsection.3.2.7}%
-\contentsline {section}{\numberline {3.3}Usability}{57}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Guidelines}{57}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Configuration Screen Analysis}{58}{subsection.3.3.2}%
-\contentsline {subsubsection}{Guideline alignment:}{59}{figure.caption.33}%
-\contentsline {subsubsection}{Usability Analysis:}{59}{figure.caption.33}%
-\contentsline {subsection}{\numberline {3.3.3}Main Screen Analysis}{60}{subsection.3.3.3}%
-\contentsline {subsubsection}{Guideline alignment:}{61}{figure.caption.34}%
-\contentsline {subsubsection}{Usability Analysis}{61}{figure.caption.34}%
-\contentsline {subsection}{\numberline {3.3.4}Grid Visualisation}{62}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Unifying the algorithms}{62}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Key modules breakdown}{62}{subsection.3.4.1}%
-\contentsline {subsubsection}{GUI}{62}{subsection.3.4.1}%
-\contentsline {subsubsection}{SPA}{63}{subsection.3.4.1}%
-\contentsline {subsubsection}{Database}{63}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}A unified implementation}{64}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Test data}{65}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}During development}{65}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Post-development}{67}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Standard data}{70}{subsection.3.5.3}%
-\contentsline {chapter}{\numberline {4}Developing the solution}{71}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Sprint Ada}{71}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Tasks}{71}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Purpose}{71}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Sprint Planning Details}{72}{subsection.4.1.3}%
-\contentsline {subsubsection}{Technical Approach}{72}{subsection.4.1.3}%
-\contentsline {subsubsection}{Architecture \& Structural Considerations}{72}{Item.71}%
-\contentsline {subsection}{\numberline {4.1.4}Development Summary}{73}{subsection.4.1.4}%
-\contentsline {subsubsection}{Iteration 1}{73}{subsection.4.1.4}%
-\contentsline {subsubsection}{Iteration 2}{73}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Sprint Ada Implementation}{74}{subsection.4.1.5}%
-\contentsline {subsubsection}{Iteration 1: The BFS algorithm}{74}{subsection.4.1.5}%
-\contentsline {subsubsection}{Code Implementation:}{75}{subsection.4.1.5}%
-\contentsline {subsubsection}{Dry Run}{76}{subsection.4.1.5}%
-\contentsline {subsubsection}{Initial Setup:}{76}{subsection.4.1.5}%
-\contentsline {subsubsection}{Step 1: Initialisation}{76}{subsection.4.1.5}%
-\contentsline {subsubsection}{Step 2: First Iteration}{76}{subsection.4.1.5}%
-\contentsline {subsubsection}{Step 3: Second Iteration}{76}{subsection.4.1.5}%
-\contentsline {subsubsection}{Prototype details:}{77}{subsection.4.1.5}%
-\contentsline {subsubsection}{Testing:}{77}{figure.caption.38}%
-\contentsline {subsubsection}{Tests justification}{77}{table.caption.39}%
-\contentsline {subsubsection}{Fixes}{77}{table.caption.39}%
-\contentsline {subsubsection}{Validation:}{77}{table.caption.39}%
-\contentsline {subsubsection}{Review:}{77}{table.caption.39}%
-\contentsline {subsubsection}{Screenshots of tests/program}{78}{table.caption.39}%
-\contentsline {subsubsection}{Iteration 2: Multi-point BFS and Visualisation}{79}{figure.caption.43}%
-\contentsline {subsubsection}{Code Implementation:}{79}{figure.caption.43}%
-\contentsline {subsubsection}{Prototype details:}{81}{lstnumber.-1.212}%
-\contentsline {subsubsection}{Testing:}{82}{figure.caption.44}%
-\contentsline {subsubsection}{Tests justification}{82}{table.caption.45}%
-\contentsline {subsubsection}{Fixes}{82}{table.caption.45}%
-\contentsline {subsubsection}{Screenshots of tests/program}{83}{table.caption.45}%
-\contentsline {subsubsection}{Validation:}{84}{figure.caption.49}%
-\contentsline {subsubsection}{Review:}{84}{figure.caption.49}%
-\contentsline {subsection}{\numberline {4.1.6}Sprint Review and Retrospective}{85}{subsection.4.1.6}%
-\contentsline {subsubsection}{Accomplishments}{85}{subsection.4.1.6}%
-\contentsline {subsubsection}{Final testing}{85}{subsection.4.1.6}%
-\contentsline {subsubsection}{Validation}{85}{table.caption.50}%
-\contentsline {subsubsection}{Robustness}{85}{table.caption.50}%
-\contentsline {subsubsection}{Stakeholder Review}{86}{table.caption.50}%
-\contentsline {subsubsection}{Link}{86}{table.caption.50}%
-\contentsline {section}{\numberline {4.2}Sprint Berners-Lee}{87}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Tasks}{87}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Purpose}{87}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Sprint Planning Details}{88}{subsection.4.2.3}%
-\contentsline {subsubsection}{Technical Approach}{88}{subsection.4.2.3}%
-\contentsline {subsubsection}{Architecture \& Structural Considerations}{88}{Item.79}%
-\contentsline {subsection}{\numberline {4.2.4}Development Summary}{89}{subsection.4.2.4}%
-\contentsline {subsubsection}{Iteration 1}{89}{subsection.4.2.4}%
-\contentsline {subsubsection}{Iteration 2}{89}{subsection.4.2.4}%
-\contentsline {subsubsection}{Iteration 3}{89}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Sprint Berners-Lee Implementation}{90}{subsection.4.2.5}%
-\contentsline {subsubsection}{Iteration 1: Getting GUI Working}{90}{subsection.4.2.5}%
-\contentsline {subsubsection}{gui.py}{91}{subsection.4.2.5}%
-\contentsline {subsubsection}{spa.py}{92}{lstnumber.-2.137}%
-\contentsline {subsubsection}{Prototype details:}{94}{lstnumber.-3.188}%
-\contentsline {subsubsection}{Testing:}{94}{lstnumber.-3.188}%
-\contentsline {subsubsection}{Fixes}{94}{table.caption.52}%
-\contentsline {subsubsection}{Validation}{94}{table.caption.52}%
-\contentsline {subsubsection}{Iteration 2: Refining Logic and Validation}{96}{figure.caption.55}%
-\contentsline {subsubsection}{gui.py}{96}{figure.caption.55}%
-\contentsline {subsubsection}{spa.py}{98}{lstnumber.-4.113}%
-\contentsline {subsubsection}{Prototype details:}{100}{lstnumber.-5.162}%
-\contentsline {subsubsection}{Testing:}{100}{lstnumber.-5.162}%
-\contentsline {subsubsection}{Fixes}{100}{table.caption.56}%
-\contentsline {subsubsection}{Validation}{100}{table.caption.56}%
-\contentsline {subsection}{\numberline {4.2.6}Sprint Review and Retrospective}{102}{subsection.4.2.6}%
-\contentsline {subsubsection}{Accomplishments}{102}{subsection.4.2.6}%
-\contentsline {subsubsection}{Validation}{102}{subsection.4.2.6}%
-\contentsline {subsubsection}{Robustness}{102}{subsection.4.2.6}%
-\contentsline {subsubsection}{Final testing}{103}{subsection.4.2.6}%
-\contentsline {subsubsection}{Stakeholder Review}{103}{table.caption.60}%
-\contentsline {subsubsection}{Link}{103}{table.caption.60}%
-\contentsline {section}{\numberline {4.3}Sprint Cerf}{104}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Tasks}{104}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Purpose}{104}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Sprint Planning Details}{105}{subsection.4.3.3}%
-\contentsline {subsubsection}{Technical Approach}{105}{subsection.4.3.3}%
-\contentsline {subsubsection}{Architecture \& Structural Considerations}{106}{Item.82}%
-\contentsline {subsubsection}{Dependencies}{106}{Item.82}%
-\contentsline {subsection}{\numberline {4.3.4}Development Summary}{106}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 1A: Threading Implementation}{106}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 1B: Config Options}{106}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 1C: New Numbering System}{106}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 2A: Created the database and host class}{107}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 2B: Added validation methods}{107}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 2C: Added logger \& DB-Config Link}{107}{subsection.4.3.4}%
-\contentsline {subsubsection}{Iteration 2D: Added the stock decrementer}{107}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Sprint Cerf Implementation}{108}{subsection.4.3.5}%
-\contentsline {subsubsection}{Iteration 1A: Threading Implementation}{108}{subsection.4.3.5}%
-\contentsline {subsubsection}{Prototype details:}{110}{lstnumber.-6.187}%
-\contentsline {subsubsection}{Testing:}{111}{lstnumber.-6.187}%
-\contentsline {subsubsection}{Fixes}{111}{table.caption.62}%
-\contentsline {subsubsection}{Validation}{111}{table.caption.62}%
-\contentsline {subsubsection}{Review:}{111}{table.caption.62}%
-\contentsline {subsubsection}{Iteration 1B: Config Options}{112}{table.caption.62}%
-\contentsline {subsubsection}{Prototype details:}{114}{lstnumber.-7.107}%
-\contentsline {subsubsection}{Testing:}{114}{lstnumber.-7.107}%
-\contentsline {subsubsection}{Fixes}{114}{table.caption.63}%
-\contentsline {subsubsection}{Validation}{114}{table.caption.63}%
-\contentsline {subsubsection}{Review:}{114}{table.caption.63}%
-\contentsline {subsubsection}{Iteration 1C: New Numbering System}{115}{table.caption.63}%
-\contentsline {subsubsection}{gui.py}{116}{table.caption.63}%
-\contentsline {subsubsection}{spa.py}{117}{lstnumber.-8.189}%
-\contentsline {subsubsection}{Prototype details:}{120}{lstnumber.-9.177}%
-\contentsline {subsubsection}{Testing:}{120}{lstnumber.-9.177}%
-\contentsline {subsubsection}{Fixes}{120}{table.caption.64}%
-\contentsline {subsubsection}{Validation}{120}{table.caption.64}%
-\contentsline {subsubsection}{Review:}{120}{table.caption.64}%
-\contentsline {subsubsection}{Iteration 2A: Created the database and host class}{121}{table.caption.64}%
-\contentsline {subsubsection}{database.py}{121}{table.caption.64}%
-\contentsline {subsubsection}{Prototype details:}{122}{lstnumber.-10.27}%
-\contentsline {subsubsection}{Testing:}{122}{lstnumber.-10.27}%
-\contentsline {subsubsection}{Fixes}{122}{table.caption.65}%
-\contentsline {subsubsection}{Validation}{122}{table.caption.65}%
-\contentsline {subsubsection}{Review:}{122}{table.caption.65}%
-\contentsline {subsubsection}{Iteration 2B: Added validation methods and population}{123}{table.caption.65}%
-\contentsline {subsubsection}{Prototype details:}{126}{lstnumber.-11.125}%
-\contentsline {subsubsection}{Testing:}{126}{lstnumber.-11.125}%
-\contentsline {subsubsection}{Fixes}{126}{figure.caption.67}%
-\contentsline {subsubsection}{Validation}{126}{figure.caption.67}%
-\contentsline {subsubsection}{Review:}{126}{figure.caption.67}%
-\contentsline {subsubsection}{Iteration 2C: Added logger \& DB-Config Link}{127}{figure.caption.67}%
-\contentsline {subsubsection}{Prototype details:}{130}{lstnumber.-13.68}%
-\contentsline {subsubsection}{Testing:}{130}{lstnumber.-13.68}%
-\contentsline {subsubsection}{Fixes}{130}{table.caption.68}%
-\contentsline {subsubsection}{Validation}{130}{table.caption.68}%
-\contentsline {subsubsection}{Review:}{130}{table.caption.68}%
-\contentsline {subsubsection}{Iteration 2D: Stock Check \& Decrement Implementation}{131}{table.caption.68}%
-\contentsline {subsubsection}{Prototype details:}{133}{table.caption.68}%
-\contentsline {subsubsection}{Testing:}{133}{table.caption.68}%
-\contentsline {subsubsection}{Fixes}{133}{table.caption.69}%
-\contentsline {subsubsection}{Validation}{133}{table.caption.69}%
-\contentsline {subsubsection}{Review:}{133}{table.caption.69}%
-\contentsline {subsection}{\numberline {4.3.6}Sprint Review and Retrospective}{134}{subsection.4.3.6}%
-\contentsline {subsubsection}{Accomplishments}{134}{subsection.4.3.6}%
-\contentsline {subsubsection}{Challenges \& Learning}{134}{subsection.4.3.6}%
-\contentsline {subsubsection}{Final testing}{134}{subsection.4.3.6}%
-\contentsline {subsubsection}{Validation}{135}{table.caption.70}%
-\contentsline {subsubsection}{Robustness}{135}{table.caption.70}%
-\contentsline {subsubsection}{Link}{135}{table.caption.70}%
-\contentsline {section}{\numberline {4.4}Sprint Dijkstra}{136}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Tasks}{136}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Explanation}{136}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Sprint Planning Details}{137}{subsection.4.4.3}%
-\contentsline {subsubsection}{Technical Approach}{137}{subsection.4.4.3}%
-\contentsline {subsubsection}{Architecture \& Structural Considerations}{137}{Item.86}%
-\contentsline {subsubsection}{Dependencies}{137}{Item.86}%
-\contentsline {subsection}{\numberline {4.4.4}Development Summary}{137}{subsection.4.4.4}%
-\contentsline {subsubsection}{Diagnosing and Reverting Threading}{137}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Sprint Dijkstra Implementation}{138}{subsection.4.4.5}%
-\contentsline {subsubsection}{Prototype details:}{141}{lstnumber.-14.280}%
-\contentsline {subsubsection}{Testing:}{141}{lstnumber.-14.280}%
-\contentsline {subsubsection}{Review:}{141}{table.caption.72}%
-\contentsline {subsubsection}{Link}{141}{table.caption.72}%
-\contentsline {section}{\numberline {4.5}Sprint Engelbart}{143}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Tasks}{143}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Purpose}{143}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Sprint Planning Details}{144}{subsection.4.5.3}%
-\contentsline {subsubsection}{Technical Approach}{144}{subsection.4.5.3}%
-\contentsline {subsubsection}{Architecture \& Structural Considerations}{144}{Item.89}%
-\contentsline {subsubsection}{Dependencies}{144}{Item.89}%
-\contentsline {subsection}{\numberline {4.5.4}Development Summary}{145}{subsection.4.5.4}%
-\contentsline {subsubsection}{Iteration 1: Visualisation Foundation}{145}{subsection.4.5.4}%
-\contentsline {subsubsection}{Iteration 2: Core Visualisation Implementation \& Refinement}{145}{subsection.4.5.4}%
-\contentsline {subsubsection}{Iteration 3: Main GUI Simplification \& Interaction Polish}{145}{subsection.4.5.4}%
-\contentsline {subsection}{\numberline {4.5.5}Sprint Engelbart Implementation}{146}{subsection.4.5.5}%
-\contentsline {subsubsection}{Iteration 1: Visualisation Foundation}{146}{subsection.4.5.5}%
-\contentsline {subsubsection}{Prototype details:}{148}{lstnumber.-15.89}%
-\contentsline {subsubsection}{Testing:}{148}{lstnumber.-15.89}%
-\contentsline {subsubsection}{Fixes}{148}{table.caption.74}%
-\contentsline {subsubsection}{Validation}{148}{table.caption.74}%
-\contentsline {subsubsection}{Iteration 2: Core Visualisation Implementation \& Refinement}{149}{table.caption.74}%
-\contentsline {subsubsection}{Prototype details:}{155}{lstnumber.-16.540}%
-\contentsline {subsubsection}{Testing:}{155}{lstnumber.-16.540}%
-\contentsline {subsubsection}{Fixes}{155}{table.caption.75}%
-\contentsline {subsubsection}{Validation}{156}{table.caption.75}%
-\contentsline {subsubsection}{Review:}{156}{table.caption.75}%
-\contentsline {subsubsection}{Iteration 3: Main GUI Simplification \& Interaction Polish}{156}{table.caption.75}%
-\contentsline {subsubsection}{Prototype details:}{161}{lstnumber.-17.347}%
-\contentsline {subsubsection}{Testing:}{161}{lstnumber.-17.347}%
-\contentsline {subsubsection}{Fixes}{161}{table.caption.76}%
-\contentsline {subsubsection}{Validation}{161}{table.caption.76}%
-\contentsline {subsubsection}{Review:}{161}{table.caption.76}%
-\contentsline {subsection}{\numberline {4.5.6}Sprint Review and Retrospective}{162}{subsection.4.5.6}%
-\contentsline {subsubsection}{Accomplishments}{162}{subsection.4.5.6}%
-\contentsline {subsubsection}{Final testing}{162}{subsection.4.5.6}%
-\contentsline {subsubsection}{Validation}{163}{table.caption.77}%
-\contentsline {subsubsection}{Robustness}{163}{table.caption.77}%
-\contentsline {subsubsection}{Link}{163}{table.caption.77}%
-\contentsline {section}{\numberline {4.6}Sprint Floyd}{164}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Tasks}{164}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Purpose}{164}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Sprint Planning Details}{165}{subsection.4.6.3}%
-\contentsline {subsubsection}{Technical Approach}{165}{subsection.4.6.3}%
-\contentsline {subsubsection}{Architecture \& Structural Considerations}{165}{Item.92}%
-\contentsline {subsection}{\numberline {4.6.4}Development Summary}{166}{subsection.4.6.4}%
-\contentsline {subsubsection}{Iteration 1: GA Point Order Optimisation \& GUI Toggle}{166}{subsection.4.6.4}%
-\contentsline {subsubsection}{Iteration 2: A* Implementation, GUI Integration \& Validation Fix}{166}{subsection.4.6.4}%
-\contentsline {subsection}{\numberline {4.6.5}Sprint Floyd Implementation}{166}{subsection.4.6.5}%
-\contentsline {subsubsection}{Iteration 1: GA Point Order Optimisation \& GUI Toggle}{166}{subsection.4.6.5}%
-\contentsline {subsubsection}{Prototype details:}{169}{lstnumber.-18.241}%
-\contentsline {subsubsection}{Testing:}{169}{lstnumber.-18.241}%
-\contentsline {subsubsection}{Validation}{170}{table.caption.79}%
-\contentsline {subsubsection}{Review:}{170}{table.caption.79}%
-\contentsline {subsubsection}{Iteration 2: A* Implementation, GUI Integration \& Validation Fix}{170}{table.caption.79}%
-\contentsline {subsubsection}{Prototype details:}{173}{lstnumber.-19.241}%
-\contentsline {subsubsection}{Testing:}{173}{lstnumber.-19.241}%
-\contentsline {subsubsection}{Fixes}{173}{table.caption.80}%
-\contentsline {subsubsection}{Validation}{173}{table.caption.80}%
-\contentsline {subsubsection}{Review:}{173}{table.caption.80}%
-\contentsline {subsection}{\numberline {4.6.6}Sprint Review and Retrospective}{174}{subsection.4.6.6}%
-\contentsline {subsubsection}{Accomplishments}{174}{subsection.4.6.6}%
-\contentsline {subsubsection}{Final testing}{174}{subsection.4.6.6}%
-\contentsline {subsubsection}{Validation}{174}{table.caption.81}%
-\contentsline {subsubsection}{Robustness}{175}{table.caption.81}%
-\contentsline {subsubsection}{Link}{175}{table.caption.81}%
-\contentsline {section}{\numberline {4.7}Sprint Gates}{176}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Tasks}{176}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Purpose}{176}{subsection.4.7.2}%
-\contentsline {subsection}{\numberline {4.7.3}Sprint Planning Details}{177}{subsection.4.7.3}%
-\contentsline {subsubsection}{Technical Approach}{177}{subsection.4.7.3}%
-\contentsline {subsubsection}{Architecture \& Structural Considerations}{177}{Item.94}%
-\contentsline {subsection}{\numberline {4.7.4}Development Summary}{178}{subsection.4.7.4}%
-\contentsline {subsubsection}{Iteration 1: Backend Obstacle Handling}{178}{subsection.4.7.4}%
-\contentsline {subsubsection}{Iteration 2: GUI Integration \& Visualisation}{178}{subsection.4.7.4}%
-\contentsline {subsection}{\numberline {4.7.5}Sprint Gates Implementation}{178}{subsection.4.7.5}%
-\contentsline {subsubsection}{Iteration 1: Backend Obstacle Handling}{178}{subsection.4.7.5}%
-\contentsline {subsubsection}{Prototype details:}{185}{lstnumber.-20.506}%
-\contentsline {subsubsection}{Testing:}{185}{lstnumber.-20.506}%
-\contentsline {subsubsection}{Fixes}{185}{table.caption.83}%
-\contentsline {subsubsection}{Validation}{185}{table.caption.83}%
-\contentsline {subsubsection}{Review:}{185}{table.caption.83}%
-\contentsline {subsubsection}{Iteration 2: GUI Integration \& Visualisation}{186}{table.caption.83}%
-\contentsline {subsubsection}{Prototype details:}{194}{lstnumber.-21.746}%
-\contentsline {subsubsection}{Testing:}{194}{lstnumber.-21.746}%
-\contentsline {subsubsection}{Fixes}{194}{table.caption.84}%
-\contentsline {subsubsection}{Validation}{194}{table.caption.84}%
-\contentsline {subsubsection}{Review:}{194}{table.caption.84}%
-\contentsline {subsection}{\numberline {4.7.6}Sprint Review and Retrospective}{195}{subsection.4.7.6}%
-\contentsline {subsubsection}{Accomplishments}{195}{subsection.4.7.6}%
-\contentsline {subsubsection}{Final testing}{195}{subsection.4.7.6}%
-\contentsline {subsubsection}{Validation}{195}{table.caption.85}%
-\contentsline {subsubsection}{Robustness}{195}{table.caption.85}%
-\contentsline {subsubsection}{Link}{196}{table.caption.85}%
-\contentsline {subsubsection}{Stakeholder comments}{196}{table.caption.85}%
-\contentsline {chapter}{\numberline {5}Evaluating the solution}{197}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Post-development testing}{197}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Test table}{197}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Partially passed tests}{201}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Failed tests}{201}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Not applicable tests}{201}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Success criteria revisited}{209}{section.5.2}%
-\contentsline {subsubsection}{Criterion 1:}{210}{table.caption.87}%
-\contentsline {subsubsection}{Criterion 2:}{210}{table.caption.87}%
-\contentsline {subsubsection}{Criteria 3 and 4:}{210}{table.caption.87}%
-\contentsline {subsubsection}{Criterion 5:}{210}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 6:}{210}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 7:}{210}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 8:}{211}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 9:}{211}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 10:}{211}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 11:}{211}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 12:}{211}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 13:}{211}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 14:}{211}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 15:}{211}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 16:}{211}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 17:}{211}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 18:}{212}{table.caption.88}%
-\contentsline {subsubsection}{Criterion 19:}{212}{table.caption.88}%
-\contentsline {section}{\numberline {5.3}Limitations}{212}{section.5.3}%
-\contentsline {subsubsection}{Direct feedback}{212}{section.5.3}%
-\contentsline {subsubsection}{Environment persistence}{212}{section.5.3}%
-\contentsline {subsubsection}{Path export}{212}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Maintenance}{212}{section.5.4}%
-\contentsline {chapter}{References}{213}{chapter*.89}%
-\contentsline {chapter}{Appendix \numberline {A}Final Program}{215}{appendix.1.A}%
-\contentsline {section}{\numberline {A.1}gui.py}{215}{section.1.A.1}%
-\contentsline {section}{\numberline {A.2}spa.py}{222}{section.1.A.2}%
-\contentsline {section}{\numberline {A.3}config.py}{227}{section.1.A.3}%
-\contentsline {section}{\numberline {A.4}database.py}{230}{section.1.A.4}%
-\contentsline {chapter}{Appendix \numberline {B}GitHub Commit History}{232}{appendix.1.B}%
+\contentsline {subsection}{\numberline {1.5.2}Secondary Stakeholder Data}{10}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Conclusion}{11}{subsection.1.5.3}%
+\contentsline {subsubsection}{Primary Features}{11}{subsection.1.5.3}%
+\contentsline {subsubsection}{Secondary Features}{12}{Item.30}%
+\contentsline {subsubsection}{Desirable/Optional Features}{12}{Item.33}%
+\contentsline {chapter}{\numberline {2}Exploring the solution}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Research on current implementations}{13}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}History of warehouse robots}{13}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Amazon Robotics (formerly Kiva Systems)}{14}{subsection.2.1.2}%
+\contentsline {subsubsection}{Centralised Control with Distributed Execution}{14}{subsection.2.1.2}%
+\contentsline {subsubsection}{Reservation-Based Traffic Management}{14}{subsection.2.1.2}%
+\contentsline {subsubsection}{Dynamic Re-slotting and Inventory Positioning}{14}{subsection.2.1.2}%
+\contentsline {subsubsection}{Multi-Objective Path Optimisation}{14}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Ocado Smart Platform: The Grid-Based Approach}{14}{subsection.2.1.3}%
+\contentsline {subsubsection}{The Hive Mind Architecture}{14}{subsection.2.1.3}%
+\contentsline {subsubsection}{4D Path Planning}{15}{subsection.2.1.3}%
+\contentsline {subsubsection}{Swarm Behaviour Implementation}{15}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}AutoStore: Cube Storage}{15}{subsection.2.1.4}%
+\contentsline {subsubsection}{Cube Storage Efficiency}{15}{subsection.2.1.4}%
+\contentsline {subsubsection}{Grid-Based Robot Movement}{15}{subsection.2.1.4}%
+\contentsline {subsubsection}{Bin Retrieval Algorithms}{15}{subsection.2.1.4}%
+\contentsline {subsubsection}{Decentralised Control with Hierarchical Oversight}{15}{Item.40}%
+\contentsline {section}{\numberline {2.2}Research on pathfinding algorithms}{16}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Breadth-First Search (BFS)}{16}{subsection.2.2.1}%
+\contentsline {subsubsection}{Properties}{16}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Depth-First Search (DFS)}{16}{subsection.2.2.2}%
+\contentsline {subsubsection}{Properties}{16}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}A* Search}{16}{subsection.2.2.3}%
+\contentsline {subsubsection}{Properties}{17}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Genetic Algorithms}{17}{subsection.2.2.4}%
+\contentsline {subsubsection}{Core Concepts}{17}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Ratings}{17}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}Proposed features for my solution}{18}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Stock checker}{18}{subsection.2.3.1}%
+\contentsline {subsubsection}{Purpose and Functionality}{18}{subsection.2.3.1}%
+\contentsline {subsubsection}{Implementation Details}{18}{subsection.2.3.1}%
+\contentsline {subsubsection}{Benefits}{18}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Shortest path algorithm}{18}{subsection.2.3.2}%
+\contentsline {subsubsection}{Purpose and Functionality}{18}{subsection.2.3.2}%
+\contentsline {subsubsection}{Implementation Details}{18}{subsection.2.3.2}%
+\contentsline {subsubsection}{Benefits}{18}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Obstacle Placement}{19}{subsection.2.3.3}%
+\contentsline {subsubsection}{Purpose and Functionality}{19}{subsection.2.3.3}%
+\contentsline {subsubsection}{Implementation Details}{19}{subsection.2.3.3}%
+\contentsline {subsubsection}{Benefits}{19}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Direct Feedback}{19}{subsection.2.3.4}%
+\contentsline {subsubsection}{Purpose and Functionality}{19}{subsection.2.3.4}%
+\contentsline {subsubsection}{Implementation Details}{19}{subsection.2.3.4}%
+\contentsline {subsubsection}{Benefits}{19}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Environment persistence}{19}{subsection.2.3.5}%
+\contentsline {subsubsection}{Purpose and functionality}{19}{subsection.2.3.5}%
+\contentsline {subsubsection}{Implementation Details}{19}{subsection.2.3.5}%
+\contentsline {subsubsection}{Benefits}{19}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.4}Limitations of the solution}{20}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Limitations from code}{20}{subsection.2.4.1}%
+\contentsline {subsubsection}{Pathfinding Algorithm Constraints}{20}{subsection.2.4.1}%
+\contentsline {subsubsection}{Stock Checking Performance}{20}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Limitations from software \& library choice}{20}{subsection.2.4.2}%
+\contentsline {subsubsection}{SQLite Constraints}{20}{subsection.2.4.2}%
+\contentsline {subsubsection}{Performance Bottlenecks}{20}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Limitations from time \& software choice}{20}{subsection.2.4.3}%
+\contentsline {subsubsection}{Algorithm optimisation}{20}{subsection.2.4.3}%
+\contentsline {subsubsection}{Performance}{21}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Software specifications}{21}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Requirements}{21}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Hardware}{21}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Software}{21}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Success criteria}{22}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Methodology}{23}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Outline}{23}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}A breakdown of each stage}{24}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Key considerations:}{24}{subsection.2.8.3}%
+\contentsline {chapter}{\numberline {3}Designing the solution}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}An initial breakdown of my solution}{26}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Features}{26}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Initialisation and Startup}{28}{subsection.3.1.2}%
+\contentsline {subsubsection}{Setup of environment}{28}{subsection.3.1.2}%
+\contentsline {subsubsection}{Graphical User Interface}{28}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Main Libraries}{29}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Abstraction}{29}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Summary/Justifications}{29}{subsection.3.1.5}%
+\contentsline {section}{\numberline {3.2}Algorithm prototyping}{31}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Creating the shortest path algorithm - BFS}{31}{subsection.3.2.1}%
+\contentsline {subsubsection}{BFS Flowchart}{32}{figure.caption.22}%
+\contentsline {subsubsection}{Example pseudocode of functions}{35}{figure.caption.23}%
+\contentsline {subsubsection}{Class Structure}{39}{figure.caption.23}%
+\contentsline {subsubsection}{Grid Class}{39}{Item.53}%
+\contentsline {subsubsection}{Pathfinder Class}{39}{Item.53}%
+\contentsline {subsubsection}{BFS Implementation Details}{40}{Item.53}%
+\contentsline {subsubsection}{Validation Strategy}{40}{Item.56}%
+\contentsline {subsection}{\numberline {3.2.2}Creating the shortest path algorithm - A*}{41}{subsection.3.2.2}%
+\contentsline {subsubsection}{Example pseudocode for A*}{43}{figure.caption.24}%
+\contentsline {subsection}{\numberline {3.2.3}GUI Logic}{47}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Database operations}{48}{subsection.3.2.4}%
+\contentsline {subsubsection}{Database validation}{49}{figure.caption.26}%
+\contentsline {subsubsection}{Database query}{50}{figure.caption.27}%
+\contentsline {subsubsection}{Database update}{51}{figure.caption.28}%
+\contentsline {subsection}{\numberline {3.2.5}Configuration}{52}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}JSON import/export}{53}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Possible refinements}{54}{subsection.3.2.7}%
+\contentsline {section}{\numberline {3.3}Usability}{55}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Guidelines}{55}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Configuration Screen Analysis}{56}{subsection.3.3.2}%
+\contentsline {subsubsection}{Guideline alignment:}{57}{figure.caption.33}%
+\contentsline {subsubsection}{Usability Analysis:}{57}{figure.caption.33}%
+\contentsline {subsection}{\numberline {3.3.3}Main Screen Analysis}{58}{subsection.3.3.3}%
+\contentsline {subsubsection}{Guideline alignment:}{59}{figure.caption.34}%
+\contentsline {subsubsection}{Usability Analysis}{59}{figure.caption.34}%
+\contentsline {subsection}{\numberline {3.3.4}Grid Visualisation}{60}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Unifying the algorithms}{60}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Key modules breakdown}{61}{subsection.3.4.1}%
+\contentsline {subsubsection}{GUI}{61}{subsection.3.4.1}%
+\contentsline {subsubsection}{SPA}{61}{subsection.3.4.1}%
+\contentsline {subsubsection}{Database}{61}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}A unified implementation}{62}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Test data}{63}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}During development}{63}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Post-development}{65}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Standard data}{68}{subsection.3.5.3}%
+\contentsline {chapter}{\numberline {4}Developing the solution}{69}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Sprint Ada}{69}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Tasks}{69}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Purpose}{69}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Sprint Planning Details}{70}{subsection.4.1.3}%
+\contentsline {subsubsection}{Technical Approach}{70}{subsection.4.1.3}%
+\contentsline {subsubsection}{Architecture \& Structural Considerations}{70}{Item.70}%
+\contentsline {subsection}{\numberline {4.1.4}Development Summary}{71}{subsection.4.1.4}%
+\contentsline {subsubsection}{Iteration 1}{71}{subsection.4.1.4}%
+\contentsline {subsubsection}{Iteration 2}{71}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Sprint Ada Implementation}{72}{subsection.4.1.5}%
+\contentsline {subsubsection}{Iteration 1: The BFS algorithm}{72}{subsection.4.1.5}%
+\contentsline {subsubsection}{Code Implementation:}{73}{subsection.4.1.5}%
+\contentsline {subsubsection}{Dry Run}{74}{subsection.4.1.5}%
+\contentsline {subsubsection}{Initial Setup:}{74}{subsection.4.1.5}%
+\contentsline {subsubsection}{Step 1: Initialisation}{74}{subsection.4.1.5}%
+\contentsline {subsubsection}{Step 2: First Iteration}{74}{subsection.4.1.5}%
+\contentsline {subsubsection}{Step 3: Second Iteration}{74}{subsection.4.1.5}%
+\contentsline {subsubsection}{Prototype details:}{75}{subsection.4.1.5}%
+\contentsline {subsubsection}{Testing:}{75}{figure.caption.38}%
+\contentsline {subsubsection}{Tests justification}{75}{table.caption.39}%
+\contentsline {subsubsection}{Fixes}{75}{table.caption.39}%
+\contentsline {subsubsection}{Validation:}{75}{table.caption.39}%
+\contentsline {subsubsection}{Review:}{75}{table.caption.39}%
+\contentsline {subsubsection}{Screenshots of tests/program}{76}{table.caption.39}%
+\contentsline {subsubsection}{Iteration 2: Multi-point BFS and Visualisation}{77}{figure.caption.43}%
+\contentsline {subsubsection}{Code Implementation:}{77}{figure.caption.43}%
+\contentsline {subsubsection}{Prototype details:}{79}{lstnumber.-1.212}%
+\contentsline {subsubsection}{Testing:}{80}{figure.caption.44}%
+\contentsline {subsubsection}{Tests justification}{80}{table.caption.45}%
+\contentsline {subsubsection}{Fixes}{80}{table.caption.45}%
+\contentsline {subsubsection}{Screenshots of tests/program}{81}{table.caption.45}%
+\contentsline {subsubsection}{Validation:}{82}{figure.caption.49}%
+\contentsline {subsubsection}{Review:}{82}{figure.caption.49}%
+\contentsline {subsection}{\numberline {4.1.6}Sprint Review and Retrospective}{82}{subsection.4.1.6}%
+\contentsline {subsubsection}{Accomplishments}{82}{subsection.4.1.6}%
+\contentsline {subsubsection}{Final testing}{82}{subsection.4.1.6}%
+\contentsline {subsubsection}{Validation}{83}{table.caption.50}%
+\contentsline {subsubsection}{Robustness}{83}{table.caption.50}%
+\contentsline {subsubsection}{Stakeholder Review}{83}{table.caption.50}%
+\contentsline {subsubsection}{Link}{83}{table.caption.50}%
+\contentsline {section}{\numberline {4.2}Sprint Berners-Lee}{84}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Tasks}{84}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Purpose}{84}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Sprint Planning Details}{85}{subsection.4.2.3}%
+\contentsline {subsubsection}{Technical Approach}{85}{subsection.4.2.3}%
+\contentsline {subsubsection}{Architecture \& Structural Considerations}{85}{Item.78}%
+\contentsline {subsection}{\numberline {4.2.4}Development Summary}{86}{subsection.4.2.4}%
+\contentsline {subsubsection}{Iteration 1}{86}{subsection.4.2.4}%
+\contentsline {subsubsection}{Iteration 2}{86}{subsection.4.2.4}%
+\contentsline {subsubsection}{Iteration 3}{86}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Sprint Berners-Lee Implementation}{87}{subsection.4.2.5}%
+\contentsline {subsubsection}{Iteration 1: Getting GUI Working}{87}{subsection.4.2.5}%
+\contentsline {subsubsection}{gui.py}{88}{subsection.4.2.5}%
+\contentsline {subsubsection}{spa.py}{89}{lstnumber.-2.137}%
+\contentsline {subsubsection}{Prototype details:}{91}{lstnumber.-3.188}%
+\contentsline {subsubsection}{Testing:}{91}{lstnumber.-3.188}%
+\contentsline {subsubsection}{Fixes}{91}{table.caption.52}%
+\contentsline {subsubsection}{Validation}{91}{table.caption.52}%
+\contentsline {subsubsection}{Iteration 2: Refining Logic and Validation}{93}{figure.caption.55}%
+\contentsline {subsubsection}{gui.py}{93}{figure.caption.55}%
+\contentsline {subsubsection}{spa.py}{95}{lstnumber.-4.113}%
+\contentsline {subsubsection}{Prototype details:}{97}{lstnumber.-5.162}%
+\contentsline {subsubsection}{Testing:}{97}{lstnumber.-5.162}%
+\contentsline {subsubsection}{Fixes}{97}{table.caption.56}%
+\contentsline {subsubsection}{Validation}{97}{table.caption.56}%
+\contentsline {subsection}{\numberline {4.2.6}Sprint Review and Retrospective}{99}{subsection.4.2.6}%
+\contentsline {subsubsection}{Accomplishments}{99}{subsection.4.2.6}%
+\contentsline {subsubsection}{Validation}{99}{subsection.4.2.6}%
+\contentsline {subsubsection}{Robustness}{99}{subsection.4.2.6}%
+\contentsline {subsubsection}{Final testing}{100}{subsection.4.2.6}%
+\contentsline {subsubsection}{Stakeholder Review}{100}{table.caption.60}%
+\contentsline {subsubsection}{Link}{100}{table.caption.60}%
+\contentsline {section}{\numberline {4.3}Sprint Cerf}{101}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Tasks}{101}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Purpose}{101}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Sprint Planning Details}{102}{subsection.4.3.3}%
+\contentsline {subsubsection}{Technical Approach}{102}{subsection.4.3.3}%
+\contentsline {subsubsection}{Architecture \& Structural Considerations}{103}{Item.81}%
+\contentsline {subsubsection}{Dependencies}{103}{Item.81}%
+\contentsline {subsection}{\numberline {4.3.4}Development Summary}{103}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 1A: Threading Implementation}{103}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 1B: Config Options}{103}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 1C: New Numbering System}{103}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 2A: Created the database and host class}{104}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 2B: Added validation methods}{104}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 2C: Added logger \& DB-Config Link}{104}{subsection.4.3.4}%
+\contentsline {subsubsection}{Iteration 2D: Added the stock decrementer}{104}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Sprint Cerf Implementation}{105}{subsection.4.3.5}%
+\contentsline {subsubsection}{Iteration 1A: Threading Implementation}{105}{subsection.4.3.5}%
+\contentsline {subsubsection}{Prototype details:}{107}{lstnumber.-6.187}%
+\contentsline {subsubsection}{Testing:}{108}{lstnumber.-6.187}%
+\contentsline {subsubsection}{Fixes}{108}{table.caption.62}%
+\contentsline {subsubsection}{Validation}{108}{table.caption.62}%
+\contentsline {subsubsection}{Review:}{108}{table.caption.62}%
+\contentsline {subsubsection}{Iteration 1B: Config Options}{109}{table.caption.62}%
+\contentsline {subsubsection}{Prototype details:}{111}{lstnumber.-7.107}%
+\contentsline {subsubsection}{Testing:}{111}{lstnumber.-7.107}%
+\contentsline {subsubsection}{Fixes}{111}{table.caption.63}%
+\contentsline {subsubsection}{Validation}{111}{table.caption.63}%
+\contentsline {subsubsection}{Review:}{111}{table.caption.63}%
+\contentsline {subsubsection}{Iteration 1C: New Numbering System}{112}{table.caption.63}%
+\contentsline {subsubsection}{gui.py}{113}{table.caption.63}%
+\contentsline {subsubsection}{spa.py}{114}{lstnumber.-8.189}%
+\contentsline {subsubsection}{Prototype details:}{117}{lstnumber.-9.177}%
+\contentsline {subsubsection}{Testing:}{117}{lstnumber.-9.177}%
+\contentsline {subsubsection}{Fixes}{117}{table.caption.64}%
+\contentsline {subsubsection}{Validation}{117}{table.caption.64}%
+\contentsline {subsubsection}{Review:}{117}{table.caption.64}%
+\contentsline {subsubsection}{Iteration 2A: Created the database and host class}{118}{table.caption.64}%
+\contentsline {subsubsection}{database.py}{118}{table.caption.64}%
+\contentsline {subsubsection}{Prototype details:}{119}{lstnumber.-10.27}%
+\contentsline {subsubsection}{Testing:}{119}{lstnumber.-10.27}%
+\contentsline {subsubsection}{Fixes}{119}{table.caption.65}%
+\contentsline {subsubsection}{Validation}{119}{table.caption.65}%
+\contentsline {subsubsection}{Review:}{119}{table.caption.65}%
+\contentsline {subsubsection}{Iteration 2B: Added validation methods and population}{120}{table.caption.65}%
+\contentsline {subsubsection}{Prototype details:}{123}{lstnumber.-11.125}%
+\contentsline {subsubsection}{Testing:}{123}{lstnumber.-11.125}%
+\contentsline {subsubsection}{Fixes}{123}{figure.caption.67}%
+\contentsline {subsubsection}{Validation}{123}{figure.caption.67}%
+\contentsline {subsubsection}{Review:}{123}{figure.caption.67}%
+\contentsline {subsubsection}{Iteration 2C: Added logger \& DB-Config Link}{124}{figure.caption.67}%
+\contentsline {subsubsection}{Prototype details:}{127}{lstnumber.-13.68}%
+\contentsline {subsubsection}{Testing:}{127}{lstnumber.-13.68}%
+\contentsline {subsubsection}{Fixes}{127}{table.caption.68}%
+\contentsline {subsubsection}{Validation}{127}{table.caption.68}%
+\contentsline {subsubsection}{Review:}{127}{table.caption.68}%
+\contentsline {subsubsection}{Iteration 2D: Stock Check \& Decrement Implementation}{128}{table.caption.68}%
+\contentsline {subsubsection}{Prototype details:}{130}{table.caption.68}%
+\contentsline {subsubsection}{Testing:}{130}{table.caption.68}%
+\contentsline {subsubsection}{Fixes}{130}{table.caption.69}%
+\contentsline {subsubsection}{Validation}{130}{table.caption.69}%
+\contentsline {subsubsection}{Review:}{130}{table.caption.69}%
+\contentsline {subsection}{\numberline {4.3.6}Sprint Review and Retrospective}{131}{subsection.4.3.6}%
+\contentsline {subsubsection}{Accomplishments}{131}{subsection.4.3.6}%
+\contentsline {subsubsection}{Final testing}{131}{subsection.4.3.6}%
+\contentsline {subsubsection}{Validation}{131}{table.caption.70}%
+\contentsline {subsubsection}{Robustness}{132}{table.caption.70}%
+\contentsline {subsubsection}{Stakeholder Comments}{132}{table.caption.70}%
+\contentsline {subsubsection}{Link}{132}{table.caption.70}%
+\contentsline {section}{\numberline {4.4}Sprint Dijkstra}{132}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Explanation}{132}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Tasks}{133}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Sprint Planning Details}{133}{subsection.4.4.3}%
+\contentsline {subsubsection}{Technical Approach}{133}{subsection.4.4.3}%
+\contentsline {subsubsection}{Architecture \& Structural Considerations}{133}{Item.85}%
+\contentsline {subsubsection}{Dependencies}{133}{Item.85}%
+\contentsline {subsection}{\numberline {4.4.4}Development Summary}{133}{subsection.4.4.4}%
+\contentsline {subsubsection}{Diagnosing and Reverting Threading}{133}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Sprint Dijkstra Implementation}{134}{subsection.4.4.5}%
+\contentsline {subsubsection}{Prototype details:}{137}{lstnumber.-14.280}%
+\contentsline {subsubsection}{Testing:}{137}{lstnumber.-14.280}%
+\contentsline {subsubsection}{Review:}{137}{table.caption.72}%
+\contentsline {subsubsection}{Link}{137}{table.caption.72}%
+\contentsline {section}{\numberline {4.5}Sprint Engelbart}{138}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Tasks}{138}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Purpose}{138}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Sprint Planning Details}{139}{subsection.4.5.3}%
+\contentsline {subsubsection}{Technical Approach}{139}{subsection.4.5.3}%
+\contentsline {subsubsection}{Architecture \& Structural Considerations}{139}{Item.88}%
+\contentsline {subsubsection}{Dependencies}{139}{Item.88}%
+\contentsline {subsection}{\numberline {4.5.4}Development Summary}{140}{subsection.4.5.4}%
+\contentsline {subsubsection}{Iteration 1: Visualisation Foundation}{140}{subsection.4.5.4}%
+\contentsline {subsubsection}{Iteration 2: Core Visualisation Implementation \& Refinement}{140}{subsection.4.5.4}%
+\contentsline {subsubsection}{Iteration 3: Main GUI Simplification \& Interaction Polish}{140}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Sprint Engelbart Implementation}{140}{subsection.4.5.5}%
+\contentsline {subsubsection}{Iteration 1: Visualisation Foundation}{140}{subsection.4.5.5}%
+\contentsline {subsubsection}{Prototype details:}{141}{lstnumber.-15.81}%
+\contentsline {subsubsection}{Testing:}{141}{lstnumber.-15.81}%
+\contentsline {subsubsection}{Fixes}{142}{table.caption.74}%
+\contentsline {subsubsection}{Validation}{142}{table.caption.74}%
+\contentsline {subsubsection}{Iteration 2: Core Visualisation Implementation \& Refinement}{142}{table.caption.74}%
+\contentsline {subsubsection}{Prototype details:}{148}{lstnumber.-16.540}%
+\contentsline {subsubsection}{Testing:}{148}{lstnumber.-16.540}%
+\contentsline {subsubsection}{Fixes}{148}{table.caption.75}%
+\contentsline {subsubsection}{Validation}{149}{table.caption.75}%
+\contentsline {subsubsection}{Review:}{149}{table.caption.75}%
+\contentsline {subsubsection}{Iteration 3: Main GUI Simplification \& Interaction Polish}{149}{table.caption.75}%
+\contentsline {subsubsection}{Prototype details:}{154}{lstnumber.-17.340}%
+\contentsline {subsubsection}{Testing:}{154}{lstnumber.-17.340}%
+\contentsline {subsubsection}{Fixes}{154}{table.caption.76}%
+\contentsline {subsubsection}{Validation}{154}{table.caption.76}%
+\contentsline {subsubsection}{Review:}{154}{table.caption.76}%
+\contentsline {subsection}{\numberline {4.5.6}Sprint Review and Retrospective}{155}{subsection.4.5.6}%
+\contentsline {subsubsection}{Accomplishments}{155}{subsection.4.5.6}%
+\contentsline {subsubsection}{Final testing}{155}{subsection.4.5.6}%
+\contentsline {subsubsection}{Validation}{156}{table.caption.77}%
+\contentsline {subsubsection}{Robustness}{156}{table.caption.77}%
+\contentsline {subsubsection}{Link}{156}{table.caption.77}%
+\contentsline {section}{\numberline {4.6}Sprint Floyd}{157}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Tasks}{157}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Purpose}{157}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Sprint Planning Details}{158}{subsection.4.6.3}%
+\contentsline {subsubsection}{Technical Approach}{158}{subsection.4.6.3}%
+\contentsline {subsubsection}{Architecture \& Structural Considerations}{158}{Item.91}%
+\contentsline {subsection}{\numberline {4.6.4}Development Summary}{159}{subsection.4.6.4}%
+\contentsline {subsubsection}{Iteration 1: GA Point Order Optimisation \& GUI Toggle}{159}{subsection.4.6.4}%
+\contentsline {subsubsection}{Iteration 2: A* Implementation, GUI Integration \& Validation Fix}{159}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}Sprint Floyd Implementation}{159}{subsection.4.6.5}%
+\contentsline {subsubsection}{Iteration 1: GA Point Order Optimisation \& GUI Toggle}{159}{subsection.4.6.5}%
+\contentsline {subsubsection}{Prototype details:}{162}{lstnumber.-18.241}%
+\contentsline {subsubsection}{Testing:}{162}{lstnumber.-18.241}%
+\contentsline {subsubsection}{Validation}{162}{table.caption.79}%
+\contentsline {subsubsection}{Review:}{163}{table.caption.79}%
+\contentsline {subsubsection}{Iteration 2: A* Implementation, GUI Integration \& Validation Fix}{163}{table.caption.79}%
+\contentsline {subsubsection}{Prototype details:}{166}{lstnumber.-19.241}%
+\contentsline {subsubsection}{Testing:}{166}{lstnumber.-19.241}%
+\contentsline {subsubsection}{Fixes}{166}{table.caption.80}%
+\contentsline {subsubsection}{Validation}{166}{table.caption.80}%
+\contentsline {subsubsection}{Review:}{166}{table.caption.80}%
+\contentsline {subsection}{\numberline {4.6.6}Sprint Review and Retrospective}{167}{subsection.4.6.6}%
+\contentsline {subsubsection}{Accomplishments}{167}{subsection.4.6.6}%
+\contentsline {subsubsection}{Final testing}{167}{subsection.4.6.6}%
+\contentsline {subsubsection}{Validation}{167}{table.caption.81}%
+\contentsline {subsubsection}{Robustness}{168}{table.caption.81}%
+\contentsline {subsubsection}{Link}{168}{table.caption.81}%
+\contentsline {section}{\numberline {4.7}Sprint Gates}{169}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Tasks}{169}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Purpose}{169}{subsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.7.3}Sprint Planning Details}{170}{subsection.4.7.3}%
+\contentsline {subsubsection}{Technical Approach}{170}{subsection.4.7.3}%
+\contentsline {subsubsection}{Architecture \& Structural Considerations}{170}{Item.93}%
+\contentsline {subsection}{\numberline {4.7.4}Development Summary}{171}{subsection.4.7.4}%
+\contentsline {subsubsection}{Iteration 1: Backend Obstacle Handling}{171}{subsection.4.7.4}%
+\contentsline {subsubsection}{Iteration 2: GUI Integration \& Visualisation}{171}{subsection.4.7.4}%
+\contentsline {subsection}{\numberline {4.7.5}Sprint Gates Implementation}{171}{subsection.4.7.5}%
+\contentsline {subsubsection}{Iteration 1: Backend Obstacle Handling}{171}{subsection.4.7.5}%
+\contentsline {subsubsection}{Prototype details:}{177}{lstnumber.-20.497}%
+\contentsline {subsubsection}{Testing:}{177}{lstnumber.-20.497}%
+\contentsline {subsubsection}{Fixes}{177}{table.caption.83}%
+\contentsline {subsubsection}{Validation}{177}{table.caption.83}%
+\contentsline {subsubsection}{Review:}{177}{table.caption.83}%
+\contentsline {subsubsection}{Iteration 2: GUI Integration \& Visualisation}{178}{table.caption.83}%
+\contentsline {subsubsection}{Prototype details:}{186}{lstnumber.-21.746}%
+\contentsline {subsubsection}{Testing:}{186}{lstnumber.-21.746}%
+\contentsline {subsubsection}{Fixes}{186}{table.caption.84}%
+\contentsline {subsubsection}{Validation}{186}{table.caption.84}%
+\contentsline {subsubsection}{Review:}{186}{table.caption.84}%
+\contentsline {subsection}{\numberline {4.7.6}Sprint Review and Retrospective}{187}{subsection.4.7.6}%
+\contentsline {subsubsection}{Accomplishments}{187}{subsection.4.7.6}%
+\contentsline {subsubsection}{Final testing}{187}{subsection.4.7.6}%
+\contentsline {subsubsection}{Validation}{187}{table.caption.85}%
+\contentsline {subsubsection}{Robustness}{187}{table.caption.85}%
+\contentsline {subsubsection}{Link}{188}{table.caption.85}%
+\contentsline {subsubsection}{Stakeholder comments}{188}{table.caption.85}%
+\contentsline {chapter}{\numberline {5}Evaluating the solution}{189}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Post-development testing}{189}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Test table}{189}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Partially passed tests}{193}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Failed tests}{193}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Not applicable tests}{193}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Success criteria revisited}{201}{section.5.2}%
+\contentsline {subsubsection}{Criterion 1:}{202}{table.caption.87}%
+\contentsline {subsubsection}{Criterion 2:}{202}{table.caption.87}%
+\contentsline {subsubsection}{Criteria 3 and 4:}{202}{table.caption.87}%
+\contentsline {subsubsection}{Criterion 5:}{202}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 6:}{202}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 7:}{202}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 8:}{203}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 9:}{203}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 10:}{203}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 11:}{203}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 12:}{203}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 13:}{203}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 14:}{203}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 15:}{203}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 16:}{203}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 17:}{203}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 18:}{204}{table.caption.88}%
+\contentsline {subsubsection}{Criterion 19:}{204}{table.caption.88}%
+\contentsline {section}{\numberline {5.3}Limitations}{204}{section.5.3}%
+\contentsline {subsubsection}{Direct feedback}{204}{section.5.3}%
+\contentsline {subsubsection}{Environment persistence}{204}{section.5.3}%
+\contentsline {subsubsection}{Path export}{204}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Maintenance}{204}{section.5.4}%
+\contentsline {chapter}{References}{205}{chapter*.89}%
+\contentsline {chapter}{Appendix \numberline {A}Final Program}{207}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}gui.py}{207}{section.1.A.1}%
+\contentsline {section}{\numberline {A.2}spa.py}{214}{section.1.A.2}%
+\contentsline {section}{\numberline {A.3}config.py}{219}{section.1.A.3}%
+\contentsline {section}{\numberline {A.4}database.py}{222}{section.1.A.4}%
+\contentsline {chapter}{Appendix \numberline {B}GitHub Commit History}{224}{appendix.1.B}%
