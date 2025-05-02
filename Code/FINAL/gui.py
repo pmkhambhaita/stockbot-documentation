@@ -371,7 +371,7 @@ class PathfinderGUI:
         
         ttk.Label(
             about_window, 
-            text="© 2025 StockBot Team",
+            text="2025 - P.M. Khambhaita",
             font=("Arial", 8)
         ).pack(pady=20)
         

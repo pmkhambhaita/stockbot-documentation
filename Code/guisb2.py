@@ -87,9 +87,9 @@ class PathfinderGUI:
             self.path_visualiser.visualise_path(path, start_node, end_node, self.points)
             # Restore stdout and get the visualisation
             sys.stdout = old_stdout
-            visualization = result.getvalue()
+            visualisation = result.getvalue()
             # Display the results in the output area
-            self.output_text.insert(tk.END, visualization)
+            self.output_text.insert(tk.END, visualisation)
             self.output_text.insert(tk.END, f"\nTotal path length: {len(path) - 1} steps\n")
             # Add detailed path sequence
             path_str = " -> ".join([f"({x},{y})" for x, y in path])

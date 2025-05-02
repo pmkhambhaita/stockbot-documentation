@@ -9,7 +9,7 @@ import queue           # For thread-safe data exchange
 import config
 import database
 
-class GridVisualizer(tk.Toplevel):
+class GridVisualiser(tk.Toplevel):
     def __init__(self, parent, grid_rows, grid_cols, path=None, start=None, end=None, points=None, db=None):
         super().__init__(parent)
         self.title("Path Visualisation")
@@ -173,7 +173,7 @@ class PathfinderGUI:
         self.root.title("StockBot")
         self.root.geometry("800x600")  # Increased size to accommodate new layout
         
-        # Initialize threading components
+        # Initialise threading components
         self.processing = False
         self.result_queue = queue.Queue()
         
@@ -267,9 +267,9 @@ class PathfinderGUI:
         self.path_finder = spa.PathFinder(self.grid)
         self.path_visualiser = spa.PathVisualiser(self.grid)
         
-        # Initialize database with the same dimensions as the grid
+        # Initialise database with the same dimensions as the grid
         self.db = database.InventoryDB(rows, cols)
-        self.db.populate_random_data()  # Initialize with random stock levels
+        self.db.populate_random_data()  # Initialise with random stock levels
 
     # Update find_path method to parse points directly from entry field
     def find_path(self):
@@ -390,7 +390,7 @@ class PathfinderGUI:
                 
                 # If visualisation window doesn't exist, create it
                 if not hasattr(self, 'viz_window') or not self.viz_window or not self.viz_window.winfo_exists():
-                    self.viz_window = GridVisualizer(
+                    self.viz_window = GridVisualiser(
                         self.root, 
                         self.grid.rows, 
                         self.grid.cols, 
@@ -514,14 +514,14 @@ class PathfinderGUI:
     def show_grid(self):
         # Create or show visualisation window
         if not hasattr(self, 'viz_window') or not self.viz_window or not self.viz_window.winfo_exists():
-            self.viz_window = GridVisualizer(
+            self.viz_window = GridVisualiser(
                 self.root, 
                 self.grid.rows, 
                 self.grid.cols,
                 db=self.db  # Pass database reference
             )
         else:
-            # If window exists but is minimized, restore it
+            # If window exists but is minimised, restore it
             self.viz_window.deiconify()
             self.viz_window.lift()
 

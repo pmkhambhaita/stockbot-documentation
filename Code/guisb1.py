@@ -14,7 +14,7 @@ class PathfinderGUI:
     Provides an interface for users to input points and visualise paths.
     """
     def __init__(self, root):
-        # Initialize main window properties
+        # initialise main window properties
         self.root = root
         self.root.title("StockBot")
         # Set window size - 600x400 provides enough space for visualisation
@@ -54,7 +54,7 @@ class PathfinderGUI:
         clear_button = ttk.Button(button_frame, text="Clear", command=self.clear_all)
         clear_button.grid(row=0, column=1, padx=5)
         
-        # Initialize backend components
+        # initialise backend components
         # 10x10 grid size chosen for clear visualisation
         self.grid = spa.Grid(10, 10)
         self.path_finder = spa.PathFinder(self.grid)

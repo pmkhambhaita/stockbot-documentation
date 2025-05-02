@@ -33,7 +33,7 @@ This sprint entails me creating the first, basic algorithm for the SPA feature, 
 
 \subsubsection{Technical Approach}
 
-Breadth-First Search (BFS) was selected as the pathfinding algorithm for this stage. As the warehouse grid is currently unweighted (all moves have equal cost), BFS is guaranteed to find the shortest path in terms of the number of steps, directly meeting my stakeholders' core requirement for path optimisation. A* will be introduced at a later stage if time permits.
+Breadth-First Search (BFS) was selected as the pathfinding algorithm for this stage. As the warehouse grid is currently unweighted (all moves have equal cost), BFS is guaranteed to find the shortest path in terms of the number of steps, directly meeting my stakeholders' core requirement for path optimisation. A* will be introduced at a later stage if time permits. I used a standard implementation online from GeeksForGeeks as inspiration, with some snippets taken from the example in this iteration.
 
 As this is still a very basic program focused solely on establishing the core BFS logic in the alpha stages of development, this prototype will start with procedural programming. This approach was chosen initially for speed of prototyping and simplicity, allowing focus entirely on the algorithm's correctness (addressing OCSP-001 core functionality) before introducing the structural overhead of OOP. Once the main BFS features have been confirmed to work and complexity increases with multi-point routing and visualisation, I will move to an object-oriented approach for better long-term structure, maintainability, and scalability.
 \begin{enumerate}
@@ -64,9 +64,9 @@ As this is still a very basic program focused solely on establishing the core BF
 
 Below are the data structures I plan to use.
 \begin{itemize}
-    \item " Array (List of Lists): Representing the graph as a 10x10 2D array provides an easy abstraction of the warehouse layout. This structure was chosen for its simplicity and direct mapping to grid coordinates, making visualisation and boundary checks straightforward at this stage.
-    \item Queue (using Python List): A standard Python list is used to implement the queue for BFS. While I could use \verb|collections.deque| due to O(1) appends/pops from both ends, I deemed the standard list sufficient for the current grid size and complexity. This will most likely change in future iterations as I make the solution more robust.
-    \item Set (for Visited Nodes): A set is used to keep track of visited nodes. This provides an average of O(1) lookup time to check if a node has already been visited, preventing redundant exploration and cycles.
+    \item " Array (list of lists): Representing the graph as a 10x10 2D array provides an easy abstraction of the warehouse layout. This structure was chosen for its simplicity and direct mapping to grid coordinates, making visualisation and boundary checks straightforward at this stage.
+    \item Queue (using python List): A standard Python list is used to implement the queue for BFS. While I could use \verb|collections.deque| due to O(1) appends/pops from both ends, I deemed the standard list sufficient for the current grid size and complexity. This will most likely change in future iterations as I make the solution more robust.
+    \item Set (for visited nodes): A set is used to keep track of visited nodes. This provides an average of O(1) lookup time to check if a node has already been visited, preventing redundant exploration and cycles.
     \item List (for Paths/Directions): Lists store paths and directions; a list is the most suitable for appending nodes to paths during exploration as they are easy to use and easy to track via indexes.
 
 \end{itemize}
@@ -81,11 +81,11 @@ There are no dependencies as such currently, I have opted to use Python's built-
     \item \textbf{Progress made:}
     \begin{itemize}
         \item OCSP-001: Created a fully working implementation of BFS that outputs the path it took, tested on a simple 10x10 grid.
-        \item OCSP-002: Came up with an approach on how to output the path in a more interactive format, similar to the interface I presented in the usability section (see section X.X.X). I plan to use placeholder characters in the array to interpret the terminal output, as colours are not supported in most terminal emulators. [*] represents a user input point, and [=] represents the path taken.
+        \item OCSP-002: Came up with an approach on how to output the path in a more interactive format. I plan to use placeholder characters in the array to interpret the terminal output, as colours are not supported in most terminal emulators. [*] represents a user input point, and [=] represents the path taken.
     \end{itemize}
     \item \textbf{Blockers identified:}
     \begin{itemize}
-        \item I used my knowledge from the CS50AI course to create the basic BFS implementation between 2 points. However, I struggled to think about how I could implement multiple points.
+        \item I used my knowledge from the CS50AI course and GeeksForGeeks to create the basic BFS implementation between 2 points. However, I struggled to think about how I could implement multiple points.
 
     \end{itemize}
     \item \textbf{Plan for next iteration:}
@@ -449,7 +449,7 @@ This testing was recommended by my stakeholders; they each came up with 1 test i
 
 \begin{itemize}
 \item Grid is 15 x 15
-\item Points using random num gen between 0 and 14 (x2): (2,5), (8,9), (10,2) 
+\item Points using random num gen between 0 and 14 (x3): (2,5), (8,9), (10,2) 
 
 \end{itemize}
 
@@ -506,7 +506,7 @@ With the completion of this sprint, I have now created one complete feature that
 
 \section{Sprint Berners-Lee}
 
-This is Sprint Berners-Lee, the second iteration of my program. This iteration focuses on developing the Graphical User Interface (GUI) using Tkinter, replacing the previous terminal-based interaction. The goal is to provide a more user-friendly way to input points and visualise the shortest path generated by the existing SPA (Shortest Path Algorithm) logic. This sprint intends to create a functional GUI only, with a later sprint focussed on adding more usability features and making the GUI look more like what the stakeholders were expecting.
+This is Sprint Berners-Lee, the second iteration of my program. This iteration focuses on developing the GUI using Tkinter, replacing the previous command-line interface (CLI). The goal is to provide a more user-friendly way to input points and visualise the shortest path generated by the existing SPA (Shortest Path Algorithm) logic. This sprint intends to create a functional GUI only, with a later sprint focussed on adding more usability features and making the GUI look more like what the stakeholders were expecting.
 
 \subsection{Tasks}
 
@@ -728,7 +728,7 @@ Validation is still constant as of this iteration, but in the coming iterations,
 	\item \textbf{Explanation:}
 	\begin{itemize}
 		\item Centralised validation logic by creating the \verb|validate_point| function in \verb|spa.py|. This function checks both grid boundaries and ensures the point is not the fixed start (0,0) or end (grid max) node. This addressed the blocker identified in Iteration 1.
-		\item The \verb|add_point| method in \verb|gui.py| was refactored to call \verb|spa.validate_point|. Logic was added to display specific error messages within the GUI's \verb|output_text| widget if validation fails (e.g., "Cannot add point... Must not be start/end point...") or if the input format is incorrect.
+		\item The \verb|add_point| method in \verb|gui.py| was refactored to call \verb|spa.validate_point|. Logic was added to display error messages within the GUI's \verb|output_text| widget if validation fails or if the input format is incorrect.
 		\item The now-redundant terminal input functions (\verb|get_valid_coordinate|, \verb|get_points|) were removed from \verb|spa.py|.
 		\item Logging was enhanced in \verb|spa.py| by adding a \verb|FileHandler| to output logs to \verb|stockbot_log.txt|, providing a persistent record for debugging alongside the console output.
 		\item Error reporting for cases like "No points added" or "No valid path found" within the \verb|find_path| method was modified to output directly to the GUI text area.
@@ -951,9 +951,9 @@ This sprint involved integrating database interaction and concurrency. My approa
 \begin{enumerate}
 	\item \textbf{Group 1: Preparation for Database} (Getting the UI ready and responsive)
 	\begin{itemize}
-		\item \textbf{Threading (Iteration 1A):} First, I tackled the GUI responsiveness. I decided to implement threading in \verb|gui.py| using \verb|threading.Thread| and \verb|queue.Queue| for the \verb|find_path| operation. This way, the path calculation wouldn't freeze the interface. I used \verb|root.after| for safe GUI updates from the main thread, which is the standard practice in \verb|Tkinter|. This felt necessary before adding potentially slow database lookups. (OCSP-014)
+		\item \textbf{Threading (Iteration 1A):} First, I tackled the GUI responsiveness. I decided to implement threading in \verb|gui.py| using \verb|threading.Thread| and \verb|queue.Queue| for the \verb|find_path| operation. This way, the path calculation wouldn't freeze the interface. I used \verb|root.after| for safe GUI updates from the main thread. (OCSP-014)
 		\item \textbf{Configuration Screen (Iteration 1B):} Next, I added flexibility by creating \verb|config.py| with a modal \verb|tk.Toplevel| window (\verb|ConfigWindow|). This uses \verb|ttk.Spinbox| widgets to get the desired grid dimensions from the user at startup, rather than using a fixed size. I added validation to ensure sensible dimensions were entered. (OCSP-013)
-		\item \textbf{Numbering System (Iteration 1C):} To make the interface more user-friendly, I switched from the internal \verb|(row, col)| coordinates to a simple 1-N numbering system (\verb|itemID|). This involved creating helper functions (\verb|index_to_coordinates|, \verb|coordinates_to_index|) in \verb|spa.py| and updating the \verb|gui.py| input (\verb|add_point|), output (path sequence string), and relevant labels to use this new system. (OCSP-011, Partial OCSP-012)
+		\item \textbf{Numbering System (Iteration 1C):} To make the interface more user-friendly, I switched from the internal \verb|(row, col)| coordinates to a simple 1-N numbering system (\verb|itemID|). I created helper functions (\verb|index_to_coordinates|, \verb|coordinates_to_index|) in \verb|spa.py| and updating the \verb|gui.py| input (\verb|add_point|), output (path sequence string), and relevant labels to use this new system. (OCSP-011, Partial OCSP-012)
 	\end{itemize}
 	\item \textbf{Group 2: Database Implementation and Integration} (Adding the stock logic)
 	\begin{itemize}
@@ -1172,7 +1172,6 @@ These tests confirmed the config window works as expected (T3.1B.1) and handles 
 \subsubsection{Review:}
 \begin{itemize}
 	\item The configuration screen works well and provides the needed flexibility. Separating it into \verb|config.py| keeps the main \verb|gui.py| cleaner.
-	\item Validation seems robust for this stage.
 	\item Now that the grid size is dynamic, I can implement the 1-N numbering system to make my solution more usable and easier to interpret.
 \end{itemize}
 
@@ -1310,7 +1309,7 @@ No fixes were required as this was a very small but vital iteration.
 
 \subsubsection{Validation}
 \begin{itemize}
-	\item Relies on database schema constraints (\verb|PRIMARY KEY|, \verb|UNIQUE|, \verb|NOT NULL|) for initial data integrity.
+	\item Relies on database constraints (\verb|PRIMARY KEY|, \verb|UNIQUE|, \verb|NOT NULL|) for initial data integrity.
 \end{itemize}
 
 \subsubsection{Review:}
@@ -1330,7 +1329,7 @@ No fixes were required as this was a very small but vital iteration.
 	\item \textbf{GitHub Commit:} \verb|7586cb8|
 	\item \textbf{Explanation:}
 	\begin{itemize}
-		\item Implemented the \verb|populate_random_data(self)| method in \verb|InventoryDB|. This clears any existing data first (\verb|DELETE FROM items|) then loops through all grid positions (1 to \verb|rows*cols|), converts the \verb|itemID| to \verb|(row, col)|, generates a random quantity (1-10 using \verb|random.randint|), and inserts the full record using a parameterised \verb|INSERT| query.
+		\item Implemented the \verb|populate_random_data(self)| method in \verb|InventoryDB|. This clears any existing data first (\verb|DELETE FROM items|) then loops through all grid positions (1 to \verb|rows*cols|), converts the \verb|itemID| to \verb|(row, col)|, generates a random quantity (1-10 using \verb|random.randint|), and inserts the full record using an \verb|INSERT| query.
 		\item Added \verb|validate_item_id(self, item_id)| method to check if an \verb|itemID| is within the valid range and if it actually exists in the database (using \verb|SELECT 1 FROM items WHERE ItemID = ?|), raising a \verb|ValueError| if not.
 		\item Added getter methods \verb|get_quantity(self, item_id)| and \verb|get_position(self, item_id)| which query the database for the respective data after validating the \verb|itemID|.
 		\item Added \verb|update_quantity(self, item_id, new_quantity)| method, including checks to ensure the \verb|new_quantity| is a non-negative integer before executing the \verb|UPDATE| statement.
@@ -1344,7 +1343,7 @@ No fixes were required as this was a very small but vital iteration.
 \begin{itemize}
 	\item Annotations added: Added docstrings for all the new public methods (\verb|populate_random_data|, \verb|validate_item_id|, \verb|get_quantity|, etc.) explaining what they do. Comments clarify the SQL and population logic.
 	\item Modular approach: All data manipulation and validation logic related to the database is kept within the \verb|InventoryDB| class.
-	\item Robustness: Added specific validation for \verb|itemID| existence and range, and for the data type and value of \verb|new_quantity|. Using parameterised queries protects against SQL injection. The main block improves testability.
+	\item Robustness: Added specific validation for \verb|itemID| existence and range, and for the data type and value of \verb|new_quantity|. The main block improves testability.
 \end{itemize}
 
 \newpage
@@ -1409,7 +1408,7 @@ Running \verb|database.py| directly now creates and populates \verb|inventory.db
 	\item \textbf{Explanation:}
 	\begin{itemize}
 		\item Added \verb|logging| to \verb|database.py|. Imported the \verb|logging| module and obtained the logger (\verb|logger = logging.getLogger(__name__)|). Added calls like \verb|logger.info|, \verb|logger.debug|, \verb|logger.error| within the \verb|InventoryDB| methods to record actions like initialisation, population, getting/updating quantities, and any exceptions caught.
-		\item Modified \verb|gui.py|'s main startup logic. After getting \verb|rows| and \verb|cols| from \verb|config.get_grid_config()|, it now instantiates the database using these dimensions: \verb|self.db = database.InventoryDB(rows, cols)| (within \verb|PathfinderGUI.__init__|), and then calls \verb|self.db.populate_random_data()|. (Note: \verb|database.py| \verb|__init__| was simplified again to accept dimensions as args).
+		\item Modified \verb|gui.py|'s main startup logic. After getting \verb|rows| and \verb|cols| from \verb|config.get_grid_config()|, it now instantiates the database using these dimensions: \verb|self.db = database.InventoryDB(rows, cols)| (within \verb|PathfinderGUI.__init__|), and then calls \verb|self.db.populate_random_data()|.
 		\item Added two new buttons ('Query Stock', 'Update Stock') to the \verb|gui.py| layout, placed below the main control buttons.
 		\item Implemented the corresponding methods \verb|query_stock(self)| and \verb|update_stock(self)| in \verb|PathfinderGUI|. \verb|query_stock| gets the \verb|itemID| from the entry, calls \verb|self.db.get_quantity| and \verb|self.db.get_position|, and displays the result. \verb|update_stock| gets the \verb|itemID|, then creates a \verb|tk.Toplevel| pop-up asking for the new quantity. An inner function \verb|do_update| reads the pop-up entry, calls \verb|self.db.update_quantity|, shows feedback, and closes the pop-up. Basic error handling (\verb|try-except ValueError|) was added.
 	\end{itemize}
@@ -1490,7 +1489,7 @@ The database is now correctly sized based on the user's startup configuration. D
 \begin{itemize}
 	\item Annotations added: Added a docstring for \verb|decrement_quantity|. Added comments clarifying the stock check logic in \verb|add_point| and the purpose of the decrement loop in \verb|_find_path_thread|.
 	\item Modular approach: The database operation (\verb|decrement_quantity|) remains encapsulated in \verb|database.py|. The GUI orchestrates *when* to check stock (in \verb|add_point|) and *when* to decrement (in \verb|_find_path_thread|).
-	\item Robustness: Prevents selection of zero-stock items. Decrement logic includes checks to avoid negative quantities. The separation into check-before-add and decrement-after-path makes the simulation logic clearer.
+	\item Robustness: Prevents selection of zero-stock items. Decrement logic includes checks to avoid negative quantities.
 \end{itemize}
 
 \newpage
@@ -1672,17 +1671,17 @@ Based on this critical need for stability, the single task for this sprint was:
 \subsubsection{Technical Approach}
 \begin{enumerate}
 	\item \textbf{Diagnosis:} Identify the source of instability. Through testing and observing the nature of the errors (\verb|Tcl_AsyncDelete| suggesting issues with cross-thread GUI updates), I concluded the threading implementation (\verb|aa510bec|) was the likely cause.
-	\item \textbf{Reversion:} Use version control (\verb|git|) to undo the problematic commit. Specifically, execute \verb|git revert dd54ffd --no-edit| (commit hash \verb|dd54ffd| corresponds to the revert action of the original threading commit \verb|aa510bec|; the actual revert commit itself is \verb|688582d...|). This automatically removed the relevant code sections from \verb|gui.py|.
-	\item \textbf{Verification (Iteration 1):} Manually inspect the code in \verb|gui.py| to confirm the removal of \verb|threading|, \verb|queue|, \verb|_find_path_thread|, \verb|_check_path_results|, \verb|self.processing|, and \verb|self.result_queue|. Confirm that the call to \verb|self.path_finder.find_path_through_points(...)| within \verb|find_path| was now direct and synchronous, and that result handling happened immediately after the call within the same method.
-	\item \textbf{Testing (Iteration 1):} Perform basic pathfinding tests, particularly those involving potentially longer calculations, specifically looking for the absence of the previous crashes and observing the expected (synchronous) GUI freeze.
+	\item \textbf{Reversion:} Use version control (\verb|git|) to undo the problematic commit. Specifically, execute \verb|git revert [hash] --no-edit| . This automatically removed the relevant code sections from \verb|gui.py|.
+	\item \textbf{Verification (Iteration 1):} Manually inspect the code in \verb|gui.py| to confirm the removal of \verb|threading|, \verb|queue| etc. Confirm that the call to \verb|self.path_finder.find_path_through_points(...)| within \verb|find_path| was now direct and synchronous, and that result handling happened immediately after the call within the same method.
+	\item \textbf{Testing (Iteration 1):} Perform basic pathfinding tests, particularly those involving potentially longer calculations, specifically looking for the absence of the previous crashes and observing the expected decrease in performance.
 \end{enumerate}
 Justification: Reverting via git is the cleanest way to undo a specific set of changes. This is the purpose of version-control systems (VCS) - to be able to easily fix issues like this.
 
 \subsubsection{Architecture \& Structural Considerations}
-The only architectural change was the removal of the concurrency mechanism from \verb|gui.py|. The application returned to a simpler, single-threaded execution model for the pathfinding request initiated by the user. The separation of concerns between \verb|gui.py|, \verb|spa.py|, \verb|database.py|, and \verb|config.py| remained otherwise unaffected.
+The only architectural change was the removal of threading from \verb|gui.py|. The application returned to a simpler, single-threaded execution model for the pathfinding request initiated by the user. The separation of concerns between \verb|gui.py|, \verb|spa.py|, \verb|database.py|, and \verb|config.py| remained otherwise unaffected.
 
 \subsubsection{Dependencies}
-Imports for \verb|threading| and \verb|queue| were removed from \verb|gui.py|. No new dependencies added.
+Imports for \verb|threading| and \verb|queue| were removed from \verb|gui.py|. No new dependencies added. 
 
 \subsection{Development Summary}
 
@@ -1702,12 +1701,10 @@ Imports for \verb|threading| and \verb|queue| were removed from \verb|gui.py|. N
 			\item Faced with persistent crashes related to asynchronous operations, I determined that the threading code (\verb|aa510bec|) was the root cause and too complex to reliably fix within my time constraints.
 			\item I executed \verb|git revert --no-edit| to automatically undo the changes introduced by that commit.
 			\item This action removed the \verb|import threading| and \verb|import queue| statements from \verb|gui.py|.
-			\item It deleted the \verb|self.processing| flag and \verb|self.result_queue| attribute initialisations from \verb|PathfinderGUI.__init__|.
-			\item It deleted the \verb|_find_path_thread| and \verb|_check_path_results| methods entirely.
 			\item Within the main \verb|find_path| method, it removed the check for \verb|self.processing|, the creation and starting of the \verb|threading.Thread|, and the scheduling of \verb|_check_path_results| using \verb|root.after|.
 			\item It restored the direct synchronous call: \verb|path = self.path_finder.find_path_through_points(...)|. Result handling logic (displaying output, updating visualisation via its placeholder method) was moved back into the main \verb|find_path| method sequence, executing immediately after the pathfinding call returns.
 		\end{itemize}
-		\item \textbf{Justification:} This revert (OCSP-021) was a tactical decision to ensure my program was stable, which is a fundamental requirement, even at the cost of the increased responsiveness that threading provided. It allowed development to continue more reliably.
+		\item \textbf{Justification:} This revert (OCSP-021) was to ensure my program was stable, which is a fundamental requirement, even at the cost of the increased responsiveness that threading provided. It allowed development to continue more reliably.
 	\end{itemize}
 	
 \subsubsection*{Prototype: Removal of threading (GUI)}
@@ -1734,13 +1731,6 @@ A now stable application with \textbf{synchronous} pathfinding. Functionally ide
 	\caption{Testing results for Sprint Dijkstra (Post-Revert Stability)}
 \end{table}
 \textbf{Tests justification:} Focused entirely on confirming stability after the revert (T4.1.1, T4.1.3) and verifying the expected return to synchronous behaviour (T4.1.2), ensuring all functions work and that the removal was successful.
-
-\subsubsection{Review:}
-\begin{itemize}
-	\item The decision to revert threading, while difficult, was necessary for me to be able to continue. Application is now stable.
-	\item The loss of responsiveness is a known trade-off noted for potential future implementations.
-
-\end{itemize}
 
 \subsubsection{Link}
 This short but critical sprint addressed the stability problems that arose from the previous threading implementation. By reverting it, I ensured the application was reliable and provided a solid foundation for moving forward. Although a step back in terms of responsiveness, it was unfortunately necessary as it would have most likely compromised on what the stakeholders were looking for. To allow more time to complete the requested features, I left some functions/variables that were related to threading in the program. This was quite a large setback but I aim to still incorporate most of what I mentioned in the analysis stage.
@@ -2123,6 +2113,10 @@ Final tests confirmed the new visualisation window displayed all information cor
 \subsubsection{Link}
 Sprint Engelbart successfully delivered the planned UI overhaul. The new \verb|GridVisualiser| provides excellent graphical feedback (OCSP-022 to 026), while the main window simplifications and workflow refinements (OCSP-027 to 031) enhance usability.
 
+\subsubsection{Stakeholder Comments}
+
+You have recovered from the threading setback well. The interface is also becoming more usable, but be sure to make each button obvious as well as keep the code commented; it may come in useful if it is developed by another person, not just you.
+
 \newpage
 
 % --- Start of Modified Sprint Floyd Section ---
@@ -2131,7 +2125,7 @@ Sprint Engelbart successfully delivered the planned UI overhaul. The new \verb|G
 
 After significantly improving the user interface and stability in the previous sprints, Sprint Floyd was dedicated to enhancing the core pathfinding capabilities of the application. While the Breadth-First Search (BFS) implemented in Sprint Ada guarantees the shortest path in terms of steps on an unweighted grid, I wanted to explore more advanced algorithms that could potentially be more efficient or offer different kinds of optimisation, especially if I were to add complexities like varying terrain costs later. This sprint focused initially on implementing a Genetic Algorithm (GA) approach to optimise the *order* in which intermediate points are visited, followed by the implementation of the A* search algorithm as an alternative pathfinding strategy between points. Finally, the GUI was updated to allow the user to select which core pathfinding algorithm (BFS or A*) to use.
 
-\subsection{Tasks}
+\subsection{Tasks} 
 
 The tasks I completed in this algorithm-focused sprint were:
 \begin{table}[htbp]
@@ -2159,7 +2153,7 @@ The tasks I completed in this algorithm-focused sprint were:
 \end{table}
 
 \subsection{Purpose}
-The main purpose of this sprint was to enhance pathfinding efficiency and flexibility. Implementing the GA for point order optimisation (OCSP-035) aimed to reduce the total travel distance when visiting multiple intermediate locations. Subsequently implementing A* (OCSP-032) provided an informed search algorithm as an alternative to BFS for calculating the path segments between points. Providing user control over both point optimisation (OCSP-033.1) and the core search algorithm (BFS vs. A*) (OCSP-033.2, OCSP-034) allows for comparison and user choice.
+The main purpose of this sprint was to enhance pathfinding efficiency and flexibility. Implementing the GA for point order optimisation (OCSP-035) aimed to reduce the total travel distance when visiting multiple intermediate locations. Subsequently implementing A* provided an informed search algorithm as an alternative to BFS for calculating the path segments between points. Providing user control over both point optimisation and the core search algorithm (BFS vs. A*) allows for comparison and user choice.
 
 \clearpage
 \subsection{Sprint Planning Details}
@@ -2176,7 +2170,6 @@ My approach involved implementing the GA point optimisation first, integrating i
 		\item Calculate the fitness of each permutation based on the total path length (start $\rightarrow$ perm[0] $\rightarrow$ ... $\rightarrow$ perm[n] $\rightarrow$ end) using BFS for segment lengths. Use Manhattan distance as an approximation for larger grids to improve performance. Apply large penalties for impossible segments.
 		\item Implement GA loop: Select top performers (elitism), create new population via ordered crossover and mutation. Reduced population size and generations for better performance. Added timeouts and error handling.
 		\item Modify \verb|find_path_through_points| to optionally call \verb|optimise_point_order|.
-		\item Justification: Addresses the Traveling Salesperson Problem variant for intermediate points to find a shorter overall route. GA is a suitable heuristic approach for this NP-hard problem. (OCSP-035)
 	\end{itemize}
 	\item \textbf{GUI Integration for GA Optimisation (Iteration 1):}
 	\begin{itemize}
@@ -2187,12 +2180,12 @@ My approach involved implementing the GA point optimisation first, integrating i
 	\end{itemize}
 	\item \textbf{A* Implementation \& Integration (Iteration 2):}
 	\begin{itemize}
-		\item Define \verb|a_star_search(self, start, end)| method in \verb|spa.py|'s \verb|PathFinder| class (Note: initially named `astar`).
-		\item Use \verb|heapq| as a priority queue, calculate heuristic using \verb|manhattan_distance|, track costs with \verb|g_score|, \verb|f_score|, and reconstruct path using \verb|came_from|. Implement the main A* loop. (OCSP-032)
+		\item Define \verb|a_star_search(self, start, end)| method in \verb|spa.py|'s \verb|PathFinder| class.
+		\item Use \verb|heapq| as a priority queue, calculate heuristic using \verb|manhattan_distance|, track costs with \verb|g_score|, \verb|f_score|, and reconstruct path using \verb|came_from|. Implement the main A* loop.
 		\item Add \verb|set_algorithm| method to \verb|PathFinder| and modify \verb|find_path_through_points| to use the selected algorithm (\verb|self.find_path| dispatcher).
-		\item Add Algorithm selection menu to GUI (\verb|self.algorithm_var| defaulting to 'bfs', radio buttons for BFS/A*). Add \verb|set_algorithm| method in GUI to update selection. Modify \verb|gui.find_path| to call the specific algorithm based on selection (though this is now partly handled by the backend `findpaththroughpoints` change). (OCSP-033.2, OCSP-034)
-		\item Refine A* neighbour validation to use \verb|spa.validate_point|. (OCSP-036)
-		\item Add comments explaining A* concepts. (OCSP-037)
+		\item Add algorithm selection menu to GUI (\verb|self.algorithm_var| defaulting to 'bfs', radio buttons for BFS/A*). Add \verb|set_algorithm| method in GUI to update selection. Modify \verb|gui.find_path| to call the specific algorithm based on selection (though this is now partly handled by the backend 'findpaththroughpoints' change).
+		\item Refine A* neighbour validation to use \verb|spa.validate_point|.
+		\item Add comments explaining A* concepts.
 	\end{itemize}
 \end{enumerate}
 
@@ -2201,14 +2194,14 @@ My approach involved implementing the GA point optimisation first, integrating i
 	\item \verb|spa.py|: The \verb|PathFinder| class now contains multiple pathfinding methods (\verb|bfs|, \verb|a_star_search|) and optimisation logic (\verb|optimise_point_order|).
 	\item \verb|gui.py|: Added UI elements for point order optimisation and algorithm selection (BFS vs A*). The \verb|find_path| method calls the backend \verb|find_path_through_points| which handles dispatching based on selected algorithm.
 \end{itemize}
-Justification: Encapsulating algorithms and optimisation within the \verb|PathFinder| class keeps the logic organised. The GUI modifications allow user control.
+\textbf{Justification:} Encapsulating algorithms and optimisation within the \verb|PathFinder| class keeps the logic organised. The GUI modifications allow user control.
 
 \newpage
 \subsection{Development Summary}
 
 \subsubsection{Iteration 1: GA Point Order Optimisation \& GUI Toggle}
 \begin{itemize}
-	\item Progress made: Implemented the \verb|optimise_point_order| method using GA concepts in \verb|spa.py|. Added timeout and error handling. Added the "Optimize Point Order" checkbutton to the GUI options menu. Modified \verb|find_path| to use the optimisation setting. *(Achieved OCSP-035, OCSP-033.1)*
+	\item Progress made: Implemented the \verb|optimise_point_order| method using GA concepts in \verb|spa.py|. Added timeout and error handling. Added the "Optimise Point Order" checkbutton to the GUI options menu. Modified \verb|find_path| to use the optimisation setting. *(Achieved OCSP-035, OCSP-033.1)*
 	\item Blockers identified: Fine-tuning GA parameters (population size, generations) for acceptable performance vs. optimisation quality. Ensuring the optimisation timeout worked correctly.
 	\item Plan for next iteration: Implement A* search algorithm and add GUI selection for the core algorithm (BFS vs A*).
 \end{itemize}
@@ -2230,8 +2223,8 @@ Justification: Encapsulating algorithms and optimisation within the \verb|PathFi
 	\item \textbf{Explanation:}
 	\begin{itemize}
 		\item Implemented GA Point Order Optimisation: Added \verb|optimise_point_order| method to \verb|PathFinder| in \verb|spa.py|. This uses a genetic algorithm with ordered crossover and swap mutation to find a near-optimal sequence for visiting intermediate points. Fitness is based on total path length using BFS for segments (or Manhattan distance approximation for larger grids). Timeout and error handling were added to prevent excessive run times.
-		\item Added GUI Optimisation Toggle: In \verb|gui.py|, added an "Options" menu with a checkbutton "Optimize Point Order" linked to \verb|self.optimise_var|.
-		\item Integrated Optimisation Call: Modified \verb|gui.py|'s \verb|find_path| method to check the state of \verb|self.optimise_var| and pass it to the backend \verb|find_path_through_points| call.
+		\item Added GUI Optimisation Toggle: In \verb|gui.py|, added an "Options" menu with a checkbutton "Optimise Point Order" linked to \verb|self.optimise_var|.
+		\item Integrated Optimisation Call: Modified \verb|gui.py|'s \verb|find_path| method to check the state of \verb|self.optimise_var| and pass it to \verb|find_path_through_points|.
 	\end{itemize}
 	\item \textbf{Justification:} Implements point order optimisation using GA (OCSP-035) to potentially reduce total path length when visiting multiple points. Adding the GUI toggle (OCSP-033.1) gives the user control.
 \end{itemize}
@@ -2410,9 +2403,8 @@ Final testing focused on verifying the GA optimisation provides shorter paths (w
 \end{itemize}
 
 \subsubsection{Link}
-This sprint successfully expanded the core pathfinding engine by implementing GA-based point order optimisation (OCSP-035) and the A* search algorithm (OCSP-032). User control was provided via GUI menu options for both features (OCSP-033, OCSP-034). This provides users with alternative strategies for path optimisation and makes the application more versatile. The refinement of A*'s validation (OCSP-036) also improves code quality.
+This sprint successfully expanded core pathfinding by implementing GA-based point order optimisation (OCSP-035) and the A* search algorithm (OCSP-032). User control was provided via GUI menu options for both features (OCSP-033, OCSP-034). This provides users with alternative strategies for path optimisation and makes the application more versatile. The refinement of A*'s validation (OCSP-036) also improves code quality.
 
-With multiple pathfinding algorithms and optimisation options now available, future work could involve adding weighted edges (terrain costs) to the grid where A* and potentially different GA fitness functions would show more significant performance differences, or further optimising the existing algorithms.
 
 % --- End of Modified Sprint Floyd Section ---
 
@@ -2429,23 +2421,23 @@ This sprint, Sprint Gates, represents the final phase of development for my A-Le
 The tasks undertaken in this final sprint were:
 \begin{table}[htbp]
 	\centering
-	\begin{tabularx}{\textwidth}{|l|X|}
+	\begin{tabularx}{\textwidth}{|X|} % Removed the first column specifier 'l'
 		\hline
-		\textbf{Task ID} & \textbf{Task Description} \\
+		\textbf{Task Description} \\ % Removed the first header cell
 		\hline
-		OCSP-038 & Add Obstacle Tracking to Grid Class: Modify \verb|spa.Grid| to include an \verb|obstacles| set and methods (\verb|add_obstacle|, \verb|remove_obstacle|, \verb|is_obstacle|). (Was part of OCSP-032/033 in original plan) \\
+		Add Obstacle Tracking to Grid Class: Modify \verb|spa.Grid| to include an \verb|obstacles| set and methods (\verb|add_obstacle|, \verb|remove_obstacle|, \verb|is_obstacle|). \\
 		\hline
-		OCSP-039 & Update Validation to Check Obstacles: Modify \verb|spa.validate_point| to accept and check against the \verb|obstacles| set. (Was part of OCSP-036 in original plan) \\
+		Update Validation to Check Obstacles: Modify \verb|spa.validate_point| to accept and check against the \verb|obstacles| set.  \\
 		\hline
-		OCSP-034 & Modify Pathfinding Algorithm for Obstacle Avoidance: Update \verb|PathFinder.bfs| and \verb|PathFinder.a_star_search| methods in \verb|spa.py| to use \verb|self.grid.is_obstacle(nx, ny)| check before considering a neighbour node. \\
+		Modify Pathfinding Algorithm for Obstacle Avoidance: Update \verb|PathFinder.bfs| and \verb|PathFinder.a_star_search| methods in \verb|spa.py| to use \verb|self.grid.is_obstacle(nx, ny)| check before considering a neighbour node. \\
 		\hline
-		OCSP-032 & Add GUI Input Elements for Obstacles: Add \verb|obstacle_button| (\verb|ttk.Button|) to main GUI (\verb|gui.py|) triggering obstacle mode. \\
+		Add GUI Input Elements for Obstacles: Add \verb|obstacle_button| (\verb|ttk.Button|) to main GUI (\verb|gui.py|) triggering obstacle mode. \\
 		\hline
-		OCSP-033 & Implement Obstacle Toggling Logic \& Validation: Create \verb|toggle_obstacle_mode| method in \verb|gui.py|. Implement pop-up, input parsing, validation (range, format, not start/end), calling \verb|self.grid.add/remove_obstacle|. Add user feedback via \verb|messagebox| and \verb|output_text|. Update \verb|find_path| point validation to check obstacles. \\
+		Implement Obstacle Toggling Logic \& Validation: Create \verb|toggle_obstacle_mode| method in \verb|gui.py|. Implement pop-up, input parsing, validation (range, format, not start/end), calling \verb|self.grid.add/remove_obstacle|. Add user feedback via \verb|messagebox| and \verb|output_text|. Update \verb|find_path| point validation to check obstacles. \\
 		\hline
-		OCSP-035 & Update Visualisation to Display Obstacles: Modify \verb|GridVisualiser| in \verb|gui.py| to store, draw (\verb|draw_cell|), clear, and update obstacles based on the \verb|self.grid.obstacles| set, using a distinct marker/colour. \\
+		Update Visualisation to Display Obstacles: Modify \verb|GridVisualiser| in \verb|gui.py| to store, draw (\verb|draw_cell|), clear, and update obstacles based on the \verb|self.grid.obstacles| set, using a distinct marker/colour. \\
 		\hline
-		OCSP-036 & Ensure State Management (Clear All) \& Add Comments: Modify \verb|gui.py|'s \verb|clear_all| method to reset obstacles (likely via grid re-initialisation). Ensure \verb|show_grid| updates visualiser obstacles. Add comments explaining the obstacle implementation. \\
+		Ensure State Management (Clear All) \& Add Comments: Modify \verb|gui.py|'s \verb|clear_all| method to reset obstacles (likely via grid re-initialisation). Ensure \verb|show_grid| updates visualiser obstacles. Add comments explaining the obstacle implementation. \\
 		\hline
 	\end{tabularx}
 	\caption{Tasks for Sprint Gates}
@@ -2458,22 +2450,23 @@ The main purpose of this sprint was to add obstacle avoidance capabilities to th
 \subsection{Sprint Planning Details}
 
 \subsubsection{Technical Approach}
-I implemented this feature by first adding obstacle tracking and avoidance to the backend (`spa.py`) and then integrating the user interaction and visualisation in the frontend (`gui.py`).
+I implemented this feature by first adding obstacle tracking and avoidance to the backend ('spa.py') and then integrating the user interaction and visualisation in the frontend ('gui.py').
 
 \begin{enumerate}
     \item \textbf{Backend Obstacle Handling (Iteration 1):}
     \begin{itemize}
-        \item Grid Modification: Added an \verb|obstacles| set attribute to the \verb|spa.Grid| class. Implemented methods \verb|add_obstacle|, \verb|remove_obstacle|, and \verb|is_obstacle| to manage this set (Commit \verb|c0ab70d...|). (OCSP-038)
-        \item Validation Update: Modified the \verb|spa.validate_point| function to accept an optional \verb|obstacles| set parameter and return \verb|False| if the point \verb|(x, y)| is in the set (Commit \verb|018aaac...|). (OCSP-039)
-        \item Pathfinding Update: Modified \verb|PathFinder.bfs| and \verb|a_star_search| in \verb|spa.py|. Within the neighbour exploration loop, added a check using \verb|self.grid.is_obstacle(nx, ny)| to ensure obstacle cells are not considered valid neighbours for path extension (Commit \verb|d5a6179...|). (OCSP-034)
+        \item Grid Modification: Added an \verb|obstacles| set attribute to the \verb|spa.Grid| class. Implemented methods \verb|add_obstacle|, \verb|remove_obstacle|, and \verb|is_obstacle| to manage this set (Commit \verb|c0ab70d...|).
+        \item Validation Update: Modified the \verb|spa.validate_point| function to accept an optional \verb|obstacles| set parameter and return \verb|False| if the point \verb|(x, y)| is in the set (Commit \verb|018aaac...|).
+        \item Pathfinding Update: Modified \verb|PathFinder.bfs| and \verb|a_star_search| in \verb|spa.py|. Within the neighbour exploration loop, added a check using \verb|self.grid.is_obstacle(nx, ny)| to ensure obstacle cells are not considered valid neighbours for path extension (Commit \verb|d5a6179...|).
         \item Justification: Establishes the core data structure and modifies the algorithms to recognize non-traversable cells before implementing user interaction.
     \end{itemize}
     \item \textbf{GUI Integration and Visualisation (Iteration 2):}
     \begin{itemize}
-        \item GUI Button: Added an "Obstacle mode" button to \verb|PathfinderGUI.__init__| in \verb|gui.py| and linked its command to \verb|self.toggle_obstacle_mode| (Commit \verb|d34c9b4...|). (OCSP-032)
-        \item Obstacle Toggling Logic: Implemented the \verb|toggle_obstacle_mode(self)| method in \verb|PathfinderGUI|. This uses a pop-up window with an entry field for the \verb|itemID|. It validates the input (range, format, not start/end), converts to coordinates, and calls \verb|self.grid.add_obstacle| or \verb|self.grid.remove_obstacle|. It provides user feedback via \verb|messagebox| and the main \verb|output_text|. The \verb|find_path| method was also updated to check if an input point is an obstacle (Commits \verb|d34c9b4...|, \verb|78c5662...|, \verb|a8b3b6d...|). (OCSP-033)
-        \item Visualisation Update: Modified the \verb|GridVisualiser| class in \verb|gui.py|. Added an \verb|obstacles| attribute. Created an \verb|update_obstacles| method to receive the obstacle set from the main GUI and trigger a redraw. Updated \verb|draw_cell| to check for obstacles and draw them (e.g., black with white text). Updated \verb|visualise_path| and \verb|clear_visualisation| to correctly handle drawing obstacles and their layering relative to other elements (Commit \verb|78c5662...|). (OCSP-035)
-        \item State Management \& Comments: Ensured \verb|show_grid| calls \verb|update_obstacles| when showing the visualiser. Resetting obstacles in \verb|clear_all| was likely handled by grid re-initialisation (though not explicit in commits, assumed part of the logic). Added comments. (OCSP-036, OCSP-037)
+        \item GUI Button: Added an "Obstacle mode" button to \verb|PathfinderGUI.__init__| in \verb|gui.py| and linked its command to \verb|self.toggle_obstacle_mode| (Commit \verb|d34c9b4...|).
+        \item Obstacle Toggling Logic: Implemented the \verb|toggle_obstacle_mode(self)| method in \verb|PathfinderGUI|. This uses a pop-up window with an entry field for the \verb|itemID|. It validates the input (range, format, not start/end), converts to coordinates, and calls \verb|self.grid.add_obstacle| or \verb|self.grid.remove_obstacle|. It provides user feedback via \verb|messagebox| and the main \verb|output_text|. The \verb|find_path| method was also updated to check if an input point is an obstacle (Commits \verb|d34c9b4...|, \verb|78c5662...|, \verb|a8b3b6d...|).
+        \item Visualisation Update: Modified the \verb|GridVisualiser| class in \verb|gui.py|. Added an \verb|obstacles| attribute. Created an \verb|update_obstacles| method to receive the obstacle set from the main GUI and trigger a redraw. Updated \verb|draw_cell| to check for obstacles and draw them (e.g., black with white text). Updated \verb|visualise_path| and \verb|clear_visualisation| to correctly handle drawing obstacles and their layering relative to other elements (Commit \verb|78c5662...|). 
+
+        \item State Management \& Comments: Ensured \verb|show_grid| calls \verb|update_obstacles| when showing the visualiser. Resetting obstacles in \verb|clear_all| was likely handled by grid re-initialisation (though not explicit in commits, assumed part of the logic). Added comments.
         \item Justification: Provides the user interface for managing obstacles, integrates this with the backend grid state, ensures the visualisation reflects obstacles, and handles state correctly.
     \end{itemize}
 \end{enumerate}
@@ -2492,14 +2485,14 @@ Justification: Centralising obstacle state in the Grid object and providing meth
 
 \subsubsection{Iteration 1: Backend Obstacle Handling}
 \begin{itemize}
-	\item Progress made: Modified \verb|spa.Grid| to track obstacles. Updated \verb|spa.validate_point| to check obstacles. Modified \verb|bfs| and \verb|a_star_search| in \verb|spa.PathFinder| to avoid obstacle cells during neighbour exploration. *(Achieved OCSP-038, OCSP-039, OCSP-034 via commits \verb|c0ab70d...|, \verb|018aaac...|, \verb|d5a6179...|)*
+	\item Progress made: Modified \verb|spa.Grid| to track obstacles. Updated \verb|spa.validate_point| to check obstacles. Modified \verb|bfs| and \verb|a_star_search| in \verb|spa.PathFinder| to avoid obstacle cells during neighbour exploration.
 	\item Blockers identified: Ensuring the obstacle check was added correctly in both BFS and A* loops without impacting performance significantly. Making sure \verb|validate_point| handled the optional obstacle set correctly.
 	\item Plan for next iteration: Implement GUI elements and logic for user interaction with obstacles, update the visualisation.
 \end{itemize}
 
 \subsubsection{Iteration 2: GUI Integration \& Visualisation}
 \begin{itemize}
-	\item Progress made: Added "Obstacle mode" button and \verb|toggle_obstacle_mode| pop-up logic with validation in \verb|gui.py|. Updated \verb|GridVisualiser| to store, receive, and display obstacles distinctly. Ensured obstacles were considered during point validation in \verb|find_path|. Added missing import. *(Achieved OCSP-032, OCSP-033, OCSP-035, OCSP-036, OCSP-037 via commits \verb|d34c9b4...|, \verb|78c5662...|, \verb|a8b3b6d...|)*
+	\item Progress made: Added "Obstacle mode" button and \verb|toggle_obstacle_mode| pop-up logic with validation in \verb|gui.py|. Updated \verb|GridVisualiser| to store, receive, and display obstacles distinctly. Ensured obstacles were considered during point validation in \verb|find_path|. Added missing import.
 	\item Blockers identified: Correctly handling the pop-up logic and validation. Ensuring the visualiser updated correctly when obstacles were toggled and handled layering appropriately. Fixing missing import.
 \end{itemize}
 
@@ -2517,12 +2510,12 @@ Justification: Centralising obstacle state in the Grid object and providing meth
 	    \item Validation Update: Updated the \verb|spa.validate_point| function. It now accepts an optional \verb|obstacles| set. If provided, the function checks if the given \verb|(x, y)| coordinates are present in the set and returns \verb|False| if they are.
 		\item Pathfinding Algorithm Updates: Modified the neighbour exploration loop within both \verb|PathFinder.bfs| and \verb|PathFinder.a_star_search|. Before adding a neighbour \verb|(nx, ny)| to the queue/open set, an additional check \verb|not self.grid.is_obstacle(nx, ny)| was added.
 	\end{itemize}
-	\item \textbf{Justification:} These changes establish the backend capability for representing obstacles (OCSP-038) and ensuring the core pathfinding algorithms (OCSP-034) and validation logic (OCSP-039) respect these non-traversable cells.
+	\item \textbf{Justification:} These changes allow obstacles and ensure the core pathfinding algorithms and validation logic do not traverse those cells.
 \end{itemize}
 
 \textbf{Code Quality:}
 \begin{itemize}
-	\item Annotations added: Docstrings added for new Grid methods. Comments added for obstacle checks in pathfinding loops.
+	\item Annotations added: Comments added for obstacle checks in pathfinding loops.
 	\item Modular approach: Obstacle state encapsulated within the \verb|Grid| class. Pathfinding algorithms interact with the grid via the \verb|is_obstacle| method.
 	\item Consistency: Both BFS and A* were updated with the same obstacle check logic.
 \end{itemize}
@@ -2554,12 +2547,7 @@ The backend grid representation now supports obstacles, and the pathfinding algo
 	\end{tabularx}
 	\caption{Testing results for Iteration 1}
 \end{table}
-\textbf{Tests justification:} Verified that the pathfinding algorithms correctly avoid obstacles set in the grid state (T7.1.1, T7.1.2) and that the updated validation function works as expected (T7.1.3, T7.1.4), confirming OCSP-034, OCSP-038, OCSP-039.
-
-\subsubsection{Fixes}
-\begin{itemize}
-	\item *(User: Describe any backend fixes made during this iteration, if any)*
-\end{itemize}
+\textbf{Tests justification:} Verified that the pathfinding algorithms correctly avoid obstacles set in the grid state (T7.1.1, T7.1.2) and that the updated validation function works as expected (T7.1.3, T7.1.4).
 
 \subsubsection{Validation}
 \begin{itemize}
@@ -2588,9 +2576,9 @@ The backend grid representation now supports obstacles, and the pathfinding algo
 	    \item GUI Obstacle Button: Added an "Obstacle mode" button to the main GUI and connected it to a new method \verb|toggle_obstacle_mode|.
 		\item Obstacle Toggling Logic: Implemented \verb|toggle_obstacle_mode| which uses a Toplevel pop-up window asking the user for an \verb|itemID|. It validates this input (range, integer format, not start/end) and uses \verb|spa.index_to_coordinates| to find the grid cell. It then calls \verb|self.grid.add_obstacle| or \verb|self.grid.remove_obstacle| based on the current state. Feedback is given via \verb|messagebox| and the output text area. The main \verb|find_path| method was also updated to prevent adding an obstacle location as an intermediate point.
 		\item Visualisation Updates: Modified \verb|GridVisualiser| to handle obstacles. Added an \verb|obstacles| set attribute and an \verb|update_obstacles| method. The \verb|draw_cell| method was updated to check if a cell is an obstacle and draw it with a specific style (black fill, white text). \verb|visualise_path| and \verb|clear_visualisation| were adjusted to correctly draw/redraw obstacles considering layering. The main GUI's \verb|show_grid| method now calls \verb|update_obstacles| on the visualiser.
-		\item State Management: Resetting obstacles on "Clear All" is implicitly handled by grid re-initialisation (assumed). The \verb|toggle_obstacle_mode| method updates the visualiser if it exists.
+		\item State Management: The \verb|toggle_obstacle_mode| method updates the visualiser if it is active.
 	\end{itemize}
-	\item \textbf{Justification:} Provides the user interface (OCSP-032) and logic (OCSP-033) for managing obstacles. Updates the visualisation to display obstacles (OCSP-035). Ensures state management and adds necessary comments (OCSP-036, OCSP-037).
+	\item \textbf{Justification:} Provides the user interface and logic for managing obstacles. Updates the visualisation to display obstacles properly.
 \end{itemize}
 
 \textbf{Code Quality:}
@@ -2628,7 +2616,7 @@ Users can now click "Obstacle mode", enter a position ID in the pop-up, and clic
 	\end{tabularx}
 	\caption{Testing results for Iteration 2}
 \end{table}
-\textbf{Tests justification:} Verified GUI interaction for adding/removing obstacles (T7.2.1, T7.2.4), validation (T7.2.3), integration with pathfinding/visualisation (T7.2.2), and correct state reset (T7.2.5), confirming OCSP-032, 033, 035, 036.
+\textbf{Tests justification:} Verified GUI interaction for adding/removing obstacles (T7.2.1, T7.2.4), validation (T7.2.3), integration with pathfinding/visualisation (T7.2.2), and correct state reset (T7.2.5).
 
 \subsubsection{Fixes}
 \begin{itemize}
@@ -2654,23 +2642,23 @@ Users can now click "Obstacle mode", enter a position ID in the pop-up, and clic
 \subsubsection{Accomplishments}
 This final sprint successfully added the planned obstacle avoidance feature:
 \begin{itemize}
-    \item Completed OCSP-038: Added obstacle tracking structure to \verb|spa.Grid|.
-    \item Completed OCSP-039: Updated \verb|spa.validate_point| to check obstacles.
-	\item Completed OCSP-034: Modified both BFS and A* algorithms to avoid obstacles.
-	\item Completed OCSP-032: Added GUI input elements for obstacle management.
-	\item Completed OCSP-033: Implemented obstacle toggling logic with validation.
-	\item Completed OCSP-035: Updated the \verb|GridVisualiser| to display obstacles.
-	\item Completed OCSP-036: Ensured \verb|clear_all| resets obstacles and added comments.
+    \item Added obstacle tracking structure to \verb|spa.Grid|.
+    \item Updated \verb|spa.validate_point| to check obstacles.
+	\item Modified both BFS and A* algorithms to avoid obstacles.
+	\item Added GUI input elements for obstacle management.
+	\item Implemented obstacle toggling logic with validation.
+	\item Updated th \verb|GridVisualiser| to display obstacles.
+	\item Ensured \verb|clear_all| resets obstacles and added comments.
 \end{itemize}
 The application can now handle basic obstacles, making the simulation more realistic.
 
 \subsubsection{Final testing}
 Final tests confirmed that users can add valid obstacles, which are then correctly displayed and avoided by both pathfinding algorithms.
-*(User should perform and document final stakeholder testing if applicable)*
+
 
 \begin{table}[htbp] % Final Testing Table
 	\centering
-	\begin{tabularx}{\textwidth}{|l|X|p{3.5cm}|p{3.5cm}|c|}
+	\begin{tabularx}{\textwidth}{|l|X|p{4.5cm}|p{1.5cm}|c|}
 		\hline
 		\textbf{ID} & \textbf{Description} & \textbf{Expected} & \textbf{Actual} & \textbf{Pass?} \\
 		\hline
@@ -2709,10 +2697,6 @@ Final tests confirmed that users can add valid obstacles, which are then correct
 Sprint Gates successfully implemented obstacle avoidance (OCSP-032 to OCSP-036, OCSP-038, OCSP-039). By allowing users to define non-traversable locations and modifying the pathfinding algorithms (BFS and A*) to respect them, the application now simulates warehouse environments more realistically. The visualisation was also updated to clearly show these obstacles. Although the implementation is basic (e.g. no removing individual obstacles easily), it fulfills the core requirement.
 
 This sprint marks the end of the development phase for my solution. The application now includes configurable grid sizes, multiple pathfinding algorithms (BFS, A*), database integration for stock checking and decrementing, a graphical visualisation window with stock level indicators, and basic obstacle handling.
-
-\subsubsection{Stakeholder comments}
-
-
 
 % --- End of Sprint Gates Section ---
 

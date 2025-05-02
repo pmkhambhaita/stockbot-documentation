@@ -164,7 +164,6 @@ def validate_point(x, y, rows, cols, allow_start_end=False):
     
     return True, ""
 
-# Add after the existing imports
 def index_to_coordinates(index, cols):
     """Convert 1-based index to 0-based coordinates"""
     index -= 1  # Convert to 0-based, I initially forgot this as conventionally in maths coordinates start at 1, not 0, which offsets the input by 1.

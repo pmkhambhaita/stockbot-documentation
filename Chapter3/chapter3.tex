@@ -907,7 +907,7 @@ On the subject of GUIs, what rules should a GUI actually follow to be optimal fo
 
 \subsubsection{Usability Analysis:}
 
-The numeric input fields with increment/decrement controls are an optimal solution for grid dimension entry, as there are many variants of warehouse that can be constructed via row and column definition - this allows for faster input of the desired warehouse dimensions. \newline The interface's spatial organisation leverages natural reading patterns and mental models by arranging elements in a logical left-to-right, top-to-bottom flow that correlates with the final grid structure. \newline The centrally positioned continue button serves as a clear visual endpoint, while the minimalist two-field design effectively mitigates a cluttered and hard-to-navigate interface that would otherwise arise if this and the main program was incorporated as one window.
+The numeric input fields with increment/decrement controls are the best method for grid dimension entry, as there are many variants of warehouse that can be constructed via row and column definition - this allows for faster input of the desired warehouse dimensions.
 
 \newpage
 
@@ -984,7 +984,7 @@ While I initially did not want to include a legend, adding one would benefit the
 
 \section{Unifying the algorithms}
 
-While the algorithms are complete, the solution has not yet been unified into a functional app; as I have used OOP principles in the code, it will be much easier to create a working prototype. See section x.x.x for the benefits OOP provides. The goal is to combine the shortest path algorithms (SPA), the graphical user interface (GUI), and the database management system into a cohesive application structured around these three core features. I have broken down the unification process into the module breakdown, the role of each module, the key functions and the interactions between modules.
+While the algorithms are complete, the solution has not yet been unified into a functional app; as I have used OOP principles in the code, it will be much easier to create a working prototype. The goal is to combine the shortest path algorithms (SPA), the graphical user interface (GUI), and the database management system into a cohesive application structured around these three core features. I have broken down the unification process into the module breakdown, the role of each module, the key functions and the interactions between modules.
 
 \newpage
 
@@ -1078,11 +1078,11 @@ This will provides data persistence by saving and loading grid configurations, w
 \endlastfoot
 
 % Sprint Ada Tests (T1.F.X)
-T1.F.1 & Path found using input points & The system should calculate and display a valid path connecting the start, intermediate (if any), and end points. & Verifies core pathfinding functionality with valid inputs, as recommended by stakeholders. \\
+T1.F.1 & Path found using input points & The system should calculate and display a valid path connecting the start, intermediate (if any), and end points. & Verifies core pathfinding functionality with valid inputs. \\
 \hline
-T1.F.2 & Input invalid points (letters, numbers and symbols) & The system should reject the input and display a clear error message indicating invalid format or characters. & Ensures robust input validation preventing errors from unexpected data types, as recommended by stakeholders. \\
+T1.F.2 & Input invalid points (letters, numbers and symbols) & The system should reject the input and display a clear error message indicating invalid format or characters. & Ensures robust input validation preventing errors from unexpected data types. \\
 \hline
-T1.F.3 & Input no points & The system should calculate and display the direct path from the start point to the end point. & Tests handling of edge case where no intermediate stops are requested, as recommended by stakeholders. \\
+T1.F.3 & Input no points & The system should calculate and display the direct path from the start point to the end point. & Tests handling of edge case where no intermediate stops are requested. \\
 \hline
 
 % Sprint Berners-Lee Tests (T2.F.X)
@@ -1090,11 +1090,11 @@ T2.F.1 & Enter "2,3" and click Add Point & Point (2,3) or equivalent itemID adde
 \hline
 T2.F.2 & Enter "2,2" then "5,5", click Find Path & Grid shows path (0,0) → (2,2) → (5,5) → (9,9) with visualisation. & Tests main success path for finding path with multiple points via GUI. \\
 \hline
-T2.F.3 & Enter "abc" and click Add Point & Error message about invalid format. & Targets key validation rule critical for usability and data integrity. \\
+T2.F.3 & Enter "abc" and click Add Point & Error message about invalid format. & Tests the input validation ()critical for usability). \\
 \hline
-T2.F.4 & Enter "10,10" and click Add Point & Error message about out of bounds. & Targets key validation rule critical for usability and data integrity. \\
+T2.F.4 & Enter "10,10" and click Add Point & Error message about out of bounds. & " \\
 \hline
-T2.F.5 & Enter "0,0" and click Add Point & Error about using start point. & Targets key validation rule critical for usability and data integrity. \\
+T2.F.5 & Enter "0,0" and click Add Point & Error about using start point. & " \\
 \hline
 T2.F.6 & Add "2,2" and "3,3", click Clear & All points cleared, confirmation message. & Tests the interface reset functionality. \\
 \hline
@@ -1108,7 +1108,7 @@ T3.F.1 & Config 15x15. Add valid, in-stock itemID 113, add 200. Find path. & GUI
 \hline
 T3.F.2 & Config 10x10. Query itemID 1. Update stock to 0. Query again. & Query shows initial stock > 0. Update confirms. Second query shows 0. & Verifies manual stock update and query functionality. \\
 \hline
-T3.F.3 & With stock=0 for itemID 1, try Add Point itemID 1. & Error "Skipping position 1 - Out of stock" shown. Point *not* added to path list. & Confirms core requirement: cannot add zero-stock items to path. \\
+T3.F.3 & With stock=0 for itemID 1, try Add Point itemID 1. & Error "Skipping position 1 - Out of stock" shown. Point *not* added to path list. & Checks one of the core requirements: cannot add zero-stock items to path. \\
 \hline
 T3.F.4 & Test config screen validation (text, 0, >50). & Error messageboxes shown, prevents confirmation. & Final check on configuration input validation robustness. \\
 \hline
@@ -1120,7 +1120,7 @@ T4.F.1 & Config 15x15. Enter multiple valid points. Find Path. Check Viz. & Path
 \hline
 T4.F.2 & Update stock to 0 via pop-up. Find path. Check Viz. & Update works. Viz shows item red (OOS). Path avoids/warns about item. & Validates interaction between manual stock update, pathfinding (stock check), and visualisation. \\
 \hline
-T4.F.3 & Enter only zero-stock points. Find Path. & Warning messages. Direct start → end path computed \& shown on Viz. & Confirms fallback path behaviour and its correct visualisation. \\
+T4.F.3 & Enter only zero-stock points. Find Path. & Warning messages. Direct start → end path computed \& shown on Viz. & Checks fallback path behaviour and its correct visualisation. \\
 \hline
 T4.F.4 & Test Query/Update pop-ups. Test Clear All. & Pop-ups work. Clear All resets GUI and Viz correctly (OOS markers remain). & Final validation of stock pop-ups and Clear All state management (visualiser persistence). \\
 \hline

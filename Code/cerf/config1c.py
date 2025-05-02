@@ -8,7 +8,7 @@ class ConfigWindow:
         self.root.geometry("300x200")
         self.root.resizable(False, False)
         
-        # Initialize result variables
+        # Initialise result variables
         self.rows = None
         self.cols = None
         
